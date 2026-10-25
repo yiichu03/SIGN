@@ -5,6 +5,7 @@
 # LICENSE file in the root directory of this source tree.
 
 import os
+import json
 import time
 from collections import defaultdict, deque
 from typing import Any, Dict, List, Optional
@@ -650,6 +651,24 @@ class PPOTrainer(BaseRLTrainer):
         with read_write(config):
             config.habitat.dataset.split = config.habitat_baselines.eval.split
 
+        trace_dir = os.environ.get("SIGN_TRACE_DIR")
+        if trace_dir:
+            # The diagnostic reads the map only from step info; policy inputs stay unchanged.
+            with read_write(config):
+                if "top_down_map" not in config.habitat.task.measurements:
+                    config.habitat.task.measurements.append("top_down_map")
+                config.habitat.task.top_down_map.draw_shortest_path = False
+                config.habitat.task.top_down_map.draw_goal_positions = False
+                config.habitat.task.top_down_map.draw_view_points = False
+                config.habitat.task.top_down_map.draw_goal_aabbs = False
+                config.habitat.task.top_down_map.map_resolution = 512
+            from src.trajectory_diagnostic import save_episode, waypoint, save_observation
+            trace_waypoints = []
+            trace_start = None
+            trace_rgb = os.environ.get("SIGN_TRACE_RGB") == "1"
+            if config.habitat_baselines.num_environments != 1:
+                raise ValueError("SIGN_TRACE_DIR requires num_environments=1")
+
         if (
             len(self.config.habitat_baselines.video_option) > 0
             and self.config.habitat_baselines.video_render_top_down
@@ -758,7 +777,20 @@ class PPOTrainer(BaseRLTrainer):
 
         while (len(stats_episodes) < (number_of_eval_episodes * evals_per_ep) and self.envs.num_envs > 0):
             current_episodes_info = self.envs.current_episodes()
+            if trace_dir and trace_start is None:
+                full_episode = self.envs.call_at(0, "current_episode", {"all_info": True})
+                trace_start = {
+                    "position_xyz": [float(v) for v in full_episode.start_position],
+                    "rotation_xyzw": [float(v) for v in full_episode.start_rotation],
+                }
             batch['cost'] = prev_costs
+            if trace_dir and trace_rgb:
+                trace_step = len(trace_waypoints)
+                trace_folder = os.path.join(trace_dir, f"episode_{len(stats_episodes) + 1:03d}")
+                trace_last_observation = observations[0]
+                if trace_step % 25 == 0:
+                    save_observation(trace_folder, trace_last_observation, trace_step,
+                                     save_goal=trace_step == 0)
             (
                 _,
                 actions,
@@ -769,7 +801,7 @@ class PPOTrainer(BaseRLTrainer):
                 test_recurrent_hidden_states,
                 prev_actions,
                 not_done_masks,
-                deterministic=True,
+                deterministic=os.environ.get("SIGN_EVAL_SAMPLE_ACTIONS") != "1",
                 eval=False
             )
 
@@ -802,6 +834,8 @@ class PPOTrainer(BaseRLTrainer):
             outputs = self.envs.step(step_data)
 
             observations, rewards_l, dones, infos = [list(x) for x in zip(*outputs)]
+            if trace_dir:
+                trace_waypoints.append(waypoint(len(trace_waypoints) + 1, step_data[0], infos[0]))
             prev_costs = torch.vstack([torch.tensor(info['collisions.is_collision'], dtype=torch.float32, device=self.device) for info in infos])
 
             batch = batch_obs(observations, device=self.device)
@@ -843,6 +877,21 @@ class PPOTrainer(BaseRLTrainer):
                     ep_eval_count[k] += 1
                     # use scene_id + episode_id as unique id for storing stats
                     stats_episodes[(k, ep_eval_count[k])] = episode_stats
+
+                    if trace_dir:
+                        if trace_rgb and trace_step % 25 != 0:
+                            # env.step auto-resets on done; save the last pre-action
+                            # view, not the next episode's initial observation.
+                            save_observation(trace_folder, trace_last_observation, trace_step)
+                        saved = save_episode(
+                            trace_dir, len(stats_episodes), current_episodes_info[i],
+                            trace_start, trace_waypoints, infos[i],
+                        )
+                        logger.info(f"Saved diagnostic trace: {saved}")
+                        with open(os.path.join(saved, "metrics.json"), "w") as handle:
+                            json.dump(episode_stats, handle, indent=2)
+                        trace_waypoints = []
+                        trace_start = None
 
                     if len(self.config.habitat_baselines.video_option) > 0:
                         generate_video(

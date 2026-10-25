@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#PBS -N sign-gifs
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=2:mem=8gb
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/graded60/render_gifs.log
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+export OMP_NUM_THREADS=1
+/scratch/e1538633/liuyi/envs/sign/bin/python scripts/render_trajectory_gifs.py \
+  results/qwen_diagnostic/graded60

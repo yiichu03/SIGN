@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -N sign-group8
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/group8_p12/collection.log
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign
+export PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 PYTHONHASHSEED=100
+export SIGN_TRACE_RGB=1 SIGN_EVAL_SAMPLE_ACTIONS=1
+python scripts/run_group8_collection.py

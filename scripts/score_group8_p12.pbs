@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#PBS -N qwen-group8
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/group8_p12/qwen.log
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+export OMP_NUM_THREADS=4 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+export HF_HOME=/scratch/e1538633/liuyi/models/.hf_cache
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+/scratch/e1538633/liuyi/envs/qwen35/bin/python scripts/score_group8_p12.py

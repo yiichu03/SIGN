@@ -1,0 +1,18 @@
+#!/bin/bash -l
+#PBS -N qwen-3way
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/graded60/qwen_three_way.log
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+export OMP_NUM_THREADS=4
+export HF_HOME=/scratch/e1538633/liuyi/models/.hf_cache
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+
+/scratch/e1538633/liuyi/envs/qwen35/bin/python scripts/run_qwen_three_way.py \
+  results/qwen_diagnostic/graded60 --expected-count 60

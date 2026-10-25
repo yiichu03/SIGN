@@ -1,0 +1,27 @@
+#!/bin/bash -l
+#PBS -N sign-trace1
+#PBS -q auto
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/hm3d_eval/trace1.pbs.log
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign
+export PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=1
+export SIGN_TRACE_DIR="${SIGN_TRACE_DIR:-$PWD/results/qwen_diagnostic/traces}"
+mkdir -p "$SIGN_TRACE_DIR"
+EPISODE_COUNT="${SIGN_EPISODE_COUNT:-1}"
+SPLIT="${SIGN_SPLIT:-val_easy}"
+
+python run_sim.py \
+  --exp-config exp_config/ppo_imagenav_hm3d.yaml,policy,reward,sensors,eval \
+  --run-type eval --model-dir "results/qwen_diagnostic/eval_${SPLIT}" \
+  habitat_baselines.eval_ckpt_path_dir ckpt/nav_model.pth \
+  habitat_baselines.eval.split "$SPLIT" \
+  habitat_baselines.num_environments 1 \
+  habitat_baselines.test_episode_count "$EPISODE_COUNT"

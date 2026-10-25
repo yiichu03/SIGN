@@ -1,3 +1,13 @@
+## 当前研究：Qwen 辅助评估 ImageNav 重复搜索
+
+服务器统一从 `/scratch/e1538633/liuyi` 启动。先读根目录 `AGENTS.md`（工作规则）和 `STATUS.md`（当前进度），操作与复现见 `RUNBOOK.md`，带时间戳的操作／错误／debug 历史见 `WORKLOG.md`。本目录是实际 SIGN 运行仓库；项目命令仍从这里运行。
+
+本地目录与 Git 关系、HM3D v0.2 环境、采集和发布方法统一维护在根目录手册。旧详细研究记录全文已导入根日志的 `MIGRATION-BASELINE` 条目；研究资料包保留发布时的历史说明。
+
+研究资料一键同步：`bash scripts/sync_research_github.sh`；追加 `--check-only` 检查和预览。SIGN 的 origin 为 `yiichu03/SIGN`，研究资料仍发布到 SIGN-SRU 的研究分支；四份根文档在成功发布时保存为资料包的 workspace 副本。
+
+[GitHub 研究资料入口](https://github.com/yiichu03/SIGN-SRU/blob/docs/qwen-reward-review-20261013/docs/research/qwen_relative_diagnostic_2026-10-13/README.md)。下面保留原项目安装与使用说明。
+
 ## [Project Website](https://nus-core.github.io/assets/standalone/SIGN/index.html)
 [![arXiv](https://img.shields.io/badge/arXiv-2310.07473-b31b1b.svg)](https://arxiv.org/pdf/2508.12394)
 [![Watch Demo](https://img.shields.io/badge/Watch-Demo-red?logo=youtube&logoColor=white)](https://nus-core.github.io/assets/standalone/SIGN/index.html)

@@ -1,0 +1,29 @@
+#!/bin/bash -l
+#PBS -N sign-new120
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/additional120/collection.log
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign
+export PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 SIGN_TRACE_RGB=1
+ROOT="$PWD/results/qwen_diagnostic/additional120"
+for split in val_easy val_medium val_hard; do
+    export SIGN_TRACE_DIR="$ROOT/$split"
+    mkdir -p "$SIGN_TRACE_DIR"
+    python run_sim.py \
+      --exp-config exp_config/ppo_imagenav_hm3d.yaml,policy,reward,sensors,eval \
+      --run-type eval --model-dir "$ROOT/eval_$split" \
+      habitat_baselines.eval_ckpt_path_dir ckpt/nav_model.pth \
+      habitat_baselines.eval.split "$split" \
+      habitat_baselines.num_environments 1 \
+      habitat_baselines.test_episode_count 40 \
+      habitat.dataset.data_path "$ROOT/datasets/{split}/{split}.json.gz"
+    python scripts/finalize_additional120.py "$split"
+done
+printf 'All 120 additional episodes collected and review assets ready.\n'

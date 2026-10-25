@@ -1,0 +1,17 @@
+#!/bin/bash -l
+#PBS -N qwen-case1
+#PBS -q interactive_gpu
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/qwen_case1.pbs.log
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+export OMP_NUM_THREADS=4
+export HF_HOME=/scratch/e1538633/liuyi/models/.hf_cache
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+
+/scratch/e1538633/liuyi/envs/qwen35/bin/python scripts/run_qwen_diagnostic.py \
+  results/qwen_diagnostic/traces/episode_001

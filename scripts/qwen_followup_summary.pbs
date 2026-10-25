@@ -1,0 +1,24 @@
+#!/bin/bash -l
+#PBS -N qwen-timings
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=1:mem=2gb
+#PBS -l walltime=00:15:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/qwen_diagnostic/graded60/timing_summary.log
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+/usr/bin/python scripts/qwen_followup.py summarize
+/usr/bin/python - <<'PY'
+import json
+from pathlib import Path
+root = Path('results/qwen_diagnostic/graded60')
+summary = json.loads((root/'timing_summary.json').read_text())
+for row in summary['rows']:
+    print(row['protocol'], row['modality'], 'episodes=', row['episodes'],
+          'mean_request_or_batch_seconds=', round(row['mean_request_or_batch_seconds'], 3),
+          'amortized_seconds_per_episode=', round(row['amortized_seconds_per_episode'], 3))
+assert summary['all_experiments_complete'], 'Some experiments are incomplete; see logs and row counts.'
+print('All three experiments complete; timing_summary.csv/json ready.')
+PY

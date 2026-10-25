@@ -46,6 +46,13 @@ import matplotlib.pyplot as plt
 import lpips
 from src.models import MrQHead
 
+
+def _deterministic_action(distribution):
+    if isinstance(distribution, torch.distributions.Normal):
+        return distribution.mean
+    mode = distribution.mode
+    return mode() if callable(mode) else mode
+
 class Flatten(nn.Module):
     def forward(self, x):
         return torch.flatten(x, start_dim=1)
@@ -249,7 +256,7 @@ class NavNetPolicy(NetPolicy):
             value = self.critic(features)
 
             if deterministic:
-                action = distribution.mode()
+                action = _deterministic_action(distribution)
             else:
                 action = distribution.sample()
 
@@ -346,7 +353,7 @@ class SafeNavNetPolicy(NavNetPolicy):
         cost_value = self.cost_critic(features)
 
         if deterministic:
-            action = distribution.mode
+            action = _deterministic_action(distribution)
         else:
             action = distribution.sample()
 
@@ -446,6 +453,5 @@ class SafeNavNetPolicy(NavNetPolicy):
     def critic_parameters(self) -> Iterable[torch.Tensor]:
         for c in self.critic_components:
             yield from c.parameters()
-
 
 

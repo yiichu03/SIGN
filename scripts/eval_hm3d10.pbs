@@ -1,0 +1,34 @@
+#!/bin/bash -l
+#PBS -N sign-hm3d10
+#PBS -q interactive_gpu
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -o /scratch/e1538633/liuyi/SIGN/results/hm3d_eval/pbs.log
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+exec > >(tee results/hm3d_eval/eval10.live.log) 2>&1
+
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign
+export PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=1
+
+hostname
+nvidia-smi -L
+python - <<'PY'
+import torch
+print("PyTorch:", torch.__version__, "CUDA available:", torch.cuda.is_available())
+assert torch.cuda.is_available(), "GPU is required for SIGN evaluation"
+PY
+python scripts/check_hm3d_eval_data.py
+
+python run_sim.py \
+  --exp-config exp_config/ppo_imagenav_hm3d.yaml,policy,reward,sensors,eval \
+  --run-type eval --model-dir results/hm3d_eval \
+  habitat_baselines.eval_ckpt_path_dir ckpt/nav_model.pth \
+  habitat_baselines.eval.split val_easy \
+  habitat_baselines.num_environments 1 \
+  habitat_baselines.test_episode_count 10

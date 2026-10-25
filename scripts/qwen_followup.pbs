@@ -1,0 +1,20 @@
+#!/bin/bash -l
+#PBS -N qwen-followup
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=04:00:00
+#PBS -j oe
+
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+export OMP_NUM_THREADS=4
+export HF_HOME=/scratch/e1538633/liuyi/models/.hf_cache
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+: "${QWEN_REVIEW_VERSION:?Set QWEN_REVIEW_VERSION=2, 3, or 4}"
+if [ "$QWEN_REVIEW_VERSION" = 4 ]; then
+  export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+fi
+/scratch/e1538633/liuyi/envs/qwen35/bin/python scripts/qwen_followup.py run \
+  --version "$QWEN_REVIEW_VERSION"
