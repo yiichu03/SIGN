@@ -21,9 +21,77 @@ from habitat.tasks.nav.nav import (
 from habitat.utils.geometry_utils import (
     quaternion_from_coeff,
     angle_between_quaternions,
+    quaternion_rotate_vector,
 )
+from habitat.utils.visualizations import maps, fog_of_war
 from src.sensor import ImageGoalSensorV2
 cv2 = try_cv2_import()
+
+
+@registry.register_measure
+class ObservedCoverage(Measure):
+    """训练侧二维视域覆盖代理；不发放reward，不输入Actor。"""
+    cls_uuid = "observed_coverage"
+
+    def __init__(self, sim, config, *args, **kwargs):
+        self.sim = sim
+        self.mpp = float(config.meters_per_pixel)
+        self.radius = float(config.visibility_dist)
+        self.fov = float(config.fov)
+        if not (np.isfinite([self.mpp, self.radius, self.fov]).all()
+                and self.mpp > 0 and self.radius > 0
+                and 0 < self.fov <= 180):
+            raise ValueError("Invalid coverage parameters")
+        super().__init__()
+
+    def _get_uuid(self, *args, **kwargs):
+        return self.cls_uuid
+
+    def _make_map(self):
+        self.height = float(self.sim.get_agent_state().position[1])
+        grid = maps.get_topdown_map_from_sim(
+            self.sim, draw_border=False, meters_per_pixel=self.mpp
+        )
+        if not np.any(grid == maps.MAP_VALID_POINT):
+            raise RuntimeError("Empty coverage map")
+        return grid
+
+    def _observe_count(self):
+        state = self.sim.get_agent_state()
+        # 这里只统计XZ投影并集，重叠楼层不会重复计面积。
+        if abs(float(state.position[1]) - self.height) > self.mpp:
+            grid = self._make_map()
+            if grid.shape != self._grid.shape:
+                raise RuntimeError("Coverage map shape changed within episode")
+            self._grid = grid
+        point = np.asarray(maps.to_grid(
+            state.position[2], state.position[0], self._grid.shape, sim=self.sim
+        ))
+        if not (0 <= point[0] < self._grid.shape[0]
+                and 0 <= point[1] < self._grid.shape[1]):
+            raise RuntimeError("Agent outside coverage map")
+        forward = quaternion_rotate_vector(state.rotation, np.array([0, 0, -1]))
+        # Map rows increase with world Z, columns with world X.
+        angle = float(np.arctan2(forward[0], forward[2]))
+        self._seen = fog_of_war.reveal_fog_of_war(
+            self._grid, self._seen, point, angle,
+            fov=self.fov, max_line_len=self.radius / self.mpp,
+        )
+        return int(np.count_nonzero(self._seen))
+
+    def reset_metric(self, episode, *args, **kwargs):
+        self._grid = self._make_map()
+        self._seen = np.zeros_like(self._grid, dtype=np.uint8)
+        self._count = self._initial_count = self._observe_count()
+        self._metric = {"delta_m2": 0.0, "new_area_m2": 0.0}
+
+    def update_metric(self, episode, *args, **kwargs):
+        count = self._observe_count()
+        self._metric = {
+            "delta_m2": float((count - self._count) * self.mpp ** 2),
+            "new_area_m2": float((count - self._initial_count) * self.mpp ** 2),
+        }
+        self._count = count
 
 
 @registry.register_measure

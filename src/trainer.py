@@ -131,6 +131,12 @@ class PPOTrainer(BaseRLTrainer):
         )
 
     def _init_train(self):
+        coverage_cfg = getattr(self.config.habitat.task, "observed_coverage", None)
+        self._coverage_weight = float(getattr(coverage_cfg, "weight", 0.0))
+        if not np.isfinite(self._coverage_weight) or self._coverage_weight < 0:
+            raise ValueError("Invalid coverage reward weight")
+        self._coverage_delta_rows = []
+
         if self.config.habitat_baselines.verbose:
             logger.info(f"config: {self.config}")
 
@@ -372,6 +378,11 @@ class PPOTrainer(BaseRLTrainer):
             list(x) for x in zip(*outputs)
         ]
 
+        if self._coverage_weight > 0:
+            self._coverage_delta_rows.append([
+                float(info["observed_coverage.delta_m2"]) for info in infos
+            ])
+
         self.env_time += time.time() - t_step_env
 
         t_update_stats = time.time()
@@ -436,10 +447,46 @@ class PPOTrainer(BaseRLTrainer):
         self._compute_actions_and_step_envs()
         return self._collect_environment_result()
 
+    @torch.no_grad()
+    def _add_coverage_bonus(self):
+        if self._coverage_weight == 0.0:
+            self._coverage_delta_rows.clear()
+            return {}
+        H = self.rollouts.current_rollout_step_idx
+        N = self.envs.num_envs
+        delta = np.asarray(self._coverage_delta_rows, dtype=np.float64)
+        if delta.shape != (H, N) or H <= 0:
+            raise RuntimeError("Coverage rows do not match rollout")
+        if not np.isfinite(delta).all() or (delta < 0).any():
+            raise RuntimeError("Invalid observed-area increments")
+        # masks[t+1]对应第t个动作执行后的终止状态。
+        masks = self.rollouts.buffers["masks"][1:H+1, :, 0]
+        ends = ~masks.detach().cpu().numpy().astype(bool)
+        ends[-1, :] = True  # 仅创建结算边界，不修改原始masks。
+        total_bonus = 0.0
+        for env in range(N):
+            start = 0
+            for end in np.flatnonzero(ends[:, env]):
+                length = int(end) + 1 - start
+                gain = float(delta[start:end+1, env].sum())
+                # 以后可将score替换为同一片段的Qwen评分。
+                score = gain / length
+                bonus = self._coverage_weight * (length / H) * score
+                self.rollouts.buffers["rewards"][end, env, 0] += bonus
+                total_bonus += bonus
+                start = int(end) + 1
+        self._coverage_delta_rows.clear()
+        return {
+            "coverage_bonus_sum": total_bonus,
+            "coverage_bonus_per_step": total_bonus / (H * N),
+            "coverage_new_area_m2": float(delta.sum()),
+        }
+
     @profiling_wrapper.RangeContext("_update_agent")
     def _update_agent(self):
         ppo_cfg = self.config.habitat_baselines.rl.ppo
         t_update_model = time.time()
+        coverage_metrics = self._add_coverage_bonus()
         with inference_mode():
             step_batch = self.rollouts.buffers[self.rollouts.current_rollout_step_idx]
 
@@ -465,6 +512,7 @@ class PPOTrainer(BaseRLTrainer):
         if not self.config.habitat_baselines.rl.ddppo.train_encoder:
             self.actor_critic.net.visual_encoder.eval()
         losses = self.agent.update(self.rollouts)
+        losses.update(coverage_metrics)
 
         self.rollouts.after_update()
         self.pth_time += time.time() - t_update_model
