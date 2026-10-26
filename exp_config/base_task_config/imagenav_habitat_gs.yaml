@@ -1,0 +1,28 @@
+habitat:
+  environment:
+    type: habitat_gs
+    max_episode_steps: 500
+    iterator_options:
+      max_scene_repeat_steps: 50000
+  simulator:
+    type: Sim-Drone
+    scene: data/scene_datasets/gs_scenes/val/scene56/scene56.gs.ply
+    scene_dataset: data/scene_datasets/gs_scenes/val.scene_dataset_config.json
+    agent_0:
+      sensors: [rgb_sensor, depth_sensor]
+    habitat_sim_v0:
+      gpu_device_id: 0
+      enable_physics: False
+  task:
+    type: Nav-Drone
+    end_on_success: True
+    possible_actions: [continuous_control]
+    success:
+      success_distance: 1.0
+  dataset:
+    type: HabitatGSImageNav-v1
+    split: val
+    content_scenes: [scene56]
+    scenes_dir: data/scene_datasets
+    scene_dataset_config: data/scene_datasets/gs_scenes/val.scene_dataset_config.json
+    data_path: data/scene_datasets/gs_scenes/episodes/imagenav/{split}/{split}.json.gz

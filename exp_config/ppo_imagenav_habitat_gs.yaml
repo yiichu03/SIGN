@@ -1,0 +1,14 @@
+# Keep SIGN's policy/reward/sensors/eval overlays; change only dataset and renderer inputs.
+# This scene56 pilot uses SIGN's 500-step, continuous-action evaluation protocol.
+# It is not the official Habitat-GS DDPPO benchmark (discrete actions, 1000 steps).
+habitat_baselines:
+  base_task_config_path: exp_config/base_task_config/imagenav_habitat_gs.yaml
+  num_environments: 1
+  test_episode_count: 10
+  eval_ckpt_path_dir: ckpt/nav_model.pth
+  force_torch_single_threaded: True
+  video_option: []
+
+habitat:
+  environment:
+    max_episode_steps: 500

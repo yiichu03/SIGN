@@ -54,3 +54,22 @@ class ImageNavDatasetV1(PointNavDatasetV1):
                     for p_index, point in enumerate(path):
                         path[p_index] = ShortestPathPoint(**point)
             self.episodes.append(episode)
+
+
+@registry.register_dataset(name="HabitatGSImageNav-v1")
+class HabitatGSImageNavDatasetV1(ImageNavDatasetV1):
+    """Use official GS episodes and retain their scene dataset during reset.
+
+    DroneEnv copies episode.scene_dataset_config over simulator.scene_dataset.
+    Official PointNav-format GS episodes omit that optional field, so the GS
+    dataset path must be supplied here as well as in the simulator config.
+    """
+
+    def __init__(self, config=None):
+        super().__init__(config)
+        if config is not None:
+            scene_dataset = config.scene_dataset_config
+            if not os.path.isfile(scene_dataset):
+                raise FileNotFoundError(scene_dataset)
+            for episode in self.episodes:
+                episode.scene_dataset_config = scene_dataset

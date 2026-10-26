@@ -1,0 +1,35 @@
+# Python 3.10; install torch 2.5.1 and torchvision 0.20.1 from the cu121 index first.
+# Habitat-Lab uses the workspace's pinned 1f7cfbdd source via PYTHONPATH.
+setuptools==75.6.0
+numpy==2.0.2
+scipy==1.14.1
+numba==0.60.0
+numpy-quaternion==2024.0.7
+attrs==24.2.0
+gym==0.22.0
+yacs==0.1.8
+hydra-core==1.2.0
+omegaconf==2.2.3
+opencv-python==4.10.0.84
+matplotlib==3.9.2
+pillow==10.4.0
+imageio==2.36.0
+imageio-ffmpeg==0.5.1
+moviepy==1.0.3
+tensorboard==2.18.0
+protobuf==3.20.3
+lpips==0.1.4
+einops==0.3.0
+lmdb==1.4.1
+webdataset==0.1.40
+ifcfg==0.24
+faster-fifo==1.4.7
+threadpoolctl==3.5.0
+GitPython==3.1.43
+PyYAML==6.0.2
+tqdm==4.67.0
+psutil==6.1.0
+scikit-build-core==0.10.7
+pybind11==2.13.6
+cmake==3.31.6
+ninja==1.11.1.4

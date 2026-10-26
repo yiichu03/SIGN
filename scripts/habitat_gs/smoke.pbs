@@ -1,0 +1,46 @@
+#!/bin/bash -l
+#PBS -N sign-gs-smoke
+#PBS -l walltime=02:00:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=12:mem=96gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+
+TASK_ROOT=/scratch/e1538633/liuyi
+module load Miniconda3/24.7.1-0 gcc11/11.3.0 cuda12.2/toolkit/12.2.2
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate "$TASK_ROOT/envs/sign-habitat-gs"
+export PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+export PYTHONPATH="$TASK_ROOT/habitat-lab/habitat-lab:$TASK_ROOT/habitat-lab/habitat-baselines:$TASK_ROOT/SIGN-habitat-gs"
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+
+cd "$TASK_ROOT/SIGN-habitat-gs"
+GS_RUN="results/habitat_gs_20261026/job_${PBS_JOBID%%.*}"
+test ! -e "$GS_RUN"
+mkdir -p "$GS_RUN"
+git rev-parse HEAD
+git -C "$TASK_ROOT/habitat-gs" rev-parse HEAD
+nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader
+
+# A40 is CUDA architecture 86. Upstream GS kernels additionally build a fixed
+# 70/75/80/86/90 fatbin. Headless rendering requires EGL.
+export HABITAT_WITH_CUDA=ON HABITAT_WITH_BULLET=OFF HABITAT_BUILD_GUI_VIEWERS=OFF
+export CMAKE_BUILD_PARALLEL_LEVEL=12
+python -m pip install --no-build-isolation --no-deps "$TASK_ROOT/habitat-gs" -v \
+  -Ccmake.define.CMAKE_CUDA_ARCHITECTURES=86 \
+  -Ccmake.define.MAGNUM_TARGET_EGL=ON \
+  > "$GS_RUN/build.log" 2>&1
+python -m pip freeze > "$GS_RUN/packages.txt"
+python scripts/habitat_gs/probe.py --gpu --output "$GS_RUN/probe.json"
+
+# The first config preserves SIGN's optimizer settings; the final overlay fixes
+# GS data and the pilot size after policy/sensors/eval have supplied defaults.
+python run_sim.py \
+  --exp-config exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,exp_config/ppo_imagenav_habitat_gs.yaml \
+  --run-type eval --model-dir "$GS_RUN/eval" \
+  habitat_baselines.eval_ckpt_path_dir ckpt/nav_model.pth \
+  habitat_baselines.eval.split val \
+  habitat_baselines.num_environments 1 habitat_baselines.test_episode_count 10
