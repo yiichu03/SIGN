@@ -6,6 +6,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -16,7 +17,10 @@ import torch
 import habitat_sim
 import run_sim  # Register SIGN's unchanged policy, sensors, task and simulator.
 from gym import spaces
+from habitat.core.registry import registry
+from habitat.core.simulator import SensorSuite
 from habitat_baselines.config.default import get_config
+from src.custom_habitat_simulator import HabitatSim
 from src.dataset import HabitatGSImageNavDatasetV1
 from src.policy import SafeNavNetPolicy
 from src.utils import change_habitat_config
@@ -42,6 +46,18 @@ def main():
     dataset = HabitatGSImageNavDatasetV1(cfg.habitat.dataset)
     assert len(dataset.episodes) == 100
     assert all(ep.scene_dataset_config == cfg.habitat.simulator.scene_dataset for ep in dataset.episodes)
+    # Exercise the actual SIGN -> native simulator configuration path on CPU,
+    # without constructing a renderer or a live Simulator.
+    config_context = SimpleNamespace(habitat_config=cfg.habitat.simulator)
+    config_context._get_agent_config = lambda index: HabitatSim._get_agent_config(config_context, index)
+    agent_config = config_context._get_agent_config(0)
+    sensors = [registry.get_sensor(cfg.habitat.simulator[name].type)(cfg.habitat.simulator[name])
+               for name in agent_config.sensors]
+    config_context.agent_sensors = [[sensor.uuid for sensor in sensors]]
+    native_config = HabitatSim.create_sim_config(config_context, SensorSuite(sensors), 1)
+    sensor_specs = [{"uuid": spec.uuid, "position": list(spec.position),
+                     "resolution": list(spec.resolution)}
+                    for spec in native_config.agents[0].sensor_specifications]
     nav = habitat_sim.PathFinder()
     navfile = ROOT / "data/scene_datasets/gs_scenes/val/scene56/scene56.navmesh"
     assert nav.load_nav_mesh(str(navfile))
@@ -77,6 +93,7 @@ def main():
     result = {
         "torch": torch.__version__, "numpy": np.__version__, "habitat_sim": habitat_sim.__version__,
         "habitat_sim_file": habitat_sim.__file__, "episodes": len(dataset.episodes),
+        "sensor_specs": sensor_specs,
         "navigable_area": nav.navigable_area, "max_geodesic_error_m": max(errors),
         "checkpoint_sha256": hashlib.sha256(ckpt_path.read_bytes()).hexdigest(),
         "checkpoint_policy_tensors": len(state), "safety_checkpoint_loaded_strictly": True,

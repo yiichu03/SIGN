@@ -341,6 +341,8 @@ class HabitatSim(habitat_sim.Simulator, Simulator):
                     config_to=sim_sensor_cfg,
                     ignore_keys=sensor._config_ignore_keys,
                     trans_dict={
+                        "position": lambda v: mn.Vector3(*v),
+                        "orientation": lambda v: mn.Vector3(*v),
                         "sensor_model_type": lambda v: getattr(
                             habitat_sim.FisheyeSensorModelType, v
                         ),
