@@ -1,0 +1,34 @@
+#!/bin/bash -l
+#PBS -N sign-gs-build
+#PBS -l walltime=02:00:00
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=12:mem=96gb
+#PBS -j oe
+set -euo pipefail
+
+TASK_ROOT=/scratch/e1538633/liuyi
+module load Miniconda3/24.7.1-0 gcc11/11.3.0 cuda12.2/toolkit/12.2.2 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate "$TASK_ROOT/envs/sign-habitat-gs"
+export PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+export PYTHONPATH="$TASK_ROOT/habitat-lab/habitat-lab:$TASK_ROOT/habitat-lab/habitat-baselines:$TASK_ROOT/SIGN-habitat-gs"
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+export HABITAT_WITH_CUDA=ON HABITAT_WITH_BULLET=OFF HABITAT_BUILD_GUI_VIEWERS=OFF
+export CMAKE_BUILD_PARALLEL_LEVEL=12
+GS_GLM_INCLUDE=/app1/ebapps/arches/flat-avx2/software/GLM/0.9.9.8-GCCcore-11.3.0/include
+test -f "$GS_GLM_INCLUDE/glm/glm.hpp"
+export CPATH="$GS_GLM_INCLUDE:${CPATH:-}"
+cd "$TASK_ROOT/SIGN-habitat-gs"
+
+GS_BUILD_RUN="$TASK_ROOT/logs/habitat_gs_20261026/build_${PBS_JOBID%%.*}"
+test ! -e "$GS_BUILD_RUN"
+mkdir -p "$GS_BUILD_RUN"
+# Explicit architectures allow CUDA compilation on a node without a GPU.
+python -m pip install --no-build-isolation --no-deps "$TASK_ROOT/habitat-gs" -v \
+  -Ccmake.define.CMAKE_CUDA_ARCHITECTURES=86 \
+  -Ccmake.define.MAGNUM_TARGET_EGL=ON \
+  > "$GS_BUILD_RUN/build.log" 2>&1
+python scripts/habitat_gs/probe.py --output "$GS_BUILD_RUN/cpu_probe.json"

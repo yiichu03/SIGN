@@ -1,5 +1,4 @@
 from email.policy import default
-from nis import match
 from typing import (
     Dict,
     Iterable,
