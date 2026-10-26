@@ -93,6 +93,18 @@ class PPOTrainer(BaseRLTrainer):
             orig_action_space=self.orig_policy_action_space,
         )
 
+        ddppo_cfg = self.config.habitat_baselines.rl.ddppo
+        if ddppo_cfg.pretrained_encoder:
+            state = torch.load(ddppo_cfg.pretrained_weights, map_location="cpu")["state_dict"]
+            prefix = "actor_critic.net.visual_encoder."
+            encoder_state = {
+                k[len(prefix):]: v for k, v in state.items() if k.startswith(prefix)
+            }
+            self.actor_critic.net.visual_encoder.load_state_dict(encoder_state, strict=True)
+        if not ddppo_cfg.train_encoder:
+            self.actor_critic.net.visual_encoder.requires_grad_(False)
+            self.actor_critic.net.visual_encoder.eval()
+
         self.obs_space = observation_space
         self.actor_critic.to(self.device)
 
@@ -450,6 +462,8 @@ class PPOTrainer(BaseRLTrainer):
                 self.rollouts.compute_cost_returns(next_cost_value, ppo_cfg.use_gae, ppo_cfg.gamma, ppo_cfg.tau)
 
         self.agent.train()
+        if not self.config.habitat_baselines.rl.ddppo.train_encoder:
+            self.actor_critic.net.visual_encoder.eval()
         losses = self.agent.update(self.rollouts)
 
         self.rollouts.after_update()
