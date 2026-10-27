@@ -113,3 +113,8 @@ habitat_baselines.eval.split test_easy
   publisher={IEEE}
 }
 ```
+
+
+## Frozen-encoder rollout-coverage experiment
+
+[Results, matched-step Gibson evaluation, training curves and reproduction](docs/experiments/frozen-rollout-coverage/README.md).

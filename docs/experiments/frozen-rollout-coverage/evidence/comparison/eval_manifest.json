@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-27T13:41:07+08:00",
+  "matched_step": 9216000,
+  "cases": {
+    "baseline": {
+      "original": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/ckpts/ckpt.17.pth",
+      "snapshot": "/scratch/e1538633/liuyi/logs/gibson_coverage_comparison_20261027/baseline_step9216000.pth",
+      "step": 9216000,
+      "sha256": "b9dbeafa81f5508c63797057c2a2fe8b9d2ecb240668ffc466ce66ddfee8455d",
+      "training_wall_time_seconds": 20709.74750161171
+    },
+    "coverage": {
+      "original": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.17.pth",
+      "snapshot": "/scratch/e1538633/liuyi/logs/gibson_coverage_comparison_20261027/coverage_step9216000.pth",
+      "step": 9216000,
+      "sha256": "5bb4ffadeb343ed8600e9665cfc146cb49c0518c254a6e48daec2ce2ec68a21a",
+      "training_wall_time_seconds": 26390.336549520493
+    }
+  }
+}

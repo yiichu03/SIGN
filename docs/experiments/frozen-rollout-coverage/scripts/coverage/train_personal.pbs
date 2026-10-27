@@ -1,0 +1,32 @@
+#!/bin/bash -l
+#PBS -N gib-coverage-train
+#PBS -o /scratch/e1538633/liuyi/logs/gibson_rollout_coverage_20261027/train_personal.pbs.log
+#PBS -l walltime=168:00:00
+#PBS -q auto
+#PBS -P personal-e1538633
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+support=/scratch/e1538633/liuyi/logs/gibson_rollout_coverage_20261027
+output=/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env
+test ! -d "$output/ckpts" || { echo 'Existing training output; refuse overwrite.'; exit 1; }
+python "$support/check_inputs.py"
+python -c 'import json; from pathlib import Path; p=Path("/scratch/e1538633/liuyi/logs/gibson_rollout_coverage_20261027"); assert json.loads((p/"short_summary.json").read_text())["passed"]; assert json.loads((p/"scene_probe.json").read_text())["passed"]'
+nvidia-smi --query-gpu=name,uuid,driver_version,memory.total --format=csv
+echo "JOB $PBS_JOBID PROJECT personal-e1538633 HOST $(hostname) START $(date -Is)"
+python run_sim.py --exp-config exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,rollout_coverage \
+  --run-type train --model-dir "$output" \
+  habitat_baselines.num_environments 8 habitat_baselines.rl.ppo.num_steps 256 \
+  habitat_baselines.rl.ddppo.pretrained_encoder True \
+  habitat_baselines.rl.ddppo.pretrained_weights ckpt/nav_model.pth \
+  habitat_baselines.rl.ddppo.train_encoder False \
+  habitat_baselines.num_checkpoints -1 habitat_baselines.checkpoint_interval 250 \
+  habitat_baselines.log_interval 10
+python /scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/export_curves.py \
+  --logdir "$output/tb" --output "$output/curves"

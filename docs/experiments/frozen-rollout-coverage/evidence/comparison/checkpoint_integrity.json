@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "encoder_items": 42,
+    "encoder_equal_public": true,
+    "all_parameters_finite": true
+  },
+  "coverage": {
+    "encoder_items": 42,
+    "encoder_equal_public": true,
+    "all_parameters_finite": true
+  }
+}

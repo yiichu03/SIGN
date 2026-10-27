@@ -1,0 +1,66 @@
+{
+  "recorded_at": "2026-10-27T14:30:12+08:00",
+  "matched_step": 9216000,
+  "episodes_per_model": 4200,
+  "metrics": {
+    "eval_reward/average_reward": {
+      "baseline": 5.686608791351318,
+      "coverage": 5.509918212890625,
+      "coverage_minus_baseline": -0.17669057846069336
+    },
+    "eval_metrics/distance_to_goal": {
+      "baseline": 1.4358503818511963,
+      "coverage": 1.4862542152404785,
+      "coverage_minus_baseline": 0.05040383338928223
+    },
+    "eval_metrics/success": {
+      "baseline": 0.7835714221000671,
+      "coverage": 0.7747619152069092,
+      "coverage_minus_baseline": -0.008809506893157959
+    },
+    "eval_metrics/spl": {
+      "baseline": 0.5197644829750061,
+      "coverage": 0.501013994216919,
+      "coverage_minus_baseline": -0.018750488758087158
+    },
+    "eval_metrics/soft_spl": {
+      "baseline": 0.48053768277168274,
+      "coverage": 0.4679342210292816,
+      "coverage_minus_baseline": -0.012603461742401123
+    },
+    "eval_metrics/distance_to_view": {
+      "baseline": 2.214482545852661,
+      "coverage": 2.308964967727661,
+      "coverage_minus_baseline": 0.094482421875
+    },
+    "eval_metrics/view_match": {
+      "baseline": 0.7664285898208618,
+      "coverage": 0.7508333325386047,
+      "coverage_minus_baseline": -0.01559525728225708
+    },
+    "eval_metrics/view_angle": {
+      "baseline": 44.78431701660156,
+      "coverage": 47.30599594116211,
+      "coverage_minus_baseline": 2.521678924560547
+    },
+    "eval_metrics/collisions.count": {
+      "baseline": 45.27785873413086,
+      "coverage": 47.158573150634766,
+      "coverage_minus_baseline": 1.8807144165039062
+    }
+  },
+  "success_counts": {
+    "baseline": 3291,
+    "coverage": 3254
+  },
+  "evaluation_config_identical_except_outputs_and_weight_path": true,
+  "training_seed_count": 1,
+  "limitations": [
+    "One training seed and one checkpoint pair; no across-seed causal claim.",
+    "Native evaluator saves aggregate statistics, not per-episode paired outcomes; no paired significance test."
+  ],
+  "elapsed_seconds": {
+    "baseline": 1436.0987894535065,
+    "coverage": 2698.761562347412
+  }
+}

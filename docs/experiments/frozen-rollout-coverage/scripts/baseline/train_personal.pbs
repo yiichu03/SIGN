@@ -1,0 +1,39 @@
+#!/bin/bash -l
+#PBS -N gib-frozen-personal
+#PBS -o /scratch/e1538633/liuyi/logs/gibson_frozen_encoder_20261026/train_personal.pbs.log
+#PBS -l walltime=168:00:00
+#PBS -q auto
+#PBS -P personal-e1538633
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONHASHSEED=0
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+support=/scratch/e1538633/liuyi/logs/gibson_frozen_encoder_20261026
+output=/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026
+test ! -d "$output/smoke/ckpts" || { echo 'Existing smoke output; refuse overwrite.'; exit 1; }
+test ! -d "$output/train_personal_8env/ckpts" || { echo 'Existing long training output; refuse overwrite.'; exit 1; }
+python "$support/check_inputs.py"
+nvidia-smi --query-gpu=name,uuid,driver_version,memory.total --format=csv
+python -c 'import torch; assert torch.cuda.is_available(); print("CUDA",torch.__version__,torch.cuda.get_device_name(0))'
+echo "JOB $PBS_JOBID PROJECT personal-e1538633 HOST $(hostname) START $(date -Is)"
+options=(habitat_baselines.num_environments 8 habitat_baselines.rl.ppo.num_steps 256
+         habitat_baselines.rl.ddppo.pretrained_encoder True
+         habitat_baselines.rl.ddppo.pretrained_weights ckpt/nav_model.pth
+         habitat_baselines.rl.ddppo.train_encoder False
+         habitat_baselines.num_checkpoints -1)
+python run_sim.py --exp-config exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors \
+  --run-type train --model-dir "$output/smoke" "${options[@]}" \
+  habitat_baselines.total_num_steps 4096.0 habitat_baselines.checkpoint_interval 2 habitat_baselines.log_interval 1
+python "$support/verify_gpu_smoke.py"
+echo "START FRESH LONG TRAINING $(date -Is): frozen pretrained visual_encoder only, random other initialization, 300M cap"
+python run_sim.py --exp-config exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors \
+  --run-type train --model-dir "$output/train_personal_8env" "${options[@]}" \
+  habitat_baselines.checkpoint_interval 250 habitat_baselines.log_interval 10
+python /scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/export_curves.py \
+  --logdir "$output/train_personal_8env/tb" --output "$output/train_personal_8env/curves"

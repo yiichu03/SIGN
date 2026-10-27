@@ -1,0 +1,342 @@
+{
+  "recorded_at": "2026-10-27T13:40:06+08:00",
+  "common_end_step": 9488384,
+  "evaluation": "training-stream comparison only; not validation",
+  "window_semantics": "Native 50-update completed-episode rolling means; additional interval means are descriptive and correlated.",
+  "runs": {
+    "baseline": {
+      "path": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env",
+      "latest_step": 22446080,
+      "latest": {
+        "metrics/success": 0.909967839717865,
+        "metrics/spl": 0.5155143141746521,
+        "metrics/view_match": 0.8894694447517395,
+        "metrics/collisions.count": 16.209003448486328,
+        "metrics/distance_to_goal": 0.705038845539093,
+        "reward": 7.738633155822754,
+        "perf/fps": 446.0861511230469
+      },
+      "all_scalars_finite": true
+    },
+    "coverage": {
+      "path": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env",
+      "latest_step": 9488384,
+      "latest": {
+        "metrics/success": 0.8382944464683533,
+        "metrics/spl": 0.45112669467926025,
+        "metrics/view_match": 0.7936444282531738,
+        "metrics/collisions.count": 22.317779541015625,
+        "metrics/distance_to_goal": 1.0451914072036743,
+        "reward": 7.01263952255249,
+        "perf/fps": 348.2090148925781
+      },
+      "all_scalars_finite": true,
+      "bonus_last_1m": {
+        "learner/coverage_bonus_sum": {
+          "mean": 0.11733607305613764,
+          "min": 0.04949609190225601,
+          "max": 0.1923242211341858
+        },
+        "learner/coverage_bonus_per_step": {
+          "mean": 5.7293004421942205e-05,
+          "min": 2.4168013624148443e-05,
+          "max": 9.390831110067666e-05
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 300.38034730064845,
+          "min": 126.70999908447266,
+          "max": 492.3500061035156
+        }
+      }
+    }
+  },
+  "matched_intervals": [
+    {
+      "lower_exclusive": 0,
+      "upper_inclusive": 1000000,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.26586317111066254,
+          "coverage": 0.28527568847505896,
+          "coverage_minus_baseline": 0.01941251736439642
+        },
+        "metrics/spl": {
+          "baseline": 0.15077977591636973,
+          "coverage": 0.16396639361351606,
+          "coverage_minus_baseline": 0.013186617697146324
+        },
+        "metrics/view_match": {
+          "baseline": 0.18082538185083902,
+          "coverage": 0.20460070397697205,
+          "coverage_minus_baseline": 0.023775322126133036
+        },
+        "metrics/collisions.count": {
+          "baseline": 19.13852287609069,
+          "coverage": 17.821212760737684,
+          "coverage_minus_baseline": -1.3173101153530062
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 3.0938104733091887,
+          "coverage": 2.9738768119303907,
+          "coverage_minus_baseline": -0.11993366137879802
+        },
+        "reward": {
+          "baseline": 1.761972868102259,
+          "coverage": 1.9860971619691852,
+          "coverage_minus_baseline": 0.22412429386692612
+        },
+        "perf/fps": {
+          "baseline": 446.4467116183922,
+          "coverage": 334.03660458424054,
+          "coverage_minus_baseline": -112.41010703415168
+        }
+      }
+    },
+    {
+      "lower_exclusive": 1000000,
+      "upper_inclusive": 2000000,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.6633993619289554,
+          "coverage": 0.6329723425575944,
+          "coverage_minus_baseline": -0.030427019371361053
+        },
+        "metrics/spl": {
+          "baseline": 0.3764426686236116,
+          "coverage": 0.35901604269127374,
+          "coverage_minus_baseline": -0.017426625932337847
+        },
+        "metrics/view_match": {
+          "baseline": 0.5560455341808132,
+          "coverage": 0.5133638969454609,
+          "coverage_minus_baseline": -0.04268163723535223
+        },
+        "metrics/collisions.count": {
+          "baseline": 25.285898001467594,
+          "coverage": 25.555540178642897,
+          "coverage_minus_baseline": 0.26964217717530303
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 1.4140278657928842,
+          "coverage": 1.4644783498322378,
+          "coverage_minus_baseline": 0.050450484039353594
+        },
+        "reward": {
+          "baseline": 5.084232987927609,
+          "coverage": 4.840875559654392,
+          "coverage_minus_baseline": -0.24335742827321738
+        },
+        "perf/fps": {
+          "baseline": 442.93385746439947,
+          "coverage": 350.1531138185595,
+          "coverage_minus_baseline": -92.78074364583995
+        }
+      }
+    },
+    {
+      "lower_exclusive": 3000000,
+      "upper_inclusive": 4000000,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.806935441762148,
+          "coverage": 0.8146412281170945,
+          "coverage_minus_baseline": 0.007705786354946453
+        },
+        "metrics/spl": {
+          "baseline": 0.4451012720481506,
+          "coverage": 0.432983092857041,
+          "coverage_minus_baseline": -0.01211817919110958
+        },
+        "metrics/view_match": {
+          "baseline": 0.7511555552482605,
+          "coverage": 0.7525322760297233,
+          "coverage_minus_baseline": 0.0013767207814627813
+        },
+        "metrics/collisions.count": {
+          "baseline": 22.717608036439113,
+          "coverage": 24.605724369821374,
+          "coverage_minus_baseline": 1.8881163333822606
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 0.9946721994559945,
+          "coverage": 0.96487260120778,
+          "coverage_minus_baseline": -0.029799598248214543
+        },
+        "reward": {
+          "baseline": 6.6529914752593555,
+          "coverage": 6.667684470217652,
+          "coverage_minus_baseline": 0.014692994958296346
+        },
+        "perf/fps": {
+          "baseline": 443.73141847700185,
+          "coverage": 351.26518439856534,
+          "coverage_minus_baseline": -92.46623407843651
+        }
+      }
+    },
+    {
+      "lower_exclusive": 5000000,
+      "upper_inclusive": 6000000,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.8137630350032791,
+          "coverage": 0.7918133030905098,
+          "coverage_minus_baseline": -0.021949731912769277
+        },
+        "metrics/spl": {
+          "baseline": 0.44760883086528935,
+          "coverage": 0.4408504150685717,
+          "coverage_minus_baseline": -0.006758415796717654
+        },
+        "metrics/view_match": {
+          "baseline": 0.7687400542810315,
+          "coverage": 0.7449032059702717,
+          "coverage_minus_baseline": -0.02383684831075983
+        },
+        "metrics/collisions.count": {
+          "baseline": 23.571560003718393,
+          "coverage": 22.87352951628263,
+          "coverage_minus_baseline": -0.6980304874357621
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 1.109103665244384,
+          "coverage": 1.186208498893214,
+          "coverage_minus_baseline": 0.07710483364883003
+        },
+        "reward": {
+          "baseline": 6.572424319923901,
+          "coverage": 6.424611175646548,
+          "coverage_minus_baseline": -0.14781314427735381
+        },
+        "perf/fps": {
+          "baseline": 445.11730162823784,
+          "coverage": 351.3925462941654,
+          "coverage_minus_baseline": -93.72475533407243
+        }
+      }
+    },
+    {
+      "lower_exclusive": 7000000,
+      "upper_inclusive": 8000000,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.8610584521342397,
+          "coverage": 0.8288171224311329,
+          "coverage_minus_baseline": -0.03224132970310678
+        },
+        "metrics/spl": {
+          "baseline": 0.45755805833939395,
+          "coverage": 0.46057514715292214,
+          "coverage_minus_baseline": 0.0030170888135281904
+        },
+        "metrics/view_match": {
+          "baseline": 0.8231587980422506,
+          "coverage": 0.7841716717113503,
+          "coverage_minus_baseline": -0.03898712633090029
+        },
+        "metrics/collisions.count": {
+          "baseline": 21.743519632850443,
+          "coverage": 18.471154823381234,
+          "coverage_minus_baseline": -3.2723648094692095
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 0.9103354591045887,
+          "coverage": 0.9997356783880534,
+          "coverage_minus_baseline": 0.08940021928346475
+        },
+        "reward": {
+          "baseline": 7.150761170377517,
+          "coverage": 6.996226569138665,
+          "coverage_minus_baseline": -0.15453460123885154
+        },
+        "perf/fps": {
+          "baseline": 445.1047735233736,
+          "coverage": 349.2647034814753,
+          "coverage_minus_baseline": -95.84007004189829
+        }
+      }
+    },
+    {
+      "lower_exclusive": 8216000,
+      "upper_inclusive": 9216000,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.8303650968645248,
+          "coverage": 0.8415932527349039,
+          "coverage_minus_baseline": 0.011228155870379175
+        },
+        "metrics/spl": {
+          "baseline": 0.46668542089637804,
+          "coverage": 0.47163071430046377,
+          "coverage_minus_baseline": 0.004945293404085727
+        },
+        "metrics/view_match": {
+          "baseline": 0.7965096864232256,
+          "coverage": 0.8017077151007935,
+          "coverage_minus_baseline": 0.005198028677567912
+        },
+        "metrics/collisions.count": {
+          "baseline": 18.74767819894116,
+          "coverage": 22.31436911584897,
+          "coverage_minus_baseline": 3.5666909169078096
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 1.0615106604094398,
+          "coverage": 0.9841784686154871,
+          "coverage_minus_baseline": -0.07733219179395268
+        },
+        "reward": {
+          "baseline": 6.780606703767991,
+          "coverage": 6.84900069870588,
+          "coverage_minus_baseline": 0.06839399493788889
+        },
+        "perf/fps": {
+          "baseline": 445.1350994461153,
+          "coverage": 349.84387144623116,
+          "coverage_minus_baseline": -95.29122799988414
+        }
+      }
+    },
+    {
+      "lower_exclusive": 8488384,
+      "upper_inclusive": 9488384,
+      "metrics": {
+        "metrics/success": {
+          "baseline": 0.835253952592916,
+          "coverage": 0.8430389954512348,
+          "coverage_minus_baseline": 0.007785042858318825
+        },
+        "metrics/spl": {
+          "baseline": 0.46799019027828925,
+          "coverage": 0.47568387036918375,
+          "coverage_minus_baseline": 0.007693680090894495
+        },
+        "metrics/view_match": {
+          "baseline": 0.7982495316210944,
+          "coverage": 0.8021936230132917,
+          "coverage_minus_baseline": 0.003944091392197313
+        },
+        "metrics/collisions.count": {
+          "baseline": 18.76331551674685,
+          "coverage": 21.782751438320293,
+          "coverage_minus_baseline": 3.019435921573443
+        },
+        "metrics/distance_to_goal": {
+          "baseline": 1.0368530137163485,
+          "coverage": 0.9707984523295381,
+          "coverage_minus_baseline": -0.06605456138681043
+        },
+        "reward": {
+          "baseline": 6.867360213539108,
+          "coverage": 6.9138513332983225,
+          "coverage_minus_baseline": 0.046491119759214605
+        },
+        "perf/fps": {
+          "baseline": 445.1111498873658,
+          "coverage": 349.5579765959508,
+          "coverage_minus_baseline": -95.55317329141502
+        }
+      }
+    }
+  ]
+}

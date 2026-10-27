@@ -1,0 +1,40 @@
+{
+  "case": "baseline",
+  "checkpoint": {
+    "original": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/ckpts/ckpt.17.pth",
+    "snapshot": "/scratch/e1538633/liuyi/logs/gibson_coverage_comparison_20261027/baseline_step9216000.pth",
+    "step": 9216000,
+    "sha256": "b9dbeafa81f5508c63797057c2a2fe8b9d2ecb240668ffc466ce66ddfee8455d",
+    "training_wall_time_seconds": 20709.74750161171
+  },
+  "command": [
+    "/scratch/e1538633/liuyi/envs/sign-baseline/bin/python",
+    "run_sim.py",
+    "--exp-config",
+    "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval",
+    "--run-type",
+    "eval",
+    "--model-dir",
+    "/scratch/e1538633/liuyi/logs/gibson_coverage_comparison_20261027/eval_baseline",
+    "habitat_baselines.eval_ckpt_path_dir",
+    "/scratch/e1538633/liuyi/logs/gibson_coverage_comparison_20261027/baseline_step9216000.pth"
+  ],
+  "elapsed_seconds": 1436.0987894535065,
+  "metrics": {
+    "eval_reward/average_reward": 5.686608791351318,
+    "eval_metrics/distance_to_goal": 1.4358503818511963,
+    "eval_metrics/success": 0.7835714221000671,
+    "eval_metrics/spl": 0.5197644829750061,
+    "eval_metrics/soft_spl": 0.48053768277168274,
+    "eval_metrics/distance_to_view": 2.214482545852661,
+    "eval_metrics/view_match": 0.7664285898208618,
+    "eval_metrics/view_angle": 44.78431701660156,
+    "eval_metrics/collisions.count": 45.27785873413086
+  },
+  "episodes_completed": 4200,
+  "pythonhashseed": 0,
+  "seed": 100,
+  "num_environments": 6,
+  "max_episode_steps": 500,
+  "note": "Native deterministic evaluation; coverage disabled; common public safety model as in original eval."
+}

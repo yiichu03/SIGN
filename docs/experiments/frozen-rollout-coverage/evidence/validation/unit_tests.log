@@ -1,0 +1,17 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+test_config_only_adds_measure_and_matches_fov (__main__.CoverageTests) ... ok
+test_four_headings_and_radius (__main__.CoverageTests) ... ok
+test_height_uses_xz_union (__main__.CoverageTests) ... ok
+test_initial_view_repeat_and_reset (__main__.CoverageTests) ... ok
+test_invalid_values_fail (__main__.CoverageTests) ... ok
+test_rollout_boundary_does_not_reset_coverage (__main__.CoverageTests) ... ok
+test_segments_masks_and_total (__main__.CoverageTests) ... ok
+test_wall_occlusion (__main__.CoverageTests) ... ok
+test_weight_zero_exactly_unchanged (__main__.CoverageTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.979s
+
+OK

@@ -1,0 +1,26 @@
+{
+  "common_end_step": 9488384,
+  "interpretation": "Mean of native correlated training rolling metrics across matched updates, not independent episode aggregates.",
+  "curve_mean": {
+    "metrics/success": {
+      "baseline": 0.7424740999339628,
+      "coverage": 0.7420684794358429,
+      "coverage_minus_baseline": -0.00040562049811998513
+    },
+    "metrics/spl": {
+      "baseline": 0.4123274808881827,
+      "coverage": 0.4101931345644038,
+      "coverage_minus_baseline": -0.0021343463237789018
+    },
+    "reward": {
+      "baseline": 6.035442602091698,
+      "coverage": 6.048738753446614,
+      "coverage_minus_baseline": 0.013296151354915686
+    }
+  },
+  "same_checkpoint_training_wall_time": {
+    "baseline_seconds": 20709.74750161171,
+    "coverage_seconds": 26390.336549520493,
+    "coverage_extra_time_pct": 27.429542767079607
+  }
+}

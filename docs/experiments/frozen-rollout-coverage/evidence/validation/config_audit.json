@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "differences": {
+    "habitat.task.measurements": {
+      "before": [
+        "distance_to_goal",
+        "success",
+        "spl",
+        "soft_spl",
+        "distance_to_view",
+        "view_match",
+        "view_angle",
+        "collisions"
+      ],
+      "after": [
+        "distance_to_goal",
+        "success",
+        "spl",
+        "soft_spl",
+        "distance_to_view",
+        "view_match",
+        "view_angle",
+        "collisions",
+        "observed_coverage"
+      ]
+    },
+    "habitat.task.observed_coverage.fov": {
+      "before": null,
+      "after": 90.0
+    },
+    "habitat.task.observed_coverage.meters_per_pixel": {
+      "before": null,
+      "after": 0.1
+    },
+    "habitat.task.observed_coverage.type": {
+      "before": null,
+      "after": "ObservedCoverage"
+    },
+    "habitat.task.observed_coverage.visibility_dist": {
+      "before": null,
+      "after": 3.0
+    },
+    "habitat.task.observed_coverage.weight": {
+      "before": null,
+      "after": 0.1
+    },
+    "habitat_baselines.checkpoint_folder": {
+      "before": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/ckpts",
+      "after": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/config_probe/ckpts"
+    },
+    "habitat_baselines.eval_ckpt_path_dir": {
+      "before": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/ckpts",
+      "after": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/config_probe/ckpts"
+    },
+    "habitat_baselines.log_file": {
+      "before": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/train_run0_/log.txt",
+      "after": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/config_probe/train_run1_/log.txt"
+    },
+    "habitat_baselines.tensorboard_dir": {
+      "before": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/tb",
+      "after": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/config_probe/tb"
+    },
+    "habitat_baselines.video_dir": {
+      "before": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/video",
+      "after": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/config_probe/video"
+    }
+  },
+  "serialization_normalization": "Saved config repr None can reload as string None; normalized only those nullable values for comparison. Same-path base-vs-coverage equality also passed in unit test.",
+  "seed": 100,
+  "pythonhashseed": 0,
+  "training_max_episode_steps": 1000,
+  "eval_exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval",
+  "eval_num_environments": 6,
+  "eval_max_episode_steps": 500,
+  "eval_all_episodes": 4200,
+  "eval_coverage_measure_enabled": false
+}

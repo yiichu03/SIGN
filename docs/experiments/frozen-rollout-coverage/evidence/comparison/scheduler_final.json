@@ -1,0 +1,73 @@
+{
+  "recorded_at": "2026-10-27T14:31:40+08:00",
+  "jobs": {
+    "1498509.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "exec_host": "GN-A40-042/1*36",
+      "resources_used": {
+        "cpupercent": 247,
+        "cput": "00:53:15",
+        "gpu_usage": "GN-A40-042(cuda.1.energyConsumed=8267J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=5%, cuda.1.memoryUtilization_avg=1%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=1415s, cuda.1.usagePerc=17.629%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "6588264kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "59838312kb",
+        "walltime": "00:24:03"
+      },
+      "comment": "Job run at Tue Oct 27 at 13:41 on (GN-A40-042[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "project": "personal-e1538633"
+    },
+    "1498510.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "exec_host": "GN-A40-017/1*36",
+      "resources_used": {
+        "cpupercent": 264,
+        "cput": "01:38:47",
+        "gpu_usage": "GN-A40-017(cuda.1.energyConsumed=7333J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=4%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=2669s, cuda.1.usagePerc=9.853%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "6361220kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "60237336kb",
+        "walltime": "00:45:04"
+      },
+      "comment": "Job run at Tue Oct 27 at 13:44 on (GN-A40-017[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "project": "personal-e1538633"
+    },
+    "1496716.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "exec_host": "GN-A40-045/0*36",
+      "resources_used": {
+        "cpupercent": 293,
+        "cput": "41:49:27",
+        "gpu_usage": "GN-A40-045(cuda.0.energyConsumed=13389J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15350.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=94%, cuda.0.memoryUtilization_avg=21%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=53451s, cuda.0.usagePerc=43.967%, cuda.0.memUsagePerc=9.191%)",
+        "mem": "10543520kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "80972092kb",
+        "walltime": "14:51:15"
+      },
+      "comment": "Job run at Mon Oct 26 at 23:40 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "project": "personal-e1538633"
+    },
+    "1497416.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "exec_host": "GN-A40-029/1*36",
+      "resources_used": {
+        "cpupercent": 273,
+        "cput": "21:21:25",
+        "gpu_usage": "GN-A40-029(cuda.0.energyConsumed=11771J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=29%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=30304s, cuda.0.usagePerc=43.955%, cuda.0.memUsagePerc=9.195%)",
+        "mem": "9087684kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81106284kb",
+        "walltime": "08:25:28"
+      },
+      "comment": "Job run at Tue Oct 27 at 06:04 on (GN-A40-029[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "project": "personal-e1538633"
+    }
+  }
+}

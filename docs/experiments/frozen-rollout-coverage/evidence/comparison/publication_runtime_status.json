@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-10-27T14:53:57+08:00",
+  "runtime_code": {
+    "baseline": "dac8609ee1dc3e71ad317998a2f5086a1935e84b",
+    "coverage": "6983c91e20493ff25ff32c24df02b968cc34f701"
+  },
+  "training_jobs": {
+    "1496716.stdct-mgmt-02": {
+      "job_state": "R",
+      "exec_host": "GN-A40-045/0*36",
+      "project": "personal-e1538633",
+      "comment": "Job run at Mon Oct 26 at 23:40 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "resources_used": {
+        "cpupercent": 293,
+        "cput": "42:51:40",
+        "gpu_usage": "GN-A40-045(cuda.0.energyConsumed=13170J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15350.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=94%, cuda.0.memoryUtilization_avg=25%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=54783s, cuda.0.usagePerc=45.966%, cuda.0.memUsagePerc=9.191%)",
+        "mem": "10543520kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "80972092kb",
+        "walltime": "15:13:28"
+      }
+    },
+    "1497416.stdct-mgmt-02": {
+      "job_state": "R",
+      "exec_host": "GN-A40-029/1*36",
+      "project": "personal-e1538633",
+      "comment": "Job run at Tue Oct 27 at 06:04 on (GN-A40-029[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "resources_used": {
+        "cpupercent": 273,
+        "cput": "22:16:30",
+        "gpu_usage": "GN-A40-029(cuda.0.energyConsumed=11687J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=16%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=31632s, cuda.0.usagePerc=33.967%, cuda.0.memUsagePerc=9.195%)",
+        "mem": "9087684kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81106284kb",
+        "walltime": "08:47:36"
+      }
+    }
+  },
+  "latest_console": {
+    "baseline": {
+      "steps": 24432640,
+      "lines": [
+        "2026-10-27 14:53:35,508 update: 11930\tfps: 446.328\t",
+        "2026-10-27 14:53:35,508 totaltime: 912.522 min\tupdate: 11930\tenv-time: 25779.564s\tpth-time: 27772.128s\tac-infer-time: 6586.083s\tupdate-stat-time: 6673.847s\tupdate-model-time: 14519.433s\tframes: 24432640\tschedule: 0.08144213333333333",
+        "2026-10-27 14:53:35,508 Average window size: 50  collisions.count: 14.574  cost: 14.574  distance_to_goal: 0.794  distance_to_view: 1.263  reward: 7.744  soft_spl: 0.512  spl: 0.559  success: 0.898  view_angle: 26.840  view_match: 0.873"
+      ]
+    },
+    "coverage": {
+      "steps": 11018240,
+      "lines": [
+        "2026-10-27 14:53:07,084 update: 5380\tfps: 348.306\t",
+        "2026-10-27 14:53:07,084 totaltime: 527.637 min\tupdate: 5380\tenv-time: 18627.608s\tpth-time: 12382.724s\tac-infer-time: 2840.518s\tupdate-stat-time: 2983.268s\tupdate-model-time: 6561.660s\tframes: 11018240\tschedule: 0.03672746666666667",
+        "2026-10-27 14:53:07,084 Average window size: 50  collisions.count: 17.433  cost: 17.433  distance_to_goal: 1.076  distance_to_view: 1.790  observed_coverage.delta_m2: 0.000  observed_coverage.new_area_m2: 13.398  reward: 6.916  soft_spl: 0.441  spl: 0.472  success: 0.824  view_angle: 40.895  view_match: 0.791"
+      ]
+    }
+  }
+}

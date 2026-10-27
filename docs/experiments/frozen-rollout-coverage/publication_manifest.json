@@ -1,0 +1,407 @@
+{
+  "generated_at": "2026-10-27T15:00:47+08:00",
+  "repository": "yiichu03/SIGN",
+  "branch": "phase2/frozen-rollout-coverage",
+  "runtime_code_commit": "6983c91e20493ff25ff32c24df02b968cc34f701",
+  "workspace_source": "/scratch/e1538633/liuyi",
+  "files": {
+    "evidence/comparison/full_val_comparison.json": {
+      "sha256": "7fce10ddcf875fe01d6cc0df91fedd3cdd11ebc9ffedeb633863e6a3d6a9936f",
+      "bytes": 2130,
+      "source": "logs/gibson_coverage_comparison_20261027/full_val_comparison.json",
+      "source_sha256": "7fce10ddcf875fe01d6cc0df91fedd3cdd11ebc9ffedeb633863e6a3d6a9936f",
+      "source_bytes": 2130
+    },
+    "evidence/comparison/baseline_eval_result.json": {
+      "sha256": "e2739b1c73165f82af393329bfb9c43d0be10c8ab471ac74aad27a3ebd38aff7",
+      "bytes": 1660,
+      "source": "logs/gibson_coverage_comparison_20261027/baseline_eval_result.json",
+      "source_sha256": "e2739b1c73165f82af393329bfb9c43d0be10c8ab471ac74aad27a3ebd38aff7",
+      "source_bytes": 1660
+    },
+    "evidence/comparison/coverage_eval_result.json": {
+      "sha256": "cddcd882639e25c16bc88c67011438f44985a8a8666631c8dc848cd39e9cb00f",
+      "bytes": 1685,
+      "source": "logs/gibson_coverage_comparison_20261027/coverage_eval_result.json",
+      "source_sha256": "cddcd882639e25c16bc88c67011438f44985a8a8666631c8dc848cd39e9cb00f",
+      "source_bytes": 1685
+    },
+    "evidence/comparison/eval_manifest.json": {
+      "sha256": "6f0cf941bfa9b753fa53da944f297308533fab9a714f05e0af261a6f9f182cb8",
+      "bytes": 968,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_manifest.json",
+      "source_sha256": "6f0cf941bfa9b753fa53da944f297308533fab9a714f05e0af261a6f9f182cb8",
+      "source_bytes": 968
+    },
+    "evidence/comparison/eval_config_audit.json": {
+      "sha256": "46aea5e4f1184b664fb7561929aa7098a2d48c150819129e67cc9388ec417126",
+      "bytes": 1784,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_config_audit.json",
+      "source_sha256": "46aea5e4f1184b664fb7561929aa7098a2d48c150819129e67cc9388ec417126",
+      "source_bytes": 1784
+    },
+    "evidence/comparison/checkpoint_integrity.json": {
+      "sha256": "fd65f4aacb0980e96b498ab79e6f570d85139ef714b63d8c1852bfde94584486",
+      "bytes": 231,
+      "source": "logs/gibson_coverage_comparison_20261027/checkpoint_integrity.json",
+      "source_sha256": "fd65f4aacb0980e96b498ab79e6f570d85139ef714b63d8c1852bfde94584486",
+      "source_bytes": 231
+    },
+    "evidence/comparison/comparison_submission.json": {
+      "sha256": "7a0703b1c3fcc37803ecb70c799422e831676d13924d890888d6ecfcda2db58d",
+      "bytes": 637,
+      "source": "logs/gibson_coverage_comparison_20261027/comparison_submission.json",
+      "source_sha256": "7a0703b1c3fcc37803ecb70c799422e831676d13924d890888d6ecfcda2db58d",
+      "source_bytes": 637
+    },
+    "evidence/comparison/scheduler_final.json": {
+      "sha256": "4c4843f8ee3362b064d6b5f0e26280748a4c8cf2737ad16efbc1848b4644997f",
+      "bytes": 4179,
+      "source": "logs/gibson_coverage_comparison_20261027/scheduler_final.json",
+      "source_sha256": "4c4843f8ee3362b064d6b5f0e26280748a4c8cf2737ad16efbc1848b4644997f",
+      "source_bytes": 4179
+    },
+    "evidence/comparison/publication_runtime_status.json": {
+      "sha256": "11f01dd2e3b1497f6400e53c7b27fda808e9581364936a7386c8c9200b68ebf9",
+      "bytes": 3592,
+      "source": "logs/gibson_coverage_comparison_20261027/publication_runtime_status.json",
+      "source_sha256": "11f01dd2e3b1497f6400e53c7b27fda808e9581364936a7386c8c9200b68ebf9",
+      "source_bytes": 3592
+    },
+    "evidence/comparison/descriptive_training_diagnostics.json": {
+      "sha256": "d5c9b04f547328d554394669c473ec64ffbc53767ac589682dfff32032f48bc5",
+      "bytes": 849,
+      "source": "logs/gibson_coverage_comparison_20261027/descriptive_training_diagnostics.json",
+      "source_sha256": "d5c9b04f547328d554394669c473ec64ffbc53767ac589682dfff32032f48bc5",
+      "source_bytes": 849
+    },
+    "evidence/comparison/baseline_eval.log.gz": {
+      "sha256": "e2cc8df2bb18c10099f013e3736afae3f139290292ca4fbb5dd5294c620d7517",
+      "bytes": 32459,
+      "source": "logs/gibson_coverage_comparison_20261027/baseline_eval.log",
+      "source_sha256": "b4242d6adb4dfbeb98342fab7ddd75a2462f25576aadff049f2a9623bd1aa246",
+      "source_bytes": 209350,
+      "compression": "gzip; original bytes verified"
+    },
+    "evidence/config/eval_baseline.yaml": {
+      "sha256": "fe38b9eb223f5c09d78c4c3317669585aca69645d59fe25e9253a16d4d9e83de",
+      "bytes": 23186,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_baseline/eval_run0_/config_of_eval.yaml",
+      "source_sha256": "fe38b9eb223f5c09d78c4c3317669585aca69645d59fe25e9253a16d4d9e83de",
+      "source_bytes": 23186
+    },
+    "evidence/comparison/baseline_native_summary.log": {
+      "sha256": "fd3006ee8fd563c743fd904aa0a3ae56ef96092669d520ac327c2555e5ca289c",
+      "bytes": 1412,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_baseline/eval_run0_/log.txt",
+      "source_sha256": "fd3006ee8fd563c743fd904aa0a3ae56ef96092669d520ac327c2555e5ca289c",
+      "source_bytes": 1412
+    },
+    "evidence/comparison/tensorboard_baseline/events.out.tfevents.1793079720.GN-A40-042.4111205.0": {
+      "sha256": "e1512ce9028b066791609981b550b8346b05336dddb807ea5e88700aab772107",
+      "bytes": 625,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_baseline/tb/events.out.tfevents.1793079720.GN-A40-042.4111205.0",
+      "source_sha256": "e1512ce9028b066791609981b550b8346b05336dddb807ea5e88700aab772107",
+      "source_bytes": 625
+    },
+    "evidence/comparison/coverage_eval.log.gz": {
+      "sha256": "c2ad11c886fda605e6ac07e16bd92fa7c9d0808e15a0d8f7e01dc345eae5b4dc",
+      "bytes": 37780,
+      "source": "logs/gibson_coverage_comparison_20261027/coverage_eval.log",
+      "source_sha256": "1e6e01d33d2583c8adde9975544185828fa496e9015743b1f68f5c8e8e7c8ef7",
+      "source_bytes": 238816,
+      "compression": "gzip; original bytes verified"
+    },
+    "evidence/config/eval_coverage.yaml": {
+      "sha256": "c4856acbb1081bb73737713bed36ed6ed4d17c125c865ca5cd428cb8d400dd85",
+      "bytes": 23186,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_coverage/eval_run0_/config_of_eval.yaml",
+      "source_sha256": "c4856acbb1081bb73737713bed36ed6ed4d17c125c865ca5cd428cb8d400dd85",
+      "source_bytes": 23186
+    },
+    "evidence/comparison/coverage_native_summary.log": {
+      "sha256": "9e177f135ce3ee6c008db4914773892372421cb044aa55ff307852ef80a1bcb9",
+      "bytes": 1412,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_coverage/eval_run0_/log.txt",
+      "source_sha256": "9e177f135ce3ee6c008db4914773892372421cb044aa55ff307852ef80a1bcb9",
+      "source_bytes": 1412
+    },
+    "evidence/comparison/tensorboard_coverage/events.out.tfevents.1793079916.GN-A40-017.1175465.0": {
+      "sha256": "cf3b843dcaeeee45bd82d1ffa72901a0105383d28e320f5de16ad49c55e2a510",
+      "bytes": 625,
+      "source": "logs/gibson_coverage_comparison_20261027/eval_coverage/tb/events.out.tfevents.1793079916.GN-A40-017.1175465.0",
+      "source_sha256": "cf3b843dcaeeee45bd82d1ffa72901a0105383d28e320f5de16ad49c55e2a510",
+      "source_bytes": 625
+    },
+    "evidence/training/initial_1340/training_comparison.json": {
+      "sha256": "d6f5445b15b6c3158774eb0d15458be0abe3ed41b4908f088038d456e71e9b10",
+      "bytes": 11609,
+      "source": "logs/gibson_coverage_comparison_20261027/training_comparison.json",
+      "source_sha256": "d6f5445b15b6c3158774eb0d15458be0abe3ed41b4908f088038d456e71e9b10",
+      "source_bytes": 11609
+    },
+    "evidence/training/initial_1340/matched_training_curves.png": {
+      "sha256": "dea059f3afdee4105648d465175e5e50209fb1bd8d79fe5cb713e8fb52af506e",
+      "bytes": 315819,
+      "source": "logs/gibson_coverage_comparison_20261027/matched_training_curves.png",
+      "source_sha256": "dea059f3afdee4105648d465175e5e50209fb1bd8d79fe5cb713e8fb52af506e",
+      "source_bytes": 315819
+    },
+    "evidence/training/initial_1340/matched_training_curves.pdf": {
+      "sha256": "bcb1e3f95fb412b40d81b310d6145fe17201235f47cc2f9ebf042e72658f302d",
+      "bytes": 224646,
+      "source": "logs/gibson_coverage_comparison_20261027/matched_training_curves.pdf",
+      "source_sha256": "bcb1e3f95fb412b40d81b310d6145fe17201235f47cc2f9ebf042e72658f302d",
+      "source_bytes": 224646
+    },
+    "evidence/training/latest/training_comparison.json": {
+      "sha256": "c5903268cc17d7534770ac2da32eeaddfd368a89c439210ea750bab52f8f1808",
+      "bytes": 11605,
+      "source": "logs/gibson_coverage_comparison_20261027/latest_training_snapshot/training_comparison.json",
+      "source_sha256": "c5903268cc17d7534770ac2da32eeaddfd368a89c439210ea750bab52f8f1808",
+      "source_bytes": 11605
+    },
+    "evidence/training/latest/matched_training_curves.png": {
+      "sha256": "b44dcaf0df0a283892331463dd0cd3c2a809a6184941eb9ed7c9bbdd11a62d10",
+      "bytes": 317563,
+      "source": "logs/gibson_coverage_comparison_20261027/latest_training_snapshot/matched_training_curves.png",
+      "source_sha256": "b44dcaf0df0a283892331463dd0cd3c2a809a6184941eb9ed7c9bbdd11a62d10",
+      "source_bytes": 317563
+    },
+    "evidence/training/latest/matched_training_curves.pdf": {
+      "sha256": "282221492f1890fdd678cccda0e524540b2522f7cb50f9f5ee53b885073453b7",
+      "bytes": 238410,
+      "source": "logs/gibson_coverage_comparison_20261027/latest_training_snapshot/matched_training_curves.pdf",
+      "source_sha256": "282221492f1890fdd678cccda0e524540b2522f7cb50f9f5ee53b885073453b7",
+      "source_bytes": 238410
+    },
+    "evidence/training/latest/baseline_scalars.csv.gz": {
+      "sha256": "117d79f5f0acbfb4ca52aba5ab6c502405a4984cad2ccde0a90a68c2e27bcfdc",
+      "bytes": 6825793,
+      "source": "logs/gibson_coverage_comparison_20261027/latest_training_snapshot/baseline_scalars.csv",
+      "source_sha256": "13dffbf74b65b4dcc8ebfa41ef1d3aedb70051e9c090ee77ffb407a76902e265",
+      "source_bytes": 22317608,
+      "compression": "gzip; original bytes verified"
+    },
+    "evidence/training/latest/coverage_scalars.csv.gz": {
+      "sha256": "d1bbca8c08a91316f24a7a60883b5b27a1599febdd6bbc4e78f16b768b07924a",
+      "bytes": 3486186,
+      "source": "logs/gibson_coverage_comparison_20261027/latest_training_snapshot/coverage_scalars.csv",
+      "source_sha256": "d0647bbfb0ea30136d68b66b87f415befedd8ad69861cea2d69295aca636ef44",
+      "source_bytes": 11720734,
+      "compression": "gzip; original bytes verified"
+    },
+    "evidence/validation/unit_results.json": {
+      "sha256": "ed696cf91befba31f10596e419b7c3d970ae7457e073188ee4f21cbc159193c9",
+      "bytes": 67,
+      "source": "logs/gibson_rollout_coverage_20261027/unit_results.json",
+      "source_sha256": "ed696cf91befba31f10596e419b7c3d970ae7457e073188ee4f21cbc159193c9",
+      "source_bytes": 67
+    },
+    "evidence/validation/unit_tests.log": {
+      "sha256": "b217abedddbf4ad7d185c4fe86165c575003d89d7607490753b27f52112182d0",
+      "bytes": 1042,
+      "source": "logs/gibson_rollout_coverage_20261027/unit_tests.log",
+      "source_sha256": "b217abedddbf4ad7d185c4fe86165c575003d89d7607490753b27f52112182d0",
+      "source_bytes": 1042
+    },
+    "evidence/validation/short_summary.json": {
+      "sha256": "69cbe18f07856f08901db8469d882cb71859e18d9eb3093b66344eee0462e8c8",
+      "bytes": 4415,
+      "source": "logs/gibson_rollout_coverage_20261027/short_summary.json",
+      "source_sha256": "69cbe18f07856f08901db8469d882cb71859e18d9eb3093b66344eee0462e8c8",
+      "source_bytes": 4415
+    },
+    "evidence/validation/short_results.json": {
+      "sha256": "e75b7f9756f4fe3fd404aa3becc1c2614c6ba4e57042bb9472bffd18432634a8",
+      "bytes": 59343,
+      "source": "logs/gibson_rollout_coverage_20261027/short_results.json",
+      "source_sha256": "e75b7f9756f4fe3fd404aa3becc1c2614c6ba4e57042bb9472bffd18432634a8",
+      "source_bytes": 59343
+    },
+    "evidence/validation/scene_probe.json": {
+      "sha256": "e1668ae6a44307c6493f9b457ab2e1ab83b73558ea5502e39c4e6fd5144c2255",
+      "bytes": 1399,
+      "source": "logs/gibson_rollout_coverage_20261027/scene_probe.json",
+      "source_sha256": "e1668ae6a44307c6493f9b457ab2e1ab83b73558ea5502e39c4e6fd5144c2255",
+      "source_bytes": 1399
+    },
+    "evidence/validation/config_audit.json": {
+      "sha256": "de3af2ac18a7ee619dfad182fbcc84fde8490f8947cfaeab631b5a67f3cef594",
+      "bytes": 3000,
+      "source": "logs/gibson_rollout_coverage_20261027/config_audit.json",
+      "source_sha256": "de3af2ac18a7ee619dfad182fbcc84fde8490f8947cfaeab631b5a67f3cef594",
+      "source_bytes": 3000
+    },
+    "evidence/validation/source_manifest.json": {
+      "sha256": "fa59ebeb38301bf627a992eda98b437db6f827213682d987137634da3d40d8f9",
+      "bytes": 4732,
+      "source": "logs/gibson_rollout_coverage_20261027/source_manifest.json",
+      "source_sha256": "fa59ebeb38301bf627a992eda98b437db6f827213682d987137634da3d40d8f9",
+      "source_bytes": 4732
+    },
+    "evidence/validation/original_worktree_before.json": {
+      "sha256": "07dc28b75edcdf2068b7e04cfbeafcdb7333398b89480bec1d220e03be1d3d10",
+      "bytes": 4544,
+      "source": "logs/gibson_rollout_coverage_20261027/original_worktree_before.json",
+      "source_sha256": "07dc28b75edcdf2068b7e04cfbeafcdb7333398b89480bec1d220e03be1d3d10",
+      "source_bytes": 4544
+    },
+    "evidence/validation/training_submission.json": {
+      "sha256": "da12e4d6027a497d2b86bd74b713ee4beb62bcad3d951a802499946f5644f98e",
+      "bytes": 1881,
+      "source": "logs/gibson_rollout_coverage_20261027/training_submission.json",
+      "source_sha256": "da12e4d6027a497d2b86bd74b713ee4beb62bcad3d951a802499946f5644f98e",
+      "source_bytes": 1881
+    },
+    "scripts/coverage/test_coverage.py": {
+      "sha256": "232a6d94dec066d0a9905ab137bb5573dae3252516ead37d9a667ea1797fe9a8",
+      "bytes": 8922,
+      "source": "logs/gibson_rollout_coverage_20261027/test_coverage.py",
+      "source_sha256": "232a6d94dec066d0a9905ab137bb5573dae3252516ead37d9a667ea1797fe9a8",
+      "source_bytes": 8922
+    },
+    "scripts/coverage/probe_scene.py": {
+      "sha256": "8e75effd3b1427fcb745d51b9f3840557ed0eedfeb24ae213cd53a80bf98f0d5",
+      "bytes": 4731,
+      "source": "logs/gibson_rollout_coverage_20261027/probe_scene.py",
+      "source_sha256": "8e75effd3b1427fcb745d51b9f3840557ed0eedfeb24ae213cd53a80bf98f0d5",
+      "source_bytes": 4731
+    },
+    "scripts/coverage/run_short_checks.py": {
+      "sha256": "c58ab58ceebf5a7c11ec5f836b161483091fef4af224e6b9e048d6788cbe52e6",
+      "bytes": 4470,
+      "source": "logs/gibson_rollout_coverage_20261027/run_short_checks.py",
+      "source_sha256": "c58ab58ceebf5a7c11ec5f836b161483091fef4af224e6b9e048d6788cbe52e6",
+      "source_bytes": 4470
+    },
+    "scripts/coverage/check_inputs.py": {
+      "sha256": "494e9b0aeca1827d51ad58a7d8bbff4e6a8a9442d466cd5600347e3f3d7a3663",
+      "bytes": 1234,
+      "source": "logs/gibson_rollout_coverage_20261027/check_inputs.py",
+      "source_sha256": "494e9b0aeca1827d51ad58a7d8bbff4e6a8a9442d466cd5600347e3f3d7a3663",
+      "source_bytes": 1234
+    },
+    "scripts/coverage/short_checks.pbs": {
+      "sha256": "68032c0b42c838afe5b0eff2a525b92c2706a251d315eaa685954875574882bd",
+      "bytes": 883,
+      "source": "logs/gibson_rollout_coverage_20261027/short_checks.pbs",
+      "source_sha256": "68032c0b42c838afe5b0eff2a525b92c2706a251d315eaa685954875574882bd",
+      "source_bytes": 883
+    },
+    "scripts/coverage/train_personal.pbs": {
+      "sha256": "c47f3e239c2f6aad33b7ffb4c930ad41b30b0a53c502db2911f2f62047c1183b",
+      "bytes": 2024,
+      "source": "logs/gibson_rollout_coverage_20261027/train_personal.pbs",
+      "source_sha256": "c47f3e239c2f6aad33b7ffb4c930ad41b30b0a53c502db2911f2f62047c1183b",
+      "source_bytes": 2024
+    },
+    "scripts/comparison/analyze_training.py": {
+      "sha256": "a4486ad0cb9e65919d4c7afded689490c916a7e89bfa941ef8ea7a4dfe2bb2f1",
+      "bytes": 4832,
+      "source": "logs/gibson_coverage_comparison_20261027/analyze_training.py",
+      "source_sha256": "a4486ad0cb9e65919d4c7afded689490c916a7e89bfa941ef8ea7a4dfe2bb2f1",
+      "source_bytes": 4832
+    },
+    "scripts/comparison/evaluate_checkpoint.py": {
+      "sha256": "308153cac9d73c1aa06aa5d69bae0dd89e57fd67ec08e8f0b0b7913b9f7fff7b",
+      "bytes": 2775,
+      "source": "logs/gibson_coverage_comparison_20261027/evaluate_checkpoint.py",
+      "source_sha256": "308153cac9d73c1aa06aa5d69bae0dd89e57fd67ec08e8f0b0b7913b9f7fff7b",
+      "source_bytes": 2775
+    },
+    "scripts/comparison/summarize_eval.py": {
+      "sha256": "3d4daa6ba7e8a3293b05f02d5bc924c0c50a60bc9978ff126f07df8cd71eae83",
+      "bytes": 3200,
+      "source": "logs/gibson_coverage_comparison_20261027/summarize_eval.py",
+      "source_sha256": "3d4daa6ba7e8a3293b05f02d5bc924c0c50a60bc9978ff126f07df8cd71eae83",
+      "source_bytes": 3200
+    },
+    "scripts/comparison/baseline.pbs": {
+      "sha256": "32e3455fcd64d28b712d7d4e263b0cdb00121eb31394afa77c38130eca37b356",
+      "bytes": 798,
+      "source": "logs/gibson_coverage_comparison_20261027/baseline.pbs",
+      "source_sha256": "32e3455fcd64d28b712d7d4e263b0cdb00121eb31394afa77c38130eca37b356",
+      "source_bytes": 798
+    },
+    "scripts/comparison/coverage.pbs": {
+      "sha256": "b19506e20a2018ffd96cb6e85c9b8a3ae41d1bc6eeacc4e35d5897c2ca51da8f",
+      "bytes": 798,
+      "source": "logs/gibson_coverage_comparison_20261027/coverage.pbs",
+      "source_sha256": "b19506e20a2018ffd96cb6e85c9b8a3ae41d1bc6eeacc4e35d5897c2ca51da8f",
+      "source_bytes": 798
+    },
+    "scripts/comparison/build_publication.py": {
+      "sha256": "a7a3f7f0f0600e7dbe296b37ec6974143fd04a277e12a0e08600bc683bc8c5ae",
+      "bytes": 15765,
+      "source": "logs/gibson_coverage_comparison_20261027/build_publication.py",
+      "source_sha256": "a7a3f7f0f0600e7dbe296b37ec6974143fd04a277e12a0e08600bc683bc8c5ae",
+      "source_bytes": 15765
+    },
+    "scripts/baseline/train_personal.pbs": {
+      "sha256": "6aea14a56e4d30eb54d9804ae542920c65d223798101cf8aa2bd96c7f966be4f",
+      "bytes": 2464,
+      "source": "logs/gibson_frozen_encoder_20261026/train_personal.pbs",
+      "source_sha256": "6aea14a56e4d30eb54d9804ae542920c65d223798101cf8aa2bd96c7f966be4f",
+      "source_bytes": 2464
+    },
+    "evidence/config/train_baseline.yaml": {
+      "sha256": "c3ac48c89e8dd5c43bdeaa1e55e7147702a08b06ca6990fa03ec34bb1bbda8a0",
+      "bytes": 23444,
+      "source": "SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/train_run0_/config_of_train.yaml",
+      "source_sha256": "c3ac48c89e8dd5c43bdeaa1e55e7147702a08b06ca6990fa03ec34bb1bbda8a0",
+      "source_bytes": 23444
+    },
+    "evidence/config/train_coverage.yaml": {
+      "sha256": "d56806bd7afa065e6e8d840356f47c1673400d48b2a2fc3d329913abbe822bb0",
+      "bytes": 23736,
+      "source": "SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/train_run0_/config_of_train.yaml",
+      "source_sha256": "d56806bd7afa065e6e8d840356f47c1673400d48b2a2fc3d329913abbe822bb0",
+      "source_bytes": 23736
+    },
+    "workspace/AGENTS.md": {
+      "sha256": "66b431d7fd1579d91dc0193320e48ab398841d8449ef3f3bb29080a57b18fb02",
+      "bytes": 7922,
+      "source": "AGENTS.md",
+      "source_sha256": "66b431d7fd1579d91dc0193320e48ab398841d8449ef3f3bb29080a57b18fb02",
+      "source_bytes": 7922
+    },
+    "workspace/STATUS.md": {
+      "sha256": "7f9b5a9ba86a2e44796bbed62546b64fd0ef4f929810033dd7be6c667e036a40",
+      "bytes": 24125,
+      "source": "STATUS.md",
+      "source_sha256": "7f9b5a9ba86a2e44796bbed62546b64fd0ef4f929810033dd7be6c667e036a40",
+      "source_bytes": 24125
+    },
+    "workspace/RUNBOOK.md": {
+      "sha256": "ef1a775031570704712bbab6d3985ab44aecacd9844a56d0d3d982ad69e22efb",
+      "bytes": 37778,
+      "source": "RUNBOOK.md",
+      "source_sha256": "ef1a775031570704712bbab6d3985ab44aecacd9844a56d0d3d982ad69e22efb",
+      "source_bytes": 37778
+    },
+    "workspace/WORKLOG.md": {
+      "sha256": "4d581e0017f3f23f747cb6116f8cbbcdc7d2c5b2cfa2c8c59b81e41a17b714dd",
+      "bytes": 123775,
+      "source": "WORKLOG.md",
+      "source_sha256": "4d581e0017f3f23f747cb6116f8cbbcdc7d2c5b2cfa2c8c59b81e41a17b714dd",
+      "source_bytes": 123775
+    },
+    "README.md": {
+      "sha256": "4401067aa63187b441fa42613bace2d26982f1be42a437753f843365ac1add95",
+      "bytes": 7175
+    }
+  },
+  "root_readme_sha256": "201fb3aed23be384765051c2ec7bcce04ebca8180126417f713c0ba380d64e37",
+  "excluded": [
+    "model weights",
+    "scene assets",
+    "environments",
+    "raw camera data",
+    "live training event streams"
+  ],
+  "notes": [
+    "Latest immutable CSV exports published; initial full CSV retained on server.",
+    "Manifest excludes its own hash; documents are generated server snapshots."
+  ]
+}

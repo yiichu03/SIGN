@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "scene": "Adrian",
+  "rgb_hfov": 90.0,
+  "coverage_fov": 90.0,
+  "visibility_dist_m": 3.0,
+  "meters_per_pixel": 0.1,
+  "map_shape": [
+    98,
+    147
+  ],
+  "initial_reset_seconds_including_numba": 2.053072253242135,
+  "repeated_metric_median_ms": 0.30446192249655724,
+  "repeated_metric_p95_ms": 0.33558644354343414,
+  "orientations": [
+    {
+      "yaw_degrees": 0.0,
+      "visible_cells": 237,
+      "forward_fraction": 1.0
+    },
+    {
+      "yaw_degrees": 90.0,
+      "visible_cells": 292,
+      "forward_fraction": 1.0
+    },
+    {
+      "yaw_degrees": 180.0,
+      "visible_cells": 201,
+      "forward_fraction": 1.0
+    },
+    {
+      "yaw_degrees": -90.0,
+      "visible_cells": 6,
+      "forward_fraction": 1.0
+    }
+  ],
+  "actual_map_occlusion_examples": [
+    {
+      "yaw_degrees": 0.0,
+      "agent_grid": [
+        70,
+        69
+      ],
+      "hidden_valid_cell": [
+        42,
+        63
+      ]
+    },
+    {
+      "yaw_degrees": 90.0,
+      "agent_grid": [
+        70,
+        69
+      ],
+      "hidden_valid_cell": [
+        52,
+        47
+      ]
+    },
+    {
+      "yaw_degrees": 180.0,
+      "agent_grid": [
+        70,
+        69
+      ],
+      "hidden_valid_cell": [
+        82,
+        71
+      ]
+    }
+  ],
+  "proxy_scope": "Episode-local XZ union of visible navmesh cells with 2D wall occlusion; not literal RGB surface area or 3D visibility."
+}
