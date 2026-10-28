@@ -82,7 +82,8 @@ def render(path, coords, grid, prior, final, start, end, bounds, title, variant,
                 c='#f2bd27', lw=4.8, linestyle=(0, (4, 2)), zorder=3)
     current = coords[start:end+1]
     ax.plot(current[:, 1], current[:, 0], c='#b82b35', lw=1.5, zorder=4)
-    ax.scatter(current[0, 1], current[0, 0], s=50, c='#149253', edgecolors='white', zorder=5)
+    start_size = 110 if np.array_equal(current[0], current[-1]) else 50
+    ax.scatter(current[0, 1], current[0, 0], s=start_size, c='#149253', edgecolors='white', zorder=5)
     ax.scatter(current[-1, 1], current[-1, 0], s=50, c='#222c41', marker='X', zorder=6)
     ax.set_xlim(bounds[:2]); ax.set_ylim(bounds[2:]); ax.set_aspect('equal'); ax.axis('off')
     ax.set_title(title, fontsize=12)
@@ -128,6 +129,8 @@ def prepare(source, out, prompt):
         for name in ['run.json', 'scores.json', 'verification.json']:
             shutil.copyfile(source/'evidence/probability'/f'{cohort}_2b'/name,
                             out/'sources'/f'{cohort}_2b_{name}')
+        for batch in (source/'evidence/probability'/f'{cohort}_2b').glob('batch_*.json'):
+            shutil.copyfile(batch, out/'sources'/f'{cohort}_2b_{batch.name}')
         score_map = {(r['group_id'], r['id']): r for r in old_scores}
         for group in spec['groups']:
             for item in group['items']:
