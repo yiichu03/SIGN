@@ -152,7 +152,9 @@ def run(folder, output, config):
         # Bound visual tokens: no unbounded default-resolution eight-image prefill.
         inputs = processor.apply_chat_template(messages, add_generation_prompt=True, enable_thinking=False,
             tokenize=True, return_dict=True, return_tensors='pt',
-            images_kwargs={'size': {'shortest_edge': 65536, 'longest_edge': config['max_image_pixels']}}).to(model.device)
+            processor_kwargs={'images_kwargs': {'size': {'shortest_edge': 65536, 'longest_edge': config['max_image_pixels']}}}).to(model.device)
+        if inputs['image_grid_thw'].shape[0] != 8:
+            raise ValueError('Processor did not encode exactly eight images')
         tokens = inputs['input_ids'].shape[-1]
         if tokens > config['max_input_tokens']:
             raise ValueError('Input exceeds configured token budget: ' + str(tokens))

@@ -20,4 +20,6 @@ elif args.command == 'verify':
 else:
     config = json.loads(Path(args.config).read_text())
     if args.enable:config['enabled'] = True
-    print(json.dumps(run(args.request, args.out, config), ensure_ascii=False))
+    result = run(args.request, args.out, config)
+    print(json.dumps(result, ensure_ascii=False))
+    if result['status'] not in ('valid', 'disabled'):raise SystemExit(2)
