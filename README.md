@@ -122,3 +122,7 @@ habitat_baselines.eval.split test_easy
 ## Qwen independent top-down scoring
 
 [Experiment overview, images, probabilities and reproduction](docs/experiments/qwen-topdown/README.md) · [9B/2B same-image comparison](docs/experiments/qwen-topdown/reports/pilot_9b_2b.md) · [2B diverse Gibson scenes/tasks](docs/experiments/qwen-topdown/reports/diverse_2b.md)
+
+## Qwen history-window offline evaluation
+
+[Results, controls and validation](docs/experiments/qwen-history-window/VALIDATION.md) · [128/256 report](docs/experiments/qwen-history-window/REPORT.md) · [Blank human review table](docs/experiments/qwen-history-window/human_review.csv)

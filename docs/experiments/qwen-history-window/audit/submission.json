@@ -1,0 +1,14 @@
+{
+  "submitted_at": "2026-10-29T02:45:30+08:00",
+  "command": [
+    "qsub",
+    "/scratch/e1538633/liuyi/logs/qwen_history_window_20261029_revision2/run.pbs"
+  ],
+  "job_id": "1505092.stdct-mgmt-02",
+  "returncode": 0,
+  "stdout": "1505092.stdct-mgmt-02\n",
+  "stderr": "",
+  "runtime_commit": "0bb9a90daac3c9199c4f19245c7c93e7f85079fc",
+  "model": "Qwen3.5-2B",
+  "previous_job": "1505083.stdct-mgmt-02"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "C02",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/01.png",
+  "image_sha256": "7968f0b4436f3b6557305dba60d1e116861eb7bfafc48e7460246bda023b6c6c",
+  "scene": "Eastville",
+  "episode_id": "4101",
+  "action_count": 165,
+  "new_area_m2": 27.325625000000002,
+  "new_area_m2_per_action": 0.1656098484848485,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C02/display_map_data.npz",
+    "mask_sha256": "204b7a0fd5cf8ea31d9bc5a461d0a181f3adc9d93fa1ce110a2ef0924e72d719",
+    "new_valid_cells": 43721,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C02/trajectory.json",
+    "trajectory_sha256": "8e9486f13f6b2063599efb9b4db4467a4c5ab2f07c58bf020a90922b6069b83d"
+  },
+  "group_id": "group_01",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C02/topdown_static.png",
+  "p_low": 0.1257714534955514,
+  "p_medium": 0.2510488600215877,
+  "p_high": 0.6231796864828608,
+  "q": 0.7487041164936546,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.27231216430664,
+    21.96349334716797,
+    22.8726806640625
+  ],
+  "candidate_mass": 0.988566517829895,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

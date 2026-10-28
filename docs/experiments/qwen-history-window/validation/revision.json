@@ -1,0 +1,8 @@
+{
+  "previous_job": "1505083.stdct-mgmt-02",
+  "reason": "Coincident current start/end X occluded the green point. Draw a larger green ring at the same pose and rerun 2B inputs; retain raw old batch audits.",
+  "original_trajectories_unchanged": true,
+  "navigation_training": false,
+  "only_model": "Qwen3.5-2B",
+  "runtime_commit": "0bb9a90daac3c9199c4f19245c7c93e7f85079fc"
+}

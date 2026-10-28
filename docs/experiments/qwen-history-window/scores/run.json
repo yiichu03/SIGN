@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "model": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+  "model_config_sha256": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+  "dtype": "torch.float32",
+  "batch_size": 8,
+  "temperature": 1,
+  "model_loads": 1,
+  "method": "independent single-image A/B/C logits; q=.5*p_medium+p_high",
+  "input_manifest_sha256": "8f4d35382509d6930f7f4599196a473a05e3592aa93f267316a0efc88ff1e15b",
+  "code_sha256": {
+    "evaluate_qwen_history.py": "ba74af4326306b9dc7bacd44be797930d68001b30f557b8cfa61c854cbb75e69",
+    "qwen_single_image.py": "8084ae8d8b52df31b502521e060314f243d9dc5195e977b11785e959bbf27c6c"
+  },
+  "torch": "2.6.0+cu124",
+  "transformers": "5.17.0",
+  "gpu": "NVIDIA A40",
+  "model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+  "model_load_seconds": 74.27435927791521,
+  "total": 100,
+  "valid": 100,
+  "reused": 32,
+  "wall_seconds": 100.65187455387786
+}

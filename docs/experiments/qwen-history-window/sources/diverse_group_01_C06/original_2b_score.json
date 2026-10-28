@@ -1,0 +1,33 @@
+{
+  "id": "C06",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/05.png",
+  "image_sha256": "80394af75d24787b0e73fc2d0357d56195fa1a9d2003bd87214d91463534bfc2",
+  "scene": "Pablo",
+  "episode_id": "804",
+  "action_count": 152,
+  "new_area_m2": 12.410000000000002,
+  "new_area_m2_per_action": 0.08164473684210527,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C06/display_map_data.npz",
+    "mask_sha256": "66cd9dfba418a2261901989e8a2523f2522c22d31b2a512b274e12ffd9e977b8",
+    "new_valid_cells": 19856,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C06/trajectory.json",
+    "trajectory_sha256": "8f86f7597a02a4e9d4d4f509889f4ca14a81560b9f0f8df1e05be17125419161"
+  },
+  "group_id": "group_01",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C06/topdown_static.png",
+  "p_low": 0.22309815448624437,
+  "p_medium": 0.2142459255095265,
+  "p_high": 0.5626559200042291,
+  "q": 0.6697788827589924,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.79892349243164,
+    21.75843620300293,
+    22.723979949951172
+  ],
+  "candidate_mass": 0.9865434169769287,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

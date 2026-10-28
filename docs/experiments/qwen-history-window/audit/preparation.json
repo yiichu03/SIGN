@@ -1,0 +1,20 @@
+{
+  "trajectories": 32,
+  "window_requests": 64,
+  "unique_segments": 44,
+  "duplicate_requests_removed": 20,
+  "history_segments": 12,
+  "full128": 12,
+  "full256": 5,
+  "short_segments": 27,
+  "images": 100,
+  "reused_scores": 32,
+  "masks_replayed_exact": true,
+  "no_resampling": true,
+  "map_resolution_m": 0.025,
+  "radius_m": 3,
+  "fov": 90,
+  "total_definition": "prior_seen_area_m2 + new_area_m2",
+  "current_actions": "poses[start+1:end+1]; current path poses[start:end+1]",
+  "prior_observations": "poses[0:start+1], including shared segment-start observation"
+}

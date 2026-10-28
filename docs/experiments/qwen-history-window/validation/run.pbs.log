@@ -1,0 +1,57 @@
+Loading nodejs/22.16.0-GCCcore-14.2.0
+  Loading requirement: GCCcore/14.2.0 ICU/76.1-GCCcore-14.2.0 OpenSSL/3
+Source guards passed
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{
+  "trajectories": 32,
+  "window_requests": 64,
+  "unique_segments": 44,
+  "duplicate_requests_removed": 20,
+  "history_segments": 12,
+  "full128": 12,
+  "full256": 5,
+  "short_segments": 27,
+  "images": 100,
+  "reused_scores": 32,
+  "masks_replayed_exact": true,
+  "no_resampling": true,
+  "map_resolution_m": 0.025,
+  "radius_m": 3,
+  "fov": 90,
+  "total_definition": "prior_seen_area_m2 + new_area_m2",
+  "current_actions": "poses[start+1:end+1]; current path poses[start:end+1]",
+  "prior_observations": "poses[0:start+1], including shared segment-start observation"
+}
+
+Source guards passed
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:10<1:50:52, 10.80s/it]Loading weights:  16%|█▌        | 99/617 [00:11<00:41, 12.48it/s] Loading weights:  21%|██        | 128/617 [00:12<00:36, 13.34it/s]Loading weights:  23%|██▎       | 141/617 [00:13<00:35, 13.55it/s]Loading weights:  24%|██▍       | 149/617 [00:14<00:37, 12.58it/s]Loading weights:  25%|██▍       | 154/617 [00:15<00:39, 11.60it/s]Loading weights:  26%|██▌       | 159/617 [00:15<00:39, 11.69it/s]Loading weights:  28%|██▊       | 171/617 [00:16<00:28, 15.55it/s]Loading weights:  29%|██▊       | 176/617 [00:16<00:29, 15.11it/s]Loading weights:  30%|██▉       | 184/617 [00:16<00:23, 18.68it/s]Loading weights:  31%|███       | 189/617 [00:17<00:38, 11.25it/s]Loading weights:  32%|███▏      | 200/617 [00:18<00:28, 14.82it/s]Loading weights:  33%|███▎      | 204/617 [00:19<00:39, 10.52it/s]Loading weights:  34%|███▍      | 212/617 [00:19<00:28, 14.30it/s]Loading weights:  36%|███▌      | 220/617 [00:19<00:22, 17.40it/s]Loading weights:  36%|███▋      | 224/617 [00:20<00:30, 12.93it/s]Loading weights:  37%|███▋      | 227/617 [00:20<00:38, 10.16it/s]Loading weights:  39%|███▊      | 239/617 [00:21<00:23, 15.78it/s]Loading weights:  39%|███▉      | 242/617 [00:21<00:31, 11.78it/s]Loading weights:  40%|████      | 248/617 [00:21<00:25, 14.69it/s]Loading weights:  41%|████      | 254/617 [00:22<00:21, 17.03it/s]Loading weights:  42%|████▏     | 257/617 [00:22<00:25, 14.03it/s]Loading weights:  42%|████▏     | 259/617 [00:23<00:37,  9.66it/s]Loading weights:  43%|████▎     | 265/617 [00:23<00:24, 14.12it/s]Loading weights:  45%|████▍     | 276/617 [00:23<00:13, 24.83it/s]Loading weights:  46%|████▌     | 282/617 [00:24<00:30, 10.88it/s]Loading weights:  47%|████▋     | 290/617 [00:24<00:21, 15.08it/s]Loading weights:  48%|████▊     | 295/617 [00:25<00:24, 12.94it/s]Loading weights:  49%|████▉     | 301/617 [00:25<00:22, 14.36it/s]Loading weights:  49%|████▉     | 304/617 [00:25<00:20, 15.11it/s]Loading weights:  50%|████▉     | 307/617 [00:26<00:29, 10.56it/s]Loading weights:  50%|█████     | 310/617 [00:26<00:25, 12.26it/s]Loading weights:  51%|█████     | 313/617 [00:27<00:40,  7.59it/s]Loading weights:  53%|█████▎    | 328/617 [00:27<00:15, 18.83it/s]Loading weights:  55%|█████▌    | 340/617 [00:27<00:10, 25.57it/s]Loading weights:  56%|█████▋    | 348/617 [00:28<00:10, 26.24it/s]Loading weights:  58%|█████▊    | 360/617 [00:28<00:08, 29.85it/s]Loading weights:  59%|█████▉    | 365/617 [00:28<00:09, 27.61it/s]Loading weights:  61%|██████    | 376/617 [00:28<00:06, 37.45it/s]Loading weights:  63%|██████▎   | 386/617 [00:28<00:05, 40.48it/s]Loading weights:  65%|██████▍   | 398/617 [00:29<00:04, 52.40it/s]Loading weights:  66%|██████▌   | 406/617 [00:29<00:03, 54.82it/s]Loading weights:  68%|██████▊   | 420/617 [00:29<00:03, 61.85it/s]Loading weights:  69%|██████▉   | 428/617 [00:29<00:04, 47.22it/s]Loading weights:  70%|███████   | 434/617 [00:29<00:04, 44.09it/s]Loading weights:  71%|███████▏  | 440/617 [00:29<00:03, 44.87it/s]Loading weights:  72%|███████▏  | 446/617 [00:30<00:03, 46.90it/s]Loading weights:  74%|███████▎  | 454/617 [00:30<00:03, 53.47it/s]Loading weights:  76%|███████▌  | 466/617 [00:30<00:02, 66.62it/s]Loading weights:  77%|███████▋  | 474/617 [00:30<00:02, 53.61it/s]Loading weights:  80%|███████▉  | 492/617 [00:30<00:01, 70.54it/s]Loading weights:  81%|████████  | 500/617 [00:30<00:01, 58.95it/s]Loading weights:  82%|████████▏ | 507/617 [00:31<00:02, 45.33it/s]Loading weights:  84%|████████▎ | 516/617 [00:31<00:02, 46.69it/s]Loading weights:  85%|████████▍ | 522/617 [00:31<00:02, 46.45it/s]Loading weights:  86%|████████▌ | 528/617 [00:31<00:01, 46.93it/s]Loading weights:  86%|████████▋ | 533/617 [00:31<00:01, 46.42it/s]Loading weights:  88%|████████▊ | 540/617 [00:31<00:01, 48.77it/s]Loading weights:  90%|████████▉ | 554/617 [00:31<00:01, 61.81it/s]Loading weights:  91%|█████████▏| 564/617 [00:32<00:00, 69.38it/s]Loading weights:  93%|█████████▎| 572/617 [00:32<00:00, 49.83it/s]Loading weights:  94%|█████████▎| 578/617 [00:32<00:00, 48.64it/s]Loading weights:  97%|█████████▋| 600/617 [00:32<00:00, 73.88it/s]Loading weights:  99%|█████████▊| 608/617 [00:32<00:00, 67.64it/s]Loading weights: 100%|█████████▉| 616/617 [00:33<00:00, 46.73it/s]Loading weights: 100%|██████████| 617/617 [00:33<00:00, 18.60it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{
+  "status": "complete",
+  "model": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+  "model_config_sha256": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+  "dtype": "torch.float32",
+  "batch_size": 8,
+  "temperature": 1,
+  "model_loads": 1,
+  "method": "independent single-image A/B/C logits; q=.5*p_medium+p_high",
+  "input_manifest_sha256": "8f4d35382509d6930f7f4599196a473a05e3592aa93f267316a0efc88ff1e15b",
+  "code_sha256": {
+    "evaluate_qwen_history.py": "ba74af4326306b9dc7bacd44be797930d68001b30f557b8cfa61c854cbb75e69",
+    "qwen_single_image.py": "8084ae8d8b52df31b502521e060314f243d9dc5195e977b11785e959bbf27c6c"
+  },
+  "torch": "2.6.0+cu124",
+  "transformers": "5.17.0",
+  "gpu": "NVIDIA A40",
+  "model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+  "model_load_seconds": 74.27435927791521,
+  "total": 100,
+  "valid": 100,
+  "reused": 32,
+  "wall_seconds": 100.65187455387786
+}
+Packaged /scratch/e1538633/liuyi/logs/qwen_history_window_20261029_revision2/qwen2b_history_review.zip 6902967 bytes
+Source guards passed

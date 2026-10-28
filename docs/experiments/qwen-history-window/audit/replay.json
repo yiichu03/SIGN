@@ -1,0 +1,194 @@
+[
+  {
+    "trajectory_id": "pilot_group_01_C01",
+    "initial_and_final_masks_exact": true,
+    "actions": 35,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_01_C02",
+    "initial_and_final_masks_exact": true,
+    "actions": 31,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_01_C03",
+    "initial_and_final_masks_exact": true,
+    "actions": 34,
+    "fog_origin_max_adjustment_m": 0.05
+  },
+  {
+    "trajectory_id": "pilot_group_01_C04",
+    "initial_and_final_masks_exact": true,
+    "actions": 38,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_01_C05",
+    "initial_and_final_masks_exact": true,
+    "actions": 33,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_01_C06",
+    "initial_and_final_masks_exact": true,
+    "actions": 39,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_01_C07",
+    "initial_and_final_masks_exact": true,
+    "actions": 32,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_01_C08",
+    "initial_and_final_masks_exact": true,
+    "actions": 36,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_02_C01",
+    "initial_and_final_masks_exact": true,
+    "actions": 80,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_02_C02",
+    "initial_and_final_masks_exact": true,
+    "actions": 69,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_02_C03",
+    "initial_and_final_masks_exact": true,
+    "actions": 225,
+    "fog_origin_max_adjustment_m": 0.03535533905932738
+  },
+  {
+    "trajectory_id": "pilot_group_02_C04",
+    "initial_and_final_masks_exact": true,
+    "actions": 47,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_02_C05",
+    "initial_and_final_masks_exact": true,
+    "actions": 100,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_02_C06",
+    "initial_and_final_masks_exact": true,
+    "actions": 117,
+    "fog_origin_max_adjustment_m": 0.03535533905932738
+  },
+  {
+    "trajectory_id": "pilot_group_02_C07",
+    "initial_and_final_masks_exact": true,
+    "actions": 36,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "pilot_group_02_C08",
+    "initial_and_final_masks_exact": true,
+    "actions": 186,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_01_C01",
+    "initial_and_final_masks_exact": true,
+    "actions": 250,
+    "fog_origin_max_adjustment_m": 0.03535533905932738
+  },
+  {
+    "trajectory_id": "diverse_group_01_C02",
+    "initial_and_final_masks_exact": true,
+    "actions": 165,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_01_C03",
+    "initial_and_final_masks_exact": true,
+    "actions": 44,
+    "fog_origin_max_adjustment_m": 0.0
+  },
+  {
+    "trajectory_id": "diverse_group_01_C04",
+    "initial_and_final_masks_exact": true,
+    "actions": 256,
+    "fog_origin_max_adjustment_m": 0.03535533905932738
+  },
+  {
+    "trajectory_id": "diverse_group_01_C05",
+    "initial_and_final_masks_exact": true,
+    "actions": 44,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_01_C06",
+    "initial_and_final_masks_exact": true,
+    "actions": 152,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_01_C07",
+    "initial_and_final_masks_exact": true,
+    "actions": 44,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_01_C08",
+    "initial_and_final_masks_exact": true,
+    "actions": 256,
+    "fog_origin_max_adjustment_m": 0.05
+  },
+  {
+    "trajectory_id": "diverse_group_02_C01",
+    "initial_and_final_masks_exact": true,
+    "actions": 72,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_02_C02",
+    "initial_and_final_masks_exact": true,
+    "actions": 77,
+    "fog_origin_max_adjustment_m": 0.03535533905932738
+  },
+  {
+    "trajectory_id": "diverse_group_02_C03",
+    "initial_and_final_masks_exact": true,
+    "actions": 141,
+    "fog_origin_max_adjustment_m": 0.03535533905932738
+  },
+  {
+    "trajectory_id": "diverse_group_02_C04",
+    "initial_and_final_masks_exact": true,
+    "actions": 256,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_02_C05",
+    "initial_and_final_masks_exact": true,
+    "actions": 146,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_02_C06",
+    "initial_and_final_masks_exact": true,
+    "actions": 256,
+    "fog_origin_max_adjustment_m": 0.05
+  },
+  {
+    "trajectory_id": "diverse_group_02_C07",
+    "initial_and_final_masks_exact": true,
+    "actions": 256,
+    "fog_origin_max_adjustment_m": 0.025
+  },
+  {
+    "trajectory_id": "diverse_group_02_C08",
+    "initial_and_final_masks_exact": true,
+    "actions": 66,
+    "fog_origin_max_adjustment_m": 0.0
+  }
+]
