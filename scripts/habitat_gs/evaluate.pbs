@@ -1,0 +1,22 @@
+#!/bin/bash -l
+#PBS -N sign-gs-full-val
+#PBS -l walltime=06:00:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=12:mem=96gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+
+TASK_ROOT=/scratch/e1538633/liuyi
+module load Miniconda3/24.7.1-0 gcc11/11.3.0 cuda12.2/toolkit/12.2.2 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate "$TASK_ROOT/envs/sign-habitat-gs"
+export PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export PYTHONPATH="$TASK_ROOT/habitat-lab/habitat-lab:$TASK_ROOT/habitat-lab/habitat-baselines:$TASK_ROOT/SIGN-habitat-gs"
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+cd "$TASK_ROOT/SIGN-habitat-gs"
+nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader
+python scripts/habitat_gs/evaluate.py \
+  --run-dir "results/habitat_gs_full_val_20261028/job_${PBS_JOBID%%.*}"
