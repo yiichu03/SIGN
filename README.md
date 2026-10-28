@@ -2,7 +2,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2310.07473-b31b1b.svg)](https://arxiv.org/pdf/2508.12394)
 [![Watch Demo](https://img.shields.io/badge/Watch-Demo-red?logo=youtube&logoColor=white)](https://nus-core.github.io/assets/standalone/SIGN/index.html)
 
-This experimental branch adds a static Habitat-GS ImageNav pilot using the existing SIGN checkpoint. The entry points are the [GS configuration](exp_config/ppo_imagenav_habitat_gs.yaml), [verified selective data downloader](scripts/habitat_gs/prepare_data.py), [CPU build script](scripts/habitat_gs/build.pbs), and [GPU render/evaluation script](scripts/habitat_gs/smoke.pbs). It uses an isolated environment and retains SIGN's continuous actions and 500-step evaluation protocol. Local setup, current results, and decisions are maintained in the workspace's existing AGENTS.md, STATUS.md, RUNBOOK.md, and WORKLOG.md.
+This experimental branch adds a static Habitat-GS ImageNav pilot using the existing SIGN checkpoint. The entry points are the [GS configuration](exp_config/ppo_imagenav_habitat_gs.yaml), [verified selective data downloader](scripts/habitat_gs/prepare_data.py), [full ImageNav download job](scripts/habitat_gs/download.pbs), [CPU build script](scripts/habitat_gs/build.pbs), and [GPU render/evaluation script](scripts/habitat_gs/smoke.pbs). It uses an isolated environment and retains SIGN's continuous actions and 500-step evaluation protocol. Local setup, current results, and decisions are maintained in the workspace's existing AGENTS.md, STATUS.md, RUNBOOK.md, and WORKLOG.md.
 
 ## 1. Install
 ### 1.1 Install habitat-lab 

@@ -1,0 +1,19 @@
+#!/bin/bash -l
+#PBS -N sign-gs-data
+#PBS -l walltime=04:00:00
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=4:mem=8gb
+#PBS -j oe
+set -euo pipefail
+
+TASK_ROOT=/scratch/e1538633/liuyi
+module load git/2.40.0
+cd "$TASK_ROOT/SIGN-habitat-gs"
+export PYTHONNOUSERSITE=1 PYTHONUNBUFFERED=1
+git rev-parse HEAD
+date --iso-8601=seconds
+python3 scripts/habitat_gs/prepare_data.py --all-scenes --workers 4 \
+  --manifest "$TASK_ROOT/manifests/habitat_gs_imagenav_20261028.json"
+du -sh "$TASK_ROOT/SIGN/data/scene_datasets/gs_scenes"
+date --iso-8601=seconds
