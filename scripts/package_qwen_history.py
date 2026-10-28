@@ -132,16 +132,20 @@ def package(data, zip_path):
             hidden=result_map.get((sid,'history_no_yellow'),{}).get('result',{}).get('q')
             lines.append(f"| {sid} | {c['action_count']}/{c['history_action_count']} | {legacy:.4f} | {hist:.4f} | "+(f'{hidden:.4f}' if hidden is not None else '—')+' |')
         lines.append('')
-    for title,key,cohort in [('历史信息整体作用','history_bundle_vs_legacy',analysis['full128']),
-                             ('黄线额外作用','yellow_line_only',analysis['yellow_line_pairs'])]:
+    for title,key,cohort in [('历史信息整体作用（完整128步）','history_bundle_vs_legacy',analysis['full128']),
+                             ('黄线额外作用','yellow_line_only',analysis['yellow_line_pairs']),
+                             ('完整256步无历史协议对照','history_bundle_vs_legacy',analysis['full256']),
+                             ('短段无历史协议对照（单列）','history_bundle_vs_legacy',analysis['short_segments'])]:
         changed=sum(c[key]['class_a']!=c[key]['class_b'] for c in cohort)
+        changes=[c[key]['q_delta'] for c in cohort]
         lines += [f'## {title}\n',
-            f"完整匹配样本{len(cohort)}对，最高概率类别改变{changed}对。完整逐对概率差/TV在analysis.json；这是输入敏感性描述，不是准确率。\n"]
+            f"匹配样本{len(cohort)}对，最高概率类别改变{changed}对；q变化范围{min(changes):+.4f}至{max(changes):+.4f}。完整逐对概率差/TV在analysis.json；这是输入敏感性描述，不是准确率。\n"]
     lines += [
         '旧协议→历史图同时改变历史覆盖背景、面积扣除基线、提示词与总覆盖统计，属于整体输入方案对照，不能拆成单一因果因素。无历史片段主要控制prompt/额外统计/图例影响，不能算历史能力验证。\n',
         '隐藏黄线→完整历史图仅增加黄色历史路径，prompt、深浅蓝覆盖、统计、当前红线、起终点、视野与比例相同。这个配对可隔离黄线对输出的影响，但没有人工真值仍无法判定变化是否正确。\n',
+        '整体评分变化也可能来自面积数值或prompt，不证明模型理解历史重复搜索。无前置历史的256步对照也出现输出变化，进一步说明不能把协议变化直接当历史推理能力。隐藏黄线图仍保留历史覆盖底色，并不是完全没有历史信息。\n',
         '## 待人审案例\n',
-        '以下为可观测线索筛选的候选，不是自动标注：重复搜索需独立搜索证据；普通返回/公共走廊不自动算冗余，碰撞/受阻/摆动/脱困单列。地图缺少RGB语义与中间时序，尤其无法独立确认返回“必要”。所有human_label为空。\n',
+        '以下为可观测线索筛选的候选，不是自动标注：重复搜索需独立搜索证据；普通返回/公共走廊不自动算冗余，碰撞/受阻/摆动/脱困单列。低位移动作为位移<2cm，历史同格比例仅为2.5cm网格的精确重合线索，都不等于重复搜索。地图缺少RGB语义与中间时序，尤其无法独立确认返回“必要”。所有human_label为空。\n',
         '| 待核查类型 | 片段 | 实测碰撞动作 | 低位移动作 | 历史路径同格比例 |',
         '|---|---|---:|---:|---:|']
     for c in candidates:
@@ -166,7 +170,7 @@ def package(data, zip_path):
     page='''<!doctype html><html lang="zh"><meta charset="utf-8"><title>Qwen2B历史窗口盲审</title>
 <style>body{font:16px sans-serif;margin:24px;background:#fafafa;color:#202834}.controls{position:sticky;top:0;background:#fff;padding:14px;z-index:20;border:1px solid #ccc}.panels{display:flex;gap:12px}.panel{flex:1;min-width:0;background:white;padding:8px}.panel img{width:100%;height:auto}.score{display:none;background:#edf1fa;padding:10px}body.show-scores .score{display:block}.case{border-top:2px solid #ccd2dc;margin:24px 0}.case[hidden]{display:none}h2{font-size:17px}h3{font-size:16px}p{line-height:1.6}a{color:#234e9b}@media(max-width:800px){.panels{display:block}}</style>
 <h1>Qwen3.5-2B：历史窗口离线盲审</h1>
-<p>原32条轨迹，不重新采样。黄色=历史，红色=当前段，深蓝=段前已见，浅蓝=本段新增；绿点与叉只对应红色段。无历史256步不验证历史能力。评分默认隐藏，标签尚未填写。</p>
+<p>原32条轨迹，不重新采样。历史图：黄色=历史，红色=当前段，深蓝=段前累计已见，浅蓝=本段真正新增。旧协议图：深蓝仅为窗口初始视野，浅蓝仅扣初始视野。绿点与叉只对应当前红色段。无历史256步不验证历史能力。评分默认隐藏，标签尚未填写。</p>
 <div class="controls"><label><input id="scores" type="checkbox">显示模型概率与q</label>
 <select id="window"><option value="">全部窗口</option><option value="128">请求128步</option><option value="256">请求256步</option></select>
 <label><input id="short" type="checkbox">仅看短段</label>
@@ -206,7 +210,7 @@ seconds为批次共享耗时，不是单图独立延迟；复用的旧分数seco
 本次数据未给出人审真值；输入敏感性和q变化不是准确率，不用平均q判优，不证明导航训练收益。
 ''')
     code=data/'code'
-    code.mkdir(exist_ok=False)
+    code.mkdir(exist_ok=True)
     tree=Path(__file__).resolve().parents[1]
     for relative in ['scripts/prepare_qwen_history.py','scripts/evaluate_qwen_history.py',
                      'scripts/package_qwen_history.py','src/qwen_single_image.py','src/qwen_topdown.py',
