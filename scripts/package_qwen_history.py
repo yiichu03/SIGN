@@ -217,7 +217,7 @@ seconds为批次共享耗时，不是单图独立延迟；复用的旧分数seco
                      'scripts/prompts/qwen_single_coverage_abc.txt','tests/test_qwen_history.py']:
         p=code/relative;p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(tree/relative,p)
     files={str(p.relative_to(data)):dict(bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest())
-           for p in sorted(data.rglob('*')) if p.is_file()}
+           for p in sorted(data.rglob('*')) if p.is_file() and p.name != 'bundle_manifest.json'}
     dump(data/'bundle_manifest.json', dict(files=files, scores=len(results), segments=len(segments),
         human_labels='blank; no automated labels substituted', relative_paths=True))
     if zip_path.exists():
