@@ -22,6 +22,14 @@ def validate_metadata(item):
             or not math.isfinite(supplied) or not math.isclose(supplied, ratio, rel_tol=1e-6, abs_tol=1e-9)):
         raise ValueError('new_area_m2_per_action disagrees with area / action_count')
     value.update(new_area_m2=float(area), new_area_m2_per_action=ratio)
+    if 'total_covered_area_m2' in value or 'prior_seen_area_m2' in value:
+        total, prior = value.get('total_covered_area_m2'), value.get('prior_seen_area_m2')
+        for field, number in [('total_covered_area_m2', total), ('prior_seen_area_m2', prior)]:
+            if isinstance(number, bool) or not isinstance(number, Real) or not math.isfinite(number) or number < 0:
+                raise ValueError(field + ' must be finite nonnegative measured m²')
+        if not math.isclose(total, prior + area, rel_tol=1e-6, abs_tol=1e-9):
+            raise ValueError('Total covered area must equal prior seen area + new area')
+        value.update(total_covered_area_m2=float(total), prior_seen_area_m2=float(prior))
     return value
 
 
@@ -80,6 +88,9 @@ def conversations(images, prompt, metadata=None):
             if 'image' in item and Path(item['image']).resolve() != Path(image).resolve():
                 raise ValueError('Metadata image does not match its batch row')
             stats = {k:item[k] for k in ('action_count','new_area_m2','new_area_m2_per_action')}
+            for key in ('prior_seen_area_m2', 'total_covered_area_m2'):
+                if key in item:
+                    stats[key] = item[key]
             content.append({'type':'text','text':'Current image statistics (m² and m²/action): '+json.dumps(stats)})
         rows.append([{'role':'user','content':content}])
     return rows
