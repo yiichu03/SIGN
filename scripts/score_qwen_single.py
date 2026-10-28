@@ -13,6 +13,8 @@ def main():
     p.add_argument('--manifest',required=True);p.add_argument('--prompt',required=True);p.add_argument('--out',required=True)
     p.add_argument('--model-dir',default=str(Path(__file__).resolve().parents[2]/'models/Qwen3.5-9B'))
     p.add_argument('--batch-size',type=int,choices=range(1,9),default=8)
+    p.add_argument('--dtype',choices=['float32','bfloat16','auto'],default='float32',
+                   help='FP32 default stabilizes probability readout across batch shapes; old generation default is unchanged')
     p.add_argument('--verify',action='store_true',help='Compare padded batch/singles and first-generation raw logits')
     a=p.parse_args();spec,rows=load_manifest(a.manifest);prompt_path=Path(a.prompt);prompt=prompt_path.read_text()
     if not prompt.strip():raise ValueError('Empty prompt')
@@ -35,12 +37,13 @@ def main():
          'seed':100,'max_image_pixels':262144,'enable_thinking':False}
     dump(out/'run.json',run)
     try:
-        judge=SingleImageJudge(a.model_dir,prompt);run.update(judge.environment)
+        judge=SingleImageJudge(a.model_dir,prompt,dtype=a.dtype);run.update(judge.environment)
         if a.verify:
             probe=[rows[0],rows[10],rows[-1]]
             verification=judge.verify_readout([r['image'] for r in probe],probe)
             if not any(verification['padding_counts']):raise RuntimeError('Probe did not exercise padding')
             dump(out/'verification.json',verification)
+            if not verification['passed']:raise RuntimeError('GPU probability checks failed; inspect verification.json')
         scored=[]
         for start in range(0,len(rows),a.batch_size):
             batch=rows[start:start+a.batch_size]

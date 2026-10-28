@@ -98,7 +98,7 @@ def parse_score(raw, truncated=False):
 
 
 class SingleImageJudge:
-    def __init__(self, model_dir, prompt, max_image_pixels=262144, max_new_tokens=64, seed=100):
+    def __init__(self, model_dir, prompt, max_image_pixels=262144, max_new_tokens=64, seed=100, dtype='auto'):
         start=time.perf_counter()
         import torch
         import transformers
@@ -109,11 +109,12 @@ class SingleImageJudge:
         self.torch=torch;self.prompt=prompt;self.max_pixels=max_image_pixels;self.max_new_tokens=max_new_tokens
         self.processor=AutoProcessor.from_pretrained(model_dir,local_files_only=True)
         self.processor.tokenizer.padding_side='left'
-        self.model=Qwen3_5ForConditionalGeneration.from_pretrained(model_dir,dtype='auto',device_map='cuda:0',local_files_only=True).eval()
+        self.model=Qwen3_5ForConditionalGeneration.from_pretrained(model_dir,dtype=dtype,device_map='cuda:0',local_files_only=True).eval()
         torch.cuda.synchronize()
         self.load_seconds=time.perf_counter()-start
         self.environment={'torch':torch.__version__,'transformers':transformers.__version__,
-           'gpu':torch.cuda.get_device_name(),'model_dir':str(model_dir),'model_load_seconds':self.load_seconds}
+           'gpu':torch.cuda.get_device_name(),'model_dir':str(model_dir),'model_load_seconds':self.load_seconds,
+           'dtype':str(self.model.dtype)}
 
     def _prepare(self, images, metadata=None):
         messages=conversations(images,self.prompt,metadata)
@@ -170,10 +171,11 @@ class SingleImageJudge:
             'temperature':1.0, 'seconds':time.perf_counter()-start}
         return results, audit
 
-    def verify_readout(self, images, metadata, tolerance=0.01):
+    def verify_readout(self, images, metadata, tolerance=1e-4):
         """Small GPU check: batch vs singles, then raw first-generation logits."""
         results, audit = self.class_probabilities(images, metadata)
         max_delta = 0.0
+        single_results = []
         for i in range(len(images)):
             single, single_audit = self.class_probabilities(images[i:i+1], metadata[i:i+1])
             active = [t for t,m in zip(audit['input_token_ids'][i],audit['attention_mask'][i]) if m]
@@ -181,7 +183,11 @@ class SingleImageJudge:
                 raise RuntimeError('Single/batch input mismatch')
             if not results[i]['valid'] or not single[0]['valid']:
                 raise RuntimeError('Invalid probability in GPU verification')
+            single_results.append(single[0])
             max_delta = max(max_delta, max(abs(results[i][k]-single[0][k]) for k in ('p_low','p_medium','p_high','q')))
+        permuted, _ = self.class_probabilities(images[::-1],metadata[::-1])
+        permutation_delta = max(abs(a[k]-b[k]) for a,b in zip(results,permuted[::-1])
+            for k in ('p_low','p_medium','p_high','q'))
         inputs, _ = self._prepare(images, metadata)
         with self.torch.inference_mode():
             generated = self.model.generate(**inputs, max_new_tokens=1, do_sample=False,
@@ -190,11 +196,11 @@ class SingleImageJudge:
         raw = generated.logits[0][:, ids].float().cpu().tolist()
         generation_delta = max(abs(result[k]-probabilities_from_logits(values)[k])
             for result,values in zip(results,raw) for k in ('p_low','p_medium','p_high','q'))
-        if max_delta > tolerance or generation_delta > tolerance:
-            raise RuntimeError(f'Batch/answer-position check exceeds tolerance: {max_delta}, {generation_delta}')
-        return {'passed':True,'token_ids':audit['token_ids'],'decoded_labels':audit['decoded_labels'],
+        return {'passed':max(max_delta,generation_delta,permutation_delta)<=tolerance,
+            'token_ids':audit['token_ids'],'decoded_labels':audit['decoded_labels'],
             'padding_counts':[len(m)-sum(m) for m in audit['attention_mask']],
             'response_positions':audit['response_positions'],'single_batch_max_probability_delta':max_delta,
+            'permutation_max_probability_delta':permutation_delta,'batch_results':results,'single_results':single_results,
             'forward_generation_max_probability_delta':generation_delta,'tolerance':tolerance,
             'first_generated_token_ids':generated.sequences[:,inputs['input_ids'].shape[-1]].cpu().tolist(),
             'first_generated_tokens':self.processor.tokenizer.batch_decode(generated.sequences[:,inputs['input_ids'].shape[-1]:].cpu())}
