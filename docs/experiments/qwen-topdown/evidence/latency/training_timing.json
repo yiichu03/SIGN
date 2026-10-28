@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-10-28T19:29:46+08:00",
+  "runs": {
+    "baseline": {
+      "source": "/scratch/e1538633/liuyi/logs/gibson_frozen_encoder_20261026/train_personal.pbs.log",
+      "latest_update": 35560,
+      "last_intervals": 50,
+      "updates_covered": 500,
+      "seconds_per_update_mean": 3.994377999782562,
+      "seconds_per_update_median": 3.891349995136261,
+      "seconds_per_logged_block_median": 38.91349995136261,
+      "logged_update_stride": 10,
+      "rollout_envs": 8,
+      "rollout_steps_per_env": 256,
+      "environment_steps_per_update": 2048,
+      "latest_log_timestamp": "2026-10-28T19:29:11.444000+08:00"
+    },
+    "coverage256": {
+      "source": "/scratch/e1538633/liuyi/logs/gibson_rollout_coverage_20261027/train_personal.pbs.log",
+      "latest_update": 22220,
+      "last_intervals": 50,
+      "updates_covered": 500,
+      "seconds_per_update_mean": 6.579544000148773,
+      "seconds_per_update_median": 6.559049999713897,
+      "seconds_per_logged_block_median": 65.59049999713898,
+      "logged_update_stride": 10,
+      "rollout_envs": 8,
+      "rollout_steps_per_env": 256,
+      "environment_steps_per_update": 2048,
+      "latest_log_timestamp": "2026-10-28T19:29:00.721000+08:00"
+    },
+    "coverage32": {
+      "source": "/scratch/e1538633/liuyi/logs/gibson_coverage_settle32_20261028/train_personal.pbs.log",
+      "latest_update": 2390,
+      "last_intervals": 50,
+      "updates_covered": 500,
+      "seconds_per_update_mean": 8.854190000057221,
+      "seconds_per_update_median": 8.84669998884201,
+      "seconds_per_logged_block_median": 88.4669998884201,
+      "logged_update_stride": 10,
+      "rollout_envs": 8,
+      "rollout_steps_per_env": 256,
+      "environment_steps_per_update": 2048,
+      "latest_log_timestamp": "2026-10-28T19:29:38.290000+08:00"
+    }
+  }
+}

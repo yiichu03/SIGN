@@ -1,0 +1,16 @@
+{
+  "job": "1503665.stdct-mgmt-02",
+  "recorded_at": "2026-10-28T20:08:39+08:00",
+  "source_commit": "1d959c81df5f84bc662fbed148730ca6e420d876",
+  "branch": "phase2/qwen-topdown-judge",
+  "model": "Qwen3.5-9B",
+  "queue": "autox -> batch_gpux",
+  "project": "CFP04-SF-109",
+  "status": "R",
+  "node": "GN-A40-009",
+  "unit_tests": 25,
+  "input_images": 16,
+  "input_groups": 2,
+  "manifest_sha256": "72e4ece67a2b9db8e397b5150d3852782bde85891adcac9bebfb5da6e76792ae",
+  "prompt_sha256": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

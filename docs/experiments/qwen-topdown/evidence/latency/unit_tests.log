@@ -1,0 +1,21 @@
+test_bad_json_and_truncation (test_qwen_single_image.SingleImageTests) ... ok
+test_independent_batch_rows (test_qwen_single_image.SingleImageTests) ... ok
+test_invalid_scores (test_qwen_single_image.SingleImageTests) ... ok
+test_single_allowed (test_qwen_single_image.SingleImageTests) ... ok
+test_ties_and_unknown_not_relative (test_qwen_single_image.SingleImageTests) ... ok
+test_budget_mismatch_explicit_diagnostic_only (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_continuation_window_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_disabled_has_no_model_or_filesystem_dependency (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_duplicate_candidate_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_invalid_scores_and_ids_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_json_repair_is_not_silent (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_mixed_task_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_same_task_sealed_eight_image_request (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_tampered_image_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_ties_and_unknown_preserved (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_truncation_rejected_even_valid_prefix (test_qwen_topdown.JudgeBoundaryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.248s
+
+OK

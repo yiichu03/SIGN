@@ -1,0 +1,346 @@
+{
+  "kind": "Single-image independent scoring latency; not scoring accuracy",
+  "training": {
+    "recorded_at": "2026-10-28T19:29:46+08:00",
+    "runs": {
+      "baseline": {
+        "source": "/scratch/e1538633/liuyi/logs/gibson_frozen_encoder_20261026/train_personal.pbs.log",
+        "latest_update": 35560,
+        "last_intervals": 50,
+        "updates_covered": 500,
+        "seconds_per_update_mean": 3.994377999782562,
+        "seconds_per_update_median": 3.891349995136261,
+        "seconds_per_logged_block_median": 38.91349995136261,
+        "logged_update_stride": 10,
+        "rollout_envs": 8,
+        "rollout_steps_per_env": 256,
+        "environment_steps_per_update": 2048,
+        "latest_log_timestamp": "2026-10-28T19:29:11.444000+08:00"
+      },
+      "coverage256": {
+        "source": "/scratch/e1538633/liuyi/logs/gibson_rollout_coverage_20261027/train_personal.pbs.log",
+        "latest_update": 22220,
+        "last_intervals": 50,
+        "updates_covered": 500,
+        "seconds_per_update_mean": 6.579544000148773,
+        "seconds_per_update_median": 6.559049999713897,
+        "seconds_per_logged_block_median": 65.59049999713898,
+        "logged_update_stride": 10,
+        "rollout_envs": 8,
+        "rollout_steps_per_env": 256,
+        "environment_steps_per_update": 2048,
+        "latest_log_timestamp": "2026-10-28T19:29:00.721000+08:00"
+      },
+      "coverage32": {
+        "source": "/scratch/e1538633/liuyi/logs/gibson_coverage_settle32_20261028/train_personal.pbs.log",
+        "latest_update": 2390,
+        "last_intervals": 50,
+        "updates_covered": 500,
+        "seconds_per_update_mean": 8.854190000057221,
+        "seconds_per_update_median": 8.84669998884201,
+        "seconds_per_logged_block_median": 88.4669998884201,
+        "logged_update_stride": 10,
+        "rollout_envs": 8,
+        "rollout_steps_per_env": 256,
+        "environment_steps_per_update": 2048,
+        "latest_log_timestamp": "2026-10-28T19:29:38.290000+08:00"
+      }
+    }
+  },
+  "models": {
+    "Qwen3.5-9B": {
+      "single_seconds": 0.5286495350301266,
+      "eight_independent_batch_seconds": 1.6817345540039241,
+      "serial8_seconds": 4.491455417126417,
+      "two_batch4_seconds": 2.081507271155715,
+      "model_load_seconds": 67.81067959126085,
+      "first_call_seconds": 5.020672436803579,
+      "load_plus_first_call_seconds": 72.83135202806443,
+      "peak_gpu_gib": 18.92958641052246,
+      "valid_answers": 52,
+      "answers": 52,
+      "batch8_preprocess_seconds": [
+        0.16994974901899695,
+        0.18036567512899637,
+        0.2534593129530549
+      ],
+      "batch8_generate_seconds": [
+        1.4907352379523218,
+        1.5008464297279716,
+        1.5000742278061807
+      ],
+      "output_tokens": [
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          10,
+          11,
+          11
+        ],
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          10,
+          11,
+          11
+        ],
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          10,
+          11,
+          11
+        ]
+      ],
+      "estimated_training": {
+        "baseline": {
+          "original_seconds": 3.994377999782562,
+          "with_qwen_seconds": 5.676112553786487,
+          "overhead_percent": 42.102538970910395
+        },
+        "coverage256": {
+          "original_seconds": 6.579544000148773,
+          "with_qwen_seconds": 8.261278554152696,
+          "overhead_percent": 25.560047230718386
+        },
+        "coverage32": {
+          "original_seconds": 8.854190000057221,
+          "with_qwen_seconds": 10.535924554061145,
+          "overhead_percent": 18.993657850046766
+        }
+      },
+      "hypothetical_200s_round_with_qwen_seconds": 201.68173455400392
+    },
+    "Qwen3.5-4B": {
+      "single_seconds": 0.5329195978119969,
+      "eight_independent_batch_seconds": 1.5927689420059323,
+      "serial8_seconds": 4.340799372177571,
+      "two_batch4_seconds": 2.0546114267781377,
+      "model_load_seconds": 27.07017659721896,
+      "first_call_seconds": 1.7628623638302088,
+      "load_plus_first_call_seconds": 28.83303896104917,
+      "peak_gpu_gib": 9.819677352905273,
+      "valid_answers": 35,
+      "answers": 52,
+      "batch8_preprocess_seconds": [
+        0.1732870009727776,
+        0.1718540247529745,
+        0.16917204996570945
+      ],
+      "batch8_generate_seconds": [
+        1.4267230066470802,
+        1.4205313129350543,
+        1.4189681359566748
+      ],
+      "output_tokens": [
+        [
+          15,
+          15,
+          17,
+          15,
+          15,
+          20,
+          15,
+          18
+        ],
+        [
+          15,
+          15,
+          17,
+          15,
+          15,
+          20,
+          15,
+          18
+        ],
+        [
+          15,
+          15,
+          17,
+          15,
+          15,
+          20,
+          15,
+          18
+        ]
+      ],
+      "estimated_training": {
+        "baseline": {
+          "original_seconds": 3.994377999782562,
+          "with_qwen_seconds": 5.587146941788495,
+          "overhead_percent": 39.8752682418298
+        },
+        "coverage256": {
+          "original_seconds": 6.579544000148773,
+          "with_qwen_seconds": 8.172312942154704,
+          "overhead_percent": 24.207892552582937
+        },
+        "coverage32": {
+          "original_seconds": 8.854190000057221,
+          "with_qwen_seconds": 10.446958942063153,
+          "overhead_percent": 17.988872409510513
+        }
+      },
+      "hypothetical_200s_round_with_qwen_seconds": 201.59276894200593
+    },
+    "Qwen3.5-2B": {
+      "single_seconds": 0.4016705132089555,
+      "eight_independent_batch_seconds": 0.8686194373294711,
+      "serial8_seconds": 3.368253295775503,
+      "two_batch4_seconds": 1.2075326018966734,
+      "model_load_seconds": 19.533590408973396,
+      "first_call_seconds": 1.4279483850114048,
+      "load_plus_first_call_seconds": 20.9615387939848,
+      "peak_gpu_gib": 4.790957450866699,
+      "valid_answers": 52,
+      "answers": 52,
+      "batch8_preprocess_seconds": [
+        0.17606293270364404,
+        0.17663939530029893,
+        0.17457758402451873
+      ],
+      "batch8_generate_seconds": [
+        0.8499818239361048,
+        0.6917401407845318,
+        0.691426201723516
+      ],
+      "output_tokens": [
+        [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ]
+      ],
+      "estimated_training": {
+        "baseline": {
+          "original_seconds": 3.994377999782562,
+          "with_qwen_seconds": 4.862997437112034,
+          "overhead_percent": 21.74605000770471
+        },
+        "coverage256": {
+          "original_seconds": 6.579544000148773,
+          "with_qwen_seconds": 7.448163437478244,
+          "overhead_percent": 13.201818200620444
+        },
+        "coverage32": {
+          "original_seconds": 8.854190000057221,
+          "with_qwen_seconds": 9.722809437386692,
+          "overhead_percent": 9.810264262725982
+        }
+      },
+      "hypothetical_200s_round_with_qwen_seconds": 200.86861943732947
+    },
+    "Qwen3.5-0.8B": {
+      "single_seconds": 0.45756117394194007,
+      "eight_independent_batch_seconds": 0.895681498106569,
+      "serial8_seconds": 3.6900258171372116,
+      "two_batch4_seconds": 1.2625523498281837,
+      "model_load_seconds": 13.099702646024525,
+      "first_call_seconds": 1.5139213227666914,
+      "load_plus_first_call_seconds": 14.613623968791217,
+      "peak_gpu_gib": 2.2311758995056152,
+      "valid_answers": 0,
+      "answers": 52,
+      "batch8_preprocess_seconds": [
+        0.18167148577049375,
+        0.2658671932294965,
+        0.1753664817661047
+      ],
+      "batch8_generate_seconds": [
+        0.7136526713147759,
+        0.7333186930045485,
+        0.6522370488382876
+      ],
+      "output_tokens": [
+        [
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          6
+        ],
+        [
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          6
+        ],
+        [
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          6
+        ]
+      ],
+      "estimated_training": {
+        "baseline": {
+          "original_seconds": 3.994377999782562,
+          "with_qwen_seconds": 4.890059497889132,
+          "overhead_percent": 22.423553758690996
+        },
+        "coverage256": {
+          "original_seconds": 6.579544000148773,
+          "with_qwen_seconds": 7.475225498255342,
+          "overhead_percent": 13.613124223902393
+        },
+        "coverage32": {
+          "original_seconds": 8.854190000057221,
+          "with_qwen_seconds": 9.74987149816379,
+          "overhead_percent": 10.115905555457706
+        }
+      },
+      "hypothetical_200s_round_with_qwen_seconds": 200.89568149810657
+    }
+  },
+  "assumptions": [
+    "Resident model, one batch containing eight independent single-image requests.",
+    "Synchronous add-on estimate T_new=T_train+T_batch8; excludes live topdown rendering/IPC and unmeasured GPU contention.",
+    "Bench uses unoptimized reference kernels in existing environment; all model sizes share hardware and stack.",
+    "Median of three warm batch8 trials; serial8 and two batch4 measured once; generation length may vary."
+  ]
+}

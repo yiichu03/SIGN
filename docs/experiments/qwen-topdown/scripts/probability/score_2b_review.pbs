@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -N qwen-2b-review
+#PBS -o /scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/score_2b_review.pbs.log
+#PBS -l walltime=00:10:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-qwen-topdown-judge
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/qwen35
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+support=/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028
+python scripts/score_qwen_single.py --manifest "$support/manifest.json" --prompt "$support/run_1503691/prompt.txt" --model-dir /scratch/e1538633/liuyi/models/Qwen3.5-2B --out "$support/run_2b_${PBS_JOBID%%.*}" --batch-size 8 --verify

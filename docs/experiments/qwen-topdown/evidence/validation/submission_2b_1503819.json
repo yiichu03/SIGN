@@ -1,0 +1,20 @@
+{
+  "job": "1503819.stdct-mgmt-02",
+  "recorded_at": "2026-10-28T20:45:53+08:00",
+  "status": "Q",
+  "model": "Qwen3.5-2B",
+  "code_commit": "4cc7257",
+  "baseline_9b_job": "1503691.stdct-mgmt-02",
+  "prompt_sha256": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac",
+  "same_manifest_and_source_verified": true,
+  "images": 16,
+  "groups": 2,
+  "dtype": "float32",
+  "batch_size": 8,
+  "temperature": 1,
+  "verification": true,
+  "queue": "autox->batch_gpux",
+  "project": "CFP04-SF-109",
+  "resources": "1 A40 / 36CPU / 240GB / 10min",
+  "output_directory": "/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/run_2b_1503819"
+}

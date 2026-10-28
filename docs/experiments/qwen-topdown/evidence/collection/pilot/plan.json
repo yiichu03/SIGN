@@ -1,0 +1,20 @@
+{
+  "groups": [
+    {
+      "id": "group_01",
+      "scene": "Edgemere",
+      "episode_id": "200",
+      "geodesic_distance": 5.949424743652344
+    },
+    {
+      "id": "group_02",
+      "scene": "Denmark",
+      "episode_id": "3800",
+      "geodesic_distance": 6.316120147705078
+    }
+  ],
+  "repeats": 8,
+  "max_steps": 256,
+  "selection": "first val episode per specified scene with 5-8m geodesic and start/goal height within 0.1m; no performance selection",
+  "nav_checkpoint_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+}

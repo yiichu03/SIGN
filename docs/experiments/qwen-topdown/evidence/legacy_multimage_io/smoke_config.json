@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-9B",
+  "seed": 100,
+  "max_image_pixels": 262144,
+  "max_input_tokens": 6000,
+  "max_new_tokens": 256,
+  "response_format": "json_object"
+}

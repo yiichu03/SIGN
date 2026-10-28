@@ -1,0 +1,134 @@
+{
+  "valid": 16,
+  "scenes": 8,
+  "tasks": 16,
+  "zip": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/qwen2b_gibson_diverse_review.zip",
+  "bytes": 761472,
+  "sha256": "eb3a039b6a94945f1e2e4a4518a893ce2bcf6b5b8b2268be50d2dd94015a506d",
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac",
+  "verification": {
+    "passed": true,
+    "token_ids": {
+      "A": 32,
+      "B": 33,
+      "C": 34
+    },
+    "decoded_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "padding_counts": [
+      22,
+      0,
+      0
+    ],
+    "response_positions": [
+      641,
+      641,
+      641
+    ],
+    "single_batch_max_probability_delta": 2.226386158921123e-05,
+    "permutation_max_probability_delta": 0.0,
+    "batch_results": [
+      {
+        "p_low": 0.21224638516057664,
+        "p_medium": 0.24777557910410236,
+        "p_high": 0.539978035735321,
+        "q": 0.6638658252873721,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.682403564453125,
+          21.83717918395996,
+          22.61618423461914
+        ],
+        "candidate_mass": 0.9883930087089539
+      },
+      {
+        "p_low": 0.18279968598577856,
+        "p_medium": 0.27788000612644287,
+        "p_high": 0.5393203078877786,
+        "q": 0.678260310951,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.57649803161621,
+          21.995296478271484,
+          22.658416748046875
+        ],
+        "candidate_mass": 0.9883062839508057
+      },
+      {
+        "p_low": 0.11116722586425529,
+        "p_medium": 0.21391291504733553,
+        "p_high": 0.6749198590884092,
+        "q": 0.781876316612077,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.110126495361328,
+          21.764659881591797,
+          22.913684844970703
+        ],
+        "candidate_mass": 0.9877315163612366
+      }
+    ],
+    "single_results": [
+      {
+        "p_low": 0.21222477513282306,
+        "p_medium": 0.24777492527026665,
+        "p_high": 0.5400002995969102,
+        "q": 0.6638877622320435,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.682334899902344,
+          21.837209701538086,
+          22.61625862121582
+        ],
+        "candidate_mass": 0.9883930087089539
+      },
+      {
+        "p_low": 0.1828108379302818,
+        "p_medium": 0.27788635785024685,
+        "p_high": 0.5393028042194713,
+        "q": 0.6782459831445947,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.57654571533203,
+          21.99530601501465,
+          22.658370971679688
+        ],
+        "candidate_mass": 0.9883043766021729
+      },
+      {
+        "p_low": 0.11116579480502653,
+        "p_medium": 0.21391016133958712,
+        "p_high": 0.6749240438553863,
+        "q": 0.7818791245251798,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.110095977783203,
+          21.764629364013672,
+          22.913673400878906
+        ],
+        "candidate_mass": 0.9877315163612366
+      }
+    ],
+    "forward_generation_max_probability_delta": 0.0,
+    "tolerance": 0.0001,
+    "first_generated_token_ids": [
+      34,
+      34,
+      34
+    ],
+    "first_generated_tokens": [
+      "C",
+      "C",
+      "C"
+    ]
+  }
+}

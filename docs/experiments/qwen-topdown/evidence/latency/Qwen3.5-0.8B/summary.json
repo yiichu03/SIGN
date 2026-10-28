@@ -1,0 +1,71 @@
+{
+  "images": {
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C01/topdown_static.png": "eab26039c303c5d80d414f1502faeda631b92d24829b1a09fd19cc179886f44e",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C02/topdown_static.png": "e9c157d19ee167a3a19cdf14b45707509986c23430b7211b7f41d670dbbb7bdc",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C03/topdown_static.png": "327d2bcd5796b406f3282d3398ab4ef377bb35b51ad41b22176a51dac96153a2",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C04/topdown_static.png": "1c742565b573b08fd6a6a696737f97da3d6d90350451e0af906ebc3576fdbeff",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C05/topdown_static.png": "da8e2b2d3f99b925e85131876a464f7e18fb4aa976c671badce29ca77cb584d5",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C06/topdown_static.png": "4d02c6c112dd9b995fee5c0544d30e61945dfa08be0094928ae2422b3f50d34d",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C07/topdown_static.png": "efd3aa191255409b8b2b3c1e338076f374222ec5507c2084f08f60fb755a3fc1",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C08/topdown_static.png": "b708e390bfc304ab4569f27ac1669213cf6d60194c2451d96278813f52e5f71d"
+  },
+  "prompt": "请仅根据当前这一张静态俯视图，给探索效率一个0到1的独立分数。灰色是可通行区域，深蓝是初始已见区域，浅蓝是新增观测区域，红线是运动路径，绿色圆点是起点，深色叉是终点。更多有用的新覆盖、较少无效重复搜索可得较高分。不要把所有回访、交叉或绕行自动当成冗余；图中没有中途时序，证据不足时score为null。不要与其他图片比较。只输出JSON对象{\"score\":数值或null}，不解释、不思考展开，不加Markdown或代码围栏，第一个字符必须为{，最后一个字符必须为}。\n",
+  "purpose": "One independent score per image; no group or relative scoring; latency only",
+  "repeats": 3,
+  "pixels": 262144,
+  "max_new_tokens": 64,
+  "seed": 100,
+  "enable_thinking": false,
+  "do_sample": false,
+  "torch": "2.6.0+cu124",
+  "transformers": "5.17.0",
+  "gpu": "NVIDIA A40",
+  "model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-0.8B",
+  "model_load_seconds": 13.099702646024525,
+  "first_call_seconds": 1.5139213227666914,
+  "load_plus_first_call_seconds": 14.613623968791217,
+  "single_median_seconds": 0.45756117394194007,
+  "batch8_median_seconds": 0.895681498106569,
+  "batch8_min_seconds": 0.8278638608753681,
+  "batch8_max_seconds": 0.9994876501150429,
+  "serial8_seconds": 3.6900258171372116,
+  "batch4_twice_seconds": 1.2625523498281837,
+  "serial8_inference_sum_seconds": 3.6451783385127783,
+  "batch4_inference_sum_seconds": 1.250718962866813,
+  "peak_gpu_gib": 2.2311758995056152,
+  "valid_answers": 0,
+  "answers": 52,
+  "batch8_output_tokens": [
+    [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      6
+    ],
+    [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      6
+    ],
+    [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      6
+    ]
+  ],
+  "semantics": "Warm timings exclude model load and trajectory-to-image rendering, include local PNG decode/processor/H2D/generate/decode/parse; batch rows have independent attention and one image each. Serial and batch4 wall times include audit JSON writes; inference sums exclude those writes."
+}

@@ -1,0 +1,94 @@
+Job Id: 1503973.stdct-mgmt-02
+    Job_Name = gib-qwen2b-diverse
+    Job_Owner = e1538633@vanda.nus.edu.sg
+    resources_used.cpupercent = 20
+    resources_used.cput = 00:01:16
+    resources_used.gpu_usage = GN-A40-020(cuda.0.energyConsumed=6464J,
+	 cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=2262.562MB,
+	 cuda.0.memoryClock_min=7251MHz, cuda.0.memoryClock_max=7251MHz,
+	 cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%,
+	 cuda.0.memoryUtilization_max=2%, cuda.0.memoryUtilization_avg=0%,
+	 cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s,
+	 cuda.0.reliabilityViolationTime=0.000s,
+	 cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=170s,
+	 cuda.0.usagePerc=1.314%, cuda.0.memUsagePerc=4.902%)
+    resources_used.mem = 3489668kb
+    resources_used.ncpus = 36
+    resources_used.ngpus = 0
+    resources_used.vmem = 18415128kb
+    resources_used.walltime = 00:04:18
+    job_state = F
+    queue = batch_gpux
+    server = stdct-mgmt-02
+    Checkpoint = u
+    ctime = Wed Oct 28 21:25:22 2026
+    Error_Path = vanda.nus.edu.sg:/scratch/e1538633/liuyi/gib-qwen2b-diverse.e1
+	503973
+    exec_host = GN-A40-020/0*36
+    exec_vnode = (GN-A40-020[0]:ncpus=36:mem=240gb:ngpus=1)
+    Hold_Types = n
+    Join_Path = oe
+    Keep_Files = oed
+    Mail_Points = a
+    mtime = Wed Oct 28 21:30:25 2026
+    Output_Path = stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_gi
+	bson_diverse_20261028/run.pbs.log
+    Priority = 0
+    qtime = Wed Oct 28 21:25:22 2026
+    Rerunable = True
+    Resource_List.am_job_cache = {"job.walltime": 1800, "job.ncpus": 36.0,
+	 "job.queue_charge_rate": 1.0, "job.ngpus": 1.0,
+	 "am_cloud_enabled": false}
+    Resource_List.mem = 240gb
+    Resource_List.ncpus = 36
+    Resource_List.ngpus = 1
+    Resource_List.nodect = 1
+    Resource_List.place = free
+    Resource_List.queue_charge_rate = 1
+    Resource_List.select = 1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40
+    Resource_List.walltime = 00:30:00
+    stime = Wed Oct 28 21:26:06 2026
+    obittime = Wed Oct 28 21:30:25 2026
+    session_id = 451638
+    jobdir = /home/svu/e1538633
+    substate = 92
+    Variable_List = PBS_O_HOME=/home/svu/e1538633,PBS_O_LANG=en_US.UTF-8,
+	PBS_O_LOGNAME=e1538633,
+	PBS_O_PATH=/nfs/home/svu/e1538633/.codex/packages/app-server-daemon/re
+	leases/0.165.0-x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633/
+	.local/bin:/home/svu/e1538633/.local/bin:/home/svu/e1538633/.codex/tmp/
+	arg0-linux/codex-arg0ozJQ9f:/nfs/home/svu/e1538633/.codex/packages/app-
+	server-daemon/releases/0.165.0-x86_64-unknown-linux-musl/codex-path:/ho
+	me/svu/e1538633/.codex/tmp/arg0-linux/codex-arg0KCX36g:/nfs/home/svu/e1
+	538633/.codex/packages/app-server-daemon/releases/0.164.0-x86_64-unknow
+	n-linux-musl/codex-path:/home/svu/e1538633/.codex/tmp/arg0-linux/codex-
+	arg0f8hz11:/nfs/home/svu/e1538633/.codex/packages/app-server-daemon/rel
+	eases/0.163.0-x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633/.
+	codex/tmp/arg0/codex-arg0RVIeBC:/nfs/home/svu/e1538633/.local/lib/node_
+	modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_6
+	4-unknown-linux-musl/codex-path:/home/svu/e1538633/.local/bin:/app1/eba
+	pps/arches/flat-avx512/software/nodejs/22.16.0-GCCcore-14.2.0/bin:/app1
+	/ebapps/arches/flat-avx512/software/OpenSSL/3/bin:/app1/ebapps/arches/f
+	lat-avx2/software/ICU/76.1-GCCcore-14.2.0/sbin:/app1/ebapps/arches/flat
+	-avx2/software/ICU/76.1-GCCcore-14.2.0/bin:/app1/ebapps/arches/flat-avx
+	512/software/GCCcore/14.2.0/bin:/home/svu/e1538633/.local/bin:/home/svu
+	/e1538633/bin:/cm/shared/apps/apptainer/1.4.1/bin:/cm/local/apps/enviro
+	nment-modules/4.5.3//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/s
+	bin:/opt/am/python/bin:/sbin:/usr/sbin:/cm/local/apps/environment-modul
+	es/4.5.3/bin:/opt/pbs/bin:/opt/am/python/bin:/opt/pbs/bin,
+	PBS_O_MAIL=/var/spool/mail/e1538633,PBS_O_SHELL=/bin/bash,
+	PBS_O_INTERACTIVE_AUTH_METHOD=resvport,
+	PBS_O_HOST=stdct-login-01.stdct.loc,
+	PBS_O_WORKDIR=/scratch/e1538633/liuyi,PBS_O_SYSTEM=Linux,
+	PBS_O_QUEUE=autox
+    comment = Job run at Wed Oct 28 at 21:26 on (GN-A40-020[0]:ncpus=36:mem=240
+	gb:ngpus=1) and finished
+    etime = Wed Oct 28 21:25:22 2026
+    run_count = 1
+    Stageout_status = 1
+    Exit_status = 0
+    Submit_arguments = logs/qwen_gibson_diverse_20261028/run.pbs
+    history_timestamp = 1793194225
+    project = CFP04-SF-109
+    Submit_Host = vanda.nus.edu.sg
+

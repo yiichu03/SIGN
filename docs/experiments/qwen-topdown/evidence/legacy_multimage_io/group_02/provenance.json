@@ -1,0 +1,227 @@
+{
+  "manifest": {
+    "group_id": "group_02",
+    "candidates": [
+      {
+        "id": "C01",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 80,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C01/topdown_static.png",
+        "covered_percent": 68.25772963213721,
+        "new_percent": 68.24644549763033,
+        "new_m2": 11.340000000000002
+      },
+      {
+        "id": "C02",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 69,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C02/topdown_static.png",
+        "covered_percent": 66.40337019483938,
+        "new_percent": 66.3920860603325,
+        "new_m2": 11.031875000000001
+      },
+      {
+        "id": "C03",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 225,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C03/topdown_static.png",
+        "covered_percent": 89.77281275859475,
+        "new_percent": 89.76152862408786,
+        "new_m2": 14.915000000000001
+      },
+      {
+        "id": "C04",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 47,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C04/topdown_static.png",
+        "covered_percent": 66.68547355751147,
+        "new_percent": 66.67418942300459,
+        "new_m2": 11.078750000000001
+      },
+      {
+        "id": "C05",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 100,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C05/topdown_static.png",
+        "covered_percent": 87.74542992552472,
+        "new_percent": 87.73414579101782,
+        "new_m2": 14.578125
+      },
+      {
+        "id": "C06",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 117,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C06/topdown_static.png",
+        "covered_percent": 87.33167832693898,
+        "new_percent": 87.3203941924321,
+        "new_m2": 14.509375
+      },
+      {
+        "id": "C07",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 36,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C07/topdown_static.png",
+        "covered_percent": 64.50763559768299,
+        "new_percent": 64.49635146317611,
+        "new_m2": 10.716875000000002
+      },
+      {
+        "id": "C08",
+        "task": {
+          "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+          "episode_id": "3800",
+          "start_position": [
+            2.3194961547851562,
+            0.16988539695739746,
+            0.41487976908683777
+          ],
+          "start_rotation": [
+            0.0,
+            0.3051668703556061,
+            0.0,
+            -0.9522988796234131
+          ],
+          "goal_sha256": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "policy_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+        },
+        "steps": 186,
+        "window_start_step": 0,
+        "image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C08/topdown_static.png",
+        "covered_percent": 78.4435417136839,
+        "new_percent": 78.432257579177,
+        "new_m2": 13.032500000000002
+      }
+    ]
+  },
+  "manifest_sha256": "d0afe0799b9ffe90292c108d93f6b2a1ea6d816b72694c88a075468404fe65d4",
+  "prompt_sha256": "0acfa21f0410fecdd3f0425fc1cf099bddbfd535dc1116f54d12f4b2233e8486",
+  "images": {
+    "images/C01.png": "eab26039c303c5d80d414f1502faeda631b92d24829b1a09fd19cc179886f44e",
+    "images/C02.png": "e9c157d19ee167a3a19cdf14b45707509986c23430b7211b7f41d670dbbb7bdc",
+    "images/C03.png": "327d2bcd5796b406f3282d3398ab4ef377bb35b51ad41b22176a51dac96153a2",
+    "images/C04.png": "1c742565b573b08fd6a6a696737f97da3d6d90350451e0af906ebc3576fdbeff",
+    "images/C05.png": "da8e2b2d3f99b925e85131876a464f7e18fb4aa976c671badce29ca77cb584d5",
+    "images/C06.png": "4d02c6c112dd9b995fee5c0544d30e61945dfa08be0094928ae2422b3f50d34d",
+    "images/C07.png": "efd3aa191255409b8b2b3c1e338076f374222ec5507c2084f08f60fb755a3fc1",
+    "images/C08.png": "b708e390bfc304ab4569f27ac1669213cf6d60194c2451d96278813f52e5f71d"
+  }
+}

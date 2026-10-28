@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#PBS -N gib-qwen2b-diverse
+#PBS -o /scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/run.pbs.log
+#PBS -l walltime=00:30:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-coverage-eval
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet MPLCONFIGDIR=/tmp/liuyi-diverse-qwen
+support=/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028
+python "$support/check_inputs.py"
+python "$support/collect.py"
+python "$support/rebuild_display.py"
+python "$support/render.py"
+python "$support/prepare_manifest.py"
+conda activate /scratch/e1538633/liuyi/envs/qwen35
+python /scratch/e1538633/liuyi/SIGN-qwen-topdown-judge/scripts/score_qwen_single.py --manifest "$support/manifest.json" --prompt /scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/run_1503691/prompt.txt --model-dir /scratch/e1538633/liuyi/models/Qwen3.5-2B --out "$support/scores_2b" --batch-size 8 --verify
+python "$support/package.py"
+python "$support/check_inputs.py"

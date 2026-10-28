@@ -1,0 +1,135 @@
+{
+  "result_folder": "/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/run_1503691",
+  "valid_images": 16,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac",
+  "dtype": "torch.float32",
+  "verification": {
+    "passed": true,
+    "token_ids": {
+      "A": 32,
+      "B": 33,
+      "C": 34
+    },
+    "decoded_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "padding_counts": [
+      2,
+      1,
+      0
+    ],
+    "response_positions": [
+      642,
+      642,
+      642
+    ],
+    "single_batch_max_probability_delta": 1.7367196236239835e-05,
+    "permutation_max_probability_delta": 0.0,
+    "batch_results": [
+      {
+        "p_low": 0.15865430569527394,
+        "p_medium": 0.3774140847260345,
+        "p_high": 0.4639316095786917,
+        "q": 0.6526386519417089,
+        "valid": true,
+        "error": null,
+        "logits": [
+          19.47064208984375,
+          20.337257385253906,
+          20.543651580810547
+        ],
+        "candidate_mass": 0.9973409175872803
+      },
+      {
+        "p_low": 0.504056634983829,
+        "p_medium": 0.3037971017109499,
+        "p_high": 0.19214626330522105,
+        "q": 0.344044814160696,
+        "valid": true,
+        "error": null,
+        "logits": [
+          20.557636260986328,
+          20.051307678222656,
+          19.593204498291016
+        ],
+        "candidate_mass": 0.9975235462188721
+      },
+      {
+        "p_low": 0.6986119600105228,
+        "p_medium": 0.20680295401281065,
+        "p_high": 0.09458508597666651,
+        "q": 0.19798656298307182,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.031904220581055,
+          19.8145751953125,
+          19.03230857849121
+        ],
+        "candidate_mass": 0.9979174733161926
+      }
+    ],
+    "single_results": [
+      {
+        "p_low": 0.15865331348317654,
+        "p_medium": 0.37741532370257475,
+        "p_high": 0.46393136281424874,
+        "q": 0.6526390246655361,
+        "valid": true,
+        "error": null,
+        "logits": [
+          19.470626831054688,
+          20.337251663208008,
+          20.543642044067383
+        ],
+        "candidate_mass": 0.9973390102386475
+      },
+      {
+        "p_low": 0.5040740021800653,
+        "p_medium": 0.30378960605038074,
+        "p_high": 0.19213639176955394,
+        "q": 0.3440311947947443,
+        "valid": true,
+        "error": null,
+        "logits": [
+          20.557703018188477,
+          20.051315307617188,
+          19.593185424804688
+        ],
+        "candidate_mass": 0.9975254535675049
+      },
+      {
+        "p_low": 0.6986178579212533,
+        "p_medium": 0.2067987832657221,
+        "p_high": 0.0945833588130246,
+        "q": 0.19798275044588565,
+        "valid": true,
+        "error": null,
+        "logits": [
+          21.031909942626953,
+          19.814552307128906,
+          19.03228759765625
+        ],
+        "candidate_mass": 0.9979193806648254
+      }
+    ],
+    "forward_generation_max_probability_delta": 0.0,
+    "tolerance": 0.0001,
+    "first_generated_token_ids": [
+      34,
+      32,
+      32
+    ],
+    "first_generated_tokens": [
+      "C",
+      "A",
+      "A"
+    ]
+  },
+  "candidate_mass_range": [
+    0.9961906671524048,
+    0.9979174733161926
+  ]
+}

@@ -1,0 +1,20 @@
+#!/bin/bash -l
+#PBS -N gib-topdown-pilot
+#PBS -o /scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/collect.pbs.log
+#PBS -l walltime=02:00:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+support=/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028
+export PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/liuyi-gibson-mpl
+nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv
+python "$support/collect.py"
+python "$support/render.py"

@@ -1,0 +1,6 @@
+{
+  "job": "1502509.stdct-mgmt-02",
+  "recorded_at": "2026-10-28T14:38:26+08:00",
+  "status": "queued, node_pool insufficient",
+  "protected_sources_unchanged": true
+}

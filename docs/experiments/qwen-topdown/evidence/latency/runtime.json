@@ -1,0 +1,23 @@
+{
+  "job": "1503515.stdct-mgmt-02",
+  "status": "complete",
+  "models": {
+    "Qwen3.5-9B": {
+      "returncode": 0,
+      "process_wall_seconds": 90.0606050491333
+    },
+    "Qwen3.5-4B": {
+      "returncode": 0,
+      "process_wall_seconds": 44.418885707855225
+    },
+    "Qwen3.5-2B": {
+      "returncode": 0,
+      "process_wall_seconds": 31.74101686477661
+    },
+    "Qwen3.5-0.8B": {
+      "returncode": 0,
+      "process_wall_seconds": 26.076857089996338
+    }
+  },
+  "current_model": "Qwen3.5-0.8B"
+}

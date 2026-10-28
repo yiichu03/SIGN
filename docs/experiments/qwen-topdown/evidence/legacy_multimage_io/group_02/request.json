@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "group_id": "group_02",
+  "candidate_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08"
+  ],
+  "equal_steps": false,
+  "reward_integration": false,
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "这是图像输入链路检查，不做质量评分或排名。输入按C01至C08排列，共八张静态topdown。只输出JSON对象，candidate_ids列出全部八个ID，legend用一句中文说明红线、绿色圆点、深色叉、蓝色区域和灰色底图的含义。不要推断成功率、时序或奖励。"
+        },
+        {
+          "type": "text",
+          "text": "DIAGNOSTIC ONLY: unequal action budgets; raw coverage totals are not efficiency rankings."
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C01\", \"steps\": 80, \"covered_percent\": 68.25772963213721, \"new_percent\": 68.24644549763033, \"new_m2\": 11.340000000000002}"
+        },
+        {
+          "type": "image",
+          "image": "images/C01.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C02\", \"steps\": 69, \"covered_percent\": 66.40337019483938, \"new_percent\": 66.3920860603325, \"new_m2\": 11.031875000000001}"
+        },
+        {
+          "type": "image",
+          "image": "images/C02.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C03\", \"steps\": 225, \"covered_percent\": 89.77281275859475, \"new_percent\": 89.76152862408786, \"new_m2\": 14.915000000000001}"
+        },
+        {
+          "type": "image",
+          "image": "images/C03.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C04\", \"steps\": 47, \"covered_percent\": 66.68547355751147, \"new_percent\": 66.67418942300459, \"new_m2\": 11.078750000000001}"
+        },
+        {
+          "type": "image",
+          "image": "images/C04.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C05\", \"steps\": 100, \"covered_percent\": 87.74542992552472, \"new_percent\": 87.73414579101782, \"new_m2\": 14.578125}"
+        },
+        {
+          "type": "image",
+          "image": "images/C05.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C06\", \"steps\": 117, \"covered_percent\": 87.33167832693898, \"new_percent\": 87.3203941924321, \"new_m2\": 14.509375}"
+        },
+        {
+          "type": "image",
+          "image": "images/C06.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C07\", \"steps\": 36, \"covered_percent\": 64.50763559768299, \"new_percent\": 64.49635146317611, \"new_m2\": 10.716875000000002}"
+        },
+        {
+          "type": "image",
+          "image": "images/C07.png"
+        },
+        {
+          "type": "text",
+          "text": "{\"id\": \"C08\", \"steps\": 186, \"covered_percent\": 78.4435417136839, \"new_percent\": 78.432257579177, \"new_m2\": 13.032500000000002}"
+        },
+        {
+          "type": "image",
+          "image": "images/C08.png"
+        }
+      ]
+    }
+  ]
+}

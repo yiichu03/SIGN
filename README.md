@@ -118,3 +118,7 @@ habitat_baselines.eval.split test_easy
 ## Frozen-encoder rollout-coverage experiment
 
 [Results, matched-step Gibson evaluation, training curves and reproduction](docs/experiments/frozen-rollout-coverage/README.md).
+
+## Qwen independent top-down scoring
+
+[Experiment overview, images, probabilities and reproduction](docs/experiments/qwen-topdown/README.md) · [9B/2B same-image comparison](docs/experiments/qwen-topdown/reports/pilot_9b_2b.md) · [2B diverse Gibson scenes/tasks](docs/experiments/qwen-topdown/reports/diverse_2b.md)

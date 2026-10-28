@@ -1,0 +1,67 @@
+Job Id: 1503819.stdct-mgmt-02
+    Job_Name = qwen-2b-review
+    Job_Owner = e1538633@vanda.nus.edu.sg
+    job_state = Q
+    queue = batch_gpux
+    server = stdct-mgmt-02
+    Checkpoint = u
+    ctime = Wed Oct 28 20:45:26 2026
+    Error_Path = vanda.nus.edu.sg:/scratch/e1538633/liuyi/qwen-2b-review.e15038
+	19
+    Hold_Types = n
+    Join_Path = oe
+    Keep_Files = oed
+    Mail_Points = a
+    mtime = Wed Oct 28 20:45:26 2026
+    Output_Path = stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_to
+	ken_probabilities_20261028/score_2b_review.pbs.log
+    Priority = 0
+    qtime = Wed Oct 28 20:45:26 2026
+    Rerunable = True
+    Resource_List.am_job_cache = "{}"
+    Resource_List.mem = 240gb
+    Resource_List.ncpus = 36
+    Resource_List.ngpus = 1
+    Resource_List.nodect = 1
+    Resource_List.place = free
+    Resource_List.queue_charge_rate = 1
+    Resource_List.select = 1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40
+    Resource_List.walltime = 00:10:00
+    substate = 10
+    Variable_List = PBS_O_HOME=/home/svu/e1538633,PBS_O_LANG=en_US.UTF-8,
+	PBS_O_LOGNAME=e1538633,
+	PBS_O_PATH=/nfs/home/svu/e1538633/.codex/packages/app-server-daemon/re
+	leases/0.165.0-x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633/
+	.local/bin:/home/svu/e1538633/.local/bin:/home/svu/e1538633/.codex/tmp/
+	arg0-linux/codex-arg0ozJQ9f:/nfs/home/svu/e1538633/.codex/packages/app-
+	server-daemon/releases/0.165.0-x86_64-unknown-linux-musl/codex-path:/ho
+	me/svu/e1538633/.codex/tmp/arg0-linux/codex-arg0KCX36g:/nfs/home/svu/e1
+	538633/.codex/packages/app-server-daemon/releases/0.164.0-x86_64-unknow
+	n-linux-musl/codex-path:/home/svu/e1538633/.codex/tmp/arg0-linux/codex-
+	arg0f8hz11:/nfs/home/svu/e1538633/.codex/packages/app-server-daemon/rel
+	eases/0.163.0-x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633/.
+	codex/tmp/arg0/codex-arg0RVIeBC:/nfs/home/svu/e1538633/.local/lib/node_
+	modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_6
+	4-unknown-linux-musl/codex-path:/home/svu/e1538633/.local/bin:/app1/eba
+	pps/arches/flat-avx512/software/nodejs/22.16.0-GCCcore-14.2.0/bin:/app1
+	/ebapps/arches/flat-avx512/software/OpenSSL/3/bin:/app1/ebapps/arches/f
+	lat-avx2/software/ICU/76.1-GCCcore-14.2.0/sbin:/app1/ebapps/arches/flat
+	-avx2/software/ICU/76.1-GCCcore-14.2.0/bin:/app1/ebapps/arches/flat-avx
+	512/software/GCCcore/14.2.0/bin:/home/svu/e1538633/.local/bin:/home/svu
+	/e1538633/bin:/cm/shared/apps/apptainer/1.4.1/bin:/cm/local/apps/enviro
+	nment-modules/4.5.3//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/s
+	bin:/opt/am/python/bin:/sbin:/usr/sbin:/cm/local/apps/environment-modul
+	es/4.5.3/bin:/opt/pbs/bin:/opt/am/python/bin:/opt/pbs/bin,
+	PBS_O_MAIL=/var/spool/mail/e1538633,PBS_O_SHELL=/bin/bash,
+	PBS_O_INTERACTIVE_AUTH_METHOD=resvport,
+	PBS_O_HOST=stdct-login-01.stdct.loc,
+	PBS_O_WORKDIR=/scratch/e1538633/liuyi,PBS_O_SYSTEM=Linux,
+	PBS_O_QUEUE=autox
+    comment = Not Running: Placement set is too small: Insufficient amount of r
+	esource: ngpus (R: 1 A: 0 T: 70)
+    etime = Wed Oct 28 20:45:26 2026
+    Submit_arguments = logs/qwen_token_probabilities_20261028/score_2b_review.p
+	bs
+    project = CFP04-SF-109
+    Submit_Host = vanda.nus.edu.sg
+

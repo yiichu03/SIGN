@@ -1,0 +1,271 @@
+{
+  "coverage_definition": "Newly seen navigable XZ grid cells excluding initial view; saved 0.025m display reconstruction, 3m range/90deg FOV, fog-origin boundary correction <=5cm; not RGB surface area or native training 0.1m statistic",
+  "groups": [
+    {
+      "id": "group_01",
+      "items": [
+        {
+          "id": "C01",
+          "image": "../images/pilot/group_01/C01.png",
+          "image_sha256": "5ec1e53fde5e0ec4be9147d500f44bb581a71bc47ee0a17ef7111993bfa023f9",
+          "action_count": 35,
+          "new_area_m2": 12.771875000000001,
+          "new_area_m2_per_action": 0.3649107142857143,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C01/display_map_data.npz",
+            "mask_sha256": "ba4e0b9780f172b4ddaee25e8e828f60a4292fc8b8f4b64f3b46bf5d90fd2efa",
+            "new_valid_cells": 20435,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C01/trajectory.json",
+            "trajectory_sha256": "35deeeb74a5429e317d7279298c2d51d4f7c71387df74b695cac2f6a0d053a0b"
+          }
+        },
+        {
+          "id": "C02",
+          "image": "../images/pilot/group_01/C02.png",
+          "image_sha256": "19914bf9618426c07438688836d3a8ea7275b9a85cd202cc0e7c456ee6e6d8c4",
+          "action_count": 31,
+          "new_area_m2": 13.491875000000002,
+          "new_area_m2_per_action": 0.43522177419354846,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C02/display_map_data.npz",
+            "mask_sha256": "12781803ce0302a62866e175912e085869f241b03901d26900906ffcabcb98be",
+            "new_valid_cells": 21587,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C02/trajectory.json",
+            "trajectory_sha256": "bd67d9207d2fc22a9cf6b400fc3ead79f893350dfb29da3c4b9d0caeed12907f"
+          }
+        },
+        {
+          "id": "C03",
+          "image": "../images/pilot/group_01/C03.png",
+          "image_sha256": "d331e1776e0e8da1ae46635018cbbc7cca3201b943ca4515323b55dfbb5f74c0",
+          "action_count": 34,
+          "new_area_m2": 13.01875,
+          "new_area_m2_per_action": 0.3829044117647059,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C03/display_map_data.npz",
+            "mask_sha256": "bb294cac04f8181a5c9bf35b1258b07e160b5c734aae8e58f7e50564f3ca5952",
+            "new_valid_cells": 20830,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C03/trajectory.json",
+            "trajectory_sha256": "9c929f133484a2f65c362cf903e9b7ebb1eceace7bda0ab61c1699994473d506"
+          }
+        },
+        {
+          "id": "C04",
+          "image": "../images/pilot/group_01/C04.png",
+          "image_sha256": "dc22dcb6fcfc4220aed8ca62618160a7d4965ac91f26532b44f1afc52e00cdb1",
+          "action_count": 38,
+          "new_area_m2": 13.386875000000002,
+          "new_area_m2_per_action": 0.3522861842105264,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C04/display_map_data.npz",
+            "mask_sha256": "339e2d281f6ed9ae3c443a0b6ac44a54aa9e81ee38be7793934bb0977e04f992",
+            "new_valid_cells": 21419,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C04/trajectory.json",
+            "trajectory_sha256": "7f7841c66d20d9fe4356b3cf9905b2fc491d513c3f4be40e9854533e11c6001b"
+          }
+        },
+        {
+          "id": "C05",
+          "image": "../images/pilot/group_01/C05.png",
+          "image_sha256": "1e4bb7582ab69dea815844282857c6a5947095e479169aecb97bc15fda55f030",
+          "action_count": 33,
+          "new_area_m2": 13.500625,
+          "new_area_m2_per_action": 0.4091098484848485,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C05/display_map_data.npz",
+            "mask_sha256": "313630c55fa39d792fbc5be80c63a022eb4a15290ca8620643d8837f91b62405",
+            "new_valid_cells": 21601,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C05/trajectory.json",
+            "trajectory_sha256": "528c8bf32171cd0db067c80091e13419059805bc037032467d0a22374c9a8280"
+          }
+        },
+        {
+          "id": "C06",
+          "image": "../images/pilot/group_01/C06.png",
+          "image_sha256": "9004ce7594ce9bb7b28db384d6b42abdab57c7ffaac0e0a784e3e3dc1091d13e",
+          "action_count": 39,
+          "new_area_m2": 12.430625000000001,
+          "new_area_m2_per_action": 0.3187339743589744,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C06/display_map_data.npz",
+            "mask_sha256": "8cea0eb8dd3505d9c7144c78913ca745e861120dd8805f486efe9121b0b8ac1e",
+            "new_valid_cells": 19889,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C06/trajectory.json",
+            "trajectory_sha256": "687fc0664e617a6e31d4f0138d47307590fc4a13966b592ba3d76f04a95aba74"
+          }
+        },
+        {
+          "id": "C07",
+          "image": "../images/pilot/group_01/C07.png",
+          "image_sha256": "9ff35878771915e064a2fbecb14320f76ee57de386360199e63a0b660fc6bc2d",
+          "action_count": 32,
+          "new_area_m2": 12.32,
+          "new_area_m2_per_action": 0.385,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C07/display_map_data.npz",
+            "mask_sha256": "50acdc494af24c0f23c233e65eb2daae80a2e4a590a6f5ea070cec686a73861c",
+            "new_valid_cells": 19712,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C07/trajectory.json",
+            "trajectory_sha256": "0237cad2511c19644da967e9df35228935b0be65e0629ac5ad25b79db9d66741"
+          }
+        },
+        {
+          "id": "C08",
+          "image": "../images/pilot/group_01/C08.png",
+          "image_sha256": "d69d10e65ffce366bfacbce0791030b7447e46aaf8207c11ec69f3fe475569cd",
+          "action_count": 36,
+          "new_area_m2": 13.368125000000001,
+          "new_area_m2_per_action": 0.3713368055555556,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C08/display_map_data.npz",
+            "mask_sha256": "f9d1632afd85d2763cec7ef52d771f5bbc72a4b6722784118461bb0b156b167b",
+            "new_valid_cells": 21389,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C08/trajectory.json",
+            "trajectory_sha256": "a567e3c6b58f5b26a76a85e3eae599c9b28d248c9c05c96b2bd66fa868ce87d6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group_02",
+      "items": [
+        {
+          "id": "C01",
+          "image": "../images/pilot/group_02/C01.png",
+          "image_sha256": "eab26039c303c5d80d414f1502faeda631b92d24829b1a09fd19cc179886f44e",
+          "action_count": 80,
+          "new_area_m2": 11.340000000000002,
+          "new_area_m2_per_action": 0.14175000000000001,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C01/display_map_data.npz",
+            "mask_sha256": "d1f4abfe69d7a051153ea1250056d4920423db8f4a8f0e98b891282412eb1c6e",
+            "new_valid_cells": 18144,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C01/trajectory.json",
+            "trajectory_sha256": "976e76274b47f62b2f0c0f006c64c5a466646ff1da088c45c3ae2c306aac673b"
+          }
+        },
+        {
+          "id": "C02",
+          "image": "../images/pilot/group_02/C02.png",
+          "image_sha256": "e9c157d19ee167a3a19cdf14b45707509986c23430b7211b7f41d670dbbb7bdc",
+          "action_count": 69,
+          "new_area_m2": 11.031875000000001,
+          "new_area_m2_per_action": 0.15988224637681162,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C02/display_map_data.npz",
+            "mask_sha256": "f9be1cbbd3063409f2815c250f48e0656275b34c3c4a59ac00022649531ec0b0",
+            "new_valid_cells": 17651,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C02/trajectory.json",
+            "trajectory_sha256": "5954d8b39ed0d4f4e1c7620ef0e2e039bfdb49eec9b5432d5a25a25379106aaa"
+          }
+        },
+        {
+          "id": "C03",
+          "image": "../images/pilot/group_02/C03.png",
+          "image_sha256": "327d2bcd5796b406f3282d3398ab4ef377bb35b51ad41b22176a51dac96153a2",
+          "action_count": 225,
+          "new_area_m2": 14.915000000000001,
+          "new_area_m2_per_action": 0.0662888888888889,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C03/display_map_data.npz",
+            "mask_sha256": "6956581585ea0e4f57cc89e0cb8f053dee2feb0e10cecbb0533bc8a7bac82dc3",
+            "new_valid_cells": 23864,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C03/trajectory.json",
+            "trajectory_sha256": "3ae42d6fb4f9d17ed6c9dd896a04bcc83203843eda7d8537d2a8ee395d59b869"
+          }
+        },
+        {
+          "id": "C04",
+          "image": "../images/pilot/group_02/C04.png",
+          "image_sha256": "1c742565b573b08fd6a6a696737f97da3d6d90350451e0af906ebc3576fdbeff",
+          "action_count": 47,
+          "new_area_m2": 11.078750000000001,
+          "new_area_m2_per_action": 0.235718085106383,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C04/display_map_data.npz",
+            "mask_sha256": "94ce41fe8eece9248ca5e78470e5d49f352b97fa7ee4becec3e08ae0dec42b34",
+            "new_valid_cells": 17726,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C04/trajectory.json",
+            "trajectory_sha256": "ad766993561d2dc9107c1ba4742ac5763e22004271d79fc3a9a6bbcca091b293"
+          }
+        },
+        {
+          "id": "C05",
+          "image": "../images/pilot/group_02/C05.png",
+          "image_sha256": "da8e2b2d3f99b925e85131876a464f7e18fb4aa976c671badce29ca77cb584d5",
+          "action_count": 100,
+          "new_area_m2": 14.578125,
+          "new_area_m2_per_action": 0.14578125,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C05/display_map_data.npz",
+            "mask_sha256": "7085353f19aeb6ef3671d883483d3cde4ba53e5dac378dd47e1189f8acce33d9",
+            "new_valid_cells": 23325,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C05/trajectory.json",
+            "trajectory_sha256": "a6eb0fcf7bd4ec75c4173422405b37bb0709f4e45e59e9291baa1e65ecae9e4b"
+          }
+        },
+        {
+          "id": "C06",
+          "image": "../images/pilot/group_02/C06.png",
+          "image_sha256": "4d02c6c112dd9b995fee5c0544d30e61945dfa08be0094928ae2422b3f50d34d",
+          "action_count": 117,
+          "new_area_m2": 14.509375,
+          "new_area_m2_per_action": 0.12401175213675214,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C06/display_map_data.npz",
+            "mask_sha256": "89c8066bd11713b4610e05bfd2bc2b82fe8c77b0f278a30c92bcb367a04d4cee",
+            "new_valid_cells": 23215,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C06/trajectory.json",
+            "trajectory_sha256": "1caccbed45b50d6ee42f5e8fa154958762157939f3cb882874329e7c430df301"
+          }
+        },
+        {
+          "id": "C07",
+          "image": "../images/pilot/group_02/C07.png",
+          "image_sha256": "efd3aa191255409b8b2b3c1e338076f374222ec5507c2084f08f60fb755a3fc1",
+          "action_count": 36,
+          "new_area_m2": 10.716875000000002,
+          "new_area_m2_per_action": 0.2976909722222223,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C07/display_map_data.npz",
+            "mask_sha256": "ef8924eada9fe42c99a806745d781c79578616558d99cdab671a366c539914ca",
+            "new_valid_cells": 17147,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C07/trajectory.json",
+            "trajectory_sha256": "bf68fcdc293fdac149e84d982e0d093add8d963b9e2437cf78c2d9eb96dff95a"
+          }
+        },
+        {
+          "id": "C08",
+          "image": "../images/pilot/group_02/C08.png",
+          "image_sha256": "b708e390bfc304ab4569f27ac1669213cf6d60194c2451d96278813f52e5f71d",
+          "action_count": 186,
+          "new_area_m2": 13.032500000000002,
+          "new_area_m2_per_action": 0.07006720430107528,
+          "area_source": {
+            "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C08/display_map_data.npz",
+            "mask_sha256": "80e2802cdf39aef110c723a041e9bf2a0ab59bb918315a276adbed88be1e27ff",
+            "new_valid_cells": 20852,
+            "meters_per_pixel": 0.025,
+            "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C08/trajectory.json",
+            "trajectory_sha256": "3d75390699bf0563c087f2c8a29659590427ef10c6c5729a543575c9b27f29c7"
+          }
+        }
+      ]
+    }
+  ]
+}

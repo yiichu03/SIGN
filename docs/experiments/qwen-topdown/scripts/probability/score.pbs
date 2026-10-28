@@ -1,0 +1,19 @@
+#!/bin/bash -l
+#PBS -N qwen-abc-score16
+#PBS -o /scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/score.pbs.log
+#PBS -l walltime=00:30:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-qwen-topdown-judge
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/qwen35
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+support=/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028
+prompt=${QWEN_PROMPT:-/scratch/e1538633/liuyi/SIGN-qwen-topdown-judge/scripts/prompts/qwen_single_coverage_abc.txt}
+output=${QWEN_OUTPUT:-$support/run_${PBS_JOBID%%.*}}
+nvidia-smi --query-gpu=name,uuid,driver_version,memory.total --format=csv
+python scripts/score_qwen_single.py --manifest "$support/manifest.json" --prompt "$prompt" --out "$output" --batch-size 8 --verify

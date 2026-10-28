@@ -1,0 +1,29 @@
+{
+  "status": "valid",
+  "job": "1502725.stdct-mgmt-02",
+  "torch": "2.6.0+cu124",
+  "transformers": "5.17.0",
+  "model_files": {
+    "model.safetensors-00003-of-00004.safetensors": {
+      "bytes": 5368717440
+    },
+    "model.safetensors-00001-of-00004.safetensors": {
+      "bytes": 5276436216
+    },
+    "model.safetensors-00002-of-00004.safetensors": {
+      "bytes": 5335161512
+    },
+    "model.safetensors-00004-of-00004.safetensors": {
+      "bytes": 3325995712
+    }
+  },
+  "model_config_sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05",
+  "request_sha256": "66c5227b2388a4c322e4e3bea8299f62006b0b2cf9325b25afd668f2a4146141",
+  "input_tokens": 2713,
+  "output_tokens": 120,
+  "image_count": 8,
+  "generation_seconds": 8.277238688897341,
+  "peak_gpu_gib": 18.410489082336426,
+  "truncated": false,
+  "parse_error": null
+}

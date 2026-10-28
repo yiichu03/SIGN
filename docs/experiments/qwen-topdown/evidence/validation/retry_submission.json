@@ -1,0 +1,8 @@
+{
+  "job": "1503691.stdct-mgmt-02",
+  "previous_failed_job": "1503665.stdct-mgmt-02",
+  "source_commit": "4cc7257",
+  "dtype": "float32",
+  "requested_probability_tolerance": 0.0001,
+  "recorded_at": "2026-10-28T20:13:32+08:00"
+}

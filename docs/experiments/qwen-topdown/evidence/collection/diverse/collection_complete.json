@@ -1,0 +1,149 @@
+{
+  "job": "1503973.stdct-mgmt-02",
+  "trajectories": [
+    {
+      "group": "group_01",
+      "case": "C01",
+      "scene": "Cantwell",
+      "episode_id": "1703",
+      "steps": 250,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_01",
+      "case": "C02",
+      "scene": "Eastville",
+      "episode_id": "4101",
+      "steps": 165,
+      "done": true,
+      "height_range": 0.15345720946788788
+    },
+    {
+      "group": "group_01",
+      "case": "C03",
+      "scene": "Elmira",
+      "episode_id": "2900",
+      "steps": 44,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_01",
+      "case": "C04",
+      "scene": "Eudora",
+      "episode_id": "2000",
+      "steps": 256,
+      "done": false,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_01",
+      "case": "C05",
+      "scene": "Greigsville",
+      "episode_id": "2600",
+      "steps": 44,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_01",
+      "case": "C06",
+      "scene": "Pablo",
+      "episode_id": "804",
+      "steps": 152,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_01",
+      "case": "C07",
+      "scene": "Ribera",
+      "episode_id": "1100",
+      "steps": 44,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_01",
+      "case": "C08",
+      "scene": "Swormville",
+      "episode_id": "3201",
+      "steps": 256,
+      "done": false,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C01",
+      "scene": "Cantwell",
+      "episode_id": "1700",
+      "steps": 72,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C02",
+      "scene": "Eastville",
+      "episode_id": "4102",
+      "steps": 77,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C03",
+      "scene": "Elmira",
+      "episode_id": "2954",
+      "steps": 141,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C04",
+      "scene": "Eudora",
+      "episode_id": "2054",
+      "steps": 256,
+      "done": false,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C05",
+      "scene": "Greigsville",
+      "episode_id": "2643",
+      "steps": 146,
+      "done": true,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C06",
+      "scene": "Pablo",
+      "episode_id": "800",
+      "steps": 256,
+      "done": false,
+      "height_range": 0.07793475687503815
+    },
+    {
+      "group": "group_02",
+      "case": "C07",
+      "scene": "Ribera",
+      "episode_id": "1114",
+      "steps": 256,
+      "done": false,
+      "height_range": 0.0
+    },
+    {
+      "group": "group_02",
+      "case": "C08",
+      "scene": "Swormville",
+      "episode_id": "3200",
+      "steps": 66,
+      "done": true,
+      "height_range": 0.0
+    }
+  ]
+}

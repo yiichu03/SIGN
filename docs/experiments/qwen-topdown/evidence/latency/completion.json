@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-28T19:35:14+08:00",
+  "job": "1503515.stdct-mgmt-02",
+  "queue": "autox->batch_gpux",
+  "project": "CFP04-SF-109",
+  "resources": "A40/36CPU/240GB/2h",
+  "source_commit": "4754fed",
+  "models": {
+    "4B": {
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "bytes": 9342816694
+    },
+    "2B": {
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "bytes": 4571198095
+    },
+    "0.8B": {
+      "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+      "bytes": 1769905646
+    }
+  },
+  "status": "complete",
+  "parallelism": "one image per independent conversation, eight rows in one generation batch",
+  "exit_status": 0,
+  "walltime_seconds": 201,
+  "completed_verified_at": "2026-10-28T19:42:13+08:00",
+  "result": "/scratch/e1538633/liuyi/logs/qwen_single_latency_20261028/comparison.json"
+}

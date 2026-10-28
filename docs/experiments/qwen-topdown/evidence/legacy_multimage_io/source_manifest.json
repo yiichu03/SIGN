@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-28T15:22:26+08:00",
+  "base": "a7cc9e09fe3c0a9abfa054307cfb80474217d1a2",
+  "files": {
+    "src/qwen_topdown.py": "d1054eb2b70b3c6f6067bc0fbe783853b5d02283c4dda2f615df2454f83f20e6",
+    "scripts/qwen_topdown.py": "ff4cde946dc0c438fb2bd006f329106450d5c63239ad64022199dd4d1b677779",
+    "scripts/qwen_topdown_config.json": "f6fa9450e683f2ae1dbd8ea1e1b4ba1b7c6b7bc016c1cb4a0d35e55a14c467d0",
+    "tests/test_qwen_topdown.py": "9afad2ee846901ca342881e98be18a7bf114dce6a0493d852ca759fd41b7b1da"
+  },
+  "gpu_job": "1502697.stdct-mgmt-02"
+}

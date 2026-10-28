@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-10-28T21:27:33+08:00",
+  "job": "1503973.stdct-mgmt-02",
+  "status": "R",
+  "scenes": 8,
+  "tasks": 16,
+  "source_policy": "public SIGN nav_model.pth + safety_model.pth",
+  "sampling": "native stochastic, one run per task, max256 actions",
+  "model": "Qwen3.5-2B",
+  "scoring": "same saved prompt cdd6f2fc782f, FP32 A/B/C logits T1, independent batch8",
+  "prompt_source": "/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/run_1503691/prompt.txt",
+  "queue": "autox->gpux",
+  "project": "CFP04-SF-109",
+  "walltime": "30min",
+  "archive": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/qwen2b_gibson_diverse_review.zip"
+}

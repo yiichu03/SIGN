@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-28T15:24:57+08:00",
+  "job": "1502725.stdct-mgmt-02",
+  "files": {
+    "src/qwen_topdown.py": "328393b2d06293a66438344841c64f96b7d789dd553f0399dfc95d0111834238",
+    "scripts/qwen_topdown.py": "ffbdf9e0c5b3c36188aad693ffd98b1715e42ce2a6e7698b4fe97109e5e84bc0",
+    "scripts/qwen_topdown_config.json": "f6fa9450e683f2ae1dbd8ea1e1b4ba1b7c6b7bc016c1cb4a0d35e55a14c467d0",
+    "tests/test_qwen_topdown.py": "9afad2ee846901ca342881e98be18a7bf114dce6a0493d852ca759fd41b7b1da"
+  }
+}

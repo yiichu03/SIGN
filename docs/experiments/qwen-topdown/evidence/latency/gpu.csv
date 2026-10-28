@@ -1,0 +1,2 @@
+name, uuid, driver_version, memory.total [MiB]
+NVIDIA A40, GPU-14857613-1d7f-578d-43dc-765443c206a4, 575.57.08, 46068 MiB

@@ -1,0 +1,26 @@
+{
+  "models": [
+    "9B",
+    "4B",
+    "2B",
+    "0.8B"
+  ],
+  "images": [
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C01/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C02/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C03/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C04/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C05/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C06/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C07/topdown_static.png",
+    "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_02/C08/topdown_static.png"
+  ],
+  "source_hashes": {
+    "src/qwen_single_image.py": "940a244da570b603e236995c47fe8bbafab0cfa0030ddc16fb6bad6b39c2b2ae",
+    "scripts/benchmark_qwen_single.py": "a0b92756c5f9e63807015bd0a03d70acb1f7112107cb56ae2a2491f4baca9b36"
+  },
+  "semantics": "8 independent one-image conversations; no shared task requirement or relative ranking",
+  "max_image_pixels": 262144,
+  "max_new_tokens": 64,
+  "repeats": 3
+}

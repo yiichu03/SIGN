@@ -1,0 +1,446 @@
+{
+  "groups": [
+    {
+      "group": {
+        "id": "group_01",
+        "scene": "Edgemere",
+        "episode_id": "200",
+        "geodesic_distance": 5.949424743652344
+      },
+      "cases": [
+        {
+          "id": "C01",
+          "steps": 35,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "6693d338ef917edd094ffdc525843f0045ea238e9b164350dfcc117d73c2a23b",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C02",
+          "steps": 31,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "694f2dfbae7a5efd677868d122500b7a254d820624654cf4f9526623249d0c44",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C03",
+          "steps": 34,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "aa517c1b32e712d195e33bc4bf12a95dae0ced229ae5e2734a110ba907e85aac",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C04",
+          "steps": 38,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "f1cf045cf566aa92a046badd6d680977c9d3d4a97525e330bd1c19cb1c453cba",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C05",
+          "steps": 33,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "451ddf8ec5d7a986bc9567274839e5ad6182d1068d11602d67d2b7a0af59c8e5",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C06",
+          "steps": 39,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "56242603d777a2e591fd16060afb81deaf3d8c423460dd4984318123af1c68bc",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C07",
+          "steps": 32,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "4c44a1b2d2de13a737a777090457351c9b8e76c31fb902065935759eb37cbb3c",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C08",
+          "steps": 36,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              -0.7879931926727295,
+              0.1856038123369217,
+              5.512729644775391
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.27427899837493896,
+              0.0,
+              0.9616501331329346
+            ],
+            "map_row": 68,
+            "map_col": 17,
+            "heading_rad": -2.5859129035251094
+          },
+          "goal_sha": "25753d0392ef111180b092b3373e2adbe35503c2bfe2a9b6ea1b5c81f3cc7e63",
+          "initial_sha": "50bc94ec24dd274feb0e6f6ffcdc3389dcb3e140ed7a4b69ba56737c06172bbe",
+          "trajectory_sha": "57609f28dcb6726e89561d3cd850732db01ab489abc8d09dac7b2b1663a2b5d5",
+          "grid_changed_steps": 0
+        }
+      ],
+      "distinct_trajectories": 8,
+      "same_start_goal_rgb": true
+    },
+    {
+      "group": {
+        "id": "group_02",
+        "scene": "Denmark",
+        "episode_id": "3800",
+        "geodesic_distance": 6.316120147705078
+      },
+      "cases": [
+        {
+          "id": "C01",
+          "steps": 80,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "e9a6a7f876078b84ff8dff39d7d4e2cd97544e71b3ebcb669c7a7a85483e38ac",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C02",
+          "steps": 69,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "7818d972a4485acfff902f00db8f06aaaf69871c3f4c51afa63cbe449288f7a9",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C03",
+          "steps": 225,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "fd8d879a29a4dde217e7c70de5a4ddb41854af64f25007e0459eaaee04979fa3",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C04",
+          "steps": 47,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "81809c48afd5fd1de0f0ed27a90a5f9c4735b017ba5a5ec56fffc7925ffbef0e",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C05",
+          "steps": 100,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "1a2cd0816814d9208d62df55b4078f38c89327feb174ae77d2eb3148a3d5a7d5",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C06",
+          "steps": 117,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "ba5194eed47b2fe2cd6e460e5bccc566252214a9791f593c3cb93bc8901f5b8c",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C07",
+          "steps": 36,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "de74a601ad8b777477f637c340e972dce3878a67f97105cc0b2def66b2e39831",
+          "grid_changed_steps": 0
+        },
+        {
+          "id": "C08",
+          "steps": 186,
+          "done": true,
+          "start": {
+            "step": 0,
+            "position_xyz": [
+              2.3194961547851562,
+              0.16988539695739746,
+              0.41487976908683777
+            ],
+            "rotation_xyzw": [
+              0.0,
+              0.3051668703556061,
+              0.0,
+              -0.9522988796234131
+            ],
+            "map_row": 23,
+            "map_col": 68,
+            "heading_rad": 2.521365338882315
+          },
+          "goal_sha": "44734802491c94c44d96e5572d7985481e3b23c0a33f5f56523f78ee97eaa1a0",
+          "initial_sha": "56bce88ca6a6c98d15c2db7f164f499d2525785f5502cc88e6f982942ea89f38",
+          "trajectory_sha": "20fd9e050f8af7454a96dcee11e2637b0498f6f22393d055dbe10f579c08bd81",
+          "grid_changed_steps": 0
+        }
+      ],
+      "distinct_trajectories": 8,
+      "same_start_goal_rgb": true
+    }
+  ],
+  "pbs_job": "1502516.stdct-mgmt-02",
+  "purpose": "stochastic trajectory pipeline demo, not standard deterministic evaluation"
+}
