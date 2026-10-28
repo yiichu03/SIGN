@@ -135,6 +135,11 @@ class PPOTrainer(BaseRLTrainer):
         self._coverage_weight = float(getattr(coverage_cfg, "weight", 0.0))
         if not np.isfinite(self._coverage_weight) or self._coverage_weight < 0:
             raise ValueError("Invalid coverage reward weight")
+        self._coverage_settlement_interval = getattr(coverage_cfg, "settlement_interval", 0)
+        if (isinstance(self._coverage_settlement_interval, bool)
+                or not isinstance(self._coverage_settlement_interval, int)
+                or self._coverage_settlement_interval < 0):
+            raise ValueError("Coverage settlement_interval must be a nonnegative integer")
         self._coverage_delta_rows = []
 
         if self.config.habitat_baselines.verbose:
@@ -463,6 +468,10 @@ class PPOTrainer(BaseRLTrainer):
         masks = self.rollouts.buffers["masks"][1:H+1, :, 0]
         ends = ~masks.detach().cpu().numpy().astype(bool)
         ends[-1, :] = True  # 仅创建结算边界，不修改原始masks。
+        interval = self._coverage_settlement_interval
+        if interval > 0:
+            # Rollout-aligned subsegments; keep H as the reward denominator.
+            ends[interval - 1::interval, :] = True
         total_bonus = 0.0
         for env in range(N):
             start = 0
