@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-28T14:46:52+08:00",
+  "job_id": "1502487.stdct-mgmt-02",
+  "scheduler": {
+    "job_state": "R",
+    "queue": "batch_gpux",
+    "exec_host": "GN-A40-023/1*36",
+    "resources_used.walltime": "00:18:16"
+  },
+  "episodes_completed": 176,
+  "expected_episodes": 1900,
+  "result_available": false,
+  "runtime_code_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+  "partial_log_sha256": "2aa0b1bfa237fbc47ba6ce47480057c773b0693358f208d4cf2f63b2209ac6f3"
+}

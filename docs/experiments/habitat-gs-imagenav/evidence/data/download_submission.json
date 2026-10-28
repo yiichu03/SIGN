@@ -1,0 +1,37 @@
+{
+  "time": "2026-10-28T13:38:35+08:00",
+  "command": [
+    "qsub",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/habitat_gs_20261028/download.pbs.log",
+    "/scratch/e1538633/liuyi/SIGN-habitat-gs/scripts/habitat_gs/download.pbs"
+  ],
+  "stdout": "1502380.stdct-mgmt-02\n",
+  "stderr": "",
+  "returncode": 0,
+  "script_sha256": "a1166e298c29dbf504457aecb393480cd0971bd8f8bd293c097bfb8b02386640",
+  "commit": "d291c448f5059debc8f2fad63ebda4cd5757ef4f",
+  "completion": {
+    "checked_at": "2026-10-28T14:00:01+08:00",
+    "exit_status": 0,
+    "walltime": "00:19:48",
+    "manifest": "manifests/habitat_gs_imagenav_20261028.json",
+    "manifest_sha256": "ff6cfa31f9b6563a566019f841ab6387e81580a4445a0b8267185f5d80369317",
+    "files": 393,
+    "bytes": 26695345591,
+    "summary": {
+      "train": {
+        "scenes": 110,
+        "episodes": 110000
+      },
+      "val": {
+        "scenes": 19,
+        "episodes": 1900
+      }
+    },
+    "reused_files": 6,
+    "downloaded_files": 387,
+    "all_navmesh_config_references_resolved": true,
+    "partial_files_remaining": 0
+  }
+}

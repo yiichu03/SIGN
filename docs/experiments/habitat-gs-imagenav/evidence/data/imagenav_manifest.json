@@ -1,0 +1,3166 @@
+{
+  "repo": "RukawaY/gs_scenes",
+  "revision": "ea6453855938dd3d4395c4c449fedefb7e6603b7",
+  "scene": "all",
+  "split": "train,val",
+  "root": "/scratch/e1538633/liuyi/SIGN/data/scene_datasets/gs_scenes",
+  "files": [
+    {
+      "path": "configs/ddppo_imagenav_gs_eval.yaml",
+      "bytes": 2438,
+      "sha256": "967b8657a091202adfc8dc6b6d33888a8b1f1d2aa952d8cfca9727ceac1852a6",
+      "upstream_hash": "30097300775cc1afd131d542d826ad9ddaff5575",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/configs/ddppo_imagenav_gs_eval.yaml",
+      "reused": true
+    },
+    {
+      "path": "configs/ddppo_imagenav_gs_train.yaml",
+      "bytes": 2598,
+      "sha256": "d2d5cec72416c98ac989d60ca535d6fa02355c28dcdc734fe7962294e72d49eb",
+      "upstream_hash": "41efa265f8d11eed485562f3a423c0f269a23fc7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/configs/ddppo_imagenav_gs_train.yaml",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0007_840137.json.gz",
+      "bytes": 78244,
+      "sha256": "8b6c6a5abca22f080e85ace48b5f61094da7b50680fb887b1f7501128eb1fdcf",
+      "upstream_hash": "8b6c6a5abca22f080e85ace48b5f61094da7b50680fb887b1f7501128eb1fdcf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0007_840137.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0022_840117.json.gz",
+      "bytes": 78963,
+      "sha256": "537de546a9d496ff57cb869e59d3509705e4e1a0f0ac177171cf5fd06275b9e0",
+      "upstream_hash": "537de546a9d496ff57cb869e59d3509705e4e1a0f0ac177171cf5fd06275b9e0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0022_840117.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0032_839877.json.gz",
+      "bytes": 79162,
+      "sha256": "44a706acb73c0b0ee5a910918f4e6b3ceaca8b64af58a27220c9a72a6b923580",
+      "upstream_hash": "44a706acb73c0b0ee5a910918f4e6b3ceaca8b64af58a27220c9a72a6b923580",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0032_839877.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0034_839886.json.gz",
+      "bytes": 79270,
+      "sha256": "3a4f66c96e309e7666189d3bdef99c9c5eba766fd03588e99d05e23e9c47ffa7",
+      "upstream_hash": "3a4f66c96e309e7666189d3bdef99c9c5eba766fd03588e99d05e23e9c47ffa7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0034_839886.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0036_839878.json.gz",
+      "bytes": 79106,
+      "sha256": "f150ba772acbbbf2d1d6ce67c726118f768f169babd0a9a50ea9ed157459f462",
+      "upstream_hash": "f150ba772acbbbf2d1d6ce67c726118f768f169babd0a9a50ea9ed157459f462",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0036_839878.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0039_839888.json.gz",
+      "bytes": 79505,
+      "sha256": "08d07d4e6fad9ee1611f5628183de9539da236b7b8361a7657b5a9196909990f",
+      "upstream_hash": "08d07d4e6fad9ee1611f5628183de9539da236b7b8361a7657b5a9196909990f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0039_839888.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0040_839882.json.gz",
+      "bytes": 78458,
+      "sha256": "0ea090063d2bbd2e2948e32e617a6b10812b7aae097a6fba12048a308f9d9edb",
+      "upstream_hash": "0ea090063d2bbd2e2948e32e617a6b10812b7aae097a6fba12048a308f9d9edb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0040_839882.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0042_839881.json.gz",
+      "bytes": 78793,
+      "sha256": "3b5b72314653d9c2a1d8e4a68a119946caccf6d80cb63e1eb81e5b626ec010ae",
+      "upstream_hash": "3b5b72314653d9c2a1d8e4a68a119946caccf6d80cb63e1eb81e5b626ec010ae",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0042_839881.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0044_839926.json.gz",
+      "bytes": 77061,
+      "sha256": "e1c625f97c9f2f68af06833e8cbbfbf2e926ea8923924d0ecd89919bb465fa17",
+      "upstream_hash": "e1c625f97c9f2f68af06833e8cbbfbf2e926ea8923924d0ecd89919bb465fa17",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0044_839926.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0045_839925.json.gz",
+      "bytes": 78920,
+      "sha256": "4865f2ed12e425710ca45ede27d2ce7d1e1b9d059ab0ec02820fb851b71d2f07",
+      "upstream_hash": "4865f2ed12e425710ca45ede27d2ce7d1e1b9d059ab0ec02820fb851b71d2f07",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0045_839925.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0047_839892.json.gz",
+      "bytes": 79389,
+      "sha256": "44a1ce0c0048862de7bd7b6ba671d74556f8156dd6aba1f9214efb6bfd7ecb0c",
+      "upstream_hash": "44a1ce0c0048862de7bd7b6ba671d74556f8156dd6aba1f9214efb6bfd7ecb0c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0047_839892.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0048_839893.json.gz",
+      "bytes": 78127,
+      "sha256": "27659f6e57d59988dbd2c2bb8c4f6362aa5400ca018694e31e32da2c6fb42fa4",
+      "upstream_hash": "27659f6e57d59988dbd2c2bb8c4f6362aa5400ca018694e31e32da2c6fb42fa4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0048_839893.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0049_839890.json.gz",
+      "bytes": 78710,
+      "sha256": "ca679142f5d1fe3b120e94f43386d2cd28424a462d23288eb37989c500f9dfdd",
+      "upstream_hash": "ca679142f5d1fe3b120e94f43386d2cd28424a462d23288eb37989c500f9dfdd",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0049_839890.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0086_839945.json.gz",
+      "bytes": 78282,
+      "sha256": "3b8744da7ef81692a48626ea131c185a6e5c9a53213301067ef269b50bdbcd71",
+      "upstream_hash": "3b8744da7ef81692a48626ea131c185a6e5c9a53213301067ef269b50bdbcd71",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0086_839945.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0088_839961.json.gz",
+      "bytes": 76723,
+      "sha256": "1f4d0669aabe90ecc6a2a597963a41ec0621dcd0109fb3d5aaaf5d999ddab0b3",
+      "upstream_hash": "1f4d0669aabe90ecc6a2a597963a41ec0621dcd0109fb3d5aaaf5d999ddab0b3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0088_839961.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0093_839966.json.gz",
+      "bytes": 79059,
+      "sha256": "9345244badc3c8b2574c0b844cf476acbaa6acfbcfb39af7f6c0c2135297b3ce",
+      "upstream_hash": "9345244badc3c8b2574c0b844cf476acbaa6acfbcfb39af7f6c0c2135297b3ce",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0093_839966.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0100_839971.json.gz",
+      "bytes": 78947,
+      "sha256": "f767766f56269cd6e9638358d5efa855f2b3086dd96a984afdcc6952cfbe76d8",
+      "upstream_hash": "f767766f56269cd6e9638358d5efa855f2b3086dd96a984afdcc6952cfbe76d8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0100_839971.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0103_839980.json.gz",
+      "bytes": 78978,
+      "sha256": "7c095786071fe8ac866c477d585bc13b56e9bf052a5212fccc679691a03fb49a",
+      "upstream_hash": "7c095786071fe8ac866c477d585bc13b56e9bf052a5212fccc679691a03fb49a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0103_839980.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0104_839982.json.gz",
+      "bytes": 78995,
+      "sha256": "a4f6eec547419355a2b2cf131acba936b0abd943e6663265b34eabc36e7f99ac",
+      "upstream_hash": "a4f6eec547419355a2b2cf131acba936b0abd943e6663265b34eabc36e7f99ac",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0104_839982.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0107_839992.json.gz",
+      "bytes": 79046,
+      "sha256": "74000f178b21539effe950ce1d43b738c3c42969987f9ccc0ed5c2937656bcaa",
+      "upstream_hash": "74000f178b21539effe950ce1d43b738c3c42969987f9ccc0ed5c2937656bcaa",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0107_839992.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0108_839984.json.gz",
+      "bytes": 78874,
+      "sha256": "d198c5bc5bd7c75320ff211b6e0aa3d189901a7fffc292d33800343ae7bfd9f6",
+      "upstream_hash": "d198c5bc5bd7c75320ff211b6e0aa3d189901a7fffc292d33800343ae7bfd9f6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0108_839984.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0113_839991.json.gz",
+      "bytes": 79468,
+      "sha256": "94f749d60660b74e32b207d983d56c39aac5fb4e2ace1eb159d902be890034b1",
+      "upstream_hash": "94f749d60660b74e32b207d983d56c39aac5fb4e2ace1eb159d902be890034b1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0113_839991.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0121_840013.json.gz",
+      "bytes": 79235,
+      "sha256": "5f93595569e30d5878f0af3395f1a0ea762bae200797e548473cdc2146e23ac7",
+      "upstream_hash": "5f93595569e30d5878f0af3395f1a0ea762bae200797e548473cdc2146e23ac7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0121_840013.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0122_840008.json.gz",
+      "bytes": 78976,
+      "sha256": "5a9f8a7eb1eb89d08276eb9c1d4d8420bc5a9b55908b5571710d701ca41db25f",
+      "upstream_hash": "5a9f8a7eb1eb89d08276eb9c1d4d8420bc5a9b55908b5571710d701ca41db25f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0122_840008.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0123_840023.json.gz",
+      "bytes": 79191,
+      "sha256": "1bb2c7d2c94194141e076704b53a08ead7f92e95c0d638129cacde6b381f5aa0",
+      "upstream_hash": "1bb2c7d2c94194141e076704b53a08ead7f92e95c0d638129cacde6b381f5aa0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0123_840023.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0124_840027.json.gz",
+      "bytes": 79088,
+      "sha256": "c740274631ae7e72c477da9ee5c4728bee26f272218c03bcae2de77eb7f4ba65",
+      "upstream_hash": "c740274631ae7e72c477da9ee5c4728bee26f272218c03bcae2de77eb7f4ba65",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0124_840027.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0126_840028.json.gz",
+      "bytes": 79072,
+      "sha256": "81eddba67ac9a9810ed48718dd68e824805710bf2e8dc28c2687ba67c3309127",
+      "upstream_hash": "81eddba67ac9a9810ed48718dd68e824805710bf2e8dc28c2687ba67c3309127",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0126_840028.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0134_840039.json.gz",
+      "bytes": 78177,
+      "sha256": "d1e52e38e9f52dbe2cdd3123df55a69a2c5ff345c416501616ea0bcf9af823c6",
+      "upstream_hash": "d1e52e38e9f52dbe2cdd3123df55a69a2c5ff345c416501616ea0bcf9af823c6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0134_840039.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0135_840032.json.gz",
+      "bytes": 79163,
+      "sha256": "4ba609ceb2ef90d598c6506ebc8e6efb5f0bd4879e8d56c0c6bcf28ed9448fc1",
+      "upstream_hash": "4ba609ceb2ef90d598c6506ebc8e6efb5f0bd4879e8d56c0c6bcf28ed9448fc1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0135_840032.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0141_840177.json.gz",
+      "bytes": 78839,
+      "sha256": "e10a131963436ee1d8873c3af112f15bd560372213ff242c519d71b17985a5b2",
+      "upstream_hash": "e10a131963436ee1d8873c3af112f15bd560372213ff242c519d71b17985a5b2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0141_840177.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0170_840084.json.gz",
+      "bytes": 78570,
+      "sha256": "5eff8f961ca0b6795877675827588a902af7b8e14207b361543b854e26321f85",
+      "upstream_hash": "5eff8f961ca0b6795877675827588a902af7b8e14207b361543b854e26321f85",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0170_840084.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0175_840149.json.gz",
+      "bytes": 78476,
+      "sha256": "dcadac6093813086e9fdfe487cff80227160da2ad2b216d2252813d7070a5531",
+      "upstream_hash": "dcadac6093813086e9fdfe487cff80227160da2ad2b216d2252813d7070a5531",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0175_840149.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0179_840114.json.gz",
+      "bytes": 78430,
+      "sha256": "7e4cb8fb5bbd923ebf3c7c7dafbf1a09301d08e32330d9c9b6cd19f026149774",
+      "upstream_hash": "7e4cb8fb5bbd923ebf3c7c7dafbf1a09301d08e32330d9c9b6cd19f026149774",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0179_840114.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0184_840116.json.gz",
+      "bytes": 79263,
+      "sha256": "ca6ed37f690f47b3c4b9b8edafec538fd17932f1ddec1c41ea66aa253b7baab3",
+      "upstream_hash": "ca6ed37f690f47b3c4b9b8edafec538fd17932f1ddec1c41ea66aa253b7baab3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0184_840116.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0185_840107.json.gz",
+      "bytes": 79127,
+      "sha256": "5af4f6f387292119498fb6244383a83409be655c38bc51d92e4030bf644e5ead",
+      "upstream_hash": "5af4f6f387292119498fb6244383a83409be655c38bc51d92e4030bf644e5ead",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0185_840107.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0191_840178.json.gz",
+      "bytes": 78363,
+      "sha256": "294e256a6e472e85f5c932d87f5eb103623192115b14f1d421b8b4c87332cf13",
+      "upstream_hash": "294e256a6e472e85f5c932d87f5eb103623192115b14f1d421b8b4c87332cf13",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0191_840178.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0196_840121.json.gz",
+      "bytes": 79190,
+      "sha256": "0fc1c9a8699603b156ff5d4f2f8c304a72f0016f4130bee624757c69630078cb",
+      "upstream_hash": "0fc1c9a8699603b156ff5d4f2f8c304a72f0016f4130bee624757c69630078cb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0196_840121.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0204_840158.json.gz",
+      "bytes": 78994,
+      "sha256": "f670e3fc1473ba9f875b7376bef4909db3ea21d1271ab9741ffa1cda4007e446",
+      "upstream_hash": "f670e3fc1473ba9f875b7376bef4909db3ea21d1271ab9741ffa1cda4007e446",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0204_840158.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0206_840163.json.gz",
+      "bytes": 78720,
+      "sha256": "0db9e299b1a6c7d7fa95876f1d48ef5b5777cef199fc9682574ba3089c9822e5",
+      "upstream_hash": "0db9e299b1a6c7d7fa95876f1d48ef5b5777cef199fc9682574ba3089c9822e5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0206_840163.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0207_840167.json.gz",
+      "bytes": 77315,
+      "sha256": "fec09ac809a8b9a6c32ffa01c2dbe233a26abb881fa08a09ad6dc54fed62362c",
+      "upstream_hash": "fec09ac809a8b9a6c32ffa01c2dbe233a26abb881fa08a09ad6dc54fed62362c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0207_840167.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0289_840757.json.gz",
+      "bytes": 79164,
+      "sha256": "5463c6634a6d4b1bcd5d93f736b1c492cb8327fdb11330bd7fbc29efee508eaa",
+      "upstream_hash": "5463c6634a6d4b1bcd5d93f736b1c492cb8327fdb11330bd7fbc29efee508eaa",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0289_840757.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0393_840188.json.gz",
+      "bytes": 79014,
+      "sha256": "4c1a68b28fe121b0ed14052e0e55285243fae4dab1d5f6902825aa6b174e5f22",
+      "upstream_hash": "4c1a68b28fe121b0ed14052e0e55285243fae4dab1d5f6902825aa6b174e5f22",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0393_840188.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0395_840187.json.gz",
+      "bytes": 78741,
+      "sha256": "0adc94bc93d504ab9759bd3042c2acfb2bbcbd0ed774419e87c140bb060b3eb0",
+      "upstream_hash": "0adc94bc93d504ab9759bd3042c2acfb2bbcbd0ed774419e87c140bb060b3eb0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0395_840187.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0399_840130.json.gz",
+      "bytes": 79143,
+      "sha256": "f65bce61d3324e34db19d272ede0421a00947276ecd02d029835affa03f39e0c",
+      "upstream_hash": "f65bce61d3324e34db19d272ede0421a00947276ecd02d029835affa03f39e0c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0399_840130.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0402_840115.json.gz",
+      "bytes": 78397,
+      "sha256": "b594502cf11e42c7d6363f6721b322b02d039fd2e6632d2a416608457dc84cba",
+      "upstream_hash": "b594502cf11e42c7d6363f6721b322b02d039fd2e6632d2a416608457dc84cba",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0402_840115.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0404_840155.json.gz",
+      "bytes": 78684,
+      "sha256": "c4a9b8e3406214ed43b32108b98b7b79f088c1f2354fdc40238a4cc1d5cab2d1",
+      "upstream_hash": "c4a9b8e3406214ed43b32108b98b7b79f088c1f2354fdc40238a4cc1d5cab2d1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0404_840155.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0405_840145.json.gz",
+      "bytes": 78860,
+      "sha256": "c7e3a4521bcd0ce9259a0ecb00336bdec3476bd95e27df5d025a8621d8f1133b",
+      "upstream_hash": "c7e3a4521bcd0ce9259a0ecb00336bdec3476bd95e27df5d025a8621d8f1133b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0405_840145.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0407_840140.json.gz",
+      "bytes": 77893,
+      "sha256": "bdd8fcfce40532158c8aade8abe16e302f02030f9e8a9436acc3c83368a5f87b",
+      "upstream_hash": "bdd8fcfce40532158c8aade8abe16e302f02030f9e8a9436acc3c83368a5f87b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0407_840140.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0408_840112.json.gz",
+      "bytes": 78912,
+      "sha256": "27a40118433dbb10ec6e717599f4321378e480c557d38adc53dc90ba5a4855ad",
+      "upstream_hash": "27a40118433dbb10ec6e717599f4321378e480c557d38adc53dc90ba5a4855ad",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0408_840112.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0415_840048.json.gz",
+      "bytes": 78177,
+      "sha256": "6b86b178379e37d369b3410ba229bf4256e8e9ab9f07bf0928e65e126a325ee2",
+      "upstream_hash": "6b86b178379e37d369b3410ba229bf4256e8e9ab9f07bf0928e65e126a325ee2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0415_840048.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0418_840024.json.gz",
+      "bytes": 78982,
+      "sha256": "63dd1fb9e8d1bd337fa6782b9add34a6837df61a424ba00d137c75cfaf029210",
+      "upstream_hash": "63dd1fb9e8d1bd337fa6782b9add34a6837df61a424ba00d137c75cfaf029210",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0418_840024.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0420_840007.json.gz",
+      "bytes": 79137,
+      "sha256": "3e06508f14a2a49b2d5618f5f068d9be87af9dac1a0af1963a9d35df6a70b6bc",
+      "upstream_hash": "3e06508f14a2a49b2d5618f5f068d9be87af9dac1a0af1963a9d35df6a70b6bc",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0420_840007.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0425_839987.json.gz",
+      "bytes": 78948,
+      "sha256": "4702b1d09c6833a4f4839e3f8e9c86ebcf44aa3a3e2b1b967043df725c9badb1",
+      "upstream_hash": "4702b1d09c6833a4f4839e3f8e9c86ebcf44aa3a3e2b1b967043df725c9badb1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0425_839987.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0433_839891.json.gz",
+      "bytes": 79076,
+      "sha256": "d1ec842c22bd0477654cd9de45bafa7709240758bfcf4415671fe75cb99d279c",
+      "upstream_hash": "d1ec842c22bd0477654cd9de45bafa7709240758bfcf4415671fe75cb99d279c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0433_839891.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/interior_0505_839970.json.gz",
+      "bytes": 77092,
+      "sha256": "ae8ef6465468fe33ca38a17209006bfdc0efaf12f48481e5bde3046348694a1d",
+      "upstream_hash": "ae8ef6465468fe33ca38a17209006bfdc0efaf12f48481e5bde3046348694a1d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/interior_0505_839970.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene01.json.gz",
+      "bytes": 91630,
+      "sha256": "4ed2e3d0853ba8dcf660359bf2905d41a3f7972fd845415a0d33d2ba3152a2a5",
+      "upstream_hash": "4ed2e3d0853ba8dcf660359bf2905d41a3f7972fd845415a0d33d2ba3152a2a5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene01.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene02.json.gz",
+      "bytes": 96439,
+      "sha256": "b83bf4baa4654e1143791414a7b293864fc400b7ab95ff11580ab6cc29fff993",
+      "upstream_hash": "b83bf4baa4654e1143791414a7b293864fc400b7ab95ff11580ab6cc29fff993",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene02.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene03.json.gz",
+      "bytes": 96183,
+      "sha256": "50bec0b67bcd0115cfa431439d1cf7387312c42c6e872ccc786e939bf3c76af0",
+      "upstream_hash": "50bec0b67bcd0115cfa431439d1cf7387312c42c6e872ccc786e939bf3c76af0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene03.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene04.json.gz",
+      "bytes": 94277,
+      "sha256": "56fce6fa15c29ca5122c9927f374a094172059b5984370b2da7509866fc39f0f",
+      "upstream_hash": "56fce6fa15c29ca5122c9927f374a094172059b5984370b2da7509866fc39f0f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene04.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene05.json.gz",
+      "bytes": 94265,
+      "sha256": "63432581eaef310e7b63822d24072adda19ffe620f7876bf29066071a2c6abc8",
+      "upstream_hash": "63432581eaef310e7b63822d24072adda19ffe620f7876bf29066071a2c6abc8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene05.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene06.json.gz",
+      "bytes": 93202,
+      "sha256": "0d5dc99cecbe9e324484f93fb03d75d342e1f5d5b92d60afcd37d3258de0c856",
+      "upstream_hash": "0d5dc99cecbe9e324484f93fb03d75d342e1f5d5b92d60afcd37d3258de0c856",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene06.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene07.json.gz",
+      "bytes": 95494,
+      "sha256": "f8df23fb8323df4166852ca6ed48d40b2191ddf4662bd44951f2c32e72a713b3",
+      "upstream_hash": "f8df23fb8323df4166852ca6ed48d40b2191ddf4662bd44951f2c32e72a713b3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene07.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene08.json.gz",
+      "bytes": 95545,
+      "sha256": "f81065844f8344caed16c1b8c73007e2d01f86eb81f543b6173778953d759abf",
+      "upstream_hash": "f81065844f8344caed16c1b8c73007e2d01f86eb81f543b6173778953d759abf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene08.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene09.json.gz",
+      "bytes": 95710,
+      "sha256": "2adf0cd30996a06327ab450f24ba5d47af2ec99a135fa9ea143ac0d8fff4a08f",
+      "upstream_hash": "2adf0cd30996a06327ab450f24ba5d47af2ec99a135fa9ea143ac0d8fff4a08f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene09.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene10.json.gz",
+      "bytes": 93241,
+      "sha256": "cc029b4d8277cfc0c1ef16787c88e11acff881a92ce38a6925e25d8e0f5b627d",
+      "upstream_hash": "cc029b4d8277cfc0c1ef16787c88e11acff881a92ce38a6925e25d8e0f5b627d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene10.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene11.json.gz",
+      "bytes": 90895,
+      "sha256": "a74905be1ee10ddb33bedf0fbda9285f2ec0bbfff19820d25721c513c6789e19",
+      "upstream_hash": "a74905be1ee10ddb33bedf0fbda9285f2ec0bbfff19820d25721c513c6789e19",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene11.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene12.json.gz",
+      "bytes": 91656,
+      "sha256": "1b69865259517d862ab5cc13848abb1fac15bed30a1d9b2b749f11c86053c8b4",
+      "upstream_hash": "1b69865259517d862ab5cc13848abb1fac15bed30a1d9b2b749f11c86053c8b4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene12.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene13.json.gz",
+      "bytes": 94760,
+      "sha256": "49dec33d57f0e1d177663088118e5d8f43eede44748232a5c939984bcf575567",
+      "upstream_hash": "49dec33d57f0e1d177663088118e5d8f43eede44748232a5c939984bcf575567",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene13.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene14.json.gz",
+      "bytes": 86103,
+      "sha256": "13dea66f1b6748f6a3babdfe269c8cb82587fe0dd3a5a1f49e2ce011a2ee1663",
+      "upstream_hash": "13dea66f1b6748f6a3babdfe269c8cb82587fe0dd3a5a1f49e2ce011a2ee1663",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene14.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene15.json.gz",
+      "bytes": 95479,
+      "sha256": "732ea71c41daa1d14ea84de2b6dbba8e427af29d9d865dba79e780b41b59d4ad",
+      "upstream_hash": "732ea71c41daa1d14ea84de2b6dbba8e427af29d9d865dba79e780b41b59d4ad",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene15.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene16.json.gz",
+      "bytes": 93932,
+      "sha256": "82d149198b4cc5f08af8289954d33fc296d582d4e0b27a8c02dc76095392c2e9",
+      "upstream_hash": "82d149198b4cc5f08af8289954d33fc296d582d4e0b27a8c02dc76095392c2e9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene16.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene17.json.gz",
+      "bytes": 88934,
+      "sha256": "7ed5796a83eda79ab9dee024f890d51416c88343b2587a60a40521d00d85f473",
+      "upstream_hash": "7ed5796a83eda79ab9dee024f890d51416c88343b2587a60a40521d00d85f473",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene17.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene18.json.gz",
+      "bytes": 93360,
+      "sha256": "22adee9b610284729be7cac10d0507d9985a76dc1cebcfcbb1563d57db68da95",
+      "upstream_hash": "22adee9b610284729be7cac10d0507d9985a76dc1cebcfcbb1563d57db68da95",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene18.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene19.json.gz",
+      "bytes": 91595,
+      "sha256": "94d782c79015ff233005eac136db9f3c3f97e9b0df6dc587a0521eb792226be5",
+      "upstream_hash": "94d782c79015ff233005eac136db9f3c3f97e9b0df6dc587a0521eb792226be5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene19.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene20.json.gz",
+      "bytes": 93208,
+      "sha256": "0cd6c1061c940f6d75000e7621300dbf1cc4bf9988eae475d394b02fa9e86b2c",
+      "upstream_hash": "0cd6c1061c940f6d75000e7621300dbf1cc4bf9988eae475d394b02fa9e86b2c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene20.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene21.json.gz",
+      "bytes": 93472,
+      "sha256": "7701eac24b6e5ebac7cb7677262c99cbdf8ed0a356dea5198c7722f3c121496c",
+      "upstream_hash": "7701eac24b6e5ebac7cb7677262c99cbdf8ed0a356dea5198c7722f3c121496c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene21.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene22.json.gz",
+      "bytes": 90360,
+      "sha256": "2b277be67c26b86043369feb6389268b0b0db3b9b35afded94cc19c6e5116f99",
+      "upstream_hash": "2b277be67c26b86043369feb6389268b0b0db3b9b35afded94cc19c6e5116f99",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene22.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene23.json.gz",
+      "bytes": 95421,
+      "sha256": "8023c8e146ef0946e9d37b92e3dbf894c0ac1c2a6106cf293dfc7b7fc9b33828",
+      "upstream_hash": "8023c8e146ef0946e9d37b92e3dbf894c0ac1c2a6106cf293dfc7b7fc9b33828",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene23.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene24.json.gz",
+      "bytes": 94964,
+      "sha256": "da5d14a38a2459adf05e63292dc87fb1ffc248a27b022873c4bf37c7ef6c3fde",
+      "upstream_hash": "da5d14a38a2459adf05e63292dc87fb1ffc248a27b022873c4bf37c7ef6c3fde",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene24.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene25.json.gz",
+      "bytes": 94920,
+      "sha256": "324e6789a7e9170de14036bcfd9181f923b9f2bcfa8e6177ae7f1c6542cd898f",
+      "upstream_hash": "324e6789a7e9170de14036bcfd9181f923b9f2bcfa8e6177ae7f1c6542cd898f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene25.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene26.json.gz",
+      "bytes": 95142,
+      "sha256": "9ad0b7a68bb9182e5012302df394f162e6162eed487af9eca7baa97d733c57b8",
+      "upstream_hash": "9ad0b7a68bb9182e5012302df394f162e6162eed487af9eca7baa97d733c57b8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene26.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene27.json.gz",
+      "bytes": 93110,
+      "sha256": "03a2dfe5585e17013eda2d79bfae4a58cea2fa756a7391f2ef981a4b890f0bdb",
+      "upstream_hash": "03a2dfe5585e17013eda2d79bfae4a58cea2fa756a7391f2ef981a4b890f0bdb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene27.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene28.json.gz",
+      "bytes": 91846,
+      "sha256": "06e91c82687fcd858c322e039ac5a957ed97e01ad1a202e569ceb974098ed4db",
+      "upstream_hash": "06e91c82687fcd858c322e039ac5a957ed97e01ad1a202e569ceb974098ed4db",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene28.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene29.json.gz",
+      "bytes": 91861,
+      "sha256": "ad1872166b17df5f25d7ffdc2f9fd2aede213214bf290ff55cf1c09bcabc3a9b",
+      "upstream_hash": "ad1872166b17df5f25d7ffdc2f9fd2aede213214bf290ff55cf1c09bcabc3a9b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene29.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene30.json.gz",
+      "bytes": 92927,
+      "sha256": "3c1d240a5b2d55658aba526d31d13ecf4ea07598e81c2fcb94b23576353b4b68",
+      "upstream_hash": "3c1d240a5b2d55658aba526d31d13ecf4ea07598e81c2fcb94b23576353b4b68",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene30.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene31.json.gz",
+      "bytes": 86894,
+      "sha256": "769455aafdeff548bbae5212b66f429d35ba6e9be299ef9ec77d8057aaf5b61e",
+      "upstream_hash": "769455aafdeff548bbae5212b66f429d35ba6e9be299ef9ec77d8057aaf5b61e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene31.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene32.json.gz",
+      "bytes": 78830,
+      "sha256": "23a9e4d666e9d554314dff16ed457b67070dd05d6ea294be9335f1f001ddc622",
+      "upstream_hash": "23a9e4d666e9d554314dff16ed457b67070dd05d6ea294be9335f1f001ddc622",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene32.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene33.json.gz",
+      "bytes": 94789,
+      "sha256": "67d02f9bd73a352b5deb87971e9b7ad6c3e02db8dcbce07cf9f7488ff662f3a2",
+      "upstream_hash": "67d02f9bd73a352b5deb87971e9b7ad6c3e02db8dcbce07cf9f7488ff662f3a2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene33.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene34.json.gz",
+      "bytes": 89291,
+      "sha256": "ea517b6d3c2c1c62a9f897fc89d0d67ace67b07a6367ad71c3d9ecc71f2a5704",
+      "upstream_hash": "ea517b6d3c2c1c62a9f897fc89d0d67ace67b07a6367ad71c3d9ecc71f2a5704",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene34.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene35.json.gz",
+      "bytes": 93319,
+      "sha256": "fa309556ddd62603bbc161f7875413edfc0675599a8526738cf5285107de6803",
+      "upstream_hash": "fa309556ddd62603bbc161f7875413edfc0675599a8526738cf5285107de6803",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene35.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene36.json.gz",
+      "bytes": 81730,
+      "sha256": "5776886fff5d0c60c1710a7c22bd436159dde71d2f4b57f8937b45d276218391",
+      "upstream_hash": "5776886fff5d0c60c1710a7c22bd436159dde71d2f4b57f8937b45d276218391",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene36.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene37.json.gz",
+      "bytes": 81533,
+      "sha256": "b5d84a11ca250ed760a977ec9bbb8db8b3e766ddafa8a12324e5423ac65bb5c4",
+      "upstream_hash": "b5d84a11ca250ed760a977ec9bbb8db8b3e766ddafa8a12324e5423ac65bb5c4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene37.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene38.json.gz",
+      "bytes": 92527,
+      "sha256": "edffc3df2b324cbf91fa409f3c88dd3ed5633a6d45f5c1e7a9efbd578c276820",
+      "upstream_hash": "edffc3df2b324cbf91fa409f3c88dd3ed5633a6d45f5c1e7a9efbd578c276820",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene38.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene39.json.gz",
+      "bytes": 82346,
+      "sha256": "b4cb4b36b07bebae8f7a6fab5998cecc5cd166b3638275a780e308e69d2fac68",
+      "upstream_hash": "b4cb4b36b07bebae8f7a6fab5998cecc5cd166b3638275a780e308e69d2fac68",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene39.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene40.json.gz",
+      "bytes": 94189,
+      "sha256": "912abf2e75d8e7051e1e914021984a0a55bd080086e527dd2d8556d67a51aa4e",
+      "upstream_hash": "912abf2e75d8e7051e1e914021984a0a55bd080086e527dd2d8556d67a51aa4e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene40.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene41.json.gz",
+      "bytes": 91621,
+      "sha256": "709ade9c5dc4368b91aa215d5dfb90256f732f6de33a0503ce6f9f1a4cd246ad",
+      "upstream_hash": "709ade9c5dc4368b91aa215d5dfb90256f732f6de33a0503ce6f9f1a4cd246ad",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene41.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene42.json.gz",
+      "bytes": 94321,
+      "sha256": "eeb964fc34823fbd1ecdf9a3968dca553665c820e3d2d66e5090b7a741eba5bf",
+      "upstream_hash": "eeb964fc34823fbd1ecdf9a3968dca553665c820e3d2d66e5090b7a741eba5bf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene42.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene43.json.gz",
+      "bytes": 92266,
+      "sha256": "51910a038741f72a1e761a21c7a64db49567d24ed3db2c08c764fb6c51cb79f1",
+      "upstream_hash": "51910a038741f72a1e761a21c7a64db49567d24ed3db2c08c764fb6c51cb79f1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene43.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene44.json.gz",
+      "bytes": 97390,
+      "sha256": "3751e435898cada849f770c76b18f6a667e1624c6529e001824954958b212141",
+      "upstream_hash": "3751e435898cada849f770c76b18f6a667e1624c6529e001824954958b212141",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene44.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene45.json.gz",
+      "bytes": 84890,
+      "sha256": "02d799c0f9635e4f0f70a84f9d6dc9dceba1bde8b4127373dbca01a36de262e1",
+      "upstream_hash": "02d799c0f9635e4f0f70a84f9d6dc9dceba1bde8b4127373dbca01a36de262e1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene45.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene46.json.gz",
+      "bytes": 92456,
+      "sha256": "358589c398b623014befcd3c3a15ad0fc6861f5babd89a061ff1f4d6a49b794d",
+      "upstream_hash": "358589c398b623014befcd3c3a15ad0fc6861f5babd89a061ff1f4d6a49b794d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene46.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene47.json.gz",
+      "bytes": 96140,
+      "sha256": "2ebbe847957f972bf1313d8ff2df3b702dec550f046bf1e77e98ee47507a197e",
+      "upstream_hash": "2ebbe847957f972bf1313d8ff2df3b702dec550f046bf1e77e98ee47507a197e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene47.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene48.json.gz",
+      "bytes": 87742,
+      "sha256": "f53a2e8d87e00b02f5354fb2f0bdd634607ec7ea84313b2644f4b786491b735d",
+      "upstream_hash": "f53a2e8d87e00b02f5354fb2f0bdd634607ec7ea84313b2644f4b786491b735d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene48.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene49.json.gz",
+      "bytes": 91417,
+      "sha256": "9c79416e5fd337395de4e0ddebadb11cb661508b4279b986576ae07206dc8b84",
+      "upstream_hash": "9c79416e5fd337395de4e0ddebadb11cb661508b4279b986576ae07206dc8b84",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene49.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene50.json.gz",
+      "bytes": 92856,
+      "sha256": "a9730349595d68cd38e7f69e4e7f6ebac8b0a2274095cebe9a489531c63b2053",
+      "upstream_hash": "a9730349595d68cd38e7f69e4e7f6ebac8b0a2274095cebe9a489531c63b2053",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene50.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene51.json.gz",
+      "bytes": 93887,
+      "sha256": "fd980d00f97ba9971b5cc2c5fea18b0c1627e76ef8e8143c3bc102def051aa07",
+      "upstream_hash": "fd980d00f97ba9971b5cc2c5fea18b0c1627e76ef8e8143c3bc102def051aa07",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene51.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene52.json.gz",
+      "bytes": 82023,
+      "sha256": "752cc08eac7b79683aa809965289be890e54dd1317d2e6c7548ba8ba8b52dbca",
+      "upstream_hash": "752cc08eac7b79683aa809965289be890e54dd1317d2e6c7548ba8ba8b52dbca",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene52.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene53.json.gz",
+      "bytes": 93002,
+      "sha256": "81bc2769000a07093a441fe541f02c4e71dcc896abe408f638082ba74c4a5f0b",
+      "upstream_hash": "81bc2769000a07093a441fe541f02c4e71dcc896abe408f638082ba74c4a5f0b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene53.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene54.json.gz",
+      "bytes": 86920,
+      "sha256": "66e46c2c495ef488dbdd4a0d0155e7af6efb5573861a0ba4f83ea578f41bc929",
+      "upstream_hash": "66e46c2c495ef488dbdd4a0d0155e7af6efb5573861a0ba4f83ea578f41bc929",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene54.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/content/scene55.json.gz",
+      "bytes": 83082,
+      "sha256": "63c814f236c971f57bbdd53c218b142244580dc9b19938ae9f163822bccdb89c",
+      "upstream_hash": "63c814f236c971f57bbdd53c218b142244580dc9b19938ae9f163822bccdb89c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/content/scene55.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/train/train.json.gz",
+      "bytes": 53,
+      "sha256": "d0b3680abf0241c8d58d07a2dc9da85b578aba2e3a27d38bdd2c7b9d83406877",
+      "upstream_hash": "d0b3680abf0241c8d58d07a2dc9da85b578aba2e3a27d38bdd2c7b9d83406877",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/train/train.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0516_840045.json.gz",
+      "bytes": 8470,
+      "sha256": "1e321789d721afc0bae5fad0411b84f0543b82951761bf72dcb2aa2c26441ac7",
+      "upstream_hash": "1e321789d721afc0bae5fad0411b84f0543b82951761bf72dcb2aa2c26441ac7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0516_840045.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0518_839988.json.gz",
+      "bytes": 8471,
+      "sha256": "ed71fbce90c543906965585df329247d99f0e64cb77d85b707826d40ab0efdf0",
+      "upstream_hash": "ed71fbce90c543906965585df329247d99f0e64cb77d85b707826d40ab0efdf0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0518_839988.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0633_840123.json.gz",
+      "bytes": 8474,
+      "sha256": "c1bcfbbd660ac5eae71222615d4399d7da4e51f92e9584a71275b09c3a2960bd",
+      "upstream_hash": "c1bcfbbd660ac5eae71222615d4399d7da4e51f92e9584a71275b09c3a2960bd",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0633_840123.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0635_839968.json.gz",
+      "bytes": 8506,
+      "sha256": "19ac2c63dd91f8a0c1e3112b8251cf1645f39fde15d99367bc4bd1b73bdbfe01",
+      "upstream_hash": "19ac2c63dd91f8a0c1e3112b8251cf1645f39fde15d99367bc4bd1b73bdbfe01",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0635_839968.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0637_841444.json.gz",
+      "bytes": 8465,
+      "sha256": "910d85e1e1c8c693c42031e22d2768c5c2eef6ddc1f451e9843febc09b663785",
+      "upstream_hash": "910d85e1e1c8c693c42031e22d2768c5c2eef6ddc1f451e9843febc09b663785",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0637_841444.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0651_841463.json.gz",
+      "bytes": 8431,
+      "sha256": "6530146bfcb284266433d34b1835dc94a95f653322f839f8a455c2c6ff56daaa",
+      "upstream_hash": "6530146bfcb284266433d34b1835dc94a95f653322f839f8a455c2c6ff56daaa",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0651_841463.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0695_841526.json.gz",
+      "bytes": 8510,
+      "sha256": "73d104bfb2ce4bc37a955eb48b1398f854b2173646ebea8639d258255f9bd466",
+      "upstream_hash": "73d104bfb2ce4bc37a955eb48b1398f854b2173646ebea8639d258255f9bd466",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0695_841526.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0733_841584.json.gz",
+      "bytes": 8473,
+      "sha256": "686f6d12b8ceb9b30f7491f356530a2d5b94556d4ed93b839a7f329f17213791",
+      "upstream_hash": "686f6d12b8ceb9b30f7491f356530a2d5b94556d4ed93b839a7f329f17213791",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0733_841584.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/interior_0759_839979.json.gz",
+      "bytes": 8468,
+      "sha256": "fb472e93790787f3f658ea4cced23b35e3103f9c7c13c9c85678eb73067dfd40",
+      "upstream_hash": "fb472e93790787f3f658ea4cced23b35e3103f9c7c13c9c85678eb73067dfd40",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/interior_0759_839979.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene56.json.gz",
+      "bytes": 10026,
+      "sha256": "6dd17b573282a436eb147d4e8cc26a2d4efd3bd2db2d70f088c4146b76cbbb0a",
+      "upstream_hash": "6dd17b573282a436eb147d4e8cc26a2d4efd3bd2db2d70f088c4146b76cbbb0a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene56.json.gz",
+      "reused": true
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene57.json.gz",
+      "bytes": 10000,
+      "sha256": "e8ffc65e23d121d443ec7159c7b53d1c97f61523f1457d94ca604e6a792fdfcf",
+      "upstream_hash": "e8ffc65e23d121d443ec7159c7b53d1c97f61523f1457d94ca604e6a792fdfcf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene57.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene58.json.gz",
+      "bytes": 10239,
+      "sha256": "5eae31ad93c00a2e15bd2c0a6ea5fe5f96800fccd0b7d767a5c1aa5f8cf8a634",
+      "upstream_hash": "5eae31ad93c00a2e15bd2c0a6ea5fe5f96800fccd0b7d767a5c1aa5f8cf8a634",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene58.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene59.json.gz",
+      "bytes": 9726,
+      "sha256": "9a884853b605a573e34934c49a48036124c1c9aefcf9799628f4c3e40dc6879d",
+      "upstream_hash": "9a884853b605a573e34934c49a48036124c1c9aefcf9799628f4c3e40dc6879d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene59.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene60.json.gz",
+      "bytes": 10126,
+      "sha256": "5bcb5249007a1020f84ccb27b1efbade700079928424b6d4a08c6b1fbcfb187f",
+      "upstream_hash": "5bcb5249007a1020f84ccb27b1efbade700079928424b6d4a08c6b1fbcfb187f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene60.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene61.json.gz",
+      "bytes": 9684,
+      "sha256": "4c9084d90b8d043079f5a12f36caeccaa11e6c8cedfb368740544f7dcf776f3e",
+      "upstream_hash": "4c9084d90b8d043079f5a12f36caeccaa11e6c8cedfb368740544f7dcf776f3e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene61.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene62.json.gz",
+      "bytes": 9799,
+      "sha256": "0d8e3caaf577303d6ae340fd3f62e3b21fb06e54c535a0fb59975a1e33f2e80b",
+      "upstream_hash": "0d8e3caaf577303d6ae340fd3f62e3b21fb06e54c535a0fb59975a1e33f2e80b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene62.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene63.json.gz",
+      "bytes": 8933,
+      "sha256": "9d93732d83d6bd3fce9901ef29451c971a47e59a51fb17d27220f81b60c7e7ee",
+      "upstream_hash": "9d93732d83d6bd3fce9901ef29451c971a47e59a51fb17d27220f81b60c7e7ee",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene63.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene64.json.gz",
+      "bytes": 9431,
+      "sha256": "3c93b11b5d6dd896b93f1f48eec31f07cc04ff0fbe8776df0b772de8e4671a92",
+      "upstream_hash": "3c93b11b5d6dd896b93f1f48eec31f07cc04ff0fbe8776df0b772de8e4671a92",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene64.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/content/scene65.json.gz",
+      "bytes": 9277,
+      "sha256": "0b1ede56fbddd2be11b16653176a5e6700c1781c6b8ee2e8ecbabcffc177ca7c",
+      "upstream_hash": "0b1ede56fbddd2be11b16653176a5e6700c1781c6b8ee2e8ecbabcffc177ca7c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/content/scene65.json.gz",
+      "reused": false
+    },
+    {
+      "path": "episodes/imagenav/val/val.json.gz",
+      "bytes": 51,
+      "sha256": "2f0498b0dd5a7d4f3f49b25d206ae763b70a89006f9302a099963536b4bd3270",
+      "upstream_hash": "2f0498b0dd5a7d4f3f49b25d206ae763b70a89006f9302a099963536b4bd3270",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/episodes/imagenav/val/val.json.gz",
+      "reused": true
+    },
+    {
+      "path": "train.scene_dataset_config.json",
+      "bytes": 7576,
+      "sha256": "3e0b910fd70a490155e72102fdf7c7e854e304245e88f49fdd353fbc41d1c1bb",
+      "upstream_hash": "b54192e8e6bf7e68972fc144551a444acf9c7755",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train.scene_dataset_config.json",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0007_840137/interior_0007_840137.gs.ply",
+      "bytes": 347726548,
+      "sha256": "2624221fadb0cdf84041680853dc0549076c57ab20b12cab4bc2e85019a01baa",
+      "upstream_hash": "2624221fadb0cdf84041680853dc0549076c57ab20b12cab4bc2e85019a01baa",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0007_840137/interior_0007_840137.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0007_840137/interior_0007_840137.navmesh",
+      "bytes": 38832,
+      "sha256": "25f1008e50576f40726a14b263d3d16421c63d42fdc47b8d49d5a1e551d392ae",
+      "upstream_hash": "25f1008e50576f40726a14b263d3d16421c63d42fdc47b8d49d5a1e551d392ae",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0007_840137/interior_0007_840137.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0022_840117/interior_0022_840117.gs.ply",
+      "bytes": 182005259,
+      "sha256": "cd9566da7436fe595dad818f8c5ae390cb26492877217d2e76c515e4fb078a89",
+      "upstream_hash": "cd9566da7436fe595dad818f8c5ae390cb26492877217d2e76c515e4fb078a89",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0022_840117/interior_0022_840117.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0022_840117/interior_0022_840117.navmesh",
+      "bytes": 21872,
+      "sha256": "36f594a6e92e20e392be34b957d2a19ed0e01718c8d3e735aba24de7ed37935e",
+      "upstream_hash": "36f594a6e92e20e392be34b957d2a19ed0e01718c8d3e735aba24de7ed37935e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0022_840117/interior_0022_840117.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0032_839877/interior_0032_839877.gs.ply",
+      "bytes": 292648724,
+      "sha256": "d8e4210d5d1abdf954b54c65ad8e633769f90e5a088d2eb0d5e844f9507c58ed",
+      "upstream_hash": "d8e4210d5d1abdf954b54c65ad8e633769f90e5a088d2eb0d5e844f9507c58ed",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0032_839877/interior_0032_839877.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0032_839877/interior_0032_839877.navmesh",
+      "bytes": 29136,
+      "sha256": "0e5308825a79db5dd908e31dbb6235efc46e896f6a27fe450b4e488404acee76",
+      "upstream_hash": "0e5308825a79db5dd908e31dbb6235efc46e896f6a27fe450b4e488404acee76",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0032_839877/interior_0032_839877.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0034_839886/interior_0034_839886.gs.ply",
+      "bytes": 204928643,
+      "sha256": "c2536fd191f747f3114b059a7af9ef5fe340c0f5bb0061cd3bc333e68d4e8dc7",
+      "upstream_hash": "c2536fd191f747f3114b059a7af9ef5fe340c0f5bb0061cd3bc333e68d4e8dc7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0034_839886/interior_0034_839886.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0034_839886/interior_0034_839886.navmesh",
+      "bytes": 32740,
+      "sha256": "6271b30de650ec556b67f9d1e4a3a94afaded6d67460a8627348233103a40ab1",
+      "upstream_hash": "6271b30de650ec556b67f9d1e4a3a94afaded6d67460a8627348233103a40ab1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0034_839886/interior_0034_839886.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0036_839878/interior_0036_839878.gs.ply",
+      "bytes": 276411916,
+      "sha256": "92c0328af4739a966492cc4d1fd61fe7e3cc53d4c9e7631739e630b946d6df51",
+      "upstream_hash": "92c0328af4739a966492cc4d1fd61fe7e3cc53d4c9e7631739e630b946d6df51",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0036_839878/interior_0036_839878.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0036_839878/interior_0036_839878.navmesh",
+      "bytes": 27984,
+      "sha256": "a965a4130f45bd581e790afbcc449db51df086c6e31a0c8711e0b0a71bc8679e",
+      "upstream_hash": "a965a4130f45bd581e790afbcc449db51df086c6e31a0c8711e0b0a71bc8679e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0036_839878/interior_0036_839878.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0039_839888/interior_0039_839888.gs.ply",
+      "bytes": 220244627,
+      "sha256": "53efd71272bc57a347f2946117d86cf43ab4da57c70262678799744294eb762e",
+      "upstream_hash": "53efd71272bc57a347f2946117d86cf43ab4da57c70262678799744294eb762e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0039_839888/interior_0039_839888.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0039_839888/interior_0039_839888.navmesh",
+      "bytes": 21952,
+      "sha256": "b8d8b29f1c334b8065512eb89c700722c4f6588c47c31a6027395c6f7aa6e5b9",
+      "upstream_hash": "b8d8b29f1c334b8065512eb89c700722c4f6588c47c31a6027395c6f7aa6e5b9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0039_839888/interior_0039_839888.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0040_839882/interior_0040_839882.gs.ply",
+      "bytes": 248193980,
+      "sha256": "cc547854c3d8ab16a8714d40f745227933cd4cb2be72de62580bfff7c1b11d73",
+      "upstream_hash": "cc547854c3d8ab16a8714d40f745227933cd4cb2be72de62580bfff7c1b11d73",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0040_839882/interior_0040_839882.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0040_839882/interior_0040_839882.navmesh",
+      "bytes": 36192,
+      "sha256": "d13512f34f59fc224ccd1c19b7bb537e0993b49fa82ae544327984cfba0dc1a7",
+      "upstream_hash": "d13512f34f59fc224ccd1c19b7bb537e0993b49fa82ae544327984cfba0dc1a7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0040_839882/interior_0040_839882.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0042_839881/interior_0042_839881.gs.ply",
+      "bytes": 118179235,
+      "sha256": "66b7f4b6078b0ec2d0c5c7f21f1b81db75ae2894877a9a2a2aa3fc35ce0cb427",
+      "upstream_hash": "66b7f4b6078b0ec2d0c5c7f21f1b81db75ae2894877a9a2a2aa3fc35ce0cb427",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0042_839881/interior_0042_839881.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0042_839881/interior_0042_839881.navmesh",
+      "bytes": 37852,
+      "sha256": "91b60e411c14d1d57990ed3468dc2ef02bf3ae5fc1582294fc4bd7c9401ab3ba",
+      "upstream_hash": "91b60e411c14d1d57990ed3468dc2ef02bf3ae5fc1582294fc4bd7c9401ab3ba",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0042_839881/interior_0042_839881.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0044_839926/interior_0044_839926.gs.ply",
+      "bytes": 406428148,
+      "sha256": "986dd9f8ca23acd4a6ac042ab19371c87aaa6d20f8827959d5348eec757587a9",
+      "upstream_hash": "986dd9f8ca23acd4a6ac042ab19371c87aaa6d20f8827959d5348eec757587a9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0044_839926/interior_0044_839926.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0044_839926/interior_0044_839926.navmesh",
+      "bytes": 45556,
+      "sha256": "df2f95c278543e1f960e1ae2197cfcd40a94589e59fe4c7b6159ca2051356b20",
+      "upstream_hash": "df2f95c278543e1f960e1ae2197cfcd40a94589e59fe4c7b6159ca2051356b20",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0044_839926/interior_0044_839926.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0045_839925/interior_0045_839925.gs.ply",
+      "bytes": 273142284,
+      "sha256": "1f300ce421c1cee26c9be6d9893768fe9dd16342405712bb1217182fcc7ce069",
+      "upstream_hash": "1f300ce421c1cee26c9be6d9893768fe9dd16342405712bb1217182fcc7ce069",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0045_839925/interior_0045_839925.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0045_839925/interior_0045_839925.navmesh",
+      "bytes": 24940,
+      "sha256": "aafaa169a6014f1d6548a819bd0d1efcc120ebf8d750ebff0c4570c104d5086e",
+      "upstream_hash": "aafaa169a6014f1d6548a819bd0d1efcc120ebf8d750ebff0c4570c104d5086e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0045_839925/interior_0045_839925.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0047_839892/interior_0047_839892.gs.ply",
+      "bytes": 84948475,
+      "sha256": "17b01e67096d5d6128604c0337ec7852554940352ccbea5d8db1b23c3a9a5d6e",
+      "upstream_hash": "17b01e67096d5d6128604c0337ec7852554940352ccbea5d8db1b23c3a9a5d6e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0047_839892/interior_0047_839892.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0047_839892/interior_0047_839892.navmesh",
+      "bytes": 40620,
+      "sha256": "cc0b1266bd8641f3bf20b169e29f073dc05729a9485a4f3b3428f1c5cc846996",
+      "upstream_hash": "cc0b1266bd8641f3bf20b169e29f073dc05729a9485a4f3b3428f1c5cc846996",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0047_839892/interior_0047_839892.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0048_839893/interior_0048_839893.gs.ply",
+      "bytes": 249881124,
+      "sha256": "fc9255b1f417a962dc43b65cd2c0c2980e2f7073d98c3fd9075dd87f2cb1b2ac",
+      "upstream_hash": "fc9255b1f417a962dc43b65cd2c0c2980e2f7073d98c3fd9075dd87f2cb1b2ac",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0048_839893/interior_0048_839893.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0048_839893/interior_0048_839893.navmesh",
+      "bytes": 80516,
+      "sha256": "f10752b96b283841b9f8657f5cc13ccf546baa0dc3ef8fc72175453aed30fde1",
+      "upstream_hash": "f10752b96b283841b9f8657f5cc13ccf546baa0dc3ef8fc72175453aed30fde1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0048_839893/interior_0048_839893.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0049_839890/interior_0049_839890.gs.ply",
+      "bytes": 317104748,
+      "sha256": "023854564ea65b440257efbdbb2882e431df5c89eb731c1c97b47e1e199d55d0",
+      "upstream_hash": "023854564ea65b440257efbdbb2882e431df5c89eb731c1c97b47e1e199d55d0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0049_839890/interior_0049_839890.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0049_839890/interior_0049_839890.navmesh",
+      "bytes": 19744,
+      "sha256": "764c6a7f5a1212eebdad03506401c89228971b5b383e2fbf662d1aa073a1c8e5",
+      "upstream_hash": "764c6a7f5a1212eebdad03506401c89228971b5b383e2fbf662d1aa073a1c8e5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0049_839890/interior_0049_839890.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0086_839945/interior_0086_839945.gs.ply",
+      "bytes": 231160595,
+      "sha256": "727134175a57474383294c7a7d01526f03e9b06fefc82db264e4985f4dbc737a",
+      "upstream_hash": "727134175a57474383294c7a7d01526f03e9b06fefc82db264e4985f4dbc737a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0086_839945/interior_0086_839945.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0086_839945/interior_0086_839945.navmesh",
+      "bytes": 26244,
+      "sha256": "5d00709fe126bc5809e357e3850d4fd85f4871e7fc7cbf3ba058d7f992143fb8",
+      "upstream_hash": "5d00709fe126bc5809e357e3850d4fd85f4871e7fc7cbf3ba058d7f992143fb8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0086_839945/interior_0086_839945.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0088_839961/interior_0088_839961.gs.ply",
+      "bytes": 160521019,
+      "sha256": "618f939ddc719d548c23c61029c2ee38611a38c6e5b72c23180bab5e6b3e69d5",
+      "upstream_hash": "618f939ddc719d548c23c61029c2ee38611a38c6e5b72c23180bab5e6b3e69d5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0088_839961/interior_0088_839961.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0088_839961/interior_0088_839961.navmesh",
+      "bytes": 24052,
+      "sha256": "a8dda2e5494e30a485ac338be3abde0c09cca8eebcb8fdcc3e3135f82ea6b5bf",
+      "upstream_hash": "a8dda2e5494e30a485ac338be3abde0c09cca8eebcb8fdcc3e3135f82ea6b5bf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0088_839961/interior_0088_839961.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0093_839966/interior_0093_839966.gs.ply",
+      "bytes": 108900315,
+      "sha256": "ecf5809619ca4614776b03e1c7fa156dd692fc94b319f7161e4f18878e9c6eac",
+      "upstream_hash": "ecf5809619ca4614776b03e1c7fa156dd692fc94b319f7161e4f18878e9c6eac",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0093_839966/interior_0093_839966.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0093_839966/interior_0093_839966.navmesh",
+      "bytes": 8684,
+      "sha256": "1e8866274fc68838d414e8d712f112c478268da56cb9ae863f9a498b0c15508d",
+      "upstream_hash": "1e8866274fc68838d414e8d712f112c478268da56cb9ae863f9a498b0c15508d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0093_839966/interior_0093_839966.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0100_839971/interior_0100_839971.gs.ply",
+      "bytes": 248758924,
+      "sha256": "a0802a04a7ef0648ef49a50bff29850231c442f5a39b0c2ee047f107bb1d55f3",
+      "upstream_hash": "a0802a04a7ef0648ef49a50bff29850231c442f5a39b0c2ee047f107bb1d55f3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0100_839971/interior_0100_839971.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0100_839971/interior_0100_839971.navmesh",
+      "bytes": 12008,
+      "sha256": "19a46bc973c41c97ce01a6614e9e397ea0a69b20982d82f4f344976ed281861d",
+      "upstream_hash": "19a46bc973c41c97ce01a6614e9e397ea0a69b20982d82f4f344976ed281861d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0100_839971/interior_0100_839971.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0103_839980/interior_0103_839980.gs.ply",
+      "bytes": 393228844,
+      "sha256": "477587b73f0b85d66710e2b5887a50ddb51c833b088f72f98b7b03a04fb0059e",
+      "upstream_hash": "477587b73f0b85d66710e2b5887a50ddb51c833b088f72f98b7b03a04fb0059e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0103_839980/interior_0103_839980.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0103_839980/interior_0103_839980.navmesh",
+      "bytes": 28128,
+      "sha256": "3f0fae228922a0b21d856d16d5cff5d0a84b33b6ccf50673bc7ba362db2566ee",
+      "upstream_hash": "3f0fae228922a0b21d856d16d5cff5d0a84b33b6ccf50673bc7ba362db2566ee",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0103_839980/interior_0103_839980.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0104_839982/interior_0104_839982.gs.ply",
+      "bytes": 279038980,
+      "sha256": "69b0b08e3e2e489fe5ae5623476c8a1a95f997ac45560462acb05d5ef0eeec90",
+      "upstream_hash": "69b0b08e3e2e489fe5ae5623476c8a1a95f997ac45560462acb05d5ef0eeec90",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0104_839982/interior_0104_839982.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0104_839982/interior_0104_839982.navmesh",
+      "bytes": 32028,
+      "sha256": "d0c612885b1aad8b4461a1e11cba26e75415d6dd6fd192fc7fcbe54c870e0f93",
+      "upstream_hash": "d0c612885b1aad8b4461a1e11cba26e75415d6dd6fd192fc7fcbe54c870e0f93",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0104_839982/interior_0104_839982.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0107_839992/interior_0107_839992.gs.ply",
+      "bytes": 165228307,
+      "sha256": "a4c02e11680a4eee9a1547047af8d5ec11afef270cef96f0376e3370b86e4ab3",
+      "upstream_hash": "a4c02e11680a4eee9a1547047af8d5ec11afef270cef96f0376e3370b86e4ab3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0107_839992/interior_0107_839992.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0107_839992/interior_0107_839992.navmesh",
+      "bytes": 14908,
+      "sha256": "0443a9736773a0136f0abfe74996237a2e5b5ba17e10a799c293bffc04e505f3",
+      "upstream_hash": "0443a9736773a0136f0abfe74996237a2e5b5ba17e10a799c293bffc04e505f3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0107_839992/interior_0107_839992.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0108_839984/interior_0108_839984.gs.ply",
+      "bytes": 99581219,
+      "sha256": "7c4e4d72a2eab1dc18ee8565bdcda929422c90c9be12d3bb28a3a997373034d1",
+      "upstream_hash": "7c4e4d72a2eab1dc18ee8565bdcda929422c90c9be12d3bb28a3a997373034d1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0108_839984/interior_0108_839984.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0108_839984/interior_0108_839984.navmesh",
+      "bytes": 28620,
+      "sha256": "55a640aabf83d3c89f88b5fe745dd105cba77e5c0a202188e867de436c6ed013",
+      "upstream_hash": "55a640aabf83d3c89f88b5fe745dd105cba77e5c0a202188e867de436c6ed013",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0108_839984/interior_0108_839984.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0113_839991/interior_0113_839991.gs.ply",
+      "bytes": 257291860,
+      "sha256": "d45d5d39919167682bacc936202f950cdb6fe5f8ac367af122b89f5306418a9e",
+      "upstream_hash": "d45d5d39919167682bacc936202f950cdb6fe5f8ac367af122b89f5306418a9e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0113_839991/interior_0113_839991.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0113_839991/interior_0113_839991.navmesh",
+      "bytes": 23768,
+      "sha256": "73111c61aa9349780d616fd2d97b5632dcf3b7491ae96dfca875b96d703bfdd1",
+      "upstream_hash": "73111c61aa9349780d616fd2d97b5632dcf3b7491ae96dfca875b96d703bfdd1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0113_839991/interior_0113_839991.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0121_840013/interior_0121_840013.gs.ply",
+      "bytes": 116011219,
+      "sha256": "9549401f0be3aa38bda9e69d452db832ac2e45be105093d7f9510f46068a0b9a",
+      "upstream_hash": "9549401f0be3aa38bda9e69d452db832ac2e45be105093d7f9510f46068a0b9a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0121_840013/interior_0121_840013.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0121_840013/interior_0121_840013.navmesh",
+      "bytes": 15316,
+      "sha256": "eb4f53348b730a5cc060f5b2430d50353b1ebae919675dc74606cf954df8cef5",
+      "upstream_hash": "eb4f53348b730a5cc060f5b2430d50353b1ebae919675dc74606cf954df8cef5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0121_840013/interior_0121_840013.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0122_840008/interior_0122_840008.gs.ply",
+      "bytes": 338554764,
+      "sha256": "8dce0b485fe6e2d508141e26f5b256fed0e3292a0d2c54ec665e3e0593794b9f",
+      "upstream_hash": "8dce0b485fe6e2d508141e26f5b256fed0e3292a0d2c54ec665e3e0593794b9f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0122_840008/interior_0122_840008.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0122_840008/interior_0122_840008.navmesh",
+      "bytes": 28160,
+      "sha256": "8921ffb8377dbf371d1a53f0dd898c60a5aeee6d1b2197d6931a299d5656fb90",
+      "upstream_hash": "8921ffb8377dbf371d1a53f0dd898c60a5aeee6d1b2197d6931a299d5656fb90",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0122_840008/interior_0122_840008.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0123_840023/interior_0123_840023.gs.ply",
+      "bytes": 239318555,
+      "sha256": "a715e9f0703ceb951db5c12f79be6ca6fd24200bca5711a4af07af8a5de623fe",
+      "upstream_hash": "a715e9f0703ceb951db5c12f79be6ca6fd24200bca5711a4af07af8a5de623fe",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0123_840023/interior_0123_840023.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0123_840023/interior_0123_840023.navmesh",
+      "bytes": 21400,
+      "sha256": "569351a445d1f184da573ae78998c745d6279b49ca81b3b998076ca5cf1c726c",
+      "upstream_hash": "569351a445d1f184da573ae78998c745d6279b49ca81b3b998076ca5cf1c726c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0123_840023/interior_0123_840023.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0124_840027/interior_0124_840027.gs.ply",
+      "bytes": 229310267,
+      "sha256": "ed6391f73e4008aeeec84ff6c12ca2cb3e2e43873e11a4e60a080b0ec255db3b",
+      "upstream_hash": "ed6391f73e4008aeeec84ff6c12ca2cb3e2e43873e11a4e60a080b0ec255db3b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0124_840027/interior_0124_840027.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0124_840027/interior_0124_840027.navmesh",
+      "bytes": 33740,
+      "sha256": "6943423f5f3b02d79c44921c2d02a469bfb6c8f5855cb3c981e95caa0bfacfda",
+      "upstream_hash": "6943423f5f3b02d79c44921c2d02a469bfb6c8f5855cb3c981e95caa0bfacfda",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0124_840027/interior_0124_840027.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0126_840028/interior_0126_840028.gs.ply",
+      "bytes": 401567348,
+      "sha256": "86473b70afeb2c05f5fbc824f8e8222809af9fc1aadeb23f22e02c13b5c284a5",
+      "upstream_hash": "86473b70afeb2c05f5fbc824f8e8222809af9fc1aadeb23f22e02c13b5c284a5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0126_840028/interior_0126_840028.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0126_840028/interior_0126_840028.navmesh",
+      "bytes": 39004,
+      "sha256": "e36742c6526950d7d156508bebbb82a1c483cf6350c91fb4355c5f57935427e7",
+      "upstream_hash": "e36742c6526950d7d156508bebbb82a1c483cf6350c91fb4355c5f57935427e7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0126_840028/interior_0126_840028.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0134_840039/interior_0134_840039.gs.ply",
+      "bytes": 501576820,
+      "sha256": "4ee23108d232277db1f141f0b61c056b03064175917a64b13726b20a4877e4c6",
+      "upstream_hash": "4ee23108d232277db1f141f0b61c056b03064175917a64b13726b20a4877e4c6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0134_840039/interior_0134_840039.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0134_840039/interior_0134_840039.navmesh",
+      "bytes": 36968,
+      "sha256": "1aed913de4d6987ed517e94fd327b8806ad1f703986690daae7b5a06bbcf30f9",
+      "upstream_hash": "1aed913de4d6987ed517e94fd327b8806ad1f703986690daae7b5a06bbcf30f9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0134_840039/interior_0134_840039.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0135_840032/interior_0135_840032.gs.ply",
+      "bytes": 124812491,
+      "sha256": "6c8d6821561d48c97c9046b0c9bae66852e7bbfdf69711a123381406b56cd202",
+      "upstream_hash": "6c8d6821561d48c97c9046b0c9bae66852e7bbfdf69711a123381406b56cd202",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0135_840032/interior_0135_840032.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0135_840032/interior_0135_840032.navmesh",
+      "bytes": 32008,
+      "sha256": "0b32f16430347264c488a07c25b23bda8dd9732f3c8c792b3cf5ab9156a3582f",
+      "upstream_hash": "0b32f16430347264c488a07c25b23bda8dd9732f3c8c792b3cf5ab9156a3582f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0135_840032/interior_0135_840032.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0141_840177/interior_0141_840177.gs.ply",
+      "bytes": 234771475,
+      "sha256": "ed8464b307f6dca0582626bfd23fbf81703b62f3d4172958eef8c15d9c416cef",
+      "upstream_hash": "ed8464b307f6dca0582626bfd23fbf81703b62f3d4172958eef8c15d9c416cef",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0141_840177/interior_0141_840177.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0141_840177/interior_0141_840177.navmesh",
+      "bytes": 38056,
+      "sha256": "e68002a6f8f1c9128e357f81888bc3296ca9b89798f959705b183a0e824235f8",
+      "upstream_hash": "e68002a6f8f1c9128e357f81888bc3296ca9b89798f959705b183a0e824235f8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0141_840177/interior_0141_840177.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0170_840084/interior_0170_840084.gs.ply",
+      "bytes": 171353411,
+      "sha256": "0ef399c3725e135cf15f166eca2ecdbb4586b8cb0fb0b7dea0e3c21a7fa704cf",
+      "upstream_hash": "0ef399c3725e135cf15f166eca2ecdbb4586b8cb0fb0b7dea0e3c21a7fa704cf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0170_840084/interior_0170_840084.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0170_840084/interior_0170_840084.navmesh",
+      "bytes": 30456,
+      "sha256": "ae6d9a1d4f19dda96a6bd389109a344b2619ccdebde972e9bd1a4a9987be8430",
+      "upstream_hash": "ae6d9a1d4f19dda96a6bd389109a344b2619ccdebde972e9bd1a4a9987be8430",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0170_840084/interior_0170_840084.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0175_840149/interior_0175_840149.gs.ply",
+      "bytes": 325318260,
+      "sha256": "b869da95d02c205f4cdbf2cccb721ec59348a89ca0040564ecbb3081b468b642",
+      "upstream_hash": "b869da95d02c205f4cdbf2cccb721ec59348a89ca0040564ecbb3081b468b642",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0175_840149/interior_0175_840149.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0175_840149/interior_0175_840149.navmesh",
+      "bytes": 58600,
+      "sha256": "e6305c2582c6f7beb87db4c7ff7bf19b54d71e6ee5b2e00548c84872055dbd89",
+      "upstream_hash": "e6305c2582c6f7beb87db4c7ff7bf19b54d71e6ee5b2e00548c84872055dbd89",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0175_840149/interior_0175_840149.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0179_840114/interior_0179_840114.gs.ply",
+      "bytes": 246730531,
+      "sha256": "2f5e4de006cf52ed7c4167084dee43f4f60ed04cc0fa5b27d13064afe306010a",
+      "upstream_hash": "2f5e4de006cf52ed7c4167084dee43f4f60ed04cc0fa5b27d13064afe306010a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0179_840114/interior_0179_840114.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0179_840114/interior_0179_840114.navmesh",
+      "bytes": 66784,
+      "sha256": "4d54c825fef4fc4505d9db1e5f9438faf8dd719861145ee82428312fad0fc694",
+      "upstream_hash": "4d54c825fef4fc4505d9db1e5f9438faf8dd719861145ee82428312fad0fc694",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0179_840114/interior_0179_840114.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0184_840116/interior_0184_840116.gs.ply",
+      "bytes": 106968643,
+      "sha256": "87329d35a48c3b474a3814e0c88dce72396398945d642bac75dce7b2b7d2f03e",
+      "upstream_hash": "87329d35a48c3b474a3814e0c88dce72396398945d642bac75dce7b2b7d2f03e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0184_840116/interior_0184_840116.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0184_840116/interior_0184_840116.navmesh",
+      "bytes": 54832,
+      "sha256": "ee34d9d7cb02430d963c7b0163d2baba0899d75e4f94f43390399373d7c4ce24",
+      "upstream_hash": "ee34d9d7cb02430d963c7b0163d2baba0899d75e4f94f43390399373d7c4ce24",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0184_840116/interior_0184_840116.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0185_840107/interior_0185_840107.gs.ply",
+      "bytes": 517582988,
+      "sha256": "557a57257e1d926e43d0a662e50aa69959adf32a092eba1a8c7e220c24b130f3",
+      "upstream_hash": "557a57257e1d926e43d0a662e50aa69959adf32a092eba1a8c7e220c24b130f3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0185_840107/interior_0185_840107.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0185_840107/interior_0185_840107.navmesh",
+      "bytes": 18552,
+      "sha256": "3bc72a7b3b4db5b3ed6f152f37ef298ae7064c260e7bc5e8ec4270bee4ff790a",
+      "upstream_hash": "3bc72a7b3b4db5b3ed6f152f37ef298ae7064c260e7bc5e8ec4270bee4ff790a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0185_840107/interior_0185_840107.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0191_840178/interior_0191_840178.gs.ply",
+      "bytes": 213320963,
+      "sha256": "c6e1e1fcf36a22be27286f67346c85372bf056425e2ffb33185e466d053a91a6",
+      "upstream_hash": "c6e1e1fcf36a22be27286f67346c85372bf056425e2ffb33185e466d053a91a6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0191_840178/interior_0191_840178.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0191_840178/interior_0191_840178.navmesh",
+      "bytes": 26132,
+      "sha256": "cb6173950c62e3cdbc348f215eb9d7c23868d471043307a9ee6c9e39dae5372e",
+      "upstream_hash": "cb6173950c62e3cdbc348f215eb9d7c23868d471043307a9ee6c9e39dae5372e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0191_840178/interior_0191_840178.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0196_840121/interior_0196_840121.gs.ply",
+      "bytes": 251354740,
+      "sha256": "b2d8f51886449b6804ca670491b060a633fc74a605d87f3cf4b5a939079609a8",
+      "upstream_hash": "b2d8f51886449b6804ca670491b060a633fc74a605d87f3cf4b5a939079609a8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0196_840121/interior_0196_840121.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0196_840121/interior_0196_840121.navmesh",
+      "bytes": 16992,
+      "sha256": "92a76843e10433b17c5846cba5fc4502767260b208ab4180678fc68a8e8236bc",
+      "upstream_hash": "92a76843e10433b17c5846cba5fc4502767260b208ab4180678fc68a8e8236bc",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0196_840121/interior_0196_840121.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0204_840158/interior_0204_840158.gs.ply",
+      "bytes": 241205339,
+      "sha256": "e2dbb55d314efdba8d9c50539545b85c57ad2d41251db8e669863789b51378ea",
+      "upstream_hash": "e2dbb55d314efdba8d9c50539545b85c57ad2d41251db8e669863789b51378ea",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0204_840158/interior_0204_840158.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0204_840158/interior_0204_840158.navmesh",
+      "bytes": 19952,
+      "sha256": "ad340be0b7760cffd0d94e31857bbd862de8eceb1e86bbc17fc3be2000df7161",
+      "upstream_hash": "ad340be0b7760cffd0d94e31857bbd862de8eceb1e86bbc17fc3be2000df7161",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0204_840158/interior_0204_840158.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0206_840163/interior_0206_840163.gs.ply",
+      "bytes": 336339380,
+      "sha256": "e744ce047cfda0165961fceb8b6d8c9f6bd92ad41f92c9913140ae69a53dca1a",
+      "upstream_hash": "e744ce047cfda0165961fceb8b6d8c9f6bd92ad41f92c9913140ae69a53dca1a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0206_840163/interior_0206_840163.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0206_840163/interior_0206_840163.navmesh",
+      "bytes": 42980,
+      "sha256": "42efbe2e3c2247f5f2a1ea20a6fdab34da92f4ee71d40023515fa42a1ba1cda4",
+      "upstream_hash": "42efbe2e3c2247f5f2a1ea20a6fdab34da92f4ee71d40023515fa42a1ba1cda4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0206_840163/interior_0206_840163.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0207_840167/interior_0207_840167.gs.ply",
+      "bytes": 144915123,
+      "sha256": "3218e5052887eaa7092b46bf54800b11a3c3ac9c03a5a682289a14320b863626",
+      "upstream_hash": "3218e5052887eaa7092b46bf54800b11a3c3ac9c03a5a682289a14320b863626",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0207_840167/interior_0207_840167.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0207_840167/interior_0207_840167.navmesh",
+      "bytes": 30128,
+      "sha256": "a4f1f6dd2827aa6f65447268cff5ec4bc99d90674d4fd320445c0082cefaa096",
+      "upstream_hash": "a4f1f6dd2827aa6f65447268cff5ec4bc99d90674d4fd320445c0082cefaa096",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0207_840167/interior_0207_840167.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0289_840757/interior_0289_840757.gs.ply",
+      "bytes": 153158891,
+      "sha256": "e9dcd275c4601b88b72d5f8874c998c069a1a63d2748485437df756985b40430",
+      "upstream_hash": "e9dcd275c4601b88b72d5f8874c998c069a1a63d2748485437df756985b40430",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0289_840757/interior_0289_840757.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0289_840757/interior_0289_840757.navmesh",
+      "bytes": 24076,
+      "sha256": "1c7ff60b41313bd672eb0516d741257ec732131ed9adcad7d406ecafef0c1dbd",
+      "upstream_hash": "1c7ff60b41313bd672eb0516d741257ec732131ed9adcad7d406ecafef0c1dbd",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0289_840757/interior_0289_840757.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0393_840188/interior_0393_840188.gs.ply",
+      "bytes": 299658692,
+      "sha256": "2e58bd8ec753f0fae96f8f34102b1b4088ba482c68bf7cda08290d1501fd42b6",
+      "upstream_hash": "2e58bd8ec753f0fae96f8f34102b1b4088ba482c68bf7cda08290d1501fd42b6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0393_840188/interior_0393_840188.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0393_840188/interior_0393_840188.navmesh",
+      "bytes": 32536,
+      "sha256": "72f66e76aac0d9c10fa9a6e6c8d25d792d23d2647b95d3b9822cecfe72f7daab",
+      "upstream_hash": "72f66e76aac0d9c10fa9a6e6c8d25d792d23d2647b95d3b9822cecfe72f7daab",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0393_840188/interior_0393_840188.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0395_840187/interior_0395_840187.gs.ply",
+      "bytes": 152377939,
+      "sha256": "ce64dc5fbb28fa54402c0de269f90d980b8c9f5670108ca05ad4502d574e43d7",
+      "upstream_hash": "ce64dc5fbb28fa54402c0de269f90d980b8c9f5670108ca05ad4502d574e43d7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0395_840187/interior_0395_840187.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0395_840187/interior_0395_840187.navmesh",
+      "bytes": 9648,
+      "sha256": "399b71059bc4d537e3449d1f7b892dad409dd0fe59ad7f45f09019f0095f8b10",
+      "upstream_hash": "399b71059bc4d537e3449d1f7b892dad409dd0fe59ad7f45f09019f0095f8b10",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0395_840187/interior_0395_840187.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0399_840130/interior_0399_840130.gs.ply",
+      "bytes": 181760979,
+      "sha256": "81dd05b8d82c0299d3914b70796c985821c4b96f4e3cc12c3246c3a173945f02",
+      "upstream_hash": "81dd05b8d82c0299d3914b70796c985821c4b96f4e3cc12c3246c3a173945f02",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0399_840130/interior_0399_840130.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0399_840130/interior_0399_840130.navmesh",
+      "bytes": 26364,
+      "sha256": "457e7a312293daa7982f2c1178de1eec505537fa7070cd1c3fd0bd09dbcd32e8",
+      "upstream_hash": "457e7a312293daa7982f2c1178de1eec505537fa7070cd1c3fd0bd09dbcd32e8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0399_840130/interior_0399_840130.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0402_840115/interior_0402_840115.gs.ply",
+      "bytes": 211497667,
+      "sha256": "5bae3a5f8166f1ab4041721ba8a0ad340b1e76850ed61253c0dd763a90b5ab4b",
+      "upstream_hash": "5bae3a5f8166f1ab4041721ba8a0ad340b1e76850ed61253c0dd763a90b5ab4b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0402_840115/interior_0402_840115.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0402_840115/interior_0402_840115.navmesh",
+      "bytes": 50468,
+      "sha256": "e3cc38986542b7798bab75e4d6f1f81f1b3d068aff9daadac2db42573ddc4a92",
+      "upstream_hash": "e3cc38986542b7798bab75e4d6f1f81f1b3d068aff9daadac2db42573ddc4a92",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0402_840115/interior_0402_840115.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0404_840155/interior_0404_840155.gs.ply",
+      "bytes": 180342915,
+      "sha256": "a097285553b5367ddd40a9cf1510e5cc9268f5704c4d47a6df2ef35c3211e514",
+      "upstream_hash": "a097285553b5367ddd40a9cf1510e5cc9268f5704c4d47a6df2ef35c3211e514",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0404_840155/interior_0404_840155.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0404_840155/interior_0404_840155.navmesh",
+      "bytes": 30264,
+      "sha256": "4c5d7c6e1b7b67d92651efc94f94f18633e4dd15578fcae6c9d40ce619bb91f1",
+      "upstream_hash": "4c5d7c6e1b7b67d92651efc94f94f18633e4dd15578fcae6c9d40ce619bb91f1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0404_840155/interior_0404_840155.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0405_840145/interior_0405_840145.gs.ply",
+      "bytes": 70419891,
+      "sha256": "7134cca47338532f7639b659f49dc0aad6bd90c8e2dbde801810af42de177eb7",
+      "upstream_hash": "7134cca47338532f7639b659f49dc0aad6bd90c8e2dbde801810af42de177eb7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0405_840145/interior_0405_840145.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0405_840145/interior_0405_840145.navmesh",
+      "bytes": 15568,
+      "sha256": "126e0e2ec883b9c002a1d51de1e628d879b33f64e3b95cc9ec3c7e0bfa9ccf37",
+      "upstream_hash": "126e0e2ec883b9c002a1d51de1e628d879b33f64e3b95cc9ec3c7e0bfa9ccf37",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0405_840145/interior_0405_840145.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0407_840140/interior_0407_840140.gs.ply",
+      "bytes": 164316411,
+      "sha256": "28097650184a0eb07740a49fb90cc1ea2207d9b3db81a914c06aa7ae800b02c1",
+      "upstream_hash": "28097650184a0eb07740a49fb90cc1ea2207d9b3db81a914c06aa7ae800b02c1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0407_840140/interior_0407_840140.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0407_840140/interior_0407_840140.navmesh",
+      "bytes": 53356,
+      "sha256": "cd9f7a5fe1ad4d7cc5a6395f307ccea48f05ab525c8a50965471dcf666ff8a49",
+      "upstream_hash": "cd9f7a5fe1ad4d7cc5a6395f307ccea48f05ab525c8a50965471dcf666ff8a49",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0407_840140/interior_0407_840140.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0408_840112/interior_0408_840112.gs.ply",
+      "bytes": 358964916,
+      "sha256": "7e82fe68ade3d05d5a323e3c78ddded177ad3b90a4d52460e5cbaebe511bed7a",
+      "upstream_hash": "7e82fe68ade3d05d5a323e3c78ddded177ad3b90a4d52460e5cbaebe511bed7a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0408_840112/interior_0408_840112.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0408_840112/interior_0408_840112.navmesh",
+      "bytes": 27592,
+      "sha256": "540537548a9cad68e14f7a166cb95a869d5360e064dc57e1840b609dfbe5d5b1",
+      "upstream_hash": "540537548a9cad68e14f7a166cb95a869d5360e064dc57e1840b609dfbe5d5b1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0408_840112/interior_0408_840112.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0415_840048/interior_0415_840048.gs.ply",
+      "bytes": 215006867,
+      "sha256": "ca8e73233636b2b2c83ce243b22d39b456a54f34247c5b6dfeac23052724fbef",
+      "upstream_hash": "ca8e73233636b2b2c83ce243b22d39b456a54f34247c5b6dfeac23052724fbef",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0415_840048/interior_0415_840048.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0415_840048/interior_0415_840048.navmesh",
+      "bytes": 14788,
+      "sha256": "966a9171508757c9ea39e4897734e396acbaf98696695eb6f48589d9ac4059e8",
+      "upstream_hash": "966a9171508757c9ea39e4897734e396acbaf98696695eb6f48589d9ac4059e8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0415_840048/interior_0415_840048.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0418_840024/interior_0418_840024.gs.ply",
+      "bytes": 246102843,
+      "sha256": "453ddc744a980b73b9e8fbf37c455c92b23a3ba5c4d3ece6ec794129455c1303",
+      "upstream_hash": "453ddc744a980b73b9e8fbf37c455c92b23a3ba5c4d3ece6ec794129455c1303",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0418_840024/interior_0418_840024.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0418_840024/interior_0418_840024.navmesh",
+      "bytes": 27808,
+      "sha256": "caf7d4aa94c624e1427693c209486549eb25d0deb1b99880e7ff70e8c5083479",
+      "upstream_hash": "caf7d4aa94c624e1427693c209486549eb25d0deb1b99880e7ff70e8c5083479",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0418_840024/interior_0418_840024.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0420_840007/interior_0420_840007.gs.ply",
+      "bytes": 476487652,
+      "sha256": "b558b9b0bf1feca145923c8a78c179c52a6426d3a3480cdc6e602059ea19c7d6",
+      "upstream_hash": "b558b9b0bf1feca145923c8a78c179c52a6426d3a3480cdc6e602059ea19c7d6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0420_840007/interior_0420_840007.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0420_840007/interior_0420_840007.navmesh",
+      "bytes": 44752,
+      "sha256": "1fff35a90d10c6424306292a48f90ea4c8be8d00e722ac3358a83195a76a9f02",
+      "upstream_hash": "1fff35a90d10c6424306292a48f90ea4c8be8d00e722ac3358a83195a76a9f02",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0420_840007/interior_0420_840007.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0425_839987/interior_0425_839987.gs.ply",
+      "bytes": 159163963,
+      "sha256": "ae7ac70628ae747a9b4a45fcaa0918fe05be758f7cbc14445351b20aeed14124",
+      "upstream_hash": "ae7ac70628ae747a9b4a45fcaa0918fe05be758f7cbc14445351b20aeed14124",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0425_839987/interior_0425_839987.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0425_839987/interior_0425_839987.navmesh",
+      "bytes": 28032,
+      "sha256": "6053f9df290df757d1b191a95c66c1e2424f67a826edd90b0c747a0f72b84119",
+      "upstream_hash": "6053f9df290df757d1b191a95c66c1e2424f67a826edd90b0c747a0f72b84119",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0425_839987/interior_0425_839987.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0433_839891/interior_0433_839891.gs.ply",
+      "bytes": 250765492,
+      "sha256": "f90cd40566c8f5c8684fe6cb1deddd45d1b6f9fdbbef99bd62a3e961b79dad19",
+      "upstream_hash": "f90cd40566c8f5c8684fe6cb1deddd45d1b6f9fdbbef99bd62a3e961b79dad19",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0433_839891/interior_0433_839891.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0433_839891/interior_0433_839891.navmesh",
+      "bytes": 25560,
+      "sha256": "4bfe1a58deb75558184a61afaa8226e75a4c6b43f418ea1c483ade014f2fe5c1",
+      "upstream_hash": "4bfe1a58deb75558184a61afaa8226e75a4c6b43f418ea1c483ade014f2fe5c1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0433_839891/interior_0433_839891.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0505_839970/interior_0505_839970.gs.ply",
+      "bytes": 486773452,
+      "sha256": "fab08729912330b4aacec0e9019c0d8dc289c7e2cee9414a8cd23662dbe99bbe",
+      "upstream_hash": "fab08729912330b4aacec0e9019c0d8dc289c7e2cee9414a8cd23662dbe99bbe",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0505_839970/interior_0505_839970.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/interior_0505_839970/interior_0505_839970.navmesh",
+      "bytes": 34748,
+      "sha256": "f2712833a63c5690aa200dbd1059023b6779e0f99073a68b1fc96b825a74e9dd",
+      "upstream_hash": "f2712833a63c5690aa200dbd1059023b6779e0f99073a68b1fc96b825a74e9dd",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/interior_0505_839970/interior_0505_839970.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene01/scene01.gs.ply",
+      "bytes": 106423069,
+      "sha256": "bf2282f3b9f30ce6f6728f350e9f8d879d813a2089f71d37492e8ab7695a4321",
+      "upstream_hash": "bf2282f3b9f30ce6f6728f350e9f8d879d813a2089f71d37492e8ab7695a4321",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene01/scene01.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene01/scene01.navmesh",
+      "bytes": 263276,
+      "sha256": "35129683355a7e27e445e9175419e777c1ec6151d53a8e7c5d81051e520fae37",
+      "upstream_hash": "35129683355a7e27e445e9175419e777c1ec6151d53a8e7c5d81051e520fae37",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene01/scene01.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene02/scene02.gs.ply",
+      "bytes": 140587017,
+      "sha256": "684da2dcc9f1b8c8029f6ef051b861b3573255ec4d8444ddc529c403751d1315",
+      "upstream_hash": "684da2dcc9f1b8c8029f6ef051b861b3573255ec4d8444ddc529c403751d1315",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene02/scene02.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene02/scene02.navmesh",
+      "bytes": 107628,
+      "sha256": "debad8abe4aed552313086dd8e04615696bba4d99a4e3a4349f7e8344645120c",
+      "upstream_hash": "debad8abe4aed552313086dd8e04615696bba4d99a4e3a4349f7e8344645120c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene02/scene02.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene03/scene03.gs.ply",
+      "bytes": 203714681,
+      "sha256": "76f41eecf7fd3628fc7567343b2d486c953c9ea552ab47c03fbca53ec359f78a",
+      "upstream_hash": "76f41eecf7fd3628fc7567343b2d486c953c9ea552ab47c03fbca53ec359f78a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene03/scene03.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene03/scene03.navmesh",
+      "bytes": 160760,
+      "sha256": "1cf0f4a695ccce40ec8b160e241e4643d9ecb62ecbc0cfdb5ae3e74fa53b3007",
+      "upstream_hash": "1cf0f4a695ccce40ec8b160e241e4643d9ecb62ecbc0cfdb5ae3e74fa53b3007",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene03/scene03.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene04/scene04.gs.ply",
+      "bytes": 180821393,
+      "sha256": "99a9e461e644ab0d54062981cb778078fb2d8a85e2db77ce4bb90ee5a5138ff7",
+      "upstream_hash": "99a9e461e644ab0d54062981cb778078fb2d8a85e2db77ce4bb90ee5a5138ff7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene04/scene04.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene04/scene04.navmesh",
+      "bytes": 344940,
+      "sha256": "63d97d3ad07154db3f027cf47e4ee30987fb51d758292bc387030569dad16930",
+      "upstream_hash": "63d97d3ad07154db3f027cf47e4ee30987fb51d758292bc387030569dad16930",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene04/scene04.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene05/scene05.gs.ply",
+      "bytes": 137327505,
+      "sha256": "3b831cda4bf23729157c471bbdf39c7e7a4ecf729626afe45f97077a1b9c1406",
+      "upstream_hash": "3b831cda4bf23729157c471bbdf39c7e7a4ecf729626afe45f97077a1b9c1406",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene05/scene05.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene05/scene05.navmesh",
+      "bytes": 31240,
+      "sha256": "f3caa487cdc6c62720cc12e988e996abf301ac712c1d1e64d79b5a3222480e25",
+      "upstream_hash": "3eec69ab34c600fd67ebbd28dcf85d4f7112c633",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene05/scene05.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene06/scene06.gs.ply",
+      "bytes": 176489045,
+      "sha256": "e238edefdb19df68d86cd71c64892ea3bec0f9647c4b126887a9a5a800bddef8",
+      "upstream_hash": "e238edefdb19df68d86cd71c64892ea3bec0f9647c4b126887a9a5a800bddef8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene06/scene06.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene06/scene06.navmesh",
+      "bytes": 294356,
+      "sha256": "afee92e588d02b63bf04d6b88d76ff9af596b02138e9964e18186904578e49fe",
+      "upstream_hash": "afee92e588d02b63bf04d6b88d76ff9af596b02138e9964e18186904578e49fe",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene06/scene06.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene07/scene07.gs.ply",
+      "bytes": 144885773,
+      "sha256": "c291553e92c5c5bb46604c2df786e5ce2f3e76fe03d4b0a5fd8e109df7e16371",
+      "upstream_hash": "c291553e92c5c5bb46604c2df786e5ce2f3e76fe03d4b0a5fd8e109df7e16371",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene07/scene07.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene07/scene07.navmesh",
+      "bytes": 236360,
+      "sha256": "e59ea1fb5916cf09c9495b932c4a2d6ff3bca81ae22d7689f40ac1ffa6f98fe9",
+      "upstream_hash": "e59ea1fb5916cf09c9495b932c4a2d6ff3bca81ae22d7689f40ac1ffa6f98fe9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene07/scene07.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene08/scene08.gs.ply",
+      "bytes": 154808197,
+      "sha256": "f05ea3046431d0079a5df655972f4b9f1bb3724620b0f786409881f91f017e78",
+      "upstream_hash": "f05ea3046431d0079a5df655972f4b9f1bb3724620b0f786409881f91f017e78",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene08/scene08.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene08/scene08.navmesh",
+      "bytes": 216064,
+      "sha256": "30242c9b8ccdfb5f0f209ade280e8a3b83b4ef4ca3979d93ee230ab104b803e2",
+      "upstream_hash": "30242c9b8ccdfb5f0f209ade280e8a3b83b4ef4ca3979d93ee230ab104b803e2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene08/scene08.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene09/scene09.gs.ply",
+      "bytes": 114938369,
+      "sha256": "d27824585f42564c52d2e16432eba2a2c6f1548795a457f694e893a928fed2e4",
+      "upstream_hash": "d27824585f42564c52d2e16432eba2a2c6f1548795a457f694e893a928fed2e4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene09/scene09.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene09/scene09.navmesh",
+      "bytes": 221452,
+      "sha256": "ea7d3b571922611241d32d27a08a3f8f44ad613b1a0d633a35cdc19ad4d0333a",
+      "upstream_hash": "ea7d3b571922611241d32d27a08a3f8f44ad613b1a0d633a35cdc19ad4d0333a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene09/scene09.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene10/scene10.gs.ply",
+      "bytes": 114076809,
+      "sha256": "f399a4c8756cbd84609813982764b9059c0b551696f284de13776ac255d60bff",
+      "upstream_hash": "f399a4c8756cbd84609813982764b9059c0b551696f284de13776ac255d60bff",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene10/scene10.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene10/scene10.navmesh",
+      "bytes": 601592,
+      "sha256": "43ae0cd6955d3aa695b3006fe1cd9c3782d788623cc4f5dca2b17816f6ed27db",
+      "upstream_hash": "43ae0cd6955d3aa695b3006fe1cd9c3782d788623cc4f5dca2b17816f6ed27db",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene10/scene10.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene11/scene11.gs.ply",
+      "bytes": 115641285,
+      "sha256": "f8ae9db762612e09031623ddf334c7b93ae9c889e168ebfe4af7ae3d37b58c43",
+      "upstream_hash": "f8ae9db762612e09031623ddf334c7b93ae9c889e168ebfe4af7ae3d37b58c43",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene11/scene11.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene11/scene11.navmesh",
+      "bytes": 318348,
+      "sha256": "f3de39802e5d61c1a8adbef4af387b169a7e6bebea792d7eb7d12f08e18fd961",
+      "upstream_hash": "f3de39802e5d61c1a8adbef4af387b169a7e6bebea792d7eb7d12f08e18fd961",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene11/scene11.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene12/scene12.gs.ply",
+      "bytes": 108878549,
+      "sha256": "13e80d2b5779e0b015907cba1286a11ef5fee59411978dd26139625b60db98b4",
+      "upstream_hash": "13e80d2b5779e0b015907cba1286a11ef5fee59411978dd26139625b60db98b4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene12/scene12.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene12/scene12.navmesh",
+      "bytes": 40916,
+      "sha256": "84c0222e600eec0e5b5aab24e983dcd925b94a67bb58c5aa16f3647573bbfde8",
+      "upstream_hash": "7e97f815d8f7bf7359c77fa9855e38767c2ff460",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene12/scene12.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene13/scene13.gs.ply",
+      "bytes": 150955181,
+      "sha256": "a2df40fb04a7d58037e6b464a13ef1e42c96f9761704c70a0ccc3b4b034a7d45",
+      "upstream_hash": "a2df40fb04a7d58037e6b464a13ef1e42c96f9761704c70a0ccc3b4b034a7d45",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene13/scene13.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene13/scene13.navmesh",
+      "bytes": 90000,
+      "sha256": "e336c0cbd947759c98a7d3a44e9dee4827cec51a1d0a78c2ff6d1bbf14352fde",
+      "upstream_hash": "1d8dcceb44c0417aebf5f50c18df6b649e7072bd",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene13/scene13.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene14/scene14.gs.ply",
+      "bytes": 149753009,
+      "sha256": "f3c675f482c379e12b652c1a2f2cae4c381c05f9d8f0371b9747d71e870ea24e",
+      "upstream_hash": "f3c675f482c379e12b652c1a2f2cae4c381c05f9d8f0371b9747d71e870ea24e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene14/scene14.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene14/scene14.navmesh",
+      "bytes": 12200,
+      "sha256": "4dba02792f5498b18e4e7c701dc8340b1e0aeaf62b9c6bd9ab553b85cf89763c",
+      "upstream_hash": "43ebe4fa2c798a403eb25f8eced009d3c4cfe7e9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene14/scene14.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene15/scene15.gs.ply",
+      "bytes": 119382917,
+      "sha256": "1b4dccaaf9c3215d28730f0fd395804dba7c5e2812cbfbb29ff73422057a838c",
+      "upstream_hash": "1b4dccaaf9c3215d28730f0fd395804dba7c5e2812cbfbb29ff73422057a838c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene15/scene15.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene15/scene15.navmesh",
+      "bytes": 127948,
+      "sha256": "4ef98ae3e8f13f7ba2ca526ee707704dba9587730dd229bf2702045ae43b7ed2",
+      "upstream_hash": "4ef98ae3e8f13f7ba2ca526ee707704dba9587730dd229bf2702045ae43b7ed2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene15/scene15.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene16/scene16.gs.ply",
+      "bytes": 189755029,
+      "sha256": "29f45649cdbe1f30fc88c1290ff3e6f0bfc663471eadee5b78b5cea812070f35",
+      "upstream_hash": "29f45649cdbe1f30fc88c1290ff3e6f0bfc663471eadee5b78b5cea812070f35",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene16/scene16.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene16/scene16.navmesh",
+      "bytes": 319812,
+      "sha256": "5b9ddb4abbff9c5500efa982b2cceadf570a8c77fc03aaf31b3127dcba4b3819",
+      "upstream_hash": "5b9ddb4abbff9c5500efa982b2cceadf570a8c77fc03aaf31b3127dcba4b3819",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene16/scene16.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene17/scene17.gs.ply",
+      "bytes": 119800777,
+      "sha256": "47878e5f382086ef4535e4e4ba9a69a1141e181bff08401446358061fa8a99eb",
+      "upstream_hash": "47878e5f382086ef4535e4e4ba9a69a1141e181bff08401446358061fa8a99eb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene17/scene17.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene17/scene17.navmesh",
+      "bytes": 232696,
+      "sha256": "5bfc27c166ca89a3177d764a9bbf0d0f7cb0453b0ef735ce7b2cdf2b502f8cbb",
+      "upstream_hash": "5bfc27c166ca89a3177d764a9bbf0d0f7cb0453b0ef735ce7b2cdf2b502f8cbb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene17/scene17.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene18/scene18.gs.ply",
+      "bytes": 111038841,
+      "sha256": "9528a4ad414e936bf127b8219a46a64f7060a2570395d9f7c152b7f415750849",
+      "upstream_hash": "9528a4ad414e936bf127b8219a46a64f7060a2570395d9f7c152b7f415750849",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene18/scene18.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene18/scene18.navmesh",
+      "bytes": 10664,
+      "sha256": "f49f83829165afb6593687987cc90b8f72b29a72b85364eb4b5e3cd0047c19d9",
+      "upstream_hash": "112ddfdca0c91df04bbc5f15bfa7a1611701abe3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene18/scene18.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene19/scene19.gs.ply",
+      "bytes": 158466325,
+      "sha256": "0a53b9418c6f2c0bb906c39a21f82c20aeb2cf82c72c1b31d4cdb1eca1d7c7b0",
+      "upstream_hash": "0a53b9418c6f2c0bb906c39a21f82c20aeb2cf82c72c1b31d4cdb1eca1d7c7b0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene19/scene19.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene19/scene19.navmesh",
+      "bytes": 220160,
+      "sha256": "9b0aaa010f4c2de1cec60588a92a69129fc2e313bd9897f1abe8aa0733cd9150",
+      "upstream_hash": "9b0aaa010f4c2de1cec60588a92a69129fc2e313bd9897f1abe8aa0733cd9150",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene19/scene19.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene20/scene20.gs.ply",
+      "bytes": 146476225,
+      "sha256": "b317f23b609de2d2467e703b466bdd03d7a968324d3a5c175ec5d53d2cc29d9b",
+      "upstream_hash": "b317f23b609de2d2467e703b466bdd03d7a968324d3a5c175ec5d53d2cc29d9b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene20/scene20.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene20/scene20.navmesh",
+      "bytes": 196012,
+      "sha256": "823f1ed1ad6be02bac7b84e3de5485cef9b3aeed7aef6d0a101a60f0b101d3c5",
+      "upstream_hash": "823f1ed1ad6be02bac7b84e3de5485cef9b3aeed7aef6d0a101a60f0b101d3c5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene20/scene20.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene21/scene21.gs.ply",
+      "bytes": 108738877,
+      "sha256": "8aab5df032eda17ca6000f93641f36462791d612ab629ce92394fb01df5fe127",
+      "upstream_hash": "8aab5df032eda17ca6000f93641f36462791d612ab629ce92394fb01df5fe127",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene21/scene21.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene21/scene21.navmesh",
+      "bytes": 102092,
+      "sha256": "763d15df100dcbf8a533743ca18cd2a16e2581e0166ec85c7be680e35615cf93",
+      "upstream_hash": "763d15df100dcbf8a533743ca18cd2a16e2581e0166ec85c7be680e35615cf93",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene21/scene21.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene22/scene22.gs.ply",
+      "bytes": 204942625,
+      "sha256": "369bb8a347e55d34bea5d5e106cd69f86f7e95c25a683ebfc736aa300e3e7f19",
+      "upstream_hash": "369bb8a347e55d34bea5d5e106cd69f86f7e95c25a683ebfc736aa300e3e7f19",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene22/scene22.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene22/scene22.navmesh",
+      "bytes": 102988,
+      "sha256": "92f0718489dfc14204df117f547843d5c43e6ad7e6d9a4c408136e4ee011a2d4",
+      "upstream_hash": "92f0718489dfc14204df117f547843d5c43e6ad7e6d9a4c408136e4ee011a2d4",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene22/scene22.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene23/scene23.gs.ply",
+      "bytes": 146908569,
+      "sha256": "d1868d191fc289bddd5b72added590b1daba189560f18f9bc2e545df0066597a",
+      "upstream_hash": "d1868d191fc289bddd5b72added590b1daba189560f18f9bc2e545df0066597a",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene23/scene23.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene23/scene23.navmesh",
+      "bytes": 191112,
+      "sha256": "a9ad0287aa6dc867bbf1ab30825442a728002eabb27371a80a56972fde738865",
+      "upstream_hash": "a9ad0287aa6dc867bbf1ab30825442a728002eabb27371a80a56972fde738865",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene23/scene23.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene24/scene24.gs.ply",
+      "bytes": 157708125,
+      "sha256": "3d88c746463e41c9a19f701c49ab139e6ac1e83b83fe0bb97c6885a192dd8240",
+      "upstream_hash": "3d88c746463e41c9a19f701c49ab139e6ac1e83b83fe0bb97c6885a192dd8240",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene24/scene24.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene24/scene24.navmesh",
+      "bytes": 227980,
+      "sha256": "a894ac0f8551b4e7a3f5def7eaf59910bb4a03e3b5f88bc7797fff434118f301",
+      "upstream_hash": "a894ac0f8551b4e7a3f5def7eaf59910bb4a03e3b5f88bc7797fff434118f301",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene24/scene24.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene25/scene25.gs.ply",
+      "bytes": 144588477,
+      "sha256": "eb116728d0338018d6f84e66629841c205c1d01e3957a406a51e1fbfc15cfb08",
+      "upstream_hash": "eb116728d0338018d6f84e66629841c205c1d01e3957a406a51e1fbfc15cfb08",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene25/scene25.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene25/scene25.navmesh",
+      "bytes": 290368,
+      "sha256": "7f609f8db4820e15de5c687c231a4940cbe5da1d294213f6f81483950829c685",
+      "upstream_hash": "7f609f8db4820e15de5c687c231a4940cbe5da1d294213f6f81483950829c685",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene25/scene25.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene26/scene26.gs.ply",
+      "bytes": 160908545,
+      "sha256": "4ec23db47c75924e3cc3c5d69479e4e837b66fdae0c331ace12b453d0deb005e",
+      "upstream_hash": "4ec23db47c75924e3cc3c5d69479e4e837b66fdae0c331ace12b453d0deb005e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene26/scene26.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene26/scene26.navmesh",
+      "bytes": 137048,
+      "sha256": "d4a5193a4270d97c256c8126758a58a95d810faf653c7a0fffb191b1a0f59d3b",
+      "upstream_hash": "d4a5193a4270d97c256c8126758a58a95d810faf653c7a0fffb191b1a0f59d3b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene26/scene26.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene27/scene27.gs.ply",
+      "bytes": 188171717,
+      "sha256": "43dcebf1e9b0a45fb5cf52d0764a5f4a43fa3b34debe8d7edefe1c793be4250e",
+      "upstream_hash": "43dcebf1e9b0a45fb5cf52d0764a5f4a43fa3b34debe8d7edefe1c793be4250e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene27/scene27.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene27/scene27.navmesh",
+      "bytes": 88776,
+      "sha256": "55c511126326119d229795e9ef345f52c28740ad543d6c76aceb0ba8cb7bd950",
+      "upstream_hash": "d05c5a83b3e76bbf03a7986f326ee5f96989dcf2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene27/scene27.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene28/scene28.gs.ply",
+      "bytes": 172416729,
+      "sha256": "cf77e5d7fb96281b4ef379271154f8d06a5aeea6857353c1567e03f7bfd19dfe",
+      "upstream_hash": "cf77e5d7fb96281b4ef379271154f8d06a5aeea6857353c1567e03f7bfd19dfe",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene28/scene28.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene28/scene28.navmesh",
+      "bytes": 24220,
+      "sha256": "624c03bf39e675c4459d3d13d883a66c645546bedba3bfcc8e478c2bbaca77d7",
+      "upstream_hash": "893762dee9efee3f04637c18a247cb8daae95c32",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene28/scene28.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene29/scene29.gs.ply",
+      "bytes": 149759741,
+      "sha256": "c12d0c19afc3681703c637bde30d793eaee4baaddf14dcaddeb21559226f36bb",
+      "upstream_hash": "c12d0c19afc3681703c637bde30d793eaee4baaddf14dcaddeb21559226f36bb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene29/scene29.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene29/scene29.navmesh",
+      "bytes": 102020,
+      "sha256": "8932ce08db673556f1b36e57c36388d8676b48bc230fb329ea5d963dc2a83763",
+      "upstream_hash": "8932ce08db673556f1b36e57c36388d8676b48bc230fb329ea5d963dc2a83763",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene29/scene29.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene30/scene30.gs.ply",
+      "bytes": 119615681,
+      "sha256": "8c90aa0cc09b96a4d29f046ea1380a74a0859d2e0b81f923295b134f707f27e0",
+      "upstream_hash": "8c90aa0cc09b96a4d29f046ea1380a74a0859d2e0b81f923295b134f707f27e0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene30/scene30.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene30/scene30.navmesh",
+      "bytes": 158724,
+      "sha256": "01236005f959273abf43ab980e1457a8f09bcfe404a67126d7d9ea4c4eb1a545",
+      "upstream_hash": "01236005f959273abf43ab980e1457a8f09bcfe404a67126d7d9ea4c4eb1a545",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene30/scene30.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene31/scene31.gs.ply",
+      "bytes": 166685689,
+      "sha256": "38479b0c133db7c6bb08585244f698ddfd9c04167bd3c8e5e8440224d61ea50d",
+      "upstream_hash": "38479b0c133db7c6bb08585244f698ddfd9c04167bd3c8e5e8440224d61ea50d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene31/scene31.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene31/scene31.navmesh",
+      "bytes": 15408,
+      "sha256": "014c10df3589a8f8c06632c72ad9f3f613ce093e735a9fa0a53704a8fc55b504",
+      "upstream_hash": "663e9dc04e8f9a0ec3ba0fd1fb6441d426766db0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene31/scene31.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene32/scene32.gs.ply",
+      "bytes": 195672291,
+      "sha256": "5ffdd92ca3930bfb2dcb64fba271f9e4c3e360e43ee1eaaa188f86c9c98c5428",
+      "upstream_hash": "5ffdd92ca3930bfb2dcb64fba271f9e4c3e360e43ee1eaaa188f86c9c98c5428",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene32/scene32.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene32/scene32.navmesh",
+      "bytes": 15800,
+      "sha256": "7eab35f64a4e9c720591f309180b73f45c66c84ab8a7f55d414b956d863ea405",
+      "upstream_hash": "f4d7f9cc418c220a349225b2803d9b9b445084e8",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene32/scene32.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene33/scene33.gs.ply",
+      "bytes": 150161077,
+      "sha256": "aa2cbad8688c6c68a7654bfff94984d5cb1cdef32b1e70f228a0af195729e310",
+      "upstream_hash": "aa2cbad8688c6c68a7654bfff94984d5cb1cdef32b1e70f228a0af195729e310",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene33/scene33.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene33/scene33.navmesh",
+      "bytes": 285724,
+      "sha256": "033c65b97ac0735af000e9fa9ba5d172e7453bfc4fdd99cec356f3c3105e80e7",
+      "upstream_hash": "033c65b97ac0735af000e9fa9ba5d172e7453bfc4fdd99cec356f3c3105e80e7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene33/scene33.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene34/scene34.gs.ply",
+      "bytes": 184640205,
+      "sha256": "a3599208832a6d6b5f7d1d236f09a970d6afab52bbf1aa7c0a8d51a652f8bb5c",
+      "upstream_hash": "a3599208832a6d6b5f7d1d236f09a970d6afab52bbf1aa7c0a8d51a652f8bb5c",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene34/scene34.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene34/scene34.navmesh",
+      "bytes": 163512,
+      "sha256": "a7d1e6a3a6d68d9a77daea33f1e545ac33ba081673941f49fb96b1e14742e7d5",
+      "upstream_hash": "a7d1e6a3a6d68d9a77daea33f1e545ac33ba081673941f49fb96b1e14742e7d5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene34/scene34.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene35/scene35.gs.ply",
+      "bytes": 178018093,
+      "sha256": "211f526fc8cd8ddd281d8b8ddf6842f886ebe86dcdc8f41d2f76f72ace9efda1",
+      "upstream_hash": "211f526fc8cd8ddd281d8b8ddf6842f886ebe86dcdc8f41d2f76f72ace9efda1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene35/scene35.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene35/scene35.navmesh",
+      "bytes": 141532,
+      "sha256": "73512da0b232c6069179636c51f4a73f030ac986f73bb55892bba2585816d3f5",
+      "upstream_hash": "73512da0b232c6069179636c51f4a73f030ac986f73bb55892bba2585816d3f5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene35/scene35.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene36/scene36.gs.ply",
+      "bytes": 138569457,
+      "sha256": "f2faa5dcfff809512a992edd07374f0f46b27a4ded5a333e4de0db29cedd9c15",
+      "upstream_hash": "f2faa5dcfff809512a992edd07374f0f46b27a4ded5a333e4de0db29cedd9c15",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene36/scene36.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene36/scene36.navmesh",
+      "bytes": 26580,
+      "sha256": "e6ea309fe595d70c625b96fb75887dbffd426ede20b7911708f05d68a1067372",
+      "upstream_hash": "03c4d8a0fce6e5f1f2983d07e4439d714a24b452",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene36/scene36.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene37/scene37.gs.ply",
+      "bytes": 206254481,
+      "sha256": "f30d2ffb40102bac8c704b451830b403be047ae57ad0110337f5db35e220baa6",
+      "upstream_hash": "f30d2ffb40102bac8c704b451830b403be047ae57ad0110337f5db35e220baa6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene37/scene37.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene37/scene37.navmesh",
+      "bytes": 45248,
+      "sha256": "c1b01554410c2b39a66c9d30f62d26110383450864a69c06f437009937c5d873",
+      "upstream_hash": "a9e345bdea4bad9d7a558f334fb5da1abee5d90f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene37/scene37.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene38/scene38.gs.ply",
+      "bytes": 105961281,
+      "sha256": "6ef21a60204416066b4e5b6d7fe2cdeb6f83e9533277e9b1e2f98ee8748f6544",
+      "upstream_hash": "6ef21a60204416066b4e5b6d7fe2cdeb6f83e9533277e9b1e2f98ee8748f6544",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene38/scene38.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene38/scene38.navmesh",
+      "bytes": 9908,
+      "sha256": "8c1265535dd10b971d2bdf896036d0bf3be3f8c4d98bd64921cd537233f82659",
+      "upstream_hash": "3d120911a5780f07eb46d1ac1519644f1835dceb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene38/scene38.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene39/scene39.gs.ply",
+      "bytes": 169163323,
+      "sha256": "f3abedd9ab240e2a374ab1a161ea1f944865b609b62d483f319155f9f50b9a27",
+      "upstream_hash": "f3abedd9ab240e2a374ab1a161ea1f944865b609b62d483f319155f9f50b9a27",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene39/scene39.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene39/scene39.navmesh",
+      "bytes": 96108,
+      "sha256": "9c8eff746dbfd64ed5827fc0060670487787735a47da928045036c40ca65454c",
+      "upstream_hash": "f05886680f60db8f09cd21438525efcd16517e79",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene39/scene39.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene40/scene40.gs.ply",
+      "bytes": 196156413,
+      "sha256": "d8cc2305ad83241325ef6a2869591e87ecd5a1989a1dfff5457252967b84c238",
+      "upstream_hash": "d8cc2305ad83241325ef6a2869591e87ecd5a1989a1dfff5457252967b84c238",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene40/scene40.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene40/scene40.navmesh",
+      "bytes": 99576,
+      "sha256": "031689a35858285f385ee00468738a2716f14cfc188c77fc7453d0b07c381217",
+      "upstream_hash": "024336ef52ece16df064a17f33a3e7f828e4ed07",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene40/scene40.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene41/scene41.gs.ply",
+      "bytes": 144139473,
+      "sha256": "83f8b77baec69b39fe2c5362af23cbb8c4e44aa05d181308180051a51470f2ea",
+      "upstream_hash": "83f8b77baec69b39fe2c5362af23cbb8c4e44aa05d181308180051a51470f2ea",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene41/scene41.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene41/scene41.navmesh",
+      "bytes": 107260,
+      "sha256": "c67d61d561891e8664af79dbf23ab5f7799b69a58f6863c8d1bcc825c0f5dff3",
+      "upstream_hash": "c67d61d561891e8664af79dbf23ab5f7799b69a58f6863c8d1bcc825c0f5dff3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene41/scene41.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene42/scene42.gs.ply",
+      "bytes": 160890321,
+      "sha256": "a9b52e56aff0a7b5f3f9d7a54a819068e2e825c941670c0f7d280d73a5d48951",
+      "upstream_hash": "a9b52e56aff0a7b5f3f9d7a54a819068e2e825c941670c0f7d280d73a5d48951",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene42/scene42.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene42/scene42.navmesh",
+      "bytes": 91304,
+      "sha256": "b6b00b5328f32aaa20f3ef9f2d58744a46a4293ede316bd277fe46069fcc494e",
+      "upstream_hash": "b11cf10c401676b326d950fd1dec7792a1ea3eea",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene42/scene42.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene43/scene43.gs.ply",
+      "bytes": 198303037,
+      "sha256": "1f4272b0314a63a2fc598af1d4ddf73738b41e6e1f45423eb714b9d6aec3d7f5",
+      "upstream_hash": "1f4272b0314a63a2fc598af1d4ddf73738b41e6e1f45423eb714b9d6aec3d7f5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene43/scene43.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene43/scene43.navmesh",
+      "bytes": 1799188,
+      "sha256": "ad36f814542497a151aa72d53b3924e1a95703c03f7a971178d79ea59cae24bb",
+      "upstream_hash": "ad36f814542497a151aa72d53b3924e1a95703c03f7a971178d79ea59cae24bb",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene43/scene43.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene44/scene44.gs.ply",
+      "bytes": 110104725,
+      "sha256": "1a3e97919f1bf92a4cc6dced38db4e327c522515de50ca5e7b9d227f2db4eec2",
+      "upstream_hash": "1a3e97919f1bf92a4cc6dced38db4e327c522515de50ca5e7b9d227f2db4eec2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene44/scene44.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene44/scene44.navmesh",
+      "bytes": 70964,
+      "sha256": "c5bf964b41b5ac48bf152942bed88a824575619c1101e6fdffb57279ec56531a",
+      "upstream_hash": "c3be66d12b25dc073083da0f609f87eeaae43f97",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene44/scene44.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene45/scene45.gs.ply",
+      "bytes": 797497754,
+      "sha256": "300385ff669b36e02001b4c837cf29bb955b74b107e6154f37c52eda5e236816",
+      "upstream_hash": "300385ff669b36e02001b4c837cf29bb955b74b107e6154f37c52eda5e236816",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene45/scene45.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene45/scene45.navmesh",
+      "bytes": 801140,
+      "sha256": "d3b078e41c85a835bd73219538bd3bc991cef8b93896d29f726440b2be9e3c45",
+      "upstream_hash": "d3b078e41c85a835bd73219538bd3bc991cef8b93896d29f726440b2be9e3c45",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene45/scene45.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene46/scene46.gs.ply",
+      "bytes": 125707523,
+      "sha256": "baba4a8681407cf2c2dd1dfc50dabe9debafad3e5526b59ecb63d8edb4744cd6",
+      "upstream_hash": "baba4a8681407cf2c2dd1dfc50dabe9debafad3e5526b59ecb63d8edb4744cd6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene46/scene46.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene46/scene46.navmesh",
+      "bytes": 56368,
+      "sha256": "88ffa36d4a34eefb191436ecab83c9821e25e54f165cd11f02d0f551115f10c8",
+      "upstream_hash": "d68c132b75511e512a1b2174e52d7d4d0dc04a84",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene46/scene46.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene47/scene47.gs.ply",
+      "bytes": 199263673,
+      "sha256": "53b7d1a3cbcad8367bb9dcbc069e08bbf64837706e272fa5141e9db997bc1999",
+      "upstream_hash": "53b7d1a3cbcad8367bb9dcbc069e08bbf64837706e272fa5141e9db997bc1999",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene47/scene47.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene47/scene47.navmesh",
+      "bytes": 150104,
+      "sha256": "c61f5d608942dd7dcba5e14f724434c92f95542c8b21ba72d050c5017068732b",
+      "upstream_hash": "c61f5d608942dd7dcba5e14f724434c92f95542c8b21ba72d050c5017068732b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene47/scene47.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene48/scene48.gs.ply",
+      "bytes": 162997233,
+      "sha256": "077d6e1ceb6237abd435ef9769f67a037b30de5938352cbe0d6b015ef5c0db22",
+      "upstream_hash": "077d6e1ceb6237abd435ef9769f67a037b30de5938352cbe0d6b015ef5c0db22",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene48/scene48.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene48/scene48.navmesh",
+      "bytes": 18536,
+      "sha256": "9e32515c80d6035288e891035d6ee99cf74157510e7af7e8f635dce5292c21f5",
+      "upstream_hash": "6a1548aae5fb4de677fa076e0c81b816771ec2b0",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene48/scene48.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene49/scene49.gs.ply",
+      "bytes": 112867973,
+      "sha256": "07fb81773f122e642bacedd547542cfdd3dce560a60b112a1b0ea3eebee9fce5",
+      "upstream_hash": "07fb81773f122e642bacedd547542cfdd3dce560a60b112a1b0ea3eebee9fce5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene49/scene49.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene49/scene49.navmesh",
+      "bytes": 54792,
+      "sha256": "53c68b41e7c2de3c4c2f7b0b65e871e249dfc88b32b385ed4bc5e8778c44c354",
+      "upstream_hash": "3ea334304d66d6813942eb1963cea7274160d1d7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene49/scene49.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene50/scene50.gs.ply",
+      "bytes": 220008909,
+      "sha256": "730f7041b25b6e486a069a3d643412785de25433b08ba93a91dfb7e928ae83c9",
+      "upstream_hash": "730f7041b25b6e486a069a3d643412785de25433b08ba93a91dfb7e928ae83c9",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene50/scene50.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene50/scene50.navmesh",
+      "bytes": 465612,
+      "sha256": "8d38a098acb9f389e75f3c1b691e5ad0a6a373d3f3bb364b456631a667454aba",
+      "upstream_hash": "8d38a098acb9f389e75f3c1b691e5ad0a6a373d3f3bb364b456631a667454aba",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene50/scene50.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene51/scene51.gs.ply",
+      "bytes": 225499747,
+      "sha256": "18ac8b4d0b50abe0027c49fe588323f7d29a1b659827ff637fb1dbc9bb7edaf3",
+      "upstream_hash": "18ac8b4d0b50abe0027c49fe588323f7d29a1b659827ff637fb1dbc9bb7edaf3",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene51/scene51.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene51/scene51.navmesh",
+      "bytes": 671352,
+      "sha256": "46aa1803db69897aab8ddc1e94654fcac9a713d012c74f8f08d0458e085cd07f",
+      "upstream_hash": "46aa1803db69897aab8ddc1e94654fcac9a713d012c74f8f08d0458e085cd07f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene51/scene51.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene52/scene52.gs.ply",
+      "bytes": 123098165,
+      "sha256": "8ed5edfadf735964bedc759d9f3b62db61dce99c2e39f9e5eedbb3bb7ddc9d72",
+      "upstream_hash": "8ed5edfadf735964bedc759d9f3b62db61dce99c2e39f9e5eedbb3bb7ddc9d72",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene52/scene52.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene52/scene52.navmesh",
+      "bytes": 133700,
+      "sha256": "0c73f8510ade3b3ebaa150fe3bbbb28f47ae8b8e9b22af01c4825523550e52e2",
+      "upstream_hash": "0c73f8510ade3b3ebaa150fe3bbbb28f47ae8b8e9b22af01c4825523550e52e2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene52/scene52.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene53/scene53.gs.ply",
+      "bytes": 180172333,
+      "sha256": "a70658f720a2a10008ef8b05cd389879fbc6b0c5a628b64ba5208dec44907adf",
+      "upstream_hash": "a70658f720a2a10008ef8b05cd389879fbc6b0c5a628b64ba5208dec44907adf",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene53/scene53.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene53/scene53.navmesh",
+      "bytes": 196604,
+      "sha256": "38c1e1935d83f393f60ec3e0ef063495af0ebac888e2a0485450c8a70e27d48f",
+      "upstream_hash": "38c1e1935d83f393f60ec3e0ef063495af0ebac888e2a0485450c8a70e27d48f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene53/scene53.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene54/scene54.gs.ply",
+      "bytes": 862364492,
+      "sha256": "d9486e613b41b6f36b47da6a99c06d6b865143bf7336b27ec1779831d7831ddc",
+      "upstream_hash": "d9486e613b41b6f36b47da6a99c06d6b865143bf7336b27ec1779831d7831ddc",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene54/scene54.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene54/scene54.navmesh",
+      "bytes": 37952,
+      "sha256": "fefd044273b33400460d7e59606b5f26641a0e7e352c5acb0495f7ee085b099c",
+      "upstream_hash": "dbc629c030402ad854247a9b687295bca4bfc9e2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene54/scene54.navmesh",
+      "reused": false
+    },
+    {
+      "path": "train/scene55/scene55.gs.ply",
+      "bytes": 197375245,
+      "sha256": "60c7259a265d9c23361f9def52e72536e75c28f99e273f95514bd8b9171efefe",
+      "upstream_hash": "60c7259a265d9c23361f9def52e72536e75c28f99e273f95514bd8b9171efefe",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene55/scene55.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "train/scene55/scene55.navmesh",
+      "bytes": 72544,
+      "sha256": "e4f82899c5abe4bb3132905065ea26bcc4ca28669242565de178e4fd25a73baa",
+      "upstream_hash": "1519aa20b8f86ac82df0f14184d88f1382e18d6f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/train/scene55/scene55.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val.scene_dataset_config.json",
+      "bytes": 1374,
+      "sha256": "3854fb799a13ef55f6f76e798502a0d590974498ffd61629476f96d8186b21cd",
+      "upstream_hash": "deb28ae4eb506e42733fecfa0cd9aae78ec98b80",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val.scene_dataset_config.json",
+      "reused": true
+    },
+    {
+      "path": "val/interior_0516_840045/interior_0516_840045.gs.ply",
+      "bytes": 146484963,
+      "sha256": "c57380c299345b9df25dc1c0b3f7e90d9998fc1750655a06ef39a7f9d1e84f60",
+      "upstream_hash": "c57380c299345b9df25dc1c0b3f7e90d9998fc1750655a06ef39a7f9d1e84f60",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0516_840045/interior_0516_840045.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0516_840045/interior_0516_840045.navmesh",
+      "bytes": 43116,
+      "sha256": "2c3b321492790d0d1ed2d7a73d95eea524842fb429758d2328c8d1549c995292",
+      "upstream_hash": "2c3b321492790d0d1ed2d7a73d95eea524842fb429758d2328c8d1549c995292",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0516_840045/interior_0516_840045.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0518_839988/interior_0518_839988.gs.ply",
+      "bytes": 354072868,
+      "sha256": "8466bea1f4278a0f97602645c6b4e2e16a7a983c4933abb6f90a0be27ec176df",
+      "upstream_hash": "8466bea1f4278a0f97602645c6b4e2e16a7a983c4933abb6f90a0be27ec176df",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0518_839988/interior_0518_839988.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0518_839988/interior_0518_839988.navmesh",
+      "bytes": 32736,
+      "sha256": "8f0d91843349521e9f3cf9cd640f737c6067d03290dade37c8e7fef507fa8a24",
+      "upstream_hash": "8f0d91843349521e9f3cf9cd640f737c6067d03290dade37c8e7fef507fa8a24",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0518_839988/interior_0518_839988.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0633_840123/interior_0633_840123.gs.ply",
+      "bytes": 331321100,
+      "sha256": "05782b0eabe4130a6fde9b0d118027b44c5655dd75ad9f6ebdb499972416752e",
+      "upstream_hash": "05782b0eabe4130a6fde9b0d118027b44c5655dd75ad9f6ebdb499972416752e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0633_840123/interior_0633_840123.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0633_840123/interior_0633_840123.navmesh",
+      "bytes": 16444,
+      "sha256": "72019bdaa9a4a7d42a20a5459996178423669fad22b3620c681b654ee6c788d1",
+      "upstream_hash": "72019bdaa9a4a7d42a20a5459996178423669fad22b3620c681b654ee6c788d1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0633_840123/interior_0633_840123.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0635_839968/interior_0635_839968.gs.ply",
+      "bytes": 254536828,
+      "sha256": "16b11377eca9dc370f41b288e124f2411cbd358d2a650c382bc2128563d57df1",
+      "upstream_hash": "16b11377eca9dc370f41b288e124f2411cbd358d2a650c382bc2128563d57df1",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0635_839968/interior_0635_839968.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0635_839968/interior_0635_839968.navmesh",
+      "bytes": 38004,
+      "sha256": "4e1e211f933c4807d019b10dbdd42c8f2d2678380f372fd5fb1f7597886cba69",
+      "upstream_hash": "4e1e211f933c4807d019b10dbdd42c8f2d2678380f372fd5fb1f7597886cba69",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0635_839968/interior_0635_839968.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0637_841444/interior_0637_841444.gs.ply",
+      "bytes": 222297323,
+      "sha256": "3b2cf90890d6384cab01ccca4611f3fef30cc3a43fe171fa188429c4399cd9ae",
+      "upstream_hash": "3b2cf90890d6384cab01ccca4611f3fef30cc3a43fe171fa188429c4399cd9ae",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0637_841444/interior_0637_841444.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0637_841444/interior_0637_841444.navmesh",
+      "bytes": 18700,
+      "sha256": "0cab1f0609ed3bd0f10b1822580215122536e9fddfafd397f9224f8fc15a5b96",
+      "upstream_hash": "0cab1f0609ed3bd0f10b1822580215122536e9fddfafd397f9224f8fc15a5b96",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0637_841444/interior_0637_841444.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0651_841463/interior_0651_841463.gs.ply",
+      "bytes": 133279955,
+      "sha256": "75f597688fc74b026e2c938730ec9a5aa568eb9688da7177ebff3b3aa99b7c77",
+      "upstream_hash": "75f597688fc74b026e2c938730ec9a5aa568eb9688da7177ebff3b3aa99b7c77",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0651_841463/interior_0651_841463.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0651_841463/interior_0651_841463.navmesh",
+      "bytes": 28800,
+      "sha256": "fdd696bf5eacb7b650554431a1575154a09755b11b930d7c32522a45c5ca390e",
+      "upstream_hash": "fdd696bf5eacb7b650554431a1575154a09755b11b930d7c32522a45c5ca390e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0651_841463/interior_0651_841463.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0695_841526/interior_0695_841526.gs.ply",
+      "bytes": 135289003,
+      "sha256": "19ae014cd8af36cb1972beb1ef357302163384ed5042fd7c5fead83e8cab9d80",
+      "upstream_hash": "19ae014cd8af36cb1972beb1ef357302163384ed5042fd7c5fead83e8cab9d80",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0695_841526/interior_0695_841526.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0695_841526/interior_0695_841526.navmesh",
+      "bytes": 25464,
+      "sha256": "0f1656423525a562d3d4a1e91a592aaab61a3374e409718921d199603d409707",
+      "upstream_hash": "0f1656423525a562d3d4a1e91a592aaab61a3374e409718921d199603d409707",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0695_841526/interior_0695_841526.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0733_841584/interior_0733_841584.gs.ply",
+      "bytes": 118537843,
+      "sha256": "bbf5eadfe307253e95f95c11849864fba12f19420db45ac23f10a5cc75a65f9d",
+      "upstream_hash": "bbf5eadfe307253e95f95c11849864fba12f19420db45ac23f10a5cc75a65f9d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0733_841584/interior_0733_841584.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0733_841584/interior_0733_841584.navmesh",
+      "bytes": 30144,
+      "sha256": "292f4f66d5899f763efe2e5eb8e0de676638c93a9634e0298a398981514691d7",
+      "upstream_hash": "292f4f66d5899f763efe2e5eb8e0de676638c93a9634e0298a398981514691d7",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0733_841584/interior_0733_841584.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0759_839979/interior_0759_839979.gs.ply",
+      "bytes": 178680819,
+      "sha256": "401e4fc2f837593f2dbb1b924d05add6ea2a928fa76ede598927e3909ba8d083",
+      "upstream_hash": "401e4fc2f837593f2dbb1b924d05add6ea2a928fa76ede598927e3909ba8d083",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0759_839979/interior_0759_839979.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/interior_0759_839979/interior_0759_839979.navmesh",
+      "bytes": 16764,
+      "sha256": "999e2b25c431e81eba58ae9c527a91288d102b8a230bd0911792881723128cca",
+      "upstream_hash": "999e2b25c431e81eba58ae9c527a91288d102b8a230bd0911792881723128cca",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/interior_0759_839979/interior_0759_839979.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene56/scene56.gs.ply",
+      "bytes": 111314377,
+      "sha256": "3c5a4dc10463db37f818be54522fb65ce611cb1b0ca27eef5846fa007bc6e629",
+      "upstream_hash": "3c5a4dc10463db37f818be54522fb65ce611cb1b0ca27eef5846fa007bc6e629",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene56/scene56.gs.ply",
+      "reused": true
+    },
+    {
+      "path": "val/scene56/scene56.navmesh",
+      "bytes": 99900,
+      "sha256": "3921d4449bca7fa60ee49931d57169b0d6acdbf47f8c351fb1774f370a1aff2f",
+      "upstream_hash": "0a72f8a079d1320184a1a28d289b4f6909ef84d5",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene56/scene56.navmesh",
+      "reused": true
+    },
+    {
+      "path": "val/scene57/scene57.gs.ply",
+      "bytes": 131298353,
+      "sha256": "521743508f31284216267f8681c012dd6c0ee8c0332cc541a668e3be6debc616",
+      "upstream_hash": "521743508f31284216267f8681c012dd6c0ee8c0332cc541a668e3be6debc616",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene57/scene57.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene57/scene57.navmesh",
+      "bytes": 388492,
+      "sha256": "7964d53e91f13935ab337e1053634c1eb724675b916f9397acf77b7a6d41a021",
+      "upstream_hash": "7964d53e91f13935ab337e1053634c1eb724675b916f9397acf77b7a6d41a021",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene57/scene57.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene58/scene58.gs.ply",
+      "bytes": 140884177,
+      "sha256": "fc2f1ca550353b872404e65e4cd42ae87b2c674663ff400cbeaa9110c7d392ea",
+      "upstream_hash": "fc2f1ca550353b872404e65e4cd42ae87b2c674663ff400cbeaa9110c7d392ea",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene58/scene58.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene58/scene58.navmesh",
+      "bytes": 282212,
+      "sha256": "d6f904ebfc312cfbf208c0c55c801cc7da233e216d29597d1c72bca2bd23479e",
+      "upstream_hash": "d6f904ebfc312cfbf208c0c55c801cc7da233e216d29597d1c72bca2bd23479e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene58/scene58.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene59/scene59.gs.ply",
+      "bytes": 116062069,
+      "sha256": "8ee7283f01704bdc52403d45aa9ef351ae1ac14e98a7f96ada86188e89003a76",
+      "upstream_hash": "8ee7283f01704bdc52403d45aa9ef351ae1ac14e98a7f96ada86188e89003a76",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene59/scene59.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene59/scene59.navmesh",
+      "bytes": 85272,
+      "sha256": "83611d8ea365ab6fc6bf3a6b822eaf573abdf33391977c265abd2e9e4223b28d",
+      "upstream_hash": "9791eee2837b8da2d171f94e4f7f88e006337e5b",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene59/scene59.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene60/scene60.gs.ply",
+      "bytes": 154413253,
+      "sha256": "13ec24373b78952c715fd48b8f11d6355d558e42aa9bdb27bea168b2cef02c8d",
+      "upstream_hash": "13ec24373b78952c715fd48b8f11d6355d558e42aa9bdb27bea168b2cef02c8d",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene60/scene60.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene60/scene60.navmesh",
+      "bytes": 124160,
+      "sha256": "1b94fd599a6f20fedfac8b57caa5fc058c73266667d513fc837d77fe05c8b9ce",
+      "upstream_hash": "1b94fd599a6f20fedfac8b57caa5fc058c73266667d513fc837d77fe05c8b9ce",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene60/scene60.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene61/scene61.gs.ply",
+      "bytes": 176786953,
+      "sha256": "a9760c210fa7e10414a6a98fddf876e6d3523c0c170211d09899221b58ba494f",
+      "upstream_hash": "a9760c210fa7e10414a6a98fddf876e6d3523c0c170211d09899221b58ba494f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene61/scene61.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene61/scene61.navmesh",
+      "bytes": 2108452,
+      "sha256": "1fc0f76a8ff22dc2f7891db0395fd234e52c2e40287be61ccdf8aaa781835b85",
+      "upstream_hash": "1fc0f76a8ff22dc2f7891db0395fd234e52c2e40287be61ccdf8aaa781835b85",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene61/scene61.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene62/scene62.gs.ply",
+      "bytes": 142307349,
+      "sha256": "5429cf3fc6a7ee5088dada65aca4fb6cad73dbaa660f2aec209a43122ea546ae",
+      "upstream_hash": "5429cf3fc6a7ee5088dada65aca4fb6cad73dbaa660f2aec209a43122ea546ae",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene62/scene62.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene62/scene62.navmesh",
+      "bytes": 177656,
+      "sha256": "01c8c5b9115a7ff256c9ada09f3e11731607cbf735c0a2728397463c2daaf11f",
+      "upstream_hash": "01c8c5b9115a7ff256c9ada09f3e11731607cbf735c0a2728397463c2daaf11f",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene62/scene62.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene63/scene63.gs.ply",
+      "bytes": 153801933,
+      "sha256": "2e940ade8b887d89a254bf6fbc9a82c45e6f4d58148a026b2a791ef984ff57f6",
+      "upstream_hash": "2e940ade8b887d89a254bf6fbc9a82c45e6f4d58148a026b2a791ef984ff57f6",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene63/scene63.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene63/scene63.navmesh",
+      "bytes": 39688,
+      "sha256": "fcc29f0541fd49f5836cecdb7c0a2009758608b06ea37c10f4748a1b0e516aa3",
+      "upstream_hash": "8da326d177f6ff785e83ce89c280c217cd639f09",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene63/scene63.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene64/scene64.gs.ply",
+      "bytes": 45388104,
+      "sha256": "58ef4a550722878d0a545526342537d842cb0f082cecc9ecfb659aa29f30c257",
+      "upstream_hash": "58ef4a550722878d0a545526342537d842cb0f082cecc9ecfb659aa29f30c257",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene64/scene64.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene64/scene64.navmesh",
+      "bytes": 2288,
+      "sha256": "64213b7380f22dd7af0c260b6fcea6cdfd4802de3bd3731414a26a822c9fb2a6",
+      "upstream_hash": "967e2570468399ca50fa528ee28167d79ba38073",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene64/scene64.navmesh",
+      "reused": false
+    },
+    {
+      "path": "val/scene65/scene65.gs.ply",
+      "bytes": 199550429,
+      "sha256": "10b773ce2342c848a138a82f1a7705555f3a77354017dd68fc747c519ee2382e",
+      "upstream_hash": "10b773ce2342c848a138a82f1a7705555f3a77354017dd68fc747c519ee2382e",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene65/scene65.gs.ply",
+      "reused": false
+    },
+    {
+      "path": "val/scene65/scene65.navmesh",
+      "bytes": 198900,
+      "sha256": "857f53cdf55f0b206225c903e7f0bece7e85248908584ab14476c48fac972fc2",
+      "upstream_hash": "857f53cdf55f0b206225c903e7f0bece7e85248908584ab14476c48fac972fc2",
+      "url": "https://huggingface.co/datasets/RukawaY/gs_scenes/resolve/ea6453855938dd3d4395c4c449fedefb7e6603b7/val/scene65/scene65.navmesh",
+      "reused": false
+    }
+  ],
+  "summary": {
+    "train": {
+      "scenes": 110,
+      "episodes": 110000
+    },
+    "val": {
+      "scenes": 19,
+      "episodes": 1900
+    }
+  },
+  "episode_count": 111900,
+  "total_bytes": 26695345591,
+  "verified_at_utc": "2026-10-28T05:58:42.956453+00:00"
+}

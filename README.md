@@ -115,3 +115,8 @@ habitat_baselines.eval.split test_easy
   publisher={IEEE}
 }
 ```
+
+
+## Habitat-GS experiment progress
+
+[Data readiness, pilot results, full-validation job status and reproduction](docs/experiments/habitat-gs-imagenav/README.md).

@@ -1,0 +1,20 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{
+  "source_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+  "source_differences": [
+    "src/custom_habitat_simulator.py",
+    "src/dataset.py",
+    "src/policy.py"
+  ],
+  "checkpoint_sha256": {
+    "ckpt/nav_model.pth": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+    "ckpt/safety_model.pth": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31"
+  },
+  "episodes": 1900,
+  "scenes": 19,
+  "max_geodesic_error_m": 0.0,
+  "parallel_environments": 6,
+  "protocol": "Released SIGN; 128x128 RGB and goal; continuous actions; 500 steps; 1m success"
+}

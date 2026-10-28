@@ -1,0 +1,20 @@
+2026-10-26 15:04:03,805 Overwriting CNN input size of depth: (128, 128)
+2026-10-26 15:04:03,806 Overwriting CNN input size of imagegoal_sensor_v2: (128, 128)
+2026-10-26 15:04:03,807 Overwriting CNN input size of rgb: (128, 128)
+2026-10-26 15:04:03,807 Type of observation encoder: <class 'src.models.EarlyFuseCNNEncoder'>
+2026-10-26 15:04:03,808 Create goal encoder : None
+2026-10-26 15:04:03,808 Create visual inputs encoder
+2026-10-26 15:04:03,808 observation_space kyes: odict_keys(['depth', 'imagegoal_sensor_v2', 'rgb'])
+2026-10-26 15:04:03,808 visual_obs_inputs: ['rgb', 'imagegoal_sensor_v2']
+2026-10-26 15:04:03,808 rgb observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-10-26 15:04:03,808 imagegoal_sensor_v2 observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-10-26 15:04:03,820 early fuse encoder(type: fast_resnet9, in: (6, 128, 128), out: (32, 4, 4))
+2026-10-26 15:05:48,481 Average episode reward: 0.6279
+2026-10-26 15:05:48,482 Average episode distance_to_goal: 14.9221
+2026-10-26 15:05:48,482 Average episode success: 0.1000
+2026-10-26 15:05:48,482 Average episode spl: 0.0535
+2026-10-26 15:05:48,482 Average episode soft_spl: 0.1510
+2026-10-26 15:05:48,483 Average episode distance_to_view: 17.7663
+2026-10-26 15:05:48,483 Average episode view_match: 0.1000
+2026-10-26 15:05:48,483 Average episode view_angle: 162.9572
+2026-10-26 15:05:48,483 Average episode collisions.count: 46.9000

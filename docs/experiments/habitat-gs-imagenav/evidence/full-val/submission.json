@@ -1,0 +1,29 @@
+{
+  "time": "2026-10-28T14:27:18+08:00",
+  "command": [
+    "qsub",
+    "-v",
+    "GS_SOURCE_COMMIT=95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/habitat_gs_eval_20261028/full_val.pbs.log",
+    "/scratch/e1538633/liuyi/SIGN-habitat-gs/scripts/habitat_gs/evaluate.pbs"
+  ],
+  "stdout": "1502487.stdct-mgmt-02\n",
+  "stderr": "",
+  "returncode": 0,
+  "source_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+  "pbs_script_sha256": "3a4cd5e5f6ed0393ee1f1f56218cac7fd1e00b86343df62a3d0551418766cc86",
+  "preflight_sha256": "a61b5713dcf7eec0fdb0e0a485504de07c6ca6836fae7e75afafaa3e0e3a41c6",
+  "episodes": 1900,
+  "scenes": 19,
+  "parallel_environments": 6,
+  "runtime_check": {
+    "time": "2026-10-28T14:32:05+08:00",
+    "state": "R",
+    "node": "GN-A40-023",
+    "gpu": "NVIDIA A40",
+    "episodes_completed_at_check": 15,
+    "actual_merged_config_checked": true,
+    "result_directory": "SIGN-habitat-gs/results/habitat_gs_full_val_20261028/job_1502487"
+  }
+}

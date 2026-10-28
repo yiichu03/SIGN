@@ -1,0 +1,22 @@
+{
+  "job_id": "1494770.stdct-mgmt-02",
+  "exit_status": 0,
+  "walltime": "00:03:29",
+  "episodes": 10,
+  "scene": "scene56",
+  "commit": "24b4c02926c80ac64cfd1c828c6b999f2ef97b7e",
+  "metrics_source": "eval/tb",
+  "metrics": {
+    "eval_reward/average_reward": 0.6278578639030457,
+    "eval_metrics/distance_to_goal": 14.922123908996582,
+    "eval_metrics/success": 0.10000000149011612,
+    "eval_metrics/spl": 0.053542543202638626,
+    "eval_metrics/soft_spl": 0.1509944051504135,
+    "eval_metrics/distance_to_view": 17.766263961791992,
+    "eval_metrics/view_match": 0.10000000149011612,
+    "eval_metrics/view_angle": 162.95724487304688,
+    "eval_metrics/collisions.count": 46.900001525878906
+  },
+  "protocol": "SIGN 128x128; continuous control; 500 steps; PYTHONHASHSEED=0; released checkpoint; not official GS DDPPO benchmark",
+  "per_episode_metrics_saved": false
+}

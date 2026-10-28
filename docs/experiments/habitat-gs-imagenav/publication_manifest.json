@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-10-28T14:46:52+08:00",
+  "repository": "yiichu03/SIGN",
+  "branch": "experiment/habitat-gs-imagenav",
+  "runtime_code_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+  "files": {
+    "evidence/pilot/result.json": {
+      "sha256": "a742fffe183f0ef6ebe74f11c0cef7fd4892ef4ab8302098dfa34a0b04e9f616",
+      "bytes": 875,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/result.json",
+      "source_sha256": "a742fffe183f0ef6ebe74f11c0cef7fd4892ef4ab8302098dfa34a0b04e9f616",
+      "source_bytes": 875
+    },
+    "evidence/pilot/probe.json": {
+      "sha256": "b6681bdd9af3f8df809603780c36ccbcbf76edaadf42c9e962c17262554e4025",
+      "bytes": 2680,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/probe.json",
+      "source_sha256": "b6681bdd9af3f8df809603780c36ccbcbf76edaadf42c9e962c17262554e4025",
+      "source_bytes": 2680
+    },
+    "evidence/pilot/probe.png": {
+      "sha256": "06893b55a739ed6931cf9fd0def398707e9327f48f48ccf1bddc5a82172076f1",
+      "bytes": 47466,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/probe.png",
+      "source_sha256": "06893b55a739ed6931cf9fd0def398707e9327f48f48ccf1bddc5a82172076f1",
+      "source_bytes": 47466
+    },
+    "evidence/pilot/packages.txt": {
+      "sha256": "e2d37de8900a5272f0f125e30495a88148e8dbfa551f1db73795300245c3497a",
+      "bytes": 1951,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/packages.txt",
+      "source_sha256": "e2d37de8900a5272f0f125e30495a88148e8dbfa551f1db73795300245c3497a",
+      "source_bytes": 1951
+    },
+    "evidence/pilot/config_of_eval.yaml": {
+      "sha256": "73098414c335c0d744315e064f16a732a8500f6aad6819a9d674e32b3f8a7343",
+      "bytes": 23222,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/eval/eval_run0_/config_of_eval.yaml",
+      "source_sha256": "73098414c335c0d744315e064f16a732a8500f6aad6819a9d674e32b3f8a7343",
+      "source_bytes": 23222
+    },
+    "evidence/pilot/native_summary.log": {
+      "sha256": "2143e1f4f7e7002617ec0611f889f99b81f11058080cf7417076a02553abc9f0",
+      "bytes": 1415,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/eval/eval_run0_/log.txt",
+      "source_sha256": "2143e1f4f7e7002617ec0611f889f99b81f11058080cf7417076a02553abc9f0",
+      "source_bytes": 1415
+    },
+    "evidence/pilot/tensorboard/events.out.tfevents.1792998230.GN-A40-096.1229404.0": {
+      "sha256": "5d8d30560d722dca02e0852beb62cce4f7a884342456fd00cecf45a336a05592",
+      "bytes": 628,
+      "source": "SIGN-habitat-gs/results/habitat_gs_20261026/job_1494770/eval/tb/events.out.tfevents.1792998230.GN-A40-096.1229404.0",
+      "source_sha256": "5d8d30560d722dca02e0852beb62cce4f7a884342456fd00cecf45a336a05592",
+      "source_bytes": 628
+    },
+    "evidence/pilot/cpu_sensor_probe.json": {
+      "sha256": "320b7e9d18413da3b3a90224a8467338ff9c9a83956b7a5be0d06e52cc1fd445",
+      "bytes": 1937,
+      "source": "logs/habitat_gs_20261026/cpu_sensor_probe.json",
+      "source_sha256": "320b7e9d18413da3b3a90224a8467338ff9c9a83956b7a5be0d06e52cc1fd445",
+      "source_bytes": 1937
+    },
+    "evidence/data/imagenav_manifest.json": {
+      "sha256": "ff6cfa31f9b6563a566019f841ab6387e81580a4445a0b8267185f5d80369317",
+      "bytes": 179474,
+      "source": "manifests/habitat_gs_imagenav_20261028.json",
+      "source_sha256": "ff6cfa31f9b6563a566019f841ab6387e81580a4445a0b8267185f5d80369317",
+      "source_bytes": 179474
+    },
+    "evidence/data/download_submission.json": {
+      "sha256": "f2751eb6180853aec533b455d65c2c1ddf8fbf2326b849f95ae93a56945c151b",
+      "bytes": 1077,
+      "source": "logs/habitat_gs_20261028/download_submission.json",
+      "source_sha256": "f2751eb6180853aec533b455d65c2c1ddf8fbf2326b849f95ae93a56945c151b",
+      "source_bytes": 1077
+    },
+    "evidence/data/download.log.gz": {
+      "sha256": "0ebd169fd1302b962b70118e78016a410b8f615a5b8939b27857aa6a77d0a292",
+      "bytes": 5317,
+      "source": "logs/habitat_gs_20261028/download.pbs.log",
+      "source_sha256": "e1ed2d0406643a2d10c4a6950e1508629fa96c305d362bebd24dcd6e5cd36cbe",
+      "source_bytes": 35824,
+      "compression": "gzip"
+    },
+    "evidence/full-val/inputs.json": {
+      "sha256": "d0a9557a4ce0039029b5a7bcb08b73a2858d3bd317af1c5707c688c9b0d8c7b9",
+      "bytes": 6943,
+      "source": "SIGN-habitat-gs/results/habitat_gs_full_val_20261028/job_1502487/inputs.json",
+      "source_sha256": "d0a9557a4ce0039029b5a7bcb08b73a2858d3bd317af1c5707c688c9b0d8c7b9",
+      "source_bytes": 6943
+    },
+    "evidence/full-val/config_of_eval.yaml": {
+      "sha256": "0e611f47d94c60ffda7789080dc07fd86a7502f3b45a19ac582f0ee9067327bf",
+      "bytes": 23299,
+      "source": "SIGN-habitat-gs/results/habitat_gs_full_val_20261028/job_1502487/eval/eval_run0_/config_of_eval.yaml",
+      "source_sha256": "0e611f47d94c60ffda7789080dc07fd86a7502f3b45a19ac582f0ee9067327bf",
+      "source_bytes": 23299
+    },
+    "evidence/full-val/preflight.log": {
+      "sha256": "a61b5713dcf7eec0fdb0e0a485504de07c6ca6836fae7e75afafaa3e0e3a41c6",
+      "bytes": 954,
+      "source": "logs/habitat_gs_eval_20261028/preflight.log",
+      "source_sha256": "a61b5713dcf7eec0fdb0e0a485504de07c6ca6836fae7e75afafaa3e0e3a41c6",
+      "source_bytes": 954
+    },
+    "evidence/full-val/submission.json": {
+      "sha256": "f87ef9fe9f6047c7d726f107fa9866908042fb5e131e24b8fc24588c73c902c2",
+      "bytes": 1007,
+      "source": "logs/habitat_gs_eval_20261028/submission.json",
+      "source_sha256": "f87ef9fe9f6047c7d726f107fa9866908042fb5e131e24b8fc24588c73c902c2",
+      "source_bytes": 1007
+    },
+    "evidence/full-val/runtime_status.json": {
+      "sha256": "d2170bcec70fcd5d3ae391f5d00ed18a9ea76c5fe389067a954efa75b445fbce",
+      "bytes": 483
+    },
+    "evidence/full-val/partial_evaluation.log.gz": {
+      "sha256": "2ae55f5171156d11b3a26c24be338ff2c0fdd134d6d524bb553896bcf7d3297e",
+      "bytes": 3893,
+      "source": "SIGN-habitat-gs/results/habitat_gs_full_val_20261028/job_1502487/evaluation.log",
+      "source_sha256": "2aa0b1bfa237fbc47ba6ce47480057c773b0693358f208d4cf2f63b2209ac6f3",
+      "source_bytes": 18071,
+      "compression": "gzip"
+    },
+    "workspace/AGENTS.md": {
+      "sha256": "f1180575ba09adca447604c00958c4c84a0bf2c30c13d05bf49f9015aa1f6ee6",
+      "bytes": 8469,
+      "source": "AGENTS.md",
+      "source_sha256": "f1180575ba09adca447604c00958c4c84a0bf2c30c13d05bf49f9015aa1f6ee6",
+      "source_bytes": 8469
+    },
+    "workspace/STATUS.md": {
+      "sha256": "c5315af4bfe882a66718a6b92087740b3e6f7a33afe591b72c7621eeb32afffb",
+      "bytes": 30000,
+      "source": "STATUS.md",
+      "source_sha256": "c5315af4bfe882a66718a6b92087740b3e6f7a33afe591b72c7621eeb32afffb",
+      "source_bytes": 30000
+    },
+    "workspace/RUNBOOK.md": {
+      "sha256": "dca03088ea3383e5c52287a6210b120fc73c66628186a4acef5d82cab3e1a83f",
+      "bytes": 45424,
+      "source": "RUNBOOK.md",
+      "source_sha256": "dca03088ea3383e5c52287a6210b120fc73c66628186a4acef5d82cab3e1a83f",
+      "source_bytes": 45424
+    },
+    "workspace/WORKLOG.md": {
+      "sha256": "f31d8c1e3054f5065437614c4fede091bbd7ae67116a785cbe92a58c31f337c1",
+      "bytes": 164696,
+      "source": "WORKLOG.md",
+      "source_sha256": "f31d8c1e3054f5065437614c4fede091bbd7ae67116a785cbe92a58c31f337c1",
+      "source_bytes": 164696
+    },
+    "scripts/build_publication.py": {
+      "sha256": "3a815a7471a17f1f66177ff2dbce91eb20ac2326cce4f63a468894e5c31cc381",
+      "bytes": 12575,
+      "source": "logs/habitat_gs_publication_20261028/build_publication.py",
+      "source_sha256": "3a815a7471a17f1f66177ff2dbce91eb20ac2326cce4f63a468894e5c31cc381",
+      "source_bytes": 12575
+    },
+    "README.md": {
+      "sha256": "a29e4da0b33418bdfd8ea80f4fdb7b219de263232c23636c31ff88ed6fd00060",
+      "bytes": 4122
+    }
+  },
+  "root_readme_sha256": "58d80b9f98a2bf0860d60b3c3004b7e71afd3a9aa46888a28a13086d45cc2382",
+  "excluded": [
+    "new weights",
+    "scene assets",
+    "environments",
+    "raw camera sequences",
+    "complete results not yet available"
+  ]
+}
