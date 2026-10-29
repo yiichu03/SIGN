@@ -23,9 +23,9 @@ ROOT=Path(__file__).resolve().parents[1]
 torch.set_num_threads(1)
 
 class LedgerTests(unittest.TestCase):
-    def build(self, episodes=(1,127,128,129,255,256), H=256):
-        c=SegmentCollector(128,H);c.env_id=0;c.reset('scene','ep0',None,'invalid_fixture')
-        ledger=SegmentLedger(1,H,128);masks=torch.ones(H+1,1,1,dtype=torch.bool)
+    def build(self, episodes=(1,127,128,129,255,256), H=256, interval=128):
+        c=SegmentCollector(interval,H);c.env_id=0;c.reset('scene','ep0',None,'invalid_fixture')
+        ledger=SegmentLedger(1,H,interval);masks=torch.ones(H+1,1,1,dtype=torch.bool)
         for t in range(H):
             done=t+1 in episodes
             payload=c.step((0,0),0.,[0,0,0],done)
@@ -38,14 +38,14 @@ class LedgerTests(unittest.TestCase):
             if done:c.reset('scene',f'ep{c.reset_index+1}',None,'invalid_fixture')
         return c,ledger,masks
     def test_terminal_128_rollout_boundaries_and_formula(self):
-        _,l,m=self.build();nav=torch.randn(257,1,1,dtype=torch.float64);r=nav.clone();mb=m.clone()
+        _,l,m=self.build();nav=torch.randn(257,1,1,dtype=torch.float64);r=nav.clone();nav_before=nav.clone();mb=m.clone()
         results=[dict(id=s['segment_id'],q=.75,valid=True) for s in l.pending]
         bonus=l.add(r,m,results,.1)
         self.assertAlmostEqual(sum(bonus),.075)
         expected=torch.zeros_like(r)
         for s,b in zip(l.pending,bonus):expected[s['end_row'],0,0]+=b
         torch.testing.assert_close(r-nav,expected,atol=1e-15,rtol=0)
-        self.assertTrue(torch.equal(m,mb));self.assertTrue(torch.equal(nav,r-expected))
+        self.assertTrue(torch.equal(m,mb));self.assertTrue(torch.equal(nav,nav_before))
         self.assertEqual([(s['global_start'],s['global_end']) for s in l.pending],
                          [(0,1),(1,127),(127,128),(128,129),(129,255),(255,256)])
         with self.assertRaisesRegex(RuntimeError,'already scored'):l.add(r,m,results,.1)
@@ -151,7 +151,8 @@ class IntegrationTests(unittest.TestCase):
         obj=SimpleNamespace();DA_PPO.add_config(obj,self.config());self.assertTrue(obj.mrq_navigation_only)
         cfg=self.config()
         with read_write(cfg):cfg.qwen_reward.beta=0
+        DA_PPO.add_config(obj,cfg);self.assertTrue(obj.mrq_navigation_only)
+        with read_write(cfg):del cfg.habitat_baselines.rl.data_augmentation['mrq_reward_target']
         DA_PPO.add_config(obj,cfg);self.assertFalse(obj.mrq_navigation_only)
-        DA_PPO.add_config(obj,SimpleNamespace());self.assertFalse(obj.mrq_navigation_only)
 
 if __name__=='__main__':unittest.main()

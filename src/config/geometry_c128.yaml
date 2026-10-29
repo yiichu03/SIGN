@@ -1,0 +1,6 @@
+qwen_reward:
+  enabled: False
+  reward_source: geometry
+  beta: 0.0
+  geometry_alpha: 0.2927574680399425
+  settlement_interval: 128

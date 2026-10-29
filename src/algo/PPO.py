@@ -35,8 +35,10 @@ class DA_PPO(PPO):
         self.aug_weight=0.5
 
     def add_config(self, config):
-        qcfg = getattr(config, 'qwen_reward', None)
-        self.mrq_navigation_only = bool(qcfg is not None and qcfg.enabled and qcfg.beta > 0)
+        target = getattr(config.habitat_baselines.rl.data_augmentation, 'mrq_reward_target', 'mixed')
+        if target not in ('navigation', 'mixed'):
+            raise ValueError('MRQ reward target must be navigation or mixed')
+        self.mrq_navigation_only = target == 'navigation'
         self.config = config
         self.use_aug_flag = True
 

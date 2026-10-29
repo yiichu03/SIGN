@@ -140,3 +140,18 @@ class SegmentLedger:
             raise RuntimeError('Qwen rollout advanced before scoring')
         self.rollout_id += 1
         self.pending, self.rows, self.applied = [], 0, False
+
+    def add_geometry(self, rewards, masks, alpha):
+        """Area has physical units; never route it through a probability response."""
+        self.validate(masks)
+        if not math.isfinite(alpha) or alpha < 0:
+            raise RuntimeError('Invalid geometry alpha')
+        valid = [s for s in self.pending if s['valid_geometry']]
+        gains = [s['metadata']['new_area_m2'] for s in valid]
+        if any(type(g) not in (float, int) or not math.isfinite(g) or g < 0 for g in gains):
+            raise RuntimeError('Invalid geometric area')
+        bonuses = [alpha * gain / self.H for gain in gains]
+        for s, bonus in zip(valid, bonuses):
+            rewards[s['end_row'], s['env_id'], 0] += bonus
+        self.applied = True
+        return bonuses

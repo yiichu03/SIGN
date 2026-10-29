@@ -1,0 +1,14 @@
+{
+  "beta": 0.03,
+  "rollout_steps": 256,
+  "source_sha256": "26180a9e26faa7024f0564193c66d46a8cbb31d1e2c1d99254aeb49b00d81bd7",
+  "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/short_qwen_40960/qwen/segments.jsonl",
+  "total_segments": 1204,
+  "valid_segments": 1176,
+  "sum_length_times_q": 22736.24026696853,
+  "sum_new_area_m2": 2329.8712499999997,
+  "alpha": 0.2927574680399425,
+  "qwen_bonus_sum": 2.6644031562853745,
+  "geometry_bonus_sum": 2.6644031562853745,
+  "rule": "Valid segments only from completed40960-step Qwen128 short run. Frozen before new experiments; no fitting on new training or validation data."
+}

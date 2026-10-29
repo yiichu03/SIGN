@@ -2,7 +2,13 @@ habitat:
   task:
     observed_coverage:
       weight: 0.0
+habitat_baselines:
+  rl:
+    data_augmentation:
+      mrq_reward_target: navigation
 qwen_reward:
+  reward_source: qwen
+  geometry_alpha: 0.0
   enabled: True
   collect: False
   beta: 0.1

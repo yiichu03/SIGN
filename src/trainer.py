@@ -155,8 +155,15 @@ class PPOTrainer(BaseRLTrainer):
         beta = float(getattr(qcfg, 'beta', 0.0))
         if not np.isfinite(beta) or beta < 0:
             raise ValueError('Invalid Qwen reward beta')
+        source = getattr(qcfg, 'reward_source', 'qwen')
+        alpha = float(getattr(qcfg, 'geometry_alpha', 0.0))
+        if source not in ('qwen', 'geometry') or not np.isfinite(alpha) or alpha < 0:
+            raise ValueError('Invalid exploration reward source or alpha')
+        if source == 'geometry' and (qcfg.enabled or beta != 0):
+            raise ValueError('Geometry control must disable Qwen and beta')
         self._qwen_reward = None
-        qwen_active = bool(qcfg is not None and qcfg.enabled and beta > 0)
+        qwen_active = bool(qcfg is not None and (
+            (source == 'qwen' and qcfg.enabled and beta > 0) or (source == 'geometry' and alpha > 0)))
         if qcfg is not None:
             with read_write(self.config):
                 qcfg.collect = qwen_active
@@ -164,7 +171,8 @@ class PPOTrainer(BaseRLTrainer):
             ppo = self.config.habitat_baselines.rl.ppo
             rgb_fov = self.config.habitat.simulator.rgb_sensor.hfov
             if (self._coverage_weight != 0 or ppo.num_steps != qcfg.rollout_steps
-                    or qcfg.settlement_interval != 128 or ppo.use_double_buffered_sampler
+                    or type(qcfg.settlement_interval) is not int
+                    or qcfg.settlement_interval not in (128, 256) or ppo.use_double_buffered_sampler
                     or float(rgb_fov) != float(qcfg.fov)):
                 raise ValueError('Qwen reward geometry/rollout configuration mismatch')
 
@@ -749,7 +757,7 @@ class PPOTrainer(BaseRLTrainer):
 
                 profiling_wrapper.range_pop()  # train update
 
-            if self._qwen_reward is not None:
+            if self._qwen_reward is not None and self._qwen_reward.client is not None:
                 self._qwen_reward.client.close()
             self.envs.close()
 

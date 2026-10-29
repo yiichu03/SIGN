@@ -1,0 +1,5 @@
+qwen_reward:
+  enabled: True
+  reward_source: qwen
+  beta: 0.03
+  settlement_interval: 256
