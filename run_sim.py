@@ -92,6 +92,11 @@ def main():
 
 
 def execute_exp(config: Config, run_type: str) -> None:
+    if run_type != 'train' and getattr(config, 'qwen_reward', None) is not None:
+        from habitat.config import read_write
+        with read_write(config):
+            config.qwen_reward.collect = False
+            config.qwen_reward.enabled = False
     random.seed(config.habitat.seed)
     np.random.seed(config.habitat.seed)
     torch.manual_seed(config.habitat.seed)

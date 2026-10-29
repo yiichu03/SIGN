@@ -50,6 +50,7 @@ class CostRolloutStorage(RolloutStorage):
         self.buffers["prev_costs"] = torch.zeros(numsteps + 1, num_envs, 1)
         self.buffers["cost_value_preds"] = torch.zeros(numsteps + 1, num_envs, 1)
         self.buffers["cost_returns"] = torch.zeros(numsteps + 1, num_envs, 1)
+        self.buffers["nav_rewards"] = torch.zeros(numsteps + 1, num_envs, 1)
 
     def insert(
         self,
@@ -81,6 +82,7 @@ class CostRolloutStorage(RolloutStorage):
             value_preds=value_preds,
             cost_value_preds=cost_value_preds,
             rewards=rewards,
+            nav_rewards=rewards.clone() if rewards is not None else None,
             costs=costs,
             prev_costs=prev_costs
         )

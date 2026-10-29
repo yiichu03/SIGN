@@ -9,6 +9,9 @@ import shutil
 from pathlib import Path
 
 import numpy as np
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]/"src"))
+from qwen_geometry import area_stats, render
 
 
 def dump(path, value):
@@ -32,20 +35,6 @@ def windows(length):
             for (start, end), requests in unique.items()]
 
 
-def area_stats(prior, final, valid, mpp, actions):
-    if actions <= 0 or mpp <= 0 or prior.shape != final.shape or prior.shape != valid.shape:
-        raise ValueError('Invalid raster or action count')
-    prior, final, valid = prior.astype(bool), final.astype(bool), valid.astype(bool)
-    if np.any(prior & valid & ~final):
-        raise ValueError('Cumulative observation cannot shrink')
-    old = int(np.count_nonzero(prior & valid))
-    new = int(np.count_nonzero(final & ~prior & valid))
-    total = int(np.count_nonzero(final & valid))
-    assert old + new == total
-    return dict(action_count=actions, new_area_m2=new*mpp*mpp,
-                new_area_m2_per_action=new*mpp*mpp/actions,
-                prior_seen_area_m2=old*mpp*mpp, total_covered_area_m2=total*mpp*mpp,
-                new_valid_cells=new, prior_valid_cells=old, total_valid_cells=total)
 
 
 def history_prompt(old):
@@ -63,49 +52,6 @@ def history_prompt(old):
     return new
 
 
-def render(path, coords, grid, prior, final, start, end, bounds, title, variant, mpp):
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    from matplotlib.patches import Patch
-    from matplotlib.lines import Line2D
-    valid = grid == 1
-    rgb = np.ones((*valid.shape, 3))
-    rgb[valid] = [.83, .84, .85]
-    rgb[prior.astype(bool) & valid] = [.61, .70, .78]
-    rgb[final.astype(bool) & ~prior.astype(bool) & valid] = [.65, .84, .92]
-    fig, ax = plt.subplots(figsize=(10, 8))
-    ax.imshow(rgb, interpolation='nearest')
-    if variant == 'history' and start:
-        # Identical stroke style; draw the current path above exact historical overlaps.
-        ax.plot(coords[:start+1, 1], coords[:start+1, 0],
-                c='#f2bd27', lw=1.5, linestyle='-', zorder=3)
-    current = coords[start:end+1]
-    ax.plot(current[:, 1], current[:, 0], c='#b82b35', lw=1.5, linestyle='-', zorder=4)
-    start_size = 110 if np.array_equal(current[0], current[-1]) else 50
-    ax.scatter(current[0, 1], current[0, 0], s=start_size, c='#149253', edgecolors='white', zorder=5)
-    ax.scatter(current[-1, 1], current[-1, 0], s=50, c='#222c41', marker='X', zorder=6)
-    ax.set_xlim(bounds[:2]); ax.set_ylim(bounds[2:]); ax.set_aspect('equal'); ax.axis('off')
-    ax.set_title(title, fontsize=12)
-    xx, yy = bounds[0]+5, bounds[2]-5
-    ax.plot([xx, xx+2/mpp], [yy, yy], c='black', lw=3)
-    ax.text(xx+1/mpp, yy-3, '2 m', ha='center', fontsize=9)
-    historical = variant != 'legacy'
-    legend = [Patch(color=c, label=label) for c, label in [
-        ('#d4d6d9', 'Navigable floor'),
-        ('#9cb3c7', 'Pre-window coverage' if historical else 'Initial coverage'),
-        ('#a6d6eb', 'New coverage')]]
-    if historical:
-        legend.append(Line2D([0], [0], color='#f2bd27', lw=1.5, linestyle='-',
-                             label='History (yellow, when shown)'))
-    legend += [Line2D([0], [0], color='#b82b35', label='Current path' if historical else 'Path'),
-               Line2D([0], [0], marker='o', color='w', markerfacecolor='#149253', label='Start'),
-               Line2D([0], [0], marker='X', color='w', markerfacecolor='#222c41', label='End')]
-    # Fixed axes, bounds, pixels, and scale in all matched variants.
-    fig.legend(handles=legend, loc='lower center', ncol=4 if historical else 3)
-    fig.subplots_adjust(bottom=.12)
-    fig.savefig(path, dpi=140)
-    plt.close(fig)
 
 
 def prepare(source, out, prompt):

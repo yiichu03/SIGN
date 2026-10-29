@@ -1,0 +1,21 @@
+habitat:
+  task:
+    observed_coverage:
+      weight: 0.0
+qwen_reward:
+  enabled: True
+  collect: False
+  beta: 0.1
+  settlement_interval: 128
+  rollout_steps: 256
+  meters_per_pixel: 0.025
+  visibility_dist: 3.0
+  fov: 90.0
+  max_height_range: 0.5
+  python_executable: /scratch/e1538633/liuyi/envs/qwen35/bin/python
+  model_dir: /scratch/e1538633/liuyi/models/Qwen3.5-2B
+  prompt: docs/experiments/qwen-history-solid/prompts/history.txt
+  sample_interval: 250
+  startup_timeout: 600
+  request_timeout: 300
+  verify_first_batch: False

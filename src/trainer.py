@@ -124,6 +124,15 @@ class PPOTrainer(BaseRLTrainer):
         if config is None:
             config = self.config
 
+        if is_eval and getattr(config, 'qwen_reward', None) is not None:
+            with read_write(config):
+                config.qwen_reward.collect = False
+                config.qwen_reward.enabled = False
+        if getattr(config, 'qwen_reward', None) is not None:
+            # Habitat's make_gym_from_config passes only the habitat subtree.
+            with read_write(config):
+                config.habitat.qwen_reward = config.qwen_reward.clone()
+
         self.envs = construct_envs(
             config,
             workers_ignore_signals=False,
@@ -142,6 +151,23 @@ class PPOTrainer(BaseRLTrainer):
             raise ValueError("Coverage settlement_interval must be a nonnegative integer")
         self._coverage_delta_rows = []
 
+        qcfg = getattr(self.config, 'qwen_reward', None)
+        beta = float(getattr(qcfg, 'beta', 0.0))
+        if not np.isfinite(beta) or beta < 0:
+            raise ValueError('Invalid Qwen reward beta')
+        self._qwen_reward = None
+        qwen_active = bool(qcfg is not None and qcfg.enabled and beta > 0)
+        if qcfg is not None:
+            with read_write(self.config):
+                qcfg.collect = qwen_active
+        if qwen_active:
+            ppo = self.config.habitat_baselines.rl.ppo
+            rgb_fov = self.config.habitat.simulator.rgb_sensor.hfov
+            if (self._coverage_weight != 0 or ppo.num_steps != qcfg.rollout_steps
+                    or qcfg.settlement_interval != 128 or ppo.use_double_buffered_sampler
+                    or float(rgb_fov) != float(qcfg.fov)):
+                raise ValueError('Qwen reward geometry/rollout configuration mismatch')
+
         if self.config.habitat_baselines.verbose:
             logger.info(f"config: {self.config}")
 
@@ -151,6 +177,10 @@ class PPOTrainer(BaseRLTrainer):
         )
 
         self._init_envs()
+
+        if qwen_active:
+            for index in range(self.envs.num_envs):
+                self.envs.call_at(index, 'set_qwen_env_index', {'index': index})
 
         action_space = self.envs.action_spaces[0]
         self.policy_action_space = action_space
@@ -220,6 +250,19 @@ class PPOTrainer(BaseRLTrainer):
 
         self.prev_costs = torch.zeros(self.envs.num_envs, 1)
 
+        if qcfg is not None:
+            import hashlib
+            from pathlib import Path
+            from src.qwen_reward import QwenRolloutReward, write_json
+            output = Path(self.config.habitat_baselines.checkpoint_folder).parent/'qwen'
+            output.mkdir(parents=True, exist_ok=True)
+            write_json(output/'initial_parameter_hashes.json', {
+                k: hashlib.sha256(v.detach().cpu().numpy().tobytes()).hexdigest()
+                for k, v in self.agent.state_dict().items()})
+            (output/'effective_config.yaml').write_text(str(self.config))
+            if qwen_active:
+                self._qwen_reward = QwenRolloutReward(qcfg, self.envs.num_envs, ppo_cfg.num_steps, output)
+
     @profiling_wrapper.RangeContext("save_checkpoint")
     def save_checkpoint(
         self, file_name: str, extra_state: Optional[Dict] = None
@@ -251,6 +294,22 @@ class PPOTrainer(BaseRLTrainer):
                 self.config.habitat_baselines.checkpoint_folder, "latest.pth"
             ),
         )
+
+        step = (extra_state or {}).get('step')
+        if self._qwen_reward is not None and step in (4608000, 8192000):
+            import hashlib
+            import shutil
+            from pathlib import Path
+            from src.qwen_reward import write_json
+            folder = Path(self.config.habitat_baselines.checkpoint_folder)
+            target = folder/f'milestone_{step}.pth'
+            if target.exists():
+                raise RuntimeError('Refusing to overwrite milestone checkpoint')
+            temporary = target.with_suffix('.tmp')
+            shutil.copyfile(folder/file_name, temporary)
+            temporary.rename(target)
+            write_json(target.with_suffix('.json'), dict(step=step, path=str(target),
+                sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
 
     def load_checkpoint(self, checkpoint_path: str, *args, **kwargs) -> Dict:
         r"""Load checkpoint of specified path as a dict.
@@ -383,6 +442,9 @@ class PPOTrainer(BaseRLTrainer):
             list(x) for x in zip(*outputs)
         ]
 
+        if self._qwen_reward is not None:
+            self._qwen_reward.collect(self.rollouts.current_rollout_step_idx, dones, infos)
+
         if self._coverage_weight > 0:
             self._coverage_delta_rows.append([
                 float(info["observed_coverage.delta_m2"]) for info in infos
@@ -496,6 +558,10 @@ class PPOTrainer(BaseRLTrainer):
         ppo_cfg = self.config.habitat_baselines.rl.ppo
         t_update_model = time.time()
         coverage_metrics = self._add_coverage_bonus()
+        if self._qwen_reward is not None:
+            coverage_metrics.update(self._qwen_reward.settle(
+                self.rollouts.buffers['rewards'], self.rollouts.buffers['masks'],
+                self.rollouts.buffers['nav_rewards']))
         with inference_mode():
             step_batch = self.rollouts.buffers[self.rollouts.current_rollout_step_idx]
 
@@ -683,6 +749,8 @@ class PPOTrainer(BaseRLTrainer):
 
                 profiling_wrapper.range_pop()  # train update
 
+            if self._qwen_reward is not None:
+                self._qwen_reward.client.close()
             self.envs.close()
 
     def _eval_checkpoint(

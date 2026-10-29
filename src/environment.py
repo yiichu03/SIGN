@@ -85,6 +85,52 @@ class NavRLEnvX(RLDroneEnv):
         return dic
 
 
+class QwenNavRLEnvX(NavRLEnvX):
+    """Snapshot the completed action before VectorEnv's automatic reset."""
+    def __init__(self, config, dataset=None):
+        from src.qwen_rollout import SegmentCollector
+        self.qwen_cfg = config.qwen_reward
+        self.qwen_collector = SegmentCollector(self.qwen_cfg.settlement_interval, self.qwen_cfg.rollout_steps)
+        super().__init__(config, dataset)
+
+    def _qwen_pose(self):
+        import numpy as np
+        from habitat.utils.geometry_utils import quaternion_rotate_vector
+        from habitat.utils.visualizations import maps
+        state = self.habitat_env.sim.get_agent_state()
+        geometry = self.qwen_collector.geometry
+        rc = maps.to_grid(state.position[2], state.position[0], geometry.grid.shape,
+                          sim=self.habitat_env.sim) if geometry is not None else (0, 0)
+        forward = quaternion_rotate_vector(state.rotation, np.array([0., 0., -1.]))
+        return rc, float(np.arctan2(forward[0], forward[2])), state.position.copy()
+
+    def reset(self):
+        from src.qwen_geometry import EpisodeCoverage, GeometryError
+        from habitat.utils.visualizations import maps
+        observations = super().reset()
+        cfg = self.qwen_cfg
+        try:
+            grid = maps.get_topdown_map_from_sim(self.habitat_env.sim, draw_border=False,
+                                               meters_per_pixel=cfg.meters_per_pixel)
+            geometry = EpisodeCoverage(grid, cfg.meters_per_pixel, cfg.visibility_dist,
+                                       cfg.fov, cfg.max_height_range)
+            reason = None
+        except (GeometryError, RuntimeError, ValueError) as exc:
+            geometry, reason = None, 'map_unavailable_' + type(exc).__name__ + ':' + str(exc)
+        episode = self.habitat_env.current_episode
+        self.qwen_collector.reset(episode.scene_id, episode.episode_id, geometry, reason)
+        if geometry is not None:
+            geometry.observe(*self._qwen_pose())
+        return observations
+
+    def step(self, *args, **kwargs):
+        from src.qwen_rollout import PAYLOAD_KEY
+        observations, reward, done, info = super().step(*args, **kwargs)
+        info = dict(info)
+        info[PAYLOAD_KEY] = self.qwen_collector.step(*self._qwen_pose(), done)
+        return observations, reward, done, info
+
+
 @habitat.registry.register_env(name="GymHabitatEnvX")
 class GymHabitatEnvX(gym.Wrapper):
     """
@@ -93,6 +139,11 @@ class GymHabitatEnvX(gym.Wrapper):
     """
 
     def __init__(self, config: Config, dataset: Optional[Dataset] = None):
-        base_env = NavRLEnvX(config=config, dataset=dataset)
+        cfg = getattr(config, 'qwen_reward', None)
+        cls = QwenNavRLEnvX if cfg is not None and cfg.collect else NavRLEnvX
+        base_env = cls(config=config, dataset=dataset)
         env = HabGymWrapper(base_env)
         super().__init__(env)
+
+    def set_qwen_env_index(self, index):
+        self.env._env.qwen_collector.env_id = index

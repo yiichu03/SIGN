@@ -35,6 +35,8 @@ class DA_PPO(PPO):
         self.aug_weight=0.5
 
     def add_config(self, config):
+        qcfg = getattr(config, 'qwen_reward', None)
+        self.mrq_navigation_only = bool(qcfg is not None and qcfg.enabled and qcfg.beta > 0)
         self.config = config
         self.use_aug_flag = True
 
@@ -99,7 +101,8 @@ class DA_PPO(PPO):
 
                     # Mask out states past termination.
                     dyn_loss = masked_mse(pred_zs, target, prev_not_done)
-                    reward_loss = (self.two_hot.cross_entropy_loss(pred_r, batch["rewards"][:-1]) * prev_not_done).mean()
+                    reward_target = batch.get("nav_rewards", batch["rewards"]) if self.mrq_navigation_only else batch["rewards"]
+                    reward_loss = (self.two_hot.cross_entropy_loss(pred_r, reward_target[:-1]) * prev_not_done).mean()
                     done_loss = masked_mse(pred_d, torch.logical_not(prev_not_done).float())
 
                     pred_loss = self.dyn_weight * dyn_loss + self.reward_weight * reward_loss + self.done_weight * done_loss
