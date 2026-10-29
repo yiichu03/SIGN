@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "episodes": 4200,
+  "scenes": 14,
+  "num_envs": 6,
+  "max_steps": 500,
+  "seed": 100,
+  "hash_seed": "set by PBS to0",
+  "qwen_config_absent": true,
+  "coverage_weight": 0.0,
+  "coverage_mpp": 0.1,
+  "original_native_evaluator": true
+}

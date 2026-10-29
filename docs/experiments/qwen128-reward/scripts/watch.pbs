@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#PBS -N qwen128-eval-watch
+#PBS -o /scratch/e1538633/liuyi/logs/qwen128_reward_20261029/watch.pbs.log
+#PBS -l walltime=168:00:00
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=1:mem=2gb
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi
+python3 /scratch/e1538633/liuyi/logs/qwen128_reward_20261029/watch_milestones.py --train-job "$QWEN_TRAIN_JOB" --step "$QWEN_EVAL_STEP"

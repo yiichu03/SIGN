@@ -1,0 +1,44 @@
+{
+  "row": {
+    "id": "r0000015_e7_reset65_s175_t238",
+    "image": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/short_qwen_40960/qwen/tmp/rollout_0000015/r0000015_e7_reset65_s175_t238.png",
+    "metadata": {
+      "action_count": 63,
+      "new_area_m2": 0.7200000000000001,
+      "new_area_m2_per_action": 0.01142857142857143,
+      "prior_seen_area_m2": 12.146250000000002,
+      "total_covered_area_m2": 12.86625
+    },
+    "image_sha256": "85d406615b03d9cdb1507064baabbffeb38c66c175ba714bcd165a885567d5a6"
+  },
+  "identity": {
+    "env_id": 7,
+    "reset_index": 65,
+    "episode_id": "6565",
+    "scene_id": "data/scene_datasets/gibson/Hainesburg.glb",
+    "rollout_id": 15,
+    "start": 175,
+    "end": 238,
+    "global_start": 3840,
+    "global_end": 3903
+  },
+  "result": {
+    "id": "r0000015_e7_reset65_s175_t238",
+    "p_low": 0.2698547268221156,
+    "p_medium": 0.5028892062299235,
+    "p_high": 0.2272560669479609,
+    "q": 0.47870067006292266,
+    "valid": true,
+    "error": null,
+    "logits": [
+      22.461013793945312,
+      23.083499908447266,
+      22.289207458496094
+    ],
+    "candidate_mass": 0.988021731376648,
+    "prompt_version": "12081a916f12d7be09cf64bfcfc390bcfcdf2508fd5eda9f195943615027c404",
+    "batch_seconds": 1.963844062294811
+  },
+  "original_input_image": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/short_qwen_40960/qwen/tmp/rollout_0000015/r0000015_e7_reset65_s175_t238.png",
+  "sample_image": "r0000015_e7_reset65_s175_t238.png"
+}

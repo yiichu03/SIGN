@@ -1,0 +1,44 @@
+{
+  "row": {
+    "id": "r0000010_e5_reset49_s173_t233",
+    "image": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/short_qwen_40960/qwen/tmp/rollout_0000010/r0000010_e5_reset49_s173_t233.png",
+    "metadata": {
+      "action_count": 60,
+      "new_area_m2": 0.0,
+      "new_area_m2_per_action": 0.0,
+      "prior_seen_area_m2": 15.334375000000001,
+      "total_covered_area_m2": 15.334375000000001
+    },
+    "image_sha256": "7ae44d91c4193d7c931ab74768ffd762f7dcd3569dd3322a814f9f8533c80c4f"
+  },
+  "identity": {
+    "env_id": 5,
+    "reset_index": 49,
+    "episode_id": "6859",
+    "scene_id": "data/scene_datasets/gibson/Superior.glb",
+    "rollout_id": 10,
+    "start": 173,
+    "end": 233,
+    "global_start": 2560,
+    "global_end": 2620
+  },
+  "result": {
+    "id": "r0000010_e5_reset49_s173_t233",
+    "p_low": 0.6051678866562575,
+    "p_medium": 0.2603827455098813,
+    "p_high": 0.1344493678338611,
+    "q": 0.2646407405888017,
+    "valid": true,
+    "error": null,
+    "logits": [
+      23.018909454345703,
+      22.175556182861328,
+      21.514591217041016
+    ],
+    "candidate_mass": 0.9878295063972473,
+    "prompt_version": "12081a916f12d7be09cf64bfcfc390bcfcdf2508fd5eda9f195943615027c404",
+    "batch_seconds": 1.891839433927089
+  },
+  "original_input_image": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/short_qwen_40960/qwen/tmp/rollout_0000010/r0000010_e5_reset49_s173_t233.png",
+  "sample_image": "r0000010_e5_reset49_s173_t233.png"
+}

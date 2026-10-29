@@ -1,0 +1,273 @@
+{
+  "passed": true,
+  "published_windows": 44,
+  "published_trajectories": 32,
+  "all_masks_statistics_exact": true,
+  "solid_wall_occlusion_verified": true,
+  "checks": [
+    {
+      "id": "pilot_group_01_C01_s000_e035",
+      "actions": 35,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C02_s000_e031",
+      "actions": 31,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C03_s000_e034",
+      "actions": 34,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C04_s000_e038",
+      "actions": 38,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C05_s000_e033",
+      "actions": 33,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C06_s000_e039",
+      "actions": 39,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C07_s000_e032",
+      "actions": 32,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_01_C08_s000_e036",
+      "actions": 36,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C01_s000_e080",
+      "actions": 80,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C02_s000_e069",
+      "actions": 69,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C03_s097_e225",
+      "actions": 128,
+      "history": 97,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C03_s000_e225",
+      "actions": 225,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C04_s000_e047",
+      "actions": 47,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C05_s000_e100",
+      "actions": 100,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C06_s000_e117",
+      "actions": 117,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C07_s000_e036",
+      "actions": 36,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C08_s058_e186",
+      "actions": 128,
+      "history": 58,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "pilot_group_02_C08_s000_e186",
+      "actions": 186,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C01_s122_e250",
+      "actions": 128,
+      "history": 122,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C01_s000_e250",
+      "actions": 250,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C02_s037_e165",
+      "actions": 128,
+      "history": 37,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C02_s000_e165",
+      "actions": 165,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C03_s000_e044",
+      "actions": 44,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C04_s128_e256",
+      "actions": 128,
+      "history": 128,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C04_s000_e256",
+      "actions": 256,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C05_s000_e044",
+      "actions": 44,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C06_s024_e152",
+      "actions": 128,
+      "history": 24,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C06_s000_e152",
+      "actions": 152,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C07_s000_e044",
+      "actions": 44,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C08_s128_e256",
+      "actions": 128,
+      "history": 128,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_01_C08_s000_e256",
+      "actions": 256,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C01_s000_e072",
+      "actions": 72,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C02_s000_e077",
+      "actions": 77,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C03_s013_e141",
+      "actions": 128,
+      "history": 13,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C03_s000_e141",
+      "actions": 141,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C04_s128_e256",
+      "actions": 128,
+      "history": 128,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C04_s000_e256",
+      "actions": 256,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C05_s018_e146",
+      "actions": 128,
+      "history": 18,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C05_s000_e146",
+      "actions": 146,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C06_s128_e256",
+      "actions": 128,
+      "history": 128,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C06_s000_e256",
+      "actions": 256,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C07_s128_e256",
+      "actions": 128,
+      "history": 128,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C07_s000_e256",
+      "actions": 256,
+      "history": 0,
+      "masks_and_stats_exact": true
+    },
+    {
+      "id": "diverse_group_02_C08_s000_e066",
+      "actions": 66,
+      "history": 0,
+      "masks_and_stats_exact": true
+    }
+  ]
+}

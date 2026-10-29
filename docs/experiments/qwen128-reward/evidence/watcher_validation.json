@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "both_exact_milestones_tested": true,
+  "corrupt_checkpoint_rejected": true,
+  "idempotent_receipt": true,
+  "real_pbs_submission": false,
+  "protocol": "GPU eval pre-submitted with afterok dependency on this CPU waiter"
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "original_fields_changed": {},
+  "approved_added": {
+    "habitat.task.observed_coverage.weight": 0.0,
+    "qwen_reward.enabled": true,
+    "qwen_reward.collect": false,
+    "qwen_reward.beta": 0.1,
+    "qwen_reward.settlement_interval": 128,
+    "qwen_reward.rollout_steps": 256,
+    "qwen_reward.meters_per_pixel": 0.025,
+    "qwen_reward.visibility_dist": 3.0,
+    "qwen_reward.fov": 90.0,
+    "qwen_reward.max_height_range": 0.5,
+    "qwen_reward.python_executable": "/scratch/e1538633/liuyi/envs/qwen35/bin/python",
+    "qwen_reward.model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+    "qwen_reward.prompt": "docs/experiments/qwen-history-solid/prompts/history.txt",
+    "qwen_reward.sample_interval": 250,
+    "qwen_reward.startup_timeout": 600,
+    "qwen_reward.request_timeout": 300,
+    "qwen_reward.verify_first_batch": false
+  }
+}

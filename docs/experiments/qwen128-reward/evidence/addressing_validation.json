@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "environments": 8,
+  "rollouts": 6,
+  "transitions": 12288,
+  "segments": 446,
+  "exact_end_rows": true,
+  "no_duplicate_ids": true,
+  "masks_unchanged": true,
+  "navigation_rewards_unchanged": true
+}

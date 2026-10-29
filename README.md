@@ -130,3 +130,6 @@ habitat_baselines.eval.split test_easy
 ## Qwen history with solid paths
 
 [Results, controls and validation](docs/experiments/qwen-history-solid/VALIDATION.md) · [128/256 report](docs/experiments/qwen-history-solid/REPORT.md) · [Blank human review table](docs/experiments/qwen-history-solid/human_review.csv)
+
+
+Qwen128 training reward and verified short-run evidence: [experiment record](docs/experiments/qwen128-reward/README.md).

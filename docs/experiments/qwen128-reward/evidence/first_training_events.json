@@ -1,0 +1,247 @@
+{
+  "training_job": "1507268.stdct-mgmt-02",
+  "runtime_commit": "81fedec56b37921c350ce8064106c32788bb3e04",
+  "training_started": true,
+  "steps": 8192,
+  "all_scalars_finite": true,
+  "scalar_series": 55,
+  "completed_qwen_rollouts": 4,
+  "initial_parameters_equal_to_short": true,
+  "fresh_initialization": true,
+  "worker_boot": {
+    "ok": true,
+    "kind": "ready",
+    "pid": 1100116,
+    "prompt_version": "12081a916f12d7be09cf64bfcfc390bcfcdf2508fd5eda9f195943615027c404",
+    "environment": {
+      "torch": "2.6.0+cu124",
+      "transformers": "5.17.0",
+      "gpu": "NVIDIA A40",
+      "model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+      "model_load_seconds": 16.817981156054884,
+      "dtype": "torch.float32"
+    }
+  },
+  "last_scalars": {
+    "reward": {
+      "step": 8192,
+      "value": -1.131143569946289
+    },
+    "metrics/collisions.count": {
+      "step": 8192,
+      "value": 33.10810852050781
+    },
+    "metrics/cost": {
+      "step": 8192,
+      "value": 33.10810852050781
+    },
+    "metrics/distance_to_goal": {
+      "step": 8192,
+      "value": 5.065056324005127
+    },
+    "metrics/distance_to_view": {
+      "step": 8192,
+      "value": 8.18923568725586
+    },
+    "metrics/soft_spl": {
+      "step": 8192,
+      "value": 0.07346592098474503
+    },
+    "metrics/spl": {
+      "step": 8192,
+      "value": 0.018656859174370766
+    },
+    "metrics/success": {
+      "step": 8192,
+      "value": 0.027027027681469917
+    },
+    "metrics/view_angle": {
+      "step": 8192,
+      "value": 179.00230407714844
+    },
+    "metrics/view_match": {
+      "step": 8192,
+      "value": 0.013513513840734959
+    },
+    "learner/mrq_r_loss": {
+      "step": 8192,
+      "value": 0.8925960063934326
+    },
+    "learner/mrq_s_loss": {
+      "step": 8192,
+      "value": 0.018856100738048553
+    },
+    "learner/mrq_d_loss": {
+      "step": 8192,
+      "value": 0.022871222347021103
+    },
+    "learner/value_pred_min": {
+      "step": 8192,
+      "value": -0.7252532839775085
+    },
+    "learner/value_pred_mean": {
+      "step": 8192,
+      "value": -0.5800113677978516
+    },
+    "learner/value_pred_max": {
+      "step": 8192,
+      "value": -0.13087327778339386
+    },
+    "learner/prob_ratio_min": {
+      "step": 8192,
+      "value": 0.9671304225921631
+    },
+    "learner/prob_ratio_mean": {
+      "step": 8192,
+      "value": 1.0004212856292725
+    },
+    "learner/prob_ratio_max": {
+      "step": 8192,
+      "value": 1.0536153316497803
+    },
+    "learner/value_loss": {
+      "step": 8192,
+      "value": 0.22975754737854004
+    },
+    "learner/action_loss": {
+      "step": 8192,
+      "value": 0.13888739049434662
+    },
+    "learner/dist_entopy": {
+      "step": 8192,
+      "value": 2.592357635498047
+    },
+    "learner/aug_loss": {
+      "step": 8192,
+      "value": 2.581068515777588
+    },
+    "learner/aug_act_loss": {
+      "step": 8192,
+      "value": 2.5810670852661133
+    },
+    "learner/aug_critic_loss": {
+      "step": 8192,
+      "value": 1.4813376765232533e-06
+    },
+    "learner/grad_norm": {
+      "step": 8192,
+      "value": 0.1841200590133667
+    },
+    "learner/ppo_fraction_clipped": {
+      "step": 8192,
+      "value": 0.0
+    },
+    "learner/qc_loss": {
+      "step": 8192,
+      "value": 0.6947747468948364
+    },
+    "learner/qwen_bonus_sum": {
+      "step": 8192,
+      "value": 0.4686683118343353
+    },
+    "learner/qwen_bonus_per_step": {
+      "step": 8192,
+      "value": 0.00022884194913785905
+    },
+    "learner/qwen_nav_reward_sum": {
+      "step": 8192,
+      "value": -55.64434051513672
+    },
+    "learner/qwen_mixed_reward_sum": {
+      "step": 8192,
+      "value": -55.17566680908203
+    },
+    "learner/qwen_segments": {
+      "step": 8192,
+      "value": 55.0
+    },
+    "learner/qwen_valid_segments": {
+      "step": 8192,
+      "value": 55.0
+    },
+    "learner/qwen_valid_fraction": {
+      "step": 8192,
+      "value": 1.0
+    },
+    "learner/qwen_new_area_m2": {
+      "step": 8192,
+      "value": 98.70375061035156
+    },
+    "learner/qwen_valid_actions": {
+      "step": 8192,
+      "value": 2048.0
+    },
+    "learner/qwen_geometry_seconds": {
+      "step": 8192,
+      "value": 9.967519760131836
+    },
+    "learner/qwen_render_seconds": {
+      "step": 8192,
+      "value": 45.54099655151367
+    },
+    "learner/qwen_worker_seconds": {
+      "step": 8192,
+      "value": 13.269609451293945
+    },
+    "learner/qwen_total_seconds": {
+      "step": 8192,
+      "value": 59.043907165527344
+    },
+    "learner/qwen_worker_peak_gpu_gib": {
+      "step": 8192,
+      "value": 9.364541053771973
+    },
+    "learner/qwen_q_mean": {
+      "step": 8192,
+      "value": 0.5472574830055237
+    },
+    "learner/qwen_q_min": {
+      "step": 8192,
+      "value": 0.1416146606206894
+    },
+    "learner/qwen_q_max": {
+      "step": 8192,
+      "value": 0.7929447293281555
+    },
+    "learner/qwen_q_p10": {
+      "step": 8192,
+      "value": 0.255435973405838
+    },
+    "learner/qwen_q_p90": {
+      "step": 8192,
+      "value": 0.6961223483085632
+    },
+    "learner/qwen_q_bin_0": {
+      "step": 8192,
+      "value": 0.072727270424366
+    },
+    "learner/qwen_q_bin_1": {
+      "step": 8192,
+      "value": 0.072727270424366
+    },
+    "learner/qwen_q_bin_2": {
+      "step": 8192,
+      "value": 0.38181817531585693
+    },
+    "learner/qwen_q_bin_3": {
+      "step": 8192,
+      "value": 0.4727272689342499
+    },
+    "learner/qwen_q_bin_4": {
+      "step": 8192,
+      "value": 0.0
+    },
+    "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+      "step": 4096,
+      "value": 1.0
+    },
+    "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+      "step": 6144,
+      "value": 1.0
+    },
+    "perf/fps": {
+      "step": 8192,
+      "value": 21.732084274291992
+    }
+  }
+}
