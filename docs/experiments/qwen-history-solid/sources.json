@@ -1,0 +1,514 @@
+[
+  {
+    "trajectory_id": "pilot_group_01_C01",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 35,
+    "image_sha256": "5ec1e53fde5e0ec4be9147d500f44bb581a71bc47ee0a17ef7111993bfa023f9",
+    "files": {
+      "original.png": "5ec1e53fde5e0ec4be9147d500f44bb581a71bc47ee0a17ef7111993bfa023f9",
+      "map_data.npz": "cc33edfe9f1a859fd9957d6cbd3c821158882639fa27d3c56dd8729bc4f0b8ea",
+      "original_2b_score.json": "0716ca2d470a911ada03df3700ef4532d002cab706e381630abbfb7aa9d8d7c0",
+      "trajectory.json.gz": "062661e05227d84ebc24f715961a9269c80decad2f4f3f9b9ea738ff1a8238c4",
+      "display_map_data.npz": "ba4e0b9780f172b4ddaee25e8e828f60a4292fc8b8f4b64f3b46bf5d90fd2efa",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C01"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C02",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 31,
+    "image_sha256": "19914bf9618426c07438688836d3a8ea7275b9a85cd202cc0e7c456ee6e6d8c4",
+    "files": {
+      "original.png": "19914bf9618426c07438688836d3a8ea7275b9a85cd202cc0e7c456ee6e6d8c4",
+      "map_data.npz": "db0ca0fab4d5b80709632736644bd496efd188e8230eecedc9e0da3500446e96",
+      "original_2b_score.json": "877f2f9fe10344580df596d06a0c16f78304f4e57b47feeb8f2688a5577972db",
+      "trajectory.json.gz": "1fbf41d7df2ecc2c769699ce032d9fc3f8a59a2fb4b426372a07ae0969ce7bd0",
+      "display_map_data.npz": "12781803ce0302a62866e175912e085869f241b03901d26900906ffcabcb98be",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C02"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C03",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 34,
+    "image_sha256": "d331e1776e0e8da1ae46635018cbbc7cca3201b943ca4515323b55dfbb5f74c0",
+    "files": {
+      "original.png": "d331e1776e0e8da1ae46635018cbbc7cca3201b943ca4515323b55dfbb5f74c0",
+      "map_data.npz": "14d66852a8dec70811e06e20680659a7536c9a8977e3776eab5090fe05bc1a33",
+      "original_2b_score.json": "3c6ba2f61b2eb31c3c4fcdcdbdeadc70ac3ad2086b80258bbd41edb4dd9850cb",
+      "trajectory.json.gz": "088e9b2f3da3c0c11c142137e54a9c4fd5ce8cc03d7a9c785a59eea44cbd5dc4",
+      "display_map_data.npz": "bb294cac04f8181a5c9bf35b1258b07e160b5c734aae8e58f7e50564f3ca5952",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C03"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C04",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 38,
+    "image_sha256": "dc22dcb6fcfc4220aed8ca62618160a7d4965ac91f26532b44f1afc52e00cdb1",
+    "files": {
+      "original.png": "dc22dcb6fcfc4220aed8ca62618160a7d4965ac91f26532b44f1afc52e00cdb1",
+      "map_data.npz": "b19c745ea29bbffc4eb488e8349f26fdd3e67a85f0d9cde79d420cda4200d81b",
+      "original_2b_score.json": "49b559dbda6486fe0b70b126b09318c46772246bde7f7f3c728db20d4a3ade4b",
+      "trajectory.json.gz": "d34d9de8eeee17395227d864e9cdbbc88caf2e8afbbe9838cc438c9281c3f4cf",
+      "display_map_data.npz": "339e2d281f6ed9ae3c443a0b6ac44a54aa9e81ee38be7793934bb0977e04f992",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C04"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C05",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 33,
+    "image_sha256": "1e4bb7582ab69dea815844282857c6a5947095e479169aecb97bc15fda55f030",
+    "files": {
+      "original.png": "1e4bb7582ab69dea815844282857c6a5947095e479169aecb97bc15fda55f030",
+      "map_data.npz": "6f16d51ab007cae6fb3c8aa6031aacfc944c79256b1a070277f87e4cadb9edec",
+      "original_2b_score.json": "afd2b7d3797e48779b275fefde7e5c85d022d8d5b4bc9d546a2a033afc175398",
+      "trajectory.json.gz": "5488ec6dcf7a08fabe2231656201b305f0d8818257901aba5bacae36f429373d",
+      "display_map_data.npz": "313630c55fa39d792fbc5be80c63a022eb4a15290ca8620643d8837f91b62405",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C05"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C06",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 39,
+    "image_sha256": "9004ce7594ce9bb7b28db384d6b42abdab57c7ffaac0e0a784e3e3dc1091d13e",
+    "files": {
+      "original.png": "9004ce7594ce9bb7b28db384d6b42abdab57c7ffaac0e0a784e3e3dc1091d13e",
+      "map_data.npz": "a7c21acc2a441c521ee00a9dcab247a581f5baf7d7d93b79717ca0f606a9a830",
+      "original_2b_score.json": "4628c28b98b7fe9d994da536ed161fac4ad1929382da5539552d34510cd6da44",
+      "trajectory.json.gz": "97285373798ac56613ec755197f9138f26a632881b4e0e3df89881b714398f95",
+      "display_map_data.npz": "8cea0eb8dd3505d9c7144c78913ca745e861120dd8805f486efe9121b0b8ac1e",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C06"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C07",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 32,
+    "image_sha256": "9ff35878771915e064a2fbecb14320f76ee57de386360199e63a0b660fc6bc2d",
+    "files": {
+      "original.png": "9ff35878771915e064a2fbecb14320f76ee57de386360199e63a0b660fc6bc2d",
+      "map_data.npz": "0e376476485a34573db341136a270eca8e5008a55bb1d95cd5555d8959fd7c2c",
+      "original_2b_score.json": "046284cee20fc81f8b60f5de75a393ad5d821bb681592bc9a107b2b31b2d85b8",
+      "trajectory.json.gz": "41f54b649ead9258831f5ca24c73a3d51a69162f2b7f1d738637668292f47aff",
+      "display_map_data.npz": "50acdc494af24c0f23c233e65eb2daae80a2e4a590a6f5ea070cec686a73861c",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C07"
+  },
+  {
+    "trajectory_id": "pilot_group_01_C08",
+    "scene": "Edgemere",
+    "episode_id": "200",
+    "original_actions": 36,
+    "image_sha256": "d69d10e65ffce366bfacbce0791030b7447e46aaf8207c11ec69f3fe475569cd",
+    "files": {
+      "original.png": "d69d10e65ffce366bfacbce0791030b7447e46aaf8207c11ec69f3fe475569cd",
+      "map_data.npz": "2d64dbc284d94ba663d7bb7cc7c28aa296ab522e81eb97364aea8ca6549ea88b",
+      "original_2b_score.json": "a78c775bb69f5c7e7d574785f67d2f981259ae39d7bf28a6f691a2c219b6e1ee",
+      "trajectory.json.gz": "9dae3bc0da9ace484aebfc0e55673d83ac41ed9e9c865ef7cd9e5cdeaf1f88ab",
+      "display_map_data.npz": "f9d1632afd85d2763cec7ef52d771f5bbc72a4b6722784118461bb0b156b167b",
+      "task.json.gz": "3b883a0961ec5cd037ed898070f92c3ac322942139383d0be0ab88dce06812ef"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_01/C08"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C01",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 80,
+    "image_sha256": "eab26039c303c5d80d414f1502faeda631b92d24829b1a09fd19cc179886f44e",
+    "files": {
+      "original.png": "eab26039c303c5d80d414f1502faeda631b92d24829b1a09fd19cc179886f44e",
+      "map_data.npz": "600f707986afe344404eb3905d3ec9fc99730807627228849d094e27ddd31766",
+      "original_2b_score.json": "3e3d71c01e59e1d857bf3a4c3300c78f58c5e5c7408125a0c56566493eab7362",
+      "trajectory.json.gz": "9af433e0bdef78bb30390034ff98470593543aed34bcf7334faf0d1baac4767d",
+      "display_map_data.npz": "d1f4abfe69d7a051153ea1250056d4920423db8f4a8f0e98b891282412eb1c6e",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C01"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C02",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 69,
+    "image_sha256": "e9c157d19ee167a3a19cdf14b45707509986c23430b7211b7f41d670dbbb7bdc",
+    "files": {
+      "original.png": "e9c157d19ee167a3a19cdf14b45707509986c23430b7211b7f41d670dbbb7bdc",
+      "map_data.npz": "803c87b9c86c3c063dc931b969699fcde5917a143540f3f38262641c2d400ad3",
+      "original_2b_score.json": "2c3bdd216030ea6adf6751db945ccf73f6bd1019f6993f41695f62149b2ed9aa",
+      "trajectory.json.gz": "cbcf25d1a9d02938a0664a7d963fe187504a51793397c210c84f07588aa5a322",
+      "display_map_data.npz": "f9be1cbbd3063409f2815c250f48e0656275b34c3c4a59ac00022649531ec0b0",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C02"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C03",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 225,
+    "image_sha256": "327d2bcd5796b406f3282d3398ab4ef377bb35b51ad41b22176a51dac96153a2",
+    "files": {
+      "original.png": "327d2bcd5796b406f3282d3398ab4ef377bb35b51ad41b22176a51dac96153a2",
+      "map_data.npz": "c1666b7ebf67b08e432be29882327ce5de1cb76fc2119aff79a556bca89a4717",
+      "original_2b_score.json": "630fd3c2cfb070650e072e1e6757fb1636485fe06c5d01768bfc848daab1b692",
+      "trajectory.json.gz": "703bf2e4d1762f53570c76753389ca2bb282ba4a7f4951a2314486495de99999",
+      "display_map_data.npz": "6956581585ea0e4f57cc89e0cb8f053dee2feb0e10cecbb0533bc8a7bac82dc3",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C03"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C04",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 47,
+    "image_sha256": "1c742565b573b08fd6a6a696737f97da3d6d90350451e0af906ebc3576fdbeff",
+    "files": {
+      "original.png": "1c742565b573b08fd6a6a696737f97da3d6d90350451e0af906ebc3576fdbeff",
+      "map_data.npz": "c64d4eb9ae15413a22167ca3247a6a1684026fbf83dd819cbcf830349ff9fa4e",
+      "original_2b_score.json": "135658f3a972cb6077c0e84d96b381b212c21edf7f77c50540c5a652f3e6aa94",
+      "trajectory.json.gz": "d53b8906bec22bb26b8bfc6b07969bc1c1a03323267084d59375412295290fa0",
+      "display_map_data.npz": "94ce41fe8eece9248ca5e78470e5d49f352b97fa7ee4becec3e08ae0dec42b34",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C04"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C05",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 100,
+    "image_sha256": "da8e2b2d3f99b925e85131876a464f7e18fb4aa976c671badce29ca77cb584d5",
+    "files": {
+      "original.png": "da8e2b2d3f99b925e85131876a464f7e18fb4aa976c671badce29ca77cb584d5",
+      "map_data.npz": "26df8d619a8db502aabf73a3bc2183f53f53a5e3ed72cb860604adc5199bbf9a",
+      "original_2b_score.json": "0b4f23bd9bcf5f25922e6ebe0c2651690a8aed5f12687bf983aaaa83fdbfa56f",
+      "trajectory.json.gz": "48df39c69df043946e78226124220db529b885fcea7611708786833b221f1af3",
+      "display_map_data.npz": "7085353f19aeb6ef3671d883483d3cde4ba53e5dac378dd47e1189f8acce33d9",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C05"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C06",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 117,
+    "image_sha256": "4d02c6c112dd9b995fee5c0544d30e61945dfa08be0094928ae2422b3f50d34d",
+    "files": {
+      "original.png": "4d02c6c112dd9b995fee5c0544d30e61945dfa08be0094928ae2422b3f50d34d",
+      "map_data.npz": "8d664930343bce0cd8566c6e81b590eed6c5dec068cc6d49c13cabb5492f1a99",
+      "original_2b_score.json": "1e6d491e0ad4d2584842af96c2d0407405c95a68433a76718b69d243a7498fa4",
+      "trajectory.json.gz": "1a98e6345509e095d0535631094ba82976c9d900985041c1e7bed967057729ad",
+      "display_map_data.npz": "89c8066bd11713b4610e05bfd2bc2b82fe8c77b0f278a30c92bcb367a04d4cee",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C06"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C07",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 36,
+    "image_sha256": "efd3aa191255409b8b2b3c1e338076f374222ec5507c2084f08f60fb755a3fc1",
+    "files": {
+      "original.png": "efd3aa191255409b8b2b3c1e338076f374222ec5507c2084f08f60fb755a3fc1",
+      "map_data.npz": "539f8908a459f9217c76b72d9e62de823847cf669923f6ac61024346e4392ecf",
+      "original_2b_score.json": "0585483e704c37207ee4565d91daa097ebb601a75f412bd531d4db79acff32c8",
+      "trajectory.json.gz": "f7709f4dd21a86aa06b02271309aab62343c755c7126faad321ac04cfd8b9008",
+      "display_map_data.npz": "ef8924eada9fe42c99a806745d781c79578616558d99cdab671a366c539914ca",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C07"
+  },
+  {
+    "trajectory_id": "pilot_group_02_C08",
+    "scene": "Denmark",
+    "episode_id": "3800",
+    "original_actions": 186,
+    "image_sha256": "b708e390bfc304ab4569f27ac1669213cf6d60194c2451d96278813f52e5f71d",
+    "files": {
+      "original.png": "b708e390bfc304ab4569f27ac1669213cf6d60194c2451d96278813f52e5f71d",
+      "map_data.npz": "fbd823424e75886d810dd5c1e374b8da4ed5cd39e442601c7f951d7ee145fde2",
+      "original_2b_score.json": "e8c2365d74cb443b00f064d2195715627c3b5cc9592f58da8272b65ce8862532",
+      "trajectory.json.gz": "fe2ef8991e6721e368a5699fbf7f35953b293742f0040cdebec88a163f428817",
+      "display_map_data.npz": "80e2802cdf39aef110c723a041e9bf2a0ab59bb918315a276adbed88be1e27ff",
+      "task.json.gz": "c2863d0f21bacc75118928a6a875ab2f3747b9b309bd07ab5ee485eebf48b7be"
+    },
+    "source_relative": "evidence/trajectories/pilot/group_02/C08"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C01",
+    "scene": "Cantwell",
+    "episode_id": "1703",
+    "original_actions": 250,
+    "image_sha256": "566abd7d2b96035710d0c80a9f7561d6a32e7222afea49e49dc452392c95beb5",
+    "files": {
+      "original.png": "566abd7d2b96035710d0c80a9f7561d6a32e7222afea49e49dc452392c95beb5",
+      "map_data.npz": "37bdbfd2f1334ade2e264d6bc985812fd8b0ecfc3ded8b8bc35c8f7bde34ca49",
+      "original_2b_score.json": "5bb5154f37c4e6756be2fb53a507ded9356416a1355f2cecd21af01f784c5324",
+      "trajectory.json.gz": "d53b4453c3425791fa40c136aa9183f6383a96c653116f2f42d5e4b971f61f5d",
+      "display_map_data.npz": "bb1c8f57b1c5f79f31430e3023bff79d3f060d8d82c0ce74e1c78d3c8806d7fb",
+      "task.json.gz": "ea99e1b80565bd8f0c3d96201e37dcb328fd14e852f8e64b475075dbfe70939c"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C01"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C02",
+    "scene": "Eastville",
+    "episode_id": "4101",
+    "original_actions": 165,
+    "image_sha256": "7968f0b4436f3b6557305dba60d1e116861eb7bfafc48e7460246bda023b6c6c",
+    "files": {
+      "original.png": "7968f0b4436f3b6557305dba60d1e116861eb7bfafc48e7460246bda023b6c6c",
+      "map_data.npz": "b4bbeaac12404b041d5b67c22ef0e26d2f21e1cab96637980225aa6b4c17b900",
+      "original_2b_score.json": "4a09aeeea3c4697bb08a980d71decb0a3c64d49c44dfd27b165a1e4e8957ddcf",
+      "trajectory.json.gz": "9b627e252379078d424ccfd6c9609a0cec3b14e6751d0933e4148c6c8c35a084",
+      "display_map_data.npz": "204b7a0fd5cf8ea31d9bc5a461d0a181f3adc9d93fa1ce110a2ef0924e72d719",
+      "task.json.gz": "6451ffeacb137a0e74d0dcdc0a9a0bcb231bb85ebab4295b8c4b0b7c4cd1b87a"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C02"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C03",
+    "scene": "Elmira",
+    "episode_id": "2900",
+    "original_actions": 44,
+    "image_sha256": "019be014e3ab2328e64d6d593594f2ab863c03c263968b8ca68e76d7dd62450d",
+    "files": {
+      "original.png": "019be014e3ab2328e64d6d593594f2ab863c03c263968b8ca68e76d7dd62450d",
+      "map_data.npz": "01f541f8ce33143c6ee22b8fcb1c614b8f786c5a5dc3532238e65b209805212f",
+      "original_2b_score.json": "27a5ac3a259aace520ea729c72140ecd81a3b617f0e0f2d06e92b5a5e90ea8bd",
+      "trajectory.json.gz": "5bdf89c8cd537d7fdbfaa473869ef33195bdcfc0c9a76817b1286e95ff007083",
+      "display_map_data.npz": "12e5a8d4626214d3004b537dddaad93cb79d6cbad07bdffdf976ba73fc61a0eb",
+      "task.json.gz": "a50861235332f26f26ec9695869fdf1bd7c382dc86743393feee337e2165cc8f"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C03"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C04",
+    "scene": "Eudora",
+    "episode_id": "2000",
+    "original_actions": 256,
+    "image_sha256": "379d4e5cf6f92e6ab441e9ecf40ae8fb8d56ec8c70f8649e8ce336c6a641e6aa",
+    "files": {
+      "original.png": "379d4e5cf6f92e6ab441e9ecf40ae8fb8d56ec8c70f8649e8ce336c6a641e6aa",
+      "map_data.npz": "c74128de135d6a80c57228da1f38796d2e76b576aac6518e9b00747bc306daac",
+      "original_2b_score.json": "f42a7590c679af2ebc99a2663e3b9a6eaf3cad0cad9e2562283cd7ad59c9346b",
+      "trajectory.json.gz": "a09d490c7f1ee080ee82633fa59ce3ca4c958ff9437ab6072c07b528e50d0cfa",
+      "display_map_data.npz": "68bd3cfe7dd9eb91535c69f35326cc4a894e3096c16b03b4c88970b5be24d20b",
+      "task.json.gz": "d7d31d48ba508aeb2efdf111893c9a8d183ef1fb54bfa36920ba5ec68396f43d"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C04"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C05",
+    "scene": "Greigsville",
+    "episode_id": "2600",
+    "original_actions": 44,
+    "image_sha256": "53533dd5908a66dbfe6b412b5389a90be980a986702813504a836f04b60be7c8",
+    "files": {
+      "original.png": "53533dd5908a66dbfe6b412b5389a90be980a986702813504a836f04b60be7c8",
+      "map_data.npz": "62de0f82786c325e0c797da9c52b969db06de12be89717145683a5b3a33c6350",
+      "original_2b_score.json": "fcb3bb934a9ef9664e4852e2d18d2356356ca01cadcedb7037261642627f7d0d",
+      "trajectory.json.gz": "14e0f3d2326940f34df11b579bf5122e54ac346315a751f3801249c23e8f8b92",
+      "display_map_data.npz": "7a4fc344dc9f8243de55b7fc08ab5f2b2c1b125759f806829299791d7b69d963",
+      "task.json.gz": "f4986b2a2e0842291d361c2cc4ebdae44e7654c4dfd407814ced7e359341dd94"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C05"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C06",
+    "scene": "Pablo",
+    "episode_id": "804",
+    "original_actions": 152,
+    "image_sha256": "80394af75d24787b0e73fc2d0357d56195fa1a9d2003bd87214d91463534bfc2",
+    "files": {
+      "original.png": "80394af75d24787b0e73fc2d0357d56195fa1a9d2003bd87214d91463534bfc2",
+      "map_data.npz": "78444325d88727015c42af90cb1e215992b10090edb3e37d77eb6a69107982e2",
+      "original_2b_score.json": "8e2ea406389768fc8561f45bc0cf313d461c34892f6934294edf93c3448241a2",
+      "trajectory.json.gz": "f0215fb90bcb918cda3398c6546829dd2955fc0587c0b45a9f317ade78995340",
+      "display_map_data.npz": "66cd9dfba418a2261901989e8a2523f2522c22d31b2a512b274e12ffd9e977b8",
+      "task.json.gz": "22ae77975063927ef559751f63960022985cb4bd41bf60dc8c7e5f2d05eb3db1"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C06"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C07",
+    "scene": "Ribera",
+    "episode_id": "1100",
+    "original_actions": 44,
+    "image_sha256": "d3c7cb10747030c34f794c603b6bc1920bfad94412c020a2d325cd131c640c48",
+    "files": {
+      "original.png": "d3c7cb10747030c34f794c603b6bc1920bfad94412c020a2d325cd131c640c48",
+      "map_data.npz": "6d5400fb4e1890e06a476a7bcac0371d56d7c7eb3bcbe76819eb07fff89ec5a9",
+      "original_2b_score.json": "0bcaba935667eedd6f47efdaa0171831370812f35356179b6df040dd42edf802",
+      "trajectory.json.gz": "59ecc8cdbe0aea61487bdf8cac0471a0dacae22c876975ca177395941ba3090a",
+      "display_map_data.npz": "8e8786cf905fec161fe79b872369080382604ee09f48aa1c9be05044af249b05",
+      "task.json.gz": "f8f147b0c944ae8d23fb3f2c9f5123751b222f8f528c05e2842c186a94c2c847"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C07"
+  },
+  {
+    "trajectory_id": "diverse_group_01_C08",
+    "scene": "Swormville",
+    "episode_id": "3201",
+    "original_actions": 256,
+    "image_sha256": "5bcc9eea4c0caf417a0165a912fb2cd56d73744b4630d656a87ef1e9b2e83517",
+    "files": {
+      "original.png": "5bcc9eea4c0caf417a0165a912fb2cd56d73744b4630d656a87ef1e9b2e83517",
+      "map_data.npz": "fa873a7f0e5f1ec0d05faeed679d21554e2b1d6b5940e8a468089a40bc563280",
+      "original_2b_score.json": "54ff7ec6035d5c5cf770136b96f937166d31c0cd73dd340f227d3937b5727357",
+      "trajectory.json.gz": "f5bbe887c77573e19b0cfa77da3a846ebe784f05b65ab16be4d06418594dfe0f",
+      "display_map_data.npz": "70c9bbf6c7cb9ed98203052102a7e93f024617b79b9ce1ba575afba999444a63",
+      "task.json.gz": "a3128370ef734ec3efdb1e76ad9dc1568c374addf87b2baf2bc31c49c9e3b163"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_01/C08"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C01",
+    "scene": "Cantwell",
+    "episode_id": "1700",
+    "original_actions": 72,
+    "image_sha256": "91b2951d116231aec57edc5dba270c7ee6c7e6952c3f2af0c3b81430284c556a",
+    "files": {
+      "original.png": "91b2951d116231aec57edc5dba270c7ee6c7e6952c3f2af0c3b81430284c556a",
+      "map_data.npz": "f286d5b91528a78f06feb9ab9b965e98df140e3d9ce9b12c485364d255be5e33",
+      "original_2b_score.json": "2373754990a8dd0f504a3eb0fce35df60a5a8ef998e2c603d00f57ca41cc2293",
+      "trajectory.json.gz": "ec4f64943ca1efe5bfc4ec3ea7cc34232a8f2789239a6979db9221004df2bf72",
+      "display_map_data.npz": "024654dcfc9ef36323af5a585f926bbb50d402a91668e759450b1e32027933b6",
+      "task.json.gz": "e681622f1271b63d4cd55bf4c68ff203b733e01949439eef9e52263a3e64e515"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C01"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C02",
+    "scene": "Eastville",
+    "episode_id": "4102",
+    "original_actions": 77,
+    "image_sha256": "86a4a6ad0ab99b9c4ae627fd12babecd6561ba667297d82debb03f20fc931e66",
+    "files": {
+      "original.png": "86a4a6ad0ab99b9c4ae627fd12babecd6561ba667297d82debb03f20fc931e66",
+      "map_data.npz": "21444547266369211b0fb136e754fa15913a36964949a3f7a9e3c19a0c2e33ff",
+      "original_2b_score.json": "a62e61d245dbe1545576ebcac59a775d5e97a7c348fb7ff9658fa958fb194dc4",
+      "trajectory.json.gz": "d016b5d4e3f3ef7240c74f1f7ebf1d20eaee261a3f6eb01442c242fbec6005fe",
+      "display_map_data.npz": "02cb994423f2b1640ad47a3b382bbc665075692d06ff1708e17473a30b7314ee",
+      "task.json.gz": "6997b673c83d82b21d157cbc1b0a1c6ce31a0b7972823024091de4ddb47237bd"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C02"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C03",
+    "scene": "Elmira",
+    "episode_id": "2954",
+    "original_actions": 141,
+    "image_sha256": "33b9275a82bd2dc546a99711633a49025e052949b472638c53e1a8025f194fe5",
+    "files": {
+      "original.png": "33b9275a82bd2dc546a99711633a49025e052949b472638c53e1a8025f194fe5",
+      "map_data.npz": "1c8c5bfcd041db3c66c7803b8dd1a9b1d5b237367228cc3756c4247c161144a5",
+      "original_2b_score.json": "c1cec31628dd955d267690c57a5579f844fab4f44e470faab630348d0e91f4ba",
+      "trajectory.json.gz": "6c4227aaa481fbfbf3e7bf61ae46dd7a39b306df68a7f443e1995dadd11d1e9c",
+      "display_map_data.npz": "723f6e89bbbae4b1449743d067c9e4d5afb9d155ac449ab2b7ab90608bf64c9f",
+      "task.json.gz": "2bece4f8cc80d071e7833231cf95d872bbe6e09ffcb49c9051cc5328b6023e55"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C03"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C04",
+    "scene": "Eudora",
+    "episode_id": "2054",
+    "original_actions": 256,
+    "image_sha256": "367ed6107cf48db60e56a371b5c8c460b4b520094f0979f2bf8018b371980d86",
+    "files": {
+      "original.png": "367ed6107cf48db60e56a371b5c8c460b4b520094f0979f2bf8018b371980d86",
+      "map_data.npz": "57ab825b96d17064fb27b0b4b633fcf16dda6c7ee963a7c40fc62c2c4ec9d97d",
+      "original_2b_score.json": "f7062ee69db5d120e56d63c0b2b47a99d7c6e5e291e71c8ae09a159e8b256b30",
+      "trajectory.json.gz": "6a9c812c87de24746400f7bc0931c911c28a7f46006ea8bbf5f902214b88f9e1",
+      "display_map_data.npz": "c4870ab7bc50d9f763e57e326b4611cd355241212cbbb3babd034431ae87f5b9",
+      "task.json.gz": "5916ea80ff7b683def0c49aa2788f6c04c6a3fd44f9c767f51ddd89ae354a9a8"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C04"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C05",
+    "scene": "Greigsville",
+    "episode_id": "2643",
+    "original_actions": 146,
+    "image_sha256": "dbe3b3c79a74d6cfb5117e2861e57863c816b19c1efd00b540a69691c90e3487",
+    "files": {
+      "original.png": "dbe3b3c79a74d6cfb5117e2861e57863c816b19c1efd00b540a69691c90e3487",
+      "map_data.npz": "73c7e0824c270a619ab597995004e7d75702314cad5e4924e8dd1cc386507749",
+      "original_2b_score.json": "c9bae68f62b2d716ad54901f64904601cb805e3574970c7242afccc1e51bd613",
+      "trajectory.json.gz": "159ef3cd14f05d617f2bcae9feb0580e34381e4e215a4a9bf1a9a61c733eff9a",
+      "display_map_data.npz": "55ce893749fa40343151c6ca405a77f727e2cbc7a2e6ab62cb452ba11339b5bc",
+      "task.json.gz": "edc66b60f993669c3012ebeac935300a6775d7e68cc6a0f66324a61598caf6d3"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C05"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C06",
+    "scene": "Pablo",
+    "episode_id": "800",
+    "original_actions": 256,
+    "image_sha256": "05dac6c9145e62e562a61d2000e6f42dc2d947af3623832a5246675a2c102683",
+    "files": {
+      "original.png": "05dac6c9145e62e562a61d2000e6f42dc2d947af3623832a5246675a2c102683",
+      "map_data.npz": "598ecd241199f53d76c27f89b94812ca5e7cb74f444c682fa80d810bc1d26904",
+      "original_2b_score.json": "b5636ec8e7386228ef6a38f14dbe950be88685cf86aedc798ddf92ed7c2618a3",
+      "trajectory.json.gz": "79276ce7188ca85e6abe0a4b06bb70992a1c48a716d60549f8c57a0050a85a0d",
+      "display_map_data.npz": "c4f77e29b1882a5272391a7b5557471460eb320ef3f0610eabe3d33f9ba77271",
+      "task.json.gz": "11aaecff398eb11748143f56a89b88ac4313d57dc418b5b54bc3a27666822241"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C06"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C07",
+    "scene": "Ribera",
+    "episode_id": "1114",
+    "original_actions": 256,
+    "image_sha256": "037894b9f4da75df5ac3a495778a57c5ebe46e5cf45f0627504ac19634ebd240",
+    "files": {
+      "original.png": "037894b9f4da75df5ac3a495778a57c5ebe46e5cf45f0627504ac19634ebd240",
+      "map_data.npz": "116c251cf9aebc379883861d8c43339433652bc0cd5cdd4a492a13f5501a73ce",
+      "original_2b_score.json": "51bb72a07bb48905e0a982ac2da8bcd5b2d510159cb14669a19e13555d44056b",
+      "trajectory.json.gz": "0acffa677a2aef0d6493696f53d855bb87b2e1ab2a4e91dba28252b867a838c1",
+      "display_map_data.npz": "1984da1a1d3ac157795fe95d38179417c35f3c59a004f403da44bc2266bfd8b7",
+      "task.json.gz": "3d04ee9e1a330c323d0f8ddfed4084e7a83b8de72cc5a309a67edc6fe7be992a"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C07"
+  },
+  {
+    "trajectory_id": "diverse_group_02_C08",
+    "scene": "Swormville",
+    "episode_id": "3200",
+    "original_actions": 66,
+    "image_sha256": "4c1738749659536ad31b651f8a5b8eaaeeed8097ac6b38a903224557a6159b8a",
+    "files": {
+      "original.png": "4c1738749659536ad31b651f8a5b8eaaeeed8097ac6b38a903224557a6159b8a",
+      "map_data.npz": "e93a24a98e5011cd19361f100bb2810cfcd794f1328cd87954e8760e2b7a069f",
+      "original_2b_score.json": "6594b2bcd0f7c5d232bdf66e74cb7ec918963fa98be22d3889ecd5282b27a413",
+      "trajectory.json.gz": "7f1b4243506768c24b54d7322b7c8495a081c2c84f07751b67fcd745415c56fb",
+      "display_map_data.npz": "f2f26c89a4125e83a2a8652a49630db67cd72e6cee3cc1701e88c557c4142047",
+      "task.json.gz": "a8652e1804eb76b34943dce545f435d29083412c823fbde79f606975db285ba7"
+    },
+    "source_relative": "evidence/trajectories/diverse/group_02/C08"
+  }
+]

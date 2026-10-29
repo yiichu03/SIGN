@@ -1,0 +1,33 @@
+{
+  "id": "C08",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/15.png",
+  "image_sha256": "4c1738749659536ad31b651f8a5b8eaaeeed8097ac6b38a903224557a6159b8a",
+  "scene": "Swormville",
+  "episode_id": "3200",
+  "action_count": 66,
+  "new_area_m2": 11.981250000000001,
+  "new_area_m2_per_action": 0.18153409090909092,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C08/display_map_data.npz",
+    "mask_sha256": "f2f26c89a4125e83a2a8652a49630db67cd72e6cee3cc1701e88c557c4142047",
+    "new_valid_cells": 19170,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C08/trajectory.json",
+    "trajectory_sha256": "0e64650bfc3743925c1c4cb7ab3be126bdf060cd066091cc5ca653cdc016d233"
+  },
+  "group_id": "group_02",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C08/topdown_static.png",
+  "p_low": 0.1111623501554246,
+  "p_medium": 0.21391006090916792,
+  "p_high": 0.6749275889354076,
+  "q": 0.7818826193899916,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.11007308959961,
+    21.764636993408203,
+    22.913686752319336
+  ],
+  "candidate_mass": 0.9877315163612366,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

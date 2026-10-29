@@ -126,3 +126,7 @@ habitat_baselines.eval.split test_easy
 ## Qwen history-window offline evaluation
 
 [Results, controls and validation](docs/experiments/qwen-history-window/VALIDATION.md) · [128/256 report](docs/experiments/qwen-history-window/REPORT.md) · [Blank human review table](docs/experiments/qwen-history-window/human_review.csv)
+
+## Qwen history with solid paths
+
+[Results, controls and validation](docs/experiments/qwen-history-solid/VALIDATION.md) · [128/256 report](docs/experiments/qwen-history-solid/REPORT.md) · [Blank human review table](docs/experiments/qwen-history-solid/human_review.csv)

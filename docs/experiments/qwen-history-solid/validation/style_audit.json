@@ -1,0 +1,11 @@
+{
+  "same_trajectories_windows_and_statistics": true,
+  "rubric_and_statistics_prompt_suffix_unchanged": true,
+  "old_prompt_sha256": "7d93bf5730901828c5bcc9e1546979b0cbad1af92d1612bf12f24a311acea76d",
+  "new_prompt_sha256": "12081a916f12d7be09cf64bfcfc390bcfcdf2508fd5eda9f195943615027c404",
+  "yellow_linewidth_pt": 1.5,
+  "red_linewidth_pt": 1.5,
+  "yellow_linestyle": "solid",
+  "red_linestyle": "solid",
+  "overlap": "red drawn above yellow at true coordinates"
+}

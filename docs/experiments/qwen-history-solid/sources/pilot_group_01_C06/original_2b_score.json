@@ -1,0 +1,31 @@
+{
+  "id": "C06",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/run_2b_1503819/images/05.png",
+  "image_sha256": "9004ce7594ce9bb7b28db384d6b42abdab57c7ffaac0e0a784e3e3dc1091d13e",
+  "action_count": 39,
+  "new_area_m2": 12.430625000000001,
+  "new_area_m2_per_action": 0.3187339743589744,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C06/display_map_data.npz",
+    "mask_sha256": "8cea0eb8dd3505d9c7144c78913ca745e861120dd8805f486efe9121b0b8ac1e",
+    "new_valid_cells": 19889,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C06/trajectory.json",
+    "trajectory_sha256": "687fc0664e617a6e31d4f0138d47307590fc4a13966b592ba3d76f04a95aba74"
+  },
+  "group_id": "group_01",
+  "source_image": "/scratch/e1538633/liuyi/logs/gibson_topdown_pilot_20261028/group_01/C06/topdown_static.png",
+  "p_low": 0.12385424160595346,
+  "p_medium": 0.21933713957082285,
+  "p_high": 0.6568086188232237,
+  "q": 0.7664771886086351,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.333890914916992,
+    21.9053955078125,
+    23.002178192138672
+  ],
+  "candidate_mass": 0.989675760269165,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

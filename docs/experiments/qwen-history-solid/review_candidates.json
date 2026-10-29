@@ -1,0 +1,74 @@
+[
+  {
+    "candidate_type": "重复搜索待核查",
+    "segment_id": "diverse_group_02_C04_s128_e256",
+    "collision_actions": 33,
+    "low_translation_actions": 35,
+    "exact_history_path_cell_fraction": 0.078125,
+    "new_m2_per_action": 0.0031884765625,
+    "human_label": null
+  },
+  {
+    "candidate_type": "重复搜索待核查",
+    "segment_id": "pilot_group_02_C03_s097_e225",
+    "collision_actions": 46,
+    "low_translation_actions": 34,
+    "exact_history_path_cell_fraction": 0.015625,
+    "new_m2_per_action": 0.019130859375000003,
+    "human_label": null
+  },
+  {
+    "candidate_type": "必要返回待核查",
+    "segment_id": "diverse_group_02_C06_s128_e256",
+    "collision_actions": 64,
+    "low_translation_actions": 28,
+    "exact_history_path_cell_fraction": 0.1484375,
+    "new_m2_per_action": 0.09757812500000002,
+    "human_label": null
+  },
+  {
+    "candidate_type": "必要返回待核查",
+    "segment_id": "pilot_group_02_C03_s097_e225",
+    "collision_actions": 46,
+    "low_translation_actions": 34,
+    "exact_history_path_cell_fraction": 0.015625,
+    "new_m2_per_action": 0.019130859375000003,
+    "human_label": null
+  },
+  {
+    "candidate_type": "有效扩展待核查",
+    "segment_id": "diverse_group_01_C02_s037_e165",
+    "collision_actions": 20,
+    "low_translation_actions": 23,
+    "exact_history_path_cell_fraction": 0.0,
+    "new_m2_per_action": 0.15496093750000003,
+    "human_label": null
+  },
+  {
+    "candidate_type": "有效扩展待核查",
+    "segment_id": "diverse_group_02_C06_s128_e256",
+    "collision_actions": 64,
+    "low_translation_actions": 28,
+    "exact_history_path_cell_fraction": 0.1484375,
+    "new_m2_per_action": 0.09757812500000002,
+    "human_label": null
+  },
+  {
+    "candidate_type": "碰撞受阻待核查",
+    "segment_id": "diverse_group_01_C08_s128_e256",
+    "collision_actions": 128,
+    "low_translation_actions": 92,
+    "exact_history_path_cell_fraction": 0.9140625,
+    "new_m2_per_action": 4.882812500000001e-06,
+    "human_label": null
+  },
+  {
+    "candidate_type": "碰撞受阻待核查",
+    "segment_id": "diverse_group_01_C08_s000_e256",
+    "collision_actions": 245,
+    "low_translation_actions": 157,
+    "exact_history_path_cell_fraction": 0.0,
+    "new_m2_per_action": 0.005175781250000001,
+    "human_label": null
+  }
+]

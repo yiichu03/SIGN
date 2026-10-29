@@ -1,0 +1,27 @@
+#!/bin/bash -l
+#PBS -N qwen2b-history-solid
+#PBS -o /scratch/e1538633/liuyi/logs/qwen_history_solid_20261029/run.pbs.log
+#PBS -l walltime=00:20:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-qwen-history-window
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet MPLCONFIGDIR=/tmp/liuyi-qwen-history
+support=/scratch/e1538633/liuyi/logs/qwen_history_solid_20261029
+python "$support/check_inputs.py"
+python scripts/prepare_qwen_history.py --source docs/experiments/qwen-topdown --out "$support/review" --prompt scripts/prompts/qwen_single_coverage_abc.txt
+python "$support/check_inputs.py" --record
+cp "$support/unit_tests.log" "$support/review/audit/unit_tests.log"
+cp "$support/run.pbs" "$support/review/audit/submitted.pbs"
+cp "$support/input_guard.json" "$support/review/audit/source_guard.json"
+conda activate /scratch/e1538633/liuyi/envs/qwen35
+python scripts/evaluate_qwen_history.py --data "$support/review" --model-dir /scratch/e1538633/liuyi/models/Qwen3.5-2B
+cp "$support/submission.json" "$support/review/audit/submission.json"
+python scripts/package_qwen_history.py --data "$support/review" --zip "$support/qwen2b_history_review.zip"
+python "$support/check_inputs.py"

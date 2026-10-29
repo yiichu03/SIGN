@@ -1,0 +1,33 @@
+{
+  "id": "C03",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/02.png",
+  "image_sha256": "019be014e3ab2328e64d6d593594f2ab863c03c263968b8ca68e76d7dd62450d",
+  "scene": "Elmira",
+  "episode_id": "2900",
+  "action_count": 44,
+  "new_area_m2": 7.076250000000001,
+  "new_area_m2_per_action": 0.16082386363636367,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C03/display_map_data.npz",
+    "mask_sha256": "12e5a8d4626214d3004b537dddaad93cb79d6cbad07bdffdf976ba73fc61a0eb",
+    "new_valid_cells": 11322,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C03/trajectory.json",
+    "trajectory_sha256": "784f62da44de1a8fbf1c790cd086be3b0d9d2fc59e0f1621edfcc6813ea24705"
+  },
+  "group_id": "group_01",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C03/topdown_static.png",
+  "p_low": 0.10818651206616625,
+  "p_medium": 0.2120379958184665,
+  "p_high": 0.6797754921153673,
+  "q": 0.7857944900246006,
+  "valid": true,
+  "error": null,
+  "logits": [
+    20.879295349121094,
+    21.552204132080078,
+    22.717201232910156
+  ],
+  "candidate_mass": 0.9857534170150757,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

@@ -1,0 +1,11 @@
+{
+  "job_id": "1506387.stdct-mgmt-02",
+  "runtime_commit": "30ed53d1a969e830df9b98e1b67ccab0629aeb2e",
+  "branch": "phase2/qwen-history-window",
+  "source_publication_manifest_sha256": "cf78b4693835f40d74e0b34807b5912800310ce64db6cafbaea6c41a8014f875",
+  "all_protected_sources_unchanged": true,
+  "navigation_training_started": false,
+  "resampling": false,
+  "only_model": "Qwen3.5-2B",
+  "coverage32_evaluation_job_left_running": "1504280.stdct-mgmt-02"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "browser": "148.0.7778.96",
+  "protocol": "file://",
+  "network_offline": true,
+  "external_requests": [],
+  "javascript_errors": [],
+  "images_decoded": 100,
+  "default_scores_hidden": true,
+  "show_hide_toggle_passed": true,
+  "all_44_segments_visible_by_default": true,
+  "128_256_short_search_filters_passed": true,
+  "human_labels": "unfilled CSV independently checked by bundle_check.py"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "C07",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/06.png",
+  "image_sha256": "d3c7cb10747030c34f794c603b6bc1920bfad94412c020a2d325cd131c640c48",
+  "scene": "Ribera",
+  "episode_id": "1100",
+  "action_count": 44,
+  "new_area_m2": 15.116875000000002,
+  "new_area_m2_per_action": 0.34356534090909097,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C07/display_map_data.npz",
+    "mask_sha256": "8e8786cf905fec161fe79b872369080382604ee09f48aa1c9be05044af249b05",
+    "new_valid_cells": 24187,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C07/trajectory.json",
+    "trajectory_sha256": "a2a483e8ae73d021348b000b1013006bc6e227c4932f11eec090939984195915"
+  },
+  "group_id": "group_01",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C07/topdown_static.png",
+  "p_low": 0.10413403626813149,
+  "p_medium": 0.23318389907184686,
+  "p_high": 0.6626820646600218,
+  "q": 0.7792740141959452,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.02544403076172,
+    21.831592559814453,
+    22.876060485839844
+  ],
+  "candidate_mass": 0.9877654314041138,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

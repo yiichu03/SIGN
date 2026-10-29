@@ -1,0 +1,7 @@
+{
+  "previous_job": "1505092.stdct-mgmt-02",
+  "change": "Yellow and red paths both solid linewidth1.5, color-only distinction; corresponding prompt explains overlap occlusion.",
+  "original_trajectories_and_areas_unchanged": true,
+  "only_model": "Qwen3.5-2B",
+  "runtime_commit": "30ed53d1a969e830df9b98e1b67ccab0629aeb2e"
+}

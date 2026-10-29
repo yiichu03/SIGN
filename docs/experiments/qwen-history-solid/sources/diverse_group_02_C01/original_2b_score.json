@@ -1,0 +1,33 @@
+{
+  "id": "C01",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/08.png",
+  "image_sha256": "91b2951d116231aec57edc5dba270c7ee6c7e6952c3f2af0c3b81430284c556a",
+  "scene": "Cantwell",
+  "episode_id": "1700",
+  "action_count": 72,
+  "new_area_m2": 9.896250000000002,
+  "new_area_m2_per_action": 0.1374479166666667,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C01/display_map_data.npz",
+    "mask_sha256": "024654dcfc9ef36323af5a585f926bbb50d402a91668e759450b1e32027933b6",
+    "new_valid_cells": 15834,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C01/trajectory.json",
+    "trajectory_sha256": "5365e8db7ca6412b4a679eba3615d8ced705bfa44b48787cfa68995f438edee3"
+  },
+  "group_id": "group_02",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C01/topdown_static.png",
+  "p_low": 0.11675268474490413,
+  "p_medium": 0.23856965352908813,
+  "p_high": 0.6446776617260078,
+  "q": 0.7639624884905519,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.191852569580078,
+    21.906455993652344,
+    22.900545120239258
+  ],
+  "candidate_mass": 0.9872643947601318,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

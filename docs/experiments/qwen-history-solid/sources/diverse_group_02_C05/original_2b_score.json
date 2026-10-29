@@ -1,0 +1,33 @@
+{
+  "id": "C05",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/12.png",
+  "image_sha256": "dbe3b3c79a74d6cfb5117e2861e57863c816b19c1efd00b540a69691c90e3487",
+  "scene": "Greigsville",
+  "episode_id": "2643",
+  "action_count": 146,
+  "new_area_m2": 21.138125000000002,
+  "new_area_m2_per_action": 0.1447816780821918,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C05/display_map_data.npz",
+    "mask_sha256": "55ce893749fa40343151c6ca405a77f727e2cbc7a2e6ab62cb452ba11339b5bc",
+    "new_valid_cells": 33821,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C05/trajectory.json",
+    "trajectory_sha256": "0b756fc177732807b7cd7e2abcb61f74c47628ffade7699eb5193072bcf699a0"
+  },
+  "group_id": "group_02",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_02/C05/topdown_static.png",
+  "p_low": 0.08019436974599552,
+  "p_medium": 0.18768599200061897,
+  "p_high": 0.7321196382533856,
+  "q": 0.825962634253695,
+  "valid": true,
+  "error": null,
+  "logits": [
+    20.831378936767578,
+    21.68169593811035,
+    23.042869567871094
+  ],
+  "candidate_mass": 0.9883496761322021,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}

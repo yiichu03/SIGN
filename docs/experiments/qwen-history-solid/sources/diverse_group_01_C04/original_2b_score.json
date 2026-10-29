@@ -1,0 +1,33 @@
+{
+  "id": "C04",
+  "image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/scores_2b/images/03.png",
+  "image_sha256": "379d4e5cf6f92e6ab441e9ecf40ae8fb8d56ec8c70f8649e8ce336c6a641e6aa",
+  "scene": "Eudora",
+  "episode_id": "2000",
+  "action_count": 256,
+  "new_area_m2": 9.5625,
+  "new_area_m2_per_action": 0.037353515625,
+  "area_source": {
+    "mask": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C04/display_map_data.npz",
+    "mask_sha256": "68bd3cfe7dd9eb91535c69f35326cc4a894e3096c16b03b4c88970b5be24d20b",
+    "new_valid_cells": 15300,
+    "meters_per_pixel": 0.025,
+    "trajectory": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C04/trajectory.json",
+    "trajectory_sha256": "5ecc5c45b9ac9bddfcfd59971c148f5952932464385332af8477433ff104a240"
+  },
+  "group_id": "group_01",
+  "source_image": "/scratch/e1538633/liuyi/logs/qwen_gibson_diverse_20261028/group_01/C04/topdown_static.png",
+  "p_low": 0.23396658956381258,
+  "p_medium": 0.2507850703841702,
+  "p_high": 0.5152483400520173,
+  "q": 0.6406408752441024,
+  "valid": true,
+  "error": null,
+  "logits": [
+    21.745361328125,
+    21.81477928161621,
+    22.534832000732422
+  ],
+  "candidate_mass": 0.9859641194343567,
+  "prompt_version": "cdd6f2fc782f6b9f9fa9ce2baaf953da476c8c467e5e7d3a29a8228af6a596ac"
+}
