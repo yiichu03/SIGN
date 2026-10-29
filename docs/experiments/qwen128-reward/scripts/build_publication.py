@@ -5,9 +5,14 @@ ROOT=Path('/scratch/e1538633/liuyi');HERE=Path(__file__).resolve().parent
 TRAIN=ROOT/'SIGN-qwen128-reward';DOCS='docs/experiments/qwen128-reward'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--tree',type=Path,required=True);a=p.parse_args();tree=a.tree
-    package=tree/DOCS;package.mkdir(parents=True,exist_ok=False)
-    for sub in ['scripts','evidence','samples','workspace']:(package/sub).mkdir()
+    p=argparse.ArgumentParser();p.add_argument('--tree',type=Path,required=True);p.add_argument('--progress',type=Path);a=p.parse_args();tree=a.tree
+    package=tree/DOCS
+    if a.progress:
+        old=json.loads((package/'publication_manifest.json').read_text())
+        for name,record in old.items():assert sha(package/name)==record['sha256'],name
+        assert (ROOT/'WORKLOG.md').read_bytes().startswith((package/'workspace/WORKLOG.md').read_bytes())
+    package.mkdir(parents=True,exist_ok=bool(a.progress))
+    for sub in ['scripts','evidence','samples','workspace']:(package/sub).mkdir(exist_ok=bool(a.progress))
     for f in HERE.iterdir():
         if f.suffix in ('.py','.pbs','.sh'):shutil.copyfile(f,package/'scripts'/f.name)
     for name in ['source_manifest.json','config_audit.json','formal_effective_config.yaml','short_validation.json','submission.json','eval_protocol.json','first_training_events.json','offline_online_geometry.json','eval_watch_state.json','watcher_validation.json','addressing_validation.json','eval_config_validation.json','eval_effective_config.yaml','milestone_validation.json']:
@@ -26,6 +31,9 @@ def main():
         dest=package/'samples'/f.name;data=json.loads(dest.read_text())
         data['original_input_image']=data['row']['image'];data['sample_image']=f.with_suffix('.png').name
         dest.write_text(json.dumps(data,indent=2)+'\n')
+    if a.progress:
+        destination=package/'evidence'/a.progress.name
+        shutil.copytree(a.progress,destination)
     for name in ['AGENTS.md','STATUS.md','RUNBOOK.md','WORKLOG.md']:
         current=(ROOT/name).read_bytes()
         prior=tree/'docs/experiments/qwen-history-solid/workspace'/name
@@ -50,12 +58,14 @@ def main():
             content=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',portable,current.decode())
             (package/'workspace'/name).write_text(content)
     (package/'README.md').write_text((HERE/'report.md').read_text())
-    manifest={str(f.relative_to(package)):dict(sha256=sha(f),bytes=f.stat().st_size) for f in sorted(package.rglob('*')) if f.is_file()}
+    manifest={str(f.relative_to(package)):dict(sha256=sha(f),bytes=f.stat().st_size) for f in sorted(package.rglob('*')) if f.is_file() and f.name!='publication_manifest.json'}
     (package/'publication_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     for file,record in manifest.items():assert sha(package/file)==record['sha256']
     # No source/config changes relative to the frozen runtime commit.
     diff=subprocess.check_output(['git','diff','HEAD','--','src','scripts','tests','exp_config','run_sim.py'],cwd=tree,text=True)
     assert not diff
-    readme=tree/'README.md';s=readme.read_text();s+='\n\nQwen128 training reward and verified short-run evidence: [experiment record](docs/experiments/qwen128-reward/README.md).\n';readme.write_text(s)
+    readme=tree/'README.md';s=readme.read_text();line='Qwen128 training reward and verified short-run evidence: [experiment record](docs/experiments/qwen128-reward/README.md).'
+    if line not in s:s+='\n\n'+line+'\n'
+    readme.write_text(s)
     print(json.dumps(dict(files=len(manifest),bytes=sum(x['bytes'] for x in manifest.values())),indent=2))
 if __name__=='__main__':main()

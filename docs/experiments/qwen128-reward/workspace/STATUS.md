@@ -22,9 +22,11 @@
 
 独立 `SIGN-qwen128-reward` / `phase2/qwen128-reward-beta01` 从453179c建立，运行提交 **81fedec**。54项单测、32原轨迹44窗口离在线精确重放、边界/遮挡/保存函数/评估配置及真实GPU40960步均通过（1507196 Exit0）。有效片段1176/1204=97.67%，42项encoder状态不变，loss/概率有限、真实mask/nav_rewards不变；零权重原训练scalar逐位相同，仅Qc有小于原基线复跑的1.49e-8舍入差。短测每2048步中位59.24s（原基线7.55s），显存5秒采样峰值24947MiB，不能当学习收益或全程恒定速度。
 
-正式 **1507268.stdct-mgmt-02** 已R，首批事件核验8192步/55项scalar有限、初始化SHA与短测相同（fresh init）：个人auto/1A40/36CPU240GB/168h，300M cap、8×256、seed100/hash0、只加载冻结公开visual_encoder、其他原初始化，**128步/真实终止切段，beta0.1原始q，几何bonus0**，从全新初始化开始。输出 `SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env`，TensorBoard为其 `tb/`；独立6007查看脚本 `logs/qwen128_reward_20261029/view_tensorboard.sh`，原6006服务不动。
+**短测1507196已完成（Qwen部分40960步）；正式1507268是另一条从全新初始化启动的长训练，已经提交并继续运行。** 2026-10-29 16:01只读快照：正式47104步/23更新，55项scalar有限、有效1399/1431=97.76%、SR3.599%/SPL2.807%（训练滑窗），中位64.26s/2048步；同阶段基线SR3.200%/SPL2.212%，尚不足判断学习收益。正式首次checkpoint在512000步，目前未到保存点属正常，4.608M/8.192M评估仍等待。证据logs/qwen128_reward_20261029/progress_20261029T160130；本轮未新qsub或改训练源码。
 
-4.608M／8.192M各保存不可变milestone checkpoint并安排原协议4200val：CPU等待1507269／1507271；GPU评估 **1507270／1507272**，当前H依赖等待，待对应权重SHA校验后自动释放，不占等待GPU。使用原SIGN-coverage-eval/6环境/max500/seed100/hash0，Qwen及其轨迹采集关闭，额外0.1m被动覆盖口径与既有三方法评估相同。当前无新评估成绩。回执/配置/短测结论：`logs/qwen128_reward_20261029/`。WORKLOG：QWEN128-GPU-SHORT-PASSED-FORMAL-AND-EVALS-SUBMITTED。
+正式 **1507268.stdct-mgmt-02** 已R、初始化SHA与短测相同（fresh init）：个人auto/1A40/36CPU240GB/168h，300M cap、8×256、seed100/hash0、只加载冻结公开visual_encoder、其他原初始化，**128步/真实终止切段，beta0.1原始q，几何bonus0**，从全新初始化开始。输出 `SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env`，TensorBoard为其 `tb/`；独立6007查看脚本 `logs/qwen128_reward_20261029/view_tensorboard.sh`，原6006服务不动。
+
+4.608M／8.192M各保存不可变milestone checkpoint并安排原协议4200val：CPU等待1507269／1507271；GPU评估 **1507270／1507272**，当前H依赖等待，待对应权重SHA校验后自动释放，不占等待GPU。使用原SIGN-coverage-eval/6环境/max500/seed100/hash0，Qwen及其轨迹采集关闭，额外0.1m被动覆盖口径与既有三方法评估相同。已核实两评估均经CFP/autox路由到batch_gpux，当前H为afterok依赖；没有处于Q且需要换到gpux的GPU任务。用户偏好后续许可范围内资源排队的GPU任务优先gpux。当前无新评估成绩。回执/配置/短测结论：`logs/qwen128_reward_20261029/`。 已push yiichu03/SIGN同名分支：发布提交35b978f、运行源码81fedec，远端SHA核对一致；运行目录保持81fedec，不pull资料提交。WORKLOG：QWEN128-GPU-SHORT-PASSED-FORMAL-AND-EVALS-SUBMITTED。
 
 ## 当前目标与分支布局
 

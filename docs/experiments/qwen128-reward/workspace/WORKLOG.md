@@ -1502,3 +1502,26 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 - 正式1507268在GN-A40-098运行，独立2B worker已一次加载FP32并完成4轮Qwen结算；TensorBoard8192步、55项scalar全部有限，原reward与新增qwen指标分开。正式初始103项状态SHA与短测Qwen初始完全一致，确认全新初始化；实际qwen/effective_config.yaml已复制到支撑formal_effective_config.yaml，root/环境子树collect为True，beta0.1/128/256/8环境及geometry weight0生效。证据first_training_events.json、train_personal_8env_command.json与正式qwen原日志。
 - 两CPU等待已启动并记录ready=false；两GPU评估H等待对应afterok，已有真实提交回执，不动态重提。原1497416/1502352继续R；旧1506785已自然结束，本轮未停止或变更它。
 - 新建独立detached SIGN-qwen128-publication @81fedec，用于新证据/根四文档生成副本；不在运行树改源码或HEAD。准备发布branch phase2/qwen128-reward-beta01，尚未把push写为完成。
+
+
+## 2026-10-29T15:50:18+08:00 [QWEN128-REWARD-PUBLISHED-AND-RUNNING]
+
+- 已普通push独立分支phase2/qwen128-reward-beta01到git@github.com:yiichu03/SIGN.git，发布提交35b978fc6b3203e2922a05d1847f88fda98100aa，ls-remote与本地完全一致。生产源码81fedec包含12文件集成；独立publication树另提交49项README/证据/两组样图及npz/根四文档生成副本，运行目录HEAD及全部原工作树源哈希仍通过source_manifest守卫。发布树干净，未切换或修改训练目录、未force push，未上传新权重/场景/环境。
+- 包内47项SHA/大小/全部相对链接/凭据模式通过；WORKLOG副本与发布时根源字节一致且保留旧453179c已发布前缀。非WORKLOG根快照的服务器证据链接生成显式服务器路径，避免GitHub死链；不是另行手工维护上下文。发布回执logs/qwen128_reward_20261029/push_result.json。
+- 正式1507268持续写Qwen/TB，控制台已至少20480步/10更新，当前12轮Qwen结算；两CPU waiter状态15:48:53仍ready=false持续轮询，两GPU1507270/1507272仍H等待milestone，各有4200val协议与真实依赖回执。新6007 TB查看脚本已提供但未自动启动服务器；原6006服务和两原覆盖训练不动。旧三方法1506785 runtime.json为complete，属既有作业自然完成，结果未修改。
+- 最后批次登录节点qstat -fx对1507196/1507268两次20秒超时，已保留scheduler_verified.json；其他作业状态正常返回，正式原生日志/TB/Qwen结算和计算节点wait_state仍持续更新，未把查询超时误判作业失败或重提。服务器WORKLOG/STATUS在push回执后再追加更新，不循环发布新资料提交。
+
+
+## 2026-10-29T15:57:23+08:00 [PBS-GPUX-PREFERENCE-CONFIRMED]
+
+- 用户澄清希望等待可执行的GPU实验优先放gpux以便更快开始。已核实当前两未来val1507270/1507272的queue均batch_gpux、project CFP04-SF-109、Hold_Types=d、afterok对应CPU等待任务；提交脚本本来使用autox。当前没有资源排队Q状态GPU任务可迁移，三训练均R；Qwen1507268为personal-e1538633/batch_gpu/GN-A40-098。
+- 依赖需要等待真实4.608M/8.192M权重，不能通过换队列提前产生权重。保留现有作业/依赖，无qmove/qdel/qsub或预算改变。沿用已实测个人项目拒绝autox的许可限制；稳定记录用户偏好：在项目许可与既定预算内，可运行但排队的GPU任务优先autox→batch_gpux，已运行任务不为换队列停训重提。AGENTS/RUNBOOK与STATUS更新；未触发额外GitHub发布。
+
+
+## 2026-10-29T16:03:52+08:00 [QWEN128-FORMAL-47104-PROGRESS-SNAPSHOT]
+
+- 用户询问目前Qwen进展，以为本轮仍为短测，并要求同步最新代码/文档到yiichu03供外部分析。已先说明短测1507196已完成，正式1507268此前依用户“通过后直接提交正式训练”授权已启动；本轮只读分析和发布，不停止现有作业、不新提交训练或评估、不改变算法。
+- qstat核实三训练R、两CPU waiter R、两未来GPU val H且已在gpux；正式源码仍81fedec，发布树干净35b978f，origin push URL为git@github.com:yiichu03/SIGN.git。运行目录仅未跟踪本地data软链接，保留。
+- 新snapshot_progress.py有限字节复制正式TB/JSONL，再将指标统一截到完成23更新的47104步；55项scalar全部有限、1399/1431段有效97.7638%（25高度跨度/7 navmesh容差无效），无重复ID，nav_rewards/masks不变，bonus公式/总量守恒。q min/mean/max0.11497/0.54527/0.87636，累计bonus10.36529。原导航reward末点-0.57639、训练SR3.59922%/SPL2.80694%，同47104步已停冻结基线原始前缀SR3.20000%/SPL2.21177%、reward-0.73818。只作早期相关滑窗描述，未当独立验证收益。
+- 热身后每2048步中位64.2636秒，最近10轮63.7929；正式ckpt目录为空，预期首次250更新=512000步，未错误宣称已有正式权重。所有原始事件前缀/逐段概率/图/统计/配置/SHA保存在logs/qwen128_reward_20261029/progress_20261029T160130，CPU分析Exit0，没有GPU或导航评估。
+- 准备在独立SIGN-qwen128-publication从35b978f追加新快照、更新README和根四文档生成副本。扩展既有构建器--progress更新模式，先验证旧manifest全部SHA和WORKLOG前缀；不重复开发发布框架，生产src/scripts/tests/exp_config/run_sim.py保持81fedec原内容。尚未将本次push记为完成。

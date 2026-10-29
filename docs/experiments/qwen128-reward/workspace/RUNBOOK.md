@@ -45,7 +45,7 @@ SIGN 内相对路径命令均从 `/scratch/e1538633/liuyi/SIGN` 运行；SIGN-SR
 
 ## 集群约定
 
-- GPU 推理和采集使用 PBS 计算节点；长任务按用户要求使用 `auto`／`autox`。现有 A40 作业常用 `autox`、项目 `CFP04-SF-109`。
+- GPU 推理和采集使用 PBS 计算节点；长任务按用户要求使用 `auto`／`autox`。现有 A40 作业常用 `autox`、项目 `CFP04-SF-109`。 2026-10-29用户明确希望可运行却在资源排队的GPU任务优先使用autox→batch_gpux；个人项目仅auto限制和既定预算继续有效，已运行作业不重提。
 - 如项目被拒，先查实际错误与预算；既有授权备选为 `CFP02-CF-006`、`personal-e1538633`。
 - 2026-10-26 实测个人项目拒绝 autox（Express queue not allowed），须使用 auto。用户已授权共享 CFP 与个人预算；个人年度默认 1000 GPUhr／10000 CPUhr 不等于当前余额。hpc project 查询需要 amgr 登录，未登录时不能声称已核对余额。
 - 集群手册：`~/liuyi/Vanda Cluster User Guide 05Jun25.pdf`。不要在日志记录访问凭据。
@@ -527,3 +527,5 @@ GitHub目标yiichu03/SIGN、phase2/qwen-topdown-judge；资料入口docs/experim
 支撑 `logs/qwen128_reward_20261029/`：`run_training.py short`顺序跑原基线8192、beta0对照8192和Qwen40960；`verify_short.py`核对真实checkpoint、全部scalar、实际长历史图/mask/统计逐位重放及原导航奖励/mask不变。若Qc出现GPU舍入差，另跑未修改基线对照，保留误差证据，不为追求逐位相同改变Qc。`short.pbs`和`formal.pbs`分别为诊断与正式入口；已有作业不要重复qsub。`source_manifest.json`约束运行源码及原工作树、公开权重、数据和prompt。
 
 正式每250更新保存512k步checkpoint，并在4.608M/8.192M额外保存不可变`milestone_STEP.pth`及SHA侧车。提前提交两组独立CPU `watch.pbs`及GPU `evaluate.pbs`；waiter以PBS after训练开始为依赖，仅等待/核对对应侧车与checkpoint SHA，退出0后由GPU作业的afterok依赖释放评估，不依赖计算节点动态qsub。CPU等待不占GPU；保存真实两组提交回执及val_STEP/wait_state.json。评估复用未改动`SIGN-coverage-eval`原生evaluator，Qwen及Qwen轨迹采集关闭；4200val/14场景、确定性6环境/max500/seed100/hash0，额外原0.1m/3m/90°被动coverage统计、reward weight0，输出SR/SPL及两种面积/动作聚合。0.1m是既有共同评估口径，与Qwen输入图0.025m分开记录。val_STEP/wait_state.json与val_STEP/submission.json提供实际排队ID，侧车出现前不虚构评估ID。
+
+Qwen短测与正式运行区分：1507196中Qwen部分固定40960步、输出short_qwen_40960；1507268为独立fresh-init正式任务、输出train_personal_8env、168h/300M cap。正式每250更新/512000步首存，初期ckpts为空并非训练未启动。只读进展快照入口`envs/sign-baseline/bin/python logs/qwen128_reward_20261029/snapshot_progress.py`，保存有限字节事件/逐段记录/CSV/PNG与实际统计，早期基线仅读取相同步数前缀；不加载GPU或改训练。输出新progress_时间戳目录，避免覆盖旧证据。

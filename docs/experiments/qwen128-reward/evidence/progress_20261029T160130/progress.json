@@ -1,0 +1,139 @@
+{
+  "captured_at": "2026-10-29T16:01:30+08:00",
+  "training_job": "1507268.stdct-mgmt-02",
+  "runtime_commit": "81fedec56b37921c350ce8064106c32788bb3e04",
+  "short_validation_job": "1507196.stdct-mgmt-02",
+  "short_validation_steps": 40960,
+  "short_validation_status": "completed Exit0",
+  "formal_training_status": "running, confirmed by qstat and live events",
+  "formal_is_separate_fresh_initialization": true,
+  "latest_step": 47104,
+  "completed_updates": 23,
+  "last_event_at": "2026-10-29T16:00:29+08:00",
+  "checkpoint_count": 0,
+  "first_regular_checkpoint_step": 512000,
+  "scalar_series": 55,
+  "all_scalars_finite": true,
+  "latest": {
+    "metrics/success": {
+      "step": 47104,
+      "wall_time": 1793260829.3111422,
+      "value": 0.03599221631884575
+    },
+    "metrics/spl": {
+      "step": 47104,
+      "wall_time": 1793260829.3111267,
+      "value": 0.028069354593753815
+    },
+    "reward": {
+      "step": 47104,
+      "wall_time": 1793260829.3109517,
+      "value": -0.5763863921165466
+    },
+    "learner/qwen_q_mean": {
+      "step": 47104,
+      "wall_time": 1793260829.4102902,
+      "value": 0.5940178036689758
+    },
+    "learner/qwen_valid_fraction": {
+      "step": 47104,
+      "wall_time": 1793260829.3845253,
+      "value": 1.0
+    },
+    "learner/qwen_bonus_sum": {
+      "step": 47104,
+      "wall_time": 1793260829.3660083,
+      "value": 0.5121104121208191
+    },
+    "learner/qwen_new_area_m2": {
+      "step": 47104,
+      "wall_time": 1793260829.3876092,
+      "value": 235.54061889648438
+    },
+    "learner/qwen_total_seconds": {
+      "step": 47104,
+      "wall_time": 1793260829.4040005,
+      "value": 28.060331344604492
+    }
+  },
+  "segments": 1431,
+  "valid_segments": 1399,
+  "valid_fraction": 0.9776380153738644,
+  "invalid_reasons": {
+    "episode_height_range_exceeds_fixed_floor": 25,
+    "fog_origin_farther_than_5cm_from_navmesh": 7
+  },
+  "q": {
+    "min": 0.11496764867609457,
+    "mean": 0.5452719313095626,
+    "max": 0.8763556701188063
+  },
+  "bonus_sum": 10.36528664952668,
+  "nav_rewards_and_masks_unchanged": true,
+  "no_duplicate_ids": true,
+  "bonus_formula_and_conservation_passed": true,
+  "longest_history_actions": 230,
+  "median_update_seconds": 64.26362228393555,
+  "last10_update_seconds_median": 63.792917013168335,
+  "median_steps_per_second": 31.8687295738067,
+  "baseline_matched_latest": {
+    "metrics/success": {
+      "step": 47104,
+      "wall_time": 1793029378.7380066,
+      "value": 0.03200000151991844
+    },
+    "metrics/spl": {
+      "step": 47104,
+      "wall_time": 1793029378.7379968,
+      "value": 0.022117745131254196
+    },
+    "reward": {
+      "step": 47104,
+      "wall_time": 1793029378.737874,
+      "value": -0.7381828427314758
+    }
+  },
+  "expected_evaluation_jobs": {
+    "4608000": "1507270",
+    "8192000": "1507272"
+  },
+  "evaluation_status": "dependency held until exact checkpoint; no evaluation result yet",
+  "inputs": [
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/tb/events.out.tfevents.1793259267.GN-A40-098.1099958.0",
+      "bytes": 76036,
+      "sha256": "e7ab1530392d4252ff89ce3a3a300981eee25ec243f9f654b446f8c75e727b9d"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/qwen/rollouts.jsonl",
+      "bytes": 25162,
+      "sha256": "0d2340e73f6d7cefbf004a83f5ab6bf42cb04c68ad9e4d9c7724fd89419bf975"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/qwen/segments.jsonl",
+      "bytes": 1509534,
+      "sha256": "54dbaf17a42d3b158795e364436ada61f6c039fa0cd0b96b76da1adc6dfa233d"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/qwen/effective_config.yaml",
+      "bytes": 24535,
+      "sha256": "ba5b400702e46abc2391c150ff27a4d3c7d60a295fadbda4e2e9245efc6adc88"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/qwen/worker_boot.json",
+      "bytes": 386,
+      "sha256": "c6bfee9b5a39b7fe32ca5dcff9e667bd5f094f5db3ce493ddbee1fd953ad5226"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/qwen/initial_parameter_hashes.json",
+      "bytes": 12474,
+      "sha256": "76027b5250da930d5cd7aa0a466b8bb7edff81048c25ae1703bb7f8caf0814e7"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/qwen/prompt.txt",
+      "bytes": 1870,
+      "sha256": "12081a916f12d7be09cf64bfcfc390bcfcdf2508fd5eda9f195943615027c404"
+    }
+  ],
+  "semantics": "Training only; success/SPL are original overlapping episode-window metrics. reward is navigation only. q and bonus logged separately. Too early and one seed; no claimed learning benefit."
+}

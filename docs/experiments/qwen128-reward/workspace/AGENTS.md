@@ -48,7 +48,7 @@
 
 ## 集群与发布
 
-- GPU 推理和采集使用 PBS 计算节点；用户要求长任务使用 `auto` / `autox` 路由。环境、项目和复现命令见 RUNBOOK。
+- GPU 推理和采集使用 PBS 计算节点；用户要求长任务使用 `auto` / `autox` 路由。环境、项目和复现命令见 RUNBOOK。 用户于2026-10-29明确偏好可运行但资源排队的GPU任务优先走autox→batch_gpux；须遵守项目许可及原预算，个人项目仍仅auto。真实checkpoint依赖等待不绕过，已运行任务不为换队列停训重提。
 - 默认推送目标为用户的 `yiichu03` GitHub：SIGN 使用 origin（yiichu03/SIGN），SIGN-SRU 及其研究工作树使用 origin（yiichu03/SIGN-SRU）。用户说“push”“同步 GitHub”时均按此处理；执行前核对有效 push URL 与目标分支。
 - 只有用户明确指定向学长的 GitHub 仓库推送时，才考虑 SIGN 的 upstream（Zichen-Yan/SIGN）。不能因为分支跟踪 upstream/main，就把它当作默认推送目标；fetch／pull 与 push 的目标分别核对。
 - Habitat 是第三方依赖，保留官方 origin，常规项目发布不包含它；其无目标默认推送已关闭。不要自动创建或猜测 yiichu03 的依赖 fork。
