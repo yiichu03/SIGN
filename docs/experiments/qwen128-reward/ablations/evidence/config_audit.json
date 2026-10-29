@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "case_differences": {
+    "A": {
+      "qwen_reward.beta": [
+        0.1,
+        0.03
+      ]
+    },
+    "B": {
+      "qwen_reward.beta": [
+        0.1,
+        0.03
+      ],
+      "qwen_reward.settlement_interval": [
+        128,
+        256
+      ]
+    },
+    "C": {
+      "qwen_reward.reward_source": [
+        "qwen",
+        "geometry"
+      ],
+      "qwen_reward.geometry_alpha": [
+        0.0,
+        0.2927574680399425
+      ],
+      "qwen_reward.enabled": [
+        true,
+        false
+      ],
+      "qwen_reward.beta": [
+        0.1,
+        0.0
+      ]
+    }
+  },
+  "other_hyperparameters_identical": true,
+  "navigation_mrq_all_cases": true,
+  "seed": 100,
+  "hash_seed": "PBS exports0",
+  "num_envs": 8,
+  "rollout_steps": 256,
+  "geometry_calibration_frozen": true
+}

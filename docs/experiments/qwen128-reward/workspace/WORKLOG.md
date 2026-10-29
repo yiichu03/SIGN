@@ -1525,3 +1525,56 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 - 新snapshot_progress.py有限字节复制正式TB/JSONL，再将指标统一截到完成23更新的47104步；55项scalar全部有限、1399/1431段有效97.7638%（25高度跨度/7 navmesh容差无效），无重复ID，nav_rewards/masks不变，bonus公式/总量守恒。q min/mean/max0.11497/0.54527/0.87636，累计bonus10.36529。原导航reward末点-0.57639、训练SR3.59922%/SPL2.80694%，同47104步已停冻结基线原始前缀SR3.20000%/SPL2.21177%、reward-0.73818。只作早期相关滑窗描述，未当独立验证收益。
 - 热身后每2048步中位64.2636秒，最近10轮63.7929；正式ckpt目录为空，预期首次250更新=512000步，未错误宣称已有正式权重。所有原始事件前缀/逐段概率/图/统计/配置/SHA保存在logs/qwen128_reward_20261029/progress_20261029T160130，CPU分析Exit0，没有GPU或导航评估。
 - 准备在独立SIGN-qwen128-publication从35b978f追加新快照、更新README和根四文档生成副本。扩展既有构建器--progress更新模式，先验证旧manifest全部SHA和WORKLOG前缀；不重复开发发布框架，生产src/scripts/tests/exp_config/run_sim.py保持81fedec原内容。尚未将本次push记为完成。
+
+
+## 2026-10-29T16:06:37+08:00 [QWEN128-47104-PROGRESS-PUBLISHED]
+
+- 最新训练快照/同阶段基线CSV/逐段概率及面积/实际配置/原始事件和曲线、四根文档生成副本已普通push yiichu03/SIGN的phase2/qwen128-reward-beta01，新提交33e30d28eecdcce557b0f453004a35de0bdebcbf，ls-remote SHA完全一致，独立发布树干净。代码已经是已验证最新81fedec，本轮新增的只是只读分析/资料更新工具和文档证据，无生产算法改动、无新qsub、现有训练继续。
+- 新包59项SHA/大小、所有相对链接、既有WORKLOG严格前缀与根源字节一致、原/运行工作树source_manifest全部通过；旧短测证据保留、未上传新权重。发布新增19文件变更含不可变progress_20261029T160130，完整入口docs/experiments/qwen128-reward/README.md。服务器回执logs/qwen128_reward_20261029/push_progress_result.json，root STATUS再记录新提交，不循环刷新发布副本。
+
+
+## 2026-10-29T16:13:30+08:00 [GIBSON-18944K-FULL-VAL-RESULTS-REVIEWED]
+
+- 用户询问四个Qwen wait/H作业用途，以及此前三方法val是否完成/结果。本轮只读调度和已结束结果，未提交/停止/修改作业或发布GitHub。qstat确认1507269/1507271为R的CPU checkpoint等待，1507270/1507272为batch_gpux中afterok对应waiter的H导航val，分别4.608M/8.192M；评估时Qwen关闭、等待不占GPU，实际训练仅1507268，两旧覆盖训练继续R。
+- 1506785已于2026-10-29 15:29:34结束，PBS F/Exit0/1:35:43，runtime.json complete、所有阶段及full summary完成。共同ckpt.36实际18944000步，3×4200val/14场景，原确定性6环境/max500/seed100/hash0、0.1m/3m/90°被动coverage weight0及公共safety。已有smoke/control保证coverage测量未改变基线轨迹/指标，full检查共同起点/目标图与完整任务集。
+- 本轮独立逐条读出三组episode JSONL，分别4200条/4200唯一任务，SR与global效率重算等于full_comparison.json。基线/256/32成功3289/3322/3445，SR78.3095/79.0952/82.0238%，SPL51.6374/51.9819/51.7534%，global新m²/动作0.07591915/0.07661201/0.08271614，mean episode新m²/动作另为0.19071928/0.19458895/0.20008748；两种聚合严格区分。平均动作144.4576/145.9731/137.9917、平均碰撞44.3381/42.7290/50.4871。
+- 32版相对基线SR+3.7143pp（多156成功），global覆盖效率+8.9529%，SPL+0.1160pp基本相同，平均碰撞+6.149（约+13.87%）；256版SR+0.7857pp、SPL+0.3445pp、global效率+0.9126%、碰撞-1.609。只作当前单种子同预算checkpoint验证观察，不等同所有训练阶段获益、冗余搜索直接测量或Qwen收益。STATUS顶部索引和Gibson当前进度纠正为已完成，RUNBOOK新增结果/聚合口径索引；旧提交记录与结果不覆盖。
+
+
+## 2026-10-29T16:25:26+08:00 [GIBSON-300M-REMAINING-TIME-ESTIMATE]
+
+- 用户询问两个覆盖训练若以300M步上限计算还需多久。本轮仅读原console固定字节前缀并解析时间/frames，未改源码/队列/时限或提交任务。新CPU estimate.py保存近12h时间步数CSV、源SHA/大小及1/3/6/12h吞吐与估计。快照2026-10-29 16:22:39，256最新72151040（24.05%）剩227848960，32最新20746240（6.92%）剩279253760。
+- 近3h步速256352.50095、32186.88167，保持当前速度分别需179.5495h/7.4812天、415.0781h/17.2949天；近1/6h对照256194.10/173.02h，32429.70/395.02h，显示速度波动，未使用全程平均fps作未来保证。
+- 代码/实际合并配置核实stop_step=50000000、MRQ=True、shift=True，trainer达阈值设置use_aug_flag=False；PPO.py只有MRQ块/其日志受该flag控制，RandomShift分支仍只检查shift=True。因而准确说法是50M后停止MRQ辅助训练，旧记录中“停止数据增强”的笼统说法应以本条澄清为准，原代码未更改。256已过50M、32尚未，不能将速度差直接归因于32步结算开销。
+- 条件估计：32剩29253760步按186.88步/s约43.48h达到50M，之后250M若按256当前352.50步/s约197.01h，共240.49h/10.02天。该后段速度尚未在32验证；原RandomShift保持，不声称固定速度或自动续训。
+- PBS当前剩256109.71h（11月3日06:04:59到期）、32141.14h（11月4日13:30:46到期），均不足300M；保持3h固定速度到期约211.37M/115.70M，32按上述MRQ停止后加速条件则约173.92M。详细机器可读证据logs/gibson_training_budget_20261029/estimate.json，STATUS/RUNBOOK更新，本轮未push。
+
+
+## 2026-10-29T17:13:17+08:00 [QWEN-ABC-ABLATION-STARTED]
+
+- 用户明确授权以33e30d2在独立工作树实施A Qwen128 beta.03、B Qwen256 beta.03、C同采集规则几何128对照，边界/冻结/短测通过后从fresh-init经autox提交正式与两个milestone4200val。已读AGENTS/STATUS，启动SIGN-qwen-ablation / phase2/qwen-beta003-geometry128，不改1507268/两旧coverage及原评估依赖。
+- 原短测1204段/1176几何有效段复算sum(L*q)=22736.24026696853、sum(new_area)=2329.8712499999997m²，alpha=.03*sum(L*q)/sum(area)=0.2927574680399425。源segments SHA26180a9e26faa7024f0564193c66d46a8cbb31d1e2c1d99254aeb49b00d81bd7，与用户预期一致；接下来冻结到配置并保存逐段校准证据，不在新训练数据上重新拟合。
+- 实测batch_gpux队列允许168h、每作业最多2GPU，max_run为每用户4个运行作业；已有两GPU val H为依赖等待、不分配GPU。正在核实项目权限/余额和server限制，尚未以队列规则冒充已查到项目余额。
+
+
+## 2026-10-29T17:23:16+08:00 [QWEN-ABC-CPU-PASSED-SHORTS-SUBMITTED]
+
+- 实现提交d2352f0基于33e30d2，运行新SIGN-qwen-ablation分支phase2/qwen-beta003-geometry128。新增A128/B256 beta.03配置和C128几何alpha.2927574680399425；显式MRQ target navigation独立于Qwen开关，原配置无字段时保持mixed；原奖励/其他损失和超参数/encoder逻辑未改。B支持256结算，C共用EpisodeCoverage/ledger，只加alpha*area/256，不调用worker/render，不写q/result字段，旧coverage权重0。
+- 63项CPU单测全部通过，日志unit_tests_pass.log。包括旧39项、原15项及新增9项窗口256终止/跨rollout、物理面积不走概率范围、无效段跳过/错误原子失败、冻结校准、独立MRQ目标及C禁止worker/renderer与eval关闭采集。首轮因新测试改变RNG顺序暴露旧测试(r+bonus)-bonus逐位反推nav的舍入断言，已改为直接比较nav快照，不改奖励算法；失败原日志unit_tests.log保留。
+- 按A/C优先顺序经CFP04-SF-109/autox各提交40960步独立fresh GPU短测：A1507600、C1507601、B1507602，均已R。每作业1A40/36CPU240GB/1.5h，接受且实际开始运行确认当前CFP/Express提交权限。队列max_run4为每用户Express队列运行作业数；已有两GPU评估H依赖保留，不占GPU。hpc project仍要求amgr login，未取得余额数值，不把接受短测等同已核实长期余额。查询快照gpux_queue_before.txt/project_query.txt/gpu_status_before.txt/jobs_before.txt。
+- 源守卫覆盖新运行树及原六树、公开模型/数据/prompt/冻结calibration SHA；未切换或修改原1507268与两coverage目录/作业，未重提原任务。短测尚未完成，正式A/B/C尚未提交。
+
+
+## 2026-10-29T17:40:10+08:00 [QWEN-ABC-SHORTS-PASSED-FORMALS-SUBMITTED]
+
+- 三组各40960步/20更新已通过verify_case：A1507600、B1507602、C1507601，短测报告分别A/B/C有效率97.8459/97.8032/97.9832%，中位40.3921/35.3629/27.8671秒每2048步，累计bonus2.66236/2.74941/2.36669。模型/TB全有限、42项encoder不变、visual_fc更新、原nav_rewards/masks不变，ID唯一、边界/bonus逐段与总量守恒；A/B独立单图FP32读出核验通过，C无worker/PNG/q字段。实际B最长段239步，受真实terminal缩短；完整256与跨rollout边界由CPU构造回归覆盖，不人为修改终止。
+- A首轮52张有效图/metadata/ID与旧已验证短测完全相同，A/C首轮55段（52有效）窗口/面积/有效性全部一致，证据first_input_parity.json/control_input_parity.json。三个103项初始化哈希也等于旧冻结实验初始状态，保留全新初始化与冻结编码器协议。校准集bonus总量匹配2.664403，不把新策略实际bonus总量差异当需重新拟合alpha的理由。
+- 全部GPU短测通过后按A/C/B顺序正式qsub：A1507648、C1507650、B1507651，实际均R，CFP04-SF-109/autox、1A40/36CPU240GB/168h、300M cap，源码d2352f0不改；全新输出results/qwen_ablation_20261029/{case}/train，不加载短测权重。实际168h请求接受核实长期提交许可；项目余额数值仍未知，Express maxrun4和已有两H评估不占GPU已核实，不编造余额。
+- 新六GPU val依赖回执已提交：A4.608M1507653（wait1507652）、A8.192M1507655（wait1507654）；C1507657（wait1507656）/1507660（wait1507659）；B1507662（wait1507661）/1507664（wait1507663）。GPU均H等待对应afterok，CPUwait以after训练开始启动，初查A/C的四CPU R，B两CPU Q，符合资源不足先A/C；旧1507270/1507272依赖保留，原1507268/1497416/1502352仍运行。
+- 新评估复用旧recording_env与native evaluator，只按case/step定位输出，原4200val/14场景/6环境/max500/seed100/hash0/公共safety、0.1m被动coverage weight0；关闭Qwen及奖励轨迹采集。报告原生SR/SPL、两种覆盖效率、碰撞、动作、耗时；训练另外保存段长/bonus分位数和q分布。全部6个waiter路径/源SHA/损坏拒绝与精确milestone保存CPU检查通过，尚无新val结果。正式和短测配置/命令/回执位于logs/qwen_ablation_20261029。
+
+
+## 2026-10-29T17:43:15+08:00 [QWEN-ABC-FORMAL-FIRST-UPDATES-VERIFIED]
+
+- A1507648/B1507651/C1507650均R且已有原生TB更新，快照步数分别4096/6144/26624；标量均有限、formal103项初始状态SHA与各自short相同。A/B FP32常驻worker实际启动，C仍无worker。formal_effective_config.yaml已保存，包含运行时collect=True及独立navigation MRQ目标，来源相同全新初始化，不恢复short checkpoint。证据logs/qwen_ablation_20261029/first_formal_events.json及各case配置/日志。
+- 正式三组168h与六4200val均已提交，旧作业/依赖不动；B两CPU等待暂Q、对应GPU val H，不影响当前B正式训练R。准备在SIGN-qwen-ablation-publication追加现有qwen128实验文档的ablations目录、根四文档生成副本与短测证据，运行源码固定d2352f0。

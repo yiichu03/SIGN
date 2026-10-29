@@ -1,0 +1,41 @@
+{
+  "A": {
+    "job_id": "1507600.stdct-mgmt-02",
+    "command": [
+      "qsub",
+      "-N",
+      "abc-A-short",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/A/short.pbs.log",
+      "-v",
+      "ABC_CASE=A",
+      "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/short.pbs"
+    ]
+  },
+  "C": {
+    "job_id": "1507601.stdct-mgmt-02",
+    "command": [
+      "qsub",
+      "-N",
+      "abc-C-short",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/C/short.pbs.log",
+      "-v",
+      "ABC_CASE=C",
+      "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/short.pbs"
+    ]
+  },
+  "B": {
+    "job_id": "1507602.stdct-mgmt-02",
+    "command": [
+      "qsub",
+      "-N",
+      "abc-B-short",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/B/short.pbs.log",
+      "-v",
+      "ABC_CASE=B",
+      "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/short.pbs"
+    ]
+  }
+}

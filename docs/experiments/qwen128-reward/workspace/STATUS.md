@@ -12,11 +12,21 @@
 | 冻结基线停止时的训练进度 | **74,653,696环境步，约7465万步**；TensorBoard最终事件为2026-10-28 20:28:29，作业20:28:36停止 | 最终事件快照（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_train_threeway_20261028/snapshot_132900/comparison.json`） |
 | 冻结基线最后保存、可用于评估的权重 | **74,240,000步，约7424万步**；后续按checkpoint步数选择同预算对照 | 权重保存记录（服务器路径：`/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/baseline_stop_1496716/preservation.json`） |
 | 公开完整SIGN checkpoint的Gibson验证成绩 | **SR 86.00%、SPL 53.01%、View Match 85.08%**；完整val **4200条／14场景**，作业1494521，Exit0 | 完整原始结果（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/pretrained_full_result.json`） |
-| 最新三方法同预算验证（运行中） | **18,944,000步／ckpt.36**；基线＋256覆盖＋32覆盖，各4200条，单一PBS **1506785**，结果待完成 | 本轮清单（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_threeway_coverage_eval_20261029/manifest.json`） · 运行进度（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_threeway_coverage_eval_20261029/runtime.json`） |
+| 最新三方法同预算验证（已完成） | **18,944,000步／ckpt.36**；每组4200条，PBS **1506785 Exit0**。基线/256覆盖/32覆盖：SR **78.31/79.10/82.02%**，SPL **51.64/51.98/51.75%** | 完整结果（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_threeway_coverage_eval_20261029/full_comparison.json`） · 作业完成记录（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_threeway_coverage_eval_20261029/runtime.json`） |
 
 控制台最后一次打印是74,649,600步，比最终TensorBoard记录少4096步；这是不同日志更新频率的末端差异。不要将最终训练记录或控制台末步当成最后checkpoint步数。公开成绩对应加载完整公开导航模型；冻结基线则只加载并冻结其visual_encoder，其余模块从原初始化训练。
 
 公开模型评估原记录中PYTHONHASHSEED未显式固定，后来的共同步数对照使用hash0；复现协议细节与权重路径见 [RUNBOOK证据索引](RUNBOOK.md#gibson-checkpoints)，本次核验汇总见 baseline_reference_index_20261029.json（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/baseline_reference_index_20261029.json`）。
+
+## 当前授权任务：A/B/C正式对照已提交
+
+独立SIGN-qwen-ablation / phase2/qwen-beta003-geometry128从33e30d2建立，运行源码 **d2352f0**。A Qwen128 beta.03、B Qwen256 beta.03、C几何128 alpha=0.2927574680399425（旧短测1176有效段冻结校准）；8×256/seed100/hash0/仅公开encoder加载冻结/其余fresh初始化，MRQ三组显式navigation目标、PPO混合奖励、旧coverage bonus0。
+
+63项CPU回归+三组各40960步GPU短测通过。有效率A/B/C=97.85/97.80/97.98%，42项encoder状态逐位不变、原nav/mask不变、bonus守恒；C无worker/render/概率字段。A首轮52张图/统计/ID等于旧验证输入；A/C首轮55段几何统计/有效性一致；103项初始状态三组均等于原初始化。每2048动作中位40.39/35.36/27.87秒，短测不证明学习收益。
+
+正式 **A1507648、C1507650、B1507651** 均已R（CFP04-SF-109/autox→batch_gpux，1A40/36CPU240GB/168h，300M cap）。独立输出 `SIGN-qwen-ablation/results/qwen_ablation_20261029/{A,B,C}/train`、TensorBoard其tb/；不从短测恢复。CFP/autox许可由三短测及三168h正式请求实际接受核实，Express每用户max_run4，余额查询仍需amgr登录，未取得剩余额度数字。
+
+4.608M/8.192M准确milestone/4200val GPU依赖：A **1507653/1507655**，C **1507657/1507660**，B **1507662/1507664**；相应CPU等待A1507652/1507654、C1507656/1507659、B1507661/1507663（初查B两CPU在Q，A/C等待先运行）。全部保留旧1507270/1507272依赖，不占GPU等待。未来eval关闭Qwen/采集，原6环境/max500/seed100/hash0/4200val、0.1m被动覆盖weight0，输出SR/SPL/效率/碰撞/动作与耗时；训练另报段长和bonus分布。三正式均已有TB更新，首次核验A/B/C=4096/6144/26624步、全部scalar有限、初始化SHA等于short；C无worker。当前无新正式val成绩。支撑logs/qwen_ablation_20261029，校准/短测/配置/实际命令/提交回执齐全；准备资料发布。WORKLOG：QWEN-ABC-SHORTS-PASSED-FORMALS-SUBMITTED。
 
 ## 当前授权任务：Qwen128正式训练已提交
 
@@ -26,7 +36,9 @@
 
 正式 **1507268.stdct-mgmt-02** 已R、初始化SHA与短测相同（fresh init）：个人auto/1A40/36CPU240GB/168h，300M cap、8×256、seed100/hash0、只加载冻结公开visual_encoder、其他原初始化，**128步/真实终止切段，beta0.1原始q，几何bonus0**，从全新初始化开始。输出 `SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env`，TensorBoard为其 `tb/`；独立6007查看脚本 `logs/qwen128_reward_20261029/view_tensorboard.sh`，原6006服务不动。
 
-4.608M／8.192M各保存不可变milestone checkpoint并安排原协议4200val：CPU等待1507269／1507271；GPU评估 **1507270／1507272**，当前H依赖等待，待对应权重SHA校验后自动释放，不占等待GPU。使用原SIGN-coverage-eval/6环境/max500/seed100/hash0，Qwen及其轨迹采集关闭，额外0.1m被动覆盖口径与既有三方法评估相同。已核实两评估均经CFP/autox路由到batch_gpux，当前H为afterok依赖；没有处于Q且需要换到gpux的GPU任务。用户偏好后续许可范围内资源排队的GPU任务优先gpux。当前无新评估成绩。回执/配置/短测结论：`logs/qwen128_reward_20261029/`。 已push yiichu03/SIGN同名分支：发布提交35b978f、运行源码81fedec，远端SHA核对一致；运行目录保持81fedec，不pull资料提交。WORKLOG：QWEN128-GPU-SHORT-PASSED-FORMAL-AND-EVALS-SUBMITTED。
+四个Qwen wait/H作业共同服务于同一Qwen训练的两次未来导航验证：1507269=4.608M CPU等待、1507271=8.192M CPU等待（R，无GPU），1507270/1507272=各4200导航val（H，等待CPU校验；评估时Qwen关闭）。正式训练本体仅1507268。
+
+4.608M／8.192M各保存不可变milestone checkpoint并安排原协议4200val：CPU等待1507269／1507271；GPU评估 **1507270／1507272**，当前H依赖等待，待对应权重SHA校验后自动释放，不占等待GPU。使用原SIGN-coverage-eval/6环境/max500/seed100/hash0，Qwen及其轨迹采集关闭，额外0.1m被动覆盖口径与既有三方法评估相同。已核实两评估均经CFP/autox路由到batch_gpux，当前H为afterok依赖；没有处于Q且需要换到gpux的GPU任务。用户偏好后续许可范围内资源排队的GPU任务优先gpux。当前无新评估成绩。回执/配置/短测结论：`logs/qwen128_reward_20261029/`。 已push yiichu03/SIGN同名分支：发布提交33e30d2（含47104步进展）、运行源码81fedec，远端SHA核对一致；运行目录保持81fedec，不pull资料提交。WORKLOG：QWEN128-GPU-SHORT-PASSED-FORMAL-AND-EVALS-SUBMITTED。
 
 ## 当前目标与分支布局
 
@@ -64,7 +76,9 @@
 
 ### Gibson 当前进度
 
-- 当前三组验证任务已提交并运行：1506785.stdct-mgmt-02，CFP04-SF-109/autox→batch_gpux，GN-A40-021／1A40／36CPU／240GB／4h。三组最新共同ckpt.36实际18944000步，均保存独立不可变快照，参数有限/源与快照SHA/CPU合并配置及记录器检查通过。单PBS沿用相同4200 Gibson val、确定性6环境/max500/seed100/hash0、0.1m/3m/90°覆盖weight0；前置control/smoke通过后依次三组full，共12600正式episode，预计开跑起约3h。当前control_baseline，GPU对照和完整结果尚待完成。证据logs/gibson_threeway_coverage_eval_20261029；原两训练1497416/1502352仍R，旧4.608M/8.192M结果不改。WORKLOG：GIBSON-THREEWAY-18944K-EVAL-SUBMITTED。
+- 2026-10-29 16:22预算估计（只读console）：256版72151040步，近3h352.50步/s，跑到300M尚需179.55h/7.48天；32版20746240步、186.88步/s，固定当前速度需415.08h/17.29天。32在50M后原代码停止MRQ辅助更新，RandomShift仍启用；若之后速度达到当前256水平，分段估计240.49h/约10.02天，此为条件假设、未在32实测。现有PBS分别只剩109.71h/141.14h，均不足跑满300M，未改作业预算或启动续训。证据logs/gibson_training_budget_20261029/estimate.json；WORKLOG：GIBSON-300M-REMAINING-TIME-ESTIMATE。
+
+- 最新三方法同预算完整val已结束：1506785.stdct-mgmt-02于2026-10-29 15:29:34完成，PBS F/Exit0/1:35:43。共同ckpt.36=18944000步、各4200条/14场景；baseline/coverage256/coverage32的SR78.3095/79.0952/82.0238%，SPL51.6374/51.9819/51.7534%，成功3289/3322/3445。总新增面积/总动作数0.0759192/0.0766120/0.0827161m²/动作；平均动作144.4576/145.9731/137.9917，碰撞44.3381/42.7290/50.4871。32版较基线SR+3.7143pp（多156成功），全局覆盖效率+8.9529%，SPL+0.1160pp基本相近但碰撞+6.149/episode；256版SR+0.7857pp、SPL+0.3445pp、效率+0.9126%。保持单种子/单阶段与几何代理限制，不据此声称整体减少碰撞或所有阶段占优。逐条完整/唯一任务集、共同起点/目标、原生TB汇总及无reward改变control均已通过；本轮再次核验每组4200/唯一和SR/global ratio重算一致。结果logs/gibson_threeway_coverage_eval_20261029/full_comparison.json，旧4.608M/8.192M与原训练不动。WORKLOG：GIBSON-18944K-FULL-VAL-RESULTS-REVIEWED。
 
 - 两覆盖训练最新检查（2026-10-29 13:30快照）：1497416与1502352均R，256版68528128步／32版18835456步，全部34项scalar无非有限，bonus守恒最大误差1.79e-8。各自最近1M SR87.34%／85.46%、SPL49.50%／47.98%，步数不同不能直接排名。共同16.835–18.835M的最近2M，SR86.412%／86.233%，SPL48.349%／49.299%，新m²/动作0.167181／0.170575（32版+2.03%）；32有小幅SPL/覆盖效率现象，SR不稳定领先。256版最近5M SR86.948%／SPL49.679%，仍落后同阶段已停止基线89.279%／54.778%，趋平台。只读原日志/事件快照，不评估/改训/提交新任务。证据logs/gibson_two_coverage_training_20261029/snapshot_132741/readout.json；原始CSV/图在logs/gibson_train_threeway_20261028/snapshot_132900。WORKLOG：COVERAGE-TWO-TRAINING-20261029-READOUT。
 

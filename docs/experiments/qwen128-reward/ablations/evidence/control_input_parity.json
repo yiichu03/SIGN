@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "segments": 55,
+  "valid_segments": 52,
+  "first_rollout_A_C_geometry_statistics_and_validity_exact": true,
+  "no_qwen_or_render_in_C": true
+}

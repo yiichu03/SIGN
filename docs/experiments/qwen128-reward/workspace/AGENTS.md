@@ -26,6 +26,7 @@
 - `SIGN-qwen-topdown-judge/`：独立worktree，分支 `phase2/qwen-topdown-judge`，基于a7cc9e0；当前推进单图独立评分，8环境对应8个独立请求，可在batch维并行；无需同任务分组。Qwen使用envs/qwen35；旧八图同会话接口留作历史，当前未接入PPO奖励或改训练采样。
 - `SIGN-qwen-history-window/`：独立worktree与分支`phase2/qwen-history-window`，从b1c24dc建立；仅复用已发布pilot_2b/diverse_2b的32原始轨迹进行128/256窗口历史图离线2B对照。无重新采样、无导航训练或9B；测评作业期间保持对应运行代码固定，输入/窗口/图/概率/prompt/空白人审与来源均须保留。无前置历史的256步不作历史能力验证，不能用平均q判断方案优劣。
 - `SIGN-qwen128-reward/`：用户于2026-10-29另行授权从453179c建立独立`phase2/qwen128-reward-beta01`，接入2B训练奖励并在验证后提交正式训练；原离线工作树及现有作业不动。Qwen128/beta0.1使用原始q、不居中，几何bonus0；MRQ只预测nav_rewards，GAE/PPO/critic使用混合奖励。运行期间保持代码提交固定，资料通过独立发布树更新。
+- `SIGN-qwen-ablation/`：用户于2026-10-29授权从33e30d2新建独立phase2/qwen-beta003-geometry128，以同一不可变源码/独立输出运行A Qwen128 beta.03、B Qwen256 beta.03、C几何128（alpha从已完成短测冻结校准）；MRQ三组显式nav_rewards目标。保留1507268、两原coverage训练和既有评估依赖。验证后经CFP/autox提交，168h/300M cap，资源不足优先A/C、B排队。 运行提交d2352f0固定；SIGN-qwen-ablation-publication为独立detached资料发布树，普通push到yiichu03同名分支，勿将资料提交pull进运行目录。
 - `SIGN-coverage-eval/`：独立detached工作树a7cc9e0，只读复用原native evaluator，用于三组同训练步数的覆盖评估；外部录数wrapper与脚本保存在各批次`logs/gibson_threeway_coverage_eval*/`，具体步数/作业见STATUS，不在此训练。旧批次证据、训练源码与目录原样保留。
 - `SIGN-coverage-publication/`：独立detached发布工作树，用于将coverage结果和根四文档生成副本发布到yiichu03/SIGN的覆盖奖励分支；不在此提交训练。训练工作树保持各自运行时代码提交，不为资料同步切换／合并。
 - `SIGN-habitat-gs/`：SIGN 的独立工作树，分支 `experiment/habitat-gs-imagenav`，用于 Habitat-GS ImageNav 接入。原 SIGN 路径有已提交的 Gibson 作业，不通过切换它的分支开发新仿真；新工作树以软链接复用数据，环境放 `envs/sign-habitat-gs`，第三方仿真源码放 `habitat-gs/`。 GS评估作业提交后保持此工作树的运行时代码与分支；后续需要改算法时另用独立工作树，不能把Gibson冻结／coverage分支替代原版公开权重评估。

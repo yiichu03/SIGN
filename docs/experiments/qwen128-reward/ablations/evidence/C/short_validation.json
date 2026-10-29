@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "case": "C",
+  "steps": 40960,
+  "updates": 20,
+  "encoder_items_unchanged": 42,
+  "initial_parameters_equal_to_original": true,
+  "all_model_and_scalar_values_finite": true,
+  "scalar_series": 57,
+  "mrq_reward_target": "navigation",
+  "interval": 128,
+  "source": "geometry",
+  "beta": 0.0,
+  "geometry_alpha": 0.2927574680399425,
+  "old_coverage_bonus": 0.0,
+  "nav_rewards_and_masks_unchanged": true,
+  "no_duplicate_backfill": true,
+  "segments": 1190,
+  "valid_segments": 1166,
+  "valid_fraction": 0.9798319327731092,
+  "bonus_sum": 2.3666882522143653,
+  "bonus_quantiles": {
+    "0": 0.0,
+    "50": 0.0005850146181413402,
+    "90": 0.006251472642117572,
+    "100": 0.02184816963634024
+  },
+  "segment_length_quantiles": {
+    "0": 1.0,
+    "50": 26.0,
+    "90": 77.0,
+    "100": 128.0
+  },
+  "total_new_area_m2": 2069.5362499999974,
+  "new_m2_per_all_actions": 0.05052578735351556,
+  "q_distribution": null,
+  "invalid_reasons": {
+    "episode_height_range_exceeds_fixed_floor": 20,
+    "fog_origin_farther_than_5cm_from_navmesh": 4
+  },
+  "mean_rollout_timings": {
+    "geometry_seconds": 9.49814459210948,
+    "render_seconds": 0.0,
+    "worker_seconds": 0.0,
+    "total_seconds": 0.0032255268214564574
+  },
+  "terminal_segments": 872,
+  "median_update_seconds": 27.867140293121338,
+  "combined_peak_sampled_mib": 14395.0,
+  "abc_verification": null,
+  "geometry_does_not_render_or_start_worker": true,
+  "latest_training_metrics": {
+    "metrics/success": 0.03001200407743454,
+    "metrics/spl": 0.022895295172929764,
+    "metrics/collisions.count": 24.434574127197266,
+    "reward": -0.7841638326644897
+  },
+  "checkpoint_sha256": "2c723995ede9c5946fcd73373e2bded13885ad0642d5d1adb31dd14829868311",
+  "learning_benefit_not_tested": true
+}

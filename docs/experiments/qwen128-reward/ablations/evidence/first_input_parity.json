@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "compared_inputs": 52,
+  "old_short_vs_A_first_rollout_images_metadata_ids_exact": true,
+  "new_sampling": false,
+  "source": "actual first_batch audit files"
+}

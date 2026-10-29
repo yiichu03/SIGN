@@ -110,3 +110,8 @@ GPU等待时不占GPU。每组原协议Gibson val4200条/14场景，确定性6�
 `src/qwen_geometry.py`提取公共几何/绘图，`qwen_rollout.py`维护采集与身份账本，`qwen_reward.py`负责常驻进程客户端/渲染/奖励结算；worker复用原SingleImageJudge，不开发第二套Qwen框架。`environment.py`增加训练专用子类，`custom_rollout_storage.py`隔离原导航奖励，`algo/PPO.py`仅切换本实验MRQ奖励目标，`trainer.py`增加初始化/采集/returns前结算和milestone保存。`run_sim.py`关闭非训练入口Qwen；新增一个qwen_reward.yaml和边界测试，未改网络/冻结逻辑/原其他损失与超参数。
 
 根四文档为服务器维护源，发布副本在 [workspace](workspace/)；WORKLOG只追加并核对既有已发布前缀。旧结果不覆盖，未上传新训练权重、场景、环境或相机原始数据。
+
+
+## A/B/C beta0.03与匹配几何128对照
+
+基于33e30d2的独立实验、冻结校准及实际作业见 [A/B/C实验记录](ablations/README.md)。原beta0.1正式训练1507268及旧coverage和评估依赖继续保留。

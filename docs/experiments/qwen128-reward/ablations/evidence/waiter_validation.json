@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "case_milestones_verified": 6,
+  "corrupt_checkpoint_rejected": true,
+  "pbs_mocked": true
+}

@@ -1,0 +1,21 @@
+#!/bin/bash -l
+#PBS -N abc-formal
+#PBS -o /scratch/e1538633/liuyi/logs/qwen_ablation_20261029/formal.pbs.log
+#PBS -l walltime=168:00:00
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-qwen-ablation
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+support=/scratch/e1538633/liuyi/logs/qwen_ablation_20261029
+nvidia-smi --query-gpu=name,uuid,driver_version,memory.total --format=csv
+nvidia-smi --query-gpu=timestamp,memory.used,utilization.gpu --format=csv -l 60 > "$support/$ABC_CASE/formal_gpu.csv" &
+monitor_pid=$!
+trap 'kill "$monitor_pid" 2>/dev/null || true' EXIT
+python "$support/run_case.py" "$ABC_CASE" formal

@@ -133,3 +133,6 @@ habitat_baselines.eval.split test_easy
 
 
 Qwen128 training reward and verified short-run evidence: [experiment record](docs/experiments/qwen128-reward/README.md).
+
+
+A/B/C Qwen beta0.03与匹配几何128对照：[配置、校准、短测和正式作业](docs/experiments/qwen128-reward/ablations/README.md)。

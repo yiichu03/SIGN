@@ -1,0 +1,71 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+test_early_gain_moves_to_step_32_without_changing_total (test_coverage_settlement.SettlementTests) ... ok
+test_eight_environment_conservation_with_navigation_rewards (test_coverage_settlement.SettlementTests) ... ok
+test_interval_validation_and_default (test_coverage_settlement.SettlementTests) ... ok
+test_multiple_episodes_and_boundary_collisions (test_coverage_settlement.SettlementTests) ... ok
+test_settlement_does_not_terminate_gae (test_coverage_settlement.SettlementTests) ... ok
+test_short_and_partial_rollouts (test_coverage_settlement.SettlementTests) ... ok
+test_zero_and_large_interval_preserve_original_settlement (test_coverage_settlement.SettlementTests) ... ok
+test_zero_weight_is_bitwise_identity (test_coverage_settlement.SettlementTests) ... ok
+test_256_history_persists_across_rollouts (test_qwen_ablation.AblationTests) ... ok
+test_256_no_128_cut_and_multiple_terminals (test_qwen_ablation.AblationTests) ... ok
+test_all_three_mrq_navigation_independent_of_qwen (test_qwen_ablation.AblationTests) ... ok
+test_bad_area_atomic_failure_and_invalid_skip (test_qwen_ablation.AblationTests) ... ok
+test_frozen_calibration_exact_budget_match (test_qwen_ablation.AblationTests) ... ok
+test_geometry_area_not_probability_and_no_centering (test_qwen_ablation.AblationTests) ... ok
+test_geometry_controller_no_worker_render_or_fake_q (test_qwen_ablation.AblationTests) ... ok
+test_geometry_eval_does_not_collect (test_qwen_ablation.AblationTests) ... ok
+test_trainer_accepts_128_256_and_rejects_overlap (test_qwen_ablation.AblationTests) ... ok
+test_legacy_metadata_and_rubric_are_unchanged (test_qwen_history.HistoryTests) ... ok
+test_longer_real_record_can_support_256_history (test_qwen_history.HistoryTests) ... ok
+test_new_area_excludes_all_prior_not_just_window_initial (test_qwen_history.HistoryTests) ... ok
+test_same_endpoint_true_history_and_no_history256 (test_qwen_history.HistoryTests) ... ok
+test_same_history_stats_reach_model_with_and_without_yellow (test_qwen_history.HistoryTests) ... ok
+test_short_duplicate_requests_share_one_segment (test_qwen_history.HistoryTests) ... ok
+test_geometry_failure_reasons (test_qwen_reward.GeometryTests) ... ok
+test_incremental_matches_original_offline_masks_and_stats (test_qwen_reward.GeometryTests) ... ok
+test_initial_view_and_repeated_observation (test_qwen_reward.GeometryTests) ... ok
+test_disabled_and_zero_do_not_start_worker_or_collect (test_qwen_reward.IntegrationTests) ... ok
+test_eval_disables_root_and_spawn_subtree (test_qwen_reward.IntegrationTests) ... ok
+test_nav_buffer_separate_and_mrq_compatibility (test_qwen_reward.IntegrationTests) ... ok
+test_cross_rollout_history_not_reset (test_qwen_reward.LedgerTests) ... ok
+test_identity_and_missing_payload_errors (test_qwen_reward.LedgerTests) ... ok
+test_invalid_geometry_skips_without_fake_q (test_qwen_reward.LedgerTests) ... ok
+test_invalid_q_is_atomic_failure (test_qwen_reward.LedgerTests) ... ok
+test_mask_disagreement_fails (test_qwen_reward.LedgerTests) ... ok
+test_payload_is_independent_before_reset (test_qwen_reward.LedgerTests) ... ok
+test_terminal_128_rollout_boundaries_and_formula (test_qwen_reward.LedgerTests) ... ok
+test_wrong_response_ids_are_atomic_failure (test_qwen_reward.LedgerTests) ... ok
+test_zero_beta_bitwise_identity (test_qwen_reward.LedgerTests) ... ok
+test_actual_answer_position_with_left_padding (test_qwen_single_image.SingleImageTests) ... ok
+test_bad_json_and_truncation (test_qwen_single_image.SingleImageTests) ... ok
+test_bad_metadata (test_qwen_single_image.SingleImageTests) ... ok
+test_batch_metadata_stays_with_image (test_qwen_single_image.SingleImageTests) ... ok
+test_independent_batch_rows (test_qwen_single_image.SingleImageTests) ... ok
+test_invalid_logits (test_qwen_single_image.SingleImageTests) ... ok
+test_invalid_scores (test_qwen_single_image.SingleImageTests) ... ok
+test_manifest_two_groups_and_missing_files (test_qwen_single_image.SingleImageTests) ... ok
+test_metadata_ratio_computed_and_checked (test_qwen_single_image.SingleImageTests) ... ok
+test_no_area_inference_from_percentages (test_qwen_single_image.SingleImageTests) ... ok
+test_probability_formula (test_qwen_single_image.SingleImageTests) ... ok
+test_probability_stability_and_endpoints (test_qwen_single_image.SingleImageTests) ... ok
+test_single_allowed (test_qwen_single_image.SingleImageTests) ... ok
+test_ties_and_unknown_not_relative (test_qwen_single_image.SingleImageTests) ... ok
+test_budget_mismatch_explicit_diagnostic_only (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_continuation_window_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_disabled_has_no_model_or_filesystem_dependency (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_duplicate_candidate_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_invalid_scores_and_ids_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_json_repair_is_not_silent (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_mixed_task_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_same_task_sealed_eight_image_request (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_tampered_image_rejected (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_ties_and_unknown_preserved (test_qwen_topdown.JudgeBoundaryTests) ... ok
+test_truncation_rejected_even_valid_prefix (test_qwen_topdown.JudgeBoundaryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 63 tests in 8.051s
+
+OK

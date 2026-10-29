@@ -529,3 +529,15 @@ GitHub目标yiichu03/SIGN、phase2/qwen-topdown-judge；资料入口docs/experim
 正式每250更新保存512k步checkpoint，并在4.608M/8.192M额外保存不可变`milestone_STEP.pth`及SHA侧车。提前提交两组独立CPU `watch.pbs`及GPU `evaluate.pbs`；waiter以PBS after训练开始为依赖，仅等待/核对对应侧车与checkpoint SHA，退出0后由GPU作业的afterok依赖释放评估，不依赖计算节点动态qsub。CPU等待不占GPU；保存真实两组提交回执及val_STEP/wait_state.json。评估复用未改动`SIGN-coverage-eval`原生evaluator，Qwen及Qwen轨迹采集关闭；4200val/14场景、确定性6环境/max500/seed100/hash0，额外原0.1m/3m/90°被动coverage统计、reward weight0，输出SR/SPL及两种面积/动作聚合。0.1m是既有共同评估口径，与Qwen输入图0.025m分开记录。val_STEP/wait_state.json与val_STEP/submission.json提供实际排队ID，侧车出现前不虚构评估ID。
 
 Qwen短测与正式运行区分：1507196中Qwen部分固定40960步、输出short_qwen_40960；1507268为独立fresh-init正式任务、输出train_personal_8env、168h/300M cap。正式每250更新/512000步首存，初期ckpts为空并非训练未启动。只读进展快照入口`envs/sign-baseline/bin/python logs/qwen128_reward_20261029/snapshot_progress.py`，保存有限字节事件/逐段记录/CSV/PNG与实际统计，早期基线仅读取相同步数前缀；不加载GPU或改训练。输出新progress_时间戳目录，避免覆盖旧证据。
+
+三方法共同18.944M的完整结果：`logs/gibson_threeway_coverage_eval_20261029/full_comparison.json`，1506785于2026-10-29 15:29:34 Exit0；各4200val、ckpt.36，原始逐episode保存在full_baseline/episodes、full_coverage256/episodes、full_coverage32/episodes，原生TensorBoard在各full_CASE/native/tb。主覆盖效率统一为sum(new_area_m2)/sum(actual_actions)；结果另含mean(new_area_m2/actions)，两者不得混用。三组确定性6环境/max500/seed100/hash0、共同任务/起点/目标及公开safety、原0.1m/3m/90°被动coverage weight0。该结果是几何覆盖两方案与冻结基线，Qwen模型尚未到其4.608M/8.192M评估点。
+
+训练剩余时间估计：运行CPU只读`python3 logs/gibson_training_budget_20261029/estimate.py`，从原console的frames/时间差计算最近1/3/6/12h速度，主报3h，剩余时间=(300M-current_step)/recent_fps；同时单列PBS截止时间和剩余预算。50M原停止条件是use_aug_flag=False，它只门控MRQ辅助更新；PPO中RandomShift仍按shift配置执行，不能将该条件说成关闭所有数据增强。32版未到50M时，可另报假设后段达到256当前速度的条件估计，不将其当实测保证。
+
+## A/B/C beta0.03与几何128匹配对照
+
+独立SIGN-qwen-ablation/phase2/qwen-beta003-geometry128从33e30d2建立，运行提交d2352f0。原exp-config末追加`,qwen_reward,qwen_a128`（A）、`,qwen_reward,qwen_b256`（B）、`,qwen_reward,geometry_c128`（C）；A/B beta.03、128/256结算，PPO仍256；C关闭Qwen、alpha.2927574680399425、新面积/256末步奖励，共用2.5cm/3m/90°采集/历史/无效规则，不渲染不写概率。三组显式mrq_reward_target=navigation，独立于Qwen enabled；旧配置无字段仍mixed。其余初始化与算法沿用冻结基线。
+
+支撑logs/qwen_ablation_20261029，run_case.py按case/stage启动fresh目录，verify_case.py验收真实40960步，formal_submission.json记录已提交的A1507648/C1507650/B1507651和六次val。已有作业不重复qsub。每组168h/300M cap，CFP/autox→gpux，资源不足优先A/C；正式输出SIGN-qwen-ablation/results/qwen_ablation_20261029/{A,B,C}/train，TB其tb。每250更新512k常规保存、4.608M/8.192M准确保存milestone，CPUwait核对step/SHA，原协议4200val通过afterok释放。新waiter的PBS查询设15秒timeout，超时继续按checkpoint轮询，避免查询故障阻塞权重就绪检查；旧waiter不改。
+
+冻结校准docs/experiments/qwen128-reward/ablations/calibration来自旧1507196短测有效1176段；alpha=.03*sum(L*q)/sum(area)=.2927574680399425，原始记录SHA26180a9e26faa7024f0564193c66d46a8cbb31d1e2c1d99254aeb49b00d81bd7。calibrate_geometry_control.py可只读复算至全新输出，禁止用新训练或val数据重拟合此对照。正式训练报告原reward、原SR/SPL/碰撞以及独立qwen_或geometry_ bonus与exploration段长/bonus分布；未来val用原0.1m被动统计，与训练2.5cm口径分开。

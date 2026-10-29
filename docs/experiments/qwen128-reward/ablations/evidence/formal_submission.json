@@ -1,0 +1,263 @@
+{
+  "runtime_commit": "d2352f06bc56386d098c8b94d2754e9e21bf2cb3",
+  "cases": {
+    "A": {
+      "evaluations": {
+        "4608000": {
+          "wait": {
+            "job_id": "1507652.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-A-w4608000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/A/val_4608000/wait.pbs.log",
+              "-v",
+              "ABC_TRAIN_JOB=1507648.stdct-mgmt-02,ABC_EVAL_STEP=4608000,ABC_CASE=A",
+              "-W",
+              "depend=after:1507648.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/watch.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:09+08:00"
+          },
+          "evaluation": {
+            "job_id": "1507653.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-A-v4608000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/A/val_4608000/evaluate.pbs.log",
+              "-v",
+              "ABC_EVAL_STEP=4608000,ABC_CASE=A",
+              "-W",
+              "depend=afterok:1507652.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/evaluate.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:09+08:00"
+          }
+        },
+        "8192000": {
+          "wait": {
+            "job_id": "1507654.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-A-w8192000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/A/val_8192000/wait.pbs.log",
+              "-v",
+              "ABC_TRAIN_JOB=1507648.stdct-mgmt-02,ABC_EVAL_STEP=8192000,ABC_CASE=A",
+              "-W",
+              "depend=after:1507648.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/watch.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:09+08:00"
+          },
+          "evaluation": {
+            "job_id": "1507655.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-A-v8192000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/A/val_8192000/evaluate.pbs.log",
+              "-v",
+              "ABC_EVAL_STEP=8192000,ABC_CASE=A",
+              "-W",
+              "depend=afterok:1507654.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/evaluate.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:09+08:00"
+          }
+        }
+      },
+      "training": {
+        "job_id": "1507648.stdct-mgmt-02",
+        "command": [
+          "qsub",
+          "-N",
+          "abc-A-formal",
+          "-o",
+          "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/A/formal.pbs.log",
+          "-v",
+          "ABC_CASE=A",
+          "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/formal.pbs"
+        ],
+        "submitted_at": "2026-10-29T17:38:08+08:00"
+      }
+    },
+    "C": {
+      "evaluations": {
+        "4608000": {
+          "wait": {
+            "job_id": "1507656.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-C-w4608000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/C/val_4608000/wait.pbs.log",
+              "-v",
+              "ABC_TRAIN_JOB=1507650.stdct-mgmt-02,ABC_EVAL_STEP=4608000,ABC_CASE=C",
+              "-W",
+              "depend=after:1507650.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/watch.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:09+08:00"
+          },
+          "evaluation": {
+            "job_id": "1507657.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-C-v4608000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/C/val_4608000/evaluate.pbs.log",
+              "-v",
+              "ABC_EVAL_STEP=4608000,ABC_CASE=C",
+              "-W",
+              "depend=afterok:1507656.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/evaluate.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:10+08:00"
+          }
+        },
+        "8192000": {
+          "wait": {
+            "job_id": "1507659.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-C-w8192000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/C/val_8192000/wait.pbs.log",
+              "-v",
+              "ABC_TRAIN_JOB=1507650.stdct-mgmt-02,ABC_EVAL_STEP=8192000,ABC_CASE=C",
+              "-W",
+              "depend=after:1507650.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/watch.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:10+08:00"
+          },
+          "evaluation": {
+            "job_id": "1507660.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-C-v8192000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/C/val_8192000/evaluate.pbs.log",
+              "-v",
+              "ABC_EVAL_STEP=8192000,ABC_CASE=C",
+              "-W",
+              "depend=afterok:1507659.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/evaluate.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:10+08:00"
+          }
+        }
+      },
+      "training": {
+        "job_id": "1507650.stdct-mgmt-02",
+        "command": [
+          "qsub",
+          "-N",
+          "abc-C-formal",
+          "-o",
+          "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/C/formal.pbs.log",
+          "-v",
+          "ABC_CASE=C",
+          "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/formal.pbs"
+        ],
+        "submitted_at": "2026-10-29T17:38:08+08:00"
+      }
+    },
+    "B": {
+      "evaluations": {
+        "4608000": {
+          "wait": {
+            "job_id": "1507661.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-B-w4608000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/B/val_4608000/wait.pbs.log",
+              "-v",
+              "ABC_TRAIN_JOB=1507651.stdct-mgmt-02,ABC_EVAL_STEP=4608000,ABC_CASE=B",
+              "-W",
+              "depend=after:1507651.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/watch.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:10+08:00"
+          },
+          "evaluation": {
+            "job_id": "1507662.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-B-v4608000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/B/val_4608000/evaluate.pbs.log",
+              "-v",
+              "ABC_EVAL_STEP=4608000,ABC_CASE=B",
+              "-W",
+              "depend=afterok:1507661.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/evaluate.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:10+08:00"
+          }
+        },
+        "8192000": {
+          "wait": {
+            "job_id": "1507663.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-B-w8192000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/B/val_8192000/wait.pbs.log",
+              "-v",
+              "ABC_TRAIN_JOB=1507651.stdct-mgmt-02,ABC_EVAL_STEP=8192000,ABC_CASE=B",
+              "-W",
+              "depend=after:1507651.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/watch.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:11+08:00"
+          },
+          "evaluation": {
+            "job_id": "1507664.stdct-mgmt-02",
+            "command": [
+              "qsub",
+              "-N",
+              "abc-B-v8192000",
+              "-o",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/B/val_8192000/evaluate.pbs.log",
+              "-v",
+              "ABC_EVAL_STEP=8192000,ABC_CASE=B",
+              "-W",
+              "depend=afterok:1507663.stdct-mgmt-02",
+              "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/evaluate.pbs"
+            ],
+            "submitted_at": "2026-10-29T17:38:11+08:00"
+          }
+        }
+      },
+      "training": {
+        "job_id": "1507651.stdct-mgmt-02",
+        "command": [
+          "qsub",
+          "-N",
+          "abc-B-formal",
+          "-o",
+          "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/B/formal.pbs.log",
+          "-v",
+          "ABC_CASE=B",
+          "/scratch/e1538633/liuyi/logs/qwen_ablation_20261029/formal.pbs"
+        ],
+        "submitted_at": "2026-10-29T17:38:08+08:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-29T17:25:52+08:00",
+  "project": "CFP04-SF-109",
+  "route": "autox",
+  "execution_queue": "batch_gpux",
+  "queue_walltime_max_hours": 168,
+  "user_max_running_in_gpux": 4,
+  "existing_eval_jobs": [
+    "1507270",
+    "1507272"
+  ],
+  "existing_eval_state": "dependency-held, GPU allocation0",
+  "prior_training_preserved": [
+    "1497416",
+    "1502352",
+    "1507268"
+  ],
+  "project_credit_query": "hpc project requires amgr login; available balance unknown",
+  "submission_permission": "Confirmed by actual accepted/running A1507600 C1507601 B1507602 shorts",
+  "requested_new_formal_upper_bound_gpu_hours": 504,
+  "requested_new_evaluation_upper_bound_gpu_hours": 24,
+  "formal_order": [
+    "A",
+    "C",
+    "B"
+  ],
+  "no_claim_of_balance_verified": true,
+  "formal_submission_permission": "All three168h CFP/autox formal requests accepted and running",
+  "formal_training_jobs": {
+    "A": "1507648.stdct-mgmt-02",
+    "C": "1507650.stdct-mgmt-02",
+    "B": "1507651.stdct-mgmt-02"
+  },
+  "six_evaluations_submitted": true
+}
