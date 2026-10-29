@@ -51,7 +51,7 @@ def area_stats(prior, final, valid, mpp, actions):
 def history_prompt(old):
     new = old.replace(
         '深蓝色为初始已见区域，浅蓝色为本段新增观测区域；红线为轨迹，绿色圆点为起点，深色叉为终点。',
-        '深蓝色为段前累计已见区域，浅蓝色为本段真正新增观测区域；黄线（如显示）是历史轨迹，红线是当前整段轨迹，绿色圆点为当前红色段起点，深色叉为当前段终点。只评价当前红色段，历史仅作为背景。')
+        '深蓝色为段前累计已见区域，浅蓝色为本段真正新增观测区域；黄色实线（如显示）是历史轨迹，红色实线是当前整段轨迹，两者线宽和线型相同、只以颜色区分。完全重合处黄线可能被红线遮挡，不把未见黄线当作没有历史。绿色圆点为当前红色段起点，深色叉为当前段终点。只评价当前红色段，历史仅作为背景。')
     new = new.replace(
         'action_count是实际动作数，new_area_m2是扣除初始视野后的新增覆盖面积，',
         'action_count只计算当前段的实际动作数，new_area_m2是扣除段前累计已见后的新增覆盖面积，')
@@ -77,11 +77,11 @@ def render(path, coords, grid, prior, final, start, end, bounds, title, variant,
     fig, ax = plt.subplots(figsize=(10, 8))
     ax.imshow(rgb, interpolation='nearest')
     if variant == 'history' and start:
-        # Wide yellow dashes remain visible on both sides of an overlapping red line.
+        # Identical stroke style; draw the current path above exact historical overlaps.
         ax.plot(coords[:start+1, 1], coords[:start+1, 0],
-                c='#f2bd27', lw=4.8, linestyle=(0, (4, 2)), zorder=3)
+                c='#f2bd27', lw=1.5, linestyle='-', zorder=3)
     current = coords[start:end+1]
-    ax.plot(current[:, 1], current[:, 0], c='#b82b35', lw=1.5, zorder=4)
+    ax.plot(current[:, 1], current[:, 0], c='#b82b35', lw=1.5, linestyle='-', zorder=4)
     start_size = 110 if np.array_equal(current[0], current[-1]) else 50
     ax.scatter(current[0, 1], current[0, 0], s=start_size, c='#149253', edgecolors='white', zorder=5)
     ax.scatter(current[-1, 1], current[-1, 0], s=50, c='#222c41', marker='X', zorder=6)
@@ -96,7 +96,7 @@ def render(path, coords, grid, prior, final, start, end, bounds, title, variant,
         ('#9cb3c7', 'Pre-window coverage' if historical else 'Initial coverage'),
         ('#a6d6eb', 'New coverage')]]
     if historical:
-        legend.append(Line2D([0], [0], color='#f2bd27', lw=4.8, linestyle='--',
+        legend.append(Line2D([0], [0], color='#f2bd27', lw=1.5, linestyle='-',
                              label='History (yellow, when shown)'))
     legend += [Line2D([0], [0], color='#b82b35', label='Current path' if historical else 'Path'),
                Line2D([0], [0], marker='o', color='w', markerfacecolor='#149253', label='Start'),
