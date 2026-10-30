@@ -1578,3 +1578,66 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 
 - A1507648/B1507651/C1507650均R且已有原生TB更新，快照步数分别4096/6144/26624；标量均有限、formal103项初始状态SHA与各自short相同。A/B FP32常驻worker实际启动，C仍无worker。formal_effective_config.yaml已保存，包含运行时collect=True及独立navigation MRQ目标，来源相同全新初始化，不恢复short checkpoint。证据logs/qwen_ablation_20261029/first_formal_events.json及各case配置/日志。
 - 正式三组168h与六4200val均已提交，旧作业/依赖不动；B两CPU等待暂Q、对应GPU val H，不影响当前B正式训练R。准备在SIGN-qwen-ablation-publication追加现有qwen128实验文档的ablations目录、根四文档生成副本与短测证据，运行源码固定d2352f0。
+
+
+## 2026-10-29T17:47:32+08:00 [QWEN-ABC-ABLATIONS-PUBLISHED]
+
+- 普通push成功：yiichu03/SIGN的phase2/qwen-beta003-geometry128发布提交ac6229895361d1551fad5710ddf1f53830d11e20，ls-remote完全一致。运行源码d2352f0保持不变；独立publication树干净，七个原/新运行工作树source guard及public模型/数据/prompt/冻结calibration全部通过，未切换或修改原训练目录、未重复提交原作业，未force push。
+- 在现有docs/experiments/qwen128-reward追加ablations配置/校准引用/63项CPU与三40960步GPU短测/正式命令和真实配置/逐段概率或面积/bonus与段长分布/耗时/资源和依赖回执，并更新根四文档生成副本及README导航。新包124项SHA/大小、相对链接、WORKLOG旧前缀与根源字节一致、凭据模式检查通过，资料8.77MB，无新训练权重、场景或环境。
+- 正式A1507648/B1507651/C1507650均R，首批TB有限/全新初始化已核验；六次GPU val分别A1507653/1507655、B1507662/1507664、C1507657/1507660均已提交依赖，当前无新val成绩；B两CPU waiter初查Q，其余等待R，旧1507270/1507272保留。CFP余额仍需amgr登录，未声称已取得余额数值；实际三个168h/autox申请均接受。回执logs/qwen_ablation_20261029/push_result.json，root文档在回执后仅追加/更新、不循环重发。
+
+### 2026-10-30T02:49:56+08:00 — TENSORBOARD-REUSE-RUNNING-SERVER-20261030
+
+用户粘贴原启动命令报Address already in use／6006 occupied并关闭SSH。本地16006无监听；远端stdct-login-01的PID1958700自02:15:26运行，完整命令与当前view_personal_tensorboard.sh的三组logdir_spec匹配，/data/logdir响应正确。无需杀现有服务或重复读大日志。
+
+通过诊断SSH控制连接临时建立本地16007→远端6006，首页HTTP200，tags返回baseline_frozen/.=29、coverage_rollout256/.=34、coverage_settle32/.=34。首次检查脚本用不带/.的键做严格断言而失败（服务及数据响应正常）；按TensorBoard实际run后缀规范化后校验通过。已取消临时16007转发，不建立持久16006。保留现有服务、训练、脚本与环境，给用户ssh -N只转发的命令及本地16006地址；RUNBOOK补充已有服务和未启动服务的两种入口，STATUS更新。
+
+### 2026-10-30T03:11:46+08:00 — TENSORBOARD-START-OR-REUSE-LIFECYCLE-20261030
+
+用户执行仅转发ssh -N后出现channel open failed: connect failed: Connection refused。本地PID1984053确实监听16006；新诊断SSH在stdct-login-01，6006无监听，本账号已无TensorBoard进程；上一轮02:48核查的PID1958700现已退出，退出原因未从当前证据确定。未证实本轮为登录节点漂移，不能把该假设写成根因。原-N建议依赖已有网页持续运行，不能处理原网页退出。
+
+修根logs/gibson_reproduction_20261026/view_personal_tensorboard.sh，保留原版为view_personal_tensorboard.before_reuse_20261030.sh，新增view_personal_tensorboard.py。沿用原三组logdir_spec、port环境变量、load_fast=false与max_reload_threads3；用原Python3.8环境监管TensorBoard。空闲端口启动；已有端口严格HTTP核对三组spec，匹配复用，不同服务不杀进程且明确报错。SIGINT／SIGTERM／SIGHUP停止会话，只清理本会话创建的子进程；新TB独立session避免终端先于监管器打断清理。
+
+实际集成使用独立远端16016、不占用户16006或正式6006：bash -n与3.8语法通过，原环境真实启动首页HTTP200／logdir正确，第二会话复用后Ctrl+C保留原网页，owner接收SIGHUP后网页端口释放，模拟其他目录的HTTP服务被拒绝复用且保留；四项全部通过。证据tensorboard_launcher_checks_20261030.json；临时stdout /tmp/tb_owner_20261030.log、/tmp/tb_reuser_20261030.log。测试进程和端口均清理；用户当前-N未动，交由用户Ctrl+C并改用原统一ssh -t脚本命令。未改训练代码、环境或PBS作业。STATUS／RUNBOOK同步当前结论。
+
+
+## 2026-10-31T00:56:14+08:00 [TRAINING-SIX-RUNS-READOUT-20261031]
+
+- 目标：按用户要求查看当前训练指标。liuyi根执行qstat -u e1538633及CPU-only logs/training_readout_20261031/readout.py，保存固定字节事件/rollout快照、SHA、CSV、同预算曲线与readout.json；未新qsub/qalter/qdel，不修改运行仓库、环境或评估。六训练1497416/1502352/1507268/1507648/1507651/1507650均R，取样事件末时2026-10-31 00:51–00:53；其余Q/H为既有等待或评估依赖，本轮不将其计作训练、不分析新val结果。
+- 各最新步数：覆盖256=115169280、覆盖32=43018240、Qwen128β.1=7084032、A=6844416、B=7290880、C=18020352。各自近1M训练SR/SPL依次86.8396/51.2376%、86.1802/48.6444%、84.6514/46.6729%、82.5211/45.3223%、83.8150/46.8524%、85.2516/49.5117%；近3h中位每2048步5.286/10.458/33.554/33.134/31.476/12.201秒。不同训练预算不直接排名；原50-update滑动统计重叠，本次追加的1M均值只作描述。
+- 共同5844416–6844416步：基线/旧256/旧32/Qwenβ.1/A/B/C的SR82.4707/84.3577/82.3751/83.1522/82.5211/82.8658/80.6786%，SPL46.2664/46.4371/45.6014/46.0488/45.3223/46.0725/45.4556%。Qwenβ.1/B有小幅SR现象，SPL未超过基线，不称稳定收益；同步起伏明显，保留单种子限制。旧共同38.018–43.018M近5M，基线/256/32 SR86.2442/85.4666/84.9588、SPL51.0480/47.4920/47.6174%，32近1M反弹不能当持续胜出。
+- 新A/B/C同阶段几何有效动作效率0.159412/0.160814/0.165142m²，不能与旧0.1m全动作统计或无训练面积的基线直接比较。共同阶段每rollout bonus A/B/C .1347298/.1399244/.3501336，C为A约2.60倍；冻结alpha只保证旧短测校准集总量相等，不保证后续策略/面积变化时一致，未擅改alpha或权重。
+- 各自近1M的Qwenβ.1/A/B/C有效段比例92.669/92.849/93.179/92.729%；主要跳过episode_height_range_exceeds_fixed_floor，另有fog_origin_farther_than_5cm_from_navmesh；比短测约98%降低属需要跟进的观察，不称worker故障。四组截至各事件末步全部rollout顺序连续、nav_rewards/masks不变，混合奖励守恒最大差5.07e-5以内；旧coverage守恒差1.79e-8。所有29/34/34/55/67/67/57项scalar历史均有限，loss无NaN/Inf。
+- CPU读取六组最近稳定编号checkpoint，SHA/extra_state.step/模型全有限，42项encoder状态均逐位等于公开权重；训练事件末步与checkpoint步数分开保存，证据checkpoint_check.json。采样不修改任何权重。完整证据logs/training_readout_20261031/snapshot_005043，脚本/采集日志/PBS状态/冻结检查在其父目录；STATUS加入最新索引、RUNBOOK追加只读操作方法，本轮不push资料。
+
+
+## 2026-10-31T01:01:20+08:00 [GEOMETRY128-QWEN-LEGACY-AND-BASELINE-FINAL-CLARIFIED]
+
+- 按用户追问核对C几何128定义、Qwen与旧两覆盖的相同步数训练比较及基线停止末点。只读src/config/geometry_c128.yaml、冻结calibration.json和上一批固定事件/CSV快照；未触碰运行代码、作业或模型，未新增评估、推送或导航训练。
+- C是A128的纯几何对照：相同2.5cm/3m/90°、episode历史/有效性，128步或真实terminal切段，PPO仍256；段末alpha*new_area/256，alpha=.2927574680399425由旧1176有效段按.03*sum(L*q)/sum(area)冻结；无Qwen、无topdown渲染。A为.03*(L/256)*q。三新对照MRQ显式navigation目标；旧两覆盖还存在面积分辨率/权重/目标口径差异，不把跨系列结果当仅替换评分器的单变量实验。
+- 补齐共同5844416–6844416步旧256/旧32的SR84.3577/82.3751%、SPL46.4371/45.6014%；Qwenβ.1/A/B分别83.1522/82.5211/82.8658%及46.0488/45.3223/46.0725%。该窗口β.1/B比旧32略高，三Qwen均未超过旧256的SR和SPL。进一步在相同结束步核对最近1/2/3/5M，保存comparison_followup.json：3M时β.1 SR83.0184高于旧25682.2614，但SPL45.1135低于45.3955；5M时β.1 SR79.5786/SPL43.4939低于旧25679.8807/43.6503。窗口敏感且单种子训练滑窗，不能宣称稳定全面收益。
+- 基线1496716最终TB步74653696，最后可评估checkpoint74240000。停止前最终原生滑窗SR.8780822157859802/SPL.5513484477996826，即87.81/55.13%；最后1M滑窗均值87.8689/54.8217%，最后5M89.4169/55.6550%。这些是训练过程完成episode统计，不是额外完整训练集离线评估；不混用公开checkpoint val86.00/53.01%。STATUS快速索引新增基线训练SR/SPL行，当前比较补上旧两覆盖与窗口敏感性。
+
+
+## 2026-10-31T01:32:12+08:00 [GITHUB-CODE-DOC-SYNC-AUDIT-20261031]
+
+- 用户询问代码及文档是否已同步yiichu03。实际执行git ls-remote --heads git@github.com:yiichu03/SIGN.git核对七个研究分支，并逐个核对五训练树HEAD/status/有效push URL及运行HEAD到已发布tip的文件差异；五组均无src/config/tests/scripts等非资料差异，无未提交训练代码，未跟踪data仅资源软链接。远端基线dac8609、覆盖256 b39e362、覆盖32 a7cc9e0、Qwenβ.1 33e30d2、ABC ac62298，另离线topdown b1c24dc、历史453179c；因此已批准训练实现均已上传。
+- 最新ABC发布树的AGENTS字节一致，STATUS/RUNBOOK/WORKLOG较根源滞后，发布STATUS日期2026-10-29、WORKLOG仍为当前源严格前缀。10月31日训练读数/曲线/比较窗口与新增基线训练SR/SPL索引、只读汇总脚本和最近TensorBoard运维文档尚未发布。当前请求为状态核对，未擅自push或将资料pull入运行目录；未改动作业/训练源码。保存审计logs/github_sync_audit_20261031/013212/audit.json，更新STATUS同步状态。
+
+
+## 2026-10-31T01:49:55+08:00 [TRAINING-READOUT-PUBLICATION-PREPARED-20261031]
+
+- 用户明确要求将最新资料补充同步yiichu03。选用已存在的独立SIGN-qwen-ablation-publication、基点ac6229895361d1551fad5710ddf1f53830d11e20，远端同名分支实际ls-remote一致、工作树干净、push URL为git@github.com:yiichu03/SIGN.git；准备普通push phase2/qwen-beta003-geometry128，不向upstream或main发布。六组比较集中放在原qwen128-reward/ablations/training_20261031，其他运行分支保持原提交，避免为资料切换训练目录。
+- 本批次不重跑训练或评估：复用00:51–00:53固定快照readout.json/1–5M窗口JSON/曲线/七组所选CSV/四组rollout、checkpoint冻结审计和PBS状态，CSV/rollout确定性gzip；附只读汇总脚本和10月30日TensorBoard启动/复用/信号清理副本及当时检查。完整TB、权重、场景、环境不重复上传。新构建器logs/training_readout_20261031/publish_readout.py，旧发布构建器与旧证据不改。
+- 原七工作树及模型/数据/prompt source_manifest guard已通过，运行源码/冻结校准均未变。根STATUS补资料入口、将旧启动状态明确标为10月29日记录，RUNBOOK补只读构建/核验方法；四文档从根源生成，WORKLOG仅追加。当前为准备记录，构建/解压SHA/指标复算/相对链接及普通push尚待实际完成，不把准备写成已发布。
+
+
+## 2026-10-31T01:52:24+08:00 [TRAINING-READOUT-PUBLICATION-CHECKED-20261031]
+
+- 独立publication增量构建与仓库根实际离线命令均通过：原manifest151项/40.07MB，24项原始输入的SHA与确定性gzip解压完全一致，56项1/2/3/5M区间SR/SPL从已发布CSV重新计算一致；四组rollout编号连续、nav_rewards/masks原样及混合bonus守恒核验通过。README/STATUS/RUNBOOK/AGENTS相对链接有效，原已发布WORKLOG前缀保留；新Python脚本AST与shell bash -n通过，未重跑训练单测或GPU实验。
+- 包含新训练报告、七组CSV、四组rollout、基线停止记录、checkpoint审计、汇总/离线核验脚本、TensorBoard运维副本及检查。新目录无权重/场景/环境/相机数据，单文件小于20MiB，凭据模式扫描通过；运行实现与d2352f0无差异。六训练最新PBS核查仍R，旧依赖保留。本条与根文档重新生成进入本次资料快照，最终普通push和远端SHA复核仍待执行。
+
+
+## 2026-10-31T01:54:29+08:00 [TRAINING-READOUT-PUBLICATION-PBS-WHITESPACE-FIX]
+
+- 最终git diff --cached --check发现新归档的PBS jobs.txt原始输出有10行尾随空格，失败输出保留logs/training_readout_20261031/publication_whitespace_check_before.log。这是原始PBS文本格式，未修改或清理服务器证据。改将该文件确定性gzip归档为evidence/jobs.txt.gz，解压SHA/原字节数保持不变；生成器、输入清单与STATUS相对链接同步更新，原文本仅从本次未提交的生成目录移除。训练代码、作业、原证据不变。更新资料manifest后重新执行离线与暂存检查，再做普通push。

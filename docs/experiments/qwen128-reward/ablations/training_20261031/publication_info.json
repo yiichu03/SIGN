@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-31T01:50:14+08:00",
+  "publication_base": "ac6229895361d1551fad5710ddf1f53830d11e20",
+  "runtime_commit": "d2352f06bc56386d098c8b94d2754e9e21bf2cb3",
+  "branch": "phase2/qwen-beta003-geometry128",
+  "workspace_source_sha256": {
+    "AGENTS.md": "7dcc887b18d8a6b23c665cb28d36e083ce86e8c7aff0093744d484b21b742b9b",
+    "STATUS.md": "22198e1137572972d0b311c8bec404b9ff0f2b922d062ba6b78ad6c586e9cbb2",
+    "RUNBOOK.md": "afc7966a4c94fb65922739cb9a9c142f1b8a06456c6a1f1f333942890b854283",
+    "WORKLOG.md": "29ff9e461682b5de2ba14728a8d43cd945884199e0733af6957377ff5c9f6460"
+  }
+}

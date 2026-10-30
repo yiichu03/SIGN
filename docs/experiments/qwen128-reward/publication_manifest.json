@@ -1,11 +1,11 @@
 {
   "README.md": {
-    "sha256": "1b221eb34406bb8b5fb511edf91375934f351dc87bf73408d84043c58cfe2f90",
-    "bytes": 10551
+    "sha256": "ac7533703746a984f0c5409c7c34bc69a83e514e06d033ac6099416aabdeb6e0",
+    "bytes": 10846
   },
   "ablations/README.md": {
-    "sha256": "7444d711e9f7a3a136c39f3463524d928020299a47389e72795e304513030a75",
-    "bytes": 9457
+    "sha256": "64a88dcb1629b1581a83053102dad96ef7f0868d5f28c57dc68cc0e61ac89d71",
+    "bytes": 9694
   },
   "ablations/calibration/calibration.json": {
     "sha256": "c75c0073d1e3dded49a5833d8f12b0145d905a2527a98edd42c2c4c09cae0698",
@@ -263,6 +263,118 @@
     "sha256": "4f47a4cc83789f19c384031202e508c32230d935ddcbe7b0c023abf2c3cefc7a",
     "bytes": 8141
   },
+  "ablations/training_20261031/README.md": {
+    "sha256": "5636af2a0248d24b295efb9d3eb8d5ea0f79628781a31c667ba4ff3908bababf",
+    "bytes": 6181
+  },
+  "ablations/training_20261031/comparison_followup.json": {
+    "sha256": "65fcbcf0cd77a80dcd32127f067eba35683dd8227f0791d70594a26cd4404d3a",
+    "bytes": 10102
+  },
+  "ablations/training_20261031/data/A_qwen128_beta003_rollouts.jsonl.gz": {
+    "sha256": "43f6478296a77c43b50e273d1ac962e9f5c9d2deda7c2f16a716769ad0bc5941",
+    "bytes": 966431
+  },
+  "ablations/training_20261031/data/A_qwen128_beta003_scalars.csv.gz": {
+    "sha256": "a37ac3598cbbfdd81faf5dec8e1be92ae1a3802593b4b368ac1adbf01a12f721",
+    "bytes": 885966
+  },
+  "ablations/training_20261031/data/B_qwen256_beta003_rollouts.jsonl.gz": {
+    "sha256": "f05fca7e623dd7583c30165e761ab4f1fa0cd4de3b463fd0fda21ef0276fb43b",
+    "bytes": 1029500
+  },
+  "ablations/training_20261031/data/B_qwen256_beta003_scalars.csv.gz": {
+    "sha256": "f08dfbc40017cd53a8abbef9020a2e273dae0caaa15d9f6aa291a2f3b4f43f7f",
+    "bytes": 941267
+  },
+  "ablations/training_20261031/data/C_geometry128_rollouts.jsonl.gz": {
+    "sha256": "1ca5153bbcd0ab4b7823b5434f86392ab08b825236408e6635774750c6c52107",
+    "bytes": 1544140
+  },
+  "ablations/training_20261031/data/C_geometry128_scalars.csv.gz": {
+    "sha256": "894f7b8195c7611421279e03498b21d2db5b9a0498d9865b0bc93d819155ec27",
+    "bytes": 2131346
+  },
+  "ablations/training_20261031/data/baseline_scalars.csv.gz": {
+    "sha256": "b3b209ce98d0373c189a7bdb30c7b2ba31bcfc8233c7a2cd4637bf4ad8d0c8bf",
+    "bytes": 6015646
+  },
+  "ablations/training_20261031/data/coverage256_scalars.csv.gz": {
+    "sha256": "c375cacb1da10f6e962ec6f740f6f09920854d4e76c5972b0e9da420d61421df",
+    "bytes": 11266121
+  },
+  "ablations/training_20261031/data/coverage32_scalars.csv.gz": {
+    "sha256": "70a75785c17d57a503e1a44c939e84b9b234f9af46b3bfebbed0c742c7fa6c76",
+    "bytes": 4231318
+  },
+  "ablations/training_20261031/data/qwen128_beta01_rollouts.jsonl.gz": {
+    "sha256": "4c55b99a3b8fb2997325af2bac3abc93f212a14f44341c8aa6d1f8690f91f33c",
+    "bytes": 666757
+  },
+  "ablations/training_20261031/data/qwen128_beta01_scalars.csv.gz": {
+    "sha256": "9512054c219cf53a6e5c22803f133dd0c472dbcea3d694d6f8d64f7284b0a48d",
+    "bytes": 917320
+  },
+  "ablations/training_20261031/evidence/capture.log": {
+    "sha256": "6bd12e39361ec6ca75fd390985bf21925dc240d716dade6347f03a3873af2bd4",
+    "bytes": 472
+  },
+  "ablations/training_20261031/evidence/checkpoint_check.json": {
+    "sha256": "17a331dedfbd11e1dbb49482d521605c281631e7e5168023d46206cb5d823d04",
+    "bytes": 2315
+  },
+  "ablations/training_20261031/evidence/checkpoint_check.log": {
+    "sha256": "e8488309332bb5492d473e77210ae34e9f3b99137c931693e3214403d314f6ff",
+    "bytes": 1950
+  },
+  "ablations/training_20261031/evidence/github_sync_before.json": {
+    "sha256": "4dca7d9a46c8c5cf72fb7e676580c7efe68c92986771cc0e938d5a00012d5494",
+    "bytes": 18588
+  },
+  "ablations/training_20261031/evidence/jobs.txt.gz": {
+    "sha256": "67cd415f0ed5032cb2a5ee91011fa82d34e4e1ced3db9647104cfc16c1bc9872",
+    "bytes": 425
+  },
+  "ablations/training_20261031/inputs.json": {
+    "sha256": "f14364529d18b8290c49cafa38d70fc1330e54a30a54b485d606409fec80e8aa",
+    "bytes": 7063
+  },
+  "ablations/training_20261031/matched_training.png": {
+    "sha256": "20295970b1edea9e1236273b9e183ae6f1d0fa9be2f45a0b70c3ba4247b0563c",
+    "bytes": 338844
+  },
+  "ablations/training_20261031/operations/tensorboard_launcher_checks_20261030.json": {
+    "sha256": "e0cbd7d900ddc78ef8f94011c97bd31949659932ebfca85916461cf354a8c7c1",
+    "bytes": 194
+  },
+  "ablations/training_20261031/operations/view_personal_tensorboard.py": {
+    "sha256": "a6721554cc76f7e9112aeaa11ff1a397308baffb0223996ccb3dfb304e05527b",
+    "bytes": 3028
+  },
+  "ablations/training_20261031/operations/view_personal_tensorboard.sh": {
+    "sha256": "573a1313118c91f67274de7a3874ed2166df6cc173002a32e7c961a521e9b04b",
+    "bytes": 352
+  },
+  "ablations/training_20261031/publication_info.json": {
+    "sha256": "36ebdaccb5448f32e0538d1f56fb547c1372eb00afb5e8d7a71e6facd7189a9b",
+    "bytes": 602
+  },
+  "ablations/training_20261031/readout.json": {
+    "sha256": "7b359f8c5ee576b56aa66068c654f7f1757a3d9a46413783d6409da18159c7b3",
+    "bytes": 262788
+  },
+  "ablations/training_20261031/scripts/publish_readout.py": {
+    "sha256": "2d82d05348a8348f1e32b9728274b22f1bcfac1a3ea7cbb11b7f5dc83f2cf181",
+    "bytes": 17067
+  },
+  "ablations/training_20261031/scripts/readout.py": {
+    "sha256": "1b51800ec0625371483b2e533e9ffa8baa9be947ec20d7f02282291d6789d749",
+    "bytes": 11673
+  },
+  "ablations/training_20261031/validation.json": {
+    "sha256": "cf9363b9579c97a7c5f8a923569d74a6dfa4368def1119f4b5c23c581bc8e6f1",
+    "bytes": 483
+  },
   "evidence/addressing_validation.json": {
     "sha256": "5266408d81ef299a8be2b149dc1de1ebf652c687a4f13748d976f1ed484711ba",
     "bytes": 223
@@ -484,15 +596,15 @@
     "bytes": 11207
   },
   "workspace/RUNBOOK.md": {
-    "sha256": "cb2d3c59f292c29974c773c7b32f4f8fd2e0db5634d1d19db6a369d0d834e64c",
-    "bytes": 78267
+    "sha256": "390057b5807cd0b57b347041152c0211dfbd66edfefb0abba6898563a8558da1",
+    "bytes": 80954
   },
   "workspace/STATUS.md": {
-    "sha256": "32104ee34c468ec3e08722b7b00dcd714deefac7812c87a00b8fd7a72a967a07",
-    "bytes": 51835
+    "sha256": "5a6947fb8e0fd5ddad915cc8043ca7349c2fcf829f1739196ea87a404e085b5d",
+    "bytes": 55737
   },
   "workspace/WORKLOG.md": {
-    "sha256": "66afa4e6c11528be5155426926eeadd33eb6c89376e3c74b6b2434d1b6403ca8",
-    "bytes": 277213
+    "sha256": "29ff9e461682b5de2ba14728a8d43cd945884199e0733af6957377ff5c9f6460",
+    "bytes": 289989
   }
 }

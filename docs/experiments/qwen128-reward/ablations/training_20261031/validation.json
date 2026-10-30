@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "recomputed_window_metrics": 56,
+  "compressed_sources_verified": 24,
+  "relative_markdown_links_passed": true,
+  "old_worklog_prefix_preserved": true,
+  "training_source_unchanged": true,
+  "checked_at": "2026-10-31T01:52:24+08:00",
+  "python_ast_passed": true,
+  "shell_syntax_passed": true,
+  "protected_runtime_source_guard_passed": true,
+  "method": "Executed archived --check-only from repository root; file manifest is regenerated after this receipt."
+}

@@ -202,7 +202,16 @@ README 命令的完整训练配置：4 环境×512 rollout，300M 环境步；�
 
 个人正式长训练使用 `logs/gibson_reproduction_20261026/scratch_train_personal_8env.pbs`，明确指定personal-e1538633／auto、168小时、1×A40、8×256、原300M总步数上限；不再调用旧完整耗时拦截。每250次更新保存checkpoint（512000环境步），每次更新写TensorBoard；输出 `SIGN/results/gibson_reproduction_20261026/scratch_personal_8env`。该作业是从零新训练，不加载测速checkpoint；超过PBS时限会终止，latest.pth仍不是优化器级可续训状态。当前提交状态以personal_training_submission.json和STATUS为准，不重复qsub。
 
-从用户本地电脑终端执行以下命令，同时在SSH远端启动TensorBoard并转发端口；该方法保证网页和SSH转发落在同一登录节点，兼容vanda登录入口分配不同主机：
+仅在已确认TensorBoard仍运行且登录节点匹配时，可用下方ssh -N复用现有服务。-N不会启动网页；原网页退出后会出现channel open failed: connect failed: Connection refused，此时应Ctrl+C退出-N并使用后面的统一启动／复用命令。旧脚本重复启动会报Address already in use；2026-10-30已修为自动复用相同服务。2026-10-30已核验stdct-login-01:6006的三组服务PID1958700正常；用户本地执行：
+
+```bash
+ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
+  -L 127.0.0.1:16006:127.0.0.1:6006 e1538633@vanda.nus.edu.sg
+```
+
+保持终端连接，浏览器用http://127.0.0.1:16006/。-N不会启动远端新进程，也不打印TensorBoard启动信息；Ctrl+C只关闭这条转发，保留已有网页服务。该方式要求SSH连接落在网页服务所在登录节点；节点不同时先核对hostname，不能因另一节点6006无响应而误杀现有服务。
+
+日常使用以下统一命令：脚本在同一SSH登录节点自动启动或复用相同三组日志的TensorBoard。空闲端口自动启动；已有服务时严格核对/data/logdir，一致则复用并保持SSH连接，其他服务则报明确错误且不终止占用者。新启动服务由view_personal_tensorboard.py监管，SSH的SIGHUP／Ctrl+C会清理本会话启动的网页；复用服务退出会话时保留。
 
 ```bash
 ssh -t -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -L 127.0.0.1:16006:127.0.0.1:6006 \
@@ -530,7 +539,7 @@ GitHub目标yiichu03/SIGN、phase2/qwen-topdown-judge；资料入口docs/experim
 
 Qwen短测与正式运行区分：1507196中Qwen部分固定40960步、输出short_qwen_40960；1507268为独立fresh-init正式任务、输出train_personal_8env、168h/300M cap。正式每250更新/512000步首存，初期ckpts为空并非训练未启动。只读进展快照入口`envs/sign-baseline/bin/python logs/qwen128_reward_20261029/snapshot_progress.py`，保存有限字节事件/逐段记录/CSV/PNG与实际统计，早期基线仅读取相同步数前缀；不加载GPU或改训练。输出新progress_时间戳目录，避免覆盖旧证据。
 
-三方法共同18.944M的完整结果：`logs/gibson_threeway_coverage_eval_20261029/full_comparison.json`，1506785于2026-10-29 15:29:34 Exit0；各4200val、ckpt.36，原始逐episode保存在full_baseline/episodes、full_coverage256/episodes、full_coverage32/episodes，原生TensorBoard在各full_CASE/native/tb。主覆盖效率统一为sum(new_area_m2)/sum(actual_actions)；结果另含mean(new_area_m2/actions)，两者不得混用。三组确定性6环境/max500/seed100/hash0、共同任务/起点/目标及公开safety、原0.1m/3m/90°被动coverage weight0。该结果是几何覆盖两方案与冻结基线，Qwen模型尚未到其4.608M/8.192M评估点。
+三方法共同18.944M的完整结果：`logs/gibson_threeway_coverage_eval_20261029/full_comparison.json`，1506785于2026-10-29 15:29:34 Exit0；各4200val、ckpt.36，原始逐episode保存在full_baseline/episodes、full_coverage256/episodes、full_coverage32/episodes，原生TensorBoard在各full_CASE/native/tb。主覆盖效率统一为sum(new_area_m2)/sum(actual_actions)；结果另含mean(new_area_m2/actions)，两者不得混用。三组确定性6环境/max500/seed100/hash0、共同任务/起点/目标及公开safety、原0.1m/3m/90°被动coverage weight0。该结果是几何覆盖两方案与冻结基线；2026-10-29记录该结果时，Qwen模型尚未到其4.608M/8.192M评估点，后续状态以各批次记录为准。
 
 训练剩余时间估计：运行CPU只读`python3 logs/gibson_training_budget_20261029/estimate.py`，从原console的frames/时间差计算最近1/3/6/12h速度，主报3h，剩余时间=(300M-current_step)/recent_fps；同时单列PBS截止时间和剩余预算。50M原停止条件是use_aug_flag=False，它只门控MRQ辅助更新；PPO中RandomShift仍按shift配置执行，不能将该条件说成关闭所有数据增强。32版未到50M时，可另报假设后段达到256当前速度的条件估计，不将其当实测保证。
 
@@ -541,3 +550,11 @@ Qwen短测与正式运行区分：1507196中Qwen部分固定40960步、输出sho
 支撑logs/qwen_ablation_20261029，run_case.py按case/stage启动fresh目录，verify_case.py验收真实40960步，formal_submission.json记录已提交的A1507648/C1507650/B1507651和六次val。已有作业不重复qsub。每组168h/300M cap，CFP/autox→gpux，资源不足优先A/C；正式输出SIGN-qwen-ablation/results/qwen_ablation_20261029/{A,B,C}/train，TB其tb。每250更新512k常规保存、4.608M/8.192M准确保存milestone，CPUwait核对step/SHA，原协议4200val通过afterok释放。新waiter的PBS查询设15秒timeout，超时继续按checkpoint轮询，避免查询故障阻塞权重就绪检查；旧waiter不改。
 
 冻结校准docs/experiments/qwen128-reward/ablations/calibration来自旧1507196短测有效1176段；alpha=.03*sum(L*q)/sum(area)=.2927574680399425，原始记录SHA26180a9e26faa7024f0564193c66d46a8cbb31d1e2c1d99254aeb49b00d81bd7。calibrate_geometry_control.py可只读复算至全新输出，禁止用新训练或val数据重拟合此对照。正式训练报告原reward、原SR/SPL/碰撞以及独立qwen_或geometry_ bonus与exploration段长/bonus分布；未来val用原0.1m被动统计，与训练2.5cm口径分开。
+
+
+### 六组训练指标只读汇总（2026-10-31）
+
+在liuyi根运行`envs/sign-baseline/bin/python logs/training_readout_20261031/readout.py`。只读取六组既有训练和已停止基线的TensorBoard，创建独立snapshot_HHMMSS，保存固定字节事件/rollout JSONL及SHA、所选CSV、readout.json和同预算PNG；不加载GPU/模型/模拟器，不提交作业。报告各自近1M、共同步数近1M、旧方法近5M与近3h实际更新耗时；先核对时间和训练预算再比较。SR/SPL是重叠的原生50-update滑动统计，不能把相邻点当独立样本。旧0.1m覆盖与新0.025m有效段面积不得跨口径排名；校准alpha只匹配最初短测，后续C和Qwen bonus总量可能分化。
+
+
+六组训练资料发布入口：`logs/training_readout_20261031/publish_readout.py --tree SIGN-qwen-ablation-publication`用于基于ac62298的单次增量构建；完成构建后仅用同命令加`--check-only`核验。它更新既有qwen128-reward包的ablations/training_20261031、四根文档生成副本及SHA清单，只允许README/docs差异；旧快照不覆盖、WORKLOG保留前缀。所选CSV与rollout确定性gzip、输入SHA和56项1/2/3/5M窗口指标可离线复核，完整TB/权重不上传。发布到yiichu03/SIGN的phase2/qwen-beta003-geometry128，运行目录d2352f0保持不动；未来更新创建新日期证据和明确基点，不重复构建本快照。

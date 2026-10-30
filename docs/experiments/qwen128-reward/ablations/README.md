@@ -2,6 +2,10 @@
 
 基于用户指定SIGN **33e30d2**，独立`SIGN-qwen-ablation` / `phase2/qwen-beta003-geometry128`。运行源码 **d2352f0**；生产目录保持该提交，资料通过独立publication树发布。原1507268、两旧coverage训练及既有1507270/1507272评估依赖保留，未修改或重复提交。
 
+## 最新训练记录
+
+[2026-10-31六组训练对照、曲线和原始统计](training_20261031/README.md)。下面保留2026-10-29的启动/短测及评估提交记录；不以这些历史状态代替最新作业状态。
+
 ## 实际正式配置与作业
 
 三组均8环境×PPO rollout256、seed100/hash0，从全新初始化开始，只从公开checkpoint加载并冻结visual_encoder，其余参数原初始化。CFP04-SF-109 / autox→batch_gpux，1A40/36CPU240GB/168h；300M是算法上限，不承诺168h完成。按A/C/B顺序提交，B可因资源不足排队，不改变其他运行作业。
@@ -59,7 +63,7 @@ GPU各40960步/20更新短测：A1507600、C1507601、B1507602。三组均通过
 | C | 4,608,000 | 1507656.stdct-mgmt-02 | 1507657.stdct-mgmt-02 |
 | C | 8,192,000 | 1507659.stdct-mgmt-02 | 1507660.stdct-mgmt-02 |
 
-每组每阶段4200条Gibson val/14场景，确定性6环境、max500、seed100/hash0、相同公开safety和原生SIGN evaluator；Qwen及其采集关闭。被动覆盖统计保留原评估0.1m/3m/90°、weight0，报告SR/SPL、sum(new_area)/sum(actions)、逐episode效率均值、碰撞、动作数、耗时。0.1m验证统计与训练奖励输入0.025m分开记录。结果将写`logs/qwen_ablation_20261029/{A,B,C}/val_STEP/result.json`；当前尚无这三组正式模型的val结果，评估状态以提交回执和wait_state为准。
+每组每阶段4200条Gibson val/14场景，确定性6环境、max500、seed100/hash0、相同公开safety和原生SIGN evaluator；Qwen及其采集关闭。被动覆盖统计保留原评估0.1m/3m/90°、weight0，报告SR/SPL、sum(new_area)/sum(actions)、逐episode效率均值、碰撞、动作数、耗时。0.1m验证统计与训练奖励输入0.025m分开记录。结果将写`logs/qwen_ablation_20261029/{A,B,C}/val_STEP/result.json`；2026-10-29提交时尚无这三组正式模型的val结果，评估状态以提交回执和wait_state为准。
 
 ## 资源核验与复现
 

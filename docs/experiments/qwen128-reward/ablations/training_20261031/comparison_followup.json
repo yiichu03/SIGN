@@ -1,0 +1,364 @@
+{
+  "recorded_at": "2026-10-31T01:00:19+08:00",
+  "source": "readout.json and fixed-snapshot selected_scalars.csv",
+  "common_end": 6844416,
+  "windows": {
+    "1000000": {
+      "lower_exclusive": 5844416,
+      "upper_inclusive": 6844416,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8247069494612134,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.46266365124404063,
+            "points": 489
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8435767895117372,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.46437116287237296,
+            "points": 489
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8237509973697623,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.45601392755235387,
+            "points": 489
+          }
+        },
+        "qwen128_beta01": {
+          "metrics/success": {
+            "mean": 0.8315215190007886,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4604879275177642,
+            "points": 489
+          }
+        },
+        "A_qwen128_beta003": {
+          "metrics/success": {
+            "mean": 0.8252107504686695,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4532233128030851,
+            "points": 489
+          }
+        },
+        "B_qwen256_beta003": {
+          "metrics/success": {
+            "mean": 0.8286579609648582,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4607251958125452,
+            "points": 489
+          }
+        },
+        "C_geometry128": {
+          "metrics/success": {
+            "mean": 0.806785505120252,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.45455625062096094,
+            "points": 489
+          }
+        }
+      }
+    },
+    "2000000": {
+      "lower_exclusive": 4844416,
+      "upper_inclusive": 6844416,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8216278221736545,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4580203027844795,
+            "points": 977
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8209090977144583,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4558532650114448,
+            "points": 977
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.809819117051186,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4449563498323747,
+            "points": 977
+          }
+        },
+        "qwen128_beta01": {
+          "metrics/success": {
+            "mean": 0.8293804602588821,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4550536644007313,
+            "points": 977
+          }
+        },
+        "A_qwen128_beta003": {
+          "metrics/success": {
+            "mean": 0.8212805207334497,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.44827955933773894,
+            "points": 977
+          }
+        },
+        "B_qwen256_beta003": {
+          "metrics/success": {
+            "mean": 0.8124324025980891,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4448908136713346,
+            "points": 977
+          }
+        },
+        "C_geometry128": {
+          "metrics/success": {
+            "mean": 0.8066135878572689,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4448703129984583,
+            "points": 977
+          }
+        }
+      }
+    },
+    "3000000": {
+      "lower_exclusive": 3844416,
+      "upper_inclusive": 6844416,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8180789032893783,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4528600798532011,
+            "points": 1465
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8226139777756388,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4539551645619064,
+            "points": 1465
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8133335982980174,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4481776960880683,
+            "points": 1465
+          }
+        },
+        "qwen128_beta01": {
+          "metrics/success": {
+            "mean": 0.8301843878352194,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.45113507796066205,
+            "points": 1465
+          }
+        },
+        "A_qwen128_beta003": {
+          "metrics/success": {
+            "mean": 0.8186636084989476,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4430116499243336,
+            "points": 1465
+          }
+        },
+        "B_qwen256_beta003": {
+          "metrics/success": {
+            "mean": 0.818157775450892,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4462358477782878,
+            "points": 1465
+          }
+        },
+        "C_geometry128": {
+          "metrics/success": {
+            "mean": 0.8181941014101074,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4427403083840328,
+            "points": 1465
+          }
+        }
+      }
+    },
+    "5000000": {
+      "lower_exclusive": 1844416,
+      "upper_inclusive": 6844416,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.7961636664289417,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.441937242310424,
+            "points": 2442
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.7988069744553359,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4365034437784887,
+            "points": 2442
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.7881923458988211,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.43602704341591236,
+            "points": 2442
+          }
+        },
+        "qwen128_beta01": {
+          "metrics/success": {
+            "mean": 0.7957863398109861,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.43493911483608044,
+            "points": 2442
+          }
+        },
+        "A_qwen128_beta003": {
+          "metrics/success": {
+            "mean": 0.787324984380205,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4267494662509992,
+            "points": 2442
+          }
+        },
+        "B_qwen256_beta003": {
+          "metrics/success": {
+            "mean": 0.7956034726387745,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.43325750306431726,
+            "points": 2442
+          }
+        },
+        "C_geometry128": {
+          "metrics/success": {
+            "mean": 0.7881605333963639,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4283339309091943,
+            "points": 2442
+          }
+        }
+      }
+    }
+  },
+  "baseline_stop": {
+    "latest_step": 74653696,
+    "last_event_at": "2026-10-28T20:28:29+08:00",
+    "latest": {
+      "reward": 7.660017013549805,
+      "metrics/collisions.count": 13.753424644470215,
+      "metrics/distance_to_goal": 0.9045001864433289,
+      "metrics/spl": 0.5513484477996826,
+      "metrics/success": 0.8780822157859802,
+      "metrics/view_match": 0.8527397513389587,
+      "learner/mrq_r_loss": 1.0123791694641113,
+      "learner/mrq_s_loss": 0.03623255342245102,
+      "learner/mrq_d_loss": 0.002717038616538048,
+      "learner/value_pred_min": 1.8969533443450928,
+      "learner/value_pred_mean": 4.628682613372803,
+      "learner/value_pred_max": 8.274760246276855,
+      "learner/prob_ratio_min": 0.6784393191337585,
+      "learner/prob_ratio_mean": 1.001747488975525,
+      "learner/prob_ratio_max": 1.3802258968353271,
+      "learner/value_loss": 0.5435876250267029,
+      "learner/action_loss": 0.026990987360477448,
+      "learner/dist_entopy": 1.782395362854004,
+      "learner/aug_loss": 1.8823366165161133,
+      "learner/aug_act_loss": 1.8489609956741333,
+      "learner/aug_critic_loss": 0.03337554261088371,
+      "learner/grad_norm": 0.6401083469390869,
+      "learner/ppo_fraction_clipped": 0.0146484375,
+      "learner/qc_loss": 0.701802134513855
+    },
+    "own_last_1m": {
+      "reward": 7.622844828662209,
+      "metrics/collisions.count": 13.075082564402699,
+      "metrics/distance_to_goal": 0.8767934529327908,
+      "metrics/spl": 0.5482166207153617,
+      "metrics/success": 0.8786893228567939,
+      "metrics/view_match": 0.8552031381729922,
+      "learner/value_pred_min": 0.28995243430800416,
+      "learner/value_pred_mean": 3.9652905571436348,
+      "learner/value_pred_max": 8.091973682122727,
+      "learner/prob_ratio_min": 0.7599994938188291,
+      "learner/prob_ratio_mean": 1.0016441885191483,
+      "learner/prob_ratio_max": 1.4547781322631368,
+      "learner/value_loss": 0.6616444783951851,
+      "learner/action_loss": 0.030819585816344294,
+      "learner/dist_entopy": 1.801224554487045,
+      "learner/aug_loss": 1.8825634754508551,
+      "learner/aug_act_loss": 1.8469316713161508,
+      "learner/aug_critic_loss": 0.035631797800187194,
+      "learner/grad_norm": 0.9024641680814981,
+      "learner/ppo_fraction_clipped": 0.024352153629856852,
+      "learner/qc_loss": 0.6967208576836226
+    }
+  }
+}

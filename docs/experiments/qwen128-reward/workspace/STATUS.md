@@ -1,6 +1,6 @@
 # liuyi 当前状态
 
-更新：2026-10-29（Asia/Singapore）。先读 [AGENTS.md](AGENTS.md)；操作与 debug 沿革见 [WORKLOG.md](WORKLOG.md)，命令与复现边界见 [RUNBOOK.md](RUNBOOK.md)。
+更新：2026-10-31（Asia/Singapore）。先读 [AGENTS.md](AGENTS.md)；操作与 debug 沿革见 [WORKLOG.md](WORKLOG.md)，命令与复现边界见 [RUNBOOK.md](RUNBOOK.md)。
 
 <a id="gibson-reference"></a>
 ## Gibson基线与公开权重结果：快速索引
@@ -10,6 +10,7 @@
 | 常查事项 | 已核实记录 | 证据入口 |
 |---|---|---|
 | 冻结基线停止时的训练进度 | **74,653,696环境步，约7465万步**；TensorBoard最终事件为2026-10-28 20:28:29，作业20:28:36停止 | 最终事件快照（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_train_threeway_20261028/snapshot_132900/comparison.json`） |
+| 冻结基线停止时的训练SR／SPL | **最后一个原生50-update滑窗点：SR87.81%、SPL55.13%**；最后100万步的滑窗均值：SR87.87%、SPL54.82%。均为训练日志，未对完整训练集另做离线评估 | [原始末点与区间统计](../ablations/training_20261031/readout.json) |
 | 冻结基线最后保存、可用于评估的权重 | **74,240,000步，约7424万步**；后续按checkpoint步数选择同预算对照 | 权重保存记录（服务器路径：`/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/baseline_stop_1496716/preservation.json`） |
 | 公开完整SIGN checkpoint的Gibson验证成绩 | **SR 86.00%、SPL 53.01%、View Match 85.08%**；完整val **4200条／14场景**，作业1494521，Exit0 | 完整原始结果（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/pretrained_full_result.json`） |
 | 最新三方法同预算验证（已完成） | **18,944,000步／ckpt.36**；每组4200条，PBS **1506785 Exit0**。基线/256覆盖/32覆盖：SR **78.31/79.10/82.02%**，SPL **51.64/51.98/51.75%** | 完整结果（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_threeway_coverage_eval_20261029/full_comparison.json`） · 作业完成记录（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_threeway_coverage_eval_20261029/runtime.json`） |
@@ -18,7 +19,28 @@
 
 公开模型评估原记录中PYTHONHASHSEED未显式固定，后来的共同步数对照使用hash0；复现协议细节与权重路径见 [RUNBOOK证据索引](RUNBOOK.md#gibson-checkpoints)，本次核验汇总见 baseline_reference_index_20261029.json（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/baseline_reference_index_20261029.json`）。
 
-## 当前授权任务：A/B/C正式对照已提交
+## 最新训练指标检查（2026-10-31 00:53，新加坡时间）
+
+六个训练作业均R；本次仅CPU只读日志和已落盘权重，不评估、不改训练、不提交新作业。下表为各自最近100万环境步的原生50-update滑窗统计均值；不同末步不能直接排名，reward仍只含导航奖励。
+
+| 方法／作业 | 最新环境步 | 训练SR | 训练SPL | 近3h中位秒／2048步 |
+|---|---:|---:|---:|---:|
+| 旧覆盖256／1497416 | 115,169,280 | 86.84% | 51.24% | 5.29 |
+| 旧覆盖32／1502352 | 43,018,240 | 86.18% | 48.64% | 10.46 |
+| Qwen128 β0.1／1507268 | 7,084,032 | 84.65% | 46.67% | 33.55 |
+| A Qwen128 β0.03／1507648 | 6,844,416 | 82.52% | 45.32% | 33.13 |
+| B Qwen256 β0.03／1507651 | 7,290,880 | 83.81% | 46.85% | 31.48 |
+| C 几何128／1507650 | 18,020,352 | 85.25% | 49.51% | 12.20 |
+
+共同5,844,416–6,844,416步：基线/旧覆盖256/旧覆盖32/Qwen128β0.1/A/B/C的训练SR分别82.47/84.36/82.38/83.15/82.52/82.87/80.68%，SPL46.27/46.44/45.60/46.05/45.32/46.07/45.46%；Qwenβ0.1/B略好于旧32，但未超过该窗口的旧256。改用共同最近3M窗口，Qwenβ0.1相对旧256的SR83.02/82.26%、SPL45.11/45.40%，表现随窗口变化，尚未出现稳定全面收益；[1/2/3/5M复核](../ablations/training_20261031/comparison_followup.json)。A/B/C同口径有效动作覆盖效率0.15941/0.16081/0.16514m²/动作，C面积略高但SR较低；旧coverage为0.1m口径，新四组为0.025m且仅纳入几何有效段，不跨口径排名。共同阶段每rollout bonus A/B/C=0.13473/0.13992/0.35013；alpha仅在初始短测校准，不保证后续总奖励量继续匹配，未重新拟合alpha。
+
+旧三方法共同38.018–43.018M的5M窗口，基线/覆盖256/覆盖32：SR86.24/85.47/84.96%，SPL51.05/47.49/47.62%，32版未稳定超过基线；这与已发布18.944M验证集成绩属于不同阶段及指标。六组全部scalar有限，各最近稳定checkpoint的42项encoder状态与公开权重逐位一致，四新组全程rollout审计nav_rewards/masks不变。近期几何有效段约92.7–93.2%，低于短测约98%，主要因episode跨楼层高度超限，另有少量距navmesh>5cm；相应bonus按原规则跳过。原作业与所有评估依赖保留。
+
+证据：[完整快照／窗口统计](../ablations/training_20261031/readout.json)、[同预算训练曲线](../ablations/training_20261031/matched_training.png)、[冻结权重检查](../ablations/training_20261031/evidence/checkpoint_check.json)、[PBS状态](../ablations/training_20261031/evidence/jobs.txt.gz)。各组事件末时00:51–00:53。WORKLOG：TRAINING-SIX-RUNS-READOUT-20261031。
+
+10月31日资料同步：用户已授权补充发布六组训练快照/1–5M共同窗口/曲线/原始CSV及rollout审计、基线停止训练SR/SPL和最新根四文档，集中入口为yiichu03/SIGN的phase2/qwen-beta003-geometry128分支、`docs/experiments/qwen128-reward/ablations/training_20261031/README.md`。通过SIGN-qwen-ablation-publication独立发布，运行源码仍d2352f0；其他训练分支不合并资料提交。SHA和推送回执完成后另记服务器WORKLOG，不为回执循环生成重复快照。此前01:32核对时五代码分支均已推送、最新资料仍滞后，证据[同步前审计](../ablations/training_20261031/evidence/github_sync_before.json)。WORKLOG：TRAINING-READOUT-PUBLICATION-PREPARED-20261031。
+
+## A/B/C正式对照：2026-10-29提交与验收记录
 
 独立SIGN-qwen-ablation / phase2/qwen-beta003-geometry128从33e30d2建立，运行源码 **d2352f0**。A Qwen128 beta.03、B Qwen256 beta.03、C几何128 alpha=0.2927574680399425（旧短测1176有效段冻结校准）；8×256/seed100/hash0/仅公开encoder加载冻结/其余fresh初始化，MRQ三组显式navigation目标、PPO混合奖励、旧coverage bonus0。
 
@@ -26,9 +48,9 @@
 
 正式 **A1507648、C1507650、B1507651** 均已R（CFP04-SF-109/autox→batch_gpux，1A40/36CPU240GB/168h，300M cap）。独立输出 `SIGN-qwen-ablation/results/qwen_ablation_20261029/{A,B,C}/train`、TensorBoard其tb/；不从短测恢复。CFP/autox许可由三短测及三168h正式请求实际接受核实，Express每用户max_run4，余额查询仍需amgr登录，未取得剩余额度数字。
 
-4.608M/8.192M准确milestone/4200val GPU依赖：A **1507653/1507655**，C **1507657/1507660**，B **1507662/1507664**；相应CPU等待A1507652/1507654、C1507656/1507659、B1507661/1507663（初查B两CPU在Q，A/C等待先运行）。全部保留旧1507270/1507272依赖，不占GPU等待。未来eval关闭Qwen/采集，原6环境/max500/seed100/hash0/4200val、0.1m被动覆盖weight0，输出SR/SPL/效率/碰撞/动作与耗时；训练另报段长和bonus分布。三正式均已有TB更新，首次核验A/B/C=4096/6144/26624步、全部scalar有限、初始化SHA等于short；C无worker。当前无新正式val成绩。支撑logs/qwen_ablation_20261029，校准/短测/配置/实际命令/提交回执齐全；准备资料发布。WORKLOG：QWEN-ABC-SHORTS-PASSED-FORMALS-SUBMITTED。
+4.608M/8.192M准确milestone/4200val GPU依赖：A **1507653/1507655**，C **1507657/1507660**，B **1507662/1507664**；相应CPU等待A1507652/1507654、C1507656/1507659、B1507661/1507663（初查B两CPU在Q，A/C等待先运行）。全部保留旧1507270/1507272依赖，不占GPU等待。未来eval关闭Qwen/采集，原6环境/max500/seed100/hash0/4200val、0.1m被动覆盖weight0，输出SR/SPL/效率/碰撞/动作与耗时；训练另报段长和bonus分布。三正式均已有TB更新，首次核验A/B/C=4096/6144/26624步、全部scalar有限、初始化SHA等于short；C无worker。当前无新正式val成绩。支撑logs/qwen_ablation_20261029，校准/短测/配置/实际命令/提交回执齐全。已push yiichu03/SIGN同名分支，发布提交ac62298、运行源码d2352f0，远端SHA核对一致；运行目录不pull资料提交。WORKLOG：QWEN-ABC-SHORTS-PASSED-FORMALS-SUBMITTED。
 
-## 当前授权任务：Qwen128正式训练已提交
+## Qwen128正式训练：2026-10-29提交与验收记录
 
 独立 `SIGN-qwen128-reward` / `phase2/qwen128-reward-beta01` 从453179c建立，运行提交 **81fedec**。54项单测、32原轨迹44窗口离在线精确重放、边界/遮挡/保存函数/评估配置及真实GPU40960步均通过（1507196 Exit0）。有效片段1176/1204=97.67%，42项encoder状态不变，loss/概率有限、真实mask/nav_rewards不变；零权重原训练scalar逐位相同，仅Qc有小于原基线复跑的1.49e-8舍入差。短测每2048步中位59.24s（原基线7.55s），显存5秒采样峰值24947MiB，不能当学习收益或全程恒定速度。
 
@@ -136,7 +158,7 @@
 
 - 编码器更新审计（2026-10-26 21:53）：当前fast_resnet9视觉编码器未冻结、从零联合训练；实际配置train_encoder=True，原优化器纳入可求导参数。比较个人训练512000与4096000步checkpoint，视觉编码器39/39组weight／bias改变，GRU／actor／普通critic／MRQ在线头／Qc也改变。MRQ目标头使用EMA；cost_critic无对应优化loss，2组参数未改变。只读CPU审计证据 logs/gibson_reproduction_20261026/parameter_update_audit.json，未调整运行中训练。
 
-- TensorBoard访问状态（2026-10-28T19:20:08+08:00）：用户已自行运行SSH（本地PID1638312，16006→远端6006），远端TensorBoard PID1069193读取冻结编码器正式训练目录；本地HTTP200、29条scalar核验通过。用户浏览器实际打开http://127.0.0.1:6006/，确认是本地端口用错，已告知改为http://127.0.0.1:16006/，保留用户连接／服务。WORKLOG：TENSORBOARD-LOCAL-URL-PORT-CORRECTED。
+- TensorBoard访问状态（2026-10-30T03:11:46+08:00）：原PID1958700已退出，6006无服务，用户ssh -N仅留下本地16006监听，因此channel报远端Connection refused。已修view_personal_tensorboard.sh及新增相邻.py为自动启动／核验复用＋信号清理；独立16016端口四项真实集成检查通过，测试进程已关闭。用户应Ctrl+C当前-N后用RUNBOOK统一ssh -t命令。未操作用户现有SSH或训练。WORKLOG：TENSORBOARD-START-OR-REUSE-LIFECYCLE-20261030。
 
 - 用户已明确要求使用个人额度提交8环境正式长训练。新脚本scratch_train_personal_8env.pbs使用personal-e1538633／auto、1×A40、168h、8×256、原300M上限，checkpoint每250更新（512000步）、TensorBoard每次更新记录；不调用此前“必须300M在7天内完成”的外部拦截。qsub已成功返回1495073.stdct-mgmt-02（Exit0）；qstat已确认R，个人项目personal-e1538633、auto→batch_gpu、GN-A40-019、1×A40／36CPU／240GB／168h，16:23:15开始，勿重复提交。状态文件 logs/gibson_reproduction_20261026/personal_training_submission.json。TensorBoard网页已通过HTTP200验证，探针已关闭；正式浏览入口使用view_personal_tensorboard.sh。实际事件已验证29条scalar、至少10240步（2026-10-26 16:25核查），正在发生PPO更新；事件证据personal_training_first_events.json。
 

@@ -1,0 +1,6 @@
+{
+  "start_on_empty_port_and_http_200": true,
+  "reuse_and_ctrl_c_preserves_existing_server": true,
+  "ssh_hangup_cleans_owned_server": true,
+  "unrelated_viewer_rejected_and_preserved": true
+}

@@ -1,0 +1,8 @@
+baseline 74653696 SR 87.869 SPL 54.822 nonfinite {}
+coverage256 115169280 SR 86.84 SPL 51.238 nonfinite {}
+coverage32 43018240 SR 86.18 SPL 48.644 nonfinite {}
+qwen128_beta01 7084032 SR 84.651 SPL 46.673 nonfinite {}
+A_qwen128_beta003 6844416 SR 82.521 SPL 45.322 nonfinite {}
+B_qwen256_beta003 7290880 SR 83.815 SPL 46.852 nonfinite {}
+C_geometry128 18020352 SR 85.252 SPL 49.512 nonfinite {}
+OUTPUT /scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043

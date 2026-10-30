@@ -136,3 +136,6 @@ Qwen128 training reward and verified short-run evidence: [experiment record](doc
 
 
 A/B/C Qwen beta0.03与匹配几何128对照：[配置、校准、短测和正式作业](docs/experiments/qwen128-reward/ablations/README.md)。
+
+
+最新训练资料（2026-10-31）：[六组同预算比较、曲线、基线停止记录与复核数据](docs/experiments/qwen128-reward/ablations/training_20261031/README.md)。
