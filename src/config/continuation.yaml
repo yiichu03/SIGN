@@ -1,0 +1,5 @@
+training_continuation:
+  checkpoint: ""
+  sha256: ""
+  allow_legacy_weights: True
+  stop_after_steps: 0
