@@ -13,6 +13,7 @@ import numpy as np
 import torch
 import tqdm
 from torch.optim.lr_scheduler import LambdaLR, CosineAnnealingLR
+from src.training_continuation import restore_training, continuation_pending, add_learner_state
 
 from habitat import Config, logger
 from habitat.config import read_write
@@ -174,6 +175,7 @@ class PPOTrainer(BaseRLTrainer):
             os.makedirs(self.config.habitat_baselines.checkpoint_folder)
 
         self._setup_actor_critic_agent(ppo_cfg)
+        restore_training(self)
         logger.info(
             "agent number of parameters: {}".format(
                 sum(param.numel() for param in self.agent.parameters())
@@ -238,6 +240,7 @@ class PPOTrainer(BaseRLTrainer):
         }
         if extra_state is not None:
             checkpoint["extra_state"] = extra_state
+        add_learner_state(self, checkpoint)
 
         torch.save(
             checkpoint,
@@ -617,7 +620,7 @@ class PPOTrainer(BaseRLTrainer):
         self._init_train()
 
         count_checkpoints = 0
-        prev_time = 0
+        prev_time = getattr(self, "_continuation_previous_walltime", 0.0)
 
         ppo_cfg = self.config.habitat_baselines.rl.ppo
         if ppo_cfg.use_linear_lr_decay:
@@ -633,7 +636,7 @@ class PPOTrainer(BaseRLTrainer):
                 purge_step=int(self.num_steps_done),
             )
         ) as writer:
-            while not self.is_done():
+            while not self.is_done() and continuation_pending(self):
                 profiling_wrapper.on_start_step()
                 profiling_wrapper.range_push("train update")
 
