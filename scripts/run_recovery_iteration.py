@@ -46,6 +46,22 @@ def compare(batch,split,folders):
         sr_delta_pp=100*(results['qwen']['success_rate']-results['rule']['success_rate']),
         spl_delta_pp=100*(results['qwen']['spl']-results['rule']['spl']),
         note='Purpose-selected or separately reserved subset. Prefix audits use simulator telemetry after execution, never as Agent input. Human causes remain blank.')
+    extension=json.loads((batch/'tasks.json').read_text()).get('development_extension')
+    if split=='develop' and extension:
+        selection=json.loads(Path(extension['selection']).read_text())
+        groups={'original24':set(map(tuple,selection['original_develop_keys'])),
+            'added37':set(map(tuple,selection['added_keys']))}
+        assert not (groups['original24'] & groups['added37'])
+        assert set.union(*groups.values())==set(reference)
+        summary['strata']={}
+        for name,keys in groups.items():
+            changes=[p for p in paired if (p['scene_id'],p['episode_id']) in keys]
+            summary['strata'][name]=dict(episodes=len(keys),
+                cases={m:dict(success_rate=float(np.mean([r[k]['success'] for k in keys])),
+                    spl=float(np.mean([r[k]['spl'] for k in keys]))) for m,r in rows.items()},
+                net_successes=sum(int(p['qwen_success'])-int(p['rule_success']) for p in changes),
+                supported_rescues=sum(p['qwen_success']>p['rule_success'] and
+                    p['prefix_until_vlm_decision_matches'] for p in changes))
     (batch/(split+'_comparison.json')).write_text(json.dumps(summary,indent=2)+'\n')
     return summary
 
