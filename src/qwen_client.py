@@ -28,7 +28,8 @@ class QwenClient:
                    '--model-dir',str(cfg.model_dir), '--prompt',str((tree/cfg.prompt).resolve()),
                    '--output',str(self.output), '--verify',str(int(cfg.verify_first_batch))]
         if getattr(cfg, 'candidate_affordance', False):
-            command += ['--task', 'semantic' if getattr(cfg,'candidate_protocol','abc')=='semantic' else 'candidate']
+            protocol = getattr(cfg,'candidate_protocol','abc')
+            command += ['--task', protocol if protocol in ('semantic','directional') else 'candidate']
         self.process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                         stderr=self.stderr, text=True, bufsize=1, env=env)
         atexit.register(self.close)

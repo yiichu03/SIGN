@@ -82,6 +82,21 @@ def select_semantic_candidate(left,right,fallback,gap=0.05):
         support_gap=gap,candidates=dict(left=left,right=right),protocol='semantic_No_Unknown_Yes')
 
 
+def select_directional(item, fallback, gap=0.05):
+    """One goal-conditioned comparison, distinct from independent affordances."""
+    semantic_probabilities(item['probabilities'])  # Shared distribution validation.
+    if fallback not in ('A','B') or not np.isfinite(gap) or not 0 < gap <= 1:
+        raise ValueError('Invalid directional fallback or gap')
+    left, right, unknown = item['probabilities']
+    side = 'A' if left-right >= gap and left > unknown else 'B' if right-left >= gap and right > unknown else None
+    if item.get('candidate_mass',1.) < .1:
+        side = None
+    return side or fallback, dict(source='vlm' if side else 'rule_fallback',
+        default_rule_choice=fallback,differs_from_rule=bool(side and side!=fallback),
+        support_deltas=[left-right],support_gap=gap,result=item,
+        protocol='joint_goal_left_right_Unknown')
+
+
 def decision_prefix_audit(base_commands,base_poses,commands,poses,decision_steps):
     limit=min(len(base_commands),len(commands))
     differences=np.flatnonzero(np.any(np.abs(base_commands[:limit]-commands[:limit])>1e-6,axis=1))

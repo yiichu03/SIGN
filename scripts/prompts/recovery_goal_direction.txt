@@ -1,0 +1,5 @@
+The robot is trying to reach the place and viewing direction in the GOAL photograph. Its recent forward commands have produced little visual progress. The image shows the GOAL, the LEFT VIEW, the current FORWARD view, and the RIGHT VIEW, captured by turning in place.
+
+Compare the left and right options for one short recovery: turn toward that side and move forward about 0.8 metres, then let the original navigation policy continue. Prefer a visible, connected route around the nearby obstruction. Use the goal photograph as context to avoid an obvious detour into an unrelated room; do not assume unseen connections. A more spacious room alone is not necessarily the better route. Do not select a direction blocked by a nearby wall, large object, or unsafe stairs. If neither side is visibly preferable, or the evidence is ambiguous, answer Unknown.
+
+Answer with exactly one word: left, right, or Unknown.

@@ -199,7 +199,7 @@ class RecoveryHarness:
         self.active_survey = bool(getattr(cfg, 'active_survey', False))
         self.candidate_affordance = bool(getattr(cfg, 'candidate_affordance', False))
         self.candidate_protocol = getattr(cfg, 'candidate_protocol', 'abc')
-        if self.candidate_protocol not in ('abc','semantic'):
+        if self.candidate_protocol not in ('abc','semantic','directional'):
             raise ValueError('Unknown candidate protocol')
         self.candidate_gap = float(getattr(cfg, 'candidate_support_gap', 0.05))
         if self.candidate_affordance and (not self.active_survey or not np.isfinite(self.candidate_gap) or not 0 < self.candidate_gap <= 1):
@@ -346,14 +346,18 @@ class RecoveryHarness:
                     self.client_factory = QwenClient
                 self.client = self.client_factory(self.cfg, self.output/'worker')
             requests = [r for _, r in pending]
-            if self.candidate_affordance:
+            if self.candidate_affordance and self.candidate_protocol != 'directional':
                 requests = [candidate for row in requests for candidate in row['candidates']]
             response = self.client.score(self.request, requests)
             self.request += 1
             if [r['id'] for r in response['results']] != [r['id'] for r in requests]:
                 raise RuntimeError('Recovery worker image ID/order mismatch')
             self.worker_seconds += response['seconds']
-            if self.candidate_affordance:
+            if self.candidate_affordance and self.candidate_protocol == 'directional':
+                from src.recovery_affordance import select_directional
+                for (_, row), item in zip(pending, response['results']):
+                    choices.append(select_directional(item,'A' if row['attempt']%2 else 'B',self.candidate_gap))
+            elif self.candidate_affordance:
                 from src.recovery_affordance import select_candidate,select_semantic_candidate
                 selector=select_semantic_candidate if self.candidate_protocol=='semantic' else select_candidate
                 for j, (_, row) in enumerate(pending):

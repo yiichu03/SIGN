@@ -8,7 +8,7 @@ from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from src.recovery_affordance import select_semantic_candidate,raw_candidate_image,decision_prefix_audit
+from src.recovery_affordance import select_semantic_candidate,raw_candidate_image,decision_prefix_audit,select_directional
 from src.inference_recovery import RecoveryHarness, yaw_aligned_change, detect
 from qwen_single_image import SingleImageJudge
 from test_candidate_recovery import CandidateClient
@@ -16,6 +16,35 @@ from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_joint_directional_selection_preserves_unknown_and_format_gate(self):
+        item=dict(probabilities=[.2,.6,.2],candidate_mass=.9)
+        label,detail=select_directional(item,'A')
+        self.assertEqual(label,'B');self.assertTrue(detail['differs_from_rule'])
+        for p,mass in [([.2,.2,.6],1),([.45,.44,.11],1),([.1,.8,.1],.01)]:
+            label,detail=select_directional(dict(probabilities=p,candidate_mass=mass),'A')
+            self.assertEqual(label,'A');self.assertEqual(detail['source'],'rule_fallback')
+
+    def test_directional_harness_sends_one_goal_collage_per_environment(self):
+        class Client:
+            rows=[]
+            def __init__(self,cfg,out):pass
+            def score(self,request,rows):
+                type(self).rows=rows
+                return dict(seconds=.1,results=[dict(id=r['id'],probabilities=[.1,.8,.1]) for r in rows])
+            def close(self):pass
+        with tempfile.TemporaryDirectory() as folder:
+            cfg=settings(mode='qwen',active_survey=True,survey_turn_steps=1,turn_steps=1,forward_steps=1,
+                candidate_affordance=True,candidate_protocol='directional',candidate_raw_view=True)
+            h=RecoveryHarness(cfg,2,Path(folder)/'run',Client)
+            frame=np.full((64,64,3),90,dtype=np.uint8)
+            for _ in range(9):actual=h.step([frame]*2,[frame]*2,np.array([[.8,0.]]*2,dtype=np.float32),
+                np.ones(2,dtype=bool),[('scene','1'),('scene','2')])
+            self.assertEqual(len(Client.rows),2)
+            self.assertEqual(len({r['id'] for r in Client.rows}),2)
+            self.assertTrue(all('candidates' in r and 'side' not in r for r in Client.rows))
+            np.testing.assert_array_equal(actual,[[-1.,-1.]]*2)
+            self.assertTrue(all(s.vlm_rule_disagreements==1 for s in h.states))
+
     def test_yaw_alignment_cancels_known_rotation_not_scene_change(self):
         def panorama(degrees):
             yy, xx = np.mgrid[:32, :32]

@@ -23,12 +23,13 @@ def main():
     for name in ('model-dir', 'prompt', 'output'):
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--verify', type=int, default=1)
-    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic'], default='actions')
+    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic', 'directional'], default='actions')
     args = parser.parse_args()
     output = Path(args.output)
     prompt = Path(args.prompt).read_text()
     inverse = reversed_prompt(prompt) if args.task == 'candidate' else None
-    labels=('No','Unknown','Yes') if args.task=='semantic' else ('A','B','C')
+    labels=(('No','Unknown','Yes') if args.task=='semantic' else
+        ('left','right','Unknown') if args.task=='directional' else ('A','B','C'))
     if Path(args.model_dir).name != 'Qwen3.5-2B':
         raise ValueError('This experiment uses only Qwen3.5-2B')
     with contextlib.redirect_stdout(sys.stderr):
