@@ -30,15 +30,51 @@ def thumbnail(rgb):
     return a[np.linspace(0, a.shape[0]-1, 32).astype(int)][:, np.linspace(0, a.shape[1]-1, 32).astype(int)].astype(np.float32)/255
 
 
+def yaw_aligned_change(previous, current, degrees):
+    """RGB residual after the executed yaw command; no measured pose or depth.
+
+    Positive action yaw turns the Habitat camera left. Project current camera
+    rays into the previous 90-degree pinhole image, ignoring newly exposed edges.
+    Blur reduces thumbnail sampling noise, not temporal scene changes.
+    """
+    def smooth(a):
+        p = np.pad(a, ((1, 1), (1, 1), (0, 0)), mode='edge')
+        return sum(p[y:y+32, x:x+32] for y in range(3) for x in range(3))/9
+    a, b = smooth(previous), smooth(current)
+    yy, xx = np.mgrid[6:26, 6:26]
+    x, y = (xx-15.5)/16., (yy-15.5)/16.
+    angle = np.deg2rad(degrees)
+    z = np.sin(angle)*x+np.cos(angle)
+    u = 16*(np.cos(angle)*x-np.sin(angle))/np.maximum(z, 1e-6)+15.5
+    v = 16*y/np.maximum(z, 1e-6)+15.5
+    valid = (z > 0) & (u >= 0) & (u < 31) & (v >= 0) & (v < 31)
+    if valid.mean() < .7:
+        return 1.
+    u, v = u[valid], v[valid]
+    ui, vi = u.astype(int), v.astype(int)
+    du, dv = (u-ui)[:, None], (v-vi)[:, None]
+    warped = ((1-du)*(1-dv)*a[vi, ui]+du*(1-dv)*a[vi, ui+1]
+        +(1-du)*dv*a[vi+1, ui]+du*dv*a[vi+1, ui+1])
+    return float(np.abs(warped-b[yy[valid], xx[valid]]).mean())
+
+
 def detect(frames, commands, cfg):
     if len(frames) != cfg.window+1 or len(commands) != cfg.window:
         return None
-    movement = [v >= 0.15 and abs(w) <= 7.5 for v, w in map(physical, commands)]
-    median = float(np.median([np.abs(b-a).mean() for a, b in zip(frames, list(frames)[1:])]))
-    endpoint = float(np.abs(frames[-1]-frames[0]).mean())
+    motions = list(map(physical, commands))
+    aligned = bool(getattr(cfg, 'yaw_compensated', False))
+    movement = [v >= 0.15 and (aligned or abs(w) <= 7.5) for v, w in motions]
+    if aligned:
+        median = float(np.median([yaw_aligned_change(a, b, w)
+            for a, b, (_, w) in zip(frames, list(frames)[1:], motions)]))
+        endpoint = yaw_aligned_change(frames[0], frames[-1], sum(w for _, w in motions))
+    else:
+        median = float(np.median([np.abs(b-a).mean() for a, b in zip(frames, list(frames)[1:])]))
+        endpoint = float(np.abs(frames[-1]-frames[0]).mean())
     fraction = sum(movement)/len(movement)
     if fraction >= cfg.min_forward_fraction and median <= cfg.median_change_threshold and endpoint <= cfg.endpoint_change_threshold:
-        return dict(forward_fraction=fraction, median_rgb_change=median, endpoint_rgb_change=endpoint)
+        return dict(forward_fraction=fraction, median_rgb_change=median, endpoint_rgb_change=endpoint,
+            yaw_compensated=aligned)
     return None
 
 

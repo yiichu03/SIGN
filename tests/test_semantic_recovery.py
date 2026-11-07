@@ -9,13 +9,35 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from src.recovery_affordance import select_semantic_candidate,raw_candidate_image,decision_prefix_audit
-from src.inference_recovery import RecoveryHarness
+from src.inference_recovery import RecoveryHarness, yaw_aligned_change, detect
 from qwen_single_image import SingleImageJudge
 from test_candidate_recovery import CandidateClient
 from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_yaw_alignment_cancels_known_rotation_not_scene_change(self):
+        def panorama(degrees):
+            yy, xx = np.mgrid[:32, :32]
+            azimuth = np.arctan((xx-15.5)/16)-np.deg2rad(degrees)
+            image = .5+.25*np.sin(3*azimuth)+.1*np.cos(2*azimuth)
+            return np.repeat(image[:, :, None], 3, axis=2).astype(np.float32)
+        frames = [panorama(i) for i in [0,10,0,10,0]]
+        self.assertLess(yaw_aligned_change(frames[0],frames[1],10),.003)
+        self.assertGreater(yaw_aligned_change(frames[0],frames[1],-10),.08)
+        self.assertGreater(yaw_aligned_change(frames[0],frames[1]+.1,10),.09)
+        cfg=settings(yaw_compensated=True)
+        commands=[np.array([.8,w/15],dtype=np.float32) for w in [10,-10,10,-10]]
+        self.assertIsNotNone(detect(frames,commands,cfg))
+        cfg.yaw_compensated=False
+        self.assertIsNone(detect(frames,commands,cfg))
+        cfg.yaw_compensated=True
+        self.assertIsNone(detect(frames,[np.array([-1,2/3])]*4,cfg))
+
+    def test_yaw_alignment_rejects_insufficient_overlap(self):
+        image=np.zeros((32,32,3),dtype=np.float32)
+        self.assertEqual(yaw_aligned_change(image,image,120),1.)
+
     def test_single_semantic_distribution_can_change_rule_direction(self):
         label,detail=select_semantic_candidate(dict(probabilities=[.8,.1,.1]),dict(probabilities=[.1,.1,.8]),'A')
         self.assertEqual(label,'B');self.assertTrue(detail['differs_from_rule'])
