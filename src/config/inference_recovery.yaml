@@ -1,0 +1,19 @@
+inference_recovery:
+  mode: "off"
+  window: 16
+  min_forward_fraction: 0.75
+  median_change_threshold: 0.01
+  endpoint_change_threshold: 0.025
+  cooldown: 64
+  max_interventions: 2
+  turn_steps: 6
+  forward_steps: 4
+  min_probability: 0.5
+  min_margin: 0.1
+  python_executable: /scratch/e1538633/liuyi/envs/qwen35/bin/python
+  model_dir: /scratch/e1538633/liuyi/models/Qwen3.5-2B
+  prompt: scripts/prompts/recovery_abc.txt
+  worker_script: scripts/recovery_worker.py
+  verify_first_batch: True
+  request_timeout: 300.0
+  startup_timeout: 600.0

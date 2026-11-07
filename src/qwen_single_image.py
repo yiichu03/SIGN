@@ -188,7 +188,7 @@ class SingleImageJudge:
         max_delta = 0.0
         single_results = []
         for i in range(len(images)):
-            single, single_audit = self.class_probabilities(images[i:i+1], metadata[i:i+1])
+            single, single_audit = self.class_probabilities(images[i:i+1], None if metadata is None else metadata[i:i+1])
             active = [t for t,m in zip(audit['input_token_ids'][i],audit['attention_mask'][i]) if m]
             if active != single_audit['input_token_ids'][0] or audit['image_grid_thw'][i] != single_audit['image_grid_thw'][0]:
                 raise RuntimeError('Single/batch input mismatch')
@@ -196,7 +196,7 @@ class SingleImageJudge:
                 raise RuntimeError('Invalid probability in GPU verification')
             single_results.append(single[0])
             max_delta = max(max_delta, max(abs(results[i][k]-single[0][k]) for k in ('p_low','p_medium','p_high','q')))
-        permuted, _ = self.class_probabilities(images[::-1],metadata[::-1])
+        permuted, _ = self.class_probabilities(images[::-1],None if metadata is None else metadata[::-1])
         permutation_delta = max(abs(a[k]-b[k]) for a,b in zip(results,permuted[::-1])
             for k in ('p_low','p_medium','p_high','q'))
         inputs, _ = self._prepare(images, metadata)

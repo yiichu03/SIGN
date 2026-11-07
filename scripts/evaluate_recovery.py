@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+"""Thin launcher around the native evaluator and existing passive telemetry."""
+import argparse
+import hashlib
+import importlib.util
+import json
+import math
+import os
+from pathlib import Path
+import statistics
+import subprocess
+import sys
+import time
+TREE = Path(__file__).resolve().parents[1]
+ROOT = TREE.parent
+sys.path.insert(0, str(TREE))
+sys.path.insert(0, str(TREE/'scripts'))
+
+
+def read_rows(folder):
+    rows = {}
+    for path in sorted(folder.glob('*.jsonl')):
+        for line in path.read_text().splitlines():
+            r = json.loads(line)
+            key = (r['scene_id'], r['episode_id'])
+            assert key not in rows, key
+            rows[key] = r
+    return rows
+
+
+def guard(batch):
+    source = json.loads((batch/'source_manifest.json').read_text())
+    assert subprocess.check_output(['git','-C',str(TREE),'rev-parse','HEAD'], text=True).strip() == source['commit']
+    for name, digest in source['files'].items():
+        assert hashlib.sha256((TREE/name).read_bytes()).hexdigest() == digest, name
+    for name, digest in source['assets'].items():
+        assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+    path = ROOT/'logs/gibson_coverage32_selected_eval_20261107/guard.py'
+    spec = importlib.util.spec_from_file_location('original_runtime_guard', path)
+    module = importlib.util.module_from_spec(spec);spec.loader.exec_module(module);module.guard()
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--batch', type=Path, required=True)
+    parser.add_argument('--run', type=Path, required=True)
+    parser.add_argument('--split', choices=['smoke','pilot','full'], required=True)
+    parser.add_argument('--mode', choices=['off','disabled','rule','qwen'], required=True)
+    args = parser.parse_args()
+    batch, out = args.batch.resolve(), args.run.resolve()
+    guard(batch)
+    assert os.environ.get('PBS_JOBID') and os.environ.get('PYTHONHASHSEED') == '0'
+    assert not out.exists(), out
+    out.mkdir(parents=True)
+    tasks = json.loads((batch/'tasks.json').read_text())
+    selected, checkpoint = tasks['splits'][args.split], tasks['checkpoint']
+    os.chdir(TREE)
+    import run_sim
+    import recovery_env
+    import torch
+    from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
+    assert torch.cuda.is_available()
+    model = torch.load(checkpoint['path'], map_location='cpu')
+    assert model['extra_state']['step'] == 74240000
+    del model
+    os.environ['COVERAGE_EVAL_EPISODES'] = str(out/'episodes')
+    if args.split == 'smoke' and args.mode == 'off':
+        os.environ['RECOVERY_PROBE_IMAGES'] = str(out/'probe_images')
+    opts = ['habitat_baselines.eval_ckpt_path_dir', checkpoint['path'],
+        'habitat.env_task','CoverageEvalGym', 'habitat.task.observed_coverage.weight','0.0',
+        'habitat.dataset.data_path',selected['path'], 'habitat_baselines.test_episode_count',str(selected['episodes']),
+        'inference_recovery.mode', 'qwen' if args.mode == 'disabled' else args.mode]
+    if args.mode == 'disabled':
+        opts += ['inference_recovery.max_interventions','0']
+    started = time.perf_counter()
+    run_sim.run_exp(exp_config='exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,rollout_coverage,inference_recovery',
+        run_type='eval', opts=opts, model_dir=str(out/'native'), overwrite=False, note='', debug=False)
+    rows = read_rows(out/'episodes')
+    assert set(rows) == {tuple(k) for k in selected['episode_keys']}
+    for row in rows.values():
+        assert 1 <= row['steps'] <= 500
+        assert all(math.isfinite(row[k]) for k in ['success','spl','collisions','new_area_m2','navigation_reward'])
+    ref = read_rows(ROOT/'logs/gibson_baseline_final_eval_20261103/baseline/episodes')
+    pose_matches = 0
+    for key, row in rows.items():
+        reference = ref[key]
+        assert row['goal_sha256'] == reference['goal_sha256']
+        assert max(abs(a-b) for a,b in zip(row['start_position'],reference['start_position'])) < 1e-6
+        pose_matches += row['pose_trace_sha256'] == reference['pose_trace_sha256']
+        if args.mode == 'off':
+            for name in ['success','spl','view_match','navigation_reward','collisions','steps']:
+                assert abs(row[name]-reference[name]) < 1e-5, (key,name,row[name],reference[name])
+    ea = EventAccumulator(str(out/'native/tb'), size_guidance={'scalars':0});ea.Reload()
+    native = {tag:ea.Scalars(tag)[-1].value for tag in ea.Tags()['scalars']}
+    result = dict(mode=args.mode, split=args.split, training_step=74240000, episodes=len(rows), scenes=14,
+        success_rate=statistics.mean(r['success'] for r in rows.values()), spl=statistics.mean(r['spl'] for r in rows.values()),
+        view_match=statistics.mean(r['view_match'] for r in rows.values()),
+        mean_collisions=statistics.mean(r['collisions'] for r in rows.values()),
+        mean_episode_steps=statistics.mean(r['steps'] for r in rows.values()),
+        new_m2_per_step_global=sum(r['new_area_m2'] for r in rows.values())/sum(r['steps'] for r in rows.values()),
+        native_metrics=native, seconds=time.perf_counter()-started, original_pose_sha_matches=pose_matches,
+        matched_goals_and_starts=True, controller_inputs=['rgb','target_rgb','executed_action_history'],
+        max_episode_steps=500, seed=100, hash_seed=0, source_commit=json.loads((batch/'source_manifest.json').read_text())['commit'])
+    assert abs(native['eval_metrics/success']-result['success_rate']) < 1e-5
+    assert abs(native['eval_metrics/spl']-result['spl']) < 1e-5
+    recovery = out/'native/recovery'
+    if args.mode != 'off':
+        records = [json.loads(line) for line in (recovery/'episodes.jsonl').read_text().splitlines()]
+        assert len(records) == len(rows)
+        assert len({tuple(r['episode']) for r in records}) == len(records)
+        for r in records:
+            assert r['steps'] == rows[tuple(r['episode'])]['steps']
+            assert r['actions_sha256'] == rows[tuple(r['episode'])]['actual_actions_sha256'], 'Executed action feedback mismatch'
+            assert r['attempts'] <= 2 and r['overrides'] <= 20
+        result['harness'] = dict(attempts=sum(r['attempts'] for r in records), overrides=sum(r['overrides'] for r in records),
+            rejected=sum(r['rejected'] for r in records), **json.loads((recovery/'summary.json').read_text()))
+        if args.mode == 'disabled':
+            assert not result['harness']['worker_started'] and result['harness']['overrides'] == 0
+    elif recovery.exists():
+        raise RuntimeError('Disabled supervisor created output')
+    guard(batch)
+    (out/'result.json').write_text(json.dumps(result, indent=2)+'\n')
+    print(json.dumps(result, indent=2))
+
+
+if __name__ == '__main__':
+    main()

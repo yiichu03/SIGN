@@ -827,6 +827,19 @@ class PPOTrainer(BaseRLTrainer):
         pbar = tqdm.tqdm(total=number_of_eval_episodes * evals_per_ep)
         self.actor_critic.eval()
 
+        # Evaluation-only RGB/action supervisor; absent/off preserves native eval.
+        recovery = None
+        recovery_cfg = getattr(config, "inference_recovery", None)
+        if recovery_cfg is not None and recovery_cfg.mode != "off":
+            from src.inference_recovery import RecoveryHarness
+            from pathlib import Path
+            action_arguments = next(iter(self.orig_policy_action_space.spaces.values())).spaces
+            if any(tuple(space.shape) != (1,) for space in action_arguments.values()):
+                raise ValueError("Recovery expects scalar linear/angular velocity arguments")
+            recovery = RecoveryHarness(recovery_cfg, self.envs.num_envs,
+                Path(config.habitat_baselines.tensorboard_dir).parent / "recovery",
+                action_names=list(action_arguments.keys()))
+
         while (len(stats_episodes) < (number_of_eval_episodes * evals_per_ep) and self.envs.num_envs > 0):
             current_episodes_info = self.envs.current_episodes()
             batch['cost'] = prev_costs
@@ -844,6 +857,16 @@ class PPOTrainer(BaseRLTrainer):
                 eval=False
             )
 
+            if recovery is not None:
+                selected = recovery.step(
+                    batch['rgb'].detach().cpu().numpy(),
+                    batch['imagegoal_sensor_v2'].detach().cpu().numpy(),
+                    actions.detach().cpu().numpy(),
+                    not_done_masks.detach().cpu().numpy().reshape(-1),
+                    [(ep.scene_id, str(ep.episode_id)) for ep in current_episodes_info],
+                )
+                actions = torch.as_tensor(selected, dtype=actions.dtype, device=actions.device)
+            # Feed the executed intervention back through the normal previous-action input.
             prev_actions.copy_(actions)
             if is_continuous_action_space(self.policy_action_space):
                 step_data = [
@@ -903,6 +926,9 @@ class PPOTrainer(BaseRLTrainer):
 
                 # episode ended
                 if not not_done_masks[i].item():
+                    if recovery is not None:
+                        ep = current_episodes_info[i]
+                        recovery.finish(i, (ep.scene_id, str(ep.episode_id)))
                     pbar.update()
                     episode_stats = {"reward": current_episode_reward[i].item()}
                     episode_stats.update(self._extract_scalars_from_info(infos[i]))
@@ -937,6 +963,8 @@ class PPOTrainer(BaseRLTrainer):
                             current_episodes_info[i].episode_id,
                         )
 
+            if recovery is not None:
+                recovery.pause(envs_to_pause)
             (
                 self.envs,
                 test_recurrent_hidden_states,
@@ -980,4 +1008,6 @@ class PPOTrainer(BaseRLTrainer):
         for k, v in metrics.items():
             writer.add_scalar(f"eval_metrics/{k}", v, step_id)
 
+        if recovery is not None:
+            recovery.close()
         self.envs.close()

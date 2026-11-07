@@ -18,14 +18,14 @@
 
 每次恢复6步原地转向（±15°/步）+4步前进（0.20m/步），最多2次/episode，事件冷却64步。没有后退或额外传感器。Qwen最大概率≥0.5且领先次大≥0.1才接受A/B，否则C；候选全词表质量与原始logits一并保存，不解释为校准概率。每次恢复后记录RGB变化用于诊断，不自动当任务成功。
 
-全部实际动作计入原500步。GRU按实际观测继续更新，不人为重置masks；previous-actions写实际执行动作。真实reset清理本环境状态；env pause同步删状态。Agent不得读取GT地图、sim位姿、测地距离、success、碰撞或coverage指标，episode ID仅作审计关联。终止后的真实指标仅用于结果记录。
+全部实际动作计入原500步。Gym扁平动作参数由实际original_action_space读取并显式映射（当前为angular_velocity在前），不假设向量首项是线速度。环境端按命名参数记录实际动作SHA，与控制器记录逐episode核对。GRU按实际观测继续更新，不人为重置masks；previous-actions写实际执行动作。真实reset清理本环境状态；env pause同步删状态。Agent不得读取GT地图、sim位姿、测地距离、success、碰撞或coverage指标，episode ID仅作审计关联。终止后的真实指标仅用于结果记录。
 
 ## 必要验证与提交顺序
 
 1. CPU单元测试：动作缩放/STOP、停滞/纯转向/画面进展、不跨episode、不跨env、冷却/次数、pause、实际previous-actions、关掉/零次等价、错误ID与概率异常。
 2. PBS一个A40执行smoke：控制off/零干预逐条对齐已知基线、真实Qwen token位置/padding/batch与solo/排列一致、异常明确失败、原生500步/goal/hash不变；真实恢复事件与日志核验。
 3. 固定场景均衡280任务，排除开发和既有73个目的性review任务，串行off/rule/qwen。只将它用作可行性/回归筛查，不用小样本证明1pp提升。
-4. 质量门通过后再提交同一源码的完整4200×三组验证；若pilot无触发或明显回退，先报告实测再决定是否全量，不自动搜索prompt/阈值或夸大收益。小样本方向是探索性证据。
+4. 预先固定质量门：控制/零干预逐条完全一致、真实worker token/padding/batch检验通过、两干预组在280任务均有事件，且相对off的SR和SPL均不回退超过2个百分点。此门仅排除明显回归，不是有效性显著检验。通过后再提交同一源码的完整4200×三组验证；若pilot无触发或明显回退，先报告实测再决定是否全量，不自动搜索prompt/阈值或夸大收益。小样本方向是探索性证据。
 
 ## 报告与审计
 
