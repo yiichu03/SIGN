@@ -204,7 +204,7 @@ class RecoveryHarness:
         self.active_survey = bool(getattr(cfg, 'active_survey', False))
         self.candidate_affordance = bool(getattr(cfg, 'candidate_affordance', False))
         self.candidate_protocol = getattr(cfg, 'candidate_protocol', 'abc')
-        if self.candidate_protocol not in ('abc','semantic','directional'):
+        if self.candidate_protocol not in ('abc','semantic','semantic_balanced','directional'):
             raise ValueError('Unknown candidate protocol')
         self.candidate_gap = float(getattr(cfg, 'candidate_support_gap', 0.05))
         if self.candidate_affordance and (not self.active_survey or not np.isfinite(self.candidate_gap) or not 0 < self.candidate_gap <= 1):
@@ -369,7 +369,7 @@ class RecoveryHarness:
                     choices.append(selector(*response['results'][2*j:2*j+2],
                         'A' if row['attempt'] % 2 else 'B', self.candidate_gap,
                         **({'relative_only':bool(getattr(self.cfg,'candidate_relative_only',False))}
-                            if self.candidate_protocol=='semantic' else {})))
+                            if self.candidate_protocol in ('semantic','semantic_balanced') else {})))
             else:
                 for item in response['results']:
                     label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)

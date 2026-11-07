@@ -23,12 +23,16 @@ def main():
     for name in ('model-dir', 'prompt', 'output'):
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--verify', type=int, default=1)
-    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic', 'directional'], default='actions')
+    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic', 'semantic_balanced', 'directional'], default='actions')
+    parser.add_argument('--inverse-prompt')
     args = parser.parse_args()
     output = Path(args.output)
     prompt = Path(args.prompt).read_text()
     inverse = reversed_prompt(prompt) if args.task == 'candidate' else None
-    labels=(('No','Unknown','Yes') if args.task=='semantic' else
+    if args.task=='semantic_balanced':
+        if not args.inverse_prompt:raise ValueError('Semantic consensus needs the negative question')
+        inverse=Path(args.inverse_prompt).read_text()
+    labels=(('No','Unknown','Yes') if args.task in ('semantic','semantic_balanced') else
         ('left','right','Unknown') if args.task=='directional' else ('A','B','C'))
     if Path(args.model_dir).name != 'Qwen3.5-2B':
         raise ValueError('This experiment uses only Qwen3.5-2B')
@@ -57,6 +61,13 @@ def main():
         if args.verify and not verified:
             with contextlib.redirect_stdout(sys.stderr):
                 audit = judge.verify_readout([r['image'] for r in rows[:3]], None, labels=labels)
+            if args.task=='semantic_balanced':
+                judge.prompt=inverse
+                with contextlib.redirect_stdout(sys.stderr):
+                    inverse_check=judge.verify_readout([r['image'] for r in rows[:3]],None,labels=labels)
+                judge.prompt=prompt
+                audit['inverse_verification']=inverse_check
+                audit['passed']=audit['passed'] and inverse_check['passed']
             (output/'verification.json').write_text(json.dumps(audit, indent=2)+'\n')
             if not audit['passed']:
                 raise RuntimeError('Recovery ABC batch/solo/generation verification failed')
@@ -70,7 +81,7 @@ def main():
             if inverse is not None:
                 judge.prompt = inverse
                 with contextlib.redirect_stdout(sys.stderr):
-                    inverted, inverse_audit = judge.class_probabilities([r['image'] for r in batch], None)
+                    inverted, inverse_audit = judge.class_probabilities([r['image'] for r in batch], None, labels=labels)
                 judge.prompt = prompt
                 audit = dict(standard=audit, reversed=inverse_audit)
             for row, value, reverse in zip(batch, values, inverted):

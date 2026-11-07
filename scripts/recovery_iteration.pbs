@@ -13,4 +13,8 @@ export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSE
 export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
 : "${ITERATION_TREE:?immutable source tree}" "${ITERATION_BATCH:?immutable output}" "${ITERATION_STAGE:?stage}"
 cd "$ITERATION_TREE"
-python scripts/run_recovery_iteration.py --batch "$ITERATION_BATCH" --stage "$ITERATION_STAGE"
+if [[ "$ITERATION_STAGE" == "probe" ]]; then
+  python scripts/probe_semantic_recovery.py --batch "$ITERATION_BATCH" --guard
+else
+  python scripts/run_recovery_iteration.py --batch "$ITERATION_BATCH" --stage "$ITERATION_STAGE"
+fi

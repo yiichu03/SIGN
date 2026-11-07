@@ -1,0 +1,1 @@
+Look at this robot camera image. Is the near route directly ahead blocked by a wall, large furniture, a bed, or another obstacle that would obstruct a short forward movement? Judge the central route, not a doorway somewhere to the side. Use Unknown if the view is ambiguous. Answer with exactly one word: Yes, No, or Unknown.

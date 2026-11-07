@@ -8,7 +8,7 @@ from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from src.recovery_affordance import select_semantic_candidate,raw_candidate_image,decision_prefix_audit,select_directional
+from src.recovery_affordance import select_semantic_candidate,raw_candidate_image,decision_prefix_audit,select_directional,select_candidate
 from src.inference_recovery import RecoveryHarness, yaw_aligned_change, detect
 from qwen_single_image import SingleImageJudge
 from test_candidate_recovery import CandidateClient
@@ -16,6 +16,25 @@ from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_natural_question_consensus_aligns_negative_yes_with_blocked(self):
+        left=dict(probabilities=[.6,.2,.2],reversed_probabilities=[.1,.2,.7])
+        right=dict(probabilities=[.5,.1,.4],reversed_probabilities=[.4,.2,.4])
+        choice,detail=select_candidate(left,right,'A',relative_only=True)
+        self.assertEqual(choice,'B');self.assertTrue(detail['differs_from_rule'])
+        self.assertTrue(all(d<-.05 for d in detail['support_deltas']))
+        self.assertEqual(select_candidate(left,right,'A')[1]['source'],'rule_fallback')
+
+    def test_disagreeing_natural_questions_do_not_force_a_direction(self):
+        left=dict(probabilities=[.6,.2,.2],reversed_probabilities=[.6,.2,.2])
+        right=dict(probabilities=[.5,.1,.4],reversed_probabilities=[.1,.2,.7])
+        choice,detail=select_candidate(left,right,'A',relative_only=True)
+        self.assertEqual(choice,'A');self.assertEqual(detail['source'],'rule_fallback')
+
+    def test_low_negative_question_vocabulary_mass_is_rejected(self):
+        left=dict(probabilities=[.6,.2,.2],reversed_probabilities=[.1,.2,.7])
+        right=dict(probabilities=[.5,.1,.4],reversed_probabilities=[.4,.2,.4],reversed_candidate_mass=.01)
+        self.assertEqual(select_candidate(left,right,'A',relative_only=True)[1]['source'],'rule_fallback')
+
     def test_long_recovery_exact_forward_commands_and_override_budget(self):
         with tempfile.TemporaryDirectory() as folder:
             CandidateClient.uncertain=False;CandidateClient.bad_id=False
