@@ -85,6 +85,11 @@ def main():
         'habitat.env_task','CoverageEvalGym', 'habitat.task.observed_coverage.weight','0.0',
         'habitat.dataset.data_path',selected['path'], 'habitat_baselines.test_episode_count',str(selected['episodes']),
         'inference_recovery.mode', 'qwen' if args.mode == 'disabled' else args.mode]
+    diagnostic_envs=tasks.get('diagnostic_num_envs') if args.split!='full' else None
+    if diagnostic_envs is not None:
+        if diagnostic_envs!=1:
+            raise ValueError('Causal diagnostics support exactly one environment')
+        opts += ['habitat_baselines.num_environments','1']
     if args.mode == 'disabled':
         opts += ['inference_recovery.max_interventions','0']
     started = time.perf_counter()
@@ -129,6 +134,8 @@ def main():
         native_reference=os.environ.get('RECOVERY_NATIVE_REFERENCE') == '1',
         subset_full_reference_outputs_not_assumed_equal=args.split!='full',
         max_episode_steps=500, seed=100, hash_seed=0, source_commit=json.loads((batch/'source_manifest.json').read_text())['commit'])
+    result['diagnostic_num_envs']=diagnostic_envs
+    result['full_evaluation_parallelism_unchanged']=True
     assert abs(native['eval_metrics/success']-result['success_rate']) < 1e-5
     assert abs(native['eval_metrics/spl']-result['spl']) < 1e-5
     recovery = out/'native/recovery'
