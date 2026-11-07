@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "registered_at": "2026-11-08T06:40:32+08:00",
+  "prior_protocol": "Original automatic script requires positive target confirmation; preserved unchanged.",
+  "reason": "User asks to freeze after credible targeted small-subset benefit and submit full validation. A sparse24-case confirmation can be neutral; do not keep tuning or selecting until it happens to turn positive. Formal4200 is the next empirical test, not a promised win.",
+  "no_confirmation_results_exist": true,
+  "current_candidate_development_not_yet_run": true,
+  "development_and_same_commit_repeat": {
+    "technical_exit0": true,
+    "net_successes_at_least": 1,
+    "prefix_supported_rescues_at_least": 1,
+    "safety_net_successes_at_least": 0
+  },
+  "frozen_confirmation": {
+    "technical_exit0": true,
+    "same_behavior_commit": true,
+    "target_net_successes_at_least": 0,
+    "general_net_successes_at_least": 0,
+    "safety_net_successes_at_least": 0,
+    "positive_target_requires_prefix_supported_rescue": true
+  },
+  "neutral_confirmation": "Report inconclusive, not independent benefit. Allowed to submit the preplanned formal4200 only after both positive causal development and same-commit repeat, with no safety/general regression.",
+  "negative_confirmation": "No full release under this protocol. Retain all outcomes; any future tuning demotes used confirmation to development and requires a new untouched set.",
+  "legacy_flag": "Never overwrite passes_fixed_gain_gate or legacy dispatch. If neutral makes the old flag false, produce a separate version2 audit referencing this preregistration before any manual full submission.",
+  "formal": {
+    "checkpoint_step": 125952000,
+    "environment_count": 6,
+    "episodes": 4200,
+    "max_episode_steps": 500,
+    "seed": 100,
+    "hash_seed": 0,
+    "no_navigation_training": true
+  },
+  "restrictions": "No claim that development or neutral confirmation proves whole-val improvement; full must report all arms and harms. Source/runtime assets and existing controls remain fixed."
+}
