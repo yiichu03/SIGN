@@ -12,11 +12,12 @@ sys.path.insert(0,str(TREE/'scripts'))
 from evaluate_recovery import guard,read_rows
 
 
-def run(batch,name,split,mode,native=False,active=True):
+def run(batch,name,split,mode,native=False,active=True,candidate=False):
     out=batch/name
     command=[sys.executable,str(TREE/'scripts/evaluate_recovery.py'),'--batch',str(batch),'--run',str(out),
         '--split',split,'--mode',mode]
     if active:command.append('--active')
+    if candidate:command.append('--candidate')
     env=dict(os.environ)
     if native:env['RECOVERY_NATIVE_REFERENCE']='1'
     else:env.pop('RECOVERY_NATIVE_REFERENCE',None)
@@ -84,6 +85,10 @@ def main():
     for mode in ['off','scan','rule','qwen']:
         folders[mode]=run(batch,'confirm_'+mode,'pilot',mode)
         if mode!='off':audit_views(folders[mode])
+    summarize(batch,folders,diagnostic)
+
+
+def summarize(batch,folders,diagnostic):
     results={m:json.loads((f/'result.json').read_text()) for m,f in folders.items()}
     records={m:read_rows(f/'episodes') for m,f in folders.items()};baseline=records['off'];paired={};per_scene=[];paired_rows=[]
     for mode,rows in records.items():
@@ -103,6 +108,8 @@ def main():
                 paired_rows.append(dict(mode=mode,scene_id=key[0],episode_id=key[1],
                     off_success=baseline[key]['success'],success=r['success'],off_spl=baseline[key]['spl'],spl=r['spl'],
                     survey_steps=h['survey_steps'],recovery_steps=h['recovery_steps'],
+                    vlm_selections=h.get('vlm_selections',0),fallback_selections=h.get('fallback_selections',0),
+                    vlm_rule_disagreements=h.get('vlm_rule_disagreements',0),
                     human_category='',human_notes=''))
         for scene in sorted({k[0] for k in rows}):
             data=[r for k,r in rows.items() if k[0]==scene]

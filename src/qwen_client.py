@@ -27,6 +27,8 @@ class QwenClient:
         command = [str(cfg.python_executable), '-u', str(tree/cfg.worker_script),
                    '--model-dir',str(cfg.model_dir), '--prompt',str((tree/cfg.prompt).resolve()),
                    '--output',str(self.output), '--verify',str(int(cfg.verify_first_batch))]
+        if getattr(cfg, 'candidate_affordance', False):
+            command += ['--task', 'candidate']
         self.process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                         stderr=self.stderr, text=True, bufsize=1, env=env)
         atexit.register(self.close)

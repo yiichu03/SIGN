@@ -11,6 +11,7 @@ import time
 import traceback
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'src'))
 from qwen_single_image import SingleImageJudge
+from recovery_affordance import reversed_prompt
 
 
 def emit(row):
@@ -22,15 +23,19 @@ def main():
     for name in ('model-dir', 'prompt', 'output'):
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--verify', type=int, default=1)
+    parser.add_argument('--task', choices=['actions', 'candidate'], default='actions')
     args = parser.parse_args()
     output = Path(args.output)
     prompt = Path(args.prompt).read_text()
+    inverse = reversed_prompt(prompt) if args.task == 'candidate' else None
     if Path(args.model_dir).name != 'Qwen3.5-2B':
         raise ValueError('This experiment uses only Qwen3.5-2B')
     with contextlib.redirect_stdout(sys.stderr):
         judge = SingleImageJudge(args.model_dir, prompt, dtype='float32')
     version = hashlib.sha256(prompt.encode()).hexdigest()
     (output/'prompt.txt').write_text(prompt)
+    if inverse is not None:
+        (output/'reversed_prompt.txt').write_text(inverse)
     emit(dict(ok=True, kind='ready', pid=os.getpid(), prompt_version=version, environment=judge.environment))
     last = -1
     verified = False
@@ -59,12 +64,25 @@ def main():
             batch = rows[start:start+8]
             with contextlib.redirect_stdout(sys.stderr):
                 values, audit = judge.class_probabilities([r['image'] for r in batch], None)
-            for row, value in zip(batch, values):
+            inverted = [None]*len(batch)
+            if inverse is not None:
+                judge.prompt = inverse
+                with contextlib.redirect_stdout(sys.stderr):
+                    inverted, inverse_audit = judge.class_probabilities([r['image'] for r in batch], None)
+                judge.prompt = prompt
+                audit = dict(standard=audit, reversed=inverse_audit)
+            for row, value, reverse in zip(batch, values, inverted):
                 if not value['valid']:
                     raise RuntimeError('Invalid recovery ABC logits')
                 # A/B/C are actions here. The inherited ordinal q is not used.
                 results.append(dict(id=row['id'], probabilities=[value[k] for k in ('p_low', 'p_medium', 'p_high')],
                     logits=value['logits'], candidate_mass=value['candidate_mass'], prompt_version=version))
+                if reverse is not None:
+                    if not reverse['valid']:
+                        raise RuntimeError('Invalid reversed candidate logits')
+                    results[-1].update(reversed_probabilities=[reverse[k] for k in ('p_low','p_medium','p_high')],
+                        reversed_logits=reverse['logits'], reversed_candidate_mass=reverse['candidate_mass'],
+                        reversed_prompt_version=hashlib.sha256(inverse.encode()).hexdigest())
             (output/f'request_{request:06d}_batch_{start//8}.json').write_text(json.dumps(dict(inputs=batch, audit=audit), indent=2)+'\n')
         emit(dict(ok=True, request_id=request, results=results, seconds=time.perf_counter()-started,
                   peak_gpu_gib=judge.torch.cuda.max_memory_allocated()/1024**3))

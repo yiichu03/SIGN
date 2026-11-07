@@ -83,6 +83,9 @@ class State:
     recovery_overrides: int = 0
     completed_surveys: int = 0
     selections: dict = field(default_factory=lambda: dict(A=0, B=0, C=0))
+    vlm_selections: int = 0
+    fallback_selections: int = 0
+    vlm_rule_disagreements: int = 0
 
     def observe(self, rgb):
         if self.last_action is not None:
@@ -158,6 +161,10 @@ class RecoveryHarness:
             raise ValueError('Unexpected flattened action names')
         self.action_indices = [action_names.index(n) for n in ('linear_velocity', 'angular_velocity')]
         self.active_survey = bool(getattr(cfg, 'active_survey', False))
+        self.candidate_affordance = bool(getattr(cfg, 'candidate_affordance', False))
+        self.candidate_gap = float(getattr(cfg, 'candidate_support_gap', 0.05))
+        if self.candidate_affordance and (not self.active_survey or not np.isfinite(self.candidate_gap) or not 0 < self.candidate_gap <= 1):
+            raise ValueError('Candidate affordances require active views and a positive support gap')
         self.survey_k = getattr(cfg, 'survey_turn_steps', 3)
         if self.active_survey and (type(self.survey_k) is not int or self.survey_k < 1):
             raise ValueError('Invalid survey duration')
@@ -240,6 +247,14 @@ class RecoveryHarness:
                     image = self.output/'inputs'/(row['id']+'.png')
                     render_started = time.perf_counter()
                     view_files = active_collage(survey, goal[i], image)
+                    if self.candidate_affordance:
+                        from src.recovery_affordance import candidate_image
+                        row['candidates'] = []
+                        for side in ['left', 'right']:
+                            candidate = candidate_image(survey['views'][side], goal[i],
+                                image.with_name(image.stem+'.candidate_'+side+'.png'))
+                            candidate.update(id=row['id']+':'+side, side=side)
+                            row['candidates'].append(candidate)
                     self.render_seconds += time.perf_counter()-render_started
                     row.update(image=str(image), image_sha256=hashlib.sha256(image.read_bytes()).hexdigest(),
                         active_survey=True, decision_step=state.step, view_steps=survey['view_steps'],
@@ -289,14 +304,23 @@ class RecoveryHarness:
                     from src.qwen_client import QwenClient
                     self.client_factory = QwenClient
                 self.client = self.client_factory(self.cfg, self.output/'worker')
-            response = self.client.score(self.request, [r for _, r in pending])
+            requests = [r for _, r in pending]
+            if self.candidate_affordance:
+                requests = [candidate for row in requests for candidate in row['candidates']]
+            response = self.client.score(self.request, requests)
             self.request += 1
-            if [r['id'] for r in response['results']] != [r['id'] for _, r in pending]:
+            if [r['id'] for r in response['results']] != [r['id'] for r in requests]:
                 raise RuntimeError('Recovery worker image ID/order mismatch')
             self.worker_seconds += response['seconds']
-            for item in response['results']:
-                label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)
-                choices.append((label, item))
+            if self.candidate_affordance:
+                from src.recovery_affordance import select_candidate
+                for j, (_, row) in enumerate(pending):
+                    choices.append(select_candidate(*response['results'][2*j:2*j+2],
+                        'A' if row['attempt'] % 2 else 'B', self.candidate_gap))
+            else:
+                for item in response['results']:
+                    label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)
+                    choices.append((label, item))
         else:
             choices = [('C' if self.cfg.mode == 'scan' else 'A' if row['attempt'] % 2 == 1 else 'B', {}) for i, row in pending]
         for (i, row), (label, detail) in zip(pending, choices):
@@ -305,6 +329,10 @@ class RecoveryHarness:
                 state.attempts += 1
             assert state.attempts == row['attempt']
             state.selections[label] += 1
+            if self.candidate_affordance and self.cfg.mode == 'qwen':
+                state.vlm_selections += detail['source'] == 'vlm'
+                state.fallback_selections += detail['source'] == 'rule_fallback'
+                state.vlm_rule_disagreements += detail['differs_from_rule']
             state.earlier_choices.append(label)
             state.cooldown_until = state.step+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
             if label != 'C':
@@ -339,6 +367,8 @@ class RecoveryHarness:
                    overrides=state.overrides, rejected=state.rejected, actions_sha256=state.action_digest.hexdigest(),
                    survey_steps=state.survey_overrides, recovery_steps=state.recovery_overrides,
                    completed_surveys=state.completed_surveys, selections=state.selections)
+        row.update(vlm_selections=state.vlm_selections, fallback_selections=state.fallback_selections,
+            vlm_rule_disagreements=state.vlm_rule_disagreements)
         assert state.overrides == state.survey_overrides+state.recovery_overrides
         assert state.overrides <= self.max_override_steps
         if state.survey is not None:
@@ -358,4 +388,4 @@ class RecoveryHarness:
         (self.output/'summary.json').write_text(json.dumps(dict(events=self.events, worker_started=self.client is not None,
             worker_seconds=self.worker_seconds, render_seconds=self.render_seconds,
             total_controller_seconds=self.total_seconds, mode=self.cfg.mode, active_survey=self.active_survey,
-            max_override_steps=self.max_override_steps), indent=2)+'\n')
+            max_override_steps=self.max_override_steps, candidate_affordance=self.candidate_affordance), indent=2)+'\n')

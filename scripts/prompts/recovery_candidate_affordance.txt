@@ -1,0 +1,7 @@
+Judge only the dominant CANDIDATE CAMERA VIEW in this image. The smaller GOAL CONTEXT photograph provides navigation context; similarity to the goal is not proof of an open route or arrival. The candidate is an actual camera view after an in-place turn. No measured position, depth, map, or collision label is available.
+Classify the visible local affordance for two small forward steps totaling at most 0.4m along this camera heading. Consider visible near-floor continuity, wall or furniture obstruction, and doorway openings in the forward corridor. A doorway elsewhere in the image does not by itself make the forward corridor open. You cannot guarantee physical clearance from RGB. Ignore image artifacts when possible and use UNCERTAIN when they obscure the route.
+A: BLOCKED
+B: UNCERTAIN
+C: OPEN
+BLOCKED means a wall or large obstacle visibly occupies the near forward corridor, with no clear floor route for a short attempt. UNCERTAIN means the relevant floor or clearance is hidden, ambiguous, or too narrow to judge. OPEN means visible connected near floor offers a plausible short forward route along the current heading. Do not infer unseen passages, exact distances, or task success. Judge the image independently without a preferred side or class.
+Return exactly one label A, B, or C, with no explanation.

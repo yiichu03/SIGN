@@ -1,0 +1,4 @@
+inference_recovery:
+  candidate_affordance: True
+  candidate_support_gap: 0.05
+  prompt: scripts/prompts/recovery_candidate_affordance.txt

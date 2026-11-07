@@ -58,6 +58,7 @@ def main():
     parser.add_argument('--split', choices=['smoke','pilot','full'], required=True)
     parser.add_argument('--mode', choices=['off','disabled','rule','qwen','scan'], required=True)
     parser.add_argument('--active', action='store_true')
+    parser.add_argument('--candidate', action='store_true')
     args = parser.parse_args()
     batch, out = args.batch.resolve(), args.run.resolve()
     guard(batch)
@@ -88,6 +89,9 @@ def main():
     exp_config = 'exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,rollout_coverage,'+str(TREE/'src/config/inference_recovery.yaml')
     if args.active:
         exp_config += ','+str(TREE/'src/config/inference_active_view.yaml')
+    if args.candidate:
+        assert args.active
+        exp_config += ','+str(TREE/'src/config/inference_candidate.yaml')
     run_sim.run_exp(exp_config=exp_config,
         run_type='eval', opts=opts, model_dir=str(out/'native'), overwrite=False, note='', debug=False)
     rows = read_rows(out/'episodes')
@@ -138,6 +142,8 @@ def main():
             rejected=sum(r['rejected'] for r in records), survey_steps=sum(r['survey_steps'] for r in records),
             recovery_steps=sum(r['recovery_steps'] for r in records), completed_surveys=sum(r['completed_surveys'] for r in records),
             selections={label:sum(r['selections'][label] for r in records) for label in 'ABC'}, **summary)
+        for name in ['vlm_selections', 'fallback_selections', 'vlm_rule_disagreements']:
+            result['harness'][name] = sum(r.get(name, 0) for r in records)
         if args.mode == 'disabled':
             assert not result['harness']['worker_started'] and result['harness']['overrides'] == 0
     elif recovery.exists():
