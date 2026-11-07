@@ -365,11 +365,15 @@ class RecoveryHarness:
             elif self.candidate_affordance:
                 from src.recovery_affordance import select_candidate,select_semantic_candidate
                 selector=select_semantic_candidate if self.candidate_protocol=='semantic' else select_candidate
+                selection_kwargs={}
+                if self.candidate_protocol in ('semantic','semantic_balanced'):
+                    selection_kwargs['relative_only']=bool(getattr(self.cfg,'candidate_relative_only',False))
+                if self.candidate_protocol=='semantic_balanced':
+                    selection_kwargs['preserve_clear_default']=bool(getattr(self.cfg,'candidate_preserve_clear_default',False))
                 for j, (_, row) in enumerate(pending):
                     choices.append(selector(*response['results'][2*j:2*j+2],
                         'A' if row['attempt'] % 2 else 'B', self.candidate_gap,
-                        **({'relative_only':bool(getattr(self.cfg,'candidate_relative_only',False))}
-                            if self.candidate_protocol in ('semantic','semantic_balanced') else {})))
+                        **selection_kwargs))
             else:
                 for item in response['results']:
                     label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)

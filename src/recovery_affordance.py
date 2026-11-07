@@ -23,7 +23,7 @@ def semantic_probabilities(values, reversed_labels=False):
         support=float(opened+0.5*uncertain))
 
 
-def select_candidate(left, right, fallback, gap=0.05, relative_only=False):
+def select_candidate(left, right, fallback, gap=0.05, relative_only=False, preserve_clear_default=False):
     if fallback not in ('A', 'B') or not np.isfinite(gap) or not 0 < gap <= 1:
         raise ValueError('Invalid candidate fallback or support gap')
     evidence = {}
@@ -41,10 +41,15 @@ def select_candidate(left, right, fallback, gap=0.05, relative_only=False):
     if relative_only and min(item.get(name,1.) for item in [left,right]
             for name in ['candidate_mass','reversed_candidate_mass']) < .1:
         chosen = None
+    default_side='left' if fallback=='A' else 'right'
+    default_clear=all(p['opened']>max(p['blocked'],p['uncertain']) for p in evidence[default_side])
+    if preserve_clear_default and default_clear and chosen!=default_side:
+        chosen=None
     label = ('A' if chosen == 'left' else 'B') if chosen else fallback
     return label, dict(source='vlm' if chosen else 'rule_fallback', default_rule_choice=fallback,
         differs_from_rule=bool(chosen and label != fallback), support_deltas=deltas,
-        evidence=evidence, support_gap=gap, candidates=dict(left=left, right=right),relative_only=bool(relative_only))
+        evidence=evidence, support_gap=gap, candidates=dict(left=left, right=right),relative_only=bool(relative_only),
+        preserve_clear_default=bool(preserve_clear_default),default_predicted_clear_both=default_clear)
 
 
 def candidate_image(view, goal, destination):

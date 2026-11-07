@@ -16,6 +16,20 @@ from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_clear_default_is_kept_instead_of_picking_a_more_open_room(self):
+        left=dict(probabilities=[.2,.1,.7],reversed_probabilities=[.7,.1,.2])
+        right=dict(probabilities=[.05,.1,.85],reversed_probabilities=[.9,.05,.05])
+        self.assertEqual(select_candidate(left,right,'A',relative_only=True)[0],'B')
+        choice,detail=select_candidate(left,right,'A',relative_only=True,preserve_clear_default=True)
+        self.assertEqual(choice,'A');self.assertEqual(detail['source'],'rule_fallback')
+        self.assertTrue(detail['default_predicted_clear_both'])
+
+    def test_unclear_default_can_be_replaced_when_both_relative_judgments_agree(self):
+        left=dict(probabilities=[.6,.2,.2],reversed_probabilities=[.5,.1,.4])
+        right=dict(probabilities=[.5,.1,.4],reversed_probabilities=[.7,.1,.2])
+        choice,detail=select_candidate(left,right,'A',relative_only=True,preserve_clear_default=True)
+        self.assertEqual(choice,'B');self.assertFalse(detail['default_predicted_clear_both'])
+
     def test_natural_question_consensus_aligns_negative_yes_with_blocked(self):
         left=dict(probabilities=[.6,.2,.2],reversed_probabilities=[.1,.2,.7])
         right=dict(probabilities=[.5,.1,.4],reversed_probabilities=[.4,.2,.4])

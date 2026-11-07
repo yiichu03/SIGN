@@ -28,6 +28,9 @@ def main():
     cfg.update(yaml.safe_load((TREE/json.loads((b/'tasks.json').read_text())['recovery_profile']).read_text())['inference_recovery'])
     directional=cfg.get('candidate_protocol')=='directional'
     selector=select_candidate if cfg.get('candidate_protocol')=='semantic_balanced' else select_semantic_candidate
+    selection_kwargs=dict(relative_only=bool(cfg.get('candidate_relative_only',False)))
+    if cfg.get('candidate_protocol')=='semantic_balanced':
+        selection_kwargs['preserve_clear_default']=bool(cfg.get('candidate_preserve_clear_default',False))
     rows=[]
     for e in events:
         if directional:
@@ -44,16 +47,14 @@ def main():
         for i,e in enumerate(events):
             fallback='A' if e['attempt']%2 else 'B'
             label,detail=(select_directional(result[i],fallback,cfg['candidate_support_gap']) if directional else
-                selector(*result[2*i:2*i+2],fallback,cfg['candidate_support_gap'],
-                    relative_only=bool(cfg.get('candidate_relative_only',False))))
+                selector(*result[2*i:2*i+2],fallback,cfg['candidate_support_gap'],**selection_kwargs))
             decisions.append(dict(id=e['id'],choice=label,evidence=detail))
         gray=np.full((128,128,3),127,dtype=np.uint8);controls=[]
         for side in ['left','right']:
             row=raw_candidate_image(gray,out/'inputs'/('blank_'+side+'.png'));row['id']='blank:'+side;controls.append(row)
         values=client.score(1,controls)['results']
         label,detail=(select_directional(values[0],'A',cfg['candidate_support_gap']) if directional else
-            selector(*values,'A',cfg['candidate_support_gap'],
-                relative_only=bool(cfg.get('candidate_relative_only',False))))
+            selector(*values,'A',cfg['candidate_support_gap'],**selection_kwargs))
         (out/'scores.json').write_text(json.dumps(dict(inputs=rows,results=result,decisions=decisions,
             blank=values,blank_decision=dict(choice=label,evidence=detail)),indent=2)+'\n')
         assert label=='A' and detail['source']=='rule_fallback'
