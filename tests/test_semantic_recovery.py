@@ -16,6 +16,20 @@ from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_long_recovery_exact_forward_commands_and_override_budget(self):
+        with tempfile.TemporaryDirectory() as folder:
+            CandidateClient.uncertain=False;CandidateClient.bad_id=False
+            cfg=settings(mode='qwen',active_survey=True,survey_turn_steps=6,turn_steps=6,forward_steps=8,
+                candidate_affordance=True,candidate_protocol='semantic',candidate_raw_view=True)
+            h=RecoveryHarness(cfg,1,Path(folder)/'run',CandidateClient)
+            frame=np.full((64,64,3),90,dtype=np.uint8);actions=[]
+            for _ in range(43):actions.append(h.step([frame],[frame],np.array([[.8,0.]],dtype=np.float32),
+                np.ones(1,dtype=bool),[('scene','1')])[0])
+            np.testing.assert_array_equal(actions[28:34],[[-1.,-1.]]*6)
+            np.testing.assert_allclose(actions[34:42],[[.6,0.]]*8)
+            self.assertEqual(h.max_override_steps,76)
+            np.testing.assert_allclose(actions[42],[.8,0.])
+
     def test_large_heading_change_uses_only_comparable_adjacent_views(self):
         yy,xx=np.mgrid[:32,:32]
         def image(degrees):
