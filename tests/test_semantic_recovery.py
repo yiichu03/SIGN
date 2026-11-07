@@ -16,6 +16,15 @@ from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_relative_bounded_recovery_can_prefer_less_blocked_candidate(self):
+        left=dict(probabilities=[.56,.38,.06]);right=dict(probabilities=[.49,.17,.34])
+        self.assertEqual(select_semantic_candidate(left,right,'A')[1]['source'],'rule_fallback')
+        choice,detail=select_semantic_candidate(left,right,'A',relative_only=True)
+        self.assertEqual(choice,'B');self.assertTrue(detail['differs_from_rule'])
+        for fallback in ['A','B']:
+            choice,detail=select_semantic_candidate(left,left,fallback,relative_only=True)
+            self.assertEqual(choice,fallback);self.assertEqual(detail['source'],'rule_fallback')
+
     def test_joint_directional_selection_preserves_unknown_and_format_gate(self):
         item=dict(probabilities=[.2,.6,.2],candidate_mass=.9)
         label,detail=select_directional(item,'A')

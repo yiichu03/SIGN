@@ -362,7 +362,9 @@ class RecoveryHarness:
                 selector=select_semantic_candidate if self.candidate_protocol=='semantic' else select_candidate
                 for j, (_, row) in enumerate(pending):
                     choices.append(selector(*response['results'][2*j:2*j+2],
-                        'A' if row['attempt'] % 2 else 'B', self.candidate_gap))
+                        'A' if row['attempt'] % 2 else 'B', self.candidate_gap,
+                        **({'relative_only':bool(getattr(self.cfg,'candidate_relative_only',False))}
+                            if self.candidate_protocol=='semantic' else {})))
             else:
                 for item in response['results']:
                     label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)

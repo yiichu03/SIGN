@@ -68,18 +68,19 @@ def raw_candidate_image(view, destination):
     return dict(image=str(destination),image_sha256=hashlib.sha256(Path(destination).read_bytes()).hexdigest())
 
 
-def select_semantic_candidate(left,right,fallback,gap=0.05):
+def select_semantic_candidate(left,right,fallback,gap=0.05,relative_only=False):
     if fallback not in ('A','B') or not np.isfinite(gap) or not 0 < gap <= 1:
         raise ValueError('Invalid semantic fallback or support gap')
     evidence={side:semantic_probabilities(item['probabilities']) for side,item in [('left',left),('right',right)]}
     delta=evidence['left']['support']-evidence['right']['support']
     side='left' if delta>=gap else 'right' if delta<=-gap else None
-    if side and evidence[side]['opened']<=evidence[side]['blocked']:side=None
+    if side and not relative_only and evidence[side]['opened']<=evidence[side]['blocked']:side=None
     if min(left.get('candidate_mass',1.),right.get('candidate_mass',1.))<0.1:side=None
     label=('A' if side=='left' else 'B') if side else fallback
     return label,dict(source='vlm' if side else 'rule_fallback',default_rule_choice=fallback,
         differs_from_rule=bool(side and label!=fallback),support_deltas=[delta],evidence=evidence,
-        support_gap=gap,candidates=dict(left=left,right=right),protocol='semantic_No_Unknown_Yes')
+        support_gap=gap,candidates=dict(left=left,right=right),protocol='semantic_No_Unknown_Yes',
+        relative_only=bool(relative_only))
 
 
 def select_directional(item, fallback, gap=0.05):

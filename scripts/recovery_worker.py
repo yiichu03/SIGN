@@ -85,7 +85,8 @@ def main():
                     results[-1].update(reversed_probabilities=[reverse[k] for k in ('p_low','p_medium','p_high')],
                         reversed_logits=reverse['logits'], reversed_candidate_mass=reverse['candidate_mass'],
                         reversed_prompt_version=hashlib.sha256(inverse.encode()).hexdigest())
-            (output/f'request_{request:06d}_batch_{start//8}.json').write_text(json.dumps(dict(inputs=batch, audit=audit), indent=2)+'\n')
+            (output/f'request_{request:06d}_batch_{start//8}.json').write_text(json.dumps(dict(
+                inputs=batch,audit=audit,results=results[-len(batch):]),indent=2)+'\n')
         emit(dict(ok=True, request_id=request, results=results, seconds=time.perf_counter()-started,
                   peak_gpu_gib=judge.torch.cuda.max_memory_allocated()/1024**3))
         last = request

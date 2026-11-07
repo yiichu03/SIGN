@@ -37,17 +37,20 @@ def main():
         for i,e in enumerate(events):
             fallback='A' if e['attempt']%2 else 'B'
             label,detail=(select_directional(result[i],fallback,cfg['candidate_support_gap']) if directional else
-                select_semantic_candidate(*result[2*i:2*i+2],fallback,cfg['candidate_support_gap']))
+                select_semantic_candidate(*result[2*i:2*i+2],fallback,cfg['candidate_support_gap'],
+                    relative_only=bool(cfg.get('candidate_relative_only',False))))
             decisions.append(dict(id=e['id'],choice=label,evidence=detail))
         gray=np.full((128,128,3),127,dtype=np.uint8);controls=[]
         for side in ['left','right']:
             row=raw_candidate_image(gray,out/'inputs'/('blank_'+side+'.png'));row['id']='blank:'+side;controls.append(row)
         values=client.score(1,controls)['results']
         label,detail=(select_directional(values[0],'A',cfg['candidate_support_gap']) if directional else
-            select_semantic_candidate(*values,'A',cfg['candidate_support_gap']))
+            select_semantic_candidate(*values,'A',cfg['candidate_support_gap'],
+                relative_only=bool(cfg.get('candidate_relative_only',False))))
+        (out/'scores.json').write_text(json.dumps(dict(inputs=rows,results=result,decisions=decisions,
+            blank=values,blank_decision=dict(choice=label,evidence=detail)),indent=2)+'\n')
         assert label=='A' and detail['source']=='rule_fallback'
         audit=json.loads((out/'worker/verification.json').read_text());assert audit['passed']
-        (out/'scores.json').write_text(json.dumps(dict(inputs=rows,results=result,decisions=decisions,blank=values),indent=2)+'\n')
         summary=dict(technical_passed=True,token_ids=audit['token_ids'],events=len(events),
             supported=sum(x['evidence']['source']=='vlm' for x in decisions),
             differs_from_rule=sum(x['evidence']['differs_from_rule'] for x in decisions),
