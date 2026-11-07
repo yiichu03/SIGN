@@ -77,6 +77,12 @@ class State:
     action_digest: object = field(default_factory=hashlib.sha256)
     finished: bool = False
     earlier_choices: list = field(default_factory=list)
+    survey: object = None
+    action_kind: str = 'recovery'
+    survey_overrides: int = 0
+    recovery_overrides: int = 0
+    completed_surveys: int = 0
+    selections: dict = field(default_factory=lambda: dict(A=0, B=0, C=0))
 
     def observe(self, rgb):
         if self.last_action is not None:
@@ -106,6 +112,44 @@ def collage(state, goal, destination, evidence):
     canvas.save(destination)
 
 
+def survey_actions(k):
+    if type(k) is not int or k < 1:
+        raise ValueError('Invalid survey turn count')
+    return [np.array([-1., sign], dtype=np.float32) for sign in ([1.]*k+[-1.]*(2*k)+[1.]*k)]
+
+
+def active_collage(survey, goal, destination):
+    from PIL import Image, ImageDraw, ImageFont
+    canvas = Image.new('RGB', (512, 680), 'white')
+    draw = ImageDraw.Draw(canvas)
+    try:
+        font_path = Path(__file__).resolve().parents[2]/'envs/sign-baseline/lib/python3.8/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf'
+        font = ImageFont.truetype(str(font_path), 18)
+        small = ImageFont.truetype(str(font_path), 14)
+    except OSError:
+        font = small = ImageFont.load_default()
+    draw.text((6, 3), 'LOCAL VIEWS AFTER COMMANDED TURNS', fill='black', font=font)
+    draw.text((6, 29), 'RGB only; no measured pose or collision input.', fill='black', font=small)
+    draw.text((6, 49), 'Compare visible space; target photograph is context.', fill='black', font=small)
+    views = survey['views']
+    images = [goal, views['left'], views['forward'], views['right']]
+    angle = survey['commanded_yaw']
+    names = ['GOAL', f'LEFT VIEW (+{angle} cmd)', 'FORWARD (0 cmd)', f'RIGHT VIEW (-{angle} cmd)']
+    times = ['context', str(survey['view_steps']['left']), str(survey['view_steps']['forward']), str(survey['view_steps']['right'])]
+    for i, (frame, label, step) in enumerate(zip(images, names, times)):
+        x, y = (i%2)*256, 72+(i//2)*304
+        draw.text((x+4,y), label, fill='black', font=font)
+        draw.text((x+4,y+22), 'RGB step '+step, fill='black', font=small)
+        canvas.paste(Image.fromarray(np.asarray(frame, dtype=np.uint8)).resize((256,256)),(x,y+44))
+    canvas.save(destination)
+    files = {}
+    for name, frame in zip(['goal','left','forward','right'], images):
+        path = Path(destination).with_name(Path(destination).stem+'.'+name+'.png')
+        Image.fromarray(np.asarray(frame, dtype=np.uint8)).save(path)
+        files[name] = dict(path=str(path), sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+    return files
+
+
 class RecoveryHarness:
     def __init__(self, cfg, num_envs, output, client_factory=None,
                  action_names=('linear_velocity', 'angular_velocity')):
@@ -113,7 +157,13 @@ class RecoveryHarness:
         if len(action_names) != 2 or set(action_names) != {'linear_velocity', 'angular_velocity'}:
             raise ValueError('Unexpected flattened action names')
         self.action_indices = [action_names.index(n) for n in ('linear_velocity', 'angular_velocity')]
-        if cfg.mode not in ('rule', 'qwen') or cfg.window < 2 or cfg.max_interventions < 0 or cfg.cooldown < 0:
+        self.active_survey = bool(getattr(cfg, 'active_survey', False))
+        self.survey_k = getattr(cfg, 'survey_turn_steps', 3)
+        if self.active_survey and (type(self.survey_k) is not int or self.survey_k < 1):
+            raise ValueError('Invalid survey duration')
+        if cfg.mode == 'scan' and not self.active_survey:
+            raise ValueError('Scan-only mode requires active views')
+        if cfg.mode not in ('rule', 'qwen', 'scan') or cfg.window < 2 or cfg.max_interventions < 0 or cfg.cooldown < 0:
             raise ValueError('Invalid recovery settings')
         values = [cfg.min_forward_fraction, cfg.median_change_threshold, cfg.endpoint_change_threshold, cfg.min_probability, cfg.min_margin]
         if not np.isfinite(values).all() or any(not 0 <= v <= 1 for v in values):
@@ -133,6 +183,7 @@ class RecoveryHarness:
         self.render_seconds = 0.
         self.total_seconds = 0.
         self.episode_serial = 0
+        self.max_override_steps = cfg.max_interventions * (cfg.turn_steps+cfg.forward_steps+(4*self.survey_k if self.active_survey else 0))
 
     def _append(self, name, row):
         with (self.output/name).open('a') as f:
@@ -168,21 +219,69 @@ class RecoveryHarness:
                 state.active_event = None
             if is_stop(action):
                 state.actions.clear()
+                if state.survey is not None:
+                    self._append('surveys.jsonl', dict(id=state.survey['row']['id'], episode=list(key),
+                        step=state.step, phase='cancelled_by_policy_stop'))
+                state.survey = None
+            elif state.survey is not None:
+                survey = state.survey
+                elapsed = state.step-survey['start_step']
+                if elapsed == self.survey_k:
+                    survey['views']['left'] = np.asarray(frame, dtype=np.uint8).copy()
+                    survey['view_steps']['left'] = state.step
+                if elapsed == 3*self.survey_k:
+                    survey['views']['right'] = np.asarray(frame, dtype=np.uint8).copy()
+                    survey['view_steps']['right'] = state.step
+                if elapsed == 4*self.survey_k:
+                    assert not state.actions and set(survey['views']) == {'left', 'right'}
+                    survey['views']['forward'] = np.asarray(frame, dtype=np.uint8).copy()
+                    survey['view_steps']['forward'] = state.step
+                    row = survey['row']
+                    image = self.output/'inputs'/(row['id']+'.png')
+                    render_started = time.perf_counter()
+                    view_files = active_collage(survey, goal[i], image)
+                    self.render_seconds += time.perf_counter()-render_started
+                    row.update(image=str(image), image_sha256=hashlib.sha256(image.read_bytes()).hexdigest(),
+                        active_survey=True, decision_step=state.step, view_steps=survey['view_steps'],
+                        survey_command_steps=4*self.survey_k, view_files=view_files,
+                        commanded_view_yaw=survey['commanded_yaw'])
+                    pending.append((i, row))
+                    state.completed_surveys += 1
+                    state.survey = None
+                else:
+                    if not state.actions:
+                        raise RuntimeError('Survey action/frame boundary mismatch')
+                    result[i] = state.actions.popleft()
+                    state.overrides += 1
+                    state.survey_overrides += 1
             elif state.actions:
                 result[i] = state.actions.popleft()
                 state.overrides += 1
+                state.recovery_overrides += 1
             elif state.attempts < self.cfg.max_interventions and state.step >= state.cooldown_until:
                 evidence = detect(state.frames, state.commands, self.cfg)
                 if evidence is not None:
                     event_id = f'event_{self.events:07d}'
                     self.events += 1
-                    row = dict(id=event_id, env_index=i, episode=list(key), step=state.step, evidence=evidence)
-                    image = self.output/'inputs'/(event_id+'.png')
-                    render_started = time.perf_counter()
-                    collage(state, goal[i], image, evidence)
-                    self.render_seconds += time.perf_counter()-render_started
-                    row.update(image=str(image), image_sha256=hashlib.sha256(image.read_bytes()).hexdigest())
-                    pending.append((i, row))
+                    row = dict(id=event_id, env_index=i, episode=list(key), step=state.step,
+                        evidence=evidence, attempt=state.attempts+1)
+                    if self.active_survey:
+                        state.attempts += 1
+                        state.survey = dict(row=row, start_step=state.step, views={}, view_steps={}, commanded_yaw=15*self.survey_k)
+                        state.actions = deque(survey_actions(self.survey_k))
+                        state.cooldown_until = state.step+4*self.survey_k+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
+                        result[i] = state.actions.popleft()
+                        state.overrides += 1
+                        state.survey_overrides += 1
+                        self._append('surveys.jsonl', dict(id=event_id, episode=list(key), step=state.step,
+                            phase='started', planned_command_steps=4*self.survey_k))
+                    else:
+                        image = self.output/'inputs'/(event_id+'.png')
+                        render_started = time.perf_counter()
+                        collage(state, goal[i], image, evidence)
+                        self.render_seconds += time.perf_counter()-render_started
+                        row.update(image=str(image), image_sha256=hashlib.sha256(image.read_bytes()).hexdigest())
+                        pending.append((i, row))
         choices = []
         if pending and self.cfg.mode == 'qwen':
             if self.client is None:
@@ -199,10 +298,13 @@ class RecoveryHarness:
                 label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)
                 choices.append((label, item))
         else:
-            choices = [('A' if self.states[i].attempts % 2 == 0 else 'B', {}) for i, _ in pending]
+            choices = [('C' if self.cfg.mode == 'scan' else 'A' if row['attempt'] % 2 == 1 else 'B', {}) for i, row in pending]
         for (i, row), (label, detail) in zip(pending, choices):
             state = self.states[i]
-            state.attempts += 1
+            if not row.get('active_survey', False):
+                state.attempts += 1
+            assert state.attempts == row['attempt']
+            state.selections[label] += 1
             state.earlier_choices.append(label)
             state.cooldown_until = state.step+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
             if label != 'C':
@@ -212,6 +314,7 @@ class RecoveryHarness:
                     end_step=state.step+self.cfg.turn_steps+self.cfg.forward_steps)
                 result[i] = state.actions.popleft()
                 state.overrides += 1
+                state.recovery_overrides += 1
             else:
                 state.rejected += 1
             row.update(mode=self.cfg.mode, choice=label, model=detail, attempt=state.attempts)
@@ -233,7 +336,14 @@ class RecoveryHarness:
         if state is None or state.key != tuple(key) or state.finished:
             raise RuntimeError('Terminal episode ID mismatch')
         row = dict(episode=list(key), steps=state.step, attempts=state.attempts,
-                   overrides=state.overrides, rejected=state.rejected, actions_sha256=state.action_digest.hexdigest())
+                   overrides=state.overrides, rejected=state.rejected, actions_sha256=state.action_digest.hexdigest(),
+                   survey_steps=state.survey_overrides, recovery_steps=state.recovery_overrides,
+                   completed_surveys=state.completed_surveys, selections=state.selections)
+        assert state.overrides == state.survey_overrides+state.recovery_overrides
+        assert state.overrides <= self.max_override_steps
+        if state.survey is not None:
+            self._append('surveys.jsonl', dict(id=state.survey['row']['id'], episode=list(key),
+                step=state.step, phase='ended_with_real_episode'))
         self._append('episodes.jsonl', row)
         state.finished = True
         return row
@@ -247,4 +357,5 @@ class RecoveryHarness:
             self.client.close()
         (self.output/'summary.json').write_text(json.dumps(dict(events=self.events, worker_started=self.client is not None,
             worker_seconds=self.worker_seconds, render_seconds=self.render_seconds,
-            total_controller_seconds=self.total_seconds, mode=self.cfg.mode), indent=2)+'\n')
+            total_controller_seconds=self.total_seconds, mode=self.cfg.mode, active_survey=self.active_survey,
+            max_override_steps=self.max_override_steps), indent=2)+'\n')

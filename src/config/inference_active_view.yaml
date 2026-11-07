@@ -1,0 +1,6 @@
+inference_recovery:
+  active_survey: True
+  survey_turn_steps: 3
+  turn_steps: 3
+  forward_steps: 2
+  prompt: scripts/prompts/recovery_active_balanced.txt

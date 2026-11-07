@@ -40,6 +40,11 @@ def guard(batch):
         assert hashlib.sha256((TREE/name).read_bytes()).hexdigest() == digest, name
     for name, digest in source['assets'].items():
         assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+    for name, item in source.get('protected_trees', {}).items():
+        tree = ROOT/name
+        assert subprocess.check_output(['git','-C',str(tree),'rev-parse','HEAD'],text=True).strip() == item['commit']
+        for relative,digest in item['files'].items():
+            assert hashlib.sha256((tree/relative).read_bytes()).hexdigest() == digest, (name,relative)
     path = ROOT/'logs/gibson_coverage32_selected_eval_20261107/guard.py'
     spec = importlib.util.spec_from_file_location('original_runtime_guard', path)
     module = importlib.util.module_from_spec(spec);spec.loader.exec_module(module);module.guard()
@@ -50,7 +55,8 @@ def main():
     parser.add_argument('--batch', type=Path, required=True)
     parser.add_argument('--run', type=Path, required=True)
     parser.add_argument('--split', choices=['smoke','pilot','full'], required=True)
-    parser.add_argument('--mode', choices=['off','disabled','rule','qwen'], required=True)
+    parser.add_argument('--mode', choices=['off','disabled','rule','qwen','scan'], required=True)
+    parser.add_argument('--active', action='store_true')
     args = parser.parse_args()
     batch, out = args.batch.resolve(), args.run.resolve()
     guard(batch)
@@ -67,6 +73,8 @@ def main():
     assert model['extra_state']['step'] == 74240000
     del model
     os.environ['COVERAGE_EVAL_EPISODES'] = str(out/'episodes')
+    if args.active and args.split == 'smoke' and args.mode == 'scan':
+        os.environ['RECOVERY_VIEW_AUDIT'] = str(out/'audit_traces')
     if args.split == 'smoke' and args.mode == 'off':
         os.environ['RECOVERY_PROBE_IMAGES'] = str(out/'probe_images')
     opts = ['habitat_baselines.eval_ckpt_path_dir', checkpoint['path'],
@@ -76,7 +84,10 @@ def main():
     if args.mode == 'disabled':
         opts += ['inference_recovery.max_interventions','0']
     started = time.perf_counter()
-    run_sim.run_exp(exp_config='exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,rollout_coverage,'+str(TREE/'src/config/inference_recovery.yaml'),
+    exp_config = 'exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,rollout_coverage,'+str(TREE/'src/config/inference_recovery.yaml')
+    if args.active:
+        exp_config += ','+str(TREE/'src/config/inference_active_view.yaml')
+    run_sim.run_exp(exp_config=exp_config,
         run_type='eval', opts=opts, model_dir=str(out/'native'), overwrite=False, note='', debug=False)
     rows = read_rows(out/'episodes')
     assert set(rows) == {tuple(k) for k in selected['episode_keys']}
@@ -114,12 +125,16 @@ def main():
         records = [json.loads(line) for line in (recovery/'episodes.jsonl').read_text().splitlines()]
         assert len(records) == len(rows)
         assert len({tuple(r['episode']) for r in records}) == len(records)
+        summary = json.loads((recovery/'summary.json').read_text())
         for r in records:
             assert r['steps'] == rows[tuple(r['episode'])]['steps']
             assert r['actions_sha256'] == rows[tuple(r['episode'])]['actual_actions_sha256'], 'Executed action feedback mismatch'
-            assert r['attempts'] <= 2 and r['overrides'] <= 20
+            assert r['attempts'] <= 2 and r['overrides'] <= summary['max_override_steps']
+            assert r['overrides'] == r['survey_steps']+r['recovery_steps']
         result['harness'] = dict(attempts=sum(r['attempts'] for r in records), overrides=sum(r['overrides'] for r in records),
-            rejected=sum(r['rejected'] for r in records), **json.loads((recovery/'summary.json').read_text()))
+            rejected=sum(r['rejected'] for r in records), survey_steps=sum(r['survey_steps'] for r in records),
+            recovery_steps=sum(r['recovery_steps'] for r in records), completed_surveys=sum(r['completed_surveys'] for r in records),
+            selections={label:sum(r['selections'][label] for r in records) for label in 'ABC'}, **summary)
         if args.mode == 'disabled':
             assert not result['harness']['worker_started'] and result['harness']['overrides'] == 0
     elif recovery.exists():

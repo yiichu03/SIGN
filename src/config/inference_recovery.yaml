@@ -17,3 +17,5 @@ inference_recovery:
   verify_first_batch: True
   request_timeout: 300.0
   startup_timeout: 600.0
+  active_survey: False
+  survey_turn_steps: 3
