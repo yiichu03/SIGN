@@ -20,6 +20,7 @@ sys.path.insert(0, str(TREE/'scripts'))
 # simulator, dataset, actions and the telemetry environment in every process.
 import run_sim
 import recovery_env
+from recovery_checkpoint import validate_checkpoint
 
 
 def read_rows(folder):
@@ -70,7 +71,7 @@ def main():
     from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
     assert torch.cuda.is_available()
     model = torch.load(checkpoint['path'], map_location='cpu')
-    assert model['extra_state']['step'] == 74240000
+    reference_dir = validate_checkpoint(tasks, model['extra_state']['step'])
     del model
     os.environ['COVERAGE_EVAL_EPISODES'] = str(out/'episodes')
     if args.active and args.split == 'smoke' and args.mode == 'scan':
@@ -94,7 +95,7 @@ def main():
     for row in rows.values():
         assert 1 <= row['steps'] <= 500
         assert all(math.isfinite(row[k]) for k in ['success','spl','collisions','new_area_m2','navigation_reward'])
-    ref = read_rows(ROOT/'logs/gibson_baseline_final_eval_20261103/baseline/episodes')
+    ref = read_rows(reference_dir/'episodes')
     pose_matches = 0
     for key, row in rows.items():
         reference = ref[key]
@@ -107,7 +108,9 @@ def main():
                 assert abs(row[name]-reference[name]) < 1e-5, (key,name,row[name],reference[name])
     ea = EventAccumulator(str(out/'native/tb'), size_guidance={'scalars':0});ea.Reload()
     native = {tag:ea.Scalars(tag)[-1].value for tag in ea.Tags()['scalars']}
-    result = dict(mode=args.mode, split=args.split, training_step=74240000, episodes=len(rows), scenes=14,
+    result = dict(mode=args.mode, split=args.split, training_step=checkpoint['step'],
+        checkpoint_sha256=checkpoint['sha256'], checkpoint_path=checkpoint['path'], reference=tasks['reference'],
+        episodes=len(rows), scenes=14,
         success_rate=statistics.mean(r['success'] for r in rows.values()), spl=statistics.mean(r['spl'] for r in rows.values()),
         view_match=statistics.mean(r['view_match'] for r in rows.values()),
         mean_collisions=statistics.mean(r['collisions'] for r in rows.values()),

@@ -12,10 +12,11 @@ sys.path.insert(0,str(TREE/'scripts'))
 from evaluate_recovery import guard,read_rows
 
 
-def run(batch,name,split,mode,native=False):
+def run(batch,name,split,mode,native=False,active=True):
     out=batch/name
     command=[sys.executable,str(TREE/'scripts/evaluate_recovery.py'),'--batch',str(batch),'--run',str(out),
-        '--split',split,'--mode',mode,'--active']
+        '--split',split,'--mode',mode]
+    if active:command.append('--active')
     env=dict(os.environ)
     if native:env['RECOVERY_NATIVE_REFERENCE']='1'
     else:env.pop('RECOVERY_NATIVE_REFERENCE',None)
