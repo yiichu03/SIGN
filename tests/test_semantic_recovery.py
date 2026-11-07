@@ -16,6 +16,22 @@ from test_inference_recovery import settings
 
 
 class SemanticRecoveryTests(unittest.TestCase):
+    def test_large_heading_change_uses_only_comparable_adjacent_views(self):
+        yy,xx=np.mgrid[:32,:32]
+        def image(degrees):
+            azimuth=np.arctan((xx-15.5)/16)-np.deg2rad(degrees)
+            return np.repeat((.5+.15*np.sin(azimuth))[:,:,None],3,axis=2).astype(np.float32)
+        frames=[image(i*10) for i in range(17)]
+        commands=[np.array([.8,2/3],dtype=np.float32)]*16
+        cfg=settings(window=16,yaw_compensated=True)
+        self.assertIsNone(detect(frames,commands,cfg))
+        cfg.yaw_partial_windows=True
+        evidence=detect(frames,commands,cfg)
+        self.assertIsNotNone(evidence);self.assertFalse(evidence['endpoint_used'])
+        self.assertLess(evidence['endpoint_overlap'],.7)
+        self.assertIsNone(detect([f+i*.02 for i,f in enumerate(frames)],commands,cfg))
+        self.assertIsNone(detect(frames,[np.array([-1,2/3])]*16,cfg))
+
     def test_relative_bounded_recovery_can_prefer_less_blocked_candidate(self):
         left=dict(probabilities=[.56,.38,.06]);right=dict(probabilities=[.49,.17,.34])
         self.assertEqual(select_semantic_candidate(left,right,'A')[1]['source'],'rule_fallback')
