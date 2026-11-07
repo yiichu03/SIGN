@@ -71,4 +71,3 @@ class QwenClient:
                 except subprocess.TimeoutExpired: p.kill(); p.wait()
         if hasattr(self, 'stderr') and not self.stderr.closed:
             self.stderr.close()
-

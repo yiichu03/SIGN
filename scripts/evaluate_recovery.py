@@ -15,6 +15,10 @@ TREE = Path(__file__).resolve().parents[1]
 ROOT = TREE.parent
 sys.path.insert(0, str(TREE))
 sys.path.insert(0, str(TREE/'scripts'))
+# Forkserver children re-import this module without calling main(). Register
+# simulator, dataset, actions and the telemetry environment in every process.
+import run_sim
+import recovery_env
 
 
 def read_rows(folder):
@@ -55,8 +59,6 @@ def main():
     tasks = json.loads((batch/'tasks.json').read_text())
     selected, checkpoint = tasks['splits'][args.split], tasks['checkpoint']
     os.chdir(TREE)
-    import run_sim
-    import recovery_env
     import torch
     from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
     assert torch.cuda.is_available()
