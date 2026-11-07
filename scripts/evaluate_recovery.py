@@ -55,7 +55,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch', type=Path, required=True)
     parser.add_argument('--run', type=Path, required=True)
-    parser.add_argument('--split', choices=['smoke','pilot','full'], required=True)
+    parser.add_argument('--split', choices=['smoke','pilot','full','develop','confirm','reserve','safety','general'], required=True)
     parser.add_argument('--mode', choices=['off','disabled','rule','qwen','scan'], required=True)
     parser.add_argument('--active', action='store_true')
     parser.add_argument('--candidate', action='store_true')
@@ -77,6 +77,8 @@ def main():
     os.environ['COVERAGE_EVAL_EPISODES'] = str(out/'episodes')
     if args.active and args.split == 'smoke' and args.mode == 'scan':
         os.environ['RECOVERY_VIEW_AUDIT'] = str(out/'audit_traces')
+    if tasks.get('save_audit_traces',False):
+        os.environ['RECOVERY_VIEW_AUDIT'] = str(out/'audit_traces')
     if args.split == 'smoke' and args.mode == 'off':
         os.environ['RECOVERY_PROBE_IMAGES'] = str(out/'probe_images')
     opts = ['habitat_baselines.eval_ckpt_path_dir', checkpoint['path'],
@@ -92,6 +94,8 @@ def main():
     if args.candidate:
         assert args.active
         exp_config += ','+str(TREE/'src/config/inference_candidate.yaml')
+    if tasks.get('recovery_profile'):
+        exp_config += ','+str(TREE/tasks['recovery_profile'])
     run_sim.run_exp(exp_config=exp_config,
         run_type='eval', opts=opts, model_dir=str(out/'native'), overwrite=False, note='', debug=False)
     rows = read_rows(out/'episodes')
@@ -114,7 +118,7 @@ def main():
     native = {tag:ea.Scalars(tag)[-1].value for tag in ea.Tags()['scalars']}
     result = dict(mode=args.mode, split=args.split, training_step=checkpoint['step'],
         checkpoint_sha256=checkpoint['sha256'], checkpoint_path=checkpoint['path'], reference=tasks['reference'],
-        episodes=len(rows), scenes=14,
+        episodes=len(rows), scenes=len({key[0] for key in rows}),
         success_rate=statistics.mean(r['success'] for r in rows.values()), spl=statistics.mean(r['spl'] for r in rows.values()),
         view_match=statistics.mean(r['view_match'] for r in rows.values()),
         mean_collisions=statistics.mean(r['collisions'] for r in rows.values()),

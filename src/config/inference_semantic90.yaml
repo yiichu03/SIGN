@@ -1,0 +1,10 @@
+inference_recovery:
+  active_survey: True
+  survey_turn_steps: 6
+  turn_steps: 6
+  forward_steps: 4
+  candidate_affordance: True
+  candidate_protocol: semantic
+  candidate_raw_view: True
+  candidate_support_gap: 0.05
+  prompt: scripts/prompts/recovery_semantic_forward.txt

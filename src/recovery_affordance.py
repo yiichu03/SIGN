@@ -59,3 +59,33 @@ def candidate_image(view, goal, destination):
     draw.text((336, 253), 'Local RGB only', fill='black', font=font)
     canvas.save(destination)
     return dict(image=str(destination), image_sha256=hashlib.sha256(Path(destination).read_bytes()).hexdigest())
+
+
+def raw_candidate_image(view, destination):
+    """Preserve the complete native field of view, with no side labels or inset."""
+    from PIL import Image
+    Image.fromarray(np.asarray(view,dtype=np.uint8)).resize((512,512)).save(destination)
+    return dict(image=str(destination),image_sha256=hashlib.sha256(Path(destination).read_bytes()).hexdigest())
+
+
+def select_semantic_candidate(left,right,fallback,gap=0.05):
+    if fallback not in ('A','B') or not np.isfinite(gap) or not 0 < gap <= 1:
+        raise ValueError('Invalid semantic fallback or support gap')
+    evidence={side:semantic_probabilities(item['probabilities']) for side,item in [('left',left),('right',right)]}
+    delta=evidence['left']['support']-evidence['right']['support']
+    side='left' if delta>=gap else 'right' if delta<=-gap else None
+    if side and evidence[side]['opened']<=evidence[side]['blocked']:side=None
+    if min(left.get('candidate_mass',1.),right.get('candidate_mass',1.))<0.1:side=None
+    label=('A' if side=='left' else 'B') if side else fallback
+    return label,dict(source='vlm' if side else 'rule_fallback',default_rule_choice=fallback,
+        differs_from_rule=bool(side and label!=fallback),support_deltas=[delta],evidence=evidence,
+        support_gap=gap,candidates=dict(left=left,right=right),protocol='semantic_No_Unknown_Yes')
+
+
+def decision_prefix_audit(base_commands,base_poses,commands,poses,decision_steps):
+    limit=min(len(base_commands),len(commands))
+    differences=np.flatnonzero(np.any(np.abs(base_commands[:limit]-commands[:limit])>1e-6,axis=1))
+    if not len(differences):return None,False
+    first=int(differences[0])
+    supported=first in decision_steps and np.allclose(base_poses[:first+1],poses[:first+1],rtol=0,atol=1e-5)
+    return first,bool(supported)

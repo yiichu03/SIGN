@@ -23,11 +23,12 @@ def main():
     for name in ('model-dir', 'prompt', 'output'):
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--verify', type=int, default=1)
-    parser.add_argument('--task', choices=['actions', 'candidate'], default='actions')
+    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic'], default='actions')
     args = parser.parse_args()
     output = Path(args.output)
     prompt = Path(args.prompt).read_text()
     inverse = reversed_prompt(prompt) if args.task == 'candidate' else None
+    labels=('No','Unknown','Yes') if args.task=='semantic' else ('A','B','C')
     if Path(args.model_dir).name != 'Qwen3.5-2B':
         raise ValueError('This experiment uses only Qwen3.5-2B')
     with contextlib.redirect_stdout(sys.stderr):
@@ -54,7 +55,7 @@ def main():
         started = time.perf_counter()
         if args.verify and not verified:
             with contextlib.redirect_stdout(sys.stderr):
-                audit = judge.verify_readout([r['image'] for r in rows[:3]], None)
+                audit = judge.verify_readout([r['image'] for r in rows[:3]], None, labels=labels)
             (output/'verification.json').write_text(json.dumps(audit, indent=2)+'\n')
             if not audit['passed']:
                 raise RuntimeError('Recovery ABC batch/solo/generation verification failed')
@@ -63,7 +64,7 @@ def main():
         for start in range(0, len(rows), 8):
             batch = rows[start:start+8]
             with contextlib.redirect_stdout(sys.stderr):
-                values, audit = judge.class_probabilities([r['image'] for r in batch], None)
+                values, audit = judge.class_probabilities([r['image'] for r in batch], None, labels=labels)
             inverted = [None]*len(batch)
             if inverse is not None:
                 judge.prompt = inverse
@@ -74,7 +75,7 @@ def main():
             for row, value, reverse in zip(batch, values, inverted):
                 if not value['valid']:
                     raise RuntimeError('Invalid recovery ABC logits')
-                # A/B/C are actions here. The inherited ordinal q is not used.
+                # Positional probabilities are interpreted by the selected protocol.
                 results.append(dict(id=row['id'], probabilities=[value[k] for k in ('p_low', 'p_medium', 'p_high')],
                     logits=value['logits'], candidate_mass=value['candidate_mass'], prompt_version=version))
                 if reverse is not None:

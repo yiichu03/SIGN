@@ -162,6 +162,9 @@ class RecoveryHarness:
         self.action_indices = [action_names.index(n) for n in ('linear_velocity', 'angular_velocity')]
         self.active_survey = bool(getattr(cfg, 'active_survey', False))
         self.candidate_affordance = bool(getattr(cfg, 'candidate_affordance', False))
+        self.candidate_protocol = getattr(cfg, 'candidate_protocol', 'abc')
+        if self.candidate_protocol not in ('abc','semantic'):
+            raise ValueError('Unknown candidate protocol')
         self.candidate_gap = float(getattr(cfg, 'candidate_support_gap', 0.05))
         if self.candidate_affordance and (not self.active_survey or not np.isfinite(self.candidate_gap) or not 0 < self.candidate_gap <= 1):
             raise ValueError('Candidate affordances require active views and a positive support gap')
@@ -248,11 +251,13 @@ class RecoveryHarness:
                     render_started = time.perf_counter()
                     view_files = active_collage(survey, goal[i], image)
                     if self.candidate_affordance:
-                        from src.recovery_affordance import candidate_image
+                        from src.recovery_affordance import candidate_image, raw_candidate_image
                         row['candidates'] = []
                         for side in ['left', 'right']:
-                            candidate = candidate_image(survey['views'][side], goal[i],
-                                image.with_name(image.stem+'.candidate_'+side+'.png'))
+                            destination=image.with_name(image.stem+'.candidate_'+side+'.png')
+                            candidate = (raw_candidate_image(survey['views'][side],destination)
+                                if getattr(self.cfg,'candidate_raw_view',False) else
+                                candidate_image(survey['views'][side],goal[i],destination))
                             candidate.update(id=row['id']+':'+side, side=side)
                             row['candidates'].append(candidate)
                     self.render_seconds += time.perf_counter()-render_started
@@ -313,9 +318,10 @@ class RecoveryHarness:
                 raise RuntimeError('Recovery worker image ID/order mismatch')
             self.worker_seconds += response['seconds']
             if self.candidate_affordance:
-                from src.recovery_affordance import select_candidate
+                from src.recovery_affordance import select_candidate,select_semantic_candidate
+                selector=select_semantic_candidate if self.candidate_protocol=='semantic' else select_candidate
                 for j, (_, row) in enumerate(pending):
-                    choices.append(select_candidate(*response['results'][2*j:2*j+2],
+                    choices.append(selector(*response['results'][2*j:2*j+2],
                         'A' if row['attempt'] % 2 else 'B', self.candidate_gap))
             else:
                 for item in response['results']:

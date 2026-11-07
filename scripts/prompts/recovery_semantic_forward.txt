@@ -1,0 +1,1 @@
+Look at this robot camera image. Is there enough visible, connected floor directly ahead for a short forward movement, without an obvious wall or large object blocking that direction? Judge the near forward route, not a doorway somewhere to the side. Use Unknown if the view is ambiguous. Answer with exactly one word: Yes, No, or Unknown.

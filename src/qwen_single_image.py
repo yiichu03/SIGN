@@ -136,27 +136,30 @@ class SingleImageJudge:
             raise RuntimeError('Expected one image in each independent batch row')
         return inputs, messages
 
-    def class_probabilities(self, images, metadata):
-        """Read real next-answer A/B/C logits; no text generation or JSON scores."""
+    def class_probabilities(self, images, metadata, labels=('A','B','C')):
+        """Read three real next-answer logits; ABC remains the default interface."""
+        labels = tuple(labels)
+        if len(labels) != 3 or len(set(labels)) != 3 or any(not isinstance(x,str) or not x for x in labels):
+            raise ValueError('Expected three distinct nonempty candidate labels')
         torch = self.torch
         start = time.perf_counter()
         inputs, messages = self._prepare(images, metadata)
         masks = inputs['attention_mask'].cpu().tolist()
         positions = response_positions(masks)
         tokenizer = self.processor.tokenizer
-        token_ids = [tokenizer.encode(c, add_special_tokens=False) for c in 'ABC']
+        token_ids = [tokenizer.encode(c, add_special_tokens=False) for c in labels]
         if any(len(ids) != 1 for ids in token_ids) or len({ids[0] for ids in token_ids}) != 3:
-            raise ValueError('A/B/C must be distinct single tokens')
+            raise ValueError('Candidate labels must be distinct single tokens')
         token_ids = [ids[0] for ids in token_ids]
-        if tokenizer.batch_decode([[i] for i in token_ids]) != list('ABC'):
-            raise ValueError('Candidate token IDs do not decode to A/B/C')
+        if tokenizer.batch_decode([[i] for i in token_ids]) != list(labels):
+            raise ValueError('Candidate token IDs do not decode to the requested labels')
         rendered = [self.processor.apply_chat_template(m, tokenize=False, add_generation_prompt=True,
                     enable_thinking=False) for m in messages]
         # Verify the exact assistant boundary: appending each label adds one token,
         # without changing/merging the trailing prompt tokens.
         for text in rendered:
             prefix = tokenizer.encode(text, add_special_tokens=False)
-            for label, token_id in zip('ABC', token_ids):
+            for label, token_id in zip(labels, token_ids):
                 if tokenizer.encode(text+label, add_special_tokens=False) != prefix+[token_id]:
                     raise ValueError('Candidate is not one token at the actual answer boundary')
         with torch.inference_mode():
@@ -173,7 +176,7 @@ class SingleImageJudge:
             result['logits'] = [v if math.isfinite(v) else str(v) for v in values]
             result['candidate_mass'] = candidate_mass if math.isfinite(candidate_mass) else None
             results.append(result)
-        audit = {'token_ids':dict(zip('ABC',token_ids)), 'decoded_labels':tokenizer.batch_decode([[i] for i in token_ids]),
+        audit = {'token_ids':dict(zip(labels,token_ids)), 'decoded_labels':tokenizer.batch_decode([[i] for i in token_ids]),
             'response_positions':positions, 'padding_side':tokenizer.padding_side,
             'input_token_ids':inputs['input_ids'].cpu().tolist(), 'attention_mask':masks,
             'image_grid_thw':inputs['image_grid_thw'].cpu().tolist(), 'rendered_chats':rendered,
@@ -182,13 +185,13 @@ class SingleImageJudge:
             'temperature':1.0, 'seconds':time.perf_counter()-start}
         return results, audit
 
-    def verify_readout(self, images, metadata, tolerance=1e-4):
+    def verify_readout(self, images, metadata, tolerance=1e-4, labels=('A','B','C')):
         """Small GPU check: batch vs singles, then raw first-generation logits."""
-        results, audit = self.class_probabilities(images, metadata)
+        results, audit = self.class_probabilities(images, metadata, labels=labels)
         max_delta = 0.0
         single_results = []
         for i in range(len(images)):
-            single, single_audit = self.class_probabilities(images[i:i+1], None if metadata is None else metadata[i:i+1])
+            single, single_audit = self.class_probabilities(images[i:i+1], None if metadata is None else metadata[i:i+1], labels=labels)
             active = [t for t,m in zip(audit['input_token_ids'][i],audit['attention_mask'][i]) if m]
             if active != single_audit['input_token_ids'][0] or audit['image_grid_thw'][i] != single_audit['image_grid_thw'][0]:
                 raise RuntimeError('Single/batch input mismatch')
@@ -196,7 +199,7 @@ class SingleImageJudge:
                 raise RuntimeError('Invalid probability in GPU verification')
             single_results.append(single[0])
             max_delta = max(max_delta, max(abs(results[i][k]-single[0][k]) for k in ('p_low','p_medium','p_high','q')))
-        permuted, _ = self.class_probabilities(images[::-1],None if metadata is None else metadata[::-1])
+        permuted, _ = self.class_probabilities(images[::-1],None if metadata is None else metadata[::-1], labels=labels)
         permutation_delta = max(abs(a[k]-b[k]) for a,b in zip(results,permuted[::-1])
             for k in ('p_low','p_medium','p_high','q'))
         inputs, _ = self._prepare(images, metadata)

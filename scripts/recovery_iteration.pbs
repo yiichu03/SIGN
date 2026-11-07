@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -N qwen-iteration
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=02:00:00
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+: "${ITERATION_TREE:?immutable source tree}" "${ITERATION_BATCH:?immutable output}" "${ITERATION_STAGE:?stage}"
+cd "$ITERATION_TREE"
+python scripts/run_recovery_iteration.py --batch "$ITERATION_BATCH" --stage "$ITERATION_STAGE"
