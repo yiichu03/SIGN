@@ -1,0 +1,169 @@
+{
+  "selected_at": "2026-11-07T13:18:22+08:00",
+  "cases": {
+    "qwen01": {
+      "step": 20480000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.22.pth",
+      "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/qwen01_20480000.pth",
+      "sha256": "538465a99a055367be899c441c46eeed7eb61be99a236d891881056323329c37",
+      "bytes": 10696837,
+      "selection_reason": "High-state neighborhood around the earlier20M recovery; pre/post250k SR90.17/88.10. The highest trailing1M point20.992M has already fallen to nativeSR81.51 and is not selected.",
+      "training_last1m": {
+        "lower_exclusive": 19480000,
+        "upper_inclusive": 20480000,
+        "points": 489,
+        "sr": 87.23571557696368,
+        "spl": 48.92360768557082
+      },
+      "training_last3m": {
+        "lower_exclusive": 17480000,
+        "upper_inclusive": 20480000,
+        "points": 1465,
+        "sr": 85.86504768186055,
+        "spl": 48.53787944381961
+      },
+      "training_native_at_checkpoint": {
+        "step": 20480000,
+        "sr": 89.79430198669434,
+        "spl": 50.456178188323975
+      },
+      "training_pre250k": {
+        "lower_exclusive": 20230000,
+        "upper_inclusive": 20480000,
+        "points": 123,
+        "sr": 90.16604268453955,
+        "spl": 50.93258716226593
+      },
+      "training_post250k": {
+        "lower_exclusive": 20480000,
+        "upper_inclusive": 20730000,
+        "points": 122,
+        "sr": 88.10013664550469,
+        "spl": 52.082823729905925
+      },
+      "selection_uses_training_only": true
+    },
+    "A": {
+      "step": 36352000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.54.pth",
+      "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/A_36352000.pth",
+      "sha256": "ac4981a91b2f29b2b64bb7e4729b88bc5b2507bcdba15d6326af5dd130a9641f",
+      "bytes": 10696837,
+      "selection_reason": "Latest saved high state during the recent recovery, highest trailing1M SPL among this run candidates; SR88.26/SPL52.66 and pre250k91.24/55.44. Full post250k unavailable, explicitly not claimed.",
+      "training_last1m": {
+        "lower_exclusive": 35352000,
+        "upper_inclusive": 36352000,
+        "points": 489,
+        "sr": 88.25882929234416,
+        "spl": 52.656195433105665
+      },
+      "training_last3m": {
+        "lower_exclusive": 33352000,
+        "upper_inclusive": 36352000,
+        "points": 1465,
+        "sr": 86.4567854908953,
+        "spl": 50.749099539408505
+      },
+      "training_native_at_checkpoint": {
+        "step": 36352000,
+        "sr": 89.75988626480103,
+        "spl": 53.40679883956909
+      },
+      "training_pre250k": {
+        "lower_exclusive": 36102000,
+        "upper_inclusive": 36352000,
+        "points": 123,
+        "sr": 91.23627078242419,
+        "spl": 55.43845557584996
+      },
+      "training_post250k": null,
+      "selection_uses_training_only": true
+    },
+    "B": {
+      "step": 29696000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.40.pth",
+      "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/B_29696000.pth",
+      "sha256": "fd441190fc2a917a130b08bc96e3addf6b20ef34067dd25316431b76b495f814",
+      "bytes": 10696837,
+      "selection_reason": "Balanced SR/SPL plateau with strongest trailing3M SR among saved candidates, pre/post250k SR89.33/88.02 and SPL52.30/52.59; avoids the later declining state.",
+      "training_last1m": {
+        "lower_exclusive": 28696000,
+        "upper_inclusive": 29696000,
+        "points": 489,
+        "sr": 88.42622446380022,
+        "spl": 51.47397551677953
+      },
+      "training_last3m": {
+        "lower_exclusive": 26696000,
+        "upper_inclusive": 29696000,
+        "points": 1465,
+        "sr": 88.32468939722602,
+        "spl": 49.939601317607504
+      },
+      "training_native_at_checkpoint": {
+        "step": 29696000,
+        "sr": 87.43961453437805,
+        "spl": 51.48068070411682
+      },
+      "training_pre250k": {
+        "lower_exclusive": 29446000,
+        "upper_inclusive": 29696000,
+        "points": 123,
+        "sr": 89.32584611380973,
+        "spl": 52.295096812209465
+      },
+      "training_post250k": {
+        "lower_exclusive": 29696000,
+        "upper_inclusive": 29946000,
+        "points": 122,
+        "sr": 88.02340568089095,
+        "spl": 52.591800591984736
+      },
+      "selection_uses_training_only": true
+    }
+  },
+  "selection_inputs": [
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/qwen01_selected_scalars.csv",
+      "sha256": "546e2c5c19a3139f0890760d344f539edb9fd264dfe278f8d10e3c9e75338275"
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/A_selected_scalars.csv",
+      "sha256": "9e91e8bacc78db99eadb4c422c577b83f2979c11d5a0435b02ccbed1e99c2034"
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/B_selected_scalars.csv",
+      "sha256": "0fd8de8b432d50a7eda6033116bd3e9768ee5acd65e2d6998a63159bc6b84c90"
+    }
+  ],
+  "rules": "Use saved continuation checkpoints with full3M within-phase history. Compare trailing1M/3M SR and SPL plus actual checkpoint and nearby250k windows; no validation scores used for selection. Step mapping is provisional until selected weights are CPU-loaded.",
+  "different_training_budgets": true,
+  "validation_results_not_used_for_selection": true,
+  "model_and_config_compatibility": {
+    "SIGN-continue-qwen128": {
+      "src/policy.py": true,
+      "src/models.py": true,
+      "src/resnet.py": true,
+      "src/custom_action.py": true,
+      "src/config/policy.yaml": true,
+      "src/config/sensors.yaml": true,
+      "src/config/eval.yaml": true,
+      "exp_config/ppo_imagenav_gibson.yaml": true,
+      "exp_config/base_task_config/imagenav_gibson.yaml": true
+    },
+    "SIGN-continue-ablation": {
+      "src/policy.py": true,
+      "src/models.py": true,
+      "src/resnet.py": true,
+      "src/custom_action.py": true,
+      "src/config/policy.yaml": true,
+      "src/config/sensors.yaml": true,
+      "src/config/eval.yaml": true,
+      "exp_config/ppo_imagenav_gibson.yaml": true,
+      "exp_config/base_task_config/imagenav_gibson.yaml": true
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "step": 125952000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/ckpts/ckpt.151.pth",
+  "path": "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/checkpoints/coverage32_125952000.pth",
+  "sha256": "df6fa637117a45b5822c3dd6394735175705f647df82d975fd291e3a692ccbfa",
+  "bytes": 10697509,
+  "checkpoint_index": 151,
+  "selection_reason": "Fixed same-step reference against the already evaluated coverage256125.952M, not selected as a training peak. Last3M SR89.02/SPL51.82. Different continuation reset histories remain a confound.",
+  "training_last1m": {
+    "lower_exclusive": 124952000,
+    "upper_inclusive": 125952000,
+    "points": 489,
+    "sr": 88.13685532240292,
+    "spl": 51.89082172141241
+  },
+  "training_last3m": {
+    "lower_exclusive": 122952000,
+    "upper_inclusive": 125952000,
+    "points": 1465,
+    "sr": 89.02403352610487,
+    "spl": 51.821547059068905
+  },
+  "training_native_at_checkpoint": {
+    "step": 125952000,
+    "sr": 85.35469174385071,
+    "spl": 47.37437963485718
+  },
+  "training_pre250k": {
+    "lower_exclusive": 125702000,
+    "upper_inclusive": 125952000,
+    "points": 123,
+    "sr": 86.05391184488931,
+    "spl": 50.297744996179404
+  },
+  "training_post250k": {
+    "lower_exclusive": 125952000,
+    "upper_inclusive": 126202000,
+    "points": 122,
+    "sr": 86.35424551416617,
+    "spl": 48.42518731707432
+  }
+}

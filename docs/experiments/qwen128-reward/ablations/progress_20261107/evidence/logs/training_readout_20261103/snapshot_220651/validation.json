@@ -1,0 +1,9 @@
+{
+  "independent_selected_csv_mean_checks": 16,
+  "fixed_input_hashes_verified": 11,
+  "all_new_scalars_finite": true,
+  "matched_SR_SPL_rows_per_method": 489,
+  "no_jobs_changed": true,
+  "reward_conservation_max_error_tolerance": 0.0001,
+  "reward_conservation_within_tolerance": true
+}

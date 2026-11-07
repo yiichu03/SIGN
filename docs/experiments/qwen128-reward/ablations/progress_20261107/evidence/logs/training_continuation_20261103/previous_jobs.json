@@ -1,0 +1,422 @@
+{
+  "1497416.stdct-mgmt-02": {
+    "Job_Name": "gib-coverage-train",
+    "resources_used": {
+      "cpupercent": 301,
+      "cput": "253:08:19",
+      "gpu_usage": "GN-A40-029(cuda.0.energyConsumed=9744J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=4%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=356171s, cuda.0.usagePerc=20.998%, cuda.0.memUsagePerc=9.195%)",
+      "mem": "9450228kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "81183104kb",
+      "walltime": "98:56:38"
+    },
+    "job_state": "F",
+    "queue": "batch_gpu",
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 604800, \"job.ncpus\": 36.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "168:00:00"
+    },
+    "stime": "Tue Oct 27 06:04:59 2026",
+    "obittime": "Sat Oct 31 09:01:52 2026",
+    "comment": "Job run at Tue Oct 27 at 06:04 on (GN-A40-029[0]:ncpus=36:mem=240gb:ngpus=1) and terminated by root@vanda.nus.edu.sg",
+    "Exit_status": 143,
+    "project": "personal-e1538633"
+  },
+  "1502352.stdct-mgmt-02": {
+    "Job_Name": "gib-settle32-train",
+    "resources_used": {
+      "cpupercent": 290,
+      "cput": "169:39:58",
+      "gpu_usage": "GN-A40-094(cuda.1.energyConsumed=9789J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=15352.547MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=92%, cuda.1.memoryUtilization_avg=6%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=243064s, cuda.1.usagePerc=14.997%, cuda.1.memUsagePerc=9.195%)",
+      "mem": "9429196kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "81118952kb",
+      "walltime": "67:31:46"
+    },
+    "job_state": "F",
+    "queue": "batch_gpu",
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 604800, \"job.ncpus\": 36.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "168:00:00"
+    },
+    "stime": "Wed Oct 28 13:30:46 2026",
+    "obittime": "Sat Oct 31 09:02:55 2026",
+    "comment": "Job run at Wed Oct 28 at 13:30 on (GN-A40-094[1]:ncpus=36:mem=240gb:ngpus=1) and terminated by root@vanda.nus.edu.sg",
+    "Exit_status": 143,
+    "project": "personal-e1538633"
+  },
+  "1507268.stdct-mgmt-02": {
+    "Job_Name": "qwen128-beta01",
+    "resources_used": {
+      "cpupercent": 244,
+      "cput": "67:43:25",
+      "gpu_usage": "GN-A40-098(cuda.0.energyConsumed=14911J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25616.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=14%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=30464.717s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=149384s, cuda.0.usagePerc=26.997%, cuda.0.memUsagePerc=31.475%)",
+      "mem": "11896088kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "105079560kb",
+      "walltime": "41:29:59"
+    },
+    "job_state": "F",
+    "queue": "batch_gpu",
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 604800, \"job.ncpus\": 36.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "168:00:00"
+    },
+    "stime": "Thu Oct 29 15:33:43 2026",
+    "obittime": "Sat Oct 31 09:03:43 2026",
+    "comment": "Job run at Thu Oct 29 at 15:33 on (GN-A40-098[0]:ncpus=36:mem=240gb:ngpus=1) and terminated by root@vanda.nus.edu.sg",
+    "Exit_status": 143,
+    "project": "personal-e1538633"
+  },
+  "1507648.stdct-mgmt-02": {
+    "Job_Name": "abc-A-formal",
+    "resources_used": {
+      "cpupercent": 237,
+      "cput": "64:48:16",
+      "gpu_usage": "GN-A40-019(cuda.0.energyConsumed=14102J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25616.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=16%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=26611.143s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=141898s, cuda.0.usagePerc=25.995%, cuda.0.memUsagePerc=31.475%)",
+      "mem": "11951884kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "105445512kb",
+      "walltime": "39:25:26"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 604800, \"job.ncpus\": 36.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "168:00:00"
+    },
+    "stime": "Thu Oct 29 17:38:19 2026",
+    "obittime": "Sat Oct 31 09:03:46 2026",
+    "comment": "Job run at Thu Oct 29 at 17:38 on (GN-A40-019[0]:ncpus=36:mem=240gb:ngpus=1) and terminated by root@vanda.nus.edu.sg",
+    "Exit_status": 143,
+    "project": "CFP04-SF-109"
+  },
+  "1507651.stdct-mgmt-02": {
+    "Job_Name": "abc-B-formal",
+    "resources_used": {
+      "cpupercent": 244,
+      "cput": "66:55:54",
+      "gpu_usage": "GN-A40-030(cuda.1.energyConsumed=13004J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=25616.547MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=92%, cuda.1.memoryUtilization_avg=20%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=23152.729s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=141900s, cuda.1.usagePerc=30.994%, cuda.1.memUsagePerc=31.475%)",
+      "mem": "11776776kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "105756320kb",
+      "walltime": "39:25:28"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 604800, \"job.ncpus\": 36.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "168:00:00"
+    },
+    "stime": "Thu Oct 29 17:38:19 2026",
+    "obittime": "Sat Oct 31 09:03:49 2026",
+    "comment": "Job run at Thu Oct 29 at 17:38 on (GN-A40-030[1]:ncpus=36:mem=240gb:ngpus=1) and terminated by root@vanda.nus.edu.sg",
+    "Exit_status": 143,
+    "project": "CFP04-SF-109"
+  },
+  "1507650.stdct-mgmt-02": {
+    "Job_Name": "abc-C-formal",
+    "resources_used": {
+      "cpupercent": 244,
+      "cput": "83:55:41",
+      "gpu_usage": "GN-A40-021(cuda.0.energyConsumed=9277J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=94%, cuda.0.memoryUtilization_avg=10%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=141916s, cuda.0.usagePerc=17.998%, cuda.0.memUsagePerc=9.195%)",
+      "mem": "9539336kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "82149584kb",
+      "walltime": "39:25:27"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 604800, \"job.ncpus\": 36.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "168:00:00"
+    },
+    "stime": "Thu Oct 29 17:38:19 2026",
+    "obittime": "Sat Oct 31 09:03:47 2026",
+    "comment": "Job run at Thu Oct 29 at 17:38 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1) and terminated by root@vanda.nus.edu.sg",
+    "Exit_status": 143,
+    "project": "CFP04-SF-109"
+  },
+  "1507270.stdct-mgmt-02": {
+    "Job_Name": "qwen-val-4608000",
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "\"{}\"",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "project": "CFP04-SF-109"
+  },
+  "1507272.stdct-mgmt-02": {
+    "Job_Name": "qwen-val-8192000",
+    "resources_used": {
+      "cpupercent": 225,
+      "cput": "02:18:41",
+      "gpu_usage": "GN-A40-016(cuda.1.energyConsumed=7439J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=3%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=4152s, cuda.1.usagePerc=6.901%, cuda.1.memUsagePerc=1.958%)",
+      "mem": "6411928kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "59993272kb",
+      "walltime": "01:10:11"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 16:41:35 2026",
+    "obittime": "Mon Nov  2 17:51:49 2026",
+    "comment": "Job run at Mon Nov 02 at 16:41 on (GN-A40-016[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  },
+  "1507653.stdct-mgmt-02": {
+    "Job_Name": "abc-A-v4608000",
+    "resources_used": {
+      "cpupercent": 237,
+      "cput": "02:27:39",
+      "gpu_usage": "GN-A40-018(cuda.0.energyConsumed=7329J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=4%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=4174s, cuda.0.usagePerc=8.873%, cuda.0.memUsagePerc=1.958%)",
+      "mem": "6023468kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "59696016kb",
+      "walltime": "01:10:32"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 16:41:35 2026",
+    "obittime": "Mon Nov  2 17:52:09 2026",
+    "comment": "Job run at Mon Nov 02 at 16:41 on (GN-A40-018[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  },
+  "1507655.stdct-mgmt-02": {
+    "Job_Name": "abc-A-v8192000",
+    "resources_used": {
+      "cpupercent": 238,
+      "cput": "01:58:03",
+      "gpu_usage": "GN-A40-019(cuda.0.energyConsumed=8008J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=3%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=3520s, cuda.0.usagePerc=6.885%, cuda.0.memUsagePerc=1.958%)",
+      "mem": "6262548kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "59638100kb",
+      "walltime": "00:59:34"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 16:41:36 2026",
+    "obittime": "Mon Nov  2 17:41:22 2026",
+    "comment": "Job run at Mon Nov 02 at 16:41 on (GN-A40-019[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  },
+  "1507657.stdct-mgmt-02": {
+    "Job_Name": "abc-C-v4608000",
+    "resources_used": {
+      "cpupercent": 234,
+      "cput": "01:06:09",
+      "gpu_usage": "GN-A40-020(cuda.1.energyConsumed=7836J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=5%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=1924s, cuda.1.usagePerc=12.617%, cuda.1.memUsagePerc=1.958%)",
+      "mem": "6073612kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "59767460kb",
+      "walltime": "00:33:04"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 16:41:37 2026",
+    "obittime": "Mon Nov  2 17:14:43 2026",
+    "comment": "Job run at Mon Nov 02 at 16:41 on (GN-A40-020[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  },
+  "1507660.stdct-mgmt-02": {
+    "Job_Name": "abc-C-v8192000",
+    "resources_used": {
+      "cpupercent": 237,
+      "cput": "02:18:34",
+      "gpu_usage": "GN-A40-016(cuda.0.energyConsumed=7694J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=4%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=4089s, cuda.0.usagePerc=7.940%, cuda.0.memUsagePerc=1.958%)",
+      "mem": "6406680kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "60046248kb",
+      "walltime": "01:08:41"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 17:14:47 2026",
+    "obittime": "Mon Nov  2 18:23:31 2026",
+    "comment": "Job run at Mon Nov 02 at 17:14 on (GN-A40-016[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  },
+  "1507662.stdct-mgmt-02": {
+    "Job_Name": "abc-B-v4608000",
+    "resources_used": {
+      "cpupercent": 238,
+      "cput": "02:05:13",
+      "gpu_usage": "GN-A40-019(cuda.0.energyConsumed=8032J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=7251MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=5%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=3502s, cuda.0.usagePerc=8.954%, cuda.0.memUsagePerc=1.958%)",
+      "mem": "6578808kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "60063048kb",
+      "walltime": "00:58:36"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 17:41:28 2026",
+    "obittime": "Mon Nov  2 18:40:11 2026",
+    "comment": "Job run at Mon Nov 02 at 17:41 on (GN-A40-019[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  },
+  "1507664.stdct-mgmt-02": {
+    "Job_Name": "abc-B-v8192000",
+    "resources_used": {
+      "cpupercent": 237,
+      "cput": "02:15:19",
+      "gpu_usage": "GN-A40-016(cuda.1.energyConsumed=7601J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=4%, cuda.1.memoryUtilization_avg=1%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=3855s, cuda.1.usagePerc=11.907%, cuda.1.memUsagePerc=1.958%)",
+      "mem": "6192540kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "59415332kb",
+      "walltime": "01:04:43"
+    },
+    "job_state": "F",
+    "queue": "batch_gpux",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "04:00:00"
+    },
+    "stime": "Mon Nov  2 17:51:52 2026",
+    "obittime": "Mon Nov  2 18:56:39 2026",
+    "comment": "Job run at Mon Nov 02 at 17:51 on (GN-A40-016[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+    "Exit_status": 0,
+    "project": "CFP04-SF-109"
+  }
+}

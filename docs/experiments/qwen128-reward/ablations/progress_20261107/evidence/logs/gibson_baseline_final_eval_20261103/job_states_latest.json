@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-03T22:14:37+08:00",
+  "jobs": {
+    "1515117.stdct-mgmt-02": {
+      "Job_Name": "val-frozen-7424",
+      "job_state": "R",
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "Hold_Types": "n",
+      "comment": "Job run at Tue Nov 03 at 22:11 on (GN-A40-039[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": "beforeok:1515118.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "Exit_status": null,
+      "stime": "Tue Nov  3 22:11:30 2026"
+    },
+    "1515118.stdct-mgmt-02": {
+      "Job_Name": "val7424-summary",
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "Hold_Types": "d",
+      "comment": null,
+      "depend": "afterok:1515117.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "Exit_status": null,
+      "stime": null
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "requested_at": "2026-11-03T23:03:43+08:00",
+  "requested_destination": "auto",
+  "jobs": {
+    "1511147.stdct-mgmt-02": {
+      "before": {
+        "Job_Name": "cont-cov32",
+        "job_state": "Q",
+        "queue": "batch_gpux",
+        "project": "CFP04-SF-109",
+        "Hold_Types": "n",
+        "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+        "Resource_List": {
+          "am_job_cache": "\"{}\"",
+          "mem": "240gb",
+          "ncpus": 36,
+          "ngpus": 1,
+          "nodect": 1,
+          "place": "free",
+          "queue_charge_rate": 1,
+          "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+          "walltime": "99:28:14"
+        },
+        "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/training_continuation_20261103/coverage32/train.pbs.log",
+        "Error_Path": "vanda.nus.edu.sg:/scratch/e1538633/liuyi/cont-cov32.e1511147",
+        "depend": null
+      },
+      "move": {
+        "command": [
+          "qmove",
+          "auto",
+          "1511147.stdct-mgmt-02"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "after": {
+        "Job_Name": "cont-cov32",
+        "job_state": "Q",
+        "queue": "batch_gpu",
+        "project": "CFP04-SF-109",
+        "Hold_Types": "n",
+        "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+        "Resource_List": {
+          "am_job_cache": "\"{}\"",
+          "mem": "240gb",
+          "ncpus": 36,
+          "ngpus": 1,
+          "nodect": 1,
+          "place": "free",
+          "queue_charge_rate": 1,
+          "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+          "walltime": "99:28:14"
+        },
+        "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/training_continuation_20261103/coverage32/train.pbs.log",
+        "Error_Path": "vanda.nus.edu.sg:/scratch/e1538633/liuyi/cont-cov32.e1511147",
+        "depend": null
+      },
+      "latest": {
+        "job_state": "Q",
+        "queue": "batch_gpu",
+        "project": "CFP04-SF-109",
+        "Hold_Types": "n",
+        "comment": "Not Running: Insufficient amount of resource: node_pool ",
+        "Resource_List": {
+          "am_job_cache": "\"{}\"",
+          "mem": "240gb",
+          "ncpus": 36,
+          "ngpus": 1,
+          "nodect": 1,
+          "place": "free",
+          "queue_charge_rate": 1,
+          "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+          "walltime": "99:28:14"
+        },
+        "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/training_continuation_20261103/coverage32/train.pbs.log",
+        "stime": null
+      }
+    },
+    "1511148.stdct-mgmt-02": {
+      "before": {
+        "Job_Name": "cont-B",
+        "job_state": "Q",
+        "queue": "batch_gpux",
+        "project": "CFP04-SF-109",
+        "Hold_Types": "n",
+        "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+        "Resource_List": {
+          "am_job_cache": "\"{}\"",
+          "mem": "240gb",
+          "ncpus": 36,
+          "ngpus": 1,
+          "nodect": 1,
+          "place": "free",
+          "queue_charge_rate": 1,
+          "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+          "walltime": "127:34:32"
+        },
+        "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/training_continuation_20261103/B/train.pbs.log",
+        "Error_Path": "vanda.nus.edu.sg:/scratch/e1538633/liuyi/cont-B.e1511148",
+        "depend": null
+      },
+      "move": {
+        "command": [
+          "qmove",
+          "auto",
+          "1511148.stdct-mgmt-02"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "after": {
+        "Job_Name": "cont-B",
+        "job_state": "Q",
+        "queue": "batch_gpu",
+        "project": "CFP04-SF-109",
+        "Hold_Types": "n",
+        "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+        "Resource_List": {
+          "am_job_cache": "\"{}\"",
+          "mem": "240gb",
+          "ncpus": 36,
+          "ngpus": 1,
+          "nodect": 1,
+          "place": "free",
+          "queue_charge_rate": 1,
+          "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+          "walltime": "127:34:32"
+        },
+        "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/training_continuation_20261103/B/train.pbs.log",
+        "Error_Path": "vanda.nus.edu.sg:/scratch/e1538633/liuyi/cont-B.e1511148",
+        "depend": null
+      },
+      "latest": {
+        "job_state": "Q",
+        "queue": "batch_gpu",
+        "project": "CFP04-SF-109",
+        "Hold_Types": "n",
+        "comment": "Not Running: Insufficient amount of resource: node_pool ",
+        "Resource_List": {
+          "am_job_cache": "\"{}\"",
+          "mem": "240gb",
+          "ncpus": 36,
+          "ngpus": 1,
+          "nodect": 1,
+          "place": "free",
+          "queue_charge_rate": 1,
+          "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+          "walltime": "127:34:32"
+        },
+        "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/training_continuation_20261103/B/train.pbs.log",
+        "stime": null
+      }
+    }
+  },
+  "last_checked_at": "2026-11-03T23:06:02+08:00"
+}

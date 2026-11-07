@@ -1,0 +1,162 @@
+{
+  "105984000": {
+    "phase": "original",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.206.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.9003636240959167,
+        "pre250k_mean": 0.9178916598723187,
+        "post250k_mean": 0.8844066657980935,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.5172500014305115,
+        "pre250k_mean": 0.5262599471138745,
+        "post250k_mean": 0.5010115093872195,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "138240000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.23.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.8530769348144531,
+        "pre250k_mean": 0.8816128058162161,
+        "post250k_mean": 0.8653719537570829,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.4757782518863678,
+        "pre250k_mean": 0.5052208079070579,
+        "post250k_mean": 0.4772688585226653,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "143360000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.33.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.9108108282089233,
+        "pre250k_mean": 0.9149677942438823,
+        "post250k_mean": 0.9037577974014595,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.5551388263702393,
+        "pre250k_mean": 0.5499255104762751,
+        "post250k_mean": 0.5289371907711029,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "143872000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.34.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.8481355905532837,
+        "pre250k_mean": 0.8760416464107793,
+        "post250k_mean": 0.86013961962012,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.4851304292678833,
+        "pre250k_mean": 0.5122530533046257,
+        "post250k_mean": 0.5028281407278092,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "146944000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.40.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.8923851251602173,
+        "pre250k_mean": 0.9215511917098751,
+        "post250k_mean": 0.8820187371285235,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.5492607951164246,
+        "pre250k_mean": 0.5577560827984074,
+        "post250k_mean": 0.5258613531706763,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "147456000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.41.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.915276825428009,
+        "pre250k_mean": 0.9077955455314822,
+        "post250k_mean": 0.8633441079835422,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.5313581228256226,
+        "pre250k_mean": 0.5194130481743231,
+        "post250k_mean": 0.4921972636805206,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "150528000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.47.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.9045454263687134,
+        "pre250k_mean": 0.907721160873165,
+        "post250k_mean": 0.8963531719856574,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.5276342034339905,
+        "pre250k_mean": 0.5332645836884413,
+        "post250k_mean": 0.5220216302598109,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  },
+  "151040000": {
+    "phase": "continuation",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.48.pth",
+    "metrics": {
+      "metrics/success": {
+        "native50_update_value": 0.8892806768417358,
+        "pre250k_mean": 0.8918323177632278,
+        "post250k_mean": 0.9020494149356592,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      },
+      "metrics/spl": {
+        "native50_update_value": 0.5113798975944519,
+        "pre250k_mean": 0.5174877260758625,
+        "post250k_mean": 0.5209496514719041,
+        "pre250k_points": 123,
+        "post250k_points": 122
+      }
+    }
+  }
+}

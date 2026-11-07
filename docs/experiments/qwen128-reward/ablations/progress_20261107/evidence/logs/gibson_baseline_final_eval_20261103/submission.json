@@ -1,0 +1,55 @@
+{
+  "submitted_at": "2026-11-03T21:56:19+08:00",
+  "project": "CFP04-SF-109",
+  "queue": "auto",
+  "reason": "batch_gpux user max_run=4 occupied by existing training; no running training stopped",
+  "checkpoint_step": 74240000,
+  "evaluation_attempt": {
+    "command": [
+      "qsub",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/baseline/evaluate.pbs.log",
+      "-v",
+      "EVAL_CASE=baseline",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/evaluate.pbs"
+    ],
+    "returncode": 0,
+    "stdout": "1515117.stdct-mgmt-02",
+    "stderr": ""
+  },
+  "evaluation": {
+    "job_id": "1515117.stdct-mgmt-02",
+    "command": [
+      "qsub",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/baseline/evaluate.pbs.log",
+      "-v",
+      "EVAL_CASE=baseline",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/evaluate.pbs"
+    ]
+  },
+  "summary_attempt": {
+    "command": [
+      "qsub",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/summarize.pbs.log",
+      "-W",
+      "depend=afterok:1515117.stdct-mgmt-02",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/summarize.pbs"
+    ],
+    "returncode": 0,
+    "stdout": "1515118.stdct-mgmt-02",
+    "stderr": ""
+  },
+  "summary": {
+    "job_id": "1515118.stdct-mgmt-02",
+    "command": [
+      "qsub",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/summarize.pbs.log",
+      "-W",
+      "depend=afterok:1515117.stdct-mgmt-02",
+      "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/summarize.pbs"
+    ]
+  }
+}

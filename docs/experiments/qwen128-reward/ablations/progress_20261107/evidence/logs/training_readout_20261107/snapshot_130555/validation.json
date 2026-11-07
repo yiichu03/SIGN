@@ -1,0 +1,103 @@
+{
+  "validated_at": "2026-11-07T13:10:21+08:00",
+  "checks": {
+    "coverage256": {
+      "exported_1m_3m_recompute_matches": true,
+      "all_recorded_scalars_finite": true,
+      "nav_rewards_masks_unchanged": null,
+      "mixed_reward_error": null,
+      "coverage_reward_error": 1.7881393449270533e-08
+    },
+    "coverage32": {
+      "exported_1m_3m_recompute_matches": true,
+      "all_recorded_scalars_finite": true,
+      "nav_rewards_masks_unchanged": null,
+      "mixed_reward_error": null,
+      "coverage_reward_error": 1.7881393449270533e-08
+    },
+    "qwen01": {
+      "exported_1m_3m_recompute_matches": true,
+      "all_recorded_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true,
+      "mixed_reward_error": 5.361791623498258e-05,
+      "coverage_reward_error": null
+    },
+    "A": {
+      "exported_1m_3m_recompute_matches": true,
+      "all_recorded_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true,
+      "mixed_reward_error": 5.383700168334893e-05,
+      "coverage_reward_error": null
+    },
+    "B": {
+      "exported_1m_3m_recompute_matches": true,
+      "all_recorded_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true,
+      "mixed_reward_error": 6.522598027450255e-05,
+      "coverage_reward_error": null
+    },
+    "C": {
+      "exported_1m_3m_recompute_matches": true,
+      "all_recorded_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true,
+      "mixed_reward_error": 6.538319911952861e-05,
+      "coverage_reward_error": null
+    }
+  },
+  "verified_event_prefixes": 6,
+  "input_sources": 13,
+  "matched_1m_2m_3m_steps_exact": "asserted during readout",
+  "common_budget": 29427712,
+  "C_reference_phase": "Entire common window within actual C continuation; no stitching across reset.",
+  "derived_csv_hashes": [
+    {
+      "file": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/coverage256_selected_scalars.csv",
+      "sha256": "08a7553eaa5bc53229e14ec0d73b96d6aad5a96118e546dcbe4826114a578ea6"
+    },
+    {
+      "previous_csv": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_150755/coverage256/selected_scalars.csv",
+      "sha256": "cd873eb0ab564b1bc48b17f37979bb64bc0185b871090fb4f80caae99227047b"
+    },
+    {
+      "file": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/coverage32_selected_scalars.csv",
+      "sha256": "cde8b260303767e972d10f72fba7b52d93923417b4cf81c5956cccb7f45eaf72"
+    },
+    {
+      "previous_csv": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_150755/coverage32/selected_scalars.csv",
+      "sha256": "0c928d194030be962a7c2478396657e6701a4cd005acd59457c554127cc7e356"
+    },
+    {
+      "file": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/qwen01_selected_scalars.csv",
+      "sha256": "546e2c5c19a3139f0890760d344f539edb9fd264dfe278f8d10e3c9e75338275"
+    },
+    {
+      "previous_csv": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_150755/qwen01/selected_scalars.csv",
+      "sha256": "f966dff25bf2b9a27c2eaa021d0e0e00759d6852cf5fea108d775099b698b54e"
+    },
+    {
+      "file": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/A_selected_scalars.csv",
+      "sha256": "9e91e8bacc78db99eadb4c422c577b83f2979c11d5a0435b02ccbed1e99c2034"
+    },
+    {
+      "previous_csv": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_150755/A/selected_scalars.csv",
+      "sha256": "a4b9a800414a1dda3738d9ccbcad675623b7132415f3466f8fd9be13a2b1facb"
+    },
+    {
+      "file": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/B_selected_scalars.csv",
+      "sha256": "0fd8de8b432d50a7eda6033116bd3e9768ee5acd65e2d6998a63159bc6b84c90"
+    },
+    {
+      "previous_csv": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_150755/B/selected_scalars.csv",
+      "sha256": "1a1a13b39ded2a72897d5602942061d3f55f859b43e1a1f4b7c52ecc3cd15897"
+    },
+    {
+      "file": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/C_selected_scalars.csv",
+      "sha256": "5cb7956a68d9f55755e6519a9ea0f6e2feaa1908c09780d154ee9f6787878481"
+    },
+    {
+      "previous_csv": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_150755/C/selected_scalars.csv",
+      "sha256": "61ea44c38e7821366b950157e6bb1703a75c59e9fdd448c2816ce51b8d4c44bf"
+    }
+  ],
+  "script_sha256": "22e7e5ebbecc45d20b3077ebf50116428df05b17ab3f522a655efdbc1e2c4138"
+}

@@ -1,0 +1,3613 @@
+{
+  "captured_at": "2026-11-03T22:06:51+08:00",
+  "runs": {
+    "coverage256": {
+      "job_id": "1511146",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train",
+      "latest_step": 140716032,
+      "last_event_at": "2026-11-03T22:06:48+08:00",
+      "continuation_first_logged_step": 125954048,
+      "scalar_series": 31,
+      "all_scalars_finite": true,
+      "last1m": {
+        "reward": {
+          "mean": 7.793364154293005,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 14.330062887663734,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5168432319700597,
+          "points": 489
+        },
+        "metrics/success": {
+          "mean": 0.8918657700220743,
+          "points": 489
+        },
+        "learner/value_pred_min": {
+          "mean": 0.5049094446612892,
+          "points": 489
+        },
+        "learner/value_pred_mean": {
+          "mean": 4.027530384941335,
+          "points": 489
+        },
+        "learner/value_pred_max": {
+          "mean": 8.032997921200618,
+          "points": 489
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.7404661881899297,
+          "points": 489
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0013412043360845,
+          "points": 489
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.4882782080909713,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.7056853424430137,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.02864473022054881,
+          "points": 489
+        },
+        "learner/dist_entopy": {
+          "mean": 1.9796534991215586,
+          "points": 489
+        },
+        "learner/aug_loss": {
+          "mean": 2.056325882002864,
+          "points": 489
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.0210223826894,
+          "points": 489
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.035303502673081334,
+          "points": 489
+        },
+        "learner/grad_norm": {
+          "mean": 1.0472520489877961,
+          "points": 489
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.019268636566973415,
+          "points": 489
+        },
+        "learner/qc_loss": {
+          "mean": 0.6351548718528514,
+          "points": 489
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.15363336357541368,
+          "points": 489
+        },
+        "learner/coverage_bonus_per_step": {
+          "mean": 7.501629080830746e-05,
+          "points": 489
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 393.3014114161454,
+          "points": 489
+        }
+      },
+      "previous1m": {
+        "reward": {
+          "mean": 7.589996301736988,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 14.72388924927008,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.517313190170976,
+          "points": 488
+        },
+        "metrics/success": {
+          "mean": 0.8768637152236016,
+          "points": 488
+        },
+        "learner/value_pred_min": {
+          "mean": 0.5342455985955894,
+          "points": 488
+        },
+        "learner/value_pred_mean": {
+          "mean": 4.032481422678369,
+          "points": 488
+        },
+        "learner/value_pred_max": {
+          "mean": 7.892775131053612,
+          "points": 488
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.7346334751145761,
+          "points": 488
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0013655236021417,
+          "points": 488
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.4907464734354958,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6686146110296249,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.02087871721190912,
+          "points": 488
+        },
+        "learner/dist_entopy": {
+          "mean": 2.0425611309340743,
+          "points": 488
+        },
+        "learner/aug_loss": {
+          "mean": 2.120602049299928,
+          "points": 488
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.0857821786012805,
+          "points": 488
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.034819864152671125,
+          "points": 488
+        },
+        "learner/grad_norm": {
+          "mean": 1.0146138746230329,
+          "points": 488
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.01871277856045082,
+          "points": 488
+        },
+        "learner/qc_loss": {
+          "mean": 0.6342667361996213,
+          "points": 488
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.1453695889318087,
+          "points": 488
+        },
+        "learner/coverage_bonus_per_step": {
+          "mean": 7.098124459560972e-05,
+          "points": 488
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 372.14614755599223,
+          "points": 488
+        }
+      },
+      "latest": {
+        "reward": 7.66306209564209,
+        "metrics/collisions.count": 13.521345138549805,
+        "metrics/spl": 0.5126795172691345,
+        "metrics/success": 0.8641656041145325,
+        "learner/value_loss": 0.7535682320594788,
+        "learner/action_loss": -0.06391496956348419
+      },
+      "recent3h": {
+        "median_seconds_per_2048": 10.302854061126709,
+        "steps_per_second": 192.67022494916537
+      },
+      "bonus_conservation_max_error": 1.7881393449270533e-08,
+      "last1m_area_per_all_actions": 0.19204170479303975
+    },
+    "qwen01": {
+      "job_id": "1511145",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train",
+      "latest_step": 12910592,
+      "last_event_at": "2026-11-03T22:06:41+08:00",
+      "continuation_first_logged_step": 8706048,
+      "scalar_series": 55,
+      "all_scalars_finite": true,
+      "last1m": {
+        "reward": {
+          "mean": 7.250719337619399,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 16.7528872051122,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.48559371666918016,
+          "points": 489
+        },
+        "metrics/success": {
+          "mean": 0.8530147692420975,
+          "points": 489
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.0714997568744824,
+          "points": 489
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.025846159634140373,
+          "points": 489
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.004173261276065374,
+          "points": 489
+        },
+        "learner/value_pred_min": {
+          "mean": 0.3802840717571096,
+          "points": 489
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.5869548354899714,
+          "points": 489
+        },
+        "learner/value_pred_max": {
+          "mean": 7.56977571397715,
+          "points": 489
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6042331317572993,
+          "points": 489
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0016335167280248,
+          "points": 489
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.7881275783531017,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6839023642622863,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.04697676272734291,
+          "points": 489
+        },
+        "learner/dist_entopy": {
+          "mean": 1.9415705459980876,
+          "points": 489
+        },
+        "learner/aug_loss": {
+          "mean": 2.00525887490294,
+          "points": 489
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.977226658345244,
+          "points": 489
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.02803221653484128,
+          "points": 489
+        },
+        "learner/grad_norm": {
+          "mean": 1.0621272306013205,
+          "points": 489
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.04461632476993865,
+          "points": 489
+        },
+        "learner/qc_loss": {
+          "mean": 0.6877961863281781,
+          "points": 489
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.45957282459809007,
+          "points": 489
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 0.00022440079326078617,
+          "points": 489
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 189.51527791715594,
+          "points": 489
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 189.9748501455857,
+          "points": 489
+        },
+        "learner/qwen_segments": {
+          "mean": 41.989775051124745,
+          "points": 489
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 39.06339468302659,
+          "points": 489
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.929139212474745,
+          "points": 489
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 318.3215191612946,
+          "points": 489
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1832.441717791411,
+          "points": 489
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 9.214359861697643,
+          "points": 489
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 7.299826524496566,
+          "points": 489
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 9.482786441873188,
+          "points": 489
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 16.796202973597865,
+          "points": 489
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.356547033859908,
+          "points": 489
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.6348935107268195,
+          "points": 489
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.2420553944867813,
+          "points": 489
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7995872763280732,
+          "points": 489
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.4898356611560459,
+          "points": 489
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7440538580676042,
+          "points": 489
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.014245813857223115,
+          "points": 489
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.04169794635233948,
+          "points": 489
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.22855194578050103,
+          "points": 489
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.6986110842422961,
+          "points": 489
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.016893217084902684,
+          "points": 489
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 3.060674157303371,
+          "points": 445
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.4081632653061225,
+          "points": 49
+        }
+      },
+      "previous1m": {
+        "reward": {
+          "mean": 7.285619954593846,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 16.41441777495087,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.4846101425221709,
+          "points": 488
+        },
+        "metrics/success": {
+          "mean": 0.8578884569836445,
+          "points": 488
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.0790485126561806,
+          "points": 488
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.026993765713280587,
+          "points": 488
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.004571176305094535,
+          "points": 488
+        },
+        "learner/value_pred_min": {
+          "mean": 0.5386538524447834,
+          "points": 488
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.651177698471507,
+          "points": 488
+        },
+        "learner/value_pred_max": {
+          "mean": 7.585702211153312,
+          "points": 488
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.612803681890984,
+          "points": 488
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0014883254150875,
+          "points": 488
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.723533970654988,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6558083924235868,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.04363554849797005,
+          "points": 488
+        },
+        "learner/dist_entopy": {
+          "mean": 1.9454381685765063,
+          "points": 488
+        },
+        "learner/aug_loss": {
+          "mean": 2.0053204398174755,
+          "points": 488
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.9785400514231353,
+          "points": 488
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.026780389405817527,
+          "points": 488
+        },
+        "learner/grad_norm": {
+          "mean": 1.0438130126624812,
+          "points": 488
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.043789222592213115,
+          "points": 488
+        },
+        "learner/qc_loss": {
+          "mean": 0.6790534364151173,
+          "points": 488
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.47109952605650074,
+          "points": 488
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 0.00023002906545727575,
+          "points": 488
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 193.8060456572986,
+          "points": 488
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 194.27714519813412,
+          "points": 488
+        },
+        "learner/qwen_segments": {
+          "mean": 42.256147540983605,
+          "points": 488
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 39.959016393442624,
+          "points": 488
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.944457336283121,
+          "points": 488
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 326.7837872427018,
+          "points": 488
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1885.1680327868853,
+          "points": 488
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 9.396973700796972,
+          "points": 488
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 7.429662119658267,
+          "points": 488
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 9.692783386980901,
+          "points": 488
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 17.138996872745576,
+          "points": 488
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.356545205976142,
+          "points": 488
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.6310809042121543,
+          "points": 488
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.23434429253894287,
+          "points": 488
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7985508161001518,
+          "points": 488
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.48483965799334594,
+          "points": 488
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7415376328786866,
+          "points": 488
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.014834773799282362,
+          "points": 488
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.04464782096949391,
+          "points": 488
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.22973831634602096,
+          "points": 488
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.6955058835446835,
+          "points": 488
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.015273212375058258,
+          "points": 488
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.5717703349282295,
+          "points": 418
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.2432432432432432,
+          "points": 37
+        }
+      },
+      "latest": {
+        "reward": 7.640869140625,
+        "metrics/collisions.count": 13.533879280090332,
+        "metrics/spl": 0.5080857276916504,
+        "metrics/success": 0.891288161277771,
+        "learner/value_loss": 0.5409286618232727,
+        "learner/action_loss": -0.040987420827150345
+      },
+      "recent3h": {
+        "median_seconds_per_2048": 35.326862812042236,
+        "steps_per_second": 57.385454416809104
+      },
+      "nav_rewards_and_masks_unchanged": true,
+      "audited_rollouts": 2054,
+      "qwen_worker_present": true,
+      "last1m_ledger": {
+        "valid_fraction": 0.9303073101836069,
+        "new_m2_per_valid_action": 0.17371440335176958,
+        "bonus_per_rollout": 0.4595728240041217,
+        "mean_segment_length": 48.77377879511031,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 1362,
+          "fog_origin_farther_than_5cm_from_navmesh": 69
+        },
+        "timing_means": {
+          "geometry_seconds": 9.214359882228937,
+          "render_seconds": 7.299826515218694,
+          "worker_seconds": 9.482786427864841,
+          "total_seconds": 16.796202997754044
+        }
+      },
+      "mixed_reward_conservation_max_error": 4.150552822634879e-05
+    },
+    "A": {
+      "job_id": "1511143",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train",
+      "latest_step": 13922304,
+      "last_event_at": "2026-11-03T22:07:25+08:00",
+      "continuation_first_logged_step": 8194048,
+      "scalar_series": 67,
+      "all_scalars_finite": true,
+      "last1m": {
+        "reward": {
+          "mean": 6.905313530826374,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 22.6325018088998,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4583610615603519,
+          "points": 489
+        },
+        "metrics/success": {
+          "mean": 0.8418740930001428,
+          "points": 489
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.1149364842715195,
+          "points": 489
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.030904740548420295,
+          "points": 489
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.003411236469198689,
+          "points": 489
+        },
+        "learner/value_pred_min": {
+          "mean": 0.17825596289735873,
+          "points": 489
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.2907003961457795,
+          "points": 489
+        },
+        "learner/value_pred_max": {
+          "mean": 7.230441346977874,
+          "points": 489
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6050246179347634,
+          "points": 489
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.001493808194416,
+          "points": 489
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.7180552043797779,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6922697466331513,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.04671562779128193,
+          "points": 489
+        },
+        "learner/dist_entopy": {
+          "mean": 2.0038959650905586,
+          "points": 489
+        },
+        "learner/aug_loss": {
+          "mean": 2.066662684296294,
+          "points": 489
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.0387090254415035,
+          "points": 489
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.027953651887964618,
+          "points": 489
+        },
+        "learner/grad_norm": {
+          "mean": 1.057190306469463,
+          "points": 489
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.04458836592535787,
+          "points": 489
+        },
+        "learner/qc_loss": {
+          "mean": 0.6608377322097497,
+          "points": 489
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.13511084062799597,
+          "points": 489
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 6.597209015038866e-05,
+          "points": 489
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 172.82464764990934,
+          "points": 489
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 172.95975797064222,
+          "points": 489
+        },
+        "learner/qwen_segments": {
+          "mean": 40.79345603271984,
+          "points": 489
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 38.032719836400815,
+          "points": 489
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.9297701206919118,
+          "points": 489
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 293.4007568047334,
+          "points": 489
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1833.196319018405,
+          "points": 489
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 5.5117346255569615,
+          "points": 489
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 4.791092902848569,
+          "points": 489
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 9.030847785419239,
+          "points": 489
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 13.830844428641665,
+          "points": 489
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.3565533526836,
+          "points": 489
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.6217323793955376,
+          "points": 489
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.2244985335199867,
+          "points": 489
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7937520072016492,
+          "points": 489
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.4693871786806481,
+          "points": 489
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7372830016481364,
+          "points": 489
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.01847449010942733,
+          "points": 489
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.047786612874982544,
+          "points": 489
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.25573809864666075,
+          "points": 489
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.6637877868850295,
+          "points": 489
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.014213017022317172,
+          "points": 489
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.974712643678161,
+          "points": 435
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 2.783231083844581,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 42.33946830265849,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 107.91901836902329,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 127.36196319018404,
+          "points": 489
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 51.14802464678244,
+          "points": 489
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 0.00012719734692403579,
+          "points": 489
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.00313885263971992,
+          "points": 489
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.007172383945092467,
+          "points": 489
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.009639182593673468,
+          "points": 489
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.0036025864642555304,
+          "points": 489
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 25.00204498977505,
+          "points": 489
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.159699304977809,
+          "points": 489
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.302325581395349,
+          "points": 43
+        }
+      },
+      "previous1m": {
+        "reward": {
+          "mean": 7.3129602602270785,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 20.303270758175458,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.48251728860081217,
+          "points": 488
+        },
+        "metrics/success": {
+          "mean": 0.862269615907161,
+          "points": 488
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.088021239540616,
+          "points": 488
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.029255448306193116,
+          "points": 488
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.003486083274765406,
+          "points": 488
+        },
+        "learner/value_pred_min": {
+          "mean": 0.4302294011243054,
+          "points": 488
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.5654751223618866,
+          "points": 488
+        },
+        "learner/value_pred_max": {
+          "mean": 7.478393535144994,
+          "points": 488
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.5868682739798163,
+          "points": 488
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0016282788309894,
+          "points": 488
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.8291086984462426,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6881886762185175,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.05740687141307538,
+          "points": 488
+        },
+        "learner/dist_entopy": {
+          "mean": 2.0104568493170816,
+          "points": 488
+        },
+        "learner/aug_loss": {
+          "mean": 2.0752288064018627,
+          "points": 488
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.0480062824780823,
+          "points": 488
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.027222526061241745,
+          "points": 488
+        },
+        "learner/grad_norm": {
+          "mean": 1.0928941301879336,
+          "points": 488
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.045504210425204916,
+          "points": 488
+        },
+        "learner/qc_loss": {
+          "mean": 0.6468530128114536,
+          "points": 488
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.14108816341909228,
+          "points": 488
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 6.889070479447865e-05,
+          "points": 488
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 185.35861168533074,
+          "points": 488
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 185.4996994987863,
+          "points": 488
+        },
+        "learner/qwen_segments": {
+          "mean": 41.14549180327869,
+          "points": 488
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 39.31967213114754,
+          "points": 488
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.9539613391532272,
+          "points": 488
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 320.0448230368192,
+          "points": 488
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1904.6188524590164,
+          "points": 488
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 5.6641836097983065,
+          "points": 488
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 5.139412366953052,
+          "points": 488
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 9.348789473048976,
+          "points": 488
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 14.498696272490454,
+          "points": 488
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.356417937356918,
+          "points": 488
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.6293574735277989,
+          "points": 488
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.23398346624902036,
+          "points": 488
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7963801150927778,
+          "points": 488
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.4810885114625829,
+          "points": 488
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7405402032566852,
+          "points": 488
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.015570544088106663,
+          "points": 488
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.04470188311514918,
+          "points": 488
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.23962676009071654,
+          "points": 488
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.6857424280071844,
+          "points": 488
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.01435839270669051,
+          "points": 488
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.5419161676646707,
+          "points": 334
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 2.7827868852459017,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 41.747950819672134,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 107.38217217804956,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 127.3422131147541,
+          "points": 488
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 50.58971280738955,
+          "points": 488
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 0.00013316810373930447,
+          "points": 488
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.0031769395415617734,
+          "points": 488
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.007208468722652827,
+          "points": 488
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.009671713786627182,
+          "points": 488
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.003633618983153834,
+          "points": 488
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 25.350409836065573,
+          "points": 488
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.16815309409723908,
+          "points": 488
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.4,
+          "points": 30
+        }
+      },
+      "latest": {
+        "reward": 7.113696098327637,
+        "metrics/collisions.count": 22.05231285095215,
+        "metrics/spl": 0.46902838349342346,
+        "metrics/success": 0.8544352054595947,
+        "learner/value_loss": 0.5305019021034241,
+        "learner/action_loss": -0.10864612460136414
+      },
+      "recent3h": {
+        "median_seconds_per_2048": 26.120680689811707,
+        "steps_per_second": 77.78081757345944
+      },
+      "nav_rewards_and_masks_unchanged": true,
+      "audited_rollouts": 2798,
+      "qwen_worker_present": true,
+      "last1m_ledger": {
+        "valid_fraction": 0.9323240425105274,
+        "new_m2_per_valid_action": 0.16004873760783012,
+        "bonus_per_rollout": 0.13511084072038396,
+        "mean_segment_length": 50.204130739923805,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 1294,
+          "fog_origin_farther_than_5cm_from_navmesh": 56
+        },
+        "timing_means": {
+          "geometry_seconds": 5.511734630676497,
+          "render_seconds": 4.791092902746587,
+          "worker_seconds": 9.030847780153618,
+          "total_seconds": 13.83084444840263
+        }
+      },
+      "mixed_reward_conservation_max_error": 3.4891178106843945e-05
+    },
+    "C": {
+      "job_id": "1511410",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval",
+      "latest_step": 32454656,
+      "last_event_at": "2026-11-03T22:07:55+08:00",
+      "continuation_first_logged_step": 22530048,
+      "scalar_series": 57,
+      "all_scalars_finite": true,
+      "last1m": {
+        "reward": {
+          "mean": 7.310729713283921,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 16.23765309261642,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4963629772936152,
+          "points": 489
+        },
+        "metrics/success": {
+          "mean": 0.8599203642160614,
+          "points": 489
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.0952318170563087,
+          "points": 489
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.034052263606332074,
+          "points": 489
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.0021349562649021843,
+          "points": 489
+        },
+        "learner/value_pred_min": {
+          "mean": 0.2791144952334174,
+          "points": 489
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.701517804268679,
+          "points": 489
+        },
+        "learner/value_pred_max": {
+          "mean": 7.733780641497279,
+          "points": 489
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6224277828246781,
+          "points": 489
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.001579153391481,
+          "points": 489
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.7436963458734056,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6668017320106366,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.041997709326781256,
+          "points": 489
+        },
+        "learner/dist_entopy": {
+          "mean": 1.9179086738812656,
+          "points": 489
+        },
+        "learner/aug_loss": {
+          "mean": 1.9884634315358105,
+          "points": 489
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.9549960168592768,
+          "points": 489
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.033467409275243616,
+          "points": 489
+        },
+        "learner/grad_norm": {
+          "mean": 1.0723627357151366,
+          "points": 489
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.03754673121165644,
+          "points": 489
+        },
+        "learner/qc_loss": {
+          "mean": 0.6613717135232406,
+          "points": 489
+        },
+        "learner/geometry_bonus_sum": {
+          "mean": 0.3791814035372256,
+          "points": 489
+        },
+        "learner/geometry_bonus_per_step": {
+          "mean": 0.00018514716969591095,
+          "points": 489
+        },
+        "learner/geometry_nav_reward_sum": {
+          "mean": 203.10869013312404,
+          "points": 489
+        },
+        "learner/geometry_mixed_reward_sum": {
+          "mean": 203.48787191504107,
+          "points": 489
+        },
+        "learner/geometry_segments": {
+          "mean": 43.41717791411043,
+          "points": 489
+        },
+        "learner/geometry_valid_segments": {
+          "mean": 40.78323108384458,
+          "points": 489
+        },
+        "learner/geometry_valid_fraction": {
+          "mean": 0.9385975949115792,
+          "points": 489
+        },
+        "learner/geometry_new_area_m2": {
+          "mean": 331.57288883263834,
+          "points": 489
+        },
+        "learner/geometry_valid_actions": {
+          "mean": 1862.8752556237218,
+          "points": 489
+        },
+        "learner/geometry_geometry_seconds": {
+          "mean": 6.358195905548907,
+          "points": 489
+        },
+        "learner/geometry_render_seconds": {
+          "mean": 0.0,
+          "points": 489
+        },
+        "learner/geometry_worker_seconds": {
+          "mean": 0.0,
+          "points": 489
+        },
+        "learner/geometry_total_seconds": {
+          "mean": 0.0019020184411254002,
+          "points": 489
+        },
+        "learner/geometry_worker_peak_gpu_gib": {
+          "mean": 0.0,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 2.3844580777096116,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 40.197341513292436,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 99.02801626006519,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 126.66666666666667,
+          "points": 489
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 47.748974548527066,
+          "points": 489
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 1.0829259697230408e-05,
+          "points": 489
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.007586473772389879,
+          "points": 489
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.02011802579811441,
+          "points": 489
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.03205921150865852,
+          "points": 489
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.009285548439055132,
+          "points": 489
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 27.613496932515336,
+          "points": 489
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.17830873268574537,
+          "points": 489
+        },
+        "learner/geometry_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.896788990825688,
+          "points": 436
+        },
+        "learner/geometry_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.3888888888888888,
+          "points": 18
+        }
+      },
+      "previous1m": {
+        "reward": {
+          "mean": 7.314004551191799,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 16.898787150617505,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.5018086048056845,
+          "points": 488
+        },
+        "metrics/success": {
+          "mean": 0.871071608340154,
+          "points": 488
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.094975083333547,
+          "points": 488
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.034238444656500076,
+          "points": 488
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.0021345680401818902,
+          "points": 488
+        },
+        "learner/value_pred_min": {
+          "mean": 0.28653450320154183,
+          "points": 488
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.562772778214001,
+          "points": 488
+        },
+        "learner/value_pred_max": {
+          "mean": 7.594305204563454,
+          "points": 488
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6299662815376383,
+          "points": 488
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0017780089964632,
+          "points": 488
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.7463453954360524,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6628800686754164,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.03867849530475634,
+          "points": 488
+        },
+        "learner/dist_entopy": {
+          "mean": 1.9119972112725994,
+          "points": 488
+        },
+        "learner/aug_loss": {
+          "mean": 1.979869540841853,
+          "points": 488
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.9484061359382066,
+          "points": 488
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.03146340257533994,
+          "points": 488
+        },
+        "learner/grad_norm": {
+          "mean": 1.0708123803383014,
+          "points": 488
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.03777876056608607,
+          "points": 488
+        },
+        "learner/qc_loss": {
+          "mean": 0.671727218466704,
+          "points": 488
+        },
+        "learner/geometry_bonus_sum": {
+          "mean": 0.36372807377674543,
+          "points": 488
+        },
+        "learner/geometry_bonus_per_step": {
+          "mean": 0.00017760159852380148,
+          "points": 488
+        },
+        "learner/geometry_nav_reward_sum": {
+          "mean": 198.20596313476562,
+          "points": 488
+        },
+        "learner/geometry_mixed_reward_sum": {
+          "mean": 198.56969231464825,
+          "points": 488
+        },
+        "learner/geometry_segments": {
+          "mean": 43.131147540983605,
+          "points": 488
+        },
+        "learner/geometry_valid_segments": {
+          "mean": 41.27459016393443,
+          "points": 488
+        },
+        "learner/geometry_valid_fraction": {
+          "mean": 0.9555137569054228,
+          "points": 488
+        },
+        "learner/geometry_new_area_m2": {
+          "mean": 318.05981854923436,
+          "points": 488
+        },
+        "learner/geometry_valid_actions": {
+          "mean": 1906.8831967213114,
+          "points": 488
+        },
+        "learner/geometry_geometry_seconds": {
+          "mean": 6.431825874281711,
+          "points": 488
+        },
+        "learner/geometry_render_seconds": {
+          "mean": 0.0,
+          "points": 488
+        },
+        "learner/geometry_worker_seconds": {
+          "mean": 0.0,
+          "points": 488
+        },
+        "learner/geometry_total_seconds": {
+          "mean": 0.0018988492632414536,
+          "points": 488
+        },
+        "learner/geometry_worker_peak_gpu_gib": {
+          "mean": 0.0,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 2.5881147540983607,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 39.533811475409834,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 101.72110652923584,
+          "points": 488
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 127.20491803278688,
+          "points": 488
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 48.09788045726839,
+          "points": 488
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 1.1446091016258849e-05,
+          "points": 488
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.007263721591415128,
+          "points": 488
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.018969063855112208,
+          "points": 488
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.029214957316757224,
+          "points": 488
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.008801748082957795,
+          "points": 488
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 27.33606557377049,
+          "points": 488
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.16684208729411246,
+          "points": 488
+        },
+        "learner/geometry_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.498542274052478,
+          "points": 343
+        },
+        "learner/geometry_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.4848484848484849,
+          "points": 33
+        }
+      },
+      "latest": {
+        "reward": 7.589893341064453,
+        "metrics/collisions.count": 13.042313575744629,
+        "metrics/spl": 0.5314176678657532,
+        "metrics/success": 0.8744710683822632,
+        "learner/value_loss": 0.637563169002533,
+        "learner/action_loss": -0.01046204287558794
+      },
+      "recent3h": {
+        "median_seconds_per_2048": 13.79267692565918,
+        "steps_per_second": 144.4253528861672
+      },
+      "nav_rewards_and_masks_unchanged": true,
+      "audited_rollouts": 4847,
+      "qwen_worker_present": false,
+      "last1m_ledger": {
+        "valid_fraction": 0.9393339927464557,
+        "new_m2_per_valid_action": 0.17798985066074186,
+        "bonus_per_rollout": 0.37918140360163793,
+        "mean_segment_length": 47.170269888370775,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 1263,
+          "fog_origin_farther_than_5cm_from_navmesh": 25
+        },
+        "timing_means": {
+          "geometry_seconds": 6.3581959050177765,
+          "render_seconds": 0.0,
+          "worker_seconds": 0.0,
+          "total_seconds": 0.0019020184410658831
+        }
+      },
+      "mixed_reward_conservation_max_error": 5.4348876438514715e-05
+    }
+  },
+  "inputs": [
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/tb/events.out.tfevents.1793641444.GN-A40-099.462128.0",
+      "snapshot": "coverage256/events/events.out.tfevents.1793641444.GN-A40-099.462128.0",
+      "captured_bytes": 13783727,
+      "complete_bytes": 13783727,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "7c9234057d718c3f9f44f3c2aac76ba356da42cdad6ff62c601bbbb4ccf5a455"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/tb/events.out.tfevents.1793641473.GN-A40-030.129769.0",
+      "snapshot": "qwen01/events/events.out.tfevents.1793641473.GN-A40-030.129769.0",
+      "captured_bytes": 6912799,
+      "complete_bytes": 6912799,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "18e5b0e74d454d75e0769a89da66ba6fcf783e3449bf8aaa9b9a01d5f04e9893"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/qwen/rollouts.jsonl",
+      "snapshot": "qwen01/rollouts.jsonl",
+      "captured_bytes": 2211072,
+      "complete_bytes": 2211072,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "5f257a49e98648d4fd59befdc143826a181aacefb84db84100e5930bdabdc996"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/tb/events.out.tfevents.1793640942.GN-A40-045.81377.0",
+      "snapshot": "A/events/events.out.tfevents.1793640942.GN-A40-045.81377.0",
+      "captured_bytes": 11948559,
+      "complete_bytes": 11948559,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "aee712e2e06869884e0dbe80042136154c420274b29fcd3fd0a70d939276fb09"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/qwen/rollouts.jsonl",
+      "snapshot": "A/rollouts.jsonl",
+      "captured_bytes": 4545989,
+      "complete_bytes": 4545989,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "c075525d4c32dced29ed965e3b43f118af8aa5ec0df05c5bf399995ccaa4c465"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/tb/events.out.tfevents.1793649102.GN-A40-021.130773.0",
+      "snapshot": "C/events/events.out.tfevents.1793649102.GN-A40-021.130773.0",
+      "captured_bytes": 18085971,
+      "complete_bytes": 18085971,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "6b242fc7c21ebfc8fb0000a4b610a6f88cf69a170d4d6601118fba2b48d5a7cf"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/qwen/rollouts.jsonl",
+      "snapshot": "C/rollouts.jsonl",
+      "captured_bytes": 6322149,
+      "complete_bytes": 6322149,
+      "ignored_partial_tail_bytes": 0,
+      "sha256": "cda6fa7e7eea591ab97f901692c07f06e66cc297bf84eb8dab5398dca5fb3726"
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+      "sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091",
+      "fixed_historical_reference": true
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage256/selected_scalars.csv",
+      "sha256": "a40e4812d1a8c05a20a8a4c88ba17a563fd4a9ed4a619a93b9259cec782b9bb8",
+      "fixed_historical_reference": true
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage32/selected_scalars.csv",
+      "sha256": "c6ba980f43d3ac35177f470587b6a174efd630a9bd57945ba547a92e6eee1f4f",
+      "fixed_historical_reference": true
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/C_geometry128/selected_scalars.csv",
+      "sha256": "6b2d62b984be90e89eca6b426c7260fcc1d4523a636d7b4032a19049ad841591",
+      "fixed_historical_reference": true
+    }
+  ],
+  "semantics": "Training only: means of overlapping native50-update episode-window logging points. Navigation reward excludes exploration bonus. Continuations reset optimizer/episodes; do not claim seamless trajectories or a controlled causal comparison against original histories.",
+  "matched_latest_active_qwen_budget": {
+    "lower_exclusive": 11910592,
+    "upper_inclusive": 12910592,
+    "continuation_runs": [
+      "A",
+      "qwen01"
+    ],
+    "original_history_references": [
+      "baseline",
+      "coverage256",
+      "coverage32",
+      "C"
+    ],
+    "warning": "Qwen runs include optimizer/episode reset; original references do not at this window. Budgets match, continuation histories differ; B has not reached this budget.",
+    "runs": {
+      "baseline": {
+        "metrics/success": {
+          "mean": 0.8349988863999614,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4575389204337309,
+          "points": 489
+        }
+      },
+      "coverage256": {
+        "metrics/success": {
+          "mean": 0.8258916718584385,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.45277642813684504,
+          "points": 489
+        }
+      },
+      "coverage32": {
+        "metrics/success": {
+          "mean": 0.8172920342603344,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4514055314849003,
+          "points": 489
+        }
+      },
+      "C": {
+        "metrics/success": {
+          "mean": 0.8149442107155767,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4488371941575243,
+          "points": 489
+        }
+      },
+      "A": {
+        "metrics/success": {
+          "mean": 0.8622027417389649,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.48210336203955434,
+          "points": 489
+        }
+      },
+      "qwen01": {
+        "metrics/success": {
+          "mean": 0.8530147692420975,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.48559371666918016,
+          "points": 489
+        }
+      }
+    }
+  },
+  "queued_historical_last_metrics": {
+    "coverage32": {
+      "job_id": "1502352.stdct-mgmt-02",
+      "interrupted_at": "Sat Oct 31 09:02:55 2026",
+      "exit_status": 143,
+      "final_event_step": 48377856,
+      "last_event_at": "2026-10-31T09:02:28+08:00",
+      "checkpoint_step": 48128000,
+      "uncheckpointed_steps": 249856,
+      "latest": {
+        "reward": {
+          "step": 48377856,
+          "value": 7.154894828796387
+        },
+        "metrics/collisions.count": {
+          "step": 48377856,
+          "value": 16.99416160583496
+        },
+        "metrics/cost": {
+          "step": 48377856,
+          "value": 16.99416160583496
+        },
+        "metrics/distance_to_goal": {
+          "step": 48377856,
+          "value": 1.0231214761734009
+        },
+        "metrics/distance_to_view": {
+          "step": 48377856,
+          "value": 1.615082859992981
+        },
+        "metrics/observed_coverage.delta_m2": {
+          "step": 48377856,
+          "value": 0.0
+        },
+        "metrics/observed_coverage.new_area_m2": {
+          "step": 48377856,
+          "value": 12.84841537475586
+        },
+        "metrics/soft_spl": {
+          "step": 48377856,
+          "value": 0.44172877073287964
+        },
+        "metrics/spl": {
+          "step": 48377856,
+          "value": 0.4784667491912842
+        },
+        "metrics/success": {
+          "step": 48377856,
+          "value": 0.8590492010116577
+        },
+        "metrics/view_angle": {
+          "step": 48377856,
+          "value": 33.92118453979492
+        },
+        "metrics/view_match": {
+          "step": 48377856,
+          "value": 0.8356963992118835
+        },
+        "learner/mrq_r_loss": {
+          "step": 48377856,
+          "value": 1.0044766664505005
+        },
+        "learner/mrq_s_loss": {
+          "step": 48377856,
+          "value": 0.036617327481508255
+        },
+        "learner/mrq_d_loss": {
+          "step": 48377856,
+          "value": 0.001239035977050662
+        },
+        "learner/value_pred_min": {
+          "step": 48377856,
+          "value": 1.2053465843200684
+        },
+        "learner/value_pred_mean": {
+          "step": 48377856,
+          "value": 3.8502163887023926
+        },
+        "learner/value_pred_max": {
+          "step": 48377856,
+          "value": 7.35987663269043
+        },
+        "learner/prob_ratio_min": {
+          "step": 48377856,
+          "value": 0.6495519280433655
+        },
+        "learner/prob_ratio_mean": {
+          "step": 48377856,
+          "value": 0.9986804723739624
+        },
+        "learner/prob_ratio_max": {
+          "step": 48377856,
+          "value": 1.3681530952453613
+        },
+        "learner/value_loss": {
+          "step": 48377856,
+          "value": 0.9268861413002014
+        },
+        "learner/action_loss": {
+          "step": 48377856,
+          "value": 0.46413305401802063
+        },
+        "learner/dist_entopy": {
+          "step": 48377856,
+          "value": 1.9069637060165405
+        },
+        "learner/aug_loss": {
+          "step": 48377856,
+          "value": 1.9935461282730103
+        },
+        "learner/aug_act_loss": {
+          "step": 48377856,
+          "value": 1.9614777565002441
+        },
+        "learner/aug_critic_loss": {
+          "step": 48377856,
+          "value": 0.032068293541669846
+        },
+        "learner/grad_norm": {
+          "step": 48377856,
+          "value": 1.6396557092666626
+        },
+        "learner/ppo_fraction_clipped": {
+          "step": 48377856,
+          "value": 0.0400390625
+        },
+        "learner/qc_loss": {
+          "step": 48377856,
+          "value": 0.7471848726272583
+        },
+        "learner/coverage_bonus_sum": {
+          "step": 48377856,
+          "value": 0.1221015602350235
+        },
+        "learner/coverage_bonus_per_step": {
+          "step": 48377856,
+          "value": 5.961990245850757e-05
+        },
+        "learner/coverage_new_area_m2": {
+          "step": 48377856,
+          "value": 312.5799865722656
+        },
+        "perf/fps": {
+          "step": 48377856,
+          "value": 199.06777954101562
+        }
+      },
+      "last1m": {
+        "reward": {
+          "mean": 7.12425716181718,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 20.627265372403073,
+          "points": 489
+        },
+        "metrics/cost": {
+          "mean": 20.627265372403073,
+          "points": 489
+        },
+        "metrics/distance_to_goal": {
+          "mean": 1.0610228464891087,
+          "points": 489
+        },
+        "metrics/distance_to_view": {
+          "mean": 1.7108526381003102,
+          "points": 489
+        },
+        "metrics/observed_coverage.delta_m2": {
+          "mean": 3.3789745768615954e-05,
+          "points": 489
+        },
+        "metrics/observed_coverage.new_area_m2": {
+          "mean": 12.972496609990095,
+          "points": 489
+        },
+        "metrics/soft_spl": {
+          "mean": 0.4431497689283211,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4708844732896926,
+          "points": 489
+        },
+        "metrics/success": {
+          "mean": 0.8415691707519422,
+          "points": 489
+        },
+        "metrics/view_angle": {
+          "mean": 37.24084226534167,
+          "points": 489
+        },
+        "metrics/view_match": {
+          "mean": 0.8132149298010672,
+          "points": 489
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.1111504702480293,
+          "points": 489
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.03988148606475633,
+          "points": 489
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.0020901477979715145,
+          "points": 489
+        },
+        "learner/value_pred_min": {
+          "mean": 0.21166270514207383,
+          "points": 489
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.362704784104673,
+          "points": 489
+        },
+        "learner/value_pred_max": {
+          "mean": 7.350933513758373,
+          "points": 489
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6606516341977812,
+          "points": 489
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0013365114149628,
+          "points": 489
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.614492387615586,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.7374826402751946,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.039358426272537717,
+          "points": 489
+        },
+        "learner/dist_entopy": {
+          "mean": 2.030751333402466,
+          "points": 489
+        },
+        "learner/aug_loss": {
+          "mean": 2.100788430933572,
+          "points": 489
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.0677210070604195,
+          "points": 489
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.03306741798429889,
+          "points": 489
+        },
+        "learner/grad_norm": {
+          "mean": 1.0190582767829817,
+          "points": 489
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.03252013036809816,
+          "points": 489
+        },
+        "learner/qc_loss": {
+          "mean": 0.6858621695534096,
+          "points": 489
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.12238452985791341,
+          "points": 489
+        },
+        "learner/coverage_bonus_per_step": {
+          "mean": 5.9758071219684284e-05,
+          "points": 489
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 313.30439717735493,
+          "points": 489
+        },
+        "perf/fps": {
+          "mean": 199.18874859956145,
+          "points": 489
+        }
+      },
+      "last1m_first_half": {
+        "reward": {
+          "mean": 7.209782700069615,
+          "points": 244
+        },
+        "metrics/collisions.count": {
+          "mean": 20.98587305819402,
+          "points": 244
+        },
+        "metrics/cost": {
+          "mean": 20.98587305819402,
+          "points": 244
+        },
+        "metrics/distance_to_goal": {
+          "mean": 1.033655801513156,
+          "points": 244
+        },
+        "metrics/distance_to_view": {
+          "mean": 1.6720261363709559,
+          "points": 244
+        },
+        "metrics/observed_coverage.delta_m2": {
+          "mean": 0.0,
+          "points": 244
+        },
+        "metrics/observed_coverage.new_area_m2": {
+          "mean": 13.169842856829284,
+          "points": 244
+        },
+        "metrics/soft_spl": {
+          "mean": 0.4409847136159412,
+          "points": 244
+        },
+        "metrics/spl": {
+          "mean": 0.4691291992537311,
+          "points": 244
+        },
+        "metrics/success": {
+          "mean": 0.844459208064392,
+          "points": 244
+        },
+        "metrics/view_angle": {
+          "mean": 36.58498327067641,
+          "points": 244
+        },
+        "metrics/view_match": {
+          "mean": 0.8159750695111322,
+          "points": 244
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.1102516380001286,
+          "points": 244
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.04071676147887941,
+          "points": 244
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.00213857817694499,
+          "points": 244
+        },
+        "learner/value_pred_min": {
+          "mean": 0.4221503616646543,
+          "points": 244
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.48169041852482,
+          "points": 244
+        },
+        "learner/value_pred_max": {
+          "mean": 7.388674720388944,
+          "points": 244
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.664505912143676,
+          "points": 244
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0012473129346722,
+          "points": 244
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.6384965836024674,
+          "points": 244
+        },
+        "learner/value_loss": {
+          "mean": 0.7472896185077604,
+          "points": 244
+        },
+        "learner/action_loss": {
+          "mean": 0.047442517145994866,
+          "points": 244
+        },
+        "learner/dist_entopy": {
+          "mean": 2.0628649641255863,
+          "points": 244
+        },
+        "learner/aug_loss": {
+          "mean": 2.134563105028184,
+          "points": 244
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.1005106749104674,
+          "points": 244
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.03405242068998394,
+          "points": 244
+        },
+        "learner/grad_norm": {
+          "mean": 1.0328653782117563,
+          "points": 244
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.030817751024590164,
+          "points": 244
+        },
+        "learner/qc_loss": {
+          "mean": 0.6768491363427678,
+          "points": 244
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.12439813306097125,
+          "points": 244
+        },
+        "learner/coverage_bonus_per_step": {
+          "mean": 6.074127590867737e-05,
+          "points": 244
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 318.4592218868068,
+          "points": 244
+        },
+        "perf/fps": {
+          "mean": 199.23865415229173,
+          "points": 244
+        }
+      },
+      "last1m_second_half": {
+        "reward": {
+          "mean": 7.039080707394347,
+          "points": 245
+        },
+        "metrics/collisions.count": {
+          "mean": 20.27012139145209,
+          "points": 245
+        },
+        "metrics/cost": {
+          "mean": 20.27012139145209,
+          "points": 245
+        },
+        "metrics/distance_to_goal": {
+          "mean": 1.0882781892406697,
+          "points": 245
+        },
+        "metrics/distance_to_view": {
+          "mean": 1.7495206643124015,
+          "points": 245
+        },
+        "metrics/observed_coverage.delta_m2": {
+          "mean": 6.74415742075641e-05,
+          "points": 245
+        },
+        "metrics/observed_coverage.new_area_m2": {
+          "mean": 12.775955858035964,
+          "points": 245
+        },
+        "metrics/soft_spl": {
+          "mean": 0.4453059872802423,
+          "points": 245
+        },
+        "metrics/spl": {
+          "mean": 0.4726325829418338,
+          "points": 245
+        },
+        "metrics/success": {
+          "mean": 0.8386909295101554,
+          "points": 245
+        },
+        "metrics/view_angle": {
+          "mean": 37.894024284518494,
+          "points": 245
+        },
+        "metrics/view_match": {
+          "mean": 0.8104660559673699,
+          "points": 245
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.1120456337928772,
+          "points": 245
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.039049619938037836,
+          "points": 245
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.0020419150940142574,
+          "points": 245
+        },
+        "learner/value_pred_min": {
+          "mean": 0.0020341819114222818,
+          "points": 245
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.24420480533522,
+          "points": 245
+        },
+        "learner/value_pred_max": {
+          "mean": 7.313346352869151,
+          "points": 245
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6568130879986043,
+          "points": 245
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0014253458198237,
+          "points": 245
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.5905861679388553,
+          "points": 245
+        },
+        "learner/value_loss": {
+          "mean": 0.7277156905252107,
+          "points": 245
+        },
+        "learner/action_loss": {
+          "mean": 0.03130733168835999,
+          "points": 245
+        },
+        "learner/dist_entopy": {
+          "mean": 1.9987687787231134,
+          "points": 245
+        },
+        "learner/aug_loss": {
+          "mean": 2.067151612651591,
+          "points": 245
+        },
+        "learner/aug_act_loss": {
+          "mean": 2.0350651745893518,
+          "points": 245
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.03208643569782072,
+          "points": 245
+        },
+        "learner/grad_norm": {
+          "mean": 1.005307530870243,
+          "points": 245
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.03421556122448979,
+          "points": 245
+        },
+        "learner/qc_loss": {
+          "mean": 0.6948384148733956,
+          "points": 245
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.12037914544343949,
+          "points": 245
+        },
+        "learner/coverage_bonus_per_step": {
+          "mean": 5.877887961105444e-05,
+          "points": 245
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 308.170612568758,
+          "points": 245
+        },
+        "perf/fps": {
+          "mean": 199.13904674296475,
+          "points": 245
+        }
+      },
+      "nonfinite_in_final_tail": {},
+      "earlier_history_finite_in_verified_previous_snapshot": true,
+      "inputs": [
+        {
+          "source": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/tb/events.out.tfevents.1793165526.GN-A40-094.643513.0",
+          "source_size": 49311447,
+          "verified_prefix_bytes": 43844534,
+          "verified_prefix_sha256": "6be05ec173e6a26b2a72e78eebb033f4deddca514750fad774146e1a15c8696f",
+          "tail_offset": 43844534,
+          "tail_bytes": 5466913,
+          "tail_sha256": "2aba9cb253fac1df987c5fa53172e6d7ead1b910d0589526fa9d61bf5c73b72a",
+          "ignored_incomplete_final_bytes": 0
+        }
+      ],
+      "last1m_area_per_all_actions": 0.15298066268425534
+    },
+    "B": {
+      "job_id": "1507651.stdct-mgmt-02",
+      "interrupted_at": "Sat Oct 31 09:03:49 2026",
+      "exit_status": 143,
+      "final_event_step": 9189376,
+      "last_event_at": "2026-10-31T09:03:41+08:00",
+      "checkpoint_step": 8704000,
+      "uncheckpointed_steps": 485376,
+      "latest": {
+        "reward": {
+          "step": 9189376,
+          "value": 6.496266841888428
+        },
+        "metrics/collisions.count": {
+          "step": 9189376,
+          "value": 21.580425262451172
+        },
+        "metrics/cost": {
+          "step": 9189376,
+          "value": 21.580425262451172
+        },
+        "metrics/distance_to_goal": {
+          "step": 9189376,
+          "value": 1.1893832683563232
+        },
+        "metrics/distance_to_view": {
+          "step": 9189376,
+          "value": 2.0043582916259766
+        },
+        "metrics/soft_spl": {
+          "step": 9189376,
+          "value": 0.4389415681362152
+        },
+        "metrics/spl": {
+          "step": 9189376,
+          "value": 0.4591144323348999
+        },
+        "metrics/success": {
+          "step": 9189376,
+          "value": 0.7906383275985718
+        },
+        "metrics/view_angle": {
+          "step": 9189376,
+          "value": 46.694576263427734
+        },
+        "metrics/view_match": {
+          "step": 9189376,
+          "value": 0.7553191781044006
+        },
+        "learner/mrq_r_loss": {
+          "step": 9189376,
+          "value": 1.2691516876220703
+        },
+        "learner/mrq_s_loss": {
+          "step": 9189376,
+          "value": 0.031148210167884827
+        },
+        "learner/mrq_d_loss": {
+          "step": 9189376,
+          "value": 0.002805426949635148
+        },
+        "learner/value_pred_min": {
+          "step": 9189376,
+          "value": -0.19453126192092896
+        },
+        "learner/value_pred_mean": {
+          "step": 9189376,
+          "value": 3.149972915649414
+        },
+        "learner/value_pred_max": {
+          "step": 9189376,
+          "value": 7.304030418395996
+        },
+        "learner/prob_ratio_min": {
+          "step": 9189376,
+          "value": 0.6410939693450928
+        },
+        "learner/prob_ratio_mean": {
+          "step": 9189376,
+          "value": 1.0012067556381226
+        },
+        "learner/prob_ratio_max": {
+          "step": 9189376,
+          "value": 1.3555660247802734
+        },
+        "learner/value_loss": {
+          "step": 9189376,
+          "value": 0.9645318984985352
+        },
+        "learner/action_loss": {
+          "step": 9189376,
+          "value": 0.106022410094738
+        },
+        "learner/dist_entopy": {
+          "step": 9189376,
+          "value": 1.9954767227172852
+        },
+        "learner/aug_loss": {
+          "step": 9189376,
+          "value": 2.0639419555664062
+        },
+        "learner/aug_act_loss": {
+          "step": 9189376,
+          "value": 2.034301280975342
+        },
+        "learner/aug_critic_loss": {
+          "step": 9189376,
+          "value": 0.02964046224951744
+        },
+        "learner/grad_norm": {
+          "step": 9189376,
+          "value": 1.385117769241333
+        },
+        "learner/ppo_fraction_clipped": {
+          "step": 9189376,
+          "value": 0.02587890625
+        },
+        "learner/qc_loss": {
+          "step": 9189376,
+          "value": 0.6988832950592041
+        },
+        "learner/qwen_bonus_sum": {
+          "step": 9189376,
+          "value": 0.1256539523601532
+        },
+        "learner/qwen_bonus_per_step": {
+          "step": 9189376,
+          "value": 6.135446892585605e-05
+        },
+        "learner/qwen_nav_reward_sum": {
+          "step": 9189376,
+          "value": 169.30584716796875
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "step": 9189376,
+          "value": 169.43148803710938
+        },
+        "learner/qwen_segments": {
+          "step": 9189376,
+          "value": 34.0
+        },
+        "learner/qwen_valid_segments": {
+          "step": 9189376,
+          "value": 31.0
+        },
+        "learner/qwen_valid_fraction": {
+          "step": 9189376,
+          "value": 0.9117646813392639
+        },
+        "learner/qwen_new_area_m2": {
+          "step": 9189376,
+          "value": 342.7643737792969
+        },
+        "learner/qwen_valid_actions": {
+          "step": 9189376,
+          "value": 1569.0
+        },
+        "learner/qwen_geometry_seconds": {
+          "step": 9189376,
+          "value": 8.425912857055664
+        },
+        "learner/qwen_render_seconds": {
+          "step": 9189376,
+          "value": 6.509114742279053
+        },
+        "learner/qwen_worker_seconds": {
+          "step": 9189376,
+          "value": 7.634769439697266
+        },
+        "learner/qwen_total_seconds": {
+          "step": 9189376,
+          "value": 14.154437065124512
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "step": 9189376,
+          "value": 9.356216430664062
+        },
+        "learner/qwen_q_mean": {
+          "step": 9189376,
+          "value": 0.6754630208015442
+        },
+        "learner/qwen_q_min": {
+          "step": 9189376,
+          "value": 0.4790080189704895
+        },
+        "learner/qwen_q_max": {
+          "step": 9189376,
+          "value": 0.7985658049583435
+        },
+        "learner/qwen_q_p10": {
+          "step": 9189376,
+          "value": 0.5885030627250671
+        },
+        "learner/qwen_q_p90": {
+          "step": 9189376,
+          "value": 0.7476078867912292
+        },
+        "learner/qwen_q_bin_0": {
+          "step": 9189376,
+          "value": 0.0
+        },
+        "learner/qwen_q_bin_1": {
+          "step": 9189376,
+          "value": 0.0
+        },
+        "learner/qwen_q_bin_2": {
+          "step": 9189376,
+          "value": 0.16129031777381897
+        },
+        "learner/qwen_q_bin_3": {
+          "step": 9189376,
+          "value": 0.8387096524238586
+        },
+        "learner/qwen_q_bin_4": {
+          "step": 9189376,
+          "value": 0.0
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "step": 9144320,
+          "value": 1.0
+        },
+        "learner/exploration_segment_length_p0": {
+          "step": 9189376,
+          "value": 5.0
+        },
+        "learner/exploration_segment_length_p50": {
+          "step": 9189376,
+          "value": 46.5
+        },
+        "learner/exploration_segment_length_p90": {
+          "step": 9189376,
+          "value": 118.69999694824219
+        },
+        "learner/exploration_segment_length_p100": {
+          "step": 9189376,
+          "value": 256.0
+        },
+        "learner/exploration_segment_length_mean": {
+          "step": 9189376,
+          "value": 60.235294342041016
+        },
+        "learner/exploration_bonus_p0": {
+          "step": 9189376,
+          "value": 0.000348234229022637
+        },
+        "learner/exploration_bonus_p50": {
+          "step": 9189376,
+          "value": 0.0035561134573072195
+        },
+        "learner/exploration_bonus_p90": {
+          "step": 9189376,
+          "value": 0.007374159060418606
+        },
+        "learner/exploration_bonus_p100": {
+          "step": 9189376,
+          "value": 0.01424951571971178
+        },
+        "learner/exploration_bonus_mean": {
+          "step": 9189376,
+          "value": 0.0040533533319830894
+        },
+        "learner/exploration_terminal_segments": {
+          "step": 9189376,
+          "value": 26.0
+        },
+        "learner/exploration_area_per_valid_action": {
+          "step": 9189376,
+          "value": 0.21846041083335876
+        },
+        "perf/fps": {
+          "step": 9189376,
+          "value": 64.7724609375
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "step": 9189376,
+          "value": 3.0
+        }
+      },
+      "last1m": {
+        "reward": {
+          "mean": 6.921885337322523,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 20.263018282400807,
+          "points": 489
+        },
+        "metrics/cost": {
+          "mean": 20.263018282400807,
+          "points": 489
+        },
+        "metrics/distance_to_goal": {
+          "mean": 0.9752759171653623,
+          "points": 489
+        },
+        "metrics/distance_to_view": {
+          "mean": 1.6087411919985812,
+          "points": 489
+        },
+        "metrics/soft_spl": {
+          "mean": 0.4476383252865454,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.48538338095863903,
+          "points": 489
+        },
+        "metrics/success": {
+          "mean": 0.8521437425554895,
+          "points": 489
+        },
+        "metrics/view_angle": {
+          "mean": 36.29517358651191,
+          "points": 489
+        },
+        "metrics/view_match": {
+          "mean": 0.814275561788087,
+          "points": 489
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.0776039748347854,
+          "points": 489
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.028881633170482326,
+          "points": 489
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.004311847756009697,
+          "points": 489
+        },
+        "learner/value_pred_min": {
+          "mean": 0.13430505959747516,
+          "points": 489
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.070576627561651,
+          "points": 489
+        },
+        "learner/value_pred_max": {
+          "mean": 7.165344834083916,
+          "points": 489
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6073293339742961,
+          "points": 489
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.001713777002869,
+          "points": 489
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.787806954851911,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6504809106176372,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.05242703600923754,
+          "points": 489
+        },
+        "learner/dist_entopy": {
+          "mean": 1.7710600552627158,
+          "points": 489
+        },
+        "learner/aug_loss": {
+          "mean": 1.8291381812046885,
+          "points": 489
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.8041324018213158,
+          "points": 489
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.025005775002918847,
+          "points": 489
+        },
+        "learner/grad_norm": {
+          "mean": 1.055617686429638,
+          "points": 489
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.04812316270449898,
+          "points": 489
+        },
+        "learner/qc_loss": {
+          "mean": 0.6895648020420582,
+          "points": 489
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.13738138812207493,
+          "points": 489
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 6.70807559189819e-05,
+          "points": 489
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 160.01392924614967,
+          "points": 489
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 160.1513100528522,
+          "points": 489
+        },
+        "learner/qwen_segments": {
+          "mean": 31.186094069529652,
+          "points": 489
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 29.431492842535786,
+          "points": 489
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.9422662544591783,
+          "points": 489
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 275.7141388657147,
+          "points": 489
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1845.0081799591003,
+          "points": 489
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 9.552211373374018,
+          "points": 489
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 5.744618541623917,
+          "points": 489
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 7.306656609771198,
+          "points": 489
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 13.062189134352046,
+          "points": 489
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.355882734365014,
+          "points": 489
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.640053805885627,
+          "points": 489
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.28394563409265566,
+          "points": 489
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7884175855445472,
+          "points": 489
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.5074796985019692,
+          "points": 489
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7396944643042083,
+          "points": 489
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.014327316348781859,
+          "points": 489
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.03304529556497962,
+          "points": 489
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.1988654749007069,
+          "points": 489
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.7401586538199755,
+          "points": 489
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.013603263806955458,
+          "points": 489
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.027027027027027,
+          "points": 37
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 4.588957055214724,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 48.787321063394685,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 146.6306749589604,
+          "points": 489
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 240.11860940695297,
+          "points": 489
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 67.45875419819525,
+          "points": 489
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 0.0002562071076272425,
+          "points": 489
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.0037130504453284302,
+          "points": 489
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.009812620561760384,
+          "points": 489
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.015915083023767103,
+          "points": 489
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.004771549214184254,
+          "points": 489
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 23.27402862985685,
+          "points": 489
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.15020662354179687,
+          "points": 489
+        },
+        "perf/fps": {
+          "mean": 64.8741938273112,
+          "points": 489
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.0398009950248754,
+          "points": 402
+        }
+      },
+      "last1m_first_half": {
+        "reward": {
+          "mean": 6.973173608545397,
+          "points": 244
+        },
+        "metrics/collisions.count": {
+          "mean": 20.958551696089447,
+          "points": 244
+        },
+        "metrics/cost": {
+          "mean": 20.958551696089447,
+          "points": 244
+        },
+        "metrics/distance_to_goal": {
+          "mean": 0.9410932635674711,
+          "points": 244
+        },
+        "metrics/distance_to_view": {
+          "mean": 1.5491486084265786,
+          "points": 244
+        },
+        "metrics/soft_spl": {
+          "mean": 0.45074086221026594,
+          "points": 244
+        },
+        "metrics/spl": {
+          "mean": 0.4919658928621011,
+          "points": 244
+        },
+        "metrics/success": {
+          "mean": 0.8613164380925601,
+          "points": 244
+        },
+        "metrics/view_angle": {
+          "mean": 34.83931920567497,
+          "points": 244
+        },
+        "metrics/view_match": {
+          "mean": 0.8225938836570645,
+          "points": 244
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.0834009554542479,
+          "points": 244
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.028537903484873107,
+          "points": 244
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.004349957928409777,
+          "points": 244
+        },
+        "learner/value_pred_min": {
+          "mean": 0.06898960130686155,
+          "points": 244
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.036316111928127,
+          "points": 244
+        },
+        "learner/value_pred_max": {
+          "mean": 7.1536579718355275,
+          "points": 244
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6024506755295347,
+          "points": 244
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.0016868129128316,
+          "points": 244
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.7887802847096177,
+          "points": 244
+        },
+        "learner/value_loss": {
+          "mean": 0.6445922966374725,
+          "points": 244
+        },
+        "learner/action_loss": {
+          "mean": 0.053716659664222205,
+          "points": 244
+        },
+        "learner/dist_entopy": {
+          "mean": 1.7198025193370756,
+          "points": 244
+        },
+        "learner/aug_loss": {
+          "mean": 1.776340472405074,
+          "points": 244
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.751778849324242,
+          "points": 244
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.024561618454754353,
+          "points": 244
+        },
+        "learner/grad_norm": {
+          "mean": 1.0693800080506528,
+          "points": 244
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.04880611232069672,
+          "points": 244
+        },
+        "learner/qc_loss": {
+          "mean": 0.6780575118103965,
+          "points": 244
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.13617620397298064,
+          "points": 244
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 6.649228709618195e-05,
+          "points": 244
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 159.44638325738126,
+          "points": 244
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 159.58255885077304,
+          "points": 244
+        },
+        "learner/qwen_segments": {
+          "mean": 30.89344262295082,
+          "points": 244
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 29.020491803278688,
+          "points": 244
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.9376822841949151,
+          "points": 244
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 272.02316637508204,
+          "points": 244
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1826.9016393442623,
+          "points": 244
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 9.443785378190338,
+          "points": 244
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 5.7269591884534865,
+          "points": 244
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 7.212700608323832,
+          "points": 244
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 12.950678475567551,
+          "points": 244
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.355727434158325,
+          "points": 244
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.6413159431492697,
+          "points": 244
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.2907363857585387,
+          "points": 244
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7914635043163769,
+          "points": 244
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.5108258413364652,
+          "points": 244
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7408541792728862,
+          "points": 244
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.01281113205782947,
+          "points": 244
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.031952751975995106,
+          "points": 244
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.20128351161409108,
+          "points": 244
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.7375512971985535,
+          "points": 244
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.016401310588737002,
+          "points": 244
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.0,
+          "points": 11
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 4.631147540983607,
+          "points": 244
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 48.44877049180328,
+          "points": 244
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 151.1930329369717,
+          "points": 244
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 242.20081967213116,
+          "points": 244
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 68.14080565092993,
+          "points": 244
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 0.0002626708549124472,
+          "points": 244
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.0036802949912494933,
+          "points": 244
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.009969087266057853,
+          "points": 244
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.01609206092391224,
+          "points": 244
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.00479771194265789,
+          "points": 244
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 22.979508196721312,
+          "points": 244
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.14949348489524888,
+          "points": 244
+        },
+        "perf/fps": {
+          "mean": 64.85770281807321,
+          "points": 244
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 2.1037735849056602,
+          "points": 212
+        }
+      },
+      "last1m_second_half": {
+        "reward": {
+          "mean": 6.870806405982193,
+          "points": 245
+        },
+        "metrics/collisions.count": {
+          "mean": 19.57032378060477,
+          "points": 245
+        },
+        "metrics/cost": {
+          "mean": 19.57032378060477,
+          "points": 245
+        },
+        "metrics/distance_to_goal": {
+          "mean": 1.0093190497281601,
+          "points": 245
+        },
+        "metrics/distance_to_view": {
+          "mean": 1.668090540535596,
+          "points": 245
+        },
+        "metrics/soft_spl": {
+          "mean": 0.44454845177884006,
+          "points": 245
+        },
+        "metrics/spl": {
+          "mean": 0.47882773645070137,
+          "points": 245
+        },
+        "metrics/success": {
+          "mean": 0.8430084865920398,
+          "points": 245
+        },
+        "metrics/view_angle": {
+          "mean": 37.74508570456992,
+          "points": 245
+        },
+        "metrics/view_match": {
+          "mean": 0.8059911922532685,
+          "points": 245
+        },
+        "learner/mrq_r_loss": {
+          "mean": 1.0718306553607084,
+          "points": 245
+        },
+        "learner/mrq_s_loss": {
+          "mean": 0.029223959877782937,
+          "points": 245
+        },
+        "learner/mrq_d_loss": {
+          "mean": 0.0042738931353337,
+          "points": 245
+        },
+        "learner/value_pred_min": {
+          "mean": 0.19935392418078013,
+          "points": 245
+        },
+        "learner/value_pred_mean": {
+          "mean": 3.104697304355855,
+          "points": 245
+        },
+        "learner/value_pred_max": {
+          "mean": 7.17698399485374,
+          "points": 245
+        },
+        "learner/prob_ratio_min": {
+          "mean": 0.6121880795274462,
+          "points": 245
+        },
+        "learner/prob_ratio_mean": {
+          "mean": 1.001740631035396,
+          "points": 245
+        },
+        "learner/prob_ratio_max": {
+          "mean": 1.786837597769134,
+          "points": 245
+        },
+        "learner/value_loss": {
+          "mean": 0.6563454894386992,
+          "points": 245
+        },
+        "learner/action_loss": {
+          "mean": 0.05114267612427321,
+          "points": 245
+        },
+        "learner/dist_entopy": {
+          "mean": 1.8221083767560065,
+          "points": 245
+        },
+        "learner/aug_loss": {
+          "mean": 1.8817203891520597,
+          "points": 245
+        },
+        "learner/aug_act_loss": {
+          "mean": 1.8562722663490139,
+          "points": 245
+        },
+        "learner/aug_critic_loss": {
+          "mean": 0.025448118667213283,
+          "points": 245
+        },
+        "learner/grad_norm": {
+          "mean": 1.0419115375499337,
+          "points": 245
+        },
+        "learner/ppo_fraction_clipped": {
+          "mean": 0.047443000637755105,
+          "points": 245
+        },
+        "learner/qc_loss": {
+          "mean": 0.701025123742162,
+          "points": 245
+        },
+        "learner/qwen_bonus_sum": {
+          "mean": 0.13858165315219334,
+          "points": 245
+        },
+        "learner/qwen_bonus_per_step": {
+          "mean": 6.76668228282194e-05,
+          "points": 245
+        },
+        "learner/qwen_nav_reward_sum": {
+          "mean": 160.5791587206782,
+          "points": 245
+        },
+        "learner/qwen_mixed_reward_sum": {
+          "mean": 160.71773982145348,
+          "points": 245
+        },
+        "learner/qwen_segments": {
+          "mean": 31.477551020408164,
+          "points": 245
+        },
+        "learner/qwen_valid_segments": {
+          "mean": 29.84081632653061,
+          "points": 245
+        },
+        "learner/qwen_valid_fraction": {
+          "mean": 0.9468315146407302,
+          "points": 245
+        },
+        "learner/qwen_new_area_m2": {
+          "mean": 279.390046162508,
+          "points": 245
+        },
+        "learner/qwen_valid_actions": {
+          "mean": 1863.0408163265306,
+          "points": 245
+        },
+        "learner/qwen_geometry_seconds": {
+          "mean": 9.660194813475316,
+          "points": 245
+        },
+        "learner/qwen_render_seconds": {
+          "mean": 5.762205815801815,
+          "points": 245
+        },
+        "learner/qwen_worker_seconds": {
+          "mean": 7.400229117335106,
+          "points": 245
+        },
+        "learner/qwen_total_seconds": {
+          "mean": 13.173244647590481,
+          "points": 245
+        },
+        "learner/qwen_worker_peak_gpu_gib": {
+          "mean": 9.35603740069331,
+          "points": 245
+        },
+        "learner/qwen_q_mean": {
+          "mean": 0.6387968202026523,
+          "points": 245
+        },
+        "learner/qwen_q_min": {
+          "mean": 0.2771825997805109,
+          "points": 245
+        },
+        "learner/qwen_q_max": {
+          "mean": 0.7853840990942351,
+          "points": 245
+        },
+        "learner/qwen_q_p10": {
+          "mean": 0.5041472133933281,
+          "points": 245
+        },
+        "learner/qwen_q_p90": {
+          "mean": 0.7385394828660148,
+          "points": 245
+        },
+        "learner/qwen_q_bin_0": {
+          "mean": 0.015837312132424237,
+          "points": 245
+        },
+        "learner/qwen_q_bin_1": {
+          "mean": 0.03413337979237644,
+          "points": 245
+        },
+        "learner/qwen_q_bin_2": {
+          "mean": 0.19645730772492837,
+          "points": 245
+        },
+        "learner/qwen_q_bin_3": {
+          "mean": 0.7427553681694732,
+          "points": 245
+        },
+        "learner/qwen_q_bin_4": {
+          "mean": 0.010816637624283226,
+          "points": 245
+        },
+        "learner/qwen_invalid_fog_origin_farther_than_5cm_from_navmesh": {
+          "mean": 1.0384615384615385,
+          "points": 26
+        },
+        "learner/exploration_segment_length_p0": {
+          "mean": 4.546938775510204,
+          "points": 245
+        },
+        "learner/exploration_segment_length_p50": {
+          "mean": 49.124489795918365,
+          "points": 245
+        },
+        "learner/exploration_segment_length_p90": {
+          "mean": 142.08693885024712,
+          "points": 245
+        },
+        "learner/exploration_segment_length_p100": {
+          "mean": 238.0448979591837,
+          "points": 245
+        },
+        "learner/exploration_segment_length_mean": {
+          "mean": 66.77948662894113,
+          "points": 245
+        },
+        "learner/exploration_bonus_p0": {
+          "mean": 0.0002497697429840182,
+          "points": 245
+        },
+        "learner/exploration_bonus_p50": {
+          "mean": 0.003745672203676433,
+          "points": 245
+        },
+        "learner/exploration_bonus_p90": {
+          "mean": 0.009656792497072292,
+          "points": 245
+        },
+        "learner/exploration_bonus_p100": {
+          "mean": 0.015738827482398066,
+          "points": 245
+        },
+        "learner/exploration_bonus_mean": {
+          "mean": 0.004745493272357449,
+          "points": 245
+        },
+        "learner/exploration_terminal_segments": {
+          "mean": 23.56734693877551,
+          "points": 245
+        },
+        "learner/exploration_area_per_valid_action": {
+          "mean": 0.15091685141835895,
+          "points": 245
+        },
+        "perf/fps": {
+          "mean": 64.8906175263074,
+          "points": 245
+        },
+        "learner/qwen_invalid_episode_height_range_exceeds_fixed_floor": {
+          "mean": 1.9684210526315788,
+          "points": 190
+        }
+      },
+      "nonfinite_in_final_tail": {},
+      "earlier_history_finite_in_verified_previous_snapshot": true,
+      "inputs": [
+        {
+          "source": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/tb/events.out.tfevents.1793266778.GN-A40-030.285857.0",
+          "source_size": 19083405,
+          "verified_prefix_bytes": 15130404,
+          "verified_prefix_sha256": "fd41dd18a22c90b2c8cf598aab28e818c3bc200f8f439948411c060534ced277",
+          "tail_offset": 15130404,
+          "tail_bytes": 3953001,
+          "tail_sha256": "dea5685a78910335a1cf32a425e8562ec2ec18e81e954e262dce8c6e38261c57",
+          "ignored_incomplete_final_bytes": 0
+        }
+      ],
+      "last1m_area_per_valid_action": 0.14943789510560687,
+      "last1m_valid_segment_fraction": 0.9437377049180328
+    }
+  },
+  "stopped_baseline": {
+    "job_id": "1496716",
+    "directory": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env",
+    "latest_step": 74653696,
+    "last_event_at": "2026-10-28T20:28:29+08:00",
+    "tags": 29,
+    "nonfinite": {},
+    "all_scalars_finite": true,
+    "latest": {
+      "reward": 7.660017013549805,
+      "metrics/collisions.count": 13.753424644470215,
+      "metrics/distance_to_goal": 0.9045001864433289,
+      "metrics/spl": 0.5513484477996826,
+      "metrics/success": 0.8780822157859802,
+      "metrics/view_match": 0.8527397513389587,
+      "learner/mrq_r_loss": 1.0123791694641113,
+      "learner/mrq_s_loss": 0.03623255342245102,
+      "learner/mrq_d_loss": 0.002717038616538048,
+      "learner/value_pred_min": 1.8969533443450928,
+      "learner/value_pred_mean": 4.628682613372803,
+      "learner/value_pred_max": 8.274760246276855,
+      "learner/prob_ratio_min": 0.6784393191337585,
+      "learner/prob_ratio_mean": 1.001747488975525,
+      "learner/prob_ratio_max": 1.3802258968353271,
+      "learner/value_loss": 0.5435876250267029,
+      "learner/action_loss": 0.026990987360477448,
+      "learner/dist_entopy": 1.782395362854004,
+      "learner/aug_loss": 1.8823366165161133,
+      "learner/aug_act_loss": 1.8489609956741333,
+      "learner/aug_critic_loss": 0.03337554261088371,
+      "learner/grad_norm": 0.6401083469390869,
+      "learner/ppo_fraction_clipped": 0.0146484375,
+      "learner/qc_loss": 0.701802134513855
+    },
+    "own_last_1m": {
+      "reward": 7.622844828662209,
+      "metrics/collisions.count": 13.075082564402699,
+      "metrics/distance_to_goal": 0.8767934529327908,
+      "metrics/spl": 0.5482166207153617,
+      "metrics/success": 0.8786893228567939,
+      "metrics/view_match": 0.8552031381729922,
+      "learner/value_pred_min": 0.28995243430800416,
+      "learner/value_pred_mean": 3.9652905571436348,
+      "learner/value_pred_max": 8.091973682122727,
+      "learner/prob_ratio_min": 0.7599994938188291,
+      "learner/prob_ratio_mean": 1.0016441885191483,
+      "learner/prob_ratio_max": 1.4547781322631368,
+      "learner/value_loss": 0.6616444783951851,
+      "learner/action_loss": 0.030819585816344294,
+      "learner/dist_entopy": 1.801224554487045,
+      "learner/aug_loss": 1.8825634754508551,
+      "learner/aug_act_loss": 1.8469316713161508,
+      "learner/aug_critic_loss": 0.035631797800187194,
+      "learner/grad_norm": 0.9024641680814981,
+      "learner/ppo_fraction_clipped": 0.024352153629856852,
+      "learner/qc_loss": 0.6967208576836226
+    },
+    "own_previous_1m": {
+      "reward": 7.819064348447518,
+      "metrics/collisions.count": 13.234951331967213,
+      "metrics/distance_to_goal": 0.7832741614003651,
+      "metrics/spl": 0.5597904668968232,
+      "metrics/success": 0.8982073543745963,
+      "metrics/view_match": 0.8727282978227882,
+      "learner/value_pred_min": 0.47355274336420183,
+      "learner/value_pred_mean": 4.106487215542402,
+      "learner/value_pred_max": 8.094692078770183,
+      "learner/prob_ratio_min": 0.7479022031069779,
+      "learner/prob_ratio_mean": 1.0016104175907667,
+      "learner/prob_ratio_max": 1.4712940930831628,
+      "learner/value_loss": 0.6608888056190287,
+      "learner/action_loss": 0.033944520905144424,
+      "learner/dist_entopy": 1.7905637929674054,
+      "learner/aug_loss": 1.8708100621817543,
+      "learner/aug_act_loss": 1.8361858608292752,
+      "learner/aug_critic_loss": 0.0346242010127753,
+      "learner/grad_norm": 0.9224696364559111,
+      "learner/ppo_fraction_clipped": 0.02466220543032787,
+      "learner/qc_loss": 0.6447842515638618
+    },
+    "recent_3h": {
+      "start_step": 69167104,
+      "end_step": 74653696,
+      "updates": 2680,
+      "median_update_seconds": 3.866173505783081,
+      "p90_update_seconds": 4.179123210906985,
+      "steps_per_second": 508.1295112681179
+    },
+    "checkpoints": [],
+    "stage": {
+      "mrq_auxiliary_update": false,
+      "random_shift_still_configured": true
+    }
+  },
+  "jobs": {
+    "1511143.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpux"
+    },
+    "1511145.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpux"
+    },
+    "1511146.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-099[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpux"
+    },
+    "1511147.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpux"
+    },
+    "1511148.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpux"
+    },
+    "1511410.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpux"
+    },
+    "1515117.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "comment": "Not Running: Insufficient amount of resource: node_pool ",
+      "Hold_Types": "n",
+      "project": "CFP04-SF-109",
+      "queue": "batch_gpu"
+    },
+    "1515118.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "Hold_Types": "d",
+      "project": "CFP04-SF-109",
+      "queue": "batch_cpu"
+    }
+  },
+  "author_gibson_default": {
+    "total_environment_steps": 300000000,
+    "num_updates": -1,
+    "source_commit": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+    "file": "exp_config/ppo_imagenav_gibson.yaml",
+    "file_sha256": "a502d7edac5ee4ca2120bb1d0713d0176de6aaae8c887b49388c4678e31bf0cc"
+  }
+}

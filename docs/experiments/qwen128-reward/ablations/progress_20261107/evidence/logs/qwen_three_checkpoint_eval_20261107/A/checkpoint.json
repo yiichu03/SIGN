@@ -1,0 +1,36 @@
+{
+  "step": 36352000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.54.pth",
+  "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/A_36352000.pth",
+  "sha256": "ac4981a91b2f29b2b64bb7e4729b88bc5b2507bcdba15d6326af5dd130a9641f",
+  "bytes": 10696837,
+  "selection_reason": "Latest saved high state during the recent recovery, highest trailing1M SPL among this run candidates; SR88.26/SPL52.66 and pre250k91.24/55.44. Full post250k unavailable, explicitly not claimed.",
+  "training_last1m": {
+    "lower_exclusive": 35352000,
+    "upper_inclusive": 36352000,
+    "points": 489,
+    "sr": 88.25882929234416,
+    "spl": 52.656195433105665
+  },
+  "training_last3m": {
+    "lower_exclusive": 33352000,
+    "upper_inclusive": 36352000,
+    "points": 1465,
+    "sr": 86.4567854908953,
+    "spl": 50.749099539408505
+  },
+  "training_native_at_checkpoint": {
+    "step": 36352000,
+    "sr": 89.75988626480103,
+    "spl": 53.40679883956909
+  },
+  "training_pre250k": {
+    "lower_exclusive": 36102000,
+    "upper_inclusive": 36352000,
+    "points": 123,
+    "sr": 91.23627078242419,
+    "spl": 55.43845557584996
+  },
+  "training_post250k": null,
+  "selection_uses_training_only": true
+}

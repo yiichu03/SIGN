@@ -1,0 +1,9 @@
+{
+  "step": 74240000,
+  "state_dict_items": 103,
+  "all_weights_finite": true,
+  "public_encoder_state_items": 42,
+  "encoder_matches_public_checkpoint": true,
+  "source_sha256": "c3bf5d3e13a789f28b95c92b93ae7e31c4327f4a328bf59632f504b7b1eed73f",
+  "gpu_used_for_preparation": false
+}

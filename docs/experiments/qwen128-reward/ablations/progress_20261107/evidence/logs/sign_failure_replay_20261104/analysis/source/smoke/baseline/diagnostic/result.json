@@ -1,0 +1,30 @@
+{
+  "case": "baseline",
+  "phase": "smoke",
+  "mode": "diagnostic",
+  "training_step": 74240000,
+  "episodes": 28,
+  "success_rate": 0.7142857142857143,
+  "spl": 0.42653880086896306,
+  "seconds": 32.39149832725525,
+  "native_metrics": {
+    "eval_reward/average_reward": 4.7738728523254395,
+    "eval_metrics/distance_to_goal": 2.1123852729797363,
+    "eval_metrics/success": 0.7142857313156128,
+    "eval_metrics/spl": 0.4265387952327728,
+    "eval_metrics/soft_spl": 0.4172309339046478,
+    "eval_metrics/distance_to_view": 3.062948226928711,
+    "eval_metrics/view_match": 0.7142857313156128,
+    "eval_metrics/view_angle": 54.4632568359375,
+    "eval_metrics/collisions.count": 35.57143020629883,
+    "eval_metrics/observed_coverage.delta_m2": 0.0,
+    "eval_metrics/observed_coverage.new_area_m2": 12.822856903076172,
+    "eval_metrics/coverage_eval.steps": 151.64285278320312,
+    "eval_metrics/coverage_eval.new_area_m2": 12.822856903076172,
+    "eval_metrics/coverage_eval.new_m2_per_step": 0.20528379082679749
+  },
+  "reference_pose_hash_matches": 28,
+  "reference_step_matches": 28,
+  "reference_success_matches": 28,
+  "failures": 8
+}

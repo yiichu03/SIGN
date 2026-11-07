@@ -1,0 +1,16 @@
+服务器上的原始支持目录：/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104
+本包analysis/index.html和review/index.html可离线打开，所有图像/精选完整视频在包内。
+analysis/source包含采集、分析、绘图脚本及输入/协议/权重SHA与作业回执，不含模型权重、原场景或环境。
+failure_analysis_evidence.zip另含全部三模型诊断的traces/videos/episodes/diagnostics/native结果，解压到同一上级目录可恢复full/...相对路径。
+每条NPZ对应一个真实episode。position_xyz单位m，rotation_xyzw是四元数，metrics列名保存在metric_fields。
+所有逐步数组长度为T+1：第0行为初始观测；command[t]由position[t-1]执行到position[t]，第0行command/action仅为占位。
+action_normalized_linear_angular与command_mps_degps都按线速度/角速度排列，后者是FP64名义单位换算；STOP审计使用native的FP32缩放边界。
+视频左为固定目标、右为动作后RGB，frame0是初始观测；10fps仅为播放速度，保留所有T+1帧。图中文字距离有四舍五入，分类使用全精度d<1。
+审查视频是有损H264，关键帧JPEG也有损，不能据此逐像素重建原Actor输入或隐藏状态；目标PNG无损并核对原RGB字节SHA。
+地图蓝色是包含初始视野的累计已见并集；橙色统计线是扣除初始视野的新增面积。多高度背景只显示初始层；面积仍为原XZ投影代理。
+所有失败有视频，成功仅保存预先选定的每场景3个对照；所有12600条都保存完整数值轨迹。人审主因字段留空。
+重算（需要原服务器依赖，输出应使用新的空目录）：
+  envs/sign-baseline/bin/python logs/sign_failure_replay_20261104/analyze.py --out 新的输出目录
+当前report.py/package.py按既有analysis目录生成浏览和打包资料；不重复提交已完成的GPU作业。
+实际被动性/原目标起点/轨迹一致性见smoke_passed与各full/case/diagnostic/result.json。
+真实观测阶段和非互斥行为证据分开，人工标签留空；AI初审不等于人工真值。

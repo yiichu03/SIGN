@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-11-05T01:00:49+08:00",
+  "snapshot_last_event": "2026-11-05T00:45:31+08:00",
+  "source_sha256": "2f8cdc1f27a7ac19b9b66a212e12004b602dd5a17f2199471d6f7ff2173c2811",
+  "windows": [
+    {
+      "lower_exclusive": 154807488,
+      "upper_inclusive": 155807488,
+      "sr_percent": 88.83057553015772,
+      "spl_percent": 51.88847655644182,
+      "points": 488
+    },
+    {
+      "lower_exclusive": 155807488,
+      "upper_inclusive": 156807488,
+      "sr_percent": 88.89559330628207,
+      "spl_percent": 51.261775021904086,
+      "points": 489
+    },
+    {
+      "lower_exclusive": 156807488,
+      "upper_inclusive": 157807488,
+      "sr_percent": 88.34153772866141,
+      "spl_percent": 51.83118087712859,
+      "points": 488
+    },
+    {
+      "lower_exclusive": 157807488,
+      "upper_inclusive": 158807488,
+      "sr_percent": 88.18387717741435,
+      "spl_percent": 51.08809521208044,
+      "points": 488
+    },
+    {
+      "lower_exclusive": 158807488,
+      "upper_inclusive": 159807488,
+      "sr_percent": 87.70134879279966,
+      "spl_percent": 49.26898462396945,
+      "points": 489
+    }
+  ],
+  "latest_native_window_sr": 85.15358567237854,
+  "semantics": "Training native50-update log means over five consecutive1M ranges; not a validation decline claim."
+}

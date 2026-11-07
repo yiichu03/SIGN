@@ -1,0 +1,102 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2026-11-03 01:19:28,665 Initializing dataset ImageNav-v1
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2026-11-03 01:19:36,473 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,473 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,473 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,473 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,473 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,473 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,474 Initializing dataset ImageNav-v1
+2026-11-03 01:19:36,474 Initializing dataset ImageNav-v1
+2026-11-03 01:19:39,585 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,620 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,628 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,630 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,631 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,635 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,636 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,639 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-03 01:19:39,786 initializing sim Sim-Drone
+2026-11-03 01:19:39,825 initializing sim Sim-Drone
+2026-11-03 01:19:39,836 initializing sim Sim-Drone
+2026-11-03 01:19:39,840 initializing sim Sim-Drone
+2026-11-03 01:19:39,844 initializing sim Sim-Drone
+2026-11-03 01:19:39,845 initializing sim Sim-Drone
+2026-11-03 01:19:39,847 initializing sim Sim-Drone
+2026-11-03 01:19:39,850 initializing sim Sim-Drone
+2026-11-03 01:19:42,540 Initializing task Nav-Drone
+2026-11-03 01:19:42,541 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:44,401 Initializing task Nav-Drone
+2026-11-03 01:19:44,401 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:44,952 Initializing task Nav-Drone
+2026-11-03 01:19:44,953 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:44,959 Initializing task Nav-Drone
+2026-11-03 01:19:44,959 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:44,975 Initializing task Nav-Drone
+2026-11-03 01:19:44,976 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:44,983 Initializing task Nav-Drone
+2026-11-03 01:19:44,984 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:45,012 Initializing task Nav-Drone
+2026-11-03 01:19:45,012 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:45,031 Initializing task Nav-Drone
+2026-11-03 01:19:45,032 goal sensor bias: [0, 0, 0]
+/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2026-11-03 01:19:45,079 Overwriting CNN input size of depth: (128, 128)
+2026-11-03 01:19:45,081 Overwriting CNN input size of imagegoal_sensor_v2: (128, 128)
+2026-11-03 01:19:45,082 Overwriting CNN input size of rgb: (128, 128)
+2026-11-03 01:19:45,155 Type of observation encoder: <class 'src.models.EarlyFuseCNNEncoder'>
+2026-11-03 01:19:45,155 Create goal encoder : None
+2026-11-03 01:19:45,155 Create visual inputs encoder
+2026-11-03 01:19:45,156 observation_space kyes: odict_keys(['depth', 'imagegoal_sensor_v2', 'rgb'])
+2026-11-03 01:19:45,156 visual_obs_inputs: ['rgb', 'imagegoal_sensor_v2']
+2026-11-03 01:19:45,157 rgb observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-11-03 01:19:45,157 imagegoal_sensor_v2 observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-11-03 01:19:45,204 early fuse encoder(type: fast_resnet9, in: (6, 128, 128), out: (32, 4, 4))
+2026-11-03 01:20:23,896 agent number of parameters: 1838979
+2026-11-03 01:22:46,076 update: 61501	fps: 354.222	
+2026-11-03 01:22:46,077 totaltime: 3.290 min	update: 61501	env-time: 7.303s	pth-time: 131.541s	ac-infer-time: 88.814s	update-stat-time: 1.173s	update-model-time: 41.555s	frames: 125954048	schedule: 0.4198468266666667
+2026-11-03 01:22:46,078 Average window size: 1  collisions.count: 9.615  cost: 9.615  distance_to_goal: 0.826  distance_to_view: 1.364  observed_coverage.delta_m2: 0.000  observed_coverage.new_area_m2: 13.966  reward: 7.886  soft_spl: 0.451  spl: 0.449  success: 0.885  view_angle: 30.861  view_match: 0.865
+2026-11-03 01:22:56,043 update: 61502	fps: 354.217	
+2026-11-03 01:22:56,044 totaltime: 3.456 min	update: 61502	env-time: 14.221s	pth-time: 134.440s	ac-infer-time: 89.782s	update-stat-time: 2.345s	update-model-time: 42.316s	frames: 125956096	schedule: 0.41985365333333335
+2026-11-03 01:22:56,044 Average window size: 2  collisions.count: 22.480  cost: 22.480  distance_to_goal: 0.441  distance_to_view: 0.564  observed_coverage.delta_m2: 0.000  observed_coverage.new_area_m2: 15.196  reward: 8.987  soft_spl: 0.478  spl: 0.537  success: 1.000  view_angle: 7.011  view_match: 0.980

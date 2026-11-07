@@ -1,0 +1,22 @@
+[
+  [
+    "SIGN-continue-coverage256",
+    "phase2/continue-coverage256-20261103",
+    "6983c91"
+  ],
+  [
+    "SIGN-continue-coverage32",
+    "phase2/continue-coverage32-20261103",
+    "a7cc9e0"
+  ],
+  [
+    "SIGN-continue-qwen128",
+    "phase2/continue-qwen128-beta01-20261103",
+    "81fedec"
+  ],
+  [
+    "SIGN-continue-ablation",
+    "phase2/continue-qwen-ablation-20261103",
+    "d2352f0"
+  ]
+]

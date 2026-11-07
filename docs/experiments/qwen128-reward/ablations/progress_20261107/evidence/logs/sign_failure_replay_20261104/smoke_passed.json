@@ -1,0 +1,19 @@
+{
+  "passive_control_matches_diagnostic": true,
+  "episodes": 28,
+  "exact_fields": [
+    "steps",
+    "success",
+    "spl",
+    "view_match",
+    "navigation_reward",
+    "collisions",
+    "goal_sha256",
+    "start_position",
+    "pose_trace_sha256",
+    "new_area_m2"
+  ],
+  "old_reference_pose_matches": 28,
+  "trace_pose_hashes_verified": true,
+  "full_video_frames_verified": 4274
+}

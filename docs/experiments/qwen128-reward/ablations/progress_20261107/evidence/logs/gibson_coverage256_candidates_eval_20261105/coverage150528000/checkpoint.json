@@ -1,0 +1,11 @@
+{
+  "step": 150528000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.47.pth",
+  "path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/checkpoints/coverage256_150528000.pth",
+  "sha256": "9a43d3e8b870a9594f1a7558fb073298c13cddb1c2c3bb1abe5f6ee8a3532579",
+  "bytes": 9657189,
+  "selection_priority": 2,
+  "cpu_metadata_evidence": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/recommendations.json",
+  "extra_state_step_cpu_verified": true,
+  "parameters_finite_cpu_verified": true
+}

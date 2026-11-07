@@ -1,0 +1,86 @@
+{
+  "reviewed_at": "2026-11-07T13:06:12+08:00",
+  "all_three_jobs_exit0": true,
+  "all5_cases_4200_unique_keys_goals_starts_match": true,
+  "independent_metric_recompute_passed": true,
+  "source_guard_passed": true,
+  "totals": {
+    "coverage256_143360000": {
+      "successes": 3634.0,
+      "training_step": 143360000,
+      "success_rate": 0.8652380952380953,
+      "spl": 0.5214598109617169,
+      "mean_collisions": 43.27047619047619,
+      "mean_episode_steps": 118.12095238095237,
+      "new_m2_per_step_global": 0.09959383843840458
+    },
+    "coverage256_150528000": {
+      "successes": 3626.0,
+      "training_step": 150528000,
+      "success_rate": 0.8633333333333333,
+      "spl": 0.5176948294792739,
+      "mean_collisions": 38.50476190476191,
+      "mean_episode_steps": 119.07571428571428,
+      "new_m2_per_step_global": 0.09809982844048805
+    },
+    "coverage256_146944000": {
+      "successes": 3627.0,
+      "training_step": 146944000,
+      "success_rate": 0.8635714285714285,
+      "spl": 0.5623545995018063,
+      "mean_collisions": 34.262142857142855,
+      "mean_episode_steps": 116.64142857142858,
+      "new_m2_per_step_global": 0.09934163308797413
+    },
+    "coverage256_previous": {
+      "successes": 3678.0,
+      "training_step": 125952000,
+      "success_rate": 0.8757142857142857,
+      "spl": 0.5329960106555678,
+      "mean_collisions": 36.67857142857143,
+      "mean_episode_steps": 113.55928571428572,
+      "new_m2_per_step_global": 0.1030227131202706
+    },
+    "baseline": {
+      "successes": 3569.0,
+      "training_step": 74240000,
+      "success_rate": 0.8497619047619047,
+      "spl": 0.5439358224388628,
+      "mean_collisions": 37.056666666666665,
+      "mean_episode_steps": 126.08190476190477,
+      "new_m2_per_step_global": 0.09380640702189044
+    }
+  },
+  "source_results": {
+    "coverage256_143360000": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/coverage143360000/result.json",
+      "result_sha256": "f72c26995df10a005696f7511c49379be1791462c8f4e036db790e5af1950c89"
+    },
+    "coverage256_150528000": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/coverage150528000/result.json",
+      "result_sha256": "83868a43e9bf6d123d492b0cb28462ff5eb721bbe1e60347eb77681d05e9de7e"
+    },
+    "coverage256_146944000": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/coverage256/result.json",
+      "result_sha256": "bd46260ef47c35a2542a3dd846a243ec82da85c2e96079b8eddcec2084fc831c"
+    },
+    "coverage256_previous": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256/result.json",
+      "result_sha256": "fbaa820e205a998a04bc7ff44e919e993868ea1c1c829f761f06502e4e4d6334"
+    },
+    "baseline": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/baseline/result.json",
+      "result_sha256": "5fe69bacf7f6db4bad3f8fd480042f7a62b5e50246e1df95b79a002b4f472314"
+    }
+  },
+  "delta_vs_previous_coverage256_pp": {
+    "coverage256_143360000": {
+      "success_rate": -1.0476190476190417,
+      "spl": -1.153619969385089
+    },
+    "coverage256_150528000": {
+      "success_rate": -1.2380952380952381,
+      "spl": -1.5301181176293865
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "checked_at": "2026-11-03T23:30:50+08:00",
+  "local_url": "http://127.0.0.1:16200/",
+  "configured_runs": 14,
+  "api_scalar_tags": {
+    "baseline_frozen/original/.": 29,
+    "coverage256/original/.": 34,
+    "coverage32/original/.": 34,
+    "qwen128_beta01/original/.": 55,
+    "A_qwen128_beta003/original/.": 67,
+    "B_qwen256_beta003/original/.": 67,
+    "C_geometry128/original/.": 57,
+    "coverage256/continue_latest/.": 31,
+    "qwen128_beta01/continue_latest/.": 55
+  },
+  "event_files": [
+    {
+      "run": "baseline_frozen/original",
+      "path": "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/tb",
+      "event_files": 1,
+      "bytes": 60828746,
+      "latest_mtime": "2026-10-28T20:28:29.264075+08:00"
+    },
+    {
+      "run": "coverage256/original",
+      "path": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/tb",
+      "event_files": 1,
+      "bytes": 122082952,
+      "latest_mtime": "2026-10-31T09:01:33.957221+08:00"
+    },
+    {
+      "run": "coverage32/original",
+      "path": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/tb",
+      "event_files": 1,
+      "bytes": 49311447,
+      "latest_mtime": "2026-10-31T09:02:28.828852+08:00"
+    },
+    {
+      "run": "qwen128_beta01/original",
+      "path": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/tb",
+      "event_files": 1,
+      "bytes": 14402336,
+      "latest_mtime": "2026-10-31T09:03:29.394989+08:00"
+    },
+    {
+      "run": "A_qwen128_beta003/original",
+      "path": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/A/train/tb",
+      "event_files": 1,
+      "bytes": 17728023,
+      "latest_mtime": "2026-10-31T09:03:38.361193+08:00"
+    },
+    {
+      "run": "B_qwen256_beta003/original",
+      "path": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/tb",
+      "event_files": 1,
+      "bytes": 19083405,
+      "latest_mtime": "2026-10-31T09:03:41.262085+08:00"
+    },
+    {
+      "run": "C_geometry128/original",
+      "path": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/C/train/tb",
+      "event_files": 1,
+      "bytes": 41084611,
+      "latest_mtime": "2026-10-31T09:03:41.050882+08:00"
+    },
+    {
+      "run": "coverage256/continue_latest",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/tb",
+      "event_files": 1,
+      "bytes": 14739727,
+      "latest_mtime": "2026-11-03T23:30:52.913926+08:00"
+    },
+    {
+      "run": "coverage32/continue_latest",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/tb",
+      "event_files": 0,
+      "bytes": 0,
+      "latest_mtime": null
+    },
+    {
+      "run": "qwen128_beta01/continue_latest",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/tb",
+      "event_files": 1,
+      "bytes": 7373291,
+      "latest_mtime": "2026-11-03T23:30:32.567350+08:00"
+    },
+    {
+      "run": "A_qwen128_beta003/continue_latest",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/tb",
+      "event_files": 1,
+      "bytes": 12714196,
+      "latest_mtime": "2026-11-03T23:30:35.863649+08:00"
+    },
+    {
+      "run": "B_qwen256_beta003/continue_latest",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/tb",
+      "event_files": 0,
+      "bytes": 0,
+      "latest_mtime": null
+    },
+    {
+      "run": "C_geometry128/continue_latest",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/tb",
+      "event_files": 1,
+      "bytes": 19565079,
+      "latest_mtime": "2026-11-03T23:30:44.710656+08:00"
+    },
+    {
+      "run": "C_geometry128/continue_1_stopped",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train/tb",
+      "event_files": 1,
+      "bytes": 545391,
+      "latest_mtime": "2026-11-03T02:27:53.317516+08:00"
+    }
+  ],
+  "diagnosis": "Full-history viewer was loading original runs before continuation runs; coverage256/continue_latest has now appeared while disk events for four running continuations are current. coverage32 and B had no continuation event files and were Q in qstat.",
+  "source_change": "Load continued + stopped + original; reuse compares named path mapping rather than order.",
+  "validation": {
+    "same_14_named_paths": true,
+    "python38_ast": true,
+    "live_existing_viewer_reuse": true
+  },
+  "active_viewer_restarted": false
+}

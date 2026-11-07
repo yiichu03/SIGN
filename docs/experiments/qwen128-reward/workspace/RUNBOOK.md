@@ -9,7 +9,7 @@
 
 - **停止基线的最后权重**：preservation.json（服务器路径：`/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/baseline_stop_1496716/preservation.json`）记录实际extra_state.step、源文件、保留副本与SHA；用于新评估时读取这里的checkpoint步数，不能拿TensorBoard末步代替。已保留的不可变副本为 last_saved_checkpoint.pth（服务器路径：`/scratch/e1538633/liuyi/logs/qwen_token_probabilities_20261028/baseline_stop_1496716/last_saved_checkpoint.pth`），原训练的checkpoint／TB／控制台日志仍在SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env。
 - **最终训练记录**：只读事件审计（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_train_threeway_20261028/snapshot_132900/comparison.json`）的runs.baseline包含最终step与时间，events包含原文件SHA。控制台末条在原日志（服务器路径：`/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/train_run0_/log.txt`）。停止操作原文见WORKLOG的BASELINE-1496716-STOPPED-TO-FREE-QWEN-GPU。
-- **公开完整模型评估**：pretrained_full_result.json（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/pretrained_full_result.json`）保存Gibson完整val任务数、SR/SPL/View Match、源commit、checkpoint与实际耗时，作业1494521。加载SIGN/ckpt/nav_model.pth完整导航策略，沿用原safety模型，6环境／500步；原记录PYTHONHASHSEED未显式固定，后续hash0对照需保留这一协议差异。
+- **公开完整模型评估**：[pretrained_full_result.json](../ablations/progress_20261107/evidence/logs/gibson_reproduction_20261026/pretrained_full_result.json)保存Gibson完整val任务数、SR/SPL/View Match、源commit、checkpoint与实际耗时，作业1494521。加载SIGN/ckpt/nav_model.pth完整导航策略，沿用原safety模型，6环境／500步；原记录PYTHONHASHSEED未显式固定，后续hash0对照需保留这一协议差异。
 - **本次核验记录**：baseline_reference_index_20261029.json（服务器路径：`/scratch/e1538633/liuyi/logs/gibson_reproduction_20261026/baseline_reference_index_20261029.json`）汇总三种步数、checkpoint SHA和公开原结果；此次只整理记录，没有提交新评估。
 
 ## 工作目录与环境
@@ -558,3 +558,239 @@ Qwen短测与正式运行区分：1507196中Qwen部分固定40960步、输出sho
 
 
 六组训练资料发布入口：`logs/training_readout_20261031/publish_readout.py --tree SIGN-qwen-ablation-publication`用于基于ac62298的单次增量构建；完成构建后仅用同命令加`--check-only`核验。它更新既有qwen128-reward包的ablations/training_20261031、四根文档生成副本及SHA清单，只允许README/docs差异；旧快照不覆盖、WORKLOG保留前缀。所选CSV与rollout确定性gzip、输入SHA和56项1/2/3/5M窗口指标可离线复核，完整TB/权重不上传。发布到yiichu03/SIGN的phase2/qwen-beta003-geometry128，运行目录d2352f0保持不动；未来更新创建新日期证据和明确基点，不重复构建本快照。
+
+
+## 2026-11-03：意外中断后的权重继续训练
+
+10月31日六正式训练Exit143；旧checkpoint只有state_dict和extra_state，无优化器/RNG/环境状态。本批次按用户授权从最新稳定编号权重继承全部103项状态，保留encoder42项冻结、全局steps/updates与300M算法上限；PPO/Qc优化器、episode/GRU/覆盖历史和随机状态重新初始化。它是明确带断点边界的weights continuation，不是无缝恢复。旧输出只读；四SIGN-continue-*独立分支和输出负责续跑。原先人工停止的基线不自动重启。
+
+支持目录logs/training_continuation_20261103包含plan.json（原job/源checkpoint SHA/步数/剩余预算）、previous_jobs.json、checkpoint_audit.json、四提交commits.json/source_manifest.json。原exp-config末尾新增`,continuation`，通过training_continuation.checkpoint及sha256显式校验；默认无路径时原行为不变。首次旧checkpoint须allow_legacy_weights=True，之后新checkpoint额外保存PPO/Qc learner_state；仍不保存模拟器/RNG，后续也不声称轨迹精确恢复。
+
+短测1511108通过autox/CFP，六组各4096步；通过stop_after_steps结束，不改变原300M分母/学习率进度。verify_short.py核对原配置差异白名单、103项初始状态/42冻结项、累计步数、原reward/真实mask、Qwen local ledger及概率和bonus、后续optimizer保存。正式入口`python3 logs/training_continuation_20261103/submit_formal.py`仅在此短测F/Exit0及六组报告passed后提交；一旦有formal_submission.json拒绝盲目重提，先检查实际job。每组正式walltime=原168h−旧PBS实用时长−1h恢复验证保守预留，300M是累计上限；1h为预留而非声称实际用量。
+
+正式输出在plan中各tree的`results/continuation_20261103/CASE/train`；TensorBoard子目录tb、ckpts及continuation.json。旧数据不混写。Qwen ledger本地从rollout0开始，新环境的episode历史也从头；continuation.json中的qwen_local_rollout_offset将本地rollout映射到累计训练步，即global_step=(offset+local_rollout+1)*2048。比较曲线应标出中断和optimizer/episode重置，不能将这个阶段当原连续训练。
+
+续跑TensorBoard脚本默认6008，当前推荐SIGN_TENSORBOARD_PORT=6009与本地16009独立入口，复用既有启动/复用/信号清理实现；未启动或资源排队的run目录可暂不存在，出现事件后自动读取，原6006/6007入口保留。用户本地命令：
+
+```bash
+ssh -t -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
+  -L 127.0.0.1:16009:127.0.0.1:6009 e1538633@vanda.nus.edu.sg \
+  'SIGN_TENSORBOARD_PORT=6009 bash /scratch/e1538633/liuyi/logs/training_continuation_20261103/view_tensorboard.sh'
+```
+
+本地浏览器http://127.0.0.1:16009，需保持SSH连接。服务按当前SSH所在登录节点启动/核验复用；本批次没有代用户启动TensorBoard服务。
+
+
+10月31日中断前指标的只读复核：从liuyi执行`envs/sign-baseline/bin/python logs/training_stop_20261031/extract.py`，每次生成独立readout_实际时间戳。工具只读原六停止训练目录；核对10月31日00:53固定快照的字节SHA前缀，按TFRecord边界提取停止前追加尾段并解析末点与最后1M原生滑窗均值。report.json另存实际事件时间、PBS退出时间、checkpoint步数、未落盘差额、reward/loss/碰撞/覆盖/bonus与来源SHA；不会读取SIGN-continue-*或启动模型/评估/作业。原生末点、区间均值与完整验证成绩分开使用，源文件缺失或前缀变化即拒绝拼接。
+
+
+11月3日原训练同步数比较：`envs/sign-baseline/bin/python logs/matched_training_20261103/compare.py`只读拼接10月31日00:53归档selected CSV与中断前新增尾段CSV；七组旧CSV前缀的SHA对已发布输入清单校验，重合step必须同值。旧三方法统一截断到coverage32终点48,377,856，全部Qwen/覆盖/基线统一截断到A终点8,536,064；组内SR/SPL step数组必须完全相同。输出每组近1M/5M均值、源SHA/区间/点数、CSV与PNG/PDF，曲线101-update平滑仅展示，不参与均值。基线与两覆盖或Qwen不可拿各自末点混比，也不把重置optimizer后的继续训练拼成原连续轨迹。
+
+
+## 2026-11-03：最新覆盖权重完整val及评估后的训练恢复
+
+支持目录`logs/gibson_coverage_latest_eval_20261103`。manifest.json固定选择时最新正式checkpoint步数/源路径/SHA；复制权重只存服务器，不发布。guard.py复核原七树与四continue树的HEAD/源码、模型/数据、评估脚本和输入SHA，评估前后均调用。运行期间勿编辑受保护脚本；后续训练出现新checkpoint不替换正在评估的快照。
+
+每组4200条/14场景、6环境/max500/seed100/hash0，与此前原生SIGN-coverage-eval协议相同；被动覆盖0.1m/3m/90°、weight0、无Qwen。evaluate.py复用已验证录数器，检查4200唯一任务集及所有指标有限，交叉核对native TB与逐episode SR/SPL；summarize.py另核对两组目标/起点完全相同，报告训练步数不同。结果是各组result.json和总summary.json；全局面积/总动作与逐episode面积/动作均值分别保存。
+
+有效提交回执以priority_submission.json为准：1511395覆盖256→1511396覆盖32（afterany），均CFP/autox各2h/1A40/36CPU240GB。evaluate.pbs文件本身保留首次personal/auto默认值，**实际共享提交通过-q autox -P CFP04-SF-109覆盖**，应读回执/qstat有效参数，不能仅看PBS头推断。原个人1511374/1511375/1511376未运行已取消。hpc project当前要求amgr登录，不能据这些提交声称已知精确剩余额度。
+
+状态查询（已执行同类核验；以下供后续查询）：
+
+```bash
+qstat -fx 1511395 1511396 1511409 1511410 1511411
+```
+
+1511409为CPU afterany:1511396，finish_priority.py只释放1511147/1511148的临时u挂起，重试/超时并写released_training_holds.json；不修改其他作业，已用mock验证目标集合及F状态跳过。1511410为C恢复GPU作业，也afterany:1511396，resume_C.py校验旧C已F和22,528,000步checkpoint SHA，命令与此前C完全相同、仅改--model-dir。独立新输出`SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval`，TensorBoard是其tb；viewer脚本已于11月3日修正C为此新路径，建议使用独立6009/本地16009启动，旧6008进程保留；只看最新续跑阶段，排队组无事件时暂不显示。不得把新事件写进旧C目录。C剩余126:41:13=127:34:33−00:53:20；旧权重无optimizer，明确记录再次重置。1511411仅afterok两评估成功才运行CPU汇总；评估失败不阻塞训练恢复。
+
+若清理CPU作业失败，先检查其日志/released_training_holds.json及两个评估均已F，再对照priority_submission.json手动执行`qrls -h u 1511147 1511148`（仅故障恢复参考，当前未执行）。不要因H(d)等待而手动绕过评估。恢复GPU排队不是恢复已完成；依赖/运行结果须用qstat复核。
+
+完成记录：11月3日两GPU评估、CPU清理及汇总均Exit0，C1511410已03:51开始R，临时挂起解除回执已实际产生。完整成绩summary.json与逐组result.json；results_review.json为09:36从8400条原JSONL独立复算7项指标/唯一任务/目标与初始位置/有限性及作业状态的审计，并保存输入SHA和相较18.944M各自旧成绩的变化。报告探索效率时标明全局sum(area)/sum(actions)或逐episode比值均值，不能互换；两组训练步数125.952M/48.128M不同，不能据当前结果作同步数算法优劣或冗余探索因果判断。查看结果不需要重新运行summarize.py或提交PBS。
+
+
+## 2026-11-03：最终冻结基线74.240M完整验证
+
+支持目录`logs/gibson_baseline_final_eval_20261103`。从1496716停训备份复制不可变baseline.pth，真实extra_state.step=74240000、SHA与preservation.json一致；checkpoint_audit.json保存103项有限性/42项公开encoder相同的CPU核验。不要以训练末步74,653,696替代评估权重步数。
+
+evaluate.py仅在最新两覆盖的已验证脚本中将允许case改为baseline，原native evaluator、recording_env.py、eval_protocol.json保持同协议；guard.py/source_manifest.json固定原11树与资产、备份输入以及已完成两覆盖结果/逐episode记录的SHA。4200val/14场景、6环境/max500/seed100/hash0、同public safety、0.1m/3m/90°被动coverage weight0、无Qwen，输出baseline/result.json、episodes及native/tb。源脚本/数据守卫在前后调用，完整有限性/任务集及native-TB SR/SPL交叉核对通过才写结果。
+
+实际已提交（以下为历史执行记录，勿重复qsub）：
+
+```bash
+qsub -o /scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/baseline/evaluate.pbs.log \
+  -v EVAL_CASE=baseline /scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/evaluate.pbs
+```
+
+作业1515117，CFP04-SF-109/auto→batch_gpu、1A40/36CPU240GB/2h；GPUx四个训练已占满每用户4个上限，故本次使用独立普通GPU队列，保留现有训练。CPU汇总1515118 afterok:1515117，仅核对最终基线与此前两覆盖4200任务/目标图/起点后写本目录comparison.json，旧summary/result不修改。不同训练步数74.240/125.952/48.128M须显式标注。PBS状态查询用`qstat -fx -F json 1515117 1515118`；列举个人活跃作业优先qselect -u e1538633取得ID再qstat -f -F json，当前qstat -u与-f/-F混用可能返回普通表格，不能直接作JSON解析。
+
+
+## 2026-11-05：当前六组续跑指标只读入口
+
+运行`envs/sign-baseline/bin/python logs/training_readout_20261105/continuation_readout.py`，复用旧固定字节快照/TFRecord尾裁剪/JSONL尾裁剪逻辑，新增实际已运行的coverage32和B，C仍用train_after_latest_eval。它只读取六组实际TB/ledger，写独立snapshot_HHMMSS，核对有限性、连续ID、nav_rewards/masks与奖励守恒；不加载GPU/模型、不改训练/作业、不打包。
+
+累计步数按continuation offset映射，日志均值按(lower,end]选窗口，原生50-update重叠点不当独立样本。三Qwen共同预算取A/B/qwen01最新步数最小值；固定原始baseline/两coverage/C参考需覆盖该终点，超过参考范围应选择有证据的续跑区间，不绕过断言。当前snapshot_004537另保存matched_windows.json，逐项核对1M/2M/3M的SR-SPL步数数组一致与七个CSV SHA。
+
+六组顺序读文件，批次captured_at只是开始时间，后来组的事件可能晚于它。按每组实际快照时间或event_readout_at检查新鲜度；不能把相对批次起点的负时间差当时钟或停训异常。本批readout.json保留batch_start_minus_event_seconds并按冻结事件mtime记录年龄；旧脚本的四组/两排队假设仅作历史，不用于当前总览。
+
+## 2026-11-03：续跑阶段训练指标只读检查
+
+从liuyi执行`envs/sign-baseline/bin/python logs/training_readout_20261103/continuation_readout.py`。每次写独立snapshot_HHMMSS；只读四正在运行的continue输出，C固定使用train_after_latest_eval，排队两组引用已固定10月31日末段报告，不把无TB当0或拼入已终止第一轮C。TensorBoard固定字节前缀裁到完整TFRecord、ledger裁到完整JSONL并保存SHA；分别提取最新/近1M/前1M日志均值和最近3h实际秒/2048步。原生50-update滑窗点相互关联，不视为独立统计样本。
+
+Qwen/几何ledger必须用continuation.json的qwen_local_rollout_offset映射累计步数：global_step=(offset+local_rollout_id+1)*2048；按TB快照终点截取，检查连续ID、nav_rewards/masks及bonus守恒。0.1m旧覆盖/全部动作与0.025m有效动作面积口径分开，C无worker/render。脚本不加载模型、不调用GPU、不改PBS或源文件。
+
+共同预算参考只取两运行Qwen都已达到的终点及最近1M，历史基线/两旧覆盖/C从已有固定CSV读取；均值前逐项核对SR/SPL step相同。明确标记Qwen已重置optimizer/episodes、参考区间仍为原训练，不能把该表称纯奖励控制实验或与原连续训练等价。当前脚本要求两Qwen本轮已运行至少2M、共同预算仍落在10月31日固定历史CSV范围内，超出时应更换明确来源，不绕过断言或盲目拼接。作者默认步数依据本地原始dad87fe的Gibson YAML读取，3e8为全部环境累计；当前8×256每轮2048，原300M累计cap继续有效。
+
+
+<a id="tensorboard-full-history"></a>
+## TensorBoard全部训练历史入口
+
+同一个view_tensorboard.sh支持`SIGN_TENSORBOARD_HISTORY=1`，读取plan.json复用六组原训练路径，再加冻结基线原始历史、六续跑路径和C已停止第一轮续跑，共14个有明确阶段名的run。原始七组从最初训练步数开始；新阶段使用真实累计step，不修改原事件或合并重置前后数据。`original`、`continue_latest`、`C_geometry128/continue_1_stopped`分别显示，checkpoint回退导致的重叠步数保留阶段归属。两排队组当前没有新续跑事件，但原历史曲线正常存在。
+
+在本地执行以下命令，再打开http://127.0.0.1:16200，保持SSH终端连接：
+
+```bash
+ssh -t -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
+  -L 127.0.0.1:16200:127.0.0.1:6200 e1538633@vanda.nus.edu.sg \
+  'SIGN_TENSORBOARD_HISTORY=1 SIGN_TENSORBOARD_PORT=6200 bash /scratch/e1538633/liuyi/logs/training_continuation_20261103/view_tensorboard.sh'
+```
+
+横轴选Step，按方法勾选original和continue阶段，主要看metrics/success、metrics/spl；reward仍是导航奖励。
+
+11月3日实测：全历史首次读取可超过15分钟，网页就绪不代表14组事件已全部载入。初版original排在continued之前，后端先出现原训练，续训虽然已有更新文件却稍后才在Runs出现；已改为续训优先、保留相同14个命名路径，复用校验忽略顺序。修改仅在下次启动新网页进程时生效，已有会话可以继续等待和刷新，不需要为查看首次加载反复重启。网页Runs筛选框输入continue_latest并勾选已有条目，横轴用Step。coverage32/B若仍Q且tb无事件，不会产生continue曲线；有原训练历史不等于已开始续跑。证据logs/training_continuation_20261103/full_history_load_diagnosis_20261103.json。
+
+首次加载完整历史可能需要几分钟。该入口独立6200，与仅续跑的6009及已有6006/6007不冲突；6009会话无需停止。路径/语法核验及当时端口探针见logs/training_continuation_20261103/full_history_viewer_20261103.json；这不代表已经代用户启动或完成HTTP加载测试。默认不设置HISTORY时原六续跑模式保持不变。
+
+
+## 2026-11-03：按用户要求将两排队训练移至auto
+
+23:03已执行`qmove auto 1511147.stdct-mgmt-02`、`qmove auto 1511148.stdct-mgmt-02`，原覆盖32和B Qwen256β.03从batch_gpux转为auto→batch_gpu，不重复qsub。移动前必须确认实际仍Q；已R的任务不为换队列停止或重提。移动后核对原作业ID、CFP04-SF-109项目、输出路径、依赖、1A40/36CPU240GB和walltime99:28:14/127:34:32不变。当前Q原因从GPUx每用户4运行上限变为普通GPU资源node_pool等待。回执logs/training_continuation_20261103/auto_queue_move_20261103.json包含前后状态及实际qmove命令；不要因默认autox偏好把这两任务改回或另行提交副本。
+
+
+同预算结论的窗口敏感性复核：logs/training_readout_20261103/qwen_matched_advantage_220651.json固定使用snapshot_220651的A/qwen01 selected CSV和旧baseline/coverage256/coverage32/C固定CSV，以共同step12,910,592为终点，分别选(lower,end]内1M/2M/3M记录，先确认各方法SR/SPL的step数组相同，再算原生日志点均值与百分点差。输入处理前后SHA不变，不能对原生50-update重叠统计做独立样本显著性推断。8.192M验证从各原result.json核对索引一致，和12.911M训练均值分别解释；不要用局部训练优势替代尚无结果的后期验证，也不要忽略optimizer/episode重置及旧/新MRQ/几何规则差异。
+
+
+<a id="sign-failure-diagnosis"></a>
+## SIGN导航失败分析：可核实结束方式与待归因原因
+
+11月4日初次静态CPU审计结果在logs/sign_failure_audit_20261104/snapshot_001350（随后另获Goal授权完成下述全量诊断）。analysis.json保存三组每条episode摘要输入SHA、同native evaluator源文件SHA、分场景及终止桶统计，failed_episodes_for_review.csv为1865条模型-episode失败记录，人工主因/次因/备注均留空；未改记录器、重采样或实施Agent。不能把推断的end_bucket当人工病因标签。
+
+对当前val只筛success=0：steps<500在已核对native continuous STOP/task/get_done链及10000000秒时间上限下，推断为STOP失败；steps=500仅标到限边界，终步也可能STOP，原info/JSONL没保存原因flag。训练上限1000步另算，不与val混用。单次失败的碰撞、轨迹重复、目标未找到可共存，主因标签必须定规则、保留unknown，贡献标签可多选，不强行归一成100%互斥原因。
+
+全量诊断已于11月4日完成采集/分析：支持目录`logs/sign_failure_replay_20261104`，GPU1518132/1518133/1518134、CPU1518137均Exit0。独立wrapper在auto-reset前写全部12600逐步NPZ，失败1865条及每模型42成功对照保存完整视频，共1991视频829982帧。控制smoke1518125验证28条原生结果与完整轨迹/4274帧完全一致；全量另核对11原字段与固定源/权重/目标/起点。索引见STATUS当前Goal和analysis/index.html，不重复qsub已完成采集。
+
+每个NPZ在`full/<case>/diagnostic/traces/<Scene>/<episode>.npz`；case为baseline/coverage256/coverage32。position_xyz单位m、rotation_xyzw；metrics列名在metric_fields；所有逐步数组T+1，第0行为reset状态，command[t]从pose[t-1]执行到pose[t]，第0行动作占位。normalized与物理command均按linear/angular排列，不按Gym平坦向量顺序猜测；STOP核验使用native FP32缩放，避免阈值1.5deg/s附近名义FP64舍入的误报。初始collisions=None只在本地trace行记0，不改info。视频frame0是初始观测、左目标/右RGB，全部T+1帧/10fps；H264/JPEG有损，目标PNG保留原RGB SHA，不能用审查视频逐像素重建Actor输入或GRU状态。
+
+`analysis/analysis.json`为原规则下全量阶段、严格/base/宽松敏感性与成功对照；`episodes.csv/json`含12600条，`failed_episodes.csv`为1865模型×任务失败，`paired_tasks.csv`为4200共同任务、`common_failures.csv`为257三者共同失败。人工主因空，AI笔记17个目的性案例不当比例估计或人工真值。源码事实/未验证Agent假设在code_evidence.json，13单元测试在test_analysis.py。要重算统计仅CPU执行（需原依赖，输出必须新目录）：
+
+```bash
+envs/sign-baseline/bin/python logs/sign_failure_replay_20261104/analyze.py --out /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis_recomputed_NEW
+envs/sign-baseline/bin/python -m unittest discover -s logs/sign_failure_replay_20261104 -p test_analysis.py
+```
+
+上两命令为复现参考，不自动重跑；重算含1991视频解码检查，较长CPU任务按analyze.pbs资源提交。现有report.py/package.py针对固定analysis目录；首次已生成的ZIP不覆盖，保留结果后另建输出批次。evaluate.py有已存在native输出保护，原PBS/路径/权重/manifest均为历史固定输入，不能当待执行新实验。
+
+0.1m/3m/90°覆盖是XZ地面视域代理，粗栅格位置无效会使fog从起点退出；新增面积0不能直接当0新RGB信息。只审计高度变化≤mpp且保存地图一致的投影，其他中间高度图未知；没有逐步is_navigable，不能由2D格判断真实navmesh不可达。保留原指标，不将该补充质量审计伪装成预注册病因标签。GT目标距离/位姿/地图只作诊断与固定轨迹oracle停止上界，未来Agent输入需另定允许观测；原q效率评分不等于到达概率。
+
+停止判据见src/custom_action.py：实际线速度<0.025m/s且角速度绝对值<1.5deg/s即STOP，不能把低速静止简单当无终止的观察动作。Success为STOP且距离<1m；ViewMatch0.5仍为SR成功。失败ViewAngle固定180默认值，不用它推断朝向主因；Qwen geometry_reason也只表示地图奖励统计是否合法。原native policy.act直接给动作，USL_correction定义尚未接在该评估调用链，不能先归因于它过度干预。
+
+基线最终完整val后处理恢复：1515117导航评估Exit0/00:53:18，1515118 CPU汇总Exit1只因PATH缺git。11月4日在登录节点以`envs/sign-baseline/bin/python logs/gibson_baseline_final_eval_20261103/summarize.py`运行原脚本（已执行，勿重复生成当新实验），源SHA/4200任务/目标图/起点核验通过，comparison.json已生成；未修改PBS/guard、未重跑导航GPU，旧失败作业状态保留。其他CPU节点的PATH部署问题尚未改代码修复，后续新作业需显式准备git再调用守卫。
+
+
+### 全量失败报告：原始文件保留，ZIP按需生成
+
+2026-11-04打包1518613 Exit0，两个ZIP CRC和实际解压后的269本地链接曾核验通过；历史大小/SHA在logs/sign_failure_replay_20261104/package_results.json。**2026-11-05用户要求清理两个ZIP，已删除共1591855136字节，清理回执logs/sign_failure_replay_20261104/zip_cleanup_20261105T004126.json；旧scp下载命令当前不再适用。**
+
+服务器上analysis/index.html、73案例图/精选完整视频、17AI笔记、摘要CSV/JSON、空白人审、源码和full/全部12600 trace与1991视频均保留，根目录为`logs/sign_failure_replay_20261104/`。查看报告或分析原始数据无需先打包。
+
+用户明确需要下载/打包时，再核对原文件与标注、守卫和输出，按既有package.py/package.pbs生成分发包；长CPU操作走PBS。保留旧打包/清理回执，另记本次生成状态，不根据旧下载链接自动补包；不为重新打包重跑GPU采集或导航训练。
+
+
+<a id="coverage256-peak-eval-20261105"></a>
+## 覆盖256训练峰值附近完整val（2026-11-05）
+
+入口logs/gibson_coverage256_peak_eval_20261105，原生只读SIGN-coverage-eval @a7cc9e0不变；evaluate/recording复用11月3日完整验证字节。目标日志146,759,680无保存点，ckpt.39/40分别146,432,000/146,944,000，选择最近ckpt.40并复制到本批checkpoints/coverage256_146944000.pth，核对extra_state.step与SHA。不要从ckpt文件编号猜累计步数：续跑目录编号从0重新开始。
+
+已执行qsub -o /scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/coverage256/evaluate.pbs.log /scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/evaluate.pbs，作业1520910。CFP04-SF-109/auto→batch_gpu/1A40/36CPU240GB/2h。GPUx用户4/4已满，普通GPU提交前2/4，因此原六训练不暂停。hpc project仍需amgr登录，未声称精确额度。
+
+查状态参考（不要重复提交）：qstat -fx 1520910.stdct-mgmt-02。原生4200/14场景/6环境/max500/seed100/hash0，0.1m/3m/90°仅被动观测，weight0，无Qwen。任务结束同PBS内自动运行summarize.py，核对与11月3日baseline及coverage256完整val的任务、目标与起点，生成comparison.json；不同训练步数分开标注。提交时参数与输出以manifest.json/submission.json为准，running_status.json仅为当时运行快照；当前完成状态见completed_qstat.json与results_review.json。失败重试不得覆写已有native目录，应先留存错误与新建attempt输出。
+
+本批已于11月5日02:14:08完成（1520910 F/Exit0，55分02秒），实际146944000步，SR86.35714%、SPL56.23546%，3627/4200。comparison.json自动核对通过后，results_review.json又按原始JSONL重算三组4200任务/目标图/起点、均值和源SHA，guard通过。相对125952000步SR−1.2143pp／SPL+2.9359pp；相对74240000冻结基线+1.3810／+1.8419pp。不同训练步数，且146759680精确峰值权重不可得；本轮未重跑GPU、打包或变更训练。
+
+覆盖256候选选择的只读复核证据（11月5日）：logs/training_readout_20261105/coverage256_candidates_20261105T141223/checkpoint_candidates.json保存原训练/续跑完整事件字节前缀SHA、长度及304保存点的近1M/3M窗口；两份selected_scalars.csv固定抽取值。local_neighborhoods.json补保存点本身、前后25万步；recommendations.json列143360000/150528000等实际CPU读取extra_state.step和权重SHA。近1M/3M均为原生50-update滑窗日志的均值，并非独立episode采样；中心窗口含未来日志，仅作回顾上下文，不称当时可用信息。不得把旧目录与续跑目录同编号当同一步，亦不以训练滑窗峰值保证val峰值。本批仅推荐，未qsub。
+
+
+<a id="coverage256-candidates-eval-20261105"></a>
+## 覆盖256两个曲线候选完整val（2026-11-05）
+
+支撑目录logs/gibson_coverage256_candidates_eval_20261105；固定副本143360000与150528000步，来源分别续跑目录ckpt.33和.47，原生SIGN-coverage-eval @a7cc9e0只读。evaluate.py沿用上批仅更改允许EVAL_CASE，recording_env.py/eval_protocol.json逐字节复用；脚本、协议与两权重由source_manifest冻结，训练树不切换或修改。
+
+已执行两个qsub（勿重复提交）：143.360M作业1523189、150.528M作业1523190。命令完整参数见submission.json：同一evaluate.pbs，以-v EVAL_CASE=coverage143360000或coverage150528000选择固定输入，分别-o到各输出目录。CFP04-SF-109/auto→batch_gpu，每份1A40/36CPU240GB/2h，原协议4200/14场景/6env/max500/seed100/hash0。被动覆盖0.1m/3m/90°/weight0、无Qwen。GPU相互无依赖，允许并行，排队不停止现有六训练。提交后Q原因node_pool，不是个人4运行上限（普通GPU原2/4、GPUx4/4）。
+
+CPU1523191已提交afterok:1523189:1523190，auto→batch_cpu/1CPU实际6GB/10min，含git模块以避免旧PATH问题。其H是正常依赖，不能qrls绕过真实checkpoint/result依赖。两份成功后自动生成comparison.json，核对五组各4200任务/目标/起点及源结果SHA；参考原125.952/146.944M覆盖及74.240M基线，不重跑参考组、不称同步数因果对照。
+
+查状态参考：qstat -fx 1523189 1523190 1523191。submission_status.json/current_status.json为各自时点状态，完结后核验最终Exit_status和4200个唯一任务；不得覆写旧native结果、另建attempt后才能重试。单份实际运行参考上一批55分钟，排队另计。
+
+
+<a id="training-readout-20261105-afternoon"></a>
+## 11月5日下午：当前六组Qwen训练与同步数读取
+
+当前CPU入口logs/training_readout_20261105/continuation_readout_v2.py，已执行snapshot_150755。训练/环境/队列不改；固定完整TFRecord字节前缀、JSONL末完整行与SHA，在内存解析protobuf，原始冻结事件/ledger及运行时代码保留。snapshot_150000旧CPU读取已主动中断，只有部分每组输出，没有有效总readout；attempt_status.json明确原因，勿引用为完成结果。旧script保持原样。
+
+v2补读PLAN['C']['old_output']/tb完整几何128原日志，冻结historical_C_selected_scalars.csv至22,587,392步；旧10月31日snapshot_005043的C只有18,020,352步，不足当前共同19,486,720。参考可用性改按实际抽取数组范围核对，不根据旧meta或用C最新曲线替换历史步数。若未来共同步数超过22,587,392，当前v2会报范围断言，需先显式处理正确C阶段来源，不可悄悄跨reset拼接。
+
+training_comparison.json按共同19,486,720和各自A/B/qwen01当前步数分别输出近1M/2M/3M，比较前确认每个SR/SPL step数组完全一致；所有正负结果保留。运行本入口只需sign-baseline CPU Python、PYTHONDONTWRITEBYTECODE=1、PYTHONNOUSERSITE=1、OMP/MKL/OPENBLAS线程1；GPU计算仍只在PBS。原生50-update窗口互相重叠，不当独立episode统计，Qwen训练reward日志仍只导航reward。validation.json保存15输入来源/断言与C完整范围。
+
+截至本批，六训练均R；当前Qwen128 β.1短窗口SR恢复且胜旧coverage两指标，但3M未全面胜coverage32；A/B未显示稳定训练优势。具体数字与budget见STATUS新下午索引，凌晨snapshot_004537保留为历史，不能混称最新。
+
+
+<a id="training-readout-20261107"></a>
+## 11月7日最新读取：增量事件与共同预算超过原C末步的处理
+
+当前CPU入口logs/training_readout_20261107/readout.py；已执行snapshot_130555。复用11月5日snapshot_150755的冻结CSV和完整事件边界，重新SHA验证原文件旧前缀未变，然后从已知TFRecord边界读新增字节，截掉最后不完整记录；在内存解析，不重新复制全部事件。记录每源旧prefix长度/SHA、新tail偏移/长度/SHA，导出当前CSV与近3M ledger；原始源保持原位。validation.json对导出1M/3M独立复算，保存之前/当前CSV SHA。此入口不依赖GPU。
+
+新readout内共同与各自Qwen预算的1M/2M/3M比较先逐点核对SR/SPL step数组。当前共同29,427,712已超过原C末步22,587,392，因此只在整个比较窗位于C实际续跑时才显式加入C_continuation；本批26.428–29.428M满足。不悄悄替换C当前末点，不跨reset拼接，不再执行旧v2的原C范围断言。其余参考仍用原baseline/两coverage冻结CSV，若未来超出其范围同样须先补证据。
+
+覆盖2561511146在11月5日21:45:20 walltime结束、Exit−29；TB172599296，最后ckpt.90实际172544000，元数据/参数有限性与SHA见coverage256_last_checkpoint.json。其余5任务仍R，原预算不自动延长或另起168h；当前剩余约14–42h。
+
+两候选验证1523189/1523190及CPU1523191已全F/Exit0；自动comparison.json与11月7日results_review_20261107.json独立复核通过五组各4200 task/goal/start和汇总值。143.360M86.52/52.15%、150.528M86.33/51.77%，均未超125.952M87.57/53.30%；这四份coverage256完整val中SR最好125.952M、SPL最好146.944M56.24%。无需重复提交CPU汇总或GPU评估；旧Q/R/H状态文件只是历史回执。
+
+
+<a id="qwen-selected-eval-20261107"></a>
+## 三Qwen曲线选点完整val（2026-11-07）
+
+支撑目录logs/qwen_three_checkpoint_eval_20261107，候选统计来自13:06冻结CSV，selection/candidates.json记录125保存点和来源SHA，selection/selected.json记录人工判断与窗口。选择β.1续跑ckpt.22=20480000、A ckpt.54=36352000、B ckpt.40=29696000；checkpoint_validation.json记录CPU实读step、103 key/shape兼容、有限性、42 encoder冻结项一致和独立副本SHA。切勿按文件编号猜跨目录累计步数。
+
+已执行三次qsub，同一个evaluate.pbs，以-v EVAL_CASE选择固定输入、-q覆盖实际队列、-o独立日志：A1528937 -q autox，qwen011528938 -q auto，B1528939 -q auto。默认PBS头为autox，但后两份实际batch_gpu，必须看submission/current_status与实际qstat。CFP04-SF-109，各1A40/36CPU240GB/2h，三者相互无依赖，13:20均R；GPUx原3/4和普通GPU原2/4有名额，未停原五训练。
+
+评估完全复用SIGN-coverage-eval @a7cc9e0原生导航；旧wrapper/eval_protocol逐字节一致，evaluate.py只改允许的case名称。加载完整已训练actor/critic状态，eval.use_ckpt_config=False使用原eval协议，不调用qwen35、不启动VLM worker或Qwen轨迹/图片收集。4200/14场景/6env/max500/seed100/hash0，原public safety；0.1m/3m/90°被动面积/weight0。三组选点预算不同，旧参考也不同，不当共同预算消融。
+
+CPU1528940已afterok:1528937:1528938:1528939，实际1CPU/6GB/10min；其H只是正常依赖。成功后生成comparison.json与comparison.csv并核对七组4200 task/goals/starts：三新Qwen及既有baseline74.240M、cov256125.952/146.944M、cov3248.128M，不重复GPU参考组。新增支持脚本/参数/权重和11保护树/资产有SHA守卫，Python语法、bash -n及源守卫已过preflight。
+
+查状态参考（不要重提）：qstat -fx 1528937 1528938 1528939 1528940。输出各case/result.json、episodes/*.jsonl与native/tb，汇总待真实结果完成；失败不能覆写已存在native目录，保留失败后另建attempt。
+
+
+覆盖256125952000训练参考（11月7日核验）：logs/training_readout_20261107/coverage256_125952000_training_reference.json固定原始全段CSV SHA并核对恰有同一步事件。保存点事件2026-10-31T08:49:54+08:00，原生50-update窗口SR82.714057/SPL45.822394%；(124952000,125952000]489点均值86.305267/49.184248%，(122952000,125952000]1465点88.232246/50.713232%。不是完整训练集离线评估；完整4200val87.571429/53.299601%来自已有result.json。训练reward日志不含探索bonus。
+
+
+<a id="coverage32-selected-eval-20261107"></a>
+## 覆盖32三个选点完整val（2026-11-07）
+
+支撑目录logs/gibson_coverage32_selected_eval_20261107。用11月7日13:06冻结CSV和已知事件边界增量补覆盖32至158801920，旧两段SHA验证、保存CSV和新字节偏移/长度/SHA于selection/candidates.json，共211保存点。选择76.288M续跑ckpt.54、125.952M ckpt.151、151.040M ckpt.200，具体理由/训练窗在selection/selected.json；中间点是相同步数参考，续跑历史不同不当纯算法因果对照。所有模型CPU实读step、103键形状/有限性和42 encoder相同验证见checkpoint_validation.json。
+
+已实际qsub（勿重提）：125952000→1528994 -q autox，76288000→1528995 -q auto，151040000→1528996 -q auto。共同evaluate.pbs用-v EVAL_CASE=coverage32_<step>和各目录-o选择固定输入，完整命令在submission.json；CFP04-SF-109，每份1A40/36CPU240GB/2h。当前两GPU队列用户运行名额各4/4，三新Q明确为运行上限，保留五训练和三Qwen验证，不为加速新任务中止原作业或移动已R任务。
+
+Native SIGN-coverage-eval @a7cc9e0、4200/14场景/6env/max500/seed100/hash0、原public safety；eval不用训练checkpoint配置，coverage bonus0，0.1m/3m/90°仅被动代理，不启Qwen。复用evaluator只改case断言、录数wrapper和protocol逐字节同既有完整val；输入/模型/11保护树/支持脚本有SHA守卫，Python compile/bash -n/guard通过preflight。
+
+CPU1528997 afterok:1528994:1528995:1528996，1CPU/6GB/10min，H正常依赖不可解除绕过。三成功后自动生成comparison.json/CSV并核对七组4200 task/goal/start，与既有coverage3248.128M、coverage256125.952/146.944M及baseline74.240M对照。除125.952M参考以外各组预算不同，参考组不重复GPU评估。qstat -fx 1528994 1528995 1528996 1528997仅为查询参考，不能据旧Q状态自动重复qsub。失败留存输出后另建attempt，不能覆写native目录。
+
+
+<a id="github-publication-20261107"></a>
+## 11月7日资料增量发布流程
+
+本批明确基点333b2aeb0903515c97a5b8a416bb3025a34518c3，独立SIGN-qwen-ablation-publication detached树，目标origin=git@github.com:yiichu03/SIGN.git的phase2/qwen-beta003-geometry128。四个continue-*源码分支已ls-remote核对与运行commit一致；资料提交不进入运行目录。已有worktree干净，旧manifest和WORKLOG前缀匹配后，使用logs/github_publication_20261107/publish_update.py构建新docs/experiments/qwen128-reward/ablations/progress_20261107，更新既有四根文档生成副本与导航。
+
+先--capture-only冻结PBS截面/已完成新评估/代码远端SHA，之后--tree SIGN-qwen-ablation-publication在独立staging里构建并核验，成功后仅安装README/docs变化；--check-only为本地或GitHub克隆的离线CPU核验，不依赖模型和GPU。脚本检查来源SHA/gzip、WORKLOG旧前缀、相对链接、已完成4200任务结果重算/配对、文件大小、敏感凭据形状和运行代码不变；旧日期输入和代码快照保留原位。此前的旧publish_readout.py仅--check-only复核，不重新运行其固定日期构建。
+
+新包含11月3日续跑/原训练尾段与共同预算、11月5/7日训练窗口、已完成完整val、新选点提交、全量失败诊断的报告/统计/选中案例图像和复现代码。65MB episodes JSON按文件确定性gzip，完整视频/RGB原始序列、checkpoint、TB二进制、场景/环境不上传。失败HTML生成明确去视频的资料版，原HTML另存.server.html，不能冒称相机证据全在GitHub。rootWORKLOG逐字节前缀保留、仅追加；其他根文档按映射转换本地证据链接或标记服务器来源。
+
+构建后需git diff --check、git diff --cached --check，核对只有README/docs；普通push HEAD到origin上述分支，绝不force或修改本地运行HEAD。最后ls-remote核对SHA，回执追加服务器WORKLOG，不为包含推送回执循环生成新提交。

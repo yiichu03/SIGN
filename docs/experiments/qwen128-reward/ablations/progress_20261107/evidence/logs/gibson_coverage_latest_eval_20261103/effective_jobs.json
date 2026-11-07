@@ -1,0 +1,42 @@
+{
+  "1511395.stdct-mgmt-02": {
+    "job_state": "R",
+    "queue": "batch_gpux",
+    "project": "CFP04-SF-109",
+    "comment": "Job run at Tue Nov 03 at 02:28 on (GN-A40-097[0]:ncpus=36:mem=240gb:ngpus=1)",
+    "depend": "beforeany:1511396.stdct-mgmt-02@stdct-mgmt-02,beforeok:1511411.stdct-mgmt-02@stdct-mgmt-02",
+    "Hold_Types": "n"
+  },
+  "1511396.stdct-mgmt-02": {
+    "job_state": "H",
+    "queue": "batch_gpux",
+    "project": "CFP04-SF-109",
+    "comment": null,
+    "depend": "afterany:1511395.stdct-mgmt-02@stdct-mgmt-02,beforeany:1511409.stdct-mgmt-02@stdct-mgmt-02:1511410.stdct-mgmt-02@stdct-mgmt-02,beforeok:1511411.stdct-mgmt-02@stdct-mgmt-02",
+    "Hold_Types": "d"
+  },
+  "1511409.stdct-mgmt-02": {
+    "job_state": "H",
+    "queue": "batch_cpu",
+    "project": "CFP04-SF-109",
+    "comment": null,
+    "depend": "afterany:1511396.stdct-mgmt-02@stdct-mgmt-02",
+    "Hold_Types": "d"
+  },
+  "1511410.stdct-mgmt-02": {
+    "job_state": "H",
+    "queue": "batch_gpux",
+    "project": "CFP04-SF-109",
+    "comment": null,
+    "depend": "afterany:1511396.stdct-mgmt-02@stdct-mgmt-02",
+    "Hold_Types": "d"
+  },
+  "1511411.stdct-mgmt-02": {
+    "job_state": "H",
+    "queue": "batch_cpu",
+    "project": "CFP04-SF-109",
+    "comment": null,
+    "depend": "afterok:1511395.stdct-mgmt-02@stdct-mgmt-02:1511396.stdct-mgmt-02@stdct-mgmt-02",
+    "Hold_Types": "d"
+  }
+}

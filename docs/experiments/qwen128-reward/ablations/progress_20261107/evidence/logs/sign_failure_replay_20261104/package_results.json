@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-11-04T15:16:06+08:00",
+  "report": {
+    "path": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/failure_analysis_report.zip",
+    "bytes": 121625935,
+    "sha256": "e1386682262f95df1cc33ec7da0887128605d2c4e926ddcd3c12868fb9432805",
+    "files": 507
+  },
+  "evidence": {
+    "path": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/failure_analysis_evidence.zip",
+    "bytes": 1470229201,
+    "sha256": "57b3be244fd8823d408daaf9e04e838550a75d3b74f8dcadac9137ecb5d62e7b",
+    "files": 26585
+  },
+  "actual_report_unzip_passed": true,
+  "offline_html_local_links_verified": 269,
+  "archives_crc_passed": true
+}

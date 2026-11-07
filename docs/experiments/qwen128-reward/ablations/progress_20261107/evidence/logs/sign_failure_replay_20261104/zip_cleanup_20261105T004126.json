@@ -1,0 +1,18 @@
+{
+  "removed_at": "2026-11-05T00:41:26+08:00",
+  "reason": "Explicit user request: retain original report/data, generate ZIP only when needed",
+  "removed": [
+    {
+      "path": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/failure_analysis_report.zip",
+      "bytes": 121625935
+    },
+    {
+      "path": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/failure_analysis_evidence.zip",
+      "bytes": 1470229201
+    }
+  ],
+  "removed_bytes": 1591855136,
+  "archives_absent": true,
+  "original_report_and_raw_directories_present": true,
+  "prior_package_receipt": "package_results.json (historical creation/validation record; archives now removed)"
+}

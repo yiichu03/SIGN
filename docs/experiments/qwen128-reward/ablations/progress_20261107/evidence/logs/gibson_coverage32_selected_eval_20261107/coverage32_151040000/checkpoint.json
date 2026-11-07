@@ -1,0 +1,42 @@
+{
+  "step": 151040000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/ckpts/ckpt.200.pth",
+  "path": "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/checkpoints/coverage32_151040000.pth",
+  "sha256": "326a632eabd4dc42a85046027f1437bb75657e8f57219d1fa84b127a44fc6946",
+  "bytes": 10697509,
+  "checkpoint_index": 200,
+  "selection_reason": "Mature high SR/SPL interval: last1M90.13/53.71, native91.19/53.63, pre/post250k89.77/90.02 and SPL54.23/53.37; latest158.720M has already dropped locally and is not selected.",
+  "training_last1m": {
+    "lower_exclusive": 150040000,
+    "upper_inclusive": 151040000,
+    "points": 489,
+    "sr": 90.12531803917055,
+    "spl": 53.71481247231029
+  },
+  "training_last3m": {
+    "lower_exclusive": 148040000,
+    "upper_inclusive": 151040000,
+    "points": 1465,
+    "sr": 89.17771487919543,
+    "spl": 52.33124602166459
+  },
+  "training_native_at_checkpoint": {
+    "step": 151040000,
+    "sr": 91.18599891662598,
+    "spl": 53.63030433654785
+  },
+  "training_pre250k": {
+    "lower_exclusive": 150790000,
+    "upper_inclusive": 151040000,
+    "points": 123,
+    "sr": 89.7652216558534,
+    "spl": 54.2294244940688
+  },
+  "training_post250k": {
+    "lower_exclusive": 151040000,
+    "upper_inclusive": 151290000,
+    "points": 122,
+    "sr": 90.01780294004034,
+    "spl": 53.367395918877406
+  }
+}

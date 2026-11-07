@@ -1,0 +1,7 @@
+{
+  "existing_control_output_present": true,
+  "control_child_import_passed": true,
+  "diagnostic_child_import_passed": true,
+  "no_simulator_created": true,
+  "no_gpu_inference": true
+}

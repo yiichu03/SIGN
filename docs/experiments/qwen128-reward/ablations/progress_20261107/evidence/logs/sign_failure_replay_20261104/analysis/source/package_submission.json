@@ -1,0 +1,12 @@
+{
+  "submitted_at": "2026-11-04T15:11:46+08:00",
+  "command": [
+    "qsub",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/package.pbs.log",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/package.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1518613.stdct-mgmt-02",
+  "stderr": ""
+}

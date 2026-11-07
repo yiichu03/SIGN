@@ -1,0 +1,357 @@
+{
+  "created_at": "2026-11-05T14:14:36+08:00",
+  "selection_is_judgment_not_validated_prediction": true,
+  "no_new_pbs_submitted": true,
+  "reasoning": {
+    "first": "143.360M lies inside the high 143M plateau. Use its own and surrounding logs, not nearest to the maximum trailing-window timestamp, whose later checkpoint may already be descending.",
+    "second": "150.528M is a separate later high interval with both before/after context strong; optional after first, avoid large adjacent checkpoint sweep.",
+    "reserve": "105.984M is highest trailing1M saved checkpoint in original history, but trailing3M much lower and not a stable plateau.",
+    "not_prioritized": "Latest168.176M has last1M SR85.27/SPL48.11; adjacent147.456M adds less temporal separation from already evaluated146.944M."
+  },
+  "selected": [
+    {
+      "priority": 1,
+      "step": 143360000,
+      "phase": "continuation",
+      "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.33.pth",
+      "checkpoint_step_cpu_verified": true,
+      "sha256": "1f5f312fe66212c7cf47fb3f6bb705d09aa90849ed22bf79b2f74ebf1ea344f3",
+      "parameters_finite": true,
+      "last1m": {
+        "lower_exclusive": 142360000,
+        "upper_inclusive": 143360000,
+        "metrics/success": {
+          "mean": 0.901578004131044,
+          "min": 0.8504418730735779,
+          "max": 0.9351491332054138,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5333159273387464,
+          "min": 0.48353520035743713,
+          "max": 0.5673847198486328,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.824341991440162,
+          "min": 7.238722324371338,
+          "max": 8.177225112915039,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 15.640521285480274,
+          "min": 11.700258255004883,
+          "max": 19.264469146728516,
+          "points": 489
+        }
+      },
+      "last3m": {
+        "lower_exclusive": 140360000,
+        "upper_inclusive": 143360000,
+        "metrics/success": {
+          "mean": 0.8941967855134515,
+          "min": 0.8504418730735779,
+          "max": 0.9351491332054138,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.5175559043680849,
+          "min": 0.4714387059211731,
+          "max": 0.5673847198486328,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.741661081867413,
+          "min": 7.235680103302002,
+          "max": 8.194725036621094,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 14.924265642784562,
+          "min": 11.700258255004883,
+          "max": 19.264469146728516,
+          "points": 1465
+        }
+      },
+      "centered1m": {
+        "lower_exclusive": 142860000,
+        "upper_inclusive": 143860000,
+        "metrics/success": {
+          "mean": 0.9055182048879518,
+          "min": 0.8503775000572205,
+          "max": 0.9351491332054138,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5362403278823766,
+          "min": 0.4859045147895813,
+          "max": 0.5673847198486328,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.866379435564599,
+          "min": 7.294762134552002,
+          "max": 8.177225112915039,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 13.807085735422458,
+          "min": 8.854534149169922,
+          "max": 19.264469146728516,
+          "points": 489
+        }
+      },
+      "recommendation": "first"
+    },
+    {
+      "priority": 2,
+      "step": 150528000,
+      "phase": "continuation",
+      "checkpoint": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.47.pth",
+      "checkpoint_step_cpu_verified": true,
+      "sha256": "9a43d3e8b870a9594f1a7558fb073298c13cddb1c2c3bb1abe5f6ee8a3532579",
+      "parameters_finite": true,
+      "last1m": {
+        "lower_exclusive": 149528000,
+        "upper_inclusive": 150528000,
+        "metrics/success": {
+          "mean": 0.9041471199755289,
+          "min": 0.8681967258453369,
+          "max": 0.9367888569831848,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5391463346032764,
+          "min": 0.5078011155128479,
+          "max": 0.5665572285652161,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.855398175175204,
+          "min": 7.573904514312744,
+          "max": 8.126233100891113,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 13.506065425209716,
+          "min": 11.385890007019043,
+          "max": 15.808552742004395,
+          "points": 489
+        }
+      },
+      "last3m": {
+        "lower_exclusive": 147528000,
+        "upper_inclusive": 150528000,
+        "metrics/success": {
+          "mean": 0.8908888784284884,
+          "min": 0.8274672031402588,
+          "max": 0.9367888569831848,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.526703919729682,
+          "min": 0.4750434160232544,
+          "max": 0.5665572285652161,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.72903935364082,
+          "min": 7.010518550872803,
+          "max": 8.126233100891113,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 13.979896658028352,
+          "min": 10.559578895568848,
+          "max": 18.857362747192383,
+          "points": 1465
+        }
+      },
+      "centered1m": {
+        "lower_exclusive": 150028000,
+        "upper_inclusive": 151028000,
+        "metrics/success": {
+          "mean": 0.9061323417720132,
+          "min": 0.8848314881324768,
+          "max": 0.9367888569831848,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.531680443657444,
+          "min": 0.5054823160171509,
+          "max": 0.5613464713096619,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.869926288815364,
+          "min": 7.601312637329102,
+          "max": 8.116694450378418,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 13.555240820278176,
+          "min": 10.827926635742188,
+          "max": 15.559569358825684,
+          "points": 489
+        }
+      },
+      "recommendation": "optional_second"
+    },
+    {
+      "priority": 3,
+      "step": 105984000,
+      "phase": "original",
+      "checkpoint": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.206.pth",
+      "checkpoint_step_cpu_verified": true,
+      "sha256": "c4e6944cb9f73169f2cda1e2c57df05501b2ca1e16e7944efc84022ef3c1ead4",
+      "parameters_finite": true,
+      "last1m": {
+        "lower_exclusive": 104984000,
+        "upper_inclusive": 105984000,
+        "metrics/success": {
+          "mean": 0.9171704326914376,
+          "min": 0.883013904094696,
+          "max": 0.939306378364563,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5339503987922747,
+          "min": 0.5131814479827881,
+          "max": 0.5598480701446533,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.91332499478736,
+          "min": 7.540380954742432,
+          "max": 8.20682430267334,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 14.871023698818464,
+          "min": 11.4955472946167,
+          "max": 18.107561111450195,
+          "points": 489
+        }
+      },
+      "last3m": {
+        "lower_exclusive": 102984000,
+        "upper_inclusive": 105984000,
+        "metrics/success": {
+          "mean": 0.8746822754270794,
+          "min": 0.7950310707092285,
+          "max": 0.939306378364563,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.49853291436266983,
+          "min": 0.43832236528396606,
+          "max": 0.5598480701446533,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.478082248049791,
+          "min": 6.7094621658325195,
+          "max": 8.20682430267334,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 16.17591174063829,
+          "min": 11.4955472946167,
+          "max": 21.428571701049805,
+          "points": 1465
+        }
+      },
+      "centered1m": {
+        "lower_exclusive": 105484000,
+        "upper_inclusive": 106484000,
+        "metrics/success": {
+          "mean": 0.8990110050437397,
+          "min": 0.8506588339805603,
+          "max": 0.939306378364563,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5130922898558751,
+          "min": 0.48101434111595154,
+          "max": 0.541928231716156,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.773158792093975,
+          "min": 7.301860809326172,
+          "max": 8.20682430267334,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 16.251522503016187,
+          "min": 12.226040840148926,
+          "max": 19.08130645751953,
+          "points": 489
+        }
+      },
+      "recommendation": "reserve_only_shorter_peak"
+    }
+  ],
+  "latest_log": {
+    "first_step": 125954048,
+    "last_step": 168175616,
+    "last_event_at": "2026-11-05T14:12:36+08:00",
+    "last1m": {
+      "lower_exclusive": 167175616,
+      "upper_inclusive": 168175616,
+      "metrics/success": {
+        "mean": 0.852706132612833,
+        "min": 0.8221529126167297,
+        "max": 0.8882602453231812,
+        "points": 489
+      },
+      "metrics/spl": {
+        "mean": 0.48109035306669207,
+        "min": 0.44297459721565247,
+        "max": 0.5155999660491943,
+        "points": 489
+      },
+      "reward": {
+        "mean": 7.249027963064931,
+        "min": 6.990858554840088,
+        "max": 7.590272426605225,
+        "points": 489
+      },
+      "metrics/collisions.count": {
+        "mean": 14.765862345939277,
+        "min": 12.899773597717285,
+        "max": 16.72157096862793,
+        "points": 489
+      }
+    },
+    "last3m": {
+      "lower_exclusive": 165175616,
+      "upper_inclusive": 168175616,
+      "metrics/success": {
+        "mean": 0.8716794444432437,
+        "min": 0.8221529126167297,
+        "max": 0.9276270270347595,
+        "points": 1465
+      },
+      "metrics/spl": {
+        "mean": 0.49006418402691343,
+        "min": 0.44297459721565247,
+        "max": 0.5433081984519958,
+        "points": 1465
+      },
+      "reward": {
+        "mean": 7.498396853944954,
+        "min": 6.990858554840088,
+        "max": 8.222046852111816,
+        "points": 1465
+      },
+      "metrics/collisions.count": {
+        "mean": 15.304944967328485,
+        "min": 11.990970611572266,
+        "max": 21.688058853149414,
+        "points": 1465
+      }
+    }
+  },
+  "definitions": "last1m/last3m are means of overlapping native50-update training log points in (checkpoint-width,checkpoint]. centered1m is retrospective (checkpoint-500k,checkpoint+500k], not future information available at checkpoint creation. Separate phases do not bridge optimizer/environment resets."
+}

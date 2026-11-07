@@ -1,0 +1,139 @@
+{
+  "short_job": "1511108.stdct-mgmt-02",
+  "cases": {
+    "A": {
+      "job_id": "1511143.stdct-mgmt-02",
+      "command": [
+        "qsub",
+        "-N",
+        "cont-A",
+        "-l",
+        "walltime=127:34:34",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/A/train.pbs.log",
+        "-v",
+        "CONT_CASE=A",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/formal.pbs"
+      ],
+      "walltime": "127:34:34",
+      "old_used_seconds": 141926,
+      "verification_reserve_seconds": 3600,
+      "formal_max_seconds": 459274,
+      "cumulative_start_step": 8192000,
+      "output": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train",
+      "submitted_at": "2026-11-03T01:34:26+08:00"
+    },
+    "C": {
+      "job_id": "1511144.stdct-mgmt-02",
+      "command": [
+        "qsub",
+        "-N",
+        "cont-C",
+        "-l",
+        "walltime=127:34:33",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/C/train.pbs.log",
+        "-v",
+        "CONT_CASE=C",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/formal.pbs"
+      ],
+      "walltime": "127:34:33",
+      "old_used_seconds": 141927,
+      "verification_reserve_seconds": 3600,
+      "formal_max_seconds": 459273,
+      "cumulative_start_step": 22528000,
+      "output": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train",
+      "submitted_at": "2026-11-03T01:34:26+08:00"
+    },
+    "qwen01": {
+      "job_id": "1511145.stdct-mgmt-02",
+      "command": [
+        "qsub",
+        "-N",
+        "cont-qwen01",
+        "-l",
+        "walltime=125:30:01",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/qwen01/train.pbs.log",
+        "-v",
+        "CONT_CASE=qwen01",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/formal.pbs"
+      ],
+      "walltime": "125:30:01",
+      "old_used_seconds": 149399,
+      "verification_reserve_seconds": 3600,
+      "formal_max_seconds": 451801,
+      "cumulative_start_step": 8704000,
+      "output": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train",
+      "submitted_at": "2026-11-03T01:34:26+08:00"
+    },
+    "coverage256": {
+      "job_id": "1511146.stdct-mgmt-02",
+      "command": [
+        "qsub",
+        "-N",
+        "cont-cov256",
+        "-l",
+        "walltime=68:03:22",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/coverage256/train.pbs.log",
+        "-v",
+        "CONT_CASE=coverage256",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/formal.pbs"
+      ],
+      "walltime": "68:03:22",
+      "old_used_seconds": 356198,
+      "verification_reserve_seconds": 3600,
+      "formal_max_seconds": 245002,
+      "cumulative_start_step": 125952000,
+      "output": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train",
+      "submitted_at": "2026-11-03T01:34:26+08:00"
+    },
+    "coverage32": {
+      "job_id": "1511147.stdct-mgmt-02",
+      "command": [
+        "qsub",
+        "-N",
+        "cont-cov32",
+        "-l",
+        "walltime=99:28:14",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/coverage32/train.pbs.log",
+        "-v",
+        "CONT_CASE=coverage32",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/formal.pbs"
+      ],
+      "walltime": "99:28:14",
+      "old_used_seconds": 243106,
+      "verification_reserve_seconds": 3600,
+      "formal_max_seconds": 358094,
+      "cumulative_start_step": 48128000,
+      "output": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train",
+      "submitted_at": "2026-11-03T01:34:26+08:00"
+    },
+    "B": {
+      "job_id": "1511148.stdct-mgmt-02",
+      "command": [
+        "qsub",
+        "-N",
+        "cont-B",
+        "-l",
+        "walltime=127:34:32",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/B/train.pbs.log",
+        "-v",
+        "CONT_CASE=B",
+        "/scratch/e1538633/liuyi/logs/training_continuation_20261103/formal.pbs"
+      ],
+      "walltime": "127:34:32",
+      "old_used_seconds": 141928,
+      "verification_reserve_seconds": 3600,
+      "formal_max_seconds": 459272,
+      "cumulative_start_step": 8704000,
+      "output": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train",
+      "submitted_at": "2026-11-03T01:34:27+08:00"
+    }
+  },
+  "budget_rule": "Each formal walltime = original168h - previousPBSused - 1h reserved verification. This is a conservative cap; 1h is not claimed actual consumption.",
+  "legacy_resume_caveat": "All model weights/counters restored; optimizer/episodes/RNG reset. Not an exact trajectory resume."
+}

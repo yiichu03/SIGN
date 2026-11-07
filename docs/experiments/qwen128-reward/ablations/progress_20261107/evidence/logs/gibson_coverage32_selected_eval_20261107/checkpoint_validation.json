@@ -1,0 +1,23 @@
+{
+  "coverage32_76288000": {
+    "actual_step_cpu": 76288000,
+    "all_parameters_finite": true,
+    "native_keys_and_shapes_exact_match": 103,
+    "frozen_encoder_items_unchanged": 42,
+    "sha256": "e6a36564d1ee5bbbc690131a0463482f94776be533c57c29bbca82e17bb78035"
+  },
+  "coverage32_125952000": {
+    "actual_step_cpu": 125952000,
+    "all_parameters_finite": true,
+    "native_keys_and_shapes_exact_match": 103,
+    "frozen_encoder_items_unchanged": 42,
+    "sha256": "df6fa637117a45b5822c3dd6394735175705f647df82d975fd291e3a692ccbfa"
+  },
+  "coverage32_151040000": {
+    "actual_step_cpu": 151040000,
+    "all_parameters_finite": true,
+    "native_keys_and_shapes_exact_match": 103,
+    "frozen_encoder_items_unchanged": 42,
+    "sha256": "326a632eabd4dc42a85046027f1437bb75657e8f57219d1fa84b127a44fc6946"
+  }
+}

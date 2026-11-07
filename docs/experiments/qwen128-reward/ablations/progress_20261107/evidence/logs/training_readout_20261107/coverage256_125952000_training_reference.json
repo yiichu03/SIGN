@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-11-07T13:35:58+08:00",
+  "checkpoint_step": 125952000,
+  "phase": "Original coverage256 training, before weights continuation",
+  "source": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/original_selected_scalars.csv",
+  "source_sha256": "189e11021f9533be6b9b5484692d605a4f6fffb013b9fcc47a9599bf21923711",
+  "metrics": {
+    "metrics/success": {
+      "native_step": 125952000,
+      "native_value": 0.8271405696868896,
+      "event_at": "2026-10-31T08:49:54+08:00",
+      "1000000": {
+        "mean": 0.8630526655778319,
+        "points": 489,
+        "lower_exclusive": 124952000,
+        "upper_inclusive": 125952000
+      },
+      "3000000": {
+        "mean": 0.8823224641764124,
+        "points": 1465,
+        "lower_exclusive": 122952000,
+        "upper_inclusive": 125952000
+      }
+    },
+    "metrics/spl": {
+      "native_step": 125952000,
+      "native_value": 0.45822393894195557,
+      "event_at": "2026-10-31T08:49:54+08:00",
+      "1000000": {
+        "mean": 0.4918424757711726,
+        "points": 489,
+        "lower_exclusive": 124952000,
+        "upper_inclusive": 125952000
+      },
+      "3000000": {
+        "mean": 0.5071323154729381,
+        "points": 1465,
+        "lower_exclusive": 122952000,
+        "upper_inclusive": 125952000
+      }
+    },
+    "reward": {
+      "native_step": 125952000,
+      "native_value": 6.950323104858398,
+      "event_at": "2026-10-31T08:49:54+08:00",
+      "1000000": {
+        "mean": 7.493460879491638,
+        "points": 489,
+        "lower_exclusive": 124952000,
+        "upper_inclusive": 125952000
+      },
+      "3000000": {
+        "mean": 7.66963118074697,
+        "points": 1465,
+        "lower_exclusive": 122952000,
+        "upper_inclusive": 125952000
+      }
+    },
+    "metrics/collisions.count": {
+      "native_step": 125952000,
+      "native_value": 17.194669723510742,
+      "event_at": "2026-10-31T08:49:54+08:00",
+      "1000000": {
+        "mean": 14.01753410581187,
+        "points": 489,
+        "lower_exclusive": 124952000,
+        "upper_inclusive": 125952000
+      },
+      "3000000": {
+        "mean": 14.273850988446648,
+        "points": 1465,
+        "lower_exclusive": 122952000,
+        "upper_inclusive": 125952000
+      }
+    }
+  },
+  "semantics": "Native point is an existing50-update training episode-window statistic.1M/3M are averages of overlapping native logging points, not independent/full-training-set evaluation. Reward is original navigation reward only.",
+  "full_validation": {
+    "training_step": 125952000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.8757142857142857,
+    "spl": 0.5329960106555678
+  },
+  "validation_source": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256/result.json"
+}

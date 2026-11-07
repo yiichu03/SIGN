@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-07T13:41:35+08:00",
+  "source_and_input_guard_passed": true,
+  "protected_trees": 11,
+  "python_shell_syntax_passed": true,
+  "native_evaluator_only_case_names_changed": true,
+  "recording_wrapper_and_protocol_identical": true,
+  "all_curve_values_finite": true,
+  "all3_saved_weights_cpu_loaded": true,
+  "keys103_shapes_and42_frozen_encoder_items_match": true,
+  "selection_step_spacing_and_anchor_explicit": true
+}

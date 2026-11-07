@@ -1,0 +1,31 @@
+{
+  "Job_Name": "sign-diag-zip",
+  "job_state": "F",
+  "queue": "batch_cpu",
+  "project": "CFP04-SF-109",
+  "Resource_List": {
+    "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 4.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+    "mem": "27gb",
+    "ncpus": 4,
+    "ngpus": 0,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 1,
+    "select": "1:ncpus=4:mem=27GB",
+    "walltime": "01:00:00"
+  },
+  "resources_used": {
+    "cpupercent": 20,
+    "cput": "00:00:28",
+    "mem": "251520kb",
+    "ncpus": 4,
+    "ngpus": 0,
+    "vmem": "531828kb",
+    "walltime": "00:04:11"
+  },
+  "stime": "Wed Nov  4 15:11:48 2026",
+  "obittime": "Wed Nov  4 15:16:08 2026",
+  "Exit_status": 0,
+  "comment": "Job run at Wed Nov 04 at 15:11 on (CN-017[1]:ncpus=4:mem=27gb) and finished",
+  "Submit_arguments": "-o /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/package.pbs.log /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/package.pbs"
+}

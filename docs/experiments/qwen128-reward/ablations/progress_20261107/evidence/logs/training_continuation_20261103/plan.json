@@ -1,0 +1,77 @@
+{
+  "coverage256": {
+    "tree": "/scratch/e1538633/liuyi/SIGN-continue-coverage256",
+    "old_job": "1497416",
+    "old_output": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.245.pth",
+    "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "start_step": 125952000,
+    "old_used_seconds": 356198,
+    "remaining_budget_seconds": 248602,
+    "exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,rollout_coverage,continuation",
+    "extra_options": []
+  },
+  "coverage32": {
+    "tree": "/scratch/e1538633/liuyi/SIGN-continue-coverage32",
+    "old_job": "1502352",
+    "old_output": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts/ckpt.93.pth",
+    "checkpoint_sha256": "1ae1ad338a6f40d0bc0325f64e1dfa9bc12ae2de6da47778b440bcc55593471e",
+    "start_step": 48128000,
+    "old_used_seconds": 243106,
+    "remaining_budget_seconds": 361694,
+    "exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,rollout_coverage,continuation",
+    "extra_options": [
+      "habitat.task.observed_coverage.settlement_interval",
+      "32"
+    ]
+  },
+  "qwen01": {
+    "tree": "/scratch/e1538633/liuyi/SIGN-continue-qwen128",
+    "old_job": "1507268",
+    "old_output": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/ckpts/ckpt.16.pth",
+    "checkpoint_sha256": "e046970e7e9bb2990a9ad499cf1e66a288f7f21aa90eae71c5d10e77caaf8317",
+    "start_step": 8704000,
+    "old_used_seconds": 149399,
+    "remaining_budget_seconds": 455401,
+    "exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,qwen_reward,continuation",
+    "extra_options": []
+  },
+  "A": {
+    "tree": "/scratch/e1538633/liuyi/SIGN-continue-ablation",
+    "old_job": "1507648",
+    "old_output": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/A/train",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/A/train/ckpts/ckpt.15.pth",
+    "checkpoint_sha256": "4cdcf0bb7ca1f651cabbe98c43cf0852461fb0db764b6be5c1932322de5f2ad9",
+    "start_step": 8192000,
+    "old_used_seconds": 141926,
+    "remaining_budget_seconds": 462874,
+    "exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,qwen_reward,qwen_a128,continuation",
+    "extra_options": []
+  },
+  "B": {
+    "tree": "/scratch/e1538633/liuyi/SIGN-continue-ablation",
+    "old_job": "1507651",
+    "old_output": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/ckpts/ckpt.16.pth",
+    "checkpoint_sha256": "67e1e6aa1bd1ec9ce819ffd3ac348bc4acff62923255dba582d14ef79e2b2214",
+    "start_step": 8704000,
+    "old_used_seconds": 141928,
+    "remaining_budget_seconds": 462872,
+    "exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,qwen_reward,qwen_b256,continuation",
+    "extra_options": []
+  },
+  "C": {
+    "tree": "/scratch/e1538633/liuyi/SIGN-continue-ablation",
+    "old_job": "1507650",
+    "old_output": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/C/train",
+    "checkpoint": "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/C/train/ckpts/ckpt.43.pth",
+    "checkpoint_sha256": "55ae7e81f1cc39953f835a0d27275b7a572e96ce8a282e7f5c47f0310c5355d3",
+    "start_step": 22528000,
+    "old_used_seconds": 141927,
+    "remaining_budget_seconds": 462873,
+    "exp_config": "exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,qwen_reward,geometry_c128,continuation",
+    "extra_options": []
+  }
+}

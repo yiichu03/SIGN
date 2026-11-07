@@ -1,0 +1,42 @@
+{
+  "step": 29696000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.40.pth",
+  "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/B_29696000.pth",
+  "sha256": "fd441190fc2a917a130b08bc96e3addf6b20ef34067dd25316431b76b495f814",
+  "bytes": 10696837,
+  "selection_reason": "Balanced SR/SPL plateau with strongest trailing3M SR among saved candidates, pre/post250k SR89.33/88.02 and SPL52.30/52.59; avoids the later declining state.",
+  "training_last1m": {
+    "lower_exclusive": 28696000,
+    "upper_inclusive": 29696000,
+    "points": 489,
+    "sr": 88.42622446380022,
+    "spl": 51.47397551677953
+  },
+  "training_last3m": {
+    "lower_exclusive": 26696000,
+    "upper_inclusive": 29696000,
+    "points": 1465,
+    "sr": 88.32468939722602,
+    "spl": 49.939601317607504
+  },
+  "training_native_at_checkpoint": {
+    "step": 29696000,
+    "sr": 87.43961453437805,
+    "spl": 51.48068070411682
+  },
+  "training_pre250k": {
+    "lower_exclusive": 29446000,
+    "upper_inclusive": 29696000,
+    "points": 123,
+    "sr": 89.32584611380973,
+    "spl": 52.295096812209465
+  },
+  "training_post250k": {
+    "lower_exclusive": 29696000,
+    "upper_inclusive": 29946000,
+    "points": 122,
+    "sr": 88.02340568089095,
+    "spl": 52.591800591984736
+  },
+  "selection_uses_training_only": true
+}

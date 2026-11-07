@@ -1,0 +1,32 @@
+{
+  "Job_Name": "sign-diag-32",
+  "job_state": "F",
+  "queue": "batch_gpu",
+  "project": "CFP04-SF-109",
+  "Resource_List": {
+    "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 14400, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+    "mem": "240gb",
+    "ncpus": 36,
+    "ngpus": 1,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 1,
+    "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+    "walltime": "04:00:00"
+  },
+  "resources_used": {
+    "cpupercent": 214,
+    "cput": "01:54:37",
+    "gpu_usage": "GN-A40-023(cuda.0.energyConsumed=7541J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=4%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=3652s, cuda.0.usagePerc=9.846%, cuda.0.memUsagePerc=1.958%)",
+    "mem": "6914764kb",
+    "ncpus": 36,
+    "ngpus": 0,
+    "vmem": "66009672kb",
+    "walltime": "01:01:52"
+  },
+  "stime": "Wed Nov  4 13:47:33 2026",
+  "obittime": "Wed Nov  4 14:49:30 2026",
+  "Exit_status": 0,
+  "comment": "Job run at Wed Nov 04 at 13:47 on (GN-A40-023[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+  "Submit_arguments": "-N sign-diag-32 -q auto -P CFP04-SF-109 -l walltime=04:00:00 -l select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40 -o /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full_coverage32.pbs.log -v DIAG_CASE=coverage32 -W depend=afterany:1518132.stdct-mgmt-02 /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full.pbs"
+}

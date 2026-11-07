@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-11-05T14:20:33+08:00",
+  "gpu_jobs": [
+    {
+      "step": 143360000,
+      "case": "coverage143360000",
+      "submitted_at": "2026-11-05T14:20:33+08:00",
+      "command": [
+        "qsub",
+        "-N",
+        "val-cov143360",
+        "-v",
+        "EVAL_CASE=coverage143360000",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/coverage143360000/evaluate.pbs.log",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/evaluate.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1523189.stdct-mgmt-02\n",
+      "stderr": "",
+      "job_id": "1523189.stdct-mgmt-02"
+    },
+    {
+      "step": 150528000,
+      "case": "coverage150528000",
+      "submitted_at": "2026-11-05T14:20:34+08:00",
+      "command": [
+        "qsub",
+        "-N",
+        "val-cov150528",
+        "-v",
+        "EVAL_CASE=coverage150528000",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/coverage150528000/evaluate.pbs.log",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/evaluate.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1523190.stdct-mgmt-02\n",
+      "stderr": "",
+      "job_id": "1523190.stdct-mgmt-02"
+    }
+  ],
+  "training_jobs_paused": [],
+  "summary_job": {
+    "submitted_at": "2026-11-05T14:20:34+08:00",
+    "command": [
+      "qsub",
+      "-W",
+      "depend=afterok:1523189.stdct-mgmt-02:1523190.stdct-mgmt-02",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/summarize.pbs.log",
+      "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/summarize.pbs"
+    ],
+    "returncode": 0,
+    "stdout": "1523191.stdct-mgmt-02\n",
+    "stderr": "",
+    "job_id": "1523191.stdct-mgmt-02"
+  }
+}

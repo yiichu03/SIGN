@@ -1,0 +1,93 @@
+{
+  "created_at": "2026-11-07T13:42:08+08:00",
+  "gpu_jobs": [
+    {
+      "case": "coverage32_125952000",
+      "step": 125952000,
+      "requested_queue": "autox",
+      "submitted_at": "2026-11-07T13:42:09+08:00",
+      "command": [
+        "qsub",
+        "-q",
+        "autox",
+        "-N",
+        "cov32-125952",
+        "-v",
+        "EVAL_CASE=coverage32_125952000",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/coverage32_125952000/evaluate.pbs.log",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/evaluate.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1528994.stdct-mgmt-02\n",
+      "stderr": "",
+      "job_id": "1528994.stdct-mgmt-02"
+    },
+    {
+      "case": "coverage32_76288000",
+      "step": 76288000,
+      "requested_queue": "auto",
+      "submitted_at": "2026-11-07T13:42:09+08:00",
+      "command": [
+        "qsub",
+        "-q",
+        "auto",
+        "-N",
+        "cov32-76288",
+        "-v",
+        "EVAL_CASE=coverage32_76288000",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/coverage32_76288000/evaluate.pbs.log",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/evaluate.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1528995.stdct-mgmt-02\n",
+      "stderr": "",
+      "job_id": "1528995.stdct-mgmt-02"
+    },
+    {
+      "case": "coverage32_151040000",
+      "step": 151040000,
+      "requested_queue": "auto",
+      "submitted_at": "2026-11-07T13:42:09+08:00",
+      "command": [
+        "qsub",
+        "-q",
+        "auto",
+        "-N",
+        "cov32-151040",
+        "-v",
+        "EVAL_CASE=coverage32_151040000",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/coverage32_151040000/evaluate.pbs.log",
+        "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/evaluate.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1528996.stdct-mgmt-02\n",
+      "stderr": "",
+      "job_id": "1528996.stdct-mgmt-02"
+    }
+  ],
+  "training_jobs_paused": [],
+  "existing_qwen_eval_jobs_unchanged": [
+    "1528937",
+    "1528938",
+    "1528939",
+    "1528940"
+  ],
+  "summary_job": {
+    "submitted_at": "2026-11-07T13:42:09+08:00",
+    "command": [
+      "qsub",
+      "-W",
+      "depend=afterok:1528994.stdct-mgmt-02:1528995.stdct-mgmt-02:1528996.stdct-mgmt-02",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/summarize.pbs.log",
+      "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/summarize.pbs"
+    ],
+    "returncode": 0,
+    "stdout": "1528997.stdct-mgmt-02\n",
+    "stderr": "",
+    "job_id": "1528997.stdct-mgmt-02"
+  }
+}

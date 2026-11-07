@@ -1,0 +1,146 @@
+{
+  "coverage256": {
+    "step": 172599296,
+    "event_at": "2026-11-05T21:45:14+08:00",
+    "sr": 87.79712430294794,
+    "spl": 50.60186690226167,
+    "sr_delta_previous1m": 1.281519867038952,
+    "sr_3m": 86.81032160850108,
+    "spl_3m": 49.29551630500234,
+    "state": "F",
+    "remaining_hours": 0.0,
+    "seconds_per_rollout": 10.728068709373474,
+    "ledger": null,
+    "mixed_error": null
+  },
+  "coverage32": {
+    "step": 158072832,
+    "event_at": "2026-11-07T13:06:01+08:00",
+    "sr": 89.55216282228264,
+    "spl": 52.59290386928372,
+    "sr_delta_previous1m": 0.7076365685198454,
+    "sr_3m": 88.59552736168429,
+    "spl_3m": 51.40283364484741,
+    "state": "R",
+    "remaining_hours": 14.105833333333333,
+    "seconds_per_rollout": 5.213878154754639,
+    "ledger": null,
+    "mixed_error": null
+  },
+  "qwen01": {
+    "step": 29427712,
+    "event_at": "2026-11-07T13:06:07+08:00",
+    "sr": 86.26460248951045,
+    "spl": 49.169454709883844,
+    "sr_delta_previous1m": 0.5991070278940924,
+    "sr_3m": 85.85377824998146,
+    "spl_3m": 47.94730304654548,
+    "state": "R",
+    "remaining_hours": 18.075833333333332,
+    "seconds_per_rollout": 36.153343200683594,
+    "ledger": {
+      "valid_fraction": 0.9496579381929701,
+      "invalid_reasons": {
+        "episode_height_range_exceeds_fixed_floor": 1023,
+        "fog_origin_farther_than_5cm_from_navmesh": 44
+      },
+      "new_area_per_valid_action": 0.1656153406854058,
+      "bonus_per_rollout": 0.4698403281478716,
+      "q_mean_per_rollout": 0.631987382136579,
+      "timing_means": {
+        "geometry_seconds": 9.642401048209273,
+        "render_seconds": 7.692877491091898,
+        "worker_seconds": 9.97943433749576,
+        "total_seconds": 17.689614202883398
+      }
+    },
+    "mixed_error": 5.361791623498258e-05
+  },
+  "A": {
+    "step": 36415488,
+    "event_at": "2026-11-07T13:05:56+08:00",
+    "sr": 88.39899374663464,
+    "spl": 52.706619877756744,
+    "sr_delta_previous1m": 1.679366654515519,
+    "sr_3m": 86.56897088366564,
+    "spl_3m": 50.85658508559543,
+    "state": "R",
+    "remaining_hours": 20.068055555555556,
+    "seconds_per_rollout": 27.358436584472656,
+    "ledger": {
+      "valid_fraction": 0.9534629570602432,
+      "invalid_reasons": {
+        "episode_height_range_exceeds_fixed_floor": 989,
+        "fog_origin_farther_than_5cm_from_navmesh": 33
+      },
+      "new_area_per_valid_action": 0.18582365122238187,
+      "bonus_per_rollout": 0.1441015282959206,
+      "q_mean_per_rollout": 0.6383067474395703,
+      "timing_means": {
+        "geometry_seconds": 5.691287952495128,
+        "render_seconds": 5.54061913674334,
+        "worker_seconds": 10.146421995220477,
+        "total_seconds": 15.70135747658335
+      }
+    },
+    "mixed_error": 5.383700168334893e-05
+  },
+  "B": {
+    "step": 31778816,
+    "event_at": "2026-11-07T13:06:22+08:00",
+    "sr": 87.53348263494807,
+    "spl": 49.57855554080448,
+    "sr_delta_previous1m": -0.29583565346027285,
+    "sr_3m": 87.96273533801576,
+    "spl_3m": 50.49674726183504,
+    "state": "R",
+    "remaining_hours": 42.22277777777778,
+    "seconds_per_rollout": 27.622379064559937,
+    "ledger": {
+      "valid_fraction": 0.9397186471116432,
+      "invalid_reasons": {
+        "episode_height_range_exceeds_fixed_floor": 956,
+        "fog_origin_farther_than_5cm_from_navmesh": 51
+      },
+      "new_area_per_valid_action": 0.17830279903277324,
+      "bonus_per_rollout": 0.14133349178229315,
+      "q_mean_per_rollout": 0.6604839726210784,
+      "timing_means": {
+        "geometry_seconds": 6.272678660458584,
+        "render_seconds": 4.7626731387585455,
+        "worker_seconds": 7.841723631620112,
+        "total_seconds": 12.615043012318768
+      }
+    },
+    "mixed_error": 6.522598027450255e-05
+  },
+  "C": {
+    "step": 75855872,
+    "event_at": "2026-11-07T13:06:26+08:00",
+    "sr": 88.96528075321564,
+    "spl": 52.41901802017157,
+    "sr_delta_previous1m": 1.5665699063146974,
+    "sr_3m": 87.5219976413779,
+    "spl_3m": 50.06587742742011,
+    "state": "R",
+    "remaining_hours": 21.441944444444445,
+    "seconds_per_rollout": 14.537362813949585,
+    "ledger": {
+      "valid_fraction": 0.9624339317695365,
+      "invalid_reasons": {
+        "episode_height_range_exceeds_fixed_floor": 825,
+        "fog_origin_farther_than_5cm_from_navmesh": 35
+      },
+      "new_area_per_valid_action": 0.18703775032175307,
+      "bonus_per_rollout": 0.411575863201204,
+      "q_mean_per_rollout": null,
+      "timing_means": {
+        "geometry_seconds": 6.5177408401111085,
+        "render_seconds": 0.0,
+        "worker_seconds": 0.0,
+        "total_seconds": 0.0020425896528595963
+      }
+    },
+    "mixed_error": 6.538319911952861e-05
+  }
+}

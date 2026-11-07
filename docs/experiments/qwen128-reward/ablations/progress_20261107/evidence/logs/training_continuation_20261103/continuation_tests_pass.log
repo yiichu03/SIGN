@@ -1,0 +1,13 @@
+test_bad_sha_does_not_change_model (test_training_continuation.ContinuationTests) ... ok
+test_disabled_leaves_original_behavior (test_training_continuation.ContinuationTests) ... ok
+test_encoder_change_and_wrong_keys_are_rejected (test_training_continuation.ContinuationTests) ... ok
+test_future_optimizer_and_qc_state_round_trip (test_training_continuation.ContinuationTests) ... ok
+test_invalid_step_and_nonfinite_are_rejected (test_training_continuation.ContinuationTests) ... ok
+test_legacy_requires_explicit_opt_in (test_training_continuation.ContinuationTests) ... ok
+test_legacy_restores_all_weights_global_counters_and_freeze (test_training_continuation.ContinuationTests) ... ok
+test_mrq_cutoff_and_short_limit_keep_global_300m_cap (test_training_continuation.ContinuationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.282s
+
+OK

@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-11-04T14:38:45+08:00",
+  "purpose": "CPU analysis frozen before launch; original predeclared rules unchanged, supplemental audits explicitly marked",
+  "files": {
+    "analyze.py": "c5965ecdec26bf53721f99806f373d3ade2ad1c499120af825d94d298c8c69b0",
+    "report.py": "76c34a41938e881e2f9348781047f9fb93a5fe7b30bf1c3909f7523f44ee936a",
+    "test_analysis.py": "1b4a99fb54069e90cae0b10233bd37bba711480c0a1418c991cc10772e8badf1",
+    "analysis_rules.json": "a71553a5dde53d995a765323f35c28e9a706ea166510e10552fa7acc8e159f0c",
+    "analyze.pbs": "ac8f6655d2b7699750fea60405d3a9da7f8ea960c0e6ac6cef9c49caea8170b8",
+    "contact_sheets.py": "f986be6cc6c5401191dc7dbc80543e8de38d93f128011cb7c4c4d695ae12a6b8"
+  }
+}

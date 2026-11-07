@@ -1,0 +1,8 @@
+{
+  "last_tensorboard_step": 22827008,
+  "rollback_checkpoint_step": 22528000,
+  "completed_logged_steps_discarded": 299008,
+  "last_console_step": 22814720,
+  "formal_checkpoint_files_saved": 0,
+  "scalars_finite": true
+}

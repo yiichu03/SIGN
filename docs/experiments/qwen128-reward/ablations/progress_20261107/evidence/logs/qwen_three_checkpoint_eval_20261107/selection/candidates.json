@@ -1,0 +1,4877 @@
+{
+  "created_at": "2026-11-07T13:16:55+08:00",
+  "rules": "Use saved continuation checkpoints with full3M within-phase history. Compare trailing1M/3M SR and SPL plus actual checkpoint and nearby250k windows; no validation scores used for selection. Step mapping is provisional until selected weights are CPU-loaded.",
+  "sources": [
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/qwen01_selected_scalars.csv",
+      "sha256": "546e2c5c19a3139f0890760d344f539edb9fd264dfe278f8d10e3c9e75338275"
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/A_selected_scalars.csv",
+      "sha256": "9e91e8bacc78db99eadb4c422c577b83f2979c11d5a0435b02ccbed1e99c2034"
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/B_selected_scalars.csv",
+      "sha256": "0fd8de8b432d50a7eda6033116bd3e9768ee5acd65e2d6998a63159bc6b84c90"
+    }
+  ],
+  "candidates": [
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.5.pth",
+      "index": 5,
+      "step": 11776000,
+      "last1m": {
+        "lower_exclusive": 10776000,
+        "upper_inclusive": 11776000,
+        "points": 489,
+        "sr": 85.0038957010749,
+        "spl": 47.92480248127491
+      },
+      "last3m": {
+        "lower_exclusive": 8776000,
+        "upper_inclusive": 11776000,
+        "points": 1465,
+        "sr": 84.33396843106267,
+        "spl": 47.412178158353214
+      },
+      "pre250k": {
+        "lower_exclusive": 11526000,
+        "upper_inclusive": 11776000,
+        "points": 123,
+        "sr": 87.98555101805586,
+        "spl": 49.24111211202978
+      },
+      "native": {
+        "step": 11776000,
+        "sr": 89.57609534263611,
+        "spl": 51.77134871482849
+      },
+      "post250k": {
+        "lower_exclusive": 11776000,
+        "upper_inclusive": 12026000,
+        "points": 122,
+        "sr": 88.88110552654892,
+        "spl": 51.66710751955627
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.6.pth",
+      "index": 6,
+      "step": 12288000,
+      "last1m": {
+        "lower_exclusive": 11288000,
+        "upper_inclusive": 12288000,
+        "points": 489,
+        "sr": 86.63957422496351,
+        "spl": 49.69271244690706
+      },
+      "last3m": {
+        "lower_exclusive": 9288000,
+        "upper_inclusive": 12288000,
+        "points": 1465,
+        "sr": 84.56596843211724,
+        "spl": 48.03590454746025
+      },
+      "pre250k": {
+        "lower_exclusive": 12038000,
+        "upper_inclusive": 12288000,
+        "points": 123,
+        "sr": 82.27242803185936,
+        "spl": 48.348006339577154
+      },
+      "native": {
+        "step": 12288000,
+        "sr": 82.1237564086914,
+        "spl": 47.356510162353516
+      },
+      "post250k": {
+        "lower_exclusive": 12288000,
+        "upper_inclusive": 12538000,
+        "points": 122,
+        "sr": 83.58072829051096,
+        "spl": 47.9713255997564
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.7.pth",
+      "index": 7,
+      "step": 12800000,
+      "last1m": {
+        "lower_exclusive": 11800000,
+        "upper_inclusive": 12800000,
+        "points": 489,
+        "sr": 85.42914452728319,
+        "spl": 48.91288812540792
+      },
+      "last3m": {
+        "lower_exclusive": 9800000,
+        "upper_inclusive": 12800000,
+        "points": 1465,
+        "sr": 84.73467083921204,
+        "spl": 48.200473498565756
+      },
+      "pre250k": {
+        "lower_exclusive": 12550000,
+        "upper_inclusive": 12800000,
+        "points": 123,
+        "sr": 87.21943046988511,
+        "spl": 47.8369309650204
+      },
+      "native": {
+        "step": 12800000,
+        "sr": 87.78242468833923,
+        "spl": 48.16528856754303
+      },
+      "post250k": {
+        "lower_exclusive": 12800000,
+        "upper_inclusive": 13050000,
+        "points": 122,
+        "sr": 88.05341398129698,
+        "spl": 49.876565449550505
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.8.pth",
+      "index": 8,
+      "step": 13312000,
+      "last1m": {
+        "lower_exclusive": 12312000,
+        "upper_inclusive": 13312000,
+        "points": 489,
+        "sr": 86.42970911076708,
+        "spl": 48.703439512379575
+      },
+      "last3m": {
+        "lower_exclusive": 10312000,
+        "upper_inclusive": 13312000,
+        "points": 1465,
+        "sr": 85.03130761429718,
+        "spl": 48.23687005368516
+      },
+      "pre250k": {
+        "lower_exclusive": 13062000,
+        "upper_inclusive": 13312000,
+        "points": 123,
+        "sr": 86.44145441249134,
+        "spl": 48.96324543448968
+      },
+      "native": {
+        "step": 13312000,
+        "sr": 87.68436312675476,
+        "spl": 49.82326924800873
+      },
+      "post250k": {
+        "lower_exclusive": 13312000,
+        "upper_inclusive": 13562000,
+        "points": 122,
+        "sr": 86.21231293092009,
+        "spl": 48.928035991113696
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.9.pth",
+      "index": 9,
+      "step": 13824000,
+      "last1m": {
+        "lower_exclusive": 12824000,
+        "upper_inclusive": 13824000,
+        "points": 489,
+        "sr": 86.41627701513606,
+        "spl": 49.17306654414272
+      },
+      "last3m": {
+        "lower_exclusive": 10824000,
+        "upper_inclusive": 13824000,
+        "points": 1465,
+        "sr": 85.69252417762938,
+        "spl": 48.696915983340034
+      },
+      "pre250k": {
+        "lower_exclusive": 13574000,
+        "upper_inclusive": 13824000,
+        "points": 123,
+        "sr": 84.98536852317127,
+        "spl": 48.76396796567653
+      },
+      "native": {
+        "step": 13824000,
+        "sr": 80.61079382896423,
+        "spl": 46.0849404335022
+      },
+      "post250k": {
+        "lower_exclusive": 13824000,
+        "upper_inclusive": 14074000,
+        "points": 122,
+        "sr": 79.94855485978674,
+        "spl": 43.94490306006103
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.10.pth",
+      "index": 10,
+      "step": 14336000,
+      "last1m": {
+        "lower_exclusive": 13336000,
+        "upper_inclusive": 14336000,
+        "points": 489,
+        "sr": 83.8576974191061,
+        "spl": 47.61219056959289
+      },
+      "last3m": {
+        "lower_exclusive": 11336000,
+        "upper_inclusive": 14336000,
+        "points": 1465,
+        "sr": 85.59859237980109,
+        "spl": 48.65867898325871
+      },
+      "pre250k": {
+        "lower_exclusive": 14086000,
+        "upper_inclusive": 14336000,
+        "points": 123,
+        "sr": 84.54273377007586,
+        "spl": 48.92903379793089
+      },
+      "native": {
+        "step": 14336000,
+        "sr": 88.18112015724182,
+        "spl": 50.95282196998596
+      },
+      "post250k": {
+        "lower_exclusive": 14336000,
+        "upper_inclusive": 14586000,
+        "points": 122,
+        "sr": 87.75449795801131,
+        "spl": 50.098602669160876
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.11.pth",
+      "index": 11,
+      "step": 14848000,
+      "last1m": {
+        "lower_exclusive": 13848000,
+        "upper_inclusive": 14848000,
+        "points": 489,
+        "sr": 83.45785979600528,
+        "spl": 47.42823795916357
+      },
+      "last3m": {
+        "lower_exclusive": 11848000,
+        "upper_inclusive": 14848000,
+        "points": 1465,
+        "sr": 85.0245561738063,
+        "spl": 48.42418828515063
+      },
+      "pre250k": {
+        "lower_exclusive": 14598000,
+        "upper_inclusive": 14848000,
+        "points": 123,
+        "sr": 81.45897693750335,
+        "spl": 46.73771724952915
+      },
+      "native": {
+        "step": 14848000,
+        "sr": 84.81717109680176,
+        "spl": 49.12087917327881
+      },
+      "post250k": {
+        "lower_exclusive": 14848000,
+        "upper_inclusive": 15098000,
+        "points": 122,
+        "sr": 86.27347286607399,
+        "spl": 49.12903775445751
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.12.pth",
+      "index": 12,
+      "step": 15360000,
+      "last1m": {
+        "lower_exclusive": 14360000,
+        "upper_inclusive": 15360000,
+        "points": 489,
+        "sr": 85.73194272922836,
+        "spl": 49.13682453715241
+      },
+      "last3m": {
+        "lower_exclusive": 12360000,
+        "upper_inclusive": 15360000,
+        "points": 1465,
+        "sr": 85.4152141862355,
+        "spl": 48.537616499861755
+      },
+      "pre250k": {
+        "lower_exclusive": 15110000,
+        "upper_inclusive": 15360000,
+        "points": 123,
+        "sr": 87.7311927516286,
+        "spl": 50.8679502863225
+      },
+      "native": {
+        "step": 15360000,
+        "sr": 88.12094926834106,
+        "spl": 51.045042276382446
+      },
+      "post250k": {
+        "lower_exclusive": 15360000,
+        "upper_inclusive": 15610000,
+        "points": 122,
+        "sr": 87.12549991294985,
+        "spl": 49.41622482948616
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.13.pth",
+      "index": 13,
+      "step": 15872000,
+      "last1m": {
+        "lower_exclusive": 14872000,
+        "upper_inclusive": 15872000,
+        "points": 489,
+        "sr": 86.5661705686027,
+        "spl": 48.802291883768966
+      },
+      "last3m": {
+        "lower_exclusive": 12872000,
+        "upper_inclusive": 15872000,
+        "points": 1465,
+        "sr": 85.3990125127213,
+        "spl": 48.44880858989299
+      },
+      "pre250k": {
+        "lower_exclusive": 15622000,
+        "upper_inclusive": 15872000,
+        "points": 123,
+        "sr": 85.10218519505447,
+        "spl": 45.915757834426756
+      },
+      "native": {
+        "step": 15872000,
+        "sr": 83.54430198669434,
+        "spl": 46.14373743534088
+      },
+      "post250k": {
+        "lower_exclusive": 15872000,
+        "upper_inclusive": 16122000,
+        "points": 122,
+        "sr": 85.81126019602917,
+        "spl": 46.239002464247534
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.14.pth",
+      "index": 14,
+      "step": 16384000,
+      "last1m": {
+        "lower_exclusive": 15384000,
+        "upper_inclusive": 16384000,
+        "points": 489,
+        "sr": 86.21923466401597,
+        "spl": 47.03232884894607
+      },
+      "last3m": {
+        "lower_exclusive": 13384000,
+        "upper_inclusive": 16384000,
+        "points": 1465,
+        "sr": 85.29741936169387,
+        "spl": 47.95650551343534
+      },
+      "pre250k": {
+        "lower_exclusive": 16134000,
+        "upper_inclusive": 16384000,
+        "points": 123,
+        "sr": 86.99023835058135,
+        "spl": 46.8713564601371
+      },
+      "native": {
+        "step": 16384000,
+        "sr": 87.5,
+        "spl": 48.05322587490082
+      },
+      "post250k": {
+        "lower_exclusive": 16384000,
+        "upper_inclusive": 16634000,
+        "points": 122,
+        "sr": 88.7877961162661,
+        "spl": 48.733335953266895
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.15.pth",
+      "index": 15,
+      "step": 16896000,
+      "last1m": {
+        "lower_exclusive": 15896000,
+        "upper_inclusive": 16896000,
+        "points": 489,
+        "sr": 88.26630662799126,
+        "spl": 48.64649758626591
+      },
+      "last3m": {
+        "lower_exclusive": 13896000,
+        "upper_inclusive": 16896000,
+        "points": 1465,
+        "sr": 86.14123474208975,
+        "spl": 48.32949880650426
+      },
+      "pre250k": {
+        "lower_exclusive": 16646000,
+        "upper_inclusive": 16896000,
+        "points": 123,
+        "sr": 90.9166206673878,
+        "spl": 52.4002156121944
+      },
+      "native": {
+        "step": 16896000,
+        "sr": 87.74093985557556,
+        "spl": 51.01831555366516
+      },
+      "post250k": {
+        "lower_exclusive": 16896000,
+        "upper_inclusive": 17146000,
+        "points": 122,
+        "sr": 84.48217369493891,
+        "spl": 47.44675831228006
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.16.pth",
+      "index": 16,
+      "step": 17408000,
+      "last1m": {
+        "lower_exclusive": 16408000,
+        "upper_inclusive": 17408000,
+        "points": 489,
+        "sr": 87.21326772420684,
+        "spl": 49.509692173794
+      },
+      "last3m": {
+        "lower_exclusive": 14408000,
+        "upper_inclusive": 17408000,
+        "points": 1465,
+        "sr": 86.37675904169832,
+        "spl": 48.53296213792859
+      },
+      "pre250k": {
+        "lower_exclusive": 17158000,
+        "upper_inclusive": 17408000,
+        "points": 123,
+        "sr": 84.59597767853155,
+        "spl": 49.20643546232363
+      },
+      "native": {
+        "step": 17408000,
+        "sr": 85.80508232116699,
+        "spl": 49.687618017196655
+      },
+      "post250k": {
+        "lower_exclusive": 17408000,
+        "upper_inclusive": 17658000,
+        "points": 122,
+        "sr": 84.62217723736998,
+        "spl": 49.25645086608949
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.17.pth",
+      "index": 17,
+      "step": 17920000,
+      "last1m": {
+        "lower_exclusive": 16920000,
+        "upper_inclusive": 17920000,
+        "points": 489,
+        "sr": 83.33493711270683,
+        "spl": 47.562898960581585
+      },
+      "last3m": {
+        "lower_exclusive": 14920000,
+        "upper_inclusive": 17920000,
+        "points": 1465,
+        "sr": 86.03576524672654,
+        "spl": 48.30110719993253
+      },
+      "pre250k": {
+        "lower_exclusive": 17670000,
+        "upper_inclusive": 17920000,
+        "points": 123,
+        "sr": 80.18129894403907,
+        "spl": 44.669918728068595
+      },
+      "native": {
+        "step": 17920000,
+        "sr": 79.86627221107483,
+        "spl": 47.32667803764343
+      },
+      "post250k": {
+        "lower_exclusive": 17920000,
+        "upper_inclusive": 18170000,
+        "points": 122,
+        "sr": 83.52302938211159,
+        "spl": 49.26962701023602
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.18.pth",
+      "index": 18,
+      "step": 18432000,
+      "last1m": {
+        "lower_exclusive": 17432000,
+        "upper_inclusive": 18432000,
+        "points": 489,
+        "sr": 82.37331117101486,
+        "spl": 47.58136253537332
+      },
+      "last3m": {
+        "lower_exclusive": 15432000,
+        "upper_inclusive": 18432000,
+        "points": 1465,
+        "sr": 85.21001862584528,
+        "spl": 48.005739629472075
+      },
+      "pre250k": {
+        "lower_exclusive": 18182000,
+        "upper_inclusive": 18432000,
+        "points": 123,
+        "sr": 81.68841043138892,
+        "spl": 47.51817603421405
+      },
+      "native": {
+        "step": 18432000,
+        "sr": 82.8438937664032,
+        "spl": 48.79284203052521
+      },
+      "post250k": {
+        "lower_exclusive": 18432000,
+        "upper_inclusive": 18682000,
+        "points": 122,
+        "sr": 86.19364690585215,
+        "spl": 48.892966328097174
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.19.pth",
+      "index": 19,
+      "step": 18944000,
+      "last1m": {
+        "lower_exclusive": 17944000,
+        "upper_inclusive": 18944000,
+        "points": 489,
+        "sr": 85.47816637347326,
+        "spl": 49.05398208305149
+      },
+      "last3m": {
+        "lower_exclusive": 15944000,
+        "upper_inclusive": 18944000,
+        "points": 1465,
+        "sr": 85.69660857268974,
+        "spl": 48.480755857640155
+      },
+      "pre250k": {
+        "lower_exclusive": 18694000,
+        "upper_inclusive": 18944000,
+        "points": 123,
+        "sr": 89.89402075123981,
+        "spl": 50.393806216193404
+      },
+      "native": {
+        "step": 18944000,
+        "sr": 89.23959732055664,
+        "spl": 50.504571199417114
+      },
+      "post250k": {
+        "lower_exclusive": 18944000,
+        "upper_inclusive": 19194000,
+        "points": 122,
+        "sr": 88.4298349013094,
+        "spl": 49.173567065450015
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.20.pth",
+      "index": 20,
+      "step": 19456000,
+      "last1m": {
+        "lower_exclusive": 18456000,
+        "upper_inclusive": 19456000,
+        "points": 489,
+        "sr": 88.1470555420546,
+        "spl": 49.22224270419841
+      },
+      "last3m": {
+        "lower_exclusive": 16456000,
+        "upper_inclusive": 19456000,
+        "points": 1465,
+        "sr": 85.86965300524194,
+        "spl": 48.78618078833961
+      },
+      "pre250k": {
+        "lower_exclusive": 19206000,
+        "upper_inclusive": 19456000,
+        "points": 123,
+        "sr": 87.42630646480778,
+        "spl": 48.33122593600576
+      },
+      "native": {
+        "step": 19456000,
+        "sr": 85.916668176651,
+        "spl": 47.64477610588074
+      },
+      "post250k": {
+        "lower_exclusive": 19456000,
+        "upper_inclusive": 19706000,
+        "points": 122,
+        "sr": 85.64004785701876,
+        "spl": 47.05923341336798
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.21.pth",
+      "index": 21,
+      "step": 19968000,
+      "last1m": {
+        "lower_exclusive": 18968000,
+        "upper_inclusive": 19968000,
+        "points": 489,
+        "sr": 85.94548193954982,
+        "spl": 47.96872658841693
+      },
+      "last3m": {
+        "lower_exclusive": 16968000,
+        "upper_inclusive": 19968000,
+        "points": 1465,
+        "sr": 84.90827182454053,
+        "spl": 48.216479036181454
+      },
+      "pre250k": {
+        "lower_exclusive": 19718000,
+        "upper_inclusive": 19968000,
+        "points": 123,
+        "sr": 82.68724616950121,
+        "spl": 47.66040315957573
+      },
+      "native": {
+        "step": 19968000,
+        "sr": 86.23619079589844,
+        "spl": 46.99638485908508
+      },
+      "post250k": {
+        "lower_exclusive": 19968000,
+        "upper_inclusive": 20218000,
+        "points": 122,
+        "sr": 90.36107664225531,
+        "spl": 50.014346935709966
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.22.pth",
+      "index": 22,
+      "step": 20480000,
+      "last1m": {
+        "lower_exclusive": 19480000,
+        "upper_inclusive": 20480000,
+        "points": 489,
+        "sr": 87.23571557696368,
+        "spl": 48.92360768557082
+      },
+      "last3m": {
+        "lower_exclusive": 17480000,
+        "upper_inclusive": 20480000,
+        "points": 1465,
+        "sr": 85.86504768186055,
+        "spl": 48.53787944381961
+      },
+      "pre250k": {
+        "lower_exclusive": 20230000,
+        "upper_inclusive": 20480000,
+        "points": 123,
+        "sr": 90.16604268453955,
+        "spl": 50.93258716226593
+      },
+      "native": {
+        "step": 20480000,
+        "sr": 89.79430198669434,
+        "spl": 50.456178188323975
+      },
+      "post250k": {
+        "lower_exclusive": 20480000,
+        "upper_inclusive": 20730000,
+        "points": 122,
+        "sr": 88.10013664550469,
+        "spl": 52.082823729905925
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.23.pth",
+      "index": 23,
+      "step": 20992000,
+      "last1m": {
+        "lower_exclusive": 19992000,
+        "upper_inclusive": 20992000,
+        "points": 489,
+        "sr": 88.67562320578561,
+        "spl": 50.43861379652667
+      },
+      "last3m": {
+        "lower_exclusive": 17992000,
+        "upper_inclusive": 20992000,
+        "points": 1465,
+        "sr": 86.78311895998672,
+        "spl": 49.15798584348919
+      },
+      "pre250k": {
+        "lower_exclusive": 20742000,
+        "upper_inclusive": 20992000,
+        "points": 123,
+        "sr": 85.87717917876515,
+        "spl": 48.49933732331284
+      },
+      "native": {
+        "step": 20992000,
+        "sr": 81.51341080665588,
+        "spl": 43.120285868644714
+      },
+      "post250k": {
+        "lower_exclusive": 20992000,
+        "upper_inclusive": 21242000,
+        "points": 122,
+        "sr": 84.37259089751322,
+        "spl": 45.620164299597505
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.24.pth",
+      "index": 24,
+      "step": 21504000,
+      "last1m": {
+        "lower_exclusive": 20504000,
+        "upper_inclusive": 21504000,
+        "points": 489,
+        "sr": 85.30414220258015,
+        "spl": 47.97799253878174
+      },
+      "last3m": {
+        "lower_exclusive": 18504000,
+        "upper_inclusive": 21504000,
+        "points": 1465,
+        "sr": 86.9652843963571,
+        "spl": 48.70583739500404
+      },
+      "pre250k": {
+        "lower_exclusive": 21254000,
+        "upper_inclusive": 21504000,
+        "points": 123,
+        "sr": 83.32160968121475,
+        "spl": 45.91218283990534
+      },
+      "native": {
+        "step": 21504000,
+        "sr": 80.18167018890381,
+        "spl": 43.497392535209656
+      },
+      "post250k": {
+        "lower_exclusive": 21504000,
+        "upper_inclusive": 21754000,
+        "points": 122,
+        "sr": 83.77495745166404,
+        "spl": 46.66414913095412
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.25.pth",
+      "index": 25,
+      "step": 22016000,
+      "last1m": {
+        "lower_exclusive": 21016000,
+        "upper_inclusive": 22016000,
+        "points": 489,
+        "sr": 84.76629950761307,
+        "spl": 46.965562358711885
+      },
+      "last3m": {
+        "lower_exclusive": 19016000,
+        "upper_inclusive": 22016000,
+        "points": 1465,
+        "sr": 86.36122509074292,
+        "spl": 48.350708696215634
+      },
+      "pre250k": {
+        "lower_exclusive": 21766000,
+        "upper_inclusive": 22016000,
+        "points": 123,
+        "sr": 87.10309688637896,
+        "spl": 49.1068211512837
+      },
+      "native": {
+        "step": 22016000,
+        "sr": 89.8876428604126,
+        "spl": 49.48289692401886
+      },
+      "post250k": {
+        "lower_exclusive": 22016000,
+        "upper_inclusive": 22266000,
+        "points": 122,
+        "sr": 86.49484656873297,
+        "spl": 49.66348526907749
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.26.pth",
+      "index": 26,
+      "step": 22528000,
+      "last1m": {
+        "lower_exclusive": 21528000,
+        "upper_inclusive": 22528000,
+        "points": 489,
+        "sr": 86.39353402796942,
+        "spl": 49.18229744478238
+      },
+      "last3m": {
+        "lower_exclusive": 19528000,
+        "upper_inclusive": 22528000,
+        "points": 1465,
+        "sr": 86.28695063623552,
+        "spl": 48.69361888019705
+      },
+      "pre250k": {
+        "lower_exclusive": 22278000,
+        "upper_inclusive": 22528000,
+        "points": 123,
+        "sr": 87.50865837422813,
+        "spl": 50.63787696322775
+      },
+      "native": {
+        "step": 22528000,
+        "sr": 89.66624140739441,
+        "spl": 54.103630781173706
+      },
+      "post250k": {
+        "lower_exclusive": 22528000,
+        "upper_inclusive": 22778000,
+        "points": 122,
+        "sr": 88.8348792420059,
+        "spl": 51.747114589956944
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.27.pth",
+      "index": 27,
+      "step": 23040000,
+      "last1m": {
+        "lower_exclusive": 22040000,
+        "upper_inclusive": 23040000,
+        "points": 489,
+        "sr": 86.71419390140136,
+        "spl": 49.63087191489089
+      },
+      "last3m": {
+        "lower_exclusive": 20040000,
+        "upper_inclusive": 23040000,
+        "points": 1465,
+        "sr": 86.6922875109793,
+        "spl": 48.96640928938934
+      },
+      "pre250k": {
+        "lower_exclusive": 22790000,
+        "upper_inclusive": 23040000,
+        "points": 123,
+        "sr": 84.38564936319986,
+        "spl": 46.48038197339066
+      },
+      "native": {
+        "step": 23040000,
+        "sr": 85.96059083938599,
+        "spl": 47.21094369888306
+      },
+      "post250k": {
+        "lower_exclusive": 23040000,
+        "upper_inclusive": 23290000,
+        "points": 122,
+        "sr": 83.92130840020101,
+        "spl": 47.65516050526353
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.28.pth",
+      "index": 28,
+      "step": 23552000,
+      "last1m": {
+        "lower_exclusive": 22552000,
+        "upper_inclusive": 23552000,
+        "points": 489,
+        "sr": 86.31305299653597,
+        "spl": 48.2138447234967
+      },
+      "last3m": {
+        "lower_exclusive": 20552000,
+        "upper_inclusive": 23552000,
+        "points": 1465,
+        "sr": 85.94028279236153,
+        "spl": 48.40977562775791
+      },
+      "pre250k": {
+        "lower_exclusive": 23302000,
+        "upper_inclusive": 23552000,
+        "points": 123,
+        "sr": 88.46752788962388,
+        "spl": 47.51579526478682
+      },
+      "native": {
+        "step": 23552000,
+        "sr": 91.03773832321167,
+        "spl": 50.43454170227051
+      },
+      "post250k": {
+        "lower_exclusive": 23552000,
+        "upper_inclusive": 23802000,
+        "points": 122,
+        "sr": 89.15871757952894,
+        "spl": 49.31598142033718
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.29.pth",
+      "index": 29,
+      "step": 24064000,
+      "last1m": {
+        "lower_exclusive": 23064000,
+        "upper_inclusive": 24064000,
+        "points": 489,
+        "sr": 87.40011162309315,
+        "spl": 48.596196696314585
+      },
+      "last3m": {
+        "lower_exclusive": 21064000,
+        "upper_inclusive": 24064000,
+        "points": 1465,
+        "sr": 86.3948281307676,
+        "spl": 48.49584215533611
+      },
+      "pre250k": {
+        "lower_exclusive": 23814000,
+        "upper_inclusive": 24064000,
+        "points": 123,
+        "sr": 87.82309380973258,
+        "spl": 49.72460882935098
+      },
+      "native": {
+        "step": 24064000,
+        "sr": 86.52849793434143,
+        "spl": 48.78996014595032
+      },
+      "post250k": {
+        "lower_exclusive": 24064000,
+        "upper_inclusive": 24314000,
+        "points": 122,
+        "sr": 86.09275436792217,
+        "spl": 48.30606030147584
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.30.pth",
+      "index": 30,
+      "step": 24576000,
+      "last1m": {
+        "lower_exclusive": 23576000,
+        "upper_inclusive": 24576000,
+        "points": 489,
+        "sr": 87.80810325911196,
+        "spl": 49.392715827819025
+      },
+      "last3m": {
+        "lower_exclusive": 21576000,
+        "upper_inclusive": 24576000,
+        "points": 1465,
+        "sr": 87.00460549100674,
+        "spl": 49.073613495550056
+      },
+      "pre250k": {
+        "lower_exclusive": 24326000,
+        "upper_inclusive": 24576000,
+        "points": 123,
+        "sr": 88.47605513363351,
+        "spl": 50.26826926363193
+      },
+      "native": {
+        "step": 24576000,
+        "sr": 87.93220520019531,
+        "spl": 50.19054412841797
+      },
+      "post250k": {
+        "lower_exclusive": 24576000,
+        "upper_inclusive": 24826000,
+        "points": 122,
+        "sr": 82.95486564518976,
+        "spl": 45.36574856668222
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.31.pth",
+      "index": 31,
+      "step": 25088000,
+      "last1m": {
+        "lower_exclusive": 24088000,
+        "upper_inclusive": 25088000,
+        "points": 489,
+        "sr": 85.16165178977639,
+        "spl": 47.74066177492005
+      },
+      "last3m": {
+        "lower_exclusive": 22088000,
+        "upper_inclusive": 25088000,
+        "points": 1465,
+        "sr": 86.36438799392648,
+        "spl": 48.607605565530044
+      },
+      "pre250k": {
+        "lower_exclusive": 24838000,
+        "upper_inclusive": 25088000,
+        "points": 123,
+        "sr": 83.35271812066799,
+        "spl": 47.123005380475426
+      },
+      "native": {
+        "step": 25088000,
+        "sr": 81.81154131889343,
+        "spl": 47.151634097099304
+      },
+      "post250k": {
+        "lower_exclusive": 25088000,
+        "upper_inclusive": 25338000,
+        "points": 122,
+        "sr": 81.48662931606417,
+        "spl": 46.77277141418613
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.32.pth",
+      "index": 32,
+      "step": 25600000,
+      "last1m": {
+        "lower_exclusive": 24600000,
+        "upper_inclusive": 25600000,
+        "points": 489,
+        "sr": 84.02544936519459,
+        "spl": 47.229507504552906
+      },
+      "last3m": {
+        "lower_exclusive": 22600000,
+        "upper_inclusive": 25600000,
+        "points": 1465,
+        "sr": 86.01334349287248,
+        "spl": 48.22432420156108
+      },
+      "pre250k": {
+        "lower_exclusive": 25350000,
+        "upper_inclusive": 25600000,
+        "points": 123,
+        "sr": 88.78032569962788,
+        "spl": 50.02365325524555
+      },
+      "native": {
+        "step": 25600000,
+        "sr": 88.97515535354614,
+        "spl": 53.05630564689636
+      },
+      "post250k": {
+        "lower_exclusive": 25600000,
+        "upper_inclusive": 25850000,
+        "points": 122,
+        "sr": 90.63035523305174,
+        "spl": 53.0151547955685
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.33.pth",
+      "index": 33,
+      "step": 26112000,
+      "last1m": {
+        "lower_exclusive": 25112000,
+        "upper_inclusive": 26112000,
+        "points": 489,
+        "sr": 87.18636162685715,
+        "spl": 50.203150961784246
+      },
+      "last3m": {
+        "lower_exclusive": 23112000,
+        "upper_inclusive": 26112000,
+        "points": 1465,
+        "sr": 86.57754932247332,
+        "spl": 48.84996100497327
+      },
+      "pre250k": {
+        "lower_exclusive": 25862000,
+        "upper_inclusive": 26112000,
+        "points": 123,
+        "sr": 87.36831579751116,
+        "spl": 50.727937061612195
+      },
+      "native": {
+        "step": 26112000,
+        "sr": 87.28283643722534,
+        "spl": 50.06963014602661
+      },
+      "post250k": {
+        "lower_exclusive": 26112000,
+        "upper_inclusive": 26362000,
+        "points": 122,
+        "sr": 85.65333451403946,
+        "spl": 47.77097057123653
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.34.pth",
+      "index": 34,
+      "step": 26624000,
+      "last1m": {
+        "lower_exclusive": 25624000,
+        "upper_inclusive": 26624000,
+        "points": 489,
+        "sr": 87.1921010178291,
+        "spl": 49.31273867503753
+      },
+      "last3m": {
+        "lower_exclusive": 23624000,
+        "upper_inclusive": 26624000,
+        "points": 1465,
+        "sr": 86.30531756544276,
+        "spl": 48.66835483918825
+      },
+      "pre250k": {
+        "lower_exclusive": 26374000,
+        "upper_inclusive": 26624000,
+        "points": 123,
+        "sr": 85.28181711832681,
+        "spl": 45.93621962438754
+      },
+      "native": {
+        "step": 26624000,
+        "sr": 83.50253701210022,
+        "spl": 43.348801136016846
+      },
+      "post250k": {
+        "lower_exclusive": 26624000,
+        "upper_inclusive": 26874000,
+        "points": 122,
+        "sr": 84.09387078441557,
+        "spl": 45.29541403543754
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.35.pth",
+      "index": 35,
+      "step": 27136000,
+      "last1m": {
+        "lower_exclusive": 26136000,
+        "upper_inclusive": 27136000,
+        "points": 489,
+        "sr": 85.12625488279299,
+        "spl": 46.74663090876519
+      },
+      "last3m": {
+        "lower_exclusive": 24136000,
+        "upper_inclusive": 27136000,
+        "points": 1465,
+        "sr": 85.80970971657554,
+        "spl": 48.26397302411115
+      },
+      "pre250k": {
+        "lower_exclusive": 26886000,
+        "upper_inclusive": 27136000,
+        "points": 123,
+        "sr": 85.83705071511307,
+        "spl": 48.29142885964091
+      },
+      "native": {
+        "step": 27136000,
+        "sr": 85.83086133003235,
+        "spl": 49.04531538486481
+      },
+      "post250k": {
+        "lower_exclusive": 27136000,
+        "upper_inclusive": 27386000,
+        "points": 122,
+        "sr": 87.56819909713307,
+        "spl": 47.9007894631292
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.36.pth",
+      "index": 36,
+      "step": 27648000,
+      "last1m": {
+        "lower_exclusive": 26648000,
+        "upper_inclusive": 27648000,
+        "points": 489,
+        "sr": 86.64435048288607,
+        "spl": 47.82391878602938
+      },
+      "last3m": {
+        "lower_exclusive": 24648000,
+        "upper_inclusive": 27648000,
+        "points": 1465,
+        "sr": 85.97945634822389,
+        "spl": 48.16372453962984
+      },
+      "pre250k": {
+        "lower_exclusive": 27398000,
+        "upper_inclusive": 27648000,
+        "points": 123,
+        "sr": 89.00052716092365,
+        "spl": 49.535015080033276
+      },
+      "native": {
+        "step": 27648000,
+        "sr": 90.71526527404785,
+        "spl": 51.491779088974
+      },
+      "post250k": {
+        "lower_exclusive": 27648000,
+        "upper_inclusive": 27898000,
+        "points": 122,
+        "sr": 87.11888267368568,
+        "spl": 48.50742211107348
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.37.pth",
+      "index": 37,
+      "step": 28160000,
+      "last1m": {
+        "lower_exclusive": 27160000,
+        "upper_inclusive": 28160000,
+        "points": 489,
+        "sr": 86.19184311182221,
+        "spl": 47.92971667702213
+      },
+      "last3m": {
+        "lower_exclusive": 25160000,
+        "upper_inclusive": 28160000,
+        "points": 1465,
+        "sr": 86.24518281770648,
+        "spl": 48.32875401493632
+      },
+      "pre250k": {
+        "lower_exclusive": 27910000,
+        "upper_inclusive": 28160000,
+        "points": 123,
+        "sr": 81.27836250677342,
+        "spl": 46.04391533184827
+      },
+      "native": {
+        "step": 28160000,
+        "sr": 83.8524580001831,
+        "spl": 46.95952832698822
+      },
+      "post250k": {
+        "lower_exclusive": 28160000,
+        "upper_inclusive": 28410000,
+        "points": 122,
+        "sr": 85.52614670307909,
+        "spl": 47.58401014765755
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.38.pth",
+      "index": 38,
+      "step": 28672000,
+      "last1m": {
+        "lower_exclusive": 27672000,
+        "upper_inclusive": 28672000,
+        "points": 489,
+        "sr": 83.85684804682352,
+        "spl": 46.6744446132812
+      },
+      "last3m": {
+        "lower_exclusive": 25672000,
+        "upper_inclusive": 28672000,
+        "points": 1465,
+        "sr": 85.8400966201626,
+        "spl": 47.85185330556928
+      },
+      "pre250k": {
+        "lower_exclusive": 28422000,
+        "upper_inclusive": 28672000,
+        "points": 123,
+        "sr": 82.12455632240791,
+        "spl": 45.06874360689303
+      },
+      "native": {
+        "step": 28672000,
+        "sr": 84.74820256233215,
+        "spl": 47.825708985328674
+      },
+      "post250k": {
+        "lower_exclusive": 28672000,
+        "upper_inclusive": 28922000,
+        "points": 122,
+        "sr": 85.49192635739435,
+        "spl": 47.82294843529091
+      }
+    },
+    {
+      "case": "qwen01",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.39.pth",
+      "index": 39,
+      "step": 29184000,
+      "last1m": {
+        "lower_exclusive": 28184000,
+        "upper_inclusive": 29184000,
+        "points": 489,
+        "sr": 85.0560654404217,
+        "spl": 47.671611975794676
+      },
+      "last3m": {
+        "lower_exclusive": 26184000,
+        "upper_inclusive": 29184000,
+        "points": 1465,
+        "sr": 85.41038096561367,
+        "spl": 47.41590414844683
+      },
+      "pre250k": {
+        "lower_exclusive": 28934000,
+        "upper_inclusive": 29184000,
+        "points": 123,
+        "sr": 86.93843585688893,
+        "spl": 50.16096910325493
+      },
+      "native": {
+        "step": 29184000,
+        "sr": 89.9095356464386,
+        "spl": 52.99030542373657
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.5.pth",
+      "index": 5,
+      "step": 11264000,
+      "last1m": {
+        "lower_exclusive": 10264000,
+        "upper_inclusive": 11264000,
+        "points": 489,
+        "sr": 84.51960842546022,
+        "spl": 46.20982780290772
+      },
+      "last3m": {
+        "lower_exclusive": 8264000,
+        "upper_inclusive": 11264000,
+        "points": 1465,
+        "sr": 83.30949479809394,
+        "spl": 46.22514858994467
+      },
+      "pre250k": {
+        "lower_exclusive": 11014000,
+        "upper_inclusive": 11264000,
+        "points": 123,
+        "sr": 85.99610289907068,
+        "spl": 48.57227385528689
+      },
+      "native": {
+        "step": 11264000,
+        "sr": 85.5994164943695,
+        "spl": 48.36969971656799
+      },
+      "post250k": {
+        "lower_exclusive": 11264000,
+        "upper_inclusive": 11514000,
+        "points": 122,
+        "sr": 86.4241789598934,
+        "spl": 49.88003783538693
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.6.pth",
+      "index": 6,
+      "step": 11776000,
+      "last1m": {
+        "lower_exclusive": 10776000,
+        "upper_inclusive": 11776000,
+        "points": 489,
+        "sr": 85.59748910687452,
+        "spl": 48.129558849676016
+      },
+      "last3m": {
+        "lower_exclusive": 8776000,
+        "upper_inclusive": 11776000,
+        "points": 1465,
+        "sr": 83.29594555161512,
+        "spl": 46.560557578204026
+      },
+      "pre250k": {
+        "lower_exclusive": 11526000,
+        "upper_inclusive": 11776000,
+        "points": 123,
+        "sr": 83.32312955119745,
+        "spl": 47.26961327762139
+      },
+      "native": {
+        "step": 11776000,
+        "sr": 83.29048752784729,
+        "spl": 46.37318253517151
+      },
+      "post250k": {
+        "lower_exclusive": 11776000,
+        "upper_inclusive": 12026000,
+        "points": 122,
+        "sr": 84.85893670652733,
+        "spl": 45.86464572148245
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.7.pth",
+      "index": 7,
+      "step": 12288000,
+      "last1m": {
+        "lower_exclusive": 11288000,
+        "upper_inclusive": 12288000,
+        "points": 489,
+        "sr": 85.04888241032637,
+        "spl": 47.5264423524919
+      },
+      "last3m": {
+        "lower_exclusive": 9288000,
+        "upper_inclusive": 12288000,
+        "points": 1465,
+        "sr": 83.95294031185502,
+        "spl": 46.7644024017321
+      },
+      "pre250k": {
+        "lower_exclusive": 12038000,
+        "upper_inclusive": 12288000,
+        "points": 123,
+        "sr": 85.59365408207343,
+        "spl": 47.026569935364456
+      },
+      "native": {
+        "step": 12288000,
+        "sr": 88.15450668334961,
+        "spl": 48.78206253051758
+      },
+      "post250k": {
+        "lower_exclusive": 12288000,
+        "upper_inclusive": 12538000,
+        "points": 122,
+        "sr": 87.68619733755706,
+        "spl": 50.04982818834117
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.8.pth",
+      "index": 8,
+      "step": 12800000,
+      "last1m": {
+        "lower_exclusive": 11800000,
+        "upper_inclusive": 12800000,
+        "points": 489,
+        "sr": 86.01007110502091,
+        "spl": 47.8709650064051
+      },
+      "last3m": {
+        "lower_exclusive": 9800000,
+        "upper_inclusive": 12800000,
+        "points": 1465,
+        "sr": 84.32631457218132,
+        "spl": 46.925318654079895
+      },
+      "pre250k": {
+        "lower_exclusive": 12550000,
+        "upper_inclusive": 12800000,
+        "points": 123,
+        "sr": 85.69506125721506,
+        "spl": 48.37434568056246
+      },
+      "native": {
+        "step": 12800000,
+        "sr": 86.23188138008118,
+        "spl": 48.65420162677765
+      },
+      "post250k": {
+        "lower_exclusive": 12800000,
+        "upper_inclusive": 13050000,
+        "points": 122,
+        "sr": 87.13343226518788,
+        "spl": 48.60577463615136
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.9.pth",
+      "index": 9,
+      "step": 13312000,
+      "last1m": {
+        "lower_exclusive": 12312000,
+        "upper_inclusive": 13312000,
+        "points": 489,
+        "sr": 86.9854695348408,
+        "spl": 48.61395621104718
+      },
+      "last3m": {
+        "lower_exclusive": 10312000,
+        "upper_inclusive": 13312000,
+        "points": 1465,
+        "sr": 85.53174206421237,
+        "spl": 47.5071486983283
+      },
+      "pre250k": {
+        "lower_exclusive": 13062000,
+        "upper_inclusive": 13312000,
+        "points": 123,
+        "sr": 87.42059333537652,
+        "spl": 47.326800324083344
+      },
+      "native": {
+        "step": 13312000,
+        "sr": 86.19210720062256,
+        "spl": 46.0160493850708
+      },
+      "post250k": {
+        "lower_exclusive": 13312000,
+        "upper_inclusive": 13562000,
+        "points": 122,
+        "sr": 83.05478447773417,
+        "spl": 42.64766588562824
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.10.pth",
+      "index": 10,
+      "step": 13824000,
+      "last1m": {
+        "lower_exclusive": 12824000,
+        "upper_inclusive": 13824000,
+        "points": 489,
+        "sr": 84.19373430357389,
+        "spl": 45.8786391651216
+      },
+      "last3m": {
+        "lower_exclusive": 10824000,
+        "upper_inclusive": 13824000,
+        "points": 1465,
+        "sr": 85.24782846405238,
+        "spl": 47.32556698672194
+      },
+      "pre250k": {
+        "lower_exclusive": 13574000,
+        "upper_inclusive": 13824000,
+        "points": 123,
+        "sr": 79.52083165083475,
+        "spl": 45.20860309523296
+      },
+      "native": {
+        "step": 13824000,
+        "sr": 84.85714197158813,
+        "spl": 48.17398488521576
+      },
+      "post250k": {
+        "lower_exclusive": 13824000,
+        "upper_inclusive": 14074000,
+        "points": 122,
+        "sr": 83.86332138639982,
+        "spl": 46.851832114282196
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.11.pth",
+      "index": 11,
+      "step": 14336000,
+      "last1m": {
+        "lower_exclusive": 13336000,
+        "upper_inclusive": 14336000,
+        "points": 489,
+        "sr": 81.33457917377261,
+        "spl": 44.57274861862323
+      },
+      "last3m": {
+        "lower_exclusive": 11336000,
+        "upper_inclusive": 14336000,
+        "points": 1465,
+        "sr": 84.45319542705809,
+        "spl": 46.88422875396221
+      },
+      "pre250k": {
+        "lower_exclusive": 14086000,
+        "upper_inclusive": 14336000,
+        "points": 123,
+        "sr": 79.70168861916395,
+        "spl": 43.891296129885724
+      },
+      "native": {
+        "step": 14336000,
+        "sr": 79.98477816581726,
+        "spl": 45.18266320228577
+      },
+      "post250k": {
+        "lower_exclusive": 14336000,
+        "upper_inclusive": 14586000,
+        "points": 122,
+        "sr": 85.45182537837107,
+        "spl": 46.40518952100003
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.12.pth",
+      "index": 12,
+      "step": 14848000,
+      "last1m": {
+        "lower_exclusive": 13848000,
+        "upper_inclusive": 14848000,
+        "points": 489,
+        "sr": 84.27466583154441,
+        "spl": 46.59778200897458
+      },
+      "last3m": {
+        "lower_exclusive": 11848000,
+        "upper_inclusive": 14848000,
+        "points": 1465,
+        "sr": 84.85519144315361,
+        "spl": 46.829246498212065
+      },
+      "pre250k": {
+        "lower_exclusive": 14598000,
+        "upper_inclusive": 14848000,
+        "points": 123,
+        "sr": 88.20936035334579,
+        "spl": 49.45783086908542
+      },
+      "native": {
+        "step": 14848000,
+        "sr": 88.38174343109131,
+        "spl": 51.34763717651367
+      },
+      "post250k": {
+        "lower_exclusive": 14848000,
+        "upper_inclusive": 15098000,
+        "points": 122,
+        "sr": 88.13517484508577,
+        "spl": 50.71875242913355
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.13.pth",
+      "index": 13,
+      "step": 15360000,
+      "last1m": {
+        "lower_exclusive": 14360000,
+        "upper_inclusive": 15360000,
+        "points": 489,
+        "sr": 87.35805983923696,
+        "spl": 48.09431637844913
+      },
+      "last3m": {
+        "lower_exclusive": 12360000,
+        "upper_inclusive": 15360000,
+        "points": 1465,
+        "sr": 85.15045677028826,
+        "spl": 47.03329613591217
+      },
+      "pre250k": {
+        "lower_exclusive": 15110000,
+        "upper_inclusive": 15360000,
+        "points": 123,
+        "sr": 86.96501225959963,
+        "spl": 45.643177483139965
+      },
+      "native": {
+        "step": 15360000,
+        "sr": 86.13518476486206,
+        "spl": 46.87906205654144
+      },
+      "post250k": {
+        "lower_exclusive": 15360000,
+        "upper_inclusive": 15610000,
+        "points": 122,
+        "sr": 83.42689480937895,
+        "spl": 45.45647264992604
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.14.pth",
+      "index": 14,
+      "step": 15872000,
+      "last1m": {
+        "lower_exclusive": 14872000,
+        "upper_inclusive": 15872000,
+        "points": 489,
+        "sr": 86.24511613436272,
+        "spl": 47.105849282873194
+      },
+      "last3m": {
+        "lower_exclusive": 12872000,
+        "upper_inclusive": 15872000,
+        "points": 1465,
+        "sr": 84.91116756872105,
+        "spl": 46.548948570729934
+      },
+      "pre250k": {
+        "lower_exclusive": 15622000,
+        "upper_inclusive": 15872000,
+        "points": 123,
+        "sr": 86.5815991308631,
+        "spl": 46.94062793642525
+      },
+      "native": {
+        "step": 15872000,
+        "sr": 87.01406121253967,
+        "spl": 47.70007133483887
+      },
+      "post250k": {
+        "lower_exclusive": 15872000,
+        "upper_inclusive": 16122000,
+        "points": 122,
+        "sr": 89.00255399649261,
+        "spl": 48.88139875208745
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.15.pth",
+      "index": 15,
+      "step": 16384000,
+      "last1m": {
+        "lower_exclusive": 15384000,
+        "upper_inclusive": 16384000,
+        "points": 489,
+        "sr": 86.78789671457132,
+        "spl": 48.318324480320044
+      },
+      "last3m": {
+        "lower_exclusive": 13384000,
+        "upper_inclusive": 16384000,
+        "points": 1465,
+        "sr": 85.07536780305283,
+        "spl": 46.98610484396638
+      },
+      "pre250k": {
+        "lower_exclusive": 16134000,
+        "upper_inclusive": 16384000,
+        "points": 123,
+        "sr": 87.89033579632519,
+        "spl": 51.771684681496964
+      },
+      "native": {
+        "step": 16384000,
+        "sr": 88.67781162261963,
+        "spl": 52.64469385147095
+      },
+      "post250k": {
+        "lower_exclusive": 16384000,
+        "upper_inclusive": 16634000,
+        "points": 122,
+        "sr": 86.02479828185723,
+        "spl": 50.140976588257026
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.16.pth",
+      "index": 16,
+      "step": 16896000,
+      "last1m": {
+        "lower_exclusive": 15896000,
+        "upper_inclusive": 16896000,
+        "points": 489,
+        "sr": 86.8894126639532,
+        "spl": 49.90639601870305
+      },
+      "last3m": {
+        "lower_exclusive": 13896000,
+        "upper_inclusive": 16896000,
+        "points": 1465,
+        "sr": 85.83237427900269,
+        "spl": 47.89777378173412
+      },
+      "pre250k": {
+        "lower_exclusive": 16646000,
+        "upper_inclusive": 16896000,
+        "points": 123,
+        "sr": 84.59404721492673,
+        "spl": 48.68525106732438
+      },
+      "native": {
+        "step": 16896000,
+        "sr": 82.56227970123291,
+        "spl": 48.81686568260193
+      },
+      "post250k": {
+        "lower_exclusive": 16896000,
+        "upper_inclusive": 17146000,
+        "points": 122,
+        "sr": 83.89002416954666,
+        "spl": 48.066984752162554
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.17.pth",
+      "index": 17,
+      "step": 17408000,
+      "last1m": {
+        "lower_exclusive": 16408000,
+        "upper_inclusive": 17408000,
+        "points": 489,
+        "sr": 83.62718376889063,
+        "spl": 47.883631285958
+      },
+      "last3m": {
+        "lower_exclusive": 14408000,
+        "upper_inclusive": 17408000,
+        "points": 1465,
+        "sr": 85.9997935343928,
+        "spl": 48.137021040346845
+      },
+      "pre250k": {
+        "lower_exclusive": 17158000,
+        "upper_inclusive": 17408000,
+        "points": 123,
+        "sr": 80.41601641391351,
+        "spl": 45.18531735350446
+      },
+      "native": {
+        "step": 17408000,
+        "sr": 80.35450577735901,
+        "spl": 47.04676270484924
+      },
+      "post250k": {
+        "lower_exclusive": 17408000,
+        "upper_inclusive": 17658000,
+        "points": 122,
+        "sr": 82.23540103826366,
+        "spl": 48.74377494952718
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.18.pth",
+      "index": 18,
+      "step": 17920000,
+      "last1m": {
+        "lower_exclusive": 16920000,
+        "upper_inclusive": 17920000,
+        "points": 489,
+        "sr": 82.23299857053776,
+        "spl": 47.65701664493616
+      },
+      "last3m": {
+        "lower_exclusive": 14920000,
+        "upper_inclusive": 17920000,
+        "points": 1465,
+        "sr": 85.0664197544189,
+        "spl": 48.17321953919967
+      },
+      "pre250k": {
+        "lower_exclusive": 17670000,
+        "upper_inclusive": 17920000,
+        "points": 123,
+        "sr": 82.46729155866112,
+        "spl": 48.9130159219106
+      },
+      "native": {
+        "step": 17920000,
+        "sr": 83.62069129943848,
+        "spl": 49.487265944480896
+      },
+      "post250k": {
+        "lower_exclusive": 17920000,
+        "upper_inclusive": 18170000,
+        "points": 122,
+        "sr": 82.45741993677422,
+        "spl": 49.16214307800668
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.19.pth",
+      "index": 19,
+      "step": 18432000,
+      "last1m": {
+        "lower_exclusive": 17432000,
+        "upper_inclusive": 18432000,
+        "points": 489,
+        "sr": 83.72849611173135,
+        "spl": 49.46891176676213
+      },
+      "last3m": {
+        "lower_exclusive": 15432000,
+        "upper_inclusive": 18432000,
+        "points": 1465,
+        "sr": 84.71907670587403,
+        "spl": 48.625832592667976
+      },
+      "pre250k": {
+        "lower_exclusive": 18182000,
+        "upper_inclusive": 18432000,
+        "points": 123,
+        "sr": 87.4227715217001,
+        "spl": 50.911486754572486
+      },
+      "native": {
+        "step": 18432000,
+        "sr": 86.79611682891846,
+        "spl": 52.470195293426514
+      },
+      "post250k": {
+        "lower_exclusive": 18432000,
+        "upper_inclusive": 18682000,
+        "points": 122,
+        "sr": 86.47999460579919,
+        "spl": 50.605279329370276
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.20.pth",
+      "index": 20,
+      "step": 18944000,
+      "last1m": {
+        "lower_exclusive": 17944000,
+        "upper_inclusive": 18944000,
+        "points": 489,
+        "sr": 86.27257094792793,
+        "spl": 49.753989708935556
+      },
+      "last3m": {
+        "lower_exclusive": 15944000,
+        "upper_inclusive": 18944000,
+        "points": 1465,
+        "sr": 85.05781525231059,
+        "spl": 49.12612639799867
+      },
+      "pre250k": {
+        "lower_exclusive": 18694000,
+        "upper_inclusive": 18944000,
+        "points": 123,
+        "sr": 88.3952040013259,
+        "spl": 48.216269752843594
+      },
+      "native": {
+        "step": 18944000,
+        "sr": 87.70763874053955,
+        "spl": 47.8552520275116
+      },
+      "post250k": {
+        "lower_exclusive": 18944000,
+        "upper_inclusive": 19194000,
+        "points": 122,
+        "sr": 82.73301916044267,
+        "spl": 46.48919901886924
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.21.pth",
+      "index": 21,
+      "step": 19456000,
+      "last1m": {
+        "lower_exclusive": 18456000,
+        "upper_inclusive": 19456000,
+        "points": 489,
+        "sr": 85.11410410418833,
+        "spl": 48.2462429561498
+      },
+      "last3m": {
+        "lower_exclusive": 16456000,
+        "upper_inclusive": 19456000,
+        "points": 1465,
+        "sr": 84.08753251459818,
+        "spl": 48.50462211887177
+      },
+      "pre250k": {
+        "lower_exclusive": 19206000,
+        "upper_inclusive": 19456000,
+        "points": 123,
+        "sr": 83.033993767529,
+        "spl": 47.976669669151306
+      },
+      "native": {
+        "step": 19456000,
+        "sr": 85.73692440986633,
+        "spl": 48.24690818786621
+      },
+      "post250k": {
+        "lower_exclusive": 19456000,
+        "upper_inclusive": 19706000,
+        "points": 122,
+        "sr": 86.84738185562071,
+        "spl": 48.16112227615763
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.22.pth",
+      "index": 22,
+      "step": 19968000,
+      "last1m": {
+        "lower_exclusive": 18968000,
+        "upper_inclusive": 19968000,
+        "points": 489,
+        "sr": 85.50633903905171,
+        "spl": 48.362729721274114
+      },
+      "last3m": {
+        "lower_exclusive": 16968000,
+        "upper_inclusive": 19968000,
+        "points": 1465,
+        "sr": 84.70068249686179,
+        "spl": 48.58369950548374
+      },
+      "pre250k": {
+        "lower_exclusive": 19718000,
+        "upper_inclusive": 19968000,
+        "points": 123,
+        "sr": 89.54145040938525,
+        "spl": 50.71697053385944
+      },
+      "native": {
+        "step": 19968000,
+        "sr": 86.10248565673828,
+        "spl": 49.597471952438354
+      },
+      "post250k": {
+        "lower_exclusive": 19968000,
+        "upper_inclusive": 20218000,
+        "points": 122,
+        "sr": 87.84363264920282,
+        "spl": 50.608892665534725
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.23.pth",
+      "index": 23,
+      "step": 20480000,
+      "last1m": {
+        "lower_exclusive": 19480000,
+        "upper_inclusive": 20480000,
+        "points": 489,
+        "sr": 86.78879222255543,
+        "spl": 49.416691528019975
+      },
+      "last3m": {
+        "lower_exclusive": 17480000,
+        "upper_inclusive": 20480000,
+        "points": 1465,
+        "sr": 85.28772477403842,
+        "spl": 49.0697787585112
+      },
+      "pre250k": {
+        "lower_exclusive": 20230000,
+        "upper_inclusive": 20480000,
+        "points": 123,
+        "sr": 82.84299950289532,
+        "spl": 48.109438627716
+      },
+      "native": {
+        "step": 20480000,
+        "sr": 79.07542586326599,
+        "spl": 45.20248770713806
+      },
+      "post250k": {
+        "lower_exclusive": 20480000,
+        "upper_inclusive": 20730000,
+        "points": 122,
+        "sr": 81.84347729213903,
+        "spl": 45.395631282055966
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.24.pth",
+      "index": 24,
+      "step": 20992000,
+      "last1m": {
+        "lower_exclusive": 19992000,
+        "upper_inclusive": 20992000,
+        "points": 489,
+        "sr": 83.46742770666968,
+        "spl": 47.26622606835239
+      },
+      "last3m": {
+        "lower_exclusive": 17992000,
+        "upper_inclusive": 20992000,
+        "points": 1465,
+        "sr": 85.15024404883792,
+        "spl": 48.470388083327755
+      },
+      "pre250k": {
+        "lower_exclusive": 20742000,
+        "upper_inclusive": 20992000,
+        "points": 123,
+        "sr": 81.56985834362061,
+        "spl": 45.05911854709067
+      },
+      "native": {
+        "step": 20992000,
+        "sr": 77.06576585769653,
+        "spl": 41.206490993499756
+      },
+      "post250k": {
+        "lower_exclusive": 20992000,
+        "upper_inclusive": 21242000,
+        "points": 122,
+        "sr": 83.4271137831641,
+        "spl": 45.388416823793634
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.25.pth",
+      "index": 25,
+      "step": 21504000,
+      "last1m": {
+        "lower_exclusive": 20504000,
+        "upper_inclusive": 21504000,
+        "points": 489,
+        "sr": 83.99616121514443,
+        "spl": 46.82041829592855
+      },
+      "last3m": {
+        "lower_exclusive": 18504000,
+        "upper_inclusive": 21504000,
+        "points": 1465,
+        "sr": 85.20722310290807,
+        "spl": 48.05403646755544
+      },
+      "pre250k": {
+        "lower_exclusive": 21254000,
+        "upper_inclusive": 21504000,
+        "points": 123,
+        "sr": 88.54886666546024,
+        "spl": 51.01912634644082
+      },
+      "native": {
+        "step": 21504000,
+        "sr": 88.5606050491333,
+        "spl": 50.33624768257141
+      },
+      "post250k": {
+        "lower_exclusive": 21504000,
+        "upper_inclusive": 21754000,
+        "points": 122,
+        "sr": 84.67611660722827,
+        "spl": 49.7992998263875
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.26.pth",
+      "index": 26,
+      "step": 22016000,
+      "last1m": {
+        "lower_exclusive": 21016000,
+        "upper_inclusive": 22016000,
+        "points": 489,
+        "sr": 85.6450009565412,
+        "spl": 49.35352963172585
+      },
+      "last3m": {
+        "lower_exclusive": 19016000,
+        "upper_inclusive": 22016000,
+        "points": 1465,
+        "sr": 84.83273328367761,
+        "spl": 48.30372797751183
+      },
+      "pre250k": {
+        "lower_exclusive": 21766000,
+        "upper_inclusive": 22016000,
+        "points": 123,
+        "sr": 85.24698750759528,
+        "spl": 50.41055029969874
+      },
+      "native": {
+        "step": 22016000,
+        "sr": 89.72558975219727,
+        "spl": 52.74341106414795
+      },
+      "post250k": {
+        "lower_exclusive": 22016000,
+        "upper_inclusive": 22266000,
+        "points": 122,
+        "sr": 89.1866034660183,
+        "spl": 52.11818267087467
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.27.pth",
+      "index": 27,
+      "step": 22528000,
+      "last1m": {
+        "lower_exclusive": 21528000,
+        "upper_inclusive": 22528000,
+        "points": 489,
+        "sr": 86.79447186261355,
+        "spl": 50.172404167842274
+      },
+      "last3m": {
+        "lower_exclusive": 19528000,
+        "upper_inclusive": 22528000,
+        "points": 1465,
+        "sr": 85.82349602272893,
+        "spl": 48.79184664516319
+      },
+      "pre250k": {
+        "lower_exclusive": 22278000,
+        "upper_inclusive": 22528000,
+        "points": 123,
+        "sr": 88.34770002016207,
+        "spl": 48.50744423342914
+      },
+      "native": {
+        "step": 22528000,
+        "sr": 87.30290532112122,
+        "spl": 48.67033660411835
+      },
+      "post250k": {
+        "lower_exclusive": 22528000,
+        "upper_inclusive": 22778000,
+        "points": 122,
+        "sr": 84.46963815415491,
+        "spl": 47.97028632926159
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.28.pth",
+      "index": 28,
+      "step": 23040000,
+      "last1m": {
+        "lower_exclusive": 22040000,
+        "upper_inclusive": 23040000,
+        "points": 489,
+        "sr": 87.28906819425477,
+        "spl": 48.51117981235918
+      },
+      "last3m": {
+        "lower_exclusive": 20040000,
+        "upper_inclusive": 23040000,
+        "points": 1465,
+        "sr": 85.38676340018523,
+        "spl": 48.31320920291614
+      },
+      "pre250k": {
+        "lower_exclusive": 22790000,
+        "upper_inclusive": 23040000,
+        "points": 123,
+        "sr": 87.36269260809674,
+        "spl": 45.864524734698655
+      },
+      "native": {
+        "step": 23040000,
+        "sr": 89.77813124656677,
+        "spl": 48.99921715259552
+      },
+      "post250k": {
+        "lower_exclusive": 23040000,
+        "upper_inclusive": 23290000,
+        "points": 122,
+        "sr": 89.42132416318674,
+        "spl": 49.23276708262866
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.29.pth",
+      "index": 29,
+      "step": 23552000,
+      "last1m": {
+        "lower_exclusive": 22552000,
+        "upper_inclusive": 23552000,
+        "points": 489,
+        "sr": 87.70564530037176,
+        "spl": 48.14644296842119
+      },
+      "last3m": {
+        "lower_exclusive": 20552000,
+        "upper_inclusive": 23552000,
+        "points": 1465,
+        "sr": 86.32112940423725,
+        "spl": 48.477720333447635
+      },
+      "pre250k": {
+        "lower_exclusive": 23302000,
+        "upper_inclusive": 23552000,
+        "points": 123,
+        "sr": 89.48489044739948,
+        "spl": 49.563951681299905
+      },
+      "native": {
+        "step": 23552000,
+        "sr": 88.72587084770203,
+        "spl": 50.177061557769775
+      },
+      "post250k": {
+        "lower_exclusive": 23552000,
+        "upper_inclusive": 23802000,
+        "points": 122,
+        "sr": 86.88998632743711,
+        "spl": 49.74695649303374
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.30.pth",
+      "index": 30,
+      "step": 24064000,
+      "last1m": {
+        "lower_exclusive": 23064000,
+        "upper_inclusive": 24064000,
+        "points": 489,
+        "sr": 87.85197953017455,
+        "spl": 49.60477284492891
+      },
+      "last3m": {
+        "lower_exclusive": 21064000,
+        "upper_inclusive": 24064000,
+        "points": 1465,
+        "sr": 87.08631861738785,
+        "spl": 49.31606222745095
+      },
+      "pre250k": {
+        "lower_exclusive": 23814000,
+        "upper_inclusive": 24064000,
+        "points": 123,
+        "sr": 85.84293354817522,
+        "spl": 49.87140564414544
+      },
+      "native": {
+        "step": 24064000,
+        "sr": 88.852459192276,
+        "spl": 52.678340673446655
+      },
+      "post250k": {
+        "lower_exclusive": 24064000,
+        "upper_inclusive": 24314000,
+        "points": 122,
+        "sr": 83.45033159998597,
+        "spl": 47.182347833133136
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.31.pth",
+      "index": 31,
+      "step": 24576000,
+      "last1m": {
+        "lower_exclusive": 23576000,
+        "upper_inclusive": 24576000,
+        "points": 489,
+        "sr": 84.67747040077708,
+        "spl": 48.527510875573185
+      },
+      "last3m": {
+        "lower_exclusive": 21576000,
+        "upper_inclusive": 24576000,
+        "points": 1465,
+        "sr": 86.38790270574263,
+        "spl": 48.93300213097712
+      },
+      "pre250k": {
+        "lower_exclusive": 24326000,
+        "upper_inclusive": 24576000,
+        "points": 123,
+        "sr": 82.87016584621212,
+        "spl": 47.49923791827225
+      },
+      "native": {
+        "step": 24576000,
+        "sr": 83.855801820755,
+        "spl": 48.21968674659729
+      },
+      "post250k": {
+        "lower_exclusive": 24576000,
+        "upper_inclusive": 24826000,
+        "points": 122,
+        "sr": 84.01061105923574,
+        "spl": 47.45325194519074
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.32.pth",
+      "index": 32,
+      "step": 25088000,
+      "last1m": {
+        "lower_exclusive": 24088000,
+        "upper_inclusive": 25088000,
+        "points": 489,
+        "sr": 85.0972676447808,
+        "spl": 48.367823565908246
+      },
+      "last3m": {
+        "lower_exclusive": 22088000,
+        "upper_inclusive": 25088000,
+        "points": 1465,
+        "sr": 86.71721274535403,
+        "spl": 48.77441029703251
+      },
+      "pre250k": {
+        "lower_exclusive": 24838000,
+        "upper_inclusive": 25088000,
+        "points": 123,
+        "sr": 90.3208728243665,
+        "spl": 51.750332916655196
+      },
+      "native": {
+        "step": 25088000,
+        "sr": 89.70233201980591,
+        "spl": 52.184343338012695
+      },
+      "post250k": {
+        "lower_exclusive": 25088000,
+        "upper_inclusive": 25338000,
+        "points": 122,
+        "sr": 91.19586895723812,
+        "spl": 52.83330048693985
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.33.pth",
+      "index": 33,
+      "step": 25600000,
+      "last1m": {
+        "lower_exclusive": 24600000,
+        "upper_inclusive": 25600000,
+        "points": 489,
+        "sr": 89.05339379983445,
+        "spl": 51.18644864646935
+      },
+      "last3m": {
+        "lower_exclusive": 22600000,
+        "upper_inclusive": 25600000,
+        "points": 1465,
+        "sr": 87.16350478523827,
+        "spl": 49.29835056485577
+      },
+      "pre250k": {
+        "lower_exclusive": 25350000,
+        "upper_inclusive": 25600000,
+        "points": 123,
+        "sr": 90.21077456513072,
+        "spl": 52.53016153971354
+      },
+      "native": {
+        "step": 25600000,
+        "sr": 87.43994235992432,
+        "spl": 53.22936177253723
+      },
+      "post250k": {
+        "lower_exclusive": 25600000,
+        "upper_inclusive": 25850000,
+        "points": 122,
+        "sr": 86.28728282256205,
+        "spl": 50.04456160498447
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.34.pth",
+      "index": 34,
+      "step": 26112000,
+      "last1m": {
+        "lower_exclusive": 25112000,
+        "upper_inclusive": 26112000,
+        "points": 489,
+        "sr": 88.8774229826859,
+        "spl": 51.312766119014995
+      },
+      "last3m": {
+        "lower_exclusive": 23112000,
+        "upper_inclusive": 26112000,
+        "points": 1465,
+        "sr": 87.27815726918166,
+        "spl": 49.80947387503276
+      },
+      "pre250k": {
+        "lower_exclusive": 25862000,
+        "upper_inclusive": 26112000,
+        "points": 123,
+        "sr": 87.73498360703631,
+        "spl": 49.78652809693561
+      },
+      "native": {
+        "step": 26112000,
+        "sr": 84.52107310295105,
+        "spl": 47.689175605773926
+      },
+      "post250k": {
+        "lower_exclusive": 26112000,
+        "upper_inclusive": 26362000,
+        "points": 122,
+        "sr": 83.67065953426673,
+        "spl": 46.87772371241304
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.35.pth",
+      "index": 35,
+      "step": 26624000,
+      "last1m": {
+        "lower_exclusive": 25624000,
+        "upper_inclusive": 26624000,
+        "points": 489,
+        "sr": 86.08500745398867,
+        "spl": 49.20629059366409
+      },
+      "last3m": {
+        "lower_exclusive": 23624000,
+        "upper_inclusive": 26624000,
+        "points": 1465,
+        "sr": 86.58834294247546,
+        "spl": 49.66204767951379
+      },
+      "pre250k": {
+        "lower_exclusive": 26374000,
+        "upper_inclusive": 26624000,
+        "points": 123,
+        "sr": 86.77252923570028,
+        "spl": 50.463586343013176
+      },
+      "native": {
+        "step": 26624000,
+        "sr": 89.07063007354736,
+        "spl": 50.55580735206604
+      },
+      "post250k": {
+        "lower_exclusive": 26624000,
+        "upper_inclusive": 26874000,
+        "points": 122,
+        "sr": 88.08996223035406,
+        "spl": 50.01054015315947
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.36.pth",
+      "index": 36,
+      "step": 27136000,
+      "last1m": {
+        "lower_exclusive": 26136000,
+        "upper_inclusive": 27136000,
+        "points": 489,
+        "sr": 86.72561889289591,
+        "spl": 49.61680361585871
+      },
+      "last3m": {
+        "lower_exclusive": 24136000,
+        "upper_inclusive": 27136000,
+        "points": 1465,
+        "sr": 86.9408573835783,
+        "spl": 49.792175504534725
+      },
+      "pre250k": {
+        "lower_exclusive": 26886000,
+        "upper_inclusive": 27136000,
+        "points": 123,
+        "sr": 88.20231333980716,
+        "spl": 51.038559641295336
+      },
+      "native": {
+        "step": 27136000,
+        "sr": 90.74460864067078,
+        "spl": 52.47803330421448
+      },
+      "post250k": {
+        "lower_exclusive": 27136000,
+        "upper_inclusive": 27386000,
+        "points": 122,
+        "sr": 87.77806079778514,
+        "spl": 48.74317052422977
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.37.pth",
+      "index": 37,
+      "step": 27648000,
+      "last1m": {
+        "lower_exclusive": 26648000,
+        "upper_inclusive": 27648000,
+        "points": 489,
+        "sr": 86.69356522140815,
+        "spl": 49.0992917604973
+      },
+      "last3m": {
+        "lower_exclusive": 24648000,
+        "upper_inclusive": 27648000,
+        "points": 1465,
+        "sr": 87.34475973523111,
+        "spl": 49.90087084395894
+      },
+      "pre250k": {
+        "lower_exclusive": 27398000,
+        "upper_inclusive": 27648000,
+        "points": 123,
+        "sr": 83.06757696275788,
+        "spl": 46.96147357060657
+      },
+      "native": {
+        "step": 27648000,
+        "sr": 85.25000214576721,
+        "spl": 48.21590185165405
+      },
+      "post250k": {
+        "lower_exclusive": 27648000,
+        "upper_inclusive": 27898000,
+        "points": 122,
+        "sr": 85.47767752506694,
+        "spl": 49.789890036231185
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.38.pth",
+      "index": 38,
+      "step": 28160000,
+      "last1m": {
+        "lower_exclusive": 27160000,
+        "upper_inclusive": 28160000,
+        "points": 489,
+        "sr": 85.07675957582236,
+        "spl": 48.29382809271354
+      },
+      "last3m": {
+        "lower_exclusive": 25160000,
+        "upper_inclusive": 28160000,
+        "points": 1465,
+        "sr": 86.84729747397908,
+        "spl": 49.71531871235818
+      },
+      "pre250k": {
+        "lower_exclusive": 27910000,
+        "upper_inclusive": 28160000,
+        "points": 123,
+        "sr": 84.55847312764423,
+        "spl": 48.119744876535925
+      },
+      "native": {
+        "step": 28160000,
+        "sr": 86.07871532440186,
+        "spl": 50.227272510528564
+      },
+      "post250k": {
+        "lower_exclusive": 28160000,
+        "upper_inclusive": 28410000,
+        "points": 122,
+        "sr": 86.38258517765608,
+        "spl": 49.593310986385966
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.39.pth",
+      "index": 39,
+      "step": 28672000,
+      "last1m": {
+        "lower_exclusive": 27672000,
+        "upper_inclusive": 28672000,
+        "points": 489,
+        "sr": 85.82312067349753,
+        "spl": 49.41217869459242
+      },
+      "last3m": {
+        "lower_exclusive": 25672000,
+        "upper_inclusive": 28672000,
+        "points": 1465,
+        "sr": 86.19671601077395,
+        "spl": 49.197918327188326
+      },
+      "pre250k": {
+        "lower_exclusive": 28422000,
+        "upper_inclusive": 28672000,
+        "points": 123,
+        "sr": 86.79617197532964,
+        "spl": 50.01505356494004
+      },
+      "native": {
+        "step": 28672000,
+        "sr": 87.60504126548767,
+        "spl": 52.37855911254883
+      },
+      "post250k": {
+        "lower_exclusive": 28672000,
+        "upper_inclusive": 28922000,
+        "points": 122,
+        "sr": 88.10688374472446,
+        "spl": 53.30491036665245
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.40.pth",
+      "index": 40,
+      "step": 29184000,
+      "last1m": {
+        "lower_exclusive": 28184000,
+        "upper_inclusive": 29184000,
+        "points": 489,
+        "sr": 87.44285103002208,
+        "spl": 51.222634985890615
+      },
+      "last3m": {
+        "lower_exclusive": 26184000,
+        "upper_inclusive": 29184000,
+        "points": 1465,
+        "sr": 86.50215700217888,
+        "spl": 49.77867908648663
+      },
+      "pre250k": {
+        "lower_exclusive": 28934000,
+        "upper_inclusive": 29184000,
+        "points": 123,
+        "sr": 88.4534747619939,
+        "spl": 51.93954105299663
+      },
+      "native": {
+        "step": 29184000,
+        "sr": 90.09901285171509,
+        "spl": 51.54903531074524
+      },
+      "post250k": {
+        "lower_exclusive": 29184000,
+        "upper_inclusive": 29434000,
+        "points": 122,
+        "sr": 87.79321948035819,
+        "spl": 50.53911971264198
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.41.pth",
+      "index": 41,
+      "step": 29696000,
+      "last1m": {
+        "lower_exclusive": 28696000,
+        "upper_inclusive": 29696000,
+        "points": 489,
+        "sr": 87.65544578097837,
+        "spl": 51.05426457152532
+      },
+      "last3m": {
+        "lower_exclusive": 26696000,
+        "upper_inclusive": 29696000,
+        "points": 1465,
+        "sr": 86.70015898987702,
+        "spl": 49.8504403691243
+      },
+      "pre250k": {
+        "lower_exclusive": 29446000,
+        "upper_inclusive": 29696000,
+        "points": 123,
+        "sr": 86.47827365534091,
+        "spl": 48.809836623145316
+      },
+      "native": {
+        "step": 29696000,
+        "sr": 85.97785830497742,
+        "spl": 49.52670931816101
+      },
+      "post250k": {
+        "lower_exclusive": 29696000,
+        "upper_inclusive": 29946000,
+        "points": 122,
+        "sr": 83.44808343004007,
+        "spl": 45.92193687548403
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.42.pth",
+      "index": 42,
+      "step": 30208000,
+      "last1m": {
+        "lower_exclusive": 29208000,
+        "upper_inclusive": 30208000,
+        "points": 489,
+        "sr": 86.31517362984656,
+        "spl": 48.50010733541048
+      },
+      "last3m": {
+        "lower_exclusive": 27208000,
+        "upper_inclusive": 30208000,
+        "points": 1465,
+        "sr": 86.24561789499616,
+        "spl": 49.336945408440286
+      },
+      "pre250k": {
+        "lower_exclusive": 29958000,
+        "upper_inclusive": 30208000,
+        "points": 123,
+        "sr": 87.95419156066771,
+        "spl": 49.083326502544125
+      },
+      "native": {
+        "step": 30208000,
+        "sr": 88.86198401451111,
+        "spl": 51.02716684341431
+      },
+      "post250k": {
+        "lower_exclusive": 30208000,
+        "upper_inclusive": 30458000,
+        "points": 122,
+        "sr": 86.96382319340941,
+        "spl": 48.250393496185055
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.43.pth",
+      "index": 43,
+      "step": 30720000,
+      "last1m": {
+        "lower_exclusive": 29720000,
+        "upper_inclusive": 30720000,
+        "points": 489,
+        "sr": 86.07336307108281,
+        "spl": 47.441798936126176
+      },
+      "last3m": {
+        "lower_exclusive": 27720000,
+        "upper_inclusive": 30720000,
+        "points": 1465,
+        "sr": 86.59439955555132,
+        "spl": 49.37238203177273
+      },
+      "pre250k": {
+        "lower_exclusive": 30470000,
+        "upper_inclusive": 30720000,
+        "points": 123,
+        "sr": 85.98153295555736,
+        "spl": 46.671271760289265
+      },
+      "native": {
+        "step": 30720000,
+        "sr": 85.56925058364868,
+        "spl": 48.25868904590607
+      },
+      "post250k": {
+        "lower_exclusive": 30720000,
+        "upper_inclusive": 30970000,
+        "points": 122,
+        "sr": 86.53579969875148,
+        "spl": 49.66838867937932
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.44.pth",
+      "index": 44,
+      "step": 31232000,
+      "last1m": {
+        "lower_exclusive": 30232000,
+        "upper_inclusive": 31232000,
+        "points": 489,
+        "sr": 85.85800958801146,
+        "spl": 47.69544675793872
+      },
+      "last3m": {
+        "lower_exclusive": 28232000,
+        "upper_inclusive": 31232000,
+        "points": 1465,
+        "sr": 86.57084710768872,
+        "spl": 49.154603011372146
+      },
+      "pre250k": {
+        "lower_exclusive": 30982000,
+        "upper_inclusive": 31232000,
+        "points": 123,
+        "sr": 84.1530763521427,
+        "spl": 46.5172364217479
+      },
+      "native": {
+        "step": 31232000,
+        "sr": 86.8305504322052,
+        "spl": 47.52224087715149
+      },
+      "post250k": {
+        "lower_exclusive": 31232000,
+        "upper_inclusive": 31482000,
+        "points": 122,
+        "sr": 85.06508440267845,
+        "spl": 47.83327359645093
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.45.pth",
+      "index": 45,
+      "step": 31744000,
+      "last1m": {
+        "lower_exclusive": 30744000,
+        "upper_inclusive": 31744000,
+        "points": 489,
+        "sr": 84.61695470692922,
+        "spl": 47.9796574037743
+      },
+      "last3m": {
+        "lower_exclusive": 28744000,
+        "upper_inclusive": 31744000,
+        "points": 1465,
+        "sr": 86.08379462880079,
+        "spl": 48.73395902304926
+      },
+      "pre250k": {
+        "lower_exclusive": 31494000,
+        "upper_inclusive": 31744000,
+        "points": 123,
+        "sr": 82.86584000277325,
+        "spl": 48.03454398624296
+      },
+      "native": {
+        "step": 31744000,
+        "sr": 86.45066022872925,
+        "spl": 51.39055848121643
+      },
+      "post250k": {
+        "lower_exclusive": 31744000,
+        "upper_inclusive": 31994000,
+        "points": 122,
+        "sr": 87.49397704835798,
+        "spl": 51.00241125118538
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.46.pth",
+      "index": 46,
+      "step": 32256000,
+      "last1m": {
+        "lower_exclusive": 31256000,
+        "upper_inclusive": 32256000,
+        "points": 489,
+        "sr": 85.12688931268173,
+        "spl": 48.83811255661744
+      },
+      "last3m": {
+        "lower_exclusive": 29256000,
+        "upper_inclusive": 32256000,
+        "points": 1465,
+        "sr": 85.7420263803046,
+        "spl": 48.30332069877065
+      },
+      "pre250k": {
+        "lower_exclusive": 32006000,
+        "upper_inclusive": 32256000,
+        "points": 123,
+        "sr": 85.30826500760831,
+        "spl": 48.39963629478362
+      },
+      "native": {
+        "step": 32256000,
+        "sr": 87.53665685653687,
+        "spl": 50.179558992385864
+      },
+      "post250k": {
+        "lower_exclusive": 32256000,
+        "upper_inclusive": 32506000,
+        "points": 122,
+        "sr": 88.97644159246664,
+        "spl": 52.40331516891229
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.47.pth",
+      "index": 47,
+      "step": 32768000,
+      "last1m": {
+        "lower_exclusive": 31768000,
+        "upper_inclusive": 32768000,
+        "points": 489,
+        "sr": 87.07521899102412,
+        "spl": 50.604376989152044
+      },
+      "last3m": {
+        "lower_exclusive": 29768000,
+        "upper_inclusive": 32768000,
+        "points": 1465,
+        "sr": 85.95055511787076,
+        "spl": 48.701401548174054
+      },
+      "pre250k": {
+        "lower_exclusive": 32518000,
+        "upper_inclusive": 32768000,
+        "points": 123,
+        "sr": 86.66124944764424,
+        "spl": 50.778013710084004
+      },
+      "native": {
+        "step": 32768000,
+        "sr": 88.1879210472107,
+        "spl": 51.58590078353882
+      },
+      "post250k": {
+        "lower_exclusive": 32768000,
+        "upper_inclusive": 33018000,
+        "points": 122,
+        "sr": 88.29377640466221,
+        "spl": 51.47895383053138
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.48.pth",
+      "index": 48,
+      "step": 33280000,
+      "last1m": {
+        "lower_exclusive": 32280000,
+        "upper_inclusive": 33280000,
+        "points": 489,
+        "sr": 87.09092130446483,
+        "spl": 50.91241876649954
+      },
+      "last3m": {
+        "lower_exclusive": 30280000,
+        "upper_inclusive": 33280000,
+        "points": 1465,
+        "sr": 86.03034927576475,
+        "spl": 49.13629926715694
+      },
+      "pre250k": {
+        "lower_exclusive": 33030000,
+        "upper_inclusive": 33280000,
+        "points": 123,
+        "sr": 84.47052676503252,
+        "spl": 48.87324288123992
+      },
+      "native": {
+        "step": 33280000,
+        "sr": 83.88489484786987,
+        "spl": 47.77807295322418
+      },
+      "post250k": {
+        "lower_exclusive": 33280000,
+        "upper_inclusive": 33530000,
+        "points": 122,
+        "sr": 85.12747097210806,
+        "spl": 48.452177936913536
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.49.pth",
+      "index": 49,
+      "step": 33792000,
+      "last1m": {
+        "lower_exclusive": 32792000,
+        "upper_inclusive": 33792000,
+        "points": 489,
+        "sr": 85.4019741582968,
+        "spl": 49.376766965676914
+      },
+      "last3m": {
+        "lower_exclusive": 30792000,
+        "upper_inclusive": 33792000,
+        "points": 1465,
+        "sr": 85.69773067793342,
+        "spl": 49.34398865333596
+      },
+      "pre250k": {
+        "lower_exclusive": 33542000,
+        "upper_inclusive": 33792000,
+        "points": 123,
+        "sr": 84.00599840210705,
+        "spl": 48.87388205625177
+      },
+      "native": {
+        "step": 33792000,
+        "sr": 83.32021832466125,
+        "spl": 47.6885199546814
+      },
+      "post250k": {
+        "lower_exclusive": 33792000,
+        "upper_inclusive": 34042000,
+        "points": 122,
+        "sr": 84.66774923879592,
+        "spl": 49.922511103700415
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.50.pth",
+      "index": 50,
+      "step": 34304000,
+      "last1m": {
+        "lower_exclusive": 33304000,
+        "upper_inclusive": 34304000,
+        "points": 489,
+        "sr": 84.59572610435798,
+        "spl": 49.107922421642606
+      },
+      "last3m": {
+        "lower_exclusive": 31304000,
+        "upper_inclusive": 34304000,
+        "points": 1465,
+        "sr": 85.6015904608847,
+        "spl": 49.66289606110635
+      },
+      "pre250k": {
+        "lower_exclusive": 34054000,
+        "upper_inclusive": 34304000,
+        "points": 123,
+        "sr": 84.61905005501538,
+        "spl": 49.05709781782414
+      },
+      "native": {
+        "step": 34304000,
+        "sr": 85.61484813690186,
+        "spl": 50.20528435707092
+      },
+      "post250k": {
+        "lower_exclusive": 34304000,
+        "upper_inclusive": 34554000,
+        "points": 122,
+        "sr": 82.97499344974267,
+        "spl": 49.03788021841987
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.51.pth",
+      "index": 51,
+      "step": 34816000,
+      "last1m": {
+        "lower_exclusive": 33816000,
+        "upper_inclusive": 34816000,
+        "points": 489,
+        "sr": 84.70261898996397,
+        "spl": 49.135986768882454
+      },
+      "last3m": {
+        "lower_exclusive": 31816000,
+        "upper_inclusive": 34816000,
+        "points": 1465,
+        "sr": 85.6893413546956,
+        "spl": 49.65524082704616
+      },
+      "pre250k": {
+        "lower_exclusive": 34566000,
+        "upper_inclusive": 34816000,
+        "points": 123,
+        "sr": 86.49525942841197,
+        "spl": 48.403208672515746
+      },
+      "native": {
+        "step": 34816000,
+        "sr": 85.27919054031372,
+        "spl": 48.968082666397095
+      },
+      "post250k": {
+        "lower_exclusive": 34816000,
+        "upper_inclusive": 35066000,
+        "points": 122,
+        "sr": 88.34467388567377,
+        "spl": 50.703457217724605
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.52.pth",
+      "index": 52,
+      "step": 35328000,
+      "last1m": {
+        "lower_exclusive": 34328000,
+        "upper_inclusive": 35328000,
+        "points": 489,
+        "sr": 86.40473526435883,
+        "spl": 50.295102773024745
+      },
+      "last3m": {
+        "lower_exclusive": 32328000,
+        "upper_inclusive": 35328000,
+        "points": 1465,
+        "sr": 85.96763199913624,
+        "spl": 50.05911900321778
+      },
+      "pre250k": {
+        "lower_exclusive": 35078000,
+        "upper_inclusive": 35328000,
+        "points": 123,
+        "sr": 87.71175160640622,
+        "spl": 52.96102335782555
+      },
+      "native": {
+        "step": 35328000,
+        "sr": 86.35724186897278,
+        "spl": 53.0046820640564
+      },
+      "post250k": {
+        "lower_exclusive": 35328000,
+        "upper_inclusive": 35578000,
+        "points": 122,
+        "sr": 87.02436319140138,
+        "spl": 50.545452535152435
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.53.pth",
+      "index": 53,
+      "step": 35840000,
+      "last1m": {
+        "lower_exclusive": 34840000,
+        "upper_inclusive": 35840000,
+        "points": 489,
+        "sr": 87.20779997927036,
+        "spl": 51.42800574531828
+      },
+      "last3m": {
+        "lower_exclusive": 32840000,
+        "upper_inclusive": 35840000,
+        "points": 1465,
+        "sr": 85.72482931329122,
+        "spl": 49.93467775017735
+      },
+      "pre250k": {
+        "lower_exclusive": 35590000,
+        "upper_inclusive": 35840000,
+        "points": 123,
+        "sr": 85.68109874802876,
+        "spl": 51.33359378915492
+      },
+      "native": {
+        "step": 35840000,
+        "sr": 88.41807842254639,
+        "spl": 52.297818660736084
+      },
+      "post250k": {
+        "lower_exclusive": 35840000,
+        "upper_inclusive": 36090000,
+        "points": 122,
+        "sr": 89.08758686214196,
+        "spl": 53.45539455531073
+      }
+    },
+    {
+      "case": "A",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.54.pth",
+      "index": 54,
+      "step": 36352000,
+      "last1m": {
+        "lower_exclusive": 35352000,
+        "upper_inclusive": 36352000,
+        "points": 489,
+        "sr": 88.25882929234416,
+        "spl": 52.656195433105665
+      },
+      "last3m": {
+        "lower_exclusive": 33352000,
+        "upper_inclusive": 36352000,
+        "points": 1465,
+        "sr": 86.4567854908953,
+        "spl": 50.749099539408505
+      },
+      "pre250k": {
+        "lower_exclusive": 36102000,
+        "upper_inclusive": 36352000,
+        "points": 123,
+        "sr": 91.23627078242419,
+        "spl": 55.43845557584996
+      },
+      "native": {
+        "step": 36352000,
+        "sr": 89.75988626480103,
+        "spl": 53.40679883956909
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.5.pth",
+      "index": 5,
+      "step": 11776000,
+      "last1m": {
+        "lower_exclusive": 10776000,
+        "upper_inclusive": 11776000,
+        "points": 489,
+        "sr": 85.03673289938695,
+        "spl": 46.96525935015064
+      },
+      "last3m": {
+        "lower_exclusive": 8776000,
+        "upper_inclusive": 11776000,
+        "points": 1465,
+        "sr": 83.63811105998303,
+        "spl": 46.822625400670155
+      },
+      "pre250k": {
+        "lower_exclusive": 11526000,
+        "upper_inclusive": 11776000,
+        "points": 123,
+        "sr": 88.10122337767748,
+        "spl": 50.119466292179695
+      },
+      "native": {
+        "step": 11776000,
+        "sr": 88.65545988082886,
+        "spl": 52.46264934539795
+      },
+      "post250k": {
+        "lower_exclusive": 11776000,
+        "upper_inclusive": 12026000,
+        "points": 122,
+        "sr": 88.22096522714271,
+        "spl": 50.827743552747314
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.6.pth",
+      "index": 6,
+      "step": 12288000,
+      "last1m": {
+        "lower_exclusive": 11288000,
+        "upper_inclusive": 12288000,
+        "points": 489,
+        "sr": 87.25904009337317,
+        "spl": 49.7054235884017
+      },
+      "last3m": {
+        "lower_exclusive": 9288000,
+        "upper_inclusive": 12288000,
+        "points": 1465,
+        "sr": 84.31035357123756,
+        "spl": 47.39274296947713
+      },
+      "pre250k": {
+        "lower_exclusive": 12038000,
+        "upper_inclusive": 12288000,
+        "points": 123,
+        "sr": 86.07733298123368,
+        "spl": 50.08059870905992
+      },
+      "native": {
+        "step": 12288000,
+        "sr": 85.28399467468262,
+        "spl": 48.62119257450104
+      },
+      "post250k": {
+        "lower_exclusive": 12288000,
+        "upper_inclusive": 12538000,
+        "points": 122,
+        "sr": 85.34277237829615,
+        "spl": 48.05625721079404
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.7.pth",
+      "index": 7,
+      "step": 12800000,
+      "last1m": {
+        "lower_exclusive": 11800000,
+        "upper_inclusive": 12800000,
+        "points": 489,
+        "sr": 86.78279564180744,
+        "spl": 49.00774036692208
+      },
+      "last3m": {
+        "lower_exclusive": 9800000,
+        "upper_inclusive": 12800000,
+        "points": 1465,
+        "sr": 84.66831933109427,
+        "spl": 47.44313794801667
+      },
+      "pre250k": {
+        "lower_exclusive": 12550000,
+        "upper_inclusive": 12800000,
+        "points": 123,
+        "sr": 87.68533298639747,
+        "spl": 47.29792264903464
+      },
+      "native": {
+        "step": 12800000,
+        "sr": 88.27415108680725,
+        "spl": 48.38816821575165
+      },
+      "post250k": {
+        "lower_exclusive": 12800000,
+        "upper_inclusive": 13050000,
+        "points": 122,
+        "sr": 88.62612643202797,
+        "spl": 49.11803185451226
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.8.pth",
+      "index": 8,
+      "step": 13312000,
+      "last1m": {
+        "lower_exclusive": 12312000,
+        "upper_inclusive": 13312000,
+        "points": 489,
+        "sr": 87.04215617267633,
+        "spl": 48.79491608932705
+      },
+      "last3m": {
+        "lower_exclusive": 10312000,
+        "upper_inclusive": 13312000,
+        "points": 1465,
+        "sr": 85.12479988788175,
+        "spl": 47.8312888344807
+      },
+      "pre250k": {
+        "lower_exclusive": 13062000,
+        "upper_inclusive": 13312000,
+        "points": 123,
+        "sr": 86.44999299592119,
+        "spl": 50.58102944517523
+      },
+      "native": {
+        "step": 13312000,
+        "sr": 83.5565447807312,
+        "spl": 49.11802411079407
+      },
+      "post250k": {
+        "lower_exclusive": 13312000,
+        "upper_inclusive": 13562000,
+        "points": 122,
+        "sr": 85.79278070418562,
+        "spl": 49.508305651242615
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.9.pth",
+      "index": 9,
+      "step": 13824000,
+      "last1m": {
+        "lower_exclusive": 12824000,
+        "upper_inclusive": 13824000,
+        "points": 489,
+        "sr": 86.02209252082497,
+        "spl": 49.200261394914186
+      },
+      "last3m": {
+        "lower_exclusive": 10824000,
+        "upper_inclusive": 13824000,
+        "points": 1465,
+        "sr": 86.04282633436418,
+        "spl": 48.46477014212885
+      },
+      "pre250k": {
+        "lower_exclusive": 13574000,
+        "upper_inclusive": 13824000,
+        "points": 123,
+        "sr": 83.37581661658558,
+        "spl": 47.505426600696595
+      },
+      "native": {
+        "step": 13824000,
+        "sr": 83.41566920280457,
+        "spl": 46.360668540000916
+      },
+      "post250k": {
+        "lower_exclusive": 13824000,
+        "upper_inclusive": 14074000,
+        "points": 122,
+        "sr": 80.06256701516324,
+        "spl": 44.2439185547047
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.10.pth",
+      "index": 10,
+      "step": 14336000,
+      "last1m": {
+        "lower_exclusive": 13336000,
+        "upper_inclusive": 14336000,
+        "points": 489,
+        "sr": 83.34196412246408,
+        "spl": 47.302900416231836
+      },
+      "last3m": {
+        "lower_exclusive": 11336000,
+        "upper_inclusive": 14336000,
+        "points": 1465,
+        "sr": 85.87146383910455,
+        "spl": 48.65543326623611
+      },
+      "pre250k": {
+        "lower_exclusive": 14086000,
+        "upper_inclusive": 14336000,
+        "points": 123,
+        "sr": 84.21718928872085,
+        "spl": 48.17254531189678
+      },
+      "native": {
+        "step": 14336000,
+        "sr": 88.0774974822998,
+        "spl": 51.16947293281555
+      },
+      "post250k": {
+        "lower_exclusive": 14336000,
+        "upper_inclusive": 14586000,
+        "points": 122,
+        "sr": 86.11237704753876,
+        "spl": 48.771858630610296
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.11.pth",
+      "index": 11,
+      "step": 14848000,
+      "last1m": {
+        "lower_exclusive": 13848000,
+        "upper_inclusive": 14848000,
+        "points": 489,
+        "sr": 83.37136028003107,
+        "spl": 46.75221902095467
+      },
+      "last3m": {
+        "lower_exclusive": 11848000,
+        "upper_inclusive": 14848000,
+        "points": 1465,
+        "sr": 85.33885847586413,
+        "spl": 48.23779650922521
+      },
+      "pre250k": {
+        "lower_exclusive": 14598000,
+        "upper_inclusive": 14848000,
+        "points": 123,
+        "sr": 83.15333942087685,
+        "spl": 45.9011718509643
+      },
+      "native": {
+        "step": 14848000,
+        "sr": 82.65851736068726,
+        "spl": 46.86213135719299
+      },
+      "post250k": {
+        "lower_exclusive": 14848000,
+        "upper_inclusive": 15098000,
+        "points": 122,
+        "sr": 85.23311771330286,
+        "spl": 48.70939977833482
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.12.pth",
+      "index": 12,
+      "step": 15360000,
+      "last1m": {
+        "lower_exclusive": 14360000,
+        "upper_inclusive": 15360000,
+        "points": 489,
+        "sr": 85.23562687062535,
+        "spl": 48.4333617799365
+      },
+      "last3m": {
+        "lower_exclusive": 12360000,
+        "upper_inclusive": 15360000,
+        "points": 1465,
+        "sr": 85.2026309535772,
+        "spl": 48.229830370828154
+      },
+      "pre250k": {
+        "lower_exclusive": 15110000,
+        "upper_inclusive": 15360000,
+        "points": 123,
+        "sr": 86.8469105988014,
+        "spl": 50.77695458885131
+      },
+      "native": {
+        "step": 15360000,
+        "sr": 90.83577990531921,
+        "spl": 52.63868570327759
+      },
+      "post250k": {
+        "lower_exclusive": 15360000,
+        "upper_inclusive": 15610000,
+        "points": 122,
+        "sr": 89.46544313039936,
+        "spl": 51.40691805081289
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.13.pth",
+      "index": 13,
+      "step": 15872000,
+      "last1m": {
+        "lower_exclusive": 14872000,
+        "upper_inclusive": 15872000,
+        "points": 489,
+        "sr": 86.12594526482017,
+        "spl": 49.41316740035035
+      },
+      "last3m": {
+        "lower_exclusive": 12872000,
+        "upper_inclusive": 15872000,
+        "points": 1465,
+        "sr": 85.1049637021465,
+        "spl": 48.43672813815875
+      },
+      "pre250k": {
+        "lower_exclusive": 15622000,
+        "upper_inclusive": 15872000,
+        "points": 123,
+        "sr": 82.77418036771014,
+        "spl": 46.71391643644348
+      },
+      "native": {
+        "step": 15872000,
+        "sr": 79.70219254493713,
+        "spl": 46.10178470611572
+      },
+      "post250k": {
+        "lower_exclusive": 15872000,
+        "upper_inclusive": 16122000,
+        "points": 122,
+        "sr": 82.7126777074376,
+        "spl": 46.80926145100203
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.14.pth",
+      "index": 14,
+      "step": 16384000,
+      "last1m": {
+        "lower_exclusive": 15384000,
+        "upper_inclusive": 16384000,
+        "points": 489,
+        "sr": 84.75244515756401,
+        "spl": 47.95585233862902
+      },
+      "last3m": {
+        "lower_exclusive": 13384000,
+        "upper_inclusive": 16384000,
+        "points": 1465,
+        "sr": 84.5040887248394,
+        "spl": 47.948182215055915
+      },
+      "pre250k": {
+        "lower_exclusive": 16134000,
+        "upper_inclusive": 16384000,
+        "points": 123,
+        "sr": 84.57024330046119,
+        "spl": 47.32154728920479
+      },
+      "native": {
+        "step": 16384000,
+        "sr": 90.05848169326782,
+        "spl": 49.44347441196442
+      },
+      "post250k": {
+        "lower_exclusive": 16384000,
+        "upper_inclusive": 16634000,
+        "points": 122,
+        "sr": 90.1432059827398,
+        "spl": 50.83780249611276
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.15.pth",
+      "index": 15,
+      "step": 16896000,
+      "last1m": {
+        "lower_exclusive": 15896000,
+        "upper_inclusive": 16896000,
+        "points": 489,
+        "sr": 86.34241190424726,
+        "spl": 49.39637878921134
+      },
+      "last3m": {
+        "lower_exclusive": 13896000,
+        "upper_inclusive": 16896000,
+        "points": 1465,
+        "sr": 85.26206064956587,
+        "spl": 48.5376549784234
+      },
+      "pre250k": {
+        "lower_exclusive": 16646000,
+        "upper_inclusive": 16896000,
+        "points": 123,
+        "sr": 87.35424716298174,
+        "spl": 52.274318778417936
+      },
+      "native": {
+        "step": 16896000,
+        "sr": 85.78500747680664,
+        "spl": 50.98744034767151
+      },
+      "post250k": {
+        "lower_exclusive": 16896000,
+        "upper_inclusive": 17146000,
+        "points": 122,
+        "sr": 83.78112677667961,
+        "spl": 48.00011500960491
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.16.pth",
+      "index": 16,
+      "step": 17408000,
+      "last1m": {
+        "lower_exclusive": 16408000,
+        "upper_inclusive": 17408000,
+        "points": 489,
+        "sr": 86.00840512472672,
+        "spl": 49.5177144836063
+      },
+      "last3m": {
+        "lower_exclusive": 14408000,
+        "upper_inclusive": 17408000,
+        "points": 1465,
+        "sr": 85.36262974804171,
+        "spl": 48.642537654870196
+      },
+      "pre250k": {
+        "lower_exclusive": 17158000,
+        "upper_inclusive": 17408000,
+        "points": 123,
+        "sr": 83.07298983984846,
+        "spl": 46.91761441347075
+      },
+      "native": {
+        "step": 17408000,
+        "sr": 84.88645553588867,
+        "spl": 47.20264971256256
+      },
+      "post250k": {
+        "lower_exclusive": 17408000,
+        "upper_inclusive": 17658000,
+        "points": 122,
+        "sr": 83.05828502920808,
+        "spl": 47.99025965030076
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.17.pth",
+      "index": 17,
+      "step": 17920000,
+      "last1m": {
+        "lower_exclusive": 16920000,
+        "upper_inclusive": 17920000,
+        "points": 489,
+        "sr": 82.8457757251638,
+        "spl": 47.630874254952175
+      },
+      "last3m": {
+        "lower_exclusive": 14920000,
+        "upper_inclusive": 17920000,
+        "points": 1465,
+        "sr": 85.07360377002496,
+        "spl": 48.80841199245062
+      },
+      "pre250k": {
+        "lower_exclusive": 17670000,
+        "upper_inclusive": 17920000,
+        "points": 123,
+        "sr": 81.84924930091796,
+        "spl": 47.993757933135925
+      },
+      "native": {
+        "step": 17920000,
+        "sr": 85.37774085998535,
+        "spl": 51.22959017753601
+      },
+      "post250k": {
+        "lower_exclusive": 17920000,
+        "upper_inclusive": 18170000,
+        "points": 122,
+        "sr": 84.30962235224052,
+        "spl": 50.410413326787165
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.18.pth",
+      "index": 18,
+      "step": 18432000,
+      "last1m": {
+        "lower_exclusive": 17432000,
+        "upper_inclusive": 18432000,
+        "points": 489,
+        "sr": 83.42029494985724,
+        "spl": 49.032006868311726
+      },
+      "last3m": {
+        "lower_exclusive": 15432000,
+        "upper_inclusive": 18432000,
+        "points": 1465,
+        "sr": 84.65213434281202,
+        "spl": 48.75898409825543
+      },
+      "pre250k": {
+        "lower_exclusive": 18182000,
+        "upper_inclusive": 18432000,
+        "points": 123,
+        "sr": 84.66852510847697,
+        "spl": 49.76203540960948
+      },
+      "native": {
+        "step": 18432000,
+        "sr": 86.1625075340271,
+        "spl": 50.70300102233887
+      },
+      "post250k": {
+        "lower_exclusive": 18432000,
+        "upper_inclusive": 18682000,
+        "points": 122,
+        "sr": 85.4832269129206,
+        "spl": 50.36845409967861
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.19.pth",
+      "index": 19,
+      "step": 18944000,
+      "last1m": {
+        "lower_exclusive": 17944000,
+        "upper_inclusive": 18944000,
+        "points": 489,
+        "sr": 85.39604615336303,
+        "spl": 50.3457844013573
+      },
+      "last3m": {
+        "lower_exclusive": 15944000,
+        "upper_inclusive": 18944000,
+        "points": 1465,
+        "sr": 84.91340627849306,
+        "spl": 49.17620013598289
+      },
+      "pre250k": {
+        "lower_exclusive": 18694000,
+        "upper_inclusive": 18944000,
+        "points": 123,
+        "sr": 87.17095284927183,
+        "spl": 50.99676784461107
+      },
+      "native": {
+        "step": 18944000,
+        "sr": 88.43728303909302,
+        "spl": 51.962774991989136
+      },
+      "post250k": {
+        "lower_exclusive": 18944000,
+        "upper_inclusive": 19194000,
+        "points": 122,
+        "sr": 85.73785629428801,
+        "spl": 50.52610313306089
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.20.pth",
+      "index": 20,
+      "step": 19456000,
+      "last1m": {
+        "lower_exclusive": 18456000,
+        "upper_inclusive": 19456000,
+        "points": 489,
+        "sr": 85.4774423781592,
+        "spl": 49.84999598900965
+      },
+      "last3m": {
+        "lower_exclusive": 16456000,
+        "upper_inclusive": 19456000,
+        "points": 1465,
+        "sr": 84.869575964306,
+        "spl": 49.46189155554202
+      },
+      "pre250k": {
+        "lower_exclusive": 19206000,
+        "upper_inclusive": 19456000,
+        "points": 123,
+        "sr": 83.54813931434136,
+        "spl": 47.601076790956945
+      },
+      "native": {
+        "step": 19456000,
+        "sr": 82.6725423336029,
+        "spl": 47.049662470817566
+      },
+      "post250k": {
+        "lower_exclusive": 19456000,
+        "upper_inclusive": 19706000,
+        "points": 122,
+        "sr": 83.07859062171373,
+        "spl": 46.75339230748474
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.21.pth",
+      "index": 21,
+      "step": 19968000,
+      "last1m": {
+        "lower_exclusive": 18968000,
+        "upper_inclusive": 19968000,
+        "points": 489,
+        "sr": 84.3975492415984,
+        "spl": 48.182833267867196
+      },
+      "last3m": {
+        "lower_exclusive": 16968000,
+        "upper_inclusive": 19968000,
+        "points": 1465,
+        "sr": 84.24332219992888,
+        "spl": 48.77114160679306
+      },
+      "pre250k": {
+        "lower_exclusive": 19718000,
+        "upper_inclusive": 19968000,
+        "points": 123,
+        "sr": 85.5642453441775,
+        "spl": 48.311780090254494
+      },
+      "native": {
+        "step": 19968000,
+        "sr": 83.69230628013611,
+        "spl": 49.38423931598663
+      },
+      "post250k": {
+        "lower_exclusive": 19968000,
+        "upper_inclusive": 20218000,
+        "points": 122,
+        "sr": 88.07936164199329,
+        "spl": 49.391386059464
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.22.pth",
+      "index": 22,
+      "step": 20480000,
+      "last1m": {
+        "lower_exclusive": 19480000,
+        "upper_inclusive": 20480000,
+        "points": 489,
+        "sr": 86.87189949070749,
+        "spl": 49.04474508786738
+      },
+      "last3m": {
+        "lower_exclusive": 17480000,
+        "upper_inclusive": 20480000,
+        "points": 1465,
+        "sr": 85.25442017223241,
+        "spl": 49.31822780659581
+      },
+      "pre250k": {
+        "lower_exclusive": 20230000,
+        "upper_inclusive": 20480000,
+        "points": 123,
+        "sr": 90.39711046025036,
+        "spl": 51.701149320214746
+      },
+      "native": {
+        "step": 20480000,
+        "sr": 89.77183103561401,
+        "spl": 51.55811905860901
+      },
+      "post250k": {
+        "lower_exclusive": 20480000,
+        "upper_inclusive": 20730000,
+        "points": 122,
+        "sr": 87.16779395205076,
+        "spl": 51.8452238841135
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.23.pth",
+      "index": 23,
+      "step": 20992000,
+      "last1m": {
+        "lower_exclusive": 19992000,
+        "upper_inclusive": 20992000,
+        "points": 489,
+        "sr": 87.98099351563093,
+        "spl": 50.45620346849438
+      },
+      "last3m": {
+        "lower_exclusive": 17992000,
+        "upper_inclusive": 20992000,
+        "points": 1465,
+        "sr": 85.91034467716673,
+        "spl": 49.63620045689592
+      },
+      "pre250k": {
+        "lower_exclusive": 20742000,
+        "upper_inclusive": 20992000,
+        "points": 123,
+        "sr": 85.93548395769382,
+        "spl": 48.87994743459593
+      },
+      "native": {
+        "step": 20992000,
+        "sr": 78.98272275924683,
+        "spl": 43.30403208732605
+      },
+      "post250k": {
+        "lower_exclusive": 20992000,
+        "upper_inclusive": 21242000,
+        "points": 122,
+        "sr": 82.54715018585081,
+        "spl": 46.26244140453026
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.24.pth",
+      "index": 24,
+      "step": 21504000,
+      "last1m": {
+        "lower_exclusive": 20504000,
+        "upper_inclusive": 21504000,
+        "points": 489,
+        "sr": 83.87415811328069,
+        "spl": 47.972282432095895
+      },
+      "last3m": {
+        "lower_exclusive": 18504000,
+        "upper_inclusive": 21504000,
+        "points": 1465,
+        "sr": 85.43799810442094,
+        "spl": 48.940658970090716
+      },
+      "pre250k": {
+        "lower_exclusive": 21254000,
+        "upper_inclusive": 21504000,
+        "points": 123,
+        "sr": 80.16044550794896,
+        "spl": 45.203494686421344
+      },
+      "native": {
+        "step": 21504000,
+        "sr": 82.23443031311035,
+        "spl": 44.64527070522308
+      },
+      "post250k": {
+        "lower_exclusive": 21504000,
+        "upper_inclusive": 21754000,
+        "points": 122,
+        "sr": 84.01130921527987,
+        "spl": 45.91099749334523
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.25.pth",
+      "index": 25,
+      "step": 22016000,
+      "last1m": {
+        "lower_exclusive": 21016000,
+        "upper_inclusive": 22016000,
+        "points": 489,
+        "sr": 83.25722341888522,
+        "spl": 46.442023992294665
+      },
+      "last3m": {
+        "lower_exclusive": 19016000,
+        "upper_inclusive": 22016000,
+        "points": 1465,
+        "sr": 85.10993543745307,
+        "spl": 48.26445954244698
+      },
+      "pre250k": {
+        "lower_exclusive": 21766000,
+        "upper_inclusive": 22016000,
+        "points": 123,
+        "sr": 85.78201648665637,
+        "spl": 48.0211224982409
+      },
+      "native": {
+        "step": 22016000,
+        "sr": 88.93647193908691,
+        "spl": 50.03596544265747
+      },
+      "post250k": {
+        "lower_exclusive": 22016000,
+        "upper_inclusive": 22266000,
+        "points": 122,
+        "sr": 84.8536461103158,
+        "spl": 48.08755341123362
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.26.pth",
+      "index": 26,
+      "step": 22528000,
+      "last1m": {
+        "lower_exclusive": 21528000,
+        "upper_inclusive": 22528000,
+        "points": 489,
+        "sr": 85.66512719010039,
+        "spl": 48.588522890837886
+      },
+      "last3m": {
+        "lower_exclusive": 19528000,
+        "upper_inclusive": 22528000,
+        "points": 1465,
+        "sr": 85.52033525278136,
+        "spl": 48.54824721609773
+      },
+      "pre250k": {
+        "lower_exclusive": 22278000,
+        "upper_inclusive": 22528000,
+        "points": 123,
+        "sr": 87.70531629159198,
+        "spl": 51.945533088552274
+      },
+      "native": {
+        "step": 22528000,
+        "sr": 89.92395401000977,
+        "spl": 55.09105920791626
+      },
+      "post250k": {
+        "lower_exclusive": 22528000,
+        "upper_inclusive": 22778000,
+        "points": 122,
+        "sr": 87.14936527072406,
+        "spl": 51.1644145504373
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.27.pth",
+      "index": 27,
+      "step": 23040000,
+      "last1m": {
+        "lower_exclusive": 22040000,
+        "upper_inclusive": 23040000,
+        "points": 489,
+        "sr": 86.42570389804177,
+        "spl": 49.521772779813816
+      },
+      "last3m": {
+        "lower_exclusive": 20040000,
+        "upper_inclusive": 23040000,
+        "points": 1465,
+        "sr": 85.85367261346289,
+        "spl": 48.76335576125786
+      },
+      "pre250k": {
+        "lower_exclusive": 22790000,
+        "upper_inclusive": 23040000,
+        "points": 123,
+        "sr": 86.46093064207372,
+        "spl": 47.07470155828367
+      },
+      "native": {
+        "step": 23040000,
+        "sr": 86.83565258979797,
+        "spl": 46.65796756744385
+      },
+      "post250k": {
+        "lower_exclusive": 23040000,
+        "upper_inclusive": 23290000,
+        "points": 122,
+        "sr": 82.82370376782339,
+        "spl": 45.96354658486413
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.28.pth",
+      "index": 28,
+      "step": 23552000,
+      "last1m": {
+        "lower_exclusive": 22552000,
+        "upper_inclusive": 23552000,
+        "points": 489,
+        "sr": 85.00499330415316,
+        "spl": 47.957127817081776
+      },
+      "last3m": {
+        "lower_exclusive": 20552000,
+        "upper_inclusive": 23552000,
+        "points": 1465,
+        "sr": 84.81169469934274,
+        "spl": 48.12211780214473
+      },
+      "pre250k": {
+        "lower_exclusive": 23302000,
+        "upper_inclusive": 23552000,
+        "points": 123,
+        "sr": 84.18548509357421,
+        "spl": 48.24206906605542
+      },
+      "native": {
+        "step": 23552000,
+        "sr": 83.57987999916077,
+        "spl": 49.566614627838135
+      },
+      "post250k": {
+        "lower_exclusive": 23552000,
+        "upper_inclusive": 23802000,
+        "points": 122,
+        "sr": 85.56806557491178,
+        "spl": 48.57723405126666
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.29.pth",
+      "index": 29,
+      "step": 24064000,
+      "last1m": {
+        "lower_exclusive": 23064000,
+        "upper_inclusive": 24064000,
+        "points": 489,
+        "sr": 85.34755896936896,
+        "spl": 48.376281446718245
+      },
+      "last3m": {
+        "lower_exclusive": 21064000,
+        "upper_inclusive": 24064000,
+        "points": 1465,
+        "sr": 85.12495110466212,
+        "spl": 48.17233802312063
+      },
+      "pre250k": {
+        "lower_exclusive": 23814000,
+        "upper_inclusive": 24064000,
+        "points": 123,
+        "sr": 88.84851491548181,
+        "spl": 50.43959753300117
+      },
+      "native": {
+        "step": 24064000,
+        "sr": 88.2488489151001,
+        "spl": 49.50991868972778
+      },
+      "post250k": {
+        "lower_exclusive": 24064000,
+        "upper_inclusive": 24314000,
+        "points": 122,
+        "sr": 87.03246062896291,
+        "spl": 49.29470109646438
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.30.pth",
+      "index": 30,
+      "step": 24576000,
+      "last1m": {
+        "lower_exclusive": 23576000,
+        "upper_inclusive": 24576000,
+        "points": 489,
+        "sr": 87.7998872281096,
+        "spl": 49.840945517358605
+      },
+      "last3m": {
+        "lower_exclusive": 21576000,
+        "upper_inclusive": 24576000,
+        "points": 1465,
+        "sr": 86.22869454959961,
+        "spl": 48.9192356001395
+      },
+      "pre250k": {
+        "lower_exclusive": 24326000,
+        "upper_inclusive": 24576000,
+        "points": 123,
+        "sr": 89.14471171735748,
+        "spl": 50.82885530905995
+      },
+      "native": {
+        "step": 24576000,
+        "sr": 89.35083746910095,
+        "spl": 50.80440044403076
+      },
+      "post250k": {
+        "lower_exclusive": 24576000,
+        "upper_inclusive": 24826000,
+        "points": 122,
+        "sr": 85.07018748854027,
+        "spl": 46.89577309811702
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.31.pth",
+      "index": 31,
+      "step": 25088000,
+      "last1m": {
+        "lower_exclusive": 24088000,
+        "upper_inclusive": 25088000,
+        "points": 489,
+        "sr": 86.02788531219545,
+        "spl": 48.29056624985911
+      },
+      "last3m": {
+        "lower_exclusive": 22088000,
+        "upper_inclusive": 25088000,
+        "points": 1465,
+        "sr": 85.93626591125853,
+        "spl": 48.719435427782884
+      },
+      "pre250k": {
+        "lower_exclusive": 24838000,
+        "upper_inclusive": 25088000,
+        "points": 123,
+        "sr": 83.00855372979389,
+        "spl": 46.26457872914105
+      },
+      "native": {
+        "step": 25088000,
+        "sr": 81.13795518875122,
+        "spl": 45.51519453525543
+      },
+      "post250k": {
+        "lower_exclusive": 25088000,
+        "upper_inclusive": 25338000,
+        "points": 122,
+        "sr": 82.56807229557975,
+        "spl": 45.93264524076805
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.32.pth",
+      "index": 32,
+      "step": 25600000,
+      "last1m": {
+        "lower_exclusive": 24600000,
+        "upper_inclusive": 25600000,
+        "points": 489,
+        "sr": 84.94283110817517,
+        "spl": 47.225004769785514
+      },
+      "last3m": {
+        "lower_exclusive": 22600000,
+        "upper_inclusive": 25600000,
+        "points": 1465,
+        "sr": 85.86419692218507,
+        "spl": 48.278836333304135
+      },
+      "pre250k": {
+        "lower_exclusive": 25350000,
+        "upper_inclusive": 25600000,
+        "points": 123,
+        "sr": 89.54548942364329,
+        "spl": 50.1599897456363
+      },
+      "native": {
+        "step": 25600000,
+        "sr": 88.56484889984131,
+        "spl": 51.790791749954224
+      },
+      "post250k": {
+        "lower_exclusive": 25600000,
+        "upper_inclusive": 25850000,
+        "points": 122,
+        "sr": 90.5836064307416,
+        "spl": 53.39508041983745
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.33.pth",
+      "index": 33,
+      "step": 26112000,
+      "last1m": {
+        "lower_exclusive": 25112000,
+        "upper_inclusive": 26112000,
+        "points": 489,
+        "sr": 87.6098440468677,
+        "spl": 50.47084654401417
+      },
+      "last3m": {
+        "lower_exclusive": 23112000,
+        "upper_inclusive": 26112000,
+        "points": 1465,
+        "sr": 86.29454347867608,
+        "spl": 49.05722621764746
+      },
+      "pre250k": {
+        "lower_exclusive": 25862000,
+        "upper_inclusive": 26112000,
+        "points": 123,
+        "sr": 87.12545890149063,
+        "spl": 51.90927439588842
+      },
+      "native": {
+        "step": 26112000,
+        "sr": 86.26110553741455,
+        "spl": 50.69287419319153
+      },
+      "post250k": {
+        "lower_exclusive": 26112000,
+        "upper_inclusive": 26362000,
+        "points": 122,
+        "sr": 85.37399710201827,
+        "spl": 49.16471391916275
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.34.pth",
+      "index": 34,
+      "step": 26624000,
+      "last1m": {
+        "lower_exclusive": 25624000,
+        "upper_inclusive": 26624000,
+        "points": 489,
+        "sr": 87.86863587141525,
+        "spl": 51.07644102202846
+      },
+      "last3m": {
+        "lower_exclusive": 23624000,
+        "upper_inclusive": 26624000,
+        "points": 1465,
+        "sr": 86.96800273026216,
+        "spl": 49.43837726482352
+      },
+      "pre250k": {
+        "lower_exclusive": 26374000,
+        "upper_inclusive": 26624000,
+        "points": 123,
+        "sr": 88.40535142557407,
+        "spl": 49.83893870338192
+      },
+      "native": {
+        "step": 26624000,
+        "sr": 86.20689511299133,
+        "spl": 47.17238247394562
+      },
+      "post250k": {
+        "lower_exclusive": 26624000,
+        "upper_inclusive": 26874000,
+        "points": 122,
+        "sr": 84.57969681161349,
+        "spl": 45.85921876743191
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.35.pth",
+      "index": 35,
+      "step": 27136000,
+      "last1m": {
+        "lower_exclusive": 26136000,
+        "upper_inclusive": 27136000,
+        "points": 489,
+        "sr": 87.1862353722742,
+        "spl": 48.86235341216401
+      },
+      "last3m": {
+        "lower_exclusive": 24136000,
+        "upper_inclusive": 27136000,
+        "points": 1465,
+        "sr": 86.89819472234811,
+        "spl": 49.19711009634233
+      },
+      "pre250k": {
+        "lower_exclusive": 26886000,
+        "upper_inclusive": 27136000,
+        "points": 123,
+        "sr": 90.23557911074258,
+        "spl": 50.59620677455654
+      },
+      "native": {
+        "step": 27136000,
+        "sr": 91.31147265434265,
+        "spl": 50.7418692111969
+      },
+      "post250k": {
+        "lower_exclusive": 27136000,
+        "upper_inclusive": 27386000,
+        "points": 122,
+        "sr": 91.5336344085756,
+        "spl": 49.890310134066915
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.36.pth",
+      "index": 36,
+      "step": 27648000,
+      "last1m": {
+        "lower_exclusive": 26648000,
+        "upper_inclusive": 27648000,
+        "points": 489,
+        "sr": 89.43773342300291,
+        "spl": 49.55916392535032
+      },
+      "last3m": {
+        "lower_exclusive": 24648000,
+        "upper_inclusive": 27648000,
+        "points": 1465,
+        "sr": 87.41976075204973,
+        "spl": 49.31479516086318
+      },
+      "pre250k": {
+        "lower_exclusive": 27398000,
+        "upper_inclusive": 27648000,
+        "points": 123,
+        "sr": 91.05828511036509,
+        "spl": 51.59463468121319
+      },
+      "native": {
+        "step": 27648000,
+        "sr": 91.69161915779114,
+        "spl": 52.43760347366333
+      },
+      "post250k": {
+        "lower_exclusive": 27648000,
+        "upper_inclusive": 27898000,
+        "points": 122,
+        "sr": 89.21291271194083,
+        "spl": 50.95567871801189
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.37.pth",
+      "index": 37,
+      "step": 28160000,
+      "last1m": {
+        "lower_exclusive": 27160000,
+        "upper_inclusive": 28160000,
+        "points": 489,
+        "sr": 88.93159240301401,
+        "spl": 49.54018894514423
+      },
+      "last3m": {
+        "lower_exclusive": 25160000,
+        "upper_inclusive": 28160000,
+        "points": 1465,
+        "sr": 88.01575807174318,
+        "spl": 49.71368312225407
+      },
+      "pre250k": {
+        "lower_exclusive": 27910000,
+        "upper_inclusive": 28160000,
+        "points": 123,
+        "sr": 84.3105118933732,
+        "spl": 46.098299869676914
+      },
+      "native": {
+        "step": 28160000,
+        "sr": 84.58961248397827,
+        "spl": 47.15815484523773
+      },
+      "post250k": {
+        "lower_exclusive": 28160000,
+        "upper_inclusive": 28410000,
+        "points": 122,
+        "sr": 88.02730167498353,
+        "spl": 48.45996885026088
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.38.pth",
+      "index": 38,
+      "step": 28672000,
+      "last1m": {
+        "lower_exclusive": 27672000,
+        "upper_inclusive": 28672000,
+        "points": 489,
+        "sr": 86.83219654428447,
+        "spl": 48.44284173413532
+      },
+      "last3m": {
+        "lower_exclusive": 25672000,
+        "upper_inclusive": 28672000,
+        "points": 1465,
+        "sr": 88.03900328512485,
+        "spl": 49.6785873927354
+      },
+      "pre250k": {
+        "lower_exclusive": 28422000,
+        "upper_inclusive": 28672000,
+        "points": 123,
+        "sr": 86.32848238557335,
+        "spl": 48.83143184630852
+      },
+      "native": {
+        "step": 28672000,
+        "sr": 87.41573095321655,
+        "spl": 50.54255723953247
+      },
+      "post250k": {
+        "lower_exclusive": 28672000,
+        "upper_inclusive": 28922000,
+        "points": 122,
+        "sr": 86.2777216024086,
+        "spl": 48.91959707267949
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.39.pth",
+      "index": 39,
+      "step": 29184000,
+      "last1m": {
+        "lower_exclusive": 28184000,
+        "upper_inclusive": 29184000,
+        "points": 489,
+        "sr": 87.16269161072245,
+        "spl": 49.33560131639547
+      },
+      "last3m": {
+        "lower_exclusive": 26184000,
+        "upper_inclusive": 29184000,
+        "points": 1465,
+        "sr": 87.79789433137549,
+        "spl": 49.23194060146605
+      },
+      "pre250k": {
+        "lower_exclusive": 28934000,
+        "upper_inclusive": 29184000,
+        "points": 123,
+        "sr": 87.8223973076518,
+        "spl": 50.89178758908094
+      },
+      "native": {
+        "step": 29184000,
+        "sr": 89.00343775749207,
+        "spl": 53.0297577381134
+      },
+      "post250k": {
+        "lower_exclusive": 29184000,
+        "upper_inclusive": 29434000,
+        "points": 122,
+        "sr": 90.14638691652016,
+        "spl": 53.67878475150124
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.40.pth",
+      "index": 40,
+      "step": 29696000,
+      "last1m": {
+        "lower_exclusive": 28696000,
+        "upper_inclusive": 29696000,
+        "points": 489,
+        "sr": 88.42622446380022,
+        "spl": 51.47397551677953
+      },
+      "last3m": {
+        "lower_exclusive": 26696000,
+        "upper_inclusive": 29696000,
+        "points": 1465,
+        "sr": 88.32468939722602,
+        "spl": 49.939601317607504
+      },
+      "pre250k": {
+        "lower_exclusive": 29446000,
+        "upper_inclusive": 29696000,
+        "points": 123,
+        "sr": 89.32584611380973,
+        "spl": 52.295096812209465
+      },
+      "native": {
+        "step": 29696000,
+        "sr": 87.43961453437805,
+        "spl": 51.48068070411682
+      },
+      "post250k": {
+        "lower_exclusive": 29696000,
+        "upper_inclusive": 29946000,
+        "points": 122,
+        "sr": 88.02340568089095,
+        "spl": 52.591800591984736
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.41.pth",
+      "index": 41,
+      "step": 30208000,
+      "last1m": {
+        "lower_exclusive": 29208000,
+        "upper_inclusive": 30208000,
+        "points": 489,
+        "sr": 88.64052138445567,
+        "spl": 52.30276358517645
+      },
+      "last3m": {
+        "lower_exclusive": 27208000,
+        "upper_inclusive": 30208000,
+        "points": 1465,
+        "sr": 88.17621630613307,
+        "spl": 50.35445738164231
+      },
+      "pre250k": {
+        "lower_exclusive": 29958000,
+        "upper_inclusive": 30208000,
+        "points": 123,
+        "sr": 87.03293587134137,
+        "spl": 50.72519476336193
+      },
+      "native": {
+        "step": 30208000,
+        "sr": 87.37059831619263,
+        "spl": 50.84823966026306
+      },
+      "post250k": {
+        "lower_exclusive": 30208000,
+        "upper_inclusive": 30458000,
+        "points": 122,
+        "sr": 86.34164133032814,
+        "spl": 47.53884199212809
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.42.pth",
+      "index": 42,
+      "step": 30720000,
+      "last1m": {
+        "lower_exclusive": 29720000,
+        "upper_inclusive": 30720000,
+        "points": 489,
+        "sr": 87.71108420592388,
+        "spl": 50.322053226469
+      },
+      "last3m": {
+        "lower_exclusive": 27720000,
+        "upper_inclusive": 30720000,
+        "points": 1465,
+        "sr": 87.59101352187146,
+        "spl": 50.03426343507734
+      },
+      "pre250k": {
+        "lower_exclusive": 30470000,
+        "upper_inclusive": 30720000,
+        "points": 123,
+        "sr": 89.52733884012795,
+        "spl": 50.593328185197784
+      },
+      "native": {
+        "step": 30720000,
+        "sr": 91.32165312767029,
+        "spl": 50.79306960105896
+      },
+      "post250k": {
+        "lower_exclusive": 30720000,
+        "upper_inclusive": 30970000,
+        "points": 122,
+        "sr": 88.70879309099229,
+        "spl": 50.08460632601722
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.43.pth",
+      "index": 43,
+      "step": 31232000,
+      "last1m": {
+        "lower_exclusive": 30232000,
+        "upper_inclusive": 31232000,
+        "points": 489,
+        "sr": 87.6194345073466,
+        "spl": 49.41420920787413
+      },
+      "last3m": {
+        "lower_exclusive": 28232000,
+        "upper_inclusive": 31232000,
+        "points": 1465,
+        "sr": 87.83763205232067,
+        "spl": 50.43562374017344
+      },
+      "pre250k": {
+        "lower_exclusive": 30982000,
+        "upper_inclusive": 31232000,
+        "points": 123,
+        "sr": 86.01159894369482,
+        "spl": 49.55700158588285
+      },
+      "native": {
+        "step": 31232000,
+        "sr": 91.43730998039246,
+        "spl": 52.489638328552246
+      },
+      "post250k": {
+        "lower_exclusive": 31232000,
+        "upper_inclusive": 31482000,
+        "points": 122,
+        "sr": 90.11168924511456,
+        "spl": 52.169701041745355
+      }
+    },
+    {
+      "case": "B",
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.44.pth",
+      "index": 44,
+      "step": 31744000,
+      "last1m": {
+        "lower_exclusive": 30744000,
+        "upper_inclusive": 31744000,
+        "points": 489,
+        "sr": 87.69908268271293,
+        "spl": 49.68227636229041
+      },
+      "last3m": {
+        "lower_exclusive": 28744000,
+        "upper_inclusive": 31744000,
+        "points": 1465,
+        "sr": 87.97544043625581,
+        "spl": 50.51887278670743
+      },
+      "pre250k": {
+        "lower_exclusive": 31494000,
+        "upper_inclusive": 31744000,
+        "points": 123,
+        "sr": 86.38374393548422,
+        "spl": 47.04101344918817
+      },
+      "native": {
+        "step": 31744000,
+        "sr": 84.12052392959595,
+        "spl": 46.765971183776855
+      }
+    }
+  ]
+}

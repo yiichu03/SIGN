@@ -1,0 +1,14 @@
+{
+  "job_state": "F",
+  "Exit_status": 0,
+  "resources_used": {
+    "cpupercent": 187,
+    "cput": "00:20:47",
+    "gpu_usage": "GN-A40-097(cuda.0.energyConsumed=11253J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25002.844MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=86%, cuda.0.memoryUtilization_avg=11%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=21272.868s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=757s, cuda.0.usagePerc=14.284%, cuda.0.memUsagePerc=31.571%)",
+    "mem": "13030604kb",
+    "ncpus": 36,
+    "ngpus": 0,
+    "vmem": "104080728kb",
+    "walltime": "00:14:55"
+  }
+}

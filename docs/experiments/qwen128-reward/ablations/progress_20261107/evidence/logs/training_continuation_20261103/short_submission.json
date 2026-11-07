@@ -1,0 +1,20 @@
+{
+  "job_id": "1511108.stdct-mgmt-02",
+  "command": [
+    "qsub",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/training_continuation_20261103/short.pbs.log",
+    "/scratch/e1538633/liuyi/logs/training_continuation_20261103/short.pbs"
+  ],
+  "submitted_at": "2026-11-03T01:18:29+08:00",
+  "cases": [
+    "coverage256",
+    "coverage32",
+    "C",
+    "A",
+    "B",
+    "qwen01"
+  ],
+  "steps_per_case": 4096,
+  "cpu_tests_passed": 71
+}

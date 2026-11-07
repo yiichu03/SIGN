@@ -1,0 +1,26 @@
+{
+  "qwen01": {
+    "actual_step": 20480000,
+    "state_dict_keys": 103,
+    "exact_key_and_shape_match_with_native_evaluated_model": true,
+    "all_parameters_finite": true,
+    "encoder_items_exactly_equal_to_frozen_public_encoder": 42,
+    "sha256": "538465a99a055367be899c441c46eeed7eb61be99a236d891881056323329c37"
+  },
+  "A": {
+    "actual_step": 36352000,
+    "state_dict_keys": 103,
+    "exact_key_and_shape_match_with_native_evaluated_model": true,
+    "all_parameters_finite": true,
+    "encoder_items_exactly_equal_to_frozen_public_encoder": 42,
+    "sha256": "ac4981a91b2f29b2b64bb7e4729b88bc5b2507bcdba15d6326af5dd130a9641f"
+  },
+  "B": {
+    "actual_step": 29696000,
+    "state_dict_keys": 103,
+    "exact_key_and_shape_match_with_native_evaluated_model": true,
+    "all_parameters_finite": true,
+    "encoder_items_exactly_equal_to_frozen_public_encoder": 42,
+    "sha256": "fd441190fc2a917a130b08bc96e3addf6b20ef34067dd25316431b76b495f814"
+  }
+}

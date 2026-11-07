@@ -1,0 +1,291 @@
+{
+  "checked_at": "2026-11-07T13:21:03+08:00",
+  "jobs": {
+    "1528937.stdct-mgmt-02": {
+      "Job_Name": "qwenA-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-034[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:31 2026",
+      "exec_host": "GN-A40-034/1*36",
+      "resources_used": {
+        "cpupercent": 9,
+        "cput": "00:00:01",
+        "mem": "119868kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "2398352kb",
+        "walltime": "00:00:17"
+      }
+    },
+    "1528938.stdct-mgmt-02": {
+      "Job_Name": "qwen01-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-037[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:36 2026",
+      "exec_host": "GN-A40-037/1*36",
+      "resources_used": {
+        "cpupercent": 30,
+        "cput": "00:00:04",
+        "mem": "170904kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "2446136kb",
+        "walltime": "00:00:17"
+      }
+    },
+    "1528939.stdct-mgmt-02": {
+      "Job_Name": "qwenB-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-039[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:36 2026",
+      "exec_host": "GN-A40-039/1*36",
+      "resources_used": {
+        "cpupercent": 25,
+        "cput": "00:00:05",
+        "mem": "225784kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "2848352kb",
+        "walltime": "00:00:17"
+      }
+    },
+    "1528940.stdct-mgmt-02": {
+      "Job_Name": "qwen-val-summary",
+      "job_state": "H",
+      "Exit_status": null,
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Hold_Types": "d",
+      "depend": "afterok:1528937.stdct-mgmt-02@stdct-mgmt-02:1528938.stdct-mgmt-02@stdct-mgmt-02:1528939.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": null,
+      "exec_host": null,
+      "resources_used": null
+    },
+    "1511143.stdct-mgmt-02": {
+      "Job_Name": "cont-A",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459274, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:34"
+      },
+      "stime": "Tue Nov  3 01:34:41 2026",
+      "exec_host": "GN-A40-045/0*36",
+      "resources_used": {
+        "cpupercent": 205,
+        "cput": "153:30:28",
+        "gpu_usage": "GN-A40-045(cuda.0.energyConsumed=16554J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25920.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=29%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=41107.850s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=387862s, cuda.0.usagePerc=48.997%, cuda.0.memUsagePerc=32.135%)",
+        "mem": "11989944kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "105925772kb",
+        "walltime": "107:44:42"
+      }
+    },
+    "1511145.stdct-mgmt-02": {
+      "Job_Name": "cont-qwen01",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 451801, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "125:30:01"
+      },
+      "stime": "Tue Nov  3 01:40:35 2026",
+      "exec_host": "GN-A40-030/0*36",
+      "resources_used": {
+        "cpupercent": 225,
+        "cput": "165:12:14",
+        "gpu_usage": "GN-A40-030(cuda.0.energyConsumed=14561J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25920.547MB, cuda.0.memoryClock_min=0MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=17%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=34087.626s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=387520s, cuda.0.usagePerc=26.996%, cuda.0.memUsagePerc=32.135%)",
+        "mem": "12003748kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "106315048kb",
+        "walltime": "107:39:33"
+      }
+    },
+    "1511147.stdct-mgmt-02": {
+      "Job_Name": "cont-cov32",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-035[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 358094, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "99:28:14"
+      },
+      "stime": "Tue Nov  3 23:43:25 2026",
+      "exec_host": "GN-A40-035/1*36",
+      "resources_used": {
+        "cpupercent": 300,
+        "cput": "217:19:33",
+        "gpu_usage": "GN-A40-035(cuda.1.energyConsumed=9752J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=15352.547MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=94%, cuda.1.memoryUtilization_avg=7%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=308123s, cuda.1.usagePerc=24.997%, cuda.1.memUsagePerc=9.195%)",
+        "mem": "9387664kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81208772kb",
+        "walltime": "85:35:57"
+      }
+    },
+    "1511148.stdct-mgmt-02": {
+      "Job_Name": "cont-B",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-020[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459272, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:32"
+      },
+      "stime": "Tue Nov  3 23:43:36 2026",
+      "exec_host": "GN-A40-020/0*36",
+      "resources_used": {
+        "cpupercent": 201,
+        "cput": "126:30:08",
+        "gpu_usage": "GN-A40-020(cuda.0.energyConsumed=15320J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25618.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=27%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=33287.752s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=308216s, cuda.0.usagePerc=44.997%, cuda.0.memUsagePerc=31.480%)",
+        "mem": "11797372kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "105430344kb",
+        "walltime": "85:37:13"
+      }
+    },
+    "1511410.stdct-mgmt-02": {
+      "Job_Name": "cont-C-posteval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 456073, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "126:41:13"
+      },
+      "stime": "Tue Nov  3 03:51:14 2026",
+      "exec_host": "GN-A40-021/0*36",
+      "resources_used": {
+        "cpupercent": 225,
+        "cput": "208:19:47",
+        "gpu_usage": "GN-A40-021(cuda.0.energyConsumed=7972J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=1%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=379710s, cuda.0.usagePerc=6.000%, cuda.0.memUsagePerc=9.195%)",
+        "mem": "9673960kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81549688kb",
+        "walltime": "105:28:44"
+      }
+    }
+  },
+  "training_jobs_paused": []
+}

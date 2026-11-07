@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-04T14:50:53+08:00",
+  "case": "coverage32",
+  "episodes": 4200,
+  "failures": 712,
+  "stages": {
+    "time_limit_never_entered_goal_region": 581,
+    "stop_without_ever_entering_goal_region": 79,
+    "time_limit_after_leaving_goal_region": 28,
+    "stop_after_leaving_goal_region": 18,
+    "time_limit_in_goal_region_without_stop": 6
+  },
+  "failures_ever_near": 52,
+  "stop_and_limit_both": 0,
+  "qualification": "Complete-case metadata; all-case motion/video audit in progress"
+}

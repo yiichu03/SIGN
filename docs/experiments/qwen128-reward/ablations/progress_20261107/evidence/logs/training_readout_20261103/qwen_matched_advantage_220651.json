@@ -1,0 +1,405 @@
+{
+  "reviewed_at": "2026-11-03T23:28:26+08:00",
+  "training_snapshot_at": "2026-11-03T22:06:51+08:00",
+  "common_training_end": 12910592,
+  "inputs": [
+    {
+      "method": "baseline",
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+      "sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091"
+    },
+    {
+      "method": "coverage256",
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage256/selected_scalars.csv",
+      "sha256": "a40e4812d1a8c05a20a8a4c88ba17a563fd4a9ed4a619a93b9259cec782b9bb8"
+    },
+    {
+      "method": "coverage32",
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage32/selected_scalars.csv",
+      "sha256": "c6ba980f43d3ac35177f470587b6a174efd630a9bd57945ba547a92e6eee1f4f"
+    },
+    {
+      "method": "C",
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/C_geometry128/selected_scalars.csv",
+      "sha256": "6b2d62b984be90e89eca6b426c7260fcc1d4523a636d7b4032a19049ad841591"
+    },
+    {
+      "method": "A",
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261103/snapshot_220651/A/selected_scalars.csv",
+      "sha256": "f5bbf0b0c89f07c23b7f5dff0be5ea4c20dcd525fb7aea7d261a45b4c468530e"
+    },
+    {
+      "method": "qwen01",
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261103/snapshot_220651/qwen01/selected_scalars.csv",
+      "sha256": "48a0f55e5a4b0e887386204d13afd5e98adcbe9fbac5e81ab3d6db21ce0f4773"
+    }
+  ],
+  "windows": {
+    "1000000": {
+      "lower_exclusive": 11910592,
+      "upper_inclusive": 12910592,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8349988863999614,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4575389204337309,
+            "points": 489
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8258916718584385,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.45277642813684504,
+            "points": 489
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8172920342603344,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4514055314849003,
+            "points": 489
+          }
+        },
+        "C": {
+          "metrics/success": {
+            "mean": 0.8149442107155767,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4488371941575243,
+            "points": 489
+          }
+        },
+        "A": {
+          "metrics/success": {
+            "mean": 0.8622027417389649,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.48210336203955434,
+            "points": 489
+          }
+        },
+        "qwen01": {
+          "metrics/success": {
+            "mean": 0.8530147692420975,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.48559371666918016,
+            "points": 489
+          }
+        }
+      },
+      "differences_pp": {
+        "qwen01": {
+          "baseline": {
+            "metrics/success": 1.8015882842136066,
+            "metrics/spl": 2.8054796235449264
+          },
+          "coverage256": {
+            "metrics/success": 2.7123097383659034,
+            "metrics/spl": 3.281728853233512
+          },
+          "coverage32": {
+            "metrics/success": 3.572273498176315,
+            "metrics/spl": 3.418818518427985
+          },
+          "C": {
+            "metrics/success": 3.807055852652086,
+            "metrics/spl": 3.6756522511655843
+          }
+        },
+        "A": {
+          "baseline": {
+            "metrics/success": 2.720385533900349,
+            "metrics/spl": 2.456444160582344
+          },
+          "coverage256": {
+            "metrics/success": 3.631106988052646,
+            "metrics/spl": 2.93269339027093
+          },
+          "coverage32": {
+            "metrics/success": 4.491070747863057,
+            "metrics/spl": 3.0697830554654026
+          },
+          "C": {
+            "metrics/success": 4.725853102338828,
+            "metrics/spl": 3.326616788203002
+          }
+        }
+      }
+    },
+    "2000000": {
+      "lower_exclusive": 10910592,
+      "upper_inclusive": 12910592,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8505101226491352,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4719475899406441,
+            "points": 977
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8391054904692736,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4614619610558513,
+            "points": 977
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8416880773668279,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4657519654339387,
+            "points": 977
+          }
+        },
+        "C": {
+          "metrics/success": {
+            "mean": 0.83702449556993,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4649747464283462,
+            "points": 977
+          }
+        },
+        "A": {
+          "metrics/success": {
+            "mean": 0.8576293644421908,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4814004416414513,
+            "points": 977
+          }
+        },
+        "qwen01": {
+          "metrics/success": {
+            "mean": 0.8554491189021537,
+            "points": 977
+          },
+          "metrics/spl": {
+            "mean": 0.4851024329601315,
+            "points": 977
+          }
+        }
+      },
+      "differences_pp": {
+        "qwen01": {
+          "baseline": {
+            "metrics/success": 0.4938996253018524,
+            "metrics/spl": 1.3154843019487383
+          },
+          "coverage256": {
+            "metrics/success": 1.6343628432880064,
+            "metrics/spl": 2.3640471904280203
+          },
+          "coverage32": {
+            "metrics/success": 1.3761041535325758,
+            "metrics/spl": 1.9350467526192794
+          },
+          "C": {
+            "metrics/success": 1.8424623332223722,
+            "metrics/spl": 2.0127686531785316
+          }
+        },
+        "A": {
+          "baseline": {
+            "metrics/success": 0.7119241793055675,
+            "metrics/spl": 0.9452851700807174
+          },
+          "coverage256": {
+            "metrics/success": 1.8523873972917215,
+            "metrics/spl": 1.9938480585599994
+          },
+          "coverage32": {
+            "metrics/success": 1.5941287075362909,
+            "metrics/spl": 1.5648476207512585
+          },
+          "C": {
+            "metrics/success": 2.0604868872260873,
+            "metrics/spl": 1.6425695213105107
+          }
+        }
+      }
+    },
+    "3000000": {
+      "lower_exclusive": 9910592,
+      "upper_inclusive": 12910592,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.858231984755285,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4726025043900916,
+            "points": 1465
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8414488469781323,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4667063618886186,
+            "points": 1465
+          }
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.844505028919962,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.46985809377842797,
+            "points": 1465
+          }
+        },
+        "C": {
+          "metrics/success": {
+            "mean": 0.8412949831005656,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.47038976137141725,
+            "points": 1465
+          }
+        },
+        "A": {
+          "metrics/success": {
+            "mean": 0.8462917398674089,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4703099824869592,
+            "points": 1465
+          }
+        },
+        "qwen01": {
+          "metrics/success": {
+            "mean": 0.8488879518704203,
+            "points": 1465
+          },
+          "metrics/spl": {
+            "mean": 0.4819872699093086,
+            "points": 1465
+          }
+        }
+      },
+      "differences_pp": {
+        "qwen01": {
+          "baseline": {
+            "metrics/success": -0.9344032884864628,
+            "metrics/spl": 0.938476551921702
+          },
+          "coverage256": {
+            "metrics/success": 0.7439104892288051,
+            "metrics/spl": 1.5280908020690043
+          },
+          "coverage32": {
+            "metrics/success": 0.4382922950458279,
+            "metrics/spl": 1.212917613088066
+          },
+          "C": {
+            "metrics/success": 0.7592968769854713,
+            "metrics/spl": 1.1597508537891377
+          }
+        },
+        "A": {
+          "baseline": {
+            "metrics/success": -1.194024488787604,
+            "metrics/spl": -0.2292521903132394
+          },
+          "coverage256": {
+            "metrics/success": 0.484289288927664,
+            "metrics/spl": 0.3603620598340629
+          },
+          "coverage32": {
+            "metrics/success": 0.1786710947446868,
+            "metrics/spl": 0.04518887085312451
+          },
+          "C": {
+            "metrics/success": 0.4996756766843302,
+            "metrics/spl": -0.007977888445803716
+          }
+        }
+      }
+    }
+  },
+  "caveats": [
+    "Qwen optimizer and episodes reset before this window; historical references did not reset in this window.",
+    "Old coverage vs Qwen differs in MRQ target and geometric resolution/validity; not a scorer-only ablation.",
+    "One seed, overlapping native50-update training statistics; not independent samples or validation."
+  ],
+  "full_validation_at_8192000": {
+    "baseline": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.785,
+      "spl": 0.4896109838595571
+    },
+    "coverage256": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.7921428571428571,
+      "spl": 0.469972819452766
+    },
+    "coverage32": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.7745238095238095,
+      "spl": 0.5043247385458322
+    },
+    "qwen01": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.7761904761904762,
+      "spl": 0.4516003543308391,
+      "source": "logs/qwen128_reward_20261029/val_8192000/result.json"
+    },
+    "A": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.7897619047619048,
+      "spl": 0.4569185437656838,
+      "source": "logs/qwen_ablation_20261029/A/val_8192000/result.json"
+    },
+    "B": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.7916666666666666,
+      "spl": 0.48001420911835824,
+      "source": "logs/qwen_ablation_20261029/B/val_8192000/result.json"
+    },
+    "C": {
+      "training_step": 8192000,
+      "episodes": 4200,
+      "sr": 0.785952380952381,
+      "spl": 0.49519960613691033,
+      "source": "logs/qwen_ablation_20261029/C/val_8192000/result.json"
+    }
+  },
+  "assessment": "Short-window training gains, strongest for Qwen128 beta0.1 vs legacy coverage. At3M, bothQwen128 SR lower than frozen baseline; beta0.1 SPL higher. Completed8.192M fullval shows no Qwen method higher than baseline on bothSR andSPL. No confirmed stable overall advantage or isolated VLM causal contribution."
+}

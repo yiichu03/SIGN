@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-11-05T15:04:46+08:00",
+  "status": "incomplete_cpu_attempt_stopped",
+  "reason": "Fixed C historical reference ends18020352, below current common Qwen budget (~19M); prevent obsolete matched-window assertion and replace slow per-record file loading. Runtime training jobs untouched.",
+  "stopped_pid": 4189113,
+  "script_sha256": "568cd8f7603ec8046fbb4cadc655e9965e1af7e93c1131470033340c9bc4c273"
+}

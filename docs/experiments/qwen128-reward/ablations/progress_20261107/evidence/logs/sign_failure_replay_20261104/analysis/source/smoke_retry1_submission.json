@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-04T13:03:01+08:00",
+  "command": [
+    "qsub",
+    "-N",
+    "sign-diag-pass2",
+    "-l",
+    "walltime=00:30:00",
+    "-l",
+    "select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/smoke_retry1.pbs.log",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/smoke.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1518122.stdct-mgmt-02",
+  "stderr": "",
+  "source_manifest_sha256": "aea5297e33116089ecb0d55c2124919db84a62ee7024ab84be9fa24912ccfe28",
+  "previous_job": "1515859.stdct-mgmt-02",
+  "correction": "Filesystem preconditions moved to main; child-import control/diagnostic tested; archive initial failed output.",
+  "job_id": "1518122.stdct-mgmt-02"
+}

@@ -1,0 +1,367 @@
+[
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Eudora.glb",
+    "episode_id": "1819"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+    "episode_id": "3671"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1700"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Elmira.glb",
+    "episode_id": "2828"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Eastville.glb",
+    "episode_id": "4131"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2288"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "episode_id": "3374"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Edgemere.glb",
+    "episode_id": "52"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+    "episode_id": "3630"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Ribera.glb",
+    "episode_id": "906"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1643"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3184"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Greigsville.glb",
+    "episode_id": "2549"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Pablo.glb",
+    "episode_id": "659"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Sands.glb",
+    "episode_id": "474"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Sisters.glb",
+    "episode_id": "1418"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Eastville.glb",
+    "episode_id": "4004"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Sisters.glb",
+    "episode_id": "1414"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1501"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Edgemere.glb",
+    "episode_id": "34"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "episode_id": "3370"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Eudora.glb",
+    "episode_id": "1851"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Elmira.glb",
+    "episode_id": "2880"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Greigsville.glb",
+    "episode_id": "2682"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Pablo.glb",
+    "episode_id": "704"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Ribera.glb",
+    "episode_id": "1047"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2230"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "episode_id": "3337"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Sands.glb",
+    "episode_id": "450"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Pablo.glb",
+    "episode_id": "633"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3053"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Eastville.glb",
+    "episode_id": "4034"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2343"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Sisters.glb",
+    "episode_id": "1490"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+    "episode_id": "3810"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2155"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Sands.glb",
+    "episode_id": "567"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Edgemere.glb",
+    "episode_id": "34"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Eudora.glb",
+    "episode_id": "2052"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Elmira.glb",
+    "episode_id": "2981"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2275"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Sisters.glb",
+    "episode_id": "1449"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1794"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Ribera.glb",
+    "episode_id": "1047"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Denmark.glb",
+    "episode_id": "3637"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3031"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Pablo.glb",
+    "episode_id": "871"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Eastville.glb",
+    "episode_id": "3924"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Eudora.glb",
+    "episode_id": "2069"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Eudora.glb",
+    "episode_id": "1864"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Greigsville.glb",
+    "episode_id": "2608"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Edgemere.glb",
+    "episode_id": "52"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Elmira.glb",
+    "episode_id": "2742"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1518"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Greigsville.glb",
+    "episode_id": "2544"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "episode_id": "3329"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3057"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Ribera.glb",
+    "episode_id": "944"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Sands.glb",
+    "episode_id": "374"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Pablo.glb",
+    "episode_id": "765"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1504"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1541"
+  },
+  {
+    "case": "baseline",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1578"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "episode_id": "3408"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "episode_id": "3564"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2345"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3014"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3238"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1669"
+  },
+  {
+    "case": "coverage256",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1688"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Greigsville.glb",
+    "episode_id": "2516"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Scioto.glb",
+    "episode_id": "2383"
+  },
+  {
+    "case": "coverage32",
+    "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+    "episode_id": "1541"
+  }
+]

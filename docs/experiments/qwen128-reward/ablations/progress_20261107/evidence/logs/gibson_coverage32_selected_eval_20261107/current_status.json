@@ -1,0 +1,292 @@
+{
+  "checked_at": "2026-11-07T13:42:36+08:00",
+  "jobs": {
+    "1528994.stdct-mgmt-02": {
+      "Job_Name": "cov32-125952",
+      "job_state": "Q",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528997.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null
+    },
+    "1528995.stdct-mgmt-02": {
+      "Job_Name": "cov32-76288",
+      "job_state": "Q",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Not Running: User has reached queue batch_gpu running job limit.",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528997.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null
+    },
+    "1528996.stdct-mgmt-02": {
+      "Job_Name": "cov32-151040",
+      "job_state": "Q",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Not Running: User has reached queue batch_gpu running job limit.",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528997.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null
+    },
+    "1528997.stdct-mgmt-02": {
+      "Job_Name": "cov32-val-summary",
+      "job_state": "H",
+      "Exit_status": null,
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Hold_Types": "d",
+      "depend": "afterok:1528994.stdct-mgmt-02@stdct-mgmt-02:1528995.stdct-mgmt-02@stdct-mgmt-02:1528996.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": null
+    },
+    "1528937.stdct-mgmt-02": {
+      "Job_Name": "qwenA-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-034[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:31 2026"
+    },
+    "1528938.stdct-mgmt-02": {
+      "Job_Name": "qwen01-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-037[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:36 2026"
+    },
+    "1528939.stdct-mgmt-02": {
+      "Job_Name": "qwenB-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-039[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:36 2026"
+    },
+    "1528940.stdct-mgmt-02": {
+      "Job_Name": "qwen-val-summary",
+      "job_state": "H",
+      "Exit_status": null,
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Hold_Types": "d",
+      "depend": "afterok:1528937.stdct-mgmt-02@stdct-mgmt-02:1528938.stdct-mgmt-02@stdct-mgmt-02:1528939.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": null
+    },
+    "1511143.stdct-mgmt-02": {
+      "Job_Name": "cont-A",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459274, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:34"
+      },
+      "stime": "Tue Nov  3 01:34:41 2026"
+    },
+    "1511145.stdct-mgmt-02": {
+      "Job_Name": "cont-qwen01",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 451801, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "125:30:01"
+      },
+      "stime": "Tue Nov  3 01:40:35 2026"
+    },
+    "1511147.stdct-mgmt-02": {
+      "Job_Name": "cont-cov32",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-035[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 358094, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "99:28:14"
+      },
+      "stime": "Tue Nov  3 23:43:25 2026"
+    },
+    "1511148.stdct-mgmt-02": {
+      "Job_Name": "cont-B",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-020[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459272, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:32"
+      },
+      "stime": "Tue Nov  3 23:43:36 2026"
+    },
+    "1511410.stdct-mgmt-02": {
+      "Job_Name": "cont-C-posteval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "depend": null,
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 456073, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "126:41:13"
+      },
+      "stime": "Tue Nov  3 03:51:14 2026"
+    }
+  },
+  "paused_or_moved_jobs": []
+}

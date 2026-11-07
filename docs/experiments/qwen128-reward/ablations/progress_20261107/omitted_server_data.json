@@ -1,0 +1,1592 @@
+[
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Cantwell_1504.mp4",
+    "bytes": 627050,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Cantwell_1541.mp4",
+    "bytes": 942370,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Cantwell_1578.mp4",
+    "bytes": 440446,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Cantwell_1643.mp4",
+    "bytes": 988174,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Cantwell_1700.mp4",
+    "bytes": 314603,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Denmark_3630.mp4",
+    "bytes": 388497,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Denmark_3671.mp4",
+    "bytes": 103807,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Eastville_4004.mp4",
+    "bytes": 861069,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Eastville_4131.mp4",
+    "bytes": 543762,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Edgemere_52.mp4",
+    "bytes": 634796,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Elmira_2828.mp4",
+    "bytes": 267633,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Eudora_1819.mp4",
+    "bytes": 408546,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Greigsville_2549.mp4",
+    "bytes": 517535,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Mosquito_3329.mp4",
+    "bytes": 53097,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Mosquito_3374.mp4",
+    "bytes": 1032928,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Pablo_659.mp4",
+    "bytes": 930915,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Pablo_765.mp4",
+    "bytes": 157837,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Ribera_906.mp4",
+    "bytes": 786418,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Sands_474.mp4",
+    "bytes": 534753,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Scioto_2288.mp4",
+    "bytes": 135634,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Sisters_1418.mp4",
+    "bytes": 548357,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Swormville_3057.mp4",
+    "bytes": 158006,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/baseline_Swormville_3184.mp4",
+    "bytes": 529343,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Cantwell_1501.mp4",
+    "bytes": 293639,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Cantwell_1669.mp4",
+    "bytes": 327594,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Cantwell_1688.mp4",
+    "bytes": 528559,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Denmark_3810.mp4",
+    "bytes": 1010042,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Eastville_4034.mp4",
+    "bytes": 950166,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Edgemere_34.mp4",
+    "bytes": 23673,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Elmira_2880.mp4",
+    "bytes": 58802,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Eudora_1851.mp4",
+    "bytes": 255498,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Greigsville_2682.mp4",
+    "bytes": 798268,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Mosquito_3337.mp4",
+    "bytes": 1033332,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Mosquito_3370.mp4",
+    "bytes": 556300,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Mosquito_3408.mp4",
+    "bytes": 926950,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Mosquito_3564.mp4",
+    "bytes": 928528,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Pablo_633.mp4",
+    "bytes": 256413,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Pablo_704.mp4",
+    "bytes": 972015,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Ribera_1047.mp4",
+    "bytes": 722568,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Ribera_944.mp4",
+    "bytes": 56294,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Sands_450.mp4",
+    "bytes": 737874,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Scioto_2230.mp4",
+    "bytes": 434258,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Scioto_2343.mp4",
+    "bytes": 807166,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Scioto_2345.mp4",
+    "bytes": 135238,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Sisters_1414.mp4",
+    "bytes": 279181,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Sisters_1490.mp4",
+    "bytes": 727296,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Swormville_3014.mp4",
+    "bytes": 677845,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Swormville_3053.mp4",
+    "bytes": 694301,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage256_Swormville_3238.mp4",
+    "bytes": 565380,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Cantwell_1518.mp4",
+    "bytes": 698296,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Cantwell_1541.mp4",
+    "bytes": 950865,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Cantwell_1794.mp4",
+    "bytes": 852854,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Denmark_3637.mp4",
+    "bytes": 680818,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Eastville_3924.mp4",
+    "bytes": 731443,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Edgemere_34.mp4",
+    "bytes": 24208,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Edgemere_52.mp4",
+    "bytes": 726473,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Elmira_2742.mp4",
+    "bytes": 747512,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Elmira_2981.mp4",
+    "bytes": 77642,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Eudora_1864.mp4",
+    "bytes": 347278,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Eudora_2052.mp4",
+    "bytes": 131524,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Eudora_2069.mp4",
+    "bytes": 846243,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Greigsville_2516.mp4",
+    "bytes": 117894,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Greigsville_2544.mp4",
+    "bytes": 932140,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Greigsville_2608.mp4",
+    "bytes": 763484,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Pablo_871.mp4",
+    "bytes": 558064,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Ribera_1047.mp4",
+    "bytes": 711491,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Sands_374.mp4",
+    "bytes": 47559,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Sands_567.mp4",
+    "bytes": 509381,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Scioto_2155.mp4",
+    "bytes": 58479,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Scioto_2275.mp4",
+    "bytes": 107880,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Scioto_2383.mp4",
+    "bytes": 122573,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Sisters_1449.mp4",
+    "bytes": 335472,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/review/assets/coverage32_Swormville_3031.mp4",
+    "bytes": 346317,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/native/habitat-lab/LICENSE",
+    "bytes": 1086,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/episodes/worker_278085.jsonl",
+    "bytes": 3188,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/episodes/worker_278086.jsonl",
+    "bytes": 2152,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/episodes/worker_278087.jsonl",
+    "bytes": 2145,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/episodes/worker_278088.jsonl",
+    "bytes": 3811,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/episodes/worker_278089.jsonl",
+    "bytes": 1589,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/episodes/worker_278090.jsonl",
+    "bytes": 2151,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/control/native/tb/events.out.tfevents.1793768865.GN-A40-025.277998.0",
+    "bytes": 1023,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/diagnostics/worker_278269.jsonl",
+    "bytes": 6070,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/diagnostics/worker_278270.jsonl",
+    "bytes": 4079,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/diagnostics/worker_278271.jsonl",
+    "bytes": 4061,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/diagnostics/worker_278272.jsonl",
+    "bytes": 7237,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/diagnostics/worker_278273.jsonl",
+    "bytes": 3019,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/diagnostics/worker_278274.jsonl",
+    "bytes": 4082,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/episodes/worker_278269.jsonl",
+    "bytes": 3188,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/episodes/worker_278270.jsonl",
+    "bytes": 2152,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/episodes/worker_278271.jsonl",
+    "bytes": 2145,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/episodes/worker_278272.jsonl",
+    "bytes": 3811,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/episodes/worker_278273.jsonl",
+    "bytes": 1589,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/episodes/worker_278274.jsonl",
+    "bytes": 2151,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/native/tb/events.out.tfevents.1793768937.GN-A40-025.278187.0",
+    "bytes": 1023,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Cantwell/1617.npz",
+    "bytes": 9069,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Cantwell/1679.npz",
+    "bytes": 6589,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Cantwell/1729.npz",
+    "bytes": 27510,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Cantwell/1792.npz",
+    "bytes": 11757,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eastville/3936.npz",
+    "bytes": 9019,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eastville/4008.npz",
+    "bytes": 8969,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eastville/4013.npz",
+    "bytes": 8596,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eastville/4085.npz",
+    "bytes": 27118,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eudora/1885.npz",
+    "bytes": 5908,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eudora/1915.npz",
+    "bytes": 9517,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eudora/1950.npz",
+    "bytes": 5838,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Eudora/2052.npz",
+    "bytes": 25931,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2442.npz",
+    "bytes": 5312,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2516.npz",
+    "bytes": 9005,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2528.npz",
+    "bytes": 6350,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2538.npz",
+    "bytes": 6631,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2627.npz",
+    "bytes": 12411,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2643.npz",
+    "bytes": 21207,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Greigsville/2681.npz",
+    "bytes": 6564,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Mosquito/3352.npz",
+    "bytes": 7669,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Mosquito/3393.npz",
+    "bytes": 8530,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Mosquito/3399.npz",
+    "bytes": 6425,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Mosquito/3425.npz",
+    "bytes": 7644,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Mosquito/3528.npz",
+    "bytes": 26440,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Mosquito/3551.npz",
+    "bytes": 10681,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Scioto/2194.npz",
+    "bytes": 7234,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Scioto/2277.npz",
+    "bytes": 25756,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/traces/Scioto/2392.npz",
+    "bytes": 12306,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.goal.png",
+    "bytes": 16471,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.mp4",
+    "bytes": 134104,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.rgb_000.jpg",
+    "bytes": 1978,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.rgb_018.jpg",
+    "bytes": 5738,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.rgb_037.jpg",
+    "bytes": 5903,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.rgb_056.jpg",
+    "bytes": 3874,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1617.rgb_075.jpg",
+    "bytes": 2199,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.goal.png",
+    "bytes": 25475,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.mp4",
+    "bytes": 58028,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.rgb_000.jpg",
+    "bytes": 4875,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.rgb_005.jpg",
+    "bytes": 4574,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.rgb_010.jpg",
+    "bytes": 6548,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.rgb_015.jpg",
+    "bytes": 6380,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1679.rgb_021.jpg",
+    "bytes": 5882,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.goal.png",
+    "bytes": 26558,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.mp4",
+    "bytes": 911328,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.rgb_000.jpg",
+    "bytes": 4383,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.rgb_125.jpg",
+    "bytes": 5712,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.rgb_250.jpg",
+    "bytes": 4864,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.rgb_375.jpg",
+    "bytes": 4573,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1729.rgb_500.jpg",
+    "bytes": 3024,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.goal.png",
+    "bytes": 26948,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.mp4",
+    "bytes": 278661,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.rgb_000.jpg",
+    "bytes": 4772,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.rgb_033.jpg",
+    "bytes": 6238,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.rgb_066.jpg",
+    "bytes": 6188,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.rgb_099.jpg",
+    "bytes": 5304,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Cantwell/1792.rgb_132.jpg",
+    "bytes": 5743,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.goal.png",
+    "bytes": 23411,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.mp4",
+    "bytes": 125377,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.rgb_000.jpg",
+    "bytes": 4794,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.rgb_017.jpg",
+    "bytes": 5107,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.rgb_035.jpg",
+    "bytes": 4414,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.rgb_053.jpg",
+    "bytes": 4025,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/3936.rgb_071.jpg",
+    "bytes": 6048,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.goal.png",
+    "bytes": 27384,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.mp4",
+    "bytes": 160758,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.rgb_000.jpg",
+    "bytes": 6405,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.rgb_016.jpg",
+    "bytes": 6426,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.rgb_033.jpg",
+    "bytes": 5888,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.rgb_050.jpg",
+    "bytes": 6232,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4008.rgb_067.jpg",
+    "bytes": 6011,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.goal.png",
+    "bytes": 27448,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.mp4",
+    "bytes": 126357,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.rgb_000.jpg",
+    "bytes": 2263,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.rgb_015.jpg",
+    "bytes": 4850,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.rgb_030.jpg",
+    "bytes": 5757,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.rgb_045.jpg",
+    "bytes": 5410,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4013.rgb_060.jpg",
+    "bytes": 5355,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.goal.png",
+    "bytes": 23230,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.mp4",
+    "bytes": 833922,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.rgb_000.jpg",
+    "bytes": 5313,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.rgb_125.jpg",
+    "bytes": 4095,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.rgb_250.jpg",
+    "bytes": 4258,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.rgb_375.jpg",
+    "bytes": 4987,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eastville/4085.rgb_500.jpg",
+    "bytes": 5612,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.goal.png",
+    "bytes": 23806,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.mp4",
+    "bytes": 49952,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.rgb_000.jpg",
+    "bytes": 4834,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.rgb_006.jpg",
+    "bytes": 5218,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.rgb_012.jpg",
+    "bytes": 4448,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.rgb_018.jpg",
+    "bytes": 4310,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1885.rgb_025.jpg",
+    "bytes": 5024,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.goal.png",
+    "bytes": 19314,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.mp4",
+    "bytes": 164002,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.rgb_000.jpg",
+    "bytes": 5271,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.rgb_025.jpg",
+    "bytes": 3898,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.rgb_051.jpg",
+    "bytes": 4232,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.rgb_076.jpg",
+    "bytes": 4407,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1915.rgb_102.jpg",
+    "bytes": 3067,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.goal.png",
+    "bytes": 23659,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.mp4",
+    "bytes": 49850,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.rgb_000.jpg",
+    "bytes": 5931,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.rgb_005.jpg",
+    "bytes": 3566,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.rgb_011.jpg",
+    "bytes": 5096,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.rgb_017.jpg",
+    "bytes": 5249,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/1950.rgb_023.jpg",
+    "bytes": 4724,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.goal.png",
+    "bytes": 19004,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.mp4",
+    "bytes": 701788,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.rgb_000.jpg",
+    "bytes": 4167,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.rgb_125.jpg",
+    "bytes": 4456,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.rgb_250.jpg",
+    "bytes": 3601,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.rgb_375.jpg",
+    "bytes": 3271,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Eudora/2052.rgb_500.jpg",
+    "bytes": 2936,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.goal.png",
+    "bytes": 19753,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.mp4",
+    "bytes": 31802,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.rgb_000.jpg",
+    "bytes": 4907,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.rgb_003.jpg",
+    "bytes": 5482,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.rgb_007.jpg",
+    "bytes": 5626,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.rgb_010.jpg",
+    "bytes": 3676,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2442.rgb_014.jpg",
+    "bytes": 3306,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.goal.png",
+    "bytes": 25677,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.mp4",
+    "bytes": 182032,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.rgb_000.jpg",
+    "bytes": 5020,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.rgb_021.jpg",
+    "bytes": 5456,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.rgb_043.jpg",
+    "bytes": 6893,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.rgb_065.jpg",
+    "bytes": 5949,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2516.rgb_087.jpg",
+    "bytes": 4949,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.goal.png",
+    "bytes": 21797,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.mp4",
+    "bytes": 57742,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.rgb_000.jpg",
+    "bytes": 3579,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.rgb_007.jpg",
+    "bytes": 5337,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.rgb_015.jpg",
+    "bytes": 5239,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.rgb_022.jpg",
+    "bytes": 4580,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2528.rgb_030.jpg",
+    "bytes": 3929,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.goal.png",
+    "bytes": 27130,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.mp4",
+    "bytes": 69801,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.rgb_000.jpg",
+    "bytes": 3769,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.rgb_008.jpg",
+    "bytes": 4978,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.rgb_017.jpg",
+    "bytes": 5112,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.rgb_026.jpg",
+    "bytes": 3714,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2538.rgb_035.jpg",
+    "bytes": 5695,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.goal.png",
+    "bytes": 24436,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.mp4",
+    "bytes": 285735,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.rgb_000.jpg",
+    "bytes": 5606,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.rgb_040.jpg",
+    "bytes": 1907,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.rgb_080.jpg",
+    "bytes": 5620,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.rgb_120.jpg",
+    "bytes": 4571,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2627.rgb_161.jpg",
+    "bytes": 4641,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.goal.png",
+    "bytes": 26222,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.mp4",
+    "bytes": 817227,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.rgb_000.jpg",
+    "bytes": 5325,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.rgb_092.jpg",
+    "bytes": 4796,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.rgb_184.jpg",
+    "bytes": 5456,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.rgb_276.jpg",
+    "bytes": 5223,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2643.rgb_369.jpg",
+    "bytes": 6120,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.goal.png",
+    "bytes": 24453,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.mp4",
+    "bytes": 67320,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.rgb_000.jpg",
+    "bytes": 2754,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.rgb_008.jpg",
+    "bytes": 3362,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.rgb_017.jpg",
+    "bytes": 5747,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.rgb_025.jpg",
+    "bytes": 5378,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Greigsville/2681.rgb_034.jpg",
+    "bytes": 4542,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.goal.png",
+    "bytes": 27518,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.mp4",
+    "bytes": 66682,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.rgb_000.jpg",
+    "bytes": 5168,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.rgb_006.jpg",
+    "bytes": 5316,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.rgb_013.jpg",
+    "bytes": 5876,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.rgb_020.jpg",
+    "bytes": 5700,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3352.rgb_027.jpg",
+    "bytes": 5360,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.goal.png",
+    "bytes": 27036,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.mp4",
+    "bytes": 95482,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.rgb_000.jpg",
+    "bytes": 5395,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.rgb_011.jpg",
+    "bytes": 5401,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.rgb_022.jpg",
+    "bytes": 5938,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.rgb_033.jpg",
+    "bytes": 3652,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3393.rgb_044.jpg",
+    "bytes": 5612,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.goal.png",
+    "bytes": 24843,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.mp4",
+    "bytes": 48633,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.rgb_000.jpg",
+    "bytes": 5243,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.rgb_005.jpg",
+    "bytes": 5141,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.rgb_011.jpg",
+    "bytes": 4890,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.rgb_016.jpg",
+    "bytes": 5139,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3399.rgb_022.jpg",
+    "bytes": 4715,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.goal.png",
+    "bytes": 24551,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.mp4",
+    "bytes": 84286,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.rgb_000.jpg",
+    "bytes": 2931,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.rgb_011.jpg",
+    "bytes": 4979,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.rgb_022.jpg",
+    "bytes": 3829,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.rgb_033.jpg",
+    "bytes": 4891,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3425.rgb_045.jpg",
+    "bytes": 4980,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.goal.png",
+    "bytes": 23276,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.mp4",
+    "bytes": 948949,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.rgb_000.jpg",
+    "bytes": 5813,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.rgb_125.jpg",
+    "bytes": 5493,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.rgb_250.jpg",
+    "bytes": 5836,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.rgb_375.jpg",
+    "bytes": 4003,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3528.rgb_500.jpg",
+    "bytes": 5258,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.goal.png",
+    "bytes": 24139,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.mp4",
+    "bytes": 206434,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.rgb_000.jpg",
+    "bytes": 5235,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.rgb_026.jpg",
+    "bytes": 2949,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.rgb_053.jpg",
+    "bytes": 1418,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.rgb_080.jpg",
+    "bytes": 4747,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Mosquito/3551.rgb_107.jpg",
+    "bytes": 4743,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.goal.png",
+    "bytes": 16483,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.mp4",
+    "bytes": 75650,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.rgb_000.jpg",
+    "bytes": 5477,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.rgb_009.jpg",
+    "bytes": 5271,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.rgb_018.jpg",
+    "bytes": 5010,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.rgb_027.jpg",
+    "bytes": 5245,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2194.rgb_037.jpg",
+    "bytes": 3359,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.goal.png",
+    "bytes": 2131,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.mp4",
+    "bytes": 950945,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.rgb_000.jpg",
+    "bytes": 2527,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.rgb_125.jpg",
+    "bytes": 5143,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.rgb_250.jpg",
+    "bytes": 4445,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.rgb_375.jpg",
+    "bytes": 4321,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2277.rgb_500.jpg",
+    "bytes": 5054,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.goal.png",
+    "bytes": 27629,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.mp4",
+    "bytes": 250398,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.rgb_000.jpg",
+    "bytes": 4806,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.rgb_039.jpg",
+    "bytes": 5149,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.rgb_079.jpg",
+    "bytes": 4931,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.rgb_118.jpg",
+    "bytes": 4664,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  },
+  {
+    "source": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis/source/smoke/baseline/diagnostic/videos/Scioto/2392.rgb_158.jpg",
+    "bytes": 3861,
+    "reason": "Raw video/camera/trace or binary runtime data retained on server."
+  }
+]

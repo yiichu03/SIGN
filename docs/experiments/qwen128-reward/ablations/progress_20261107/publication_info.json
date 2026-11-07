@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-11-07T14:01:37+08:00",
+  "publication_base": "333b2aeb0903515c97a5b8a416bb3025a34518c3",
+  "publication_branch": "phase2/qwen-beta003-geometry128",
+  "runtime_base_on_publication_branch": "d2352f06bc56386d098c8b94d2754e9e21bf2cb3",
+  "current_runtime_code_branches": {
+    "phase2/continue-coverage256-20261103": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+    "phase2/continue-coverage32-20261103": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+    "phase2/continue-qwen128-beta01-20261103": "bb59545f0c5663163e17cfe1dea37c441f09ccd2",
+    "phase2/continue-qwen-ablation-20261103": "1256ca70497592d2df178e6f77d10c14380689d8"
+  },
+  "previous_worklog": {
+    "bytes": 289989,
+    "sha256": "29ff9e461682b5de2ba14728a8d43cd945884199e0733af6957377ff5c9f6460"
+  },
+  "workspace_source_sha256": {
+    "AGENTS.md": "453545f2a222df81408f25f4f6fbdb8c702982f4698032a2826238f2cb6e3ecb",
+    "STATUS.md": "82e19234e424e02bc784eca1210bf6c79f0960b6fd8a5210c58458091283268a",
+    "RUNBOOK.md": "87d2c25744716fe8f91f074556fc4b77bc734ab03f6379943c6c45ee4e2c7b4c",
+    "WORKLOG.md": "0fea7d393a2b0e1a4a1f1705c2487972a5957b69e3ac26043a8cc5e699235e0a"
+  },
+  "cutoff_state_at": "2026-11-07T13:58:35+08:00",
+  "large_model_scene_camera_data_included": false,
+  "resumed_at": "2026-11-07T14:10:08+08:00"
+}

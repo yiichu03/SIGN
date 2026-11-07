@@ -1,0 +1,10 @@
+{
+  "remote": "git@github.com:yiichu03/SIGN.git",
+  "verified_heads": {
+    "refs/heads/phase2/continue-coverage256-20261103": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+    "refs/heads/phase2/continue-coverage32-20261103": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+    "refs/heads/phase2/continue-qwen-ablation-20261103": "1256ca70497592d2df178e6f77d10c14380689d8",
+    "refs/heads/phase2/continue-qwen128-beta01-20261103": "bb59545f0c5663163e17cfe1dea37c441f09ccd2"
+  },
+  "runtime_heads_unchanged": true
+}

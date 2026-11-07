@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-11-07T13:20:31+08:00",
+  "jobs": {
+    "1528937.stdct-mgmt-02": {
+      "Job_Name": "qwenA-bestval",
+      "job_state": "Q",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null,
+      "exec_host": null
+    },
+    "1528938.stdct-mgmt-02": {
+      "Job_Name": "qwen01-bestval",
+      "job_state": "Q",
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null,
+      "exec_host": null
+    },
+    "1528939.stdct-mgmt-02": {
+      "Job_Name": "qwenB-bestval",
+      "job_state": "Q",
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null,
+      "exec_host": null
+    },
+    "1528940.stdct-mgmt-02": {
+      "Job_Name": "qwen-val-summary",
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "depend": "afterok:1528937.stdct-mgmt-02@stdct-mgmt-02:1528938.stdct-mgmt-02@stdct-mgmt-02:1528939.stdct-mgmt-02@stdct-mgmt-02",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": null,
+      "exec_host": null
+    }
+  }
+}

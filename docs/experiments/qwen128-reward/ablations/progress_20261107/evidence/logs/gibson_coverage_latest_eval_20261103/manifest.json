@@ -1,0 +1,29 @@
+{
+  "cases": {
+    "coverage256": {
+      "step": 125952000,
+      "path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+      "source": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.245.pth",
+      "sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+      "bytes": 7396455
+    },
+    "coverage32": {
+      "step": 48128000,
+      "path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage32.pth",
+      "source": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts/ckpt.93.pth",
+      "sha256": "1ae1ad338a6f40d0bc0325f64e1dfa9bc12ae2de6da47778b440bcc55593471e",
+      "bytes": 7395909
+    }
+  },
+  "episodes": 4200,
+  "scenes": 14,
+  "environments": 6,
+  "max_episode_steps": 500,
+  "seed": 100,
+  "hash_seed": 0,
+  "coverage_mpp": 0.1,
+  "coverage_radius": 3,
+  "coverage_fov": 90,
+  "coverage_reward_weight": 0,
+  "checkpoint_budgets_are_different": true
+}

@@ -1,0 +1,82 @@
+{
+  "runs": [
+    [
+      "baseline_frozen/original",
+      "/scratch/e1538633/liuyi/SIGN/results/gibson_frozen_encoder_20261026/train_personal_8env/tb"
+    ],
+    [
+      "coverage256/original",
+      "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/tb"
+    ],
+    [
+      "coverage32/original",
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/tb"
+    ],
+    [
+      "qwen128_beta01/original",
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/tb"
+    ],
+    [
+      "A_qwen128_beta003/original",
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/A/train/tb"
+    ],
+    [
+      "B_qwen256_beta003/original",
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/tb"
+    ],
+    [
+      "C_geometry128/original",
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/C/train/tb"
+    ],
+    [
+      "coverage256/continue_latest",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/tb"
+    ],
+    [
+      "coverage32/continue_latest",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/tb"
+    ],
+    [
+      "qwen128_beta01/continue_latest",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/tb"
+    ],
+    [
+      "A_qwen128_beta003/continue_latest",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/tb"
+    ],
+    [
+      "B_qwen256_beta003/continue_latest",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/tb"
+    ],
+    [
+      "C_geometry128/continue_latest",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/tb"
+    ],
+    [
+      "C_geometry128/continue_1_stopped",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train/tb"
+    ]
+  ],
+  "pending_empty_runs": [
+    "coverage32/continue_latest",
+    "B_qwen256_beta003/continue_latest"
+  ],
+  "remote_port": 6200,
+  "local_port": 16200,
+  "original_and_continuation_shown_as_separate_phases": true,
+  "syntax_and_paths_verified": true,
+  "default_six_run_mode_preserved": true,
+  "service_started_by_this_update": false,
+  "occupied_ports_left_untouched": [
+    6009,
+    6010,
+    6011,
+    6012,
+    6013,
+    6014,
+    6015,
+    6016,
+    6017
+  ],
+  "port_selection": "Use6200 rather than the occupied601x range; no existing listeners stopped."
+}

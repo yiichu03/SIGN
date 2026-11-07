@@ -1,0 +1,584 @@
+baseline 74653696
+coverage256 126175232
+coverage32 48377856
+qwen128_beta01 8810496
+A_qwen128_beta003 8536064
+B_qwen256_beta003 9189376
+C_geometry128 22587392
+legacy {
+  "common_end": 48377856,
+  "names": [
+    "baseline",
+    "coverage256",
+    "coverage32"
+  ],
+  "windows": {
+    "1000000": {
+      "lower_exclusive": 47377856,
+      "upper_inclusive": 48377856,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8456277764404234,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.5067772605058362,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.209044185396596,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 17.681544789507345,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.7925801277160645,
+            "metrics/spl": 0.4623636305332184,
+            "reward": 6.706576824188232,
+            "metrics/collisions.count": 21.15514373779297
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8209020730664149,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4577084200757657,
+            "points": 489
+          },
+          "reward": {
+            "mean": 6.830862126223637,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 18.197784299011854,
+            "points": 489
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 320.54155451924765,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8292682766914368,
+            "metrics/spl": 0.4178220331668854,
+            "reward": 6.881249904632568,
+            "metrics/collisions.count": 24.801950454711914,
+            "learner/coverage_new_area_m2": 233.0800018310547
+          },
+          "new_m2_per_all_actions": 0.1565144309176014
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8415691707519422,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4708844732896926,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.12425716181718,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 20.627265372403073,
+            "points": 489
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 313.30439717735493,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8590492010116577,
+            "metrics/spl": 0.4784667491912842,
+            "reward": 7.154894828796387,
+            "metrics/collisions.count": 16.99416160583496,
+            "learner/coverage_new_area_m2": 312.5799865722656
+          },
+          "new_m2_per_all_actions": 0.15298066268425534
+        }
+      }
+    },
+    "5000000": {
+      "lower_exclusive": 43377856,
+      "upper_inclusive": 48377856,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8586842957624737,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.5085422137079426,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 7.308725340262873,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 18.543126038700514,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.7925801277160645,
+            "metrics/spl": 0.4623636305332184,
+            "reward": 6.706576824188232,
+            "metrics/collisions.count": 21.15514373779297
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8413872048563883,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4672532190708329,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 7.127104928901604,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 18.997677004796184,
+            "points": 2442
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 333.91219893446913,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8292682766914368,
+            "metrics/spl": 0.4178220331668854,
+            "reward": 6.881249904632568,
+            "metrics/collisions.count": 24.801950454711914,
+            "learner/coverage_new_area_m2": 233.0800018310547
+          },
+          "new_m2_per_all_actions": 0.16304306588597126
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8400544613282471,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4645952505351675,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 7.152477427450582,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 18.878265100849347,
+            "points": 2442
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 333.3568018820323,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8590492010116577,
+            "metrics/spl": 0.4784667491912842,
+            "reward": 7.154894828796387,
+            "metrics/collisions.count": 16.99416160583496,
+            "learner/coverage_new_area_m2": 312.5799865722656
+          },
+          "new_m2_per_all_actions": 0.16277187591896108
+        }
+      }
+    }
+  }
+}
+qwen_vs_coverage {
+  "common_end": 8536064,
+  "names": [
+    "baseline",
+    "coverage256",
+    "coverage32",
+    "qwen128_beta01",
+    "A_qwen128_beta003",
+    "B_qwen256_beta003",
+    "C_geometry128"
+  ],
+  "windows": {
+    "1000000": {
+      "lower_exclusive": 7536064,
+      "upper_inclusive": 8536064,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8627784092489683,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.47650977761955104,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.170944035418926,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 19.873790604449002,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8045058250427246,
+            "metrics/spl": 0.47774043679237366,
+            "reward": 6.440321922302246,
+            "metrics/collisions.count": 17.15188980102539
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8635443441706933,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.47907152576924344,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.220910797821232,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 20.04577465486429,
+            "points": 489
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 312.3082617075165,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8608695864677429,
+            "metrics/spl": 0.49967867136001587,
+            "reward": 6.8213348388671875,
+            "metrics/collisions.count": 19.698022842407227,
+            "learner/coverage_new_area_m2": 255.47999572753906
+          },
+          "new_m2_per_all_actions": 0.1524942684118733
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.8608488163821293,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.47693958457993585,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.223547957913763,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 20.294737653985834,
+            "points": 489
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 321.1198365381159,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8689168095588684,
+            "metrics/spl": 0.4905225932598114,
+            "reward": 6.963623523712158,
+            "metrics/collisions.count": 18.656986236572266,
+            "learner/coverage_new_area_m2": 266.7900085449219
+          },
+          "new_m2_per_all_actions": 0.1567967951846269
+        },
+        "qwen128_beta01": {
+          "metrics/success": {
+            "mean": 0.8609666416006342,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4766802985244002,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.1781018584783824,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 19.987098670444606,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8476770520210266,
+            "metrics/spl": 0.48950231075286865,
+            "reward": 6.709664344787598,
+            "metrics/collisions.count": 17.90708351135254
+          }
+        },
+        "A_qwen128_beta003": {
+          "metrics/success": {
+            "mean": 0.8594745340279031,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.4754400904193246,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.20254710651858,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 19.066513443773268,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8522984385490417,
+            "metrics/spl": 0.4784882068634033,
+            "reward": 6.817027568817139,
+            "metrics/collisions.count": 18.305200576782227
+          }
+        },
+        "B_qwen256_beta003": {
+          "metrics/success": {
+            "mean": 0.8658286097834691,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.48599193365539756,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.250582899784018,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 19.083331381128854,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8652482032775879,
+            "metrics/spl": 0.5050852298736572,
+            "reward": 6.740377426147461,
+            "metrics/collisions.count": 16.49251365661621
+          }
+        },
+        "C_geometry128": {
+          "metrics/success": {
+            "mean": 0.8572607911925131,
+            "points": 489
+          },
+          "metrics/spl": {
+            "mean": 0.48663238044409174,
+            "points": 489
+          },
+          "reward": {
+            "mean": 7.145268993143655,
+            "points": 489
+          },
+          "metrics/collisions.count": {
+            "mean": 19.430395836235313,
+            "points": 489
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8274147510528564,
+            "metrics/spl": 0.47660359740257263,
+            "reward": 6.649555683135986,
+            "metrics/collisions.count": 15.284801483154297
+          }
+        }
+      }
+    },
+    "5000000": {
+      "lower_exclusive": 3536064,
+      "upper_inclusive": 8536064,
+      "runs": {
+        "baseline": {
+          "metrics/success": {
+            "mean": 0.8293829556130464,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4562527250062238,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.847029622317727,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 21.334144068974926,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8045058250427246,
+            "metrics/spl": 0.47774043679237366,
+            "reward": 6.440321922302246,
+            "metrics/collisions.count": 17.15188980102539
+          }
+        },
+        "coverage256": {
+          "metrics/success": {
+            "mean": 0.8283957160954394,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4567692175226852,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.865273076720554,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 20.955369496716525,
+            "points": 2442
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 303.97955365067713,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8608695864677429,
+            "metrics/spl": 0.49967867136001587,
+            "reward": 6.8213348388671875,
+            "metrics/collisions.count": 19.698022842407227,
+            "learner/coverage_new_area_m2": 255.47999572753906
+          },
+          "new_m2_per_all_actions": 0.1484275164309947
+        },
+        "coverage32": {
+          "metrics/success": {
+            "mean": 0.821437811504906,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4532653677912641,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.817497724201911,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 21.184089073287378,
+            "points": 2442
+          },
+          "learner/coverage_new_area_m2": {
+            "mean": 303.9285420473241,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8689168095588684,
+            "metrics/spl": 0.4905225932598114,
+            "reward": 6.963623523712158,
+            "metrics/collisions.count": 18.656986236572266,
+            "learner/coverage_new_area_m2": 266.7900085449219
+          },
+          "new_m2_per_all_actions": 0.14840260842154496
+        },
+        "qwen128_beta01": {
+          "metrics/success": {
+            "mean": 0.8355561615159334,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.45543175780753636,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.91123002401441,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 21.59512657576365,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8476770520210266,
+            "metrics/spl": 0.48950231075286865,
+            "reward": 6.709664344787598,
+            "metrics/collisions.count": 17.90708351135254
+          }
+        },
+        "A_qwen128_beta003": {
+          "metrics/success": {
+            "mean": 0.8205349664527993,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.44663319756855835,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.80392879643077,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 22.16779277717159,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8522984385490417,
+            "metrics/spl": 0.4784882068634033,
+            "reward": 6.817027568817139,
+            "metrics/collisions.count": 18.305200576782227
+          }
+        },
+        "B_qwen256_beta003": {
+          "metrics/success": {
+            "mean": 0.8280838203664493,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.45404901574567924,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.877393153141406,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 20.11481626887091,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8652482032775879,
+            "metrics/spl": 0.5050852298736572,
+            "reward": 6.740377426147461,
+            "metrics/collisions.count": 16.49251365661621
+          }
+        },
+        "C_geometry128": {
+          "metrics/success": {
+            "mean": 0.822521702565686,
+            "points": 2442
+          },
+          "metrics/spl": {
+            "mean": 0.4506213699424003,
+            "points": 2442
+          },
+          "reward": {
+            "mean": 6.809674898978631,
+            "points": 2442
+          },
+          "metrics/collisions.count": {
+            "mean": 21.418552005417908,
+            "points": 2442
+          },
+          "latest_at_common_end": {
+            "metrics/success": 0.8274147510528564,
+            "metrics/spl": 0.47660359740257263,
+            "reward": 6.649555683135986,
+            "metrics/collisions.count": 15.284801483154297
+          }
+        }
+      }
+    }
+  }
+}
+OUTPUT /scratch/e1538633/liuyi/logs/matched_training_20261103/snapshot_015509

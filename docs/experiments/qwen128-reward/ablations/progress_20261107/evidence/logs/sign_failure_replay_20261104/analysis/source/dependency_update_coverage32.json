@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-11-04T13:24:51+08:00",
+  "reason": "Reuse earlier completed coverage256 slot; baseline and all existing training unchanged",
+  "previous_dependency": "afterany:1518132.stdct-mgmt-02@stdct-mgmt-02,beforeok:1518137.stdct-mgmt-02@stdct-mgmt-02",
+  "command": [
+    "qalter",
+    "-W",
+    "depend=afterany:1518133.stdct-mgmt-02",
+    "1518134.stdct-mgmt-02"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

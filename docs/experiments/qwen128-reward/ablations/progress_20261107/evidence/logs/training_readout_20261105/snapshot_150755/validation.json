@@ -1,0 +1,18 @@
+{
+  "validated_at": "2026-11-05T15:24:07+08:00",
+  "all6_finite": true,
+  "all3_qwen_and_C_nav_rewards_masks_unchanged": true,
+  "ledger_rollout_ids_contiguous": "asserted by readout_v2",
+  "matched_steps_exact": true,
+  "historical_C_full_log_range_max": 22587392,
+  "historical_C_previous_stale_reference_max": 18020352,
+  "common_endpoint": 19486720,
+  "readout_script_sha256": "fe6388724253cdcb32a6cdd0dc744faf18a01a1c686bbaa99db9cd2f5716ce52",
+  "source_raw_prefix_hashes_recorded": 15,
+  "qwen_workers": {
+    "qwen01": true,
+    "A": true,
+    "B": true,
+    "C": false
+  }
+}

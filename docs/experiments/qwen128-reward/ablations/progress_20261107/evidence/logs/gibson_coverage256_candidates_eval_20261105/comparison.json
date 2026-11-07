@@ -1,0 +1,228 @@
+{
+  "cases": {
+    "coverage256_143360000": {
+      "case": "coverage143360000",
+      "training_step": 143360000,
+      "episodes": 4200,
+      "scenes": 14,
+      "success_rate": 0.8652380952380953,
+      "spl": 0.5214598109617169,
+      "mean_collisions": 43.27047619047619,
+      "mean_episode_steps": 118.12095238095237,
+      "mean_new_area_m2": 11.76411904761905,
+      "new_m2_per_step_global": 0.09959383843840458,
+      "mean_episode_new_m2_per_step": 0.21302777454655786,
+      "native_metrics": {
+        "eval_reward/average_reward": 6.792647838592529,
+        "eval_metrics/distance_to_goal": 1.0852409601211548,
+        "eval_metrics/success": 0.8652380704879761,
+        "eval_metrics/spl": 0.5214598178863525,
+        "eval_metrics/soft_spl": 0.4776324927806854,
+        "eval_metrics/distance_to_view": 1.6070581674575806,
+        "eval_metrics/view_match": 0.8579761981964111,
+        "eval_metrics/view_angle": 30.283010482788086,
+        "eval_metrics/collisions.count": 43.270477294921875,
+        "eval_metrics/observed_coverage.delta_m2": 0.0007428571698255837,
+        "eval_metrics/observed_coverage.new_area_m2": 11.764119148254395,
+        "eval_metrics/coverage_eval.steps": 118.1209487915039,
+        "eval_metrics/coverage_eval.new_area_m2": 11.764119148254395,
+        "eval_metrics/coverage_eval.new_m2_per_step": 0.21302777528762817
+      },
+      "seconds": 4397.148487567902,
+      "qwen_enabled": false,
+      "qwen_trajectory_collection": false,
+      "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+    },
+    "coverage256_150528000": {
+      "case": "coverage150528000",
+      "training_step": 150528000,
+      "episodes": 4200,
+      "scenes": 14,
+      "success_rate": 0.8633333333333333,
+      "spl": 0.5176948294792739,
+      "mean_collisions": 38.50476190476191,
+      "mean_episode_steps": 119.07571428571428,
+      "mean_new_area_m2": 11.681307142857143,
+      "new_m2_per_step_global": 0.09809982844048805,
+      "mean_episode_new_m2_per_step": 0.20387054940801044,
+      "native_metrics": {
+        "eval_reward/average_reward": 6.732473373413086,
+        "eval_metrics/distance_to_goal": 1.1367782354354858,
+        "eval_metrics/success": 0.8633333444595337,
+        "eval_metrics/spl": 0.5176948308944702,
+        "eval_metrics/soft_spl": 0.47421950101852417,
+        "eval_metrics/distance_to_view": 1.6538163423538208,
+        "eval_metrics/view_match": 0.8564285635948181,
+        "eval_metrics/view_angle": 29.673311233520508,
+        "eval_metrics/collisions.count": 38.5047607421875,
+        "eval_metrics/observed_coverage.delta_m2": 0.0008880952373147011,
+        "eval_metrics/observed_coverage.new_area_m2": 11.681306838989258,
+        "eval_metrics/coverage_eval.steps": 119.07571411132812,
+        "eval_metrics/coverage_eval.new_area_m2": 11.681306838989258,
+        "eval_metrics/coverage_eval.new_m2_per_step": 0.20387054979801178
+      },
+      "seconds": 2038.2567393779755,
+      "qwen_enabled": false,
+      "qwen_trajectory_collection": false,
+      "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+    },
+    "coverage256_146944000": {
+      "case": "coverage256",
+      "training_step": 146944000,
+      "episodes": 4200,
+      "scenes": 14,
+      "success_rate": 0.8635714285714285,
+      "spl": 0.5623545995018063,
+      "mean_collisions": 34.262142857142855,
+      "mean_episode_steps": 116.64142857142858,
+      "mean_new_area_m2": 11.587350000000002,
+      "new_m2_per_step_global": 0.09934163308797413,
+      "mean_episode_new_m2_per_step": 0.21259131479543764,
+      "native_metrics": {
+        "eval_reward/average_reward": 6.79379415512085,
+        "eval_metrics/distance_to_goal": 1.096468448638916,
+        "eval_metrics/success": 0.8635714054107666,
+        "eval_metrics/spl": 0.5623546242713928,
+        "eval_metrics/soft_spl": 0.5147312879562378,
+        "eval_metrics/distance_to_view": 1.6150529384613037,
+        "eval_metrics/view_match": 0.8557142615318298,
+        "eval_metrics/view_angle": 29.795557022094727,
+        "eval_metrics/collisions.count": 34.262142181396484,
+        "eval_metrics/observed_coverage.delta_m2": 0.0008166666957549751,
+        "eval_metrics/observed_coverage.new_area_m2": 11.587349891662598,
+        "eval_metrics/coverage_eval.steps": 116.64142608642578,
+        "eval_metrics/coverage_eval.new_area_m2": 11.587349891662598,
+        "eval_metrics/coverage_eval.new_m2_per_step": 0.21259132027626038
+      },
+      "seconds": 3274.767153739929,
+      "qwen_enabled": false,
+      "qwen_trajectory_collection": false,
+      "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+    },
+    "coverage256_previous": {
+      "case": "coverage256",
+      "training_step": 125952000,
+      "episodes": 4200,
+      "scenes": 14,
+      "success_rate": 0.8757142857142857,
+      "spl": 0.5329960106555678,
+      "mean_collisions": 36.67857142857143,
+      "mean_episode_steps": 113.55928571428572,
+      "mean_new_area_m2": 11.699185714285717,
+      "new_m2_per_step_global": 0.1030227131202706,
+      "mean_episode_new_m2_per_step": 0.20907948087186184,
+      "native_metrics": {
+        "eval_reward/average_reward": 6.9846601486206055,
+        "eval_metrics/distance_to_goal": 1.0168558359146118,
+        "eval_metrics/success": 0.8757143020629883,
+        "eval_metrics/spl": 0.5329959988594055,
+        "eval_metrics/soft_spl": 0.48975512385368347,
+        "eval_metrics/distance_to_view": 1.4847701787948608,
+        "eval_metrics/view_match": 0.8676190376281738,
+        "eval_metrics/view_angle": 27.0756778717041,
+        "eval_metrics/collisions.count": 36.67856979370117,
+        "eval_metrics/observed_coverage.delta_m2": 0.0013357142452150583,
+        "eval_metrics/observed_coverage.new_area_m2": 11.699185371398926,
+        "eval_metrics/coverage_eval.steps": 113.55928802490234,
+        "eval_metrics/coverage_eval.new_area_m2": 11.699185371398926,
+        "eval_metrics/coverage_eval.new_m2_per_step": 0.20907947421073914
+      },
+      "seconds": 3292.1180214881897,
+      "qwen_enabled": false,
+      "qwen_trajectory_collection": false,
+      "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+    },
+    "baseline": {
+      "case": "baseline",
+      "training_step": 74240000,
+      "episodes": 4200,
+      "scenes": 14,
+      "success_rate": 0.8497619047619047,
+      "spl": 0.5439358224388628,
+      "mean_collisions": 37.056666666666665,
+      "mean_episode_steps": 126.08190476190477,
+      "mean_new_area_m2": 11.827290476190479,
+      "new_m2_per_step_global": 0.09380640702189044,
+      "mean_episode_new_m2_per_step": 0.20813650922207713,
+      "native_metrics": {
+        "eval_reward/average_reward": 6.581392288208008,
+        "eval_metrics/distance_to_goal": 1.1439762115478516,
+        "eval_metrics/success": 0.8497619032859802,
+        "eval_metrics/spl": 0.5439358353614807,
+        "eval_metrics/soft_spl": 0.49958279728889465,
+        "eval_metrics/distance_to_view": 1.6967397928237915,
+        "eval_metrics/view_match": 0.8411904573440552,
+        "eval_metrics/view_angle": 31.937564849853516,
+        "eval_metrics/collisions.count": 37.05666732788086,
+        "eval_metrics/observed_coverage.delta_m2": 0.0010047618998214602,
+        "eval_metrics/observed_coverage.new_area_m2": 11.827290534973145,
+        "eval_metrics/coverage_eval.steps": 126.08190155029297,
+        "eval_metrics/coverage_eval.new_area_m2": 11.827290534973145,
+        "eval_metrics/coverage_eval.new_m2_per_step": 0.20813651382923126
+      },
+      "seconds": 3131.624656677246,
+      "qwen_enabled": false,
+      "qwen_trajectory_collection": false,
+      "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+    }
+  },
+  "source_results": {
+    "coverage256_143360000": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/coverage143360000/result.json",
+      "result_sha256": "f72c26995df10a005696f7511c49379be1791462c8f4e036db790e5af1950c89"
+    },
+    "coverage256_150528000": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/coverage150528000/result.json",
+      "result_sha256": "83868a43e9bf6d123d492b0cb28462ff5eb721bbe1e60347eb77681d05e9de7e"
+    },
+    "coverage256_146944000": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/coverage256/result.json",
+      "result_sha256": "bd46260ef47c35a2542a3dd846a243ec82da85c2e96079b8eddcec2084fc831c"
+    },
+    "coverage256_previous": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256/result.json",
+      "result_sha256": "fbaa820e205a998a04bc7ff44e919e993868ea1c1c829f761f06502e4e4d6334"
+    },
+    "baseline": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/baseline/result.json",
+      "result_sha256": "5fe69bacf7f6db4bad3f8fd480042f7a62b5e50246e1df95b79a002b4f472314"
+    }
+  },
+  "paired_4200_tasks_goals_and_starts_passed": true,
+  "training_steps_are_different": true,
+  "note": "Coverage256 candidates fixed from training curves:143.360M and150.528M. References:coverage256125.952M/146.944M and frozen baseline74.240M. Different training budgets; single-seed checkpoint comparison, not a matched-budget causal reward comparison.",
+  "candidate_checkpoints": {
+    "coverage143360000": {
+      "step": 143360000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.33.pth",
+      "path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/checkpoints/coverage256_143360000.pth",
+      "sha256": "1f5f312fe66212c7cf47fb3f6bb705d09aa90849ed22bf79b2f74ebf1ea344f3",
+      "bytes": 9657189,
+      "selection_priority": 1,
+      "cpu_metadata_evidence": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/recommendations.json",
+      "extra_state_step_cpu_verified": true,
+      "parameters_finite_cpu_verified": true
+    },
+    "coverage150528000": {
+      "step": 150528000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.47.pth",
+      "path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/checkpoints/coverage256_150528000.pth",
+      "sha256": "9a43d3e8b870a9594f1a7558fb073298c13cddb1c2c3bb1abe5f6ee8a3532579",
+      "bytes": 9657189,
+      "selection_priority": 2,
+      "cpu_metadata_evidence": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/recommendations.json",
+      "extra_state_step_cpu_verified": true,
+      "parameters_finite_cpu_verified": true
+    }
+  },
+  "delta_vs_previous_coverage256_pp": {
+    "coverage256_143360000": {
+      "success_rate": -1.0476190476190417,
+      "spl": -1.153619969385089
+    },
+    "coverage256_150528000": {
+      "success_rate": -1.2380952380952381,
+      "spl": -1.5301181176293865
+    }
+  }
+}

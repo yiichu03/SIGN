@@ -1,0 +1,7 @@
+{
+  "frames_written_and_decoded": 10,
+  "bytes": 1989,
+  "codec": "libx264",
+  "existing_environment": true,
+  "probe_first_read_attempt": "list(reader) caused preallocation MemoryError; count by iterator instead; encoded file intact"
+}

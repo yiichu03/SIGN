@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#PBS -N val-cov256-compare
+#PBS -l walltime=00:10:00
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=1:mem=4gb
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+python /scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/summarize.py

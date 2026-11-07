@@ -1,0 +1,20 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+...............E
+======================================================================
+ERROR: test_qwen_ablation (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_qwen_ablation
+Traceback (most recent call last):
+  File "/scratch/e1538633/liuyi/envs/sign-baseline/lib/python3.8/unittest/loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "/scratch/e1538633/liuyi/SIGN-continue-ablation/tests/test_qwen_ablation.py", line 17, in <module>
+    import test_qwen_reward as reward_fixtures
+ModuleNotFoundError: No module named 'test_qwen_reward'
+
+
+----------------------------------------------------------------------
+Ran 16 tests in 12.362s
+
+FAILED (errors=1)

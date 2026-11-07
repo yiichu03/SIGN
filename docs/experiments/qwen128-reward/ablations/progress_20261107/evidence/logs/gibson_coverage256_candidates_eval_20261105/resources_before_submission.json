@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-05T14:20:06+08:00",
+  "checks": [
+    {
+      "command": [
+        "qstat",
+        "-u",
+        "e1538633"
+      ],
+      "returncode": 0,
+      "stdout": "\nstdct-mgmt-02: \n                                                            Req'd  Req'd   Elap\nJob ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time\n--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----\n1511143.stdct-* e1538633 batch_g* cont-A      81249   1  36  240gb 127:3 R 60:44\n1511145.stdct-* e1538633 batch_g* cont-qwen* 129645   1  36  240gb 125:3 R 60:38\n1511146.stdct-* e1538633 batch_g* cont-cov2* 461992   1  36  240gb 68:03 R 60:38\n1511410.stdct-* e1538633 batch_g* cont-C-po* 130649   1  36  240gb 126:4 R 58:27\n1511147.stdct-* e1538633 batch_g* cont-cov32 119872   1  36  240gb 99:28 R 38:35\n1511148.stdct-* e1538633 batch_g* cont-B     13996*   1  36  240gb 127:3 R 38:35\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "qstat",
+        "-Qf",
+        "batch_gpu",
+        "batch_gpux"
+      ],
+      "returncode": 0,
+      "stdout": "Queue: batch_gpu\n    queue_type = Execution\n    Priority = 100\n    total_jobs = 968\n    state_count = Transit:0 Queued:62 Held:835 Waiting:-1 Running:65 Exiting:0 \n\tBegun:7 \n    from_route_only = True\n    resources_max.ncpus = 720\n    resources_max.ngpus = 2\n    resources_max.nodect = 2\n    resources_max.walltime = 168:00:00\n    resources_min.ngpus = 1\n    resources_min.nodect = 1\n    resources_default.queue_charge_rate = 1\n    resources_default.walltime = 24:00:00\n    default_chunk.node_pool = gpu_node\n    resources_assigned.mem = 16560gb\n    resources_assigned.mpiprocs = 18\n    resources_assigned.ncpus = 2484\n    resources_assigned.nodect = 65\n    max_run = [u:PBS_GENERIC=4]\n    enabled = True\n    started = True\n\nQueue: batch_gpux\n    queue_type = Execution\n    Priority = 200\n    total_jobs = 6\n    state_count = Transit:0 Queued:0 Held:0 Waiting:0 Running:6 Exiting:0 Begun\n\t:0 \n    from_route_only = True\n    resources_max.ncpus = 720\n    resources_max.ngpus = 2\n    resources_max.nodect = 2\n    resources_max.walltime = 168:00:00\n    resources_min.ngpus = 1\n    resources_min.nodect = 1\n    resources_default.queue_charge_rate = 1\n    resources_default.walltime = 24:00:00\n    default_chunk.node_pool = gpu_node\n    resources_assigned.mem = 1440gb\n    resources_assigned.mpiprocs = 0\n    resources_assigned.ncpus = 216\n    resources_assigned.nodect = 6\n    max_run = [u:PBS_GENERIC=4]\n    enabled = True\n    started = True\n\n",
+      "stderr": ""
+    }
+  ]
+}

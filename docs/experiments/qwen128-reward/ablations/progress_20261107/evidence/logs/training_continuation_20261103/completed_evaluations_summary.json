@@ -1,0 +1,72 @@
+{
+  "qwen01": {
+    "source": "logs/qwen128_reward_20261029/val_8192000/result.json",
+    "training_step": 8192000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.7761904761904762,
+    "spl": 0.4516003543308391,
+    "coverage_global": 0.07567116947283581,
+    "qwen_enabled": false
+  },
+  "A_4608000": {
+    "source": "logs/qwen_ablation_20261029/A/val_4608000/result.json",
+    "training_step": 4608000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.7407142857142858,
+    "spl": 0.4738638958305777,
+    "coverage_global": 0.06872326391204367,
+    "qwen_enabled": false
+  },
+  "A_8192000": {
+    "source": "logs/qwen_ablation_20261029/A/val_8192000/result.json",
+    "training_step": 8192000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.7897619047619048,
+    "spl": 0.4569185437656838,
+    "coverage_global": 0.07647124590602333,
+    "qwen_enabled": false
+  },
+  "B_4608000": {
+    "source": "logs/qwen_ablation_20261029/B/val_4608000/result.json",
+    "training_step": 4608000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.7359523809523809,
+    "spl": 0.49779217791246494,
+    "coverage_global": 0.06705101501171468,
+    "qwen_enabled": false
+  },
+  "B_8192000": {
+    "source": "logs/qwen_ablation_20261029/B/val_8192000/result.json",
+    "training_step": 8192000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.7916666666666666,
+    "spl": 0.48001420911835824,
+    "coverage_global": 0.07674340040731097,
+    "qwen_enabled": false
+  },
+  "C_4608000": {
+    "source": "logs/qwen_ablation_20261029/C/val_4608000/result.json",
+    "training_step": 4608000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.7954761904761904,
+    "spl": 0.4234151995468315,
+    "coverage_global": 0.07684885074398837,
+    "qwen_enabled": false
+  },
+  "C_8192000": {
+    "source": "logs/qwen_ablation_20261029/C/val_8192000/result.json",
+    "training_step": 8192000,
+    "episodes": 4200,
+    "scenes": 14,
+    "success_rate": 0.785952380952381,
+    "spl": 0.49519960613691033,
+    "coverage_global": 0.07692917950113437,
+    "qwen_enabled": false
+  }
+}

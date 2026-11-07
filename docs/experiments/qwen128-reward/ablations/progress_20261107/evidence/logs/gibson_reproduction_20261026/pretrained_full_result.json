@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-26T14:08:22+08:00",
+  "job_id": "1494521.stdct-mgmt-02",
+  "episodes": 4200,
+  "environments": 6,
+  "checkpoint": "SIGN/ckpt/nav_model.pth",
+  "repository_commit": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+  "walltime": "00:20:34",
+  "metrics": {
+    "eval_reward/average_reward": 6.7185378074646,
+    "eval_metrics/distance_to_goal": 1.1240344047546387,
+    "eval_metrics/success": 0.8600000143051147,
+    "eval_metrics/spl": 0.5300576090812683,
+    "eval_metrics/soft_spl": 0.48600685596466064,
+    "eval_metrics/distance_to_view": 1.6548038721084595,
+    "eval_metrics/view_match": 0.8508333563804626,
+    "eval_metrics/view_angle": 30.670806884765625,
+    "eval_metrics/collisions.count": 42.05095291137695
+  },
+  "pythonhashseed": "not explicitly fixed",
+  "source_code_modified": false
+}

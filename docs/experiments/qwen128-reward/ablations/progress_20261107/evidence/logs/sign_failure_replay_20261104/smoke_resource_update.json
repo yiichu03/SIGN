@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-04T00:48:53+08:00",
+  "before": {
+    "job_state": "Q",
+    "queue": "batch_gpu",
+    "project": "CFP04-SF-109",
+    "Resource_List": {
+      "am_job_cache": "\"{}\"",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "00:30:00"
+    },
+    "comment": "Not Running: Insufficient amount of resource: node_pool ",
+    "Hold_Types": "n"
+  },
+  "command": [
+    "qalter",
+    "-l",
+    "select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+    "1515859.stdct-mgmt-02"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "after": {
+    "job_state": "Q",
+    "queue": "batch_gpu",
+    "project": "CFP04-SF-109",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1800, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0}",
+      "mem": "64gb",
+      "ncpus": 12,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+      "walltime": "00:30:00"
+    },
+    "comment": "Not Running: Insufficient amount of resource: node_pool ",
+    "Hold_Types": "n"
+  }
+}

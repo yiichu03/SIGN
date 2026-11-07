@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-04T13:49:14+08:00",
+  "case": "coverage256",
+  "job_id": "1518133.stdct-mgmt-02",
+  "episodes": 4200,
+  "failures": 522,
+  "stages": {
+    "stop_without_ever_entering_goal_region": 88,
+    "time_limit_never_entered_goal_region": 377,
+    "time_limit_after_leaving_goal_region": 24,
+    "time_limit_in_goal_region_without_stop": 10,
+    "stop_after_leaving_goal_region": 23
+  },
+  "failures_ever_near": 57,
+  "qualification": "Complete-case metadata preview; full motion/video audit and other models pending"
+}

@@ -1,0 +1,70 @@
+{
+  "version": "predeclared-v1",
+  "created_at": "2026-11-04T00:44:28+08:00",
+  "success_radius_m": 1.0,
+  "primary_observed_stage": [
+    "stop_without_ever_entering_goal_region",
+    "stop_after_leaving_goal_region",
+    "time_limit_in_goal_region_without_stop",
+    "time_limit_after_leaving_goal_region",
+    "time_limit_never_entered_goal_region",
+    "other_or_invalid"
+  ],
+  "primary_stage_is_causal_reason": false,
+  "profiles": {
+    "strict": {
+      "forward_command_mps": 0.075,
+      "blocked_move_m": 0.005,
+      "blocked_consecutive_steps": 12,
+      "tail_steps": 64,
+      "tail_blocked_fraction": 0.65,
+      "loop_min_gap": 48,
+      "loop_close_distance_m": 0.25,
+      "loop_close_heading_deg": 20,
+      "loop_min_path_m": 3.0,
+      "loop_min_spread_m": 1.2,
+      "loop_max_new_area_m2": 0.2
+    },
+    "base": {
+      "forward_command_mps": 0.05,
+      "blocked_move_m": 0.01,
+      "blocked_consecutive_steps": 8,
+      "tail_steps": 64,
+      "tail_blocked_fraction": 0.5,
+      "loop_min_gap": 32,
+      "loop_close_distance_m": 0.35,
+      "loop_close_heading_deg": 30,
+      "loop_min_path_m": 2.0,
+      "loop_min_spread_m": 0.8,
+      "loop_max_new_area_m2": 0.5
+    },
+    "loose": {
+      "forward_command_mps": 0.025,
+      "blocked_move_m": 0.02,
+      "blocked_consecutive_steps": 6,
+      "tail_steps": 64,
+      "tail_blocked_fraction": 0.35,
+      "loop_min_gap": 24,
+      "loop_close_distance_m": 0.5,
+      "loop_close_heading_deg": 45,
+      "loop_min_path_m": 1.5,
+      "loop_min_spread_m": 0.5,
+      "loop_max_new_area_m2": 1.0
+    }
+  },
+  "stationary_turn_candidate": {
+    "tail_steps": 64,
+    "minimum_steps": 16,
+    "maximum_path_m": 0.5,
+    "minimum_total_abs_yaw_deg": 180,
+    "maximum_new_area_m2": 0.5
+  },
+  "notes": [
+    "Behavioral flags may overlap. They are not mutually exclusive human causes.",
+    "A low-gain closed loop is only a repeated-search candidate; necessary returns/shared passages remain possible.",
+    "Use full3D position for loop closure to exclude overlap of floors.",
+    "No labeling tuning to maximize advantage of any model.",
+    "Record strict/base/loose sensitivity without selecting a favorable profile.",
+    "AI qualitative review is not human ground truth; human fields remain blank."
+  ]
+}

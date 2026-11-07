@@ -1,0 +1,8 @@
+{
+  "python_ast_passed": true,
+  "pbs_shell_syntax_passed": true,
+  "telemetry_byte_identical": true,
+  "protocol_byte_identical": true,
+  "summary_uses_real_newline": true,
+  "initial_qstat_json_attempt": "qstat -u with -f/-F returned tabular output; used qselect then qstat -f -F json successfully"
+}

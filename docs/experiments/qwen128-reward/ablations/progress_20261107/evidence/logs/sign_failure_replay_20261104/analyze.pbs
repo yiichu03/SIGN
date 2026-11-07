@@ -1,0 +1,17 @@
+#!/bin/bash -l
+#PBS -N sign-diag-report
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l walltime=02:00:00
+#PBS -l select=1:ncpus=4:mem=16gb
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export CUDA_VISIBLE_DEVICES="" PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export IMAGEIO_FFMPEG_EXE=/scratch/e1538633/liuyi/envs/sign-baseline/bin/ffmpeg
+support=/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104
+python "$support/analyze.py" --out "$support/analysis"
+python "$support/report.py"

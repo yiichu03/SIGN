@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-11-05T00:50:26+08:00",
+  "all_six_jobs_running": true,
+  "all_scalar_series_finite": true,
+  "all_ledger_nav_rewards_and_masks_unchanged": true,
+  "matched_1m_2m_3m_step_arrays_equal": true,
+  "event_and_ledger_snapshots_sha_verified": true,
+  "source_snapshots": 14,
+  "executed_script_sha256": "115b6b32452f016d29a73eda205b76e340dad4ec4f9034492086ca89c649b497",
+  "freshness_metadata_corrected_after_capture": true
+}

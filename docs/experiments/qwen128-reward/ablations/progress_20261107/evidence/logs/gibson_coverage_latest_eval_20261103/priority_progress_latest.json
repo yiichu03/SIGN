@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-03T02:37:08+08:00",
+  "jobs": {
+    "1511143.stdct-mgmt-02": {
+      "job_state": "R",
+      "Hold_Types": "n",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Exit_status": null,
+      "used_walltime": "01:00:29",
+      "walltime": "127:34:34",
+      "depend": null
+    },
+    "1511144.stdct-mgmt-02": {
+      "job_state": "F",
+      "Hold_Types": "n",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-097[0]:ncpus=36:mem=240gb:ngpus=1) and terminated by e1538633@vanda.nus.edu.sg",
+      "Exit_status": 143,
+      "used_walltime": "00:53:20",
+      "walltime": "127:34:33",
+      "depend": null
+    },
+    "1511145.stdct-mgmt-02": {
+      "job_state": "R",
+      "Hold_Types": "n",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Exit_status": null,
+      "used_walltime": "00:54:40",
+      "walltime": "125:30:01",
+      "depend": null
+    },
+    "1511146.stdct-mgmt-02": {
+      "job_state": "R",
+      "Hold_Types": "n",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-099[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Exit_status": null,
+      "used_walltime": "00:54:35",
+      "walltime": "68:03:22",
+      "depend": null
+    },
+    "1511147.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "u",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job held by e1538633 on Tue Nov  3 02:28:07 2026",
+      "Exit_status": null,
+      "used_walltime": null,
+      "walltime": "99:28:14",
+      "depend": null
+    },
+    "1511148.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "u",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job held by e1538633 on Tue Nov  3 02:28:07 2026",
+      "Exit_status": null,
+      "used_walltime": null,
+      "walltime": "127:34:32",
+      "depend": null
+    },
+    "1511395.stdct-mgmt-02": {
+      "job_state": "R",
+      "Hold_Types": "n",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 02:28 on (GN-A40-097[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Exit_status": null,
+      "used_walltime": "00:08:30",
+      "walltime": "02:00:00",
+      "depend": "beforeany:1511396.stdct-mgmt-02@stdct-mgmt-02,beforeok:1511411.stdct-mgmt-02@stdct-mgmt-02"
+    },
+    "1511396.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Exit_status": null,
+      "used_walltime": null,
+      "walltime": "02:00:00",
+      "depend": "afterany:1511395.stdct-mgmt-02@stdct-mgmt-02,beforeany:1511409.stdct-mgmt-02@stdct-mgmt-02:1511410.stdct-mgmt-02@stdct-mgmt-02,beforeok:1511411.stdct-mgmt-02@stdct-mgmt-02"
+    },
+    "1511409.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Exit_status": null,
+      "used_walltime": null,
+      "walltime": "00:10:00",
+      "depend": "afterany:1511396.stdct-mgmt-02@stdct-mgmt-02"
+    },
+    "1511410.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Exit_status": null,
+      "used_walltime": null,
+      "walltime": "126:41:13",
+      "depend": "afterany:1511396.stdct-mgmt-02@stdct-mgmt-02"
+    },
+    "1511411.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "Exit_status": null,
+      "used_walltime": null,
+      "walltime": "00:10:00",
+      "depend": "afterok:1511395.stdct-mgmt-02@stdct-mgmt-02:1511396.stdct-mgmt-02@stdct-mgmt-02"
+    }
+  }
+}

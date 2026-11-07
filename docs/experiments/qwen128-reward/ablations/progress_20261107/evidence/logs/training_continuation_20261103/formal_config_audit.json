@@ -1,0 +1,18 @@
+{
+  "A": {
+    "cumulative_cap": 300000000,
+    "short_stop_disabled": true,
+    "environments": 8,
+    "rollout": 256,
+    "seed": 100,
+    "encoder_frozen": true
+  },
+  "C": {
+    "cumulative_cap": 300000000,
+    "short_stop_disabled": true,
+    "environments": 8,
+    "rollout": 256,
+    "seed": 100,
+    "encoder_frozen": true
+  }
+}

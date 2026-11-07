@@ -7,6 +7,7 @@
 - 长期主动维护四份根文档：本文件保存稳定规则；STATUS 保存当前目标、进度和下一步；RUNBOOK 保存操作与复现方法；WORKLOG 保存带时间戳的操作、错误、debug、实验结论和决策沿革。
 - Gibson对照基线停止步数、最后可评估权重及公开完整checkpoint验证分数，固定入口为 [STATUS快速索引](STATUS.md#gibson-reference)；原始证据和复核方法见 [RUNBOOK索引](RUNBOOK.md#gibson-checkpoints)。训练末步、控制台末步与checkpoint步数分开记录。
 - 项目 README 保留项目介绍与导航；已发布研究报告、证据和代码快照留在原位。不要另建重复的 CONTEXT、MEMORY、HANDOFF、研究进度或会话总结文件，用户明确要求除外。
+- ZIP分发包按需生成；用户未要求下载或打包时，保留原始文件和报告即可，不自动打包。
 - 当前用户指令优先；旧日志、指导文件和待验证方案本身不触发新实验、训练或发布。
 
 ## 操作日志：只追加
@@ -27,6 +28,9 @@
 - `SIGN-qwen-history-window/`：独立worktree与分支`phase2/qwen-history-window`，从b1c24dc建立；仅复用已发布pilot_2b/diverse_2b的32原始轨迹进行128/256窗口历史图离线2B对照。无重新采样、无导航训练或9B；测评作业期间保持对应运行代码固定，输入/窗口/图/概率/prompt/空白人审与来源均须保留。无前置历史的256步不作历史能力验证，不能用平均q判断方案优劣。
 - `SIGN-qwen128-reward/`：用户于2026-10-29另行授权从453179c建立独立`phase2/qwen128-reward-beta01`，接入2B训练奖励并在验证后提交正式训练；原离线工作树及现有作业不动。Qwen128/beta0.1使用原始q、不居中，几何bonus0；MRQ只预测nav_rewards，GAE/PPO/critic使用混合奖励。运行期间保持代码提交固定，资料通过独立发布树更新。
 - `SIGN-qwen-ablation/`：用户于2026-10-29授权从33e30d2新建独立phase2/qwen-beta003-geometry128，以同一不可变源码/独立输出运行A Qwen128 beta.03、B Qwen256 beta.03、C几何128（alpha从已完成短测冻结校准）；MRQ三组显式nav_rewards目标。保留1507268、两原coverage训练和既有评估依赖。验证后经CFP/autox提交，168h/300M cap，资源不足优先A/C、B排队。 运行提交d2352f0固定；SIGN-qwen-ablation-publication为独立detached资料发布树，普通push到yiichu03同名分支，勿将资料提交pull进运行目录。
+- `SIGN-continue-coverage256/`、`SIGN-continue-coverage32/`、`SIGN-continue-qwen128/`、`SIGN-continue-ablation/`：2026-11-03用户授权恢复10月31日意外终止的六训练，分别基于原6983c91/a7cc9e0/81fedec/d2352f0建立独立continue-*分支；原目录/证据不动。旧checkpoint缺优化器/环境状态，首次只能明确标注weights continuation，保留累计步数与原300M cap、重置优化器和episode；后续checkpoint额外保存PPO/Qc优化器但仍不声称轨迹无缝恢复。优先CFP/autox，正式预算从各组原168h扣除旧已用及恢复验证耗时，不能给每组重新计一整轮168h。
+- 2026-11-03用户另授权覆盖256/32完整val优先，并明确接受立即停止C1511144、回退22,528,000步。两评估1511395/1511396已Exit0完成，1511409已解除1511147/1511148临时用户挂起；C1511410已在独立输出续跑并扣减原预算。证据见[STATUS](STATUS.md#coverage-latest-eval-20261103)及`logs/gibson_coverage_latest_eval_20261103/results_review.json`；后续Q须看实际资源限制，不要重复提交恢复作业。 用户于11月3日23:03另要求将仍排队的1511147/1511148用qmove移至auto→batch_gpu，原ID/输出/预算不变；不因默认autox偏好自动移回。
+- `logs/sign_failure_replay_20261104/`：2026-11-04用户明确授权Goal模式做三组4200val全量失败诊断；必要重放/side-channel记录允许，原SIGN-coverage-eval与六运行训练不动，不实现推理Agent。已完成三组各4200原轨迹匹配重放与报告/原始证据，详见STATUS失败全量诊断索引；分发ZIP按需生成，本批不自动重提。代码/输入运行期间按source_manifest固定；观测阶段和行为证据不当人工因果真值，未实施Agent。
 - `SIGN-coverage-eval/`：独立detached工作树a7cc9e0，只读复用原native evaluator，用于三组同训练步数的覆盖评估；外部录数wrapper与脚本保存在各批次`logs/gibson_threeway_coverage_eval*/`，具体步数/作业见STATUS，不在此训练。旧批次证据、训练源码与目录原样保留。
 - `SIGN-coverage-publication/`：独立detached发布工作树，用于将coverage结果和根四文档生成副本发布到yiichu03/SIGN的覆盖奖励分支；不在此提交训练。训练工作树保持各自运行时代码提交，不为资料同步切换／合并。
 - `SIGN-habitat-gs/`：SIGN 的独立工作树，分支 `experiment/habitat-gs-imagenav`，用于 Habitat-GS ImageNav 接入。原 SIGN 路径有已提交的 Gibson 作业，不通过切换它的分支开发新仿真；新工作树以软链接复用数据，环境放 `envs/sign-habitat-gs`，第三方仿真源码放 `habitat-gs/`。 GS评估作业提交后保持此工作树的运行时代码与分支；后续需要改算法时另用独立工作树，不能把Gibson冻结／coverage分支替代原版公开权重评估。

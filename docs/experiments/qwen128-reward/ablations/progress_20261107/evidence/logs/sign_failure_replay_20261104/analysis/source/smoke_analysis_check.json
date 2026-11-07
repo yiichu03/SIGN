@@ -1,0 +1,9 @@
+{
+  "episodes": 28,
+  "stages": {
+    "time_limit_never_entered_goal_region": 5,
+    "success": 20,
+    "stop_without_ever_entering_goal_region": 3
+  },
+  "classification_passed": true
+}

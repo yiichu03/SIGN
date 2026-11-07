@@ -1,3 +1,5 @@
+最新研究资料（2026-11-07）：[训练、验证结果、失败诊断与当前代码入口](docs/experiments/qwen128-reward/ablations/progress_20261107/README.md)。
+
 ## [Project Website](https://nus-core.github.io/assets/standalone/SIGN/index.html)
 [![arXiv](https://img.shields.io/badge/arXiv-2310.07473-b31b1b.svg)](https://arxiv.org/pdf/2508.12394)
 [![Watch Demo](https://img.shields.io/badge/Watch-Demo-red?logo=youtube&logoColor=white)](https://nus-core.github.io/assets/standalone/SIGN/index.html)

@@ -1,0 +1,33 @@
+{
+  "case": "coverage32",
+  "training_step": 48128000,
+  "episodes": 4200,
+  "scenes": 14,
+  "success_rate": 0.8304761904761905,
+  "spl": 0.5190412636450003,
+  "mean_collisions": 43.444761904761904,
+  "mean_episode_steps": 134.72380952380954,
+  "mean_new_area_m2": 11.56192142857143,
+  "new_m2_per_step_global": 0.08581943658984861,
+  "mean_episode_new_m2_per_step": 0.19746112648383052,
+  "native_metrics": {
+    "eval_reward/average_reward": 6.282899379730225,
+    "eval_metrics/distance_to_goal": 1.2551671266555786,
+    "eval_metrics/success": 0.8304761648178101,
+    "eval_metrics/spl": 0.5190412402153015,
+    "eval_metrics/soft_spl": 0.4812649190425873,
+    "eval_metrics/distance_to_view": 1.866551399230957,
+    "eval_metrics/view_match": 0.8242856860160828,
+    "eval_metrics/view_angle": 35.22627258300781,
+    "eval_metrics/collisions.count": 43.44476318359375,
+    "eval_metrics/observed_coverage.delta_m2": 0.001500000013038516,
+    "eval_metrics/observed_coverage.new_area_m2": 11.561921119689941,
+    "eval_metrics/coverage_eval.steps": 134.72381591796875,
+    "eval_metrics/coverage_eval.new_area_m2": 11.561921119689941,
+    "eval_metrics/coverage_eval.new_m2_per_step": 0.19746112823486328
+  },
+  "seconds": 1619.6276693344116,
+  "qwen_enabled": false,
+  "qwen_trajectory_collection": false,
+  "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+}

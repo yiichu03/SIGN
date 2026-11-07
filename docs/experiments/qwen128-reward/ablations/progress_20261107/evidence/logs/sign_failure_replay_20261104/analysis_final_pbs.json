@@ -1,0 +1,31 @@
+{
+  "Job_Name": "sign-diag-report",
+  "job_state": "F",
+  "queue": "batch_cpu",
+  "project": "CFP04-SF-109",
+  "Resource_List": {
+    "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 4.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+    "mem": "27gb",
+    "ncpus": 4,
+    "ngpus": 0,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 1,
+    "select": "1:ncpus=4:mem=27GB",
+    "walltime": "02:00:00"
+  },
+  "resources_used": {
+    "cpupercent": 125,
+    "cput": "00:09:24",
+    "mem": "272400kb",
+    "ncpus": 4,
+    "ngpus": 0,
+    "vmem": "1338136kb",
+    "walltime": "00:08:08"
+  },
+  "stime": "Wed Nov  4 14:49:33 2026",
+  "obittime": "Wed Nov  4 14:59:14 2026",
+  "Exit_status": 0,
+  "comment": "Job run at Wed Nov 04 at 14:49 on (GN-A40-074[0]:ncpus=4:mem=27gb) and finished",
+  "Submit_arguments": "-o /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analysis.pbs.log -W depend=afterok:1518132.stdct-mgmt-02:1518133.stdct-mgmt-02:1518134.stdct-mgmt-02 /scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/analyze.pbs"
+}

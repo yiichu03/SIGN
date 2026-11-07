@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-04T00:40:37+08:00",
+  "command": [
+    "qsub",
+    "-N",
+    "sign-diag-passive",
+    "-l",
+    "walltime=00:30:00",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/smoke.pbs.log",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/smoke.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1515859.stdct-mgmt-02",
+  "stderr": "",
+  "job_id": "1515859.stdct-mgmt-02",
+  "latest_job_id": "1518125.stdct-mgmt-02",
+  "retry_receipt": "smoke_retry2_submission.json"
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-04T15:12:27+08:00",
+  "original_sources_and_recording_inputs_unchanged": true,
+  "compared_fields": [
+    "steps",
+    "success",
+    "spl",
+    "view_match",
+    "navigation_reward",
+    "collisions",
+    "goal_sha256",
+    "start_position",
+    "pose_trace_sha256",
+    "new_area_m2",
+    "new_m2_per_step"
+  ],
+  "cases": {
+    "baseline": {
+      "episodes": 4200,
+      "all_reference_fields_exact": true
+    },
+    "coverage256": {
+      "episodes": 4200,
+      "all_reference_fields_exact": true
+    },
+    "coverage32": {
+      "episodes": 4200,
+      "all_reference_fields_exact": true
+    }
+  }
+}

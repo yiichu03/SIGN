@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#PBS -N val-frozen-7424
+#PBS -l walltime=02:00:00
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -j oe
+set -euo pipefail
+cd /scratch/e1538633/liuyi/SIGN-coverage-eval
+module load Miniconda3/24.7.1-0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+python /scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/evaluate.py

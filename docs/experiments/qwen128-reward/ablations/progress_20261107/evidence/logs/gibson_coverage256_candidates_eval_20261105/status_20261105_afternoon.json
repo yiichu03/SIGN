@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-11-05T15:24:39+08:00",
+  "jobs": {
+    "1523189.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "comment": "Job run at Thu Nov 05 at 14:29 on (GN-A40-033[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": "beforeok:1523191.stdct-mgmt-02@stdct-mgmt-02",
+      "stime": "Thu Nov  5 14:29:59 2026",
+      "obittime": null,
+      "resources_used": {
+        "cpupercent": 197,
+        "cput": "01:20:24",
+        "gpu_usage": "GN-A40-033(cuda.1.energyConsumed=7841J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7175.602MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=3%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=3212s, cuda.1.usagePerc=3.942%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "6811264kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "59871000kb",
+        "walltime": "00:54:18"
+      }
+    },
+    "1523190.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Thu Nov 05 at 14:30 on (GN-A40-025[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "depend": "beforeok:1523191.stdct-mgmt-02@stdct-mgmt-02",
+      "stime": "Thu Nov  5 14:30:09 2026",
+      "obittime": "Thu Nov  5 15:09:42 2026",
+      "resources_used": {
+        "cpupercent": 170,
+        "cput": "00:49:46",
+        "gpu_usage": "GN-A40-025(cuda.0.energyConsumed=7735J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=7251MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=5%, cuda.0.memoryUtilization_avg=1%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=2037s, cuda.0.usagePerc=10.886%, cuda.0.memUsagePerc=1.958%)",
+        "mem": "5260272kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "58502596kb",
+        "walltime": "00:34:22"
+      }
+    },
+    "1523191.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "depend": "afterok:1523189.stdct-mgmt-02@stdct-mgmt-02",
+      "stime": null,
+      "obittime": null,
+      "resources_used": null
+    }
+  }
+}

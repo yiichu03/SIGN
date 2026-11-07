@@ -1,0 +1,137 @@
+{
+  "created_at": "2026-11-04T15:09:24+08:00",
+  "scope": "3 fixed checkpoints, 4200 tasks each, observed symptoms not mutually exclusive causal labels",
+  "cases": {
+    "baseline": {
+      "training_step": 74240000,
+      "failures": 631,
+      "successes": 3569,
+      "sr_pct": 84.97619047619047,
+      "spl_pct": 54.393582243886286,
+      "never_goal": 566,
+      "ever_goal": 65,
+      "within_2m": 179,
+      "goal_run_median_states": 9.0,
+      "oracle_stop_increment_pp": 1.5476190476190477,
+      "behaviors": {
+        "strong_blocked_tail_candidate": {
+          "failed_count": 116,
+          "failed_rate_pct": 18.38351822503962,
+          "succeeded_count": 4,
+          "succeeded_rate_pct": 0.11207621182404034,
+          "successes_among_flagged_pct": 3.3333333333333335
+        },
+        "blocked_run_anywhere_candidate": {
+          "failed_count": 213,
+          "failed_rate_pct": 33.75594294770206,
+          "succeeded_count": 63,
+          "succeeded_rate_pct": 1.7652003362286355,
+          "successes_among_flagged_pct": 22.82608695652174
+        },
+        "low_gain_closed_loop_candidate": {
+          "failed_count": 420,
+          "failed_rate_pct": 66.56101426307448,
+          "succeeded_count": 315,
+          "succeeded_rate_pct": 8.826001681143177,
+          "successes_among_flagged_pct": 42.857142857142854
+        },
+        "stationary_turn_tail_candidate": {
+          "failed_count": 46,
+          "failed_rate_pct": 7.290015847860539,
+          "succeeded_count": 1,
+          "succeeded_rate_pct": 0.028019052956010086,
+          "successes_among_flagged_pct": 2.127659574468085
+        }
+      }
+    },
+    "coverage256": {
+      "training_step": 125952000,
+      "failures": 522,
+      "successes": 3678,
+      "sr_pct": 87.57142857142857,
+      "spl_pct": 53.299601065556764,
+      "never_goal": 465,
+      "ever_goal": 57,
+      "within_2m": 158,
+      "goal_run_median_states": 8.0,
+      "oracle_stop_increment_pp": 1.3571428571428572,
+      "behaviors": {
+        "strong_blocked_tail_candidate": {
+          "failed_count": 76,
+          "failed_rate_pct": 14.559386973180077,
+          "succeeded_count": 6,
+          "succeeded_rate_pct": 0.1631321370309951,
+          "successes_among_flagged_pct": 7.317073170731708
+        },
+        "blocked_run_anywhere_candidate": {
+          "failed_count": 196,
+          "failed_rate_pct": 37.547892720306514,
+          "succeeded_count": 107,
+          "succeeded_rate_pct": 2.909189777052746,
+          "successes_among_flagged_pct": 35.31353135313531
+        },
+        "low_gain_closed_loop_candidate": {
+          "failed_count": 350,
+          "failed_rate_pct": 67.04980842911877,
+          "succeeded_count": 308,
+          "succeeded_rate_pct": 8.374116367591082,
+          "successes_among_flagged_pct": 46.808510638297875
+        },
+        "stationary_turn_tail_candidate": {
+          "failed_count": 34,
+          "failed_rate_pct": 6.513409961685824,
+          "succeeded_count": 0,
+          "succeeded_rate_pct": 0.0,
+          "successes_among_flagged_pct": 0.0
+        }
+      }
+    },
+    "coverage32": {
+      "training_step": 48128000,
+      "failures": 712,
+      "successes": 3488,
+      "sr_pct": 83.04761904761905,
+      "spl_pct": 51.90412636450002,
+      "never_goal": 660,
+      "ever_goal": 52,
+      "within_2m": 172,
+      "goal_run_median_states": 9.0,
+      "oracle_stop_increment_pp": 1.2380952380952381,
+      "behaviors": {
+        "strong_blocked_tail_candidate": {
+          "failed_count": 166,
+          "failed_rate_pct": 23.314606741573034,
+          "succeeded_count": 5,
+          "succeeded_rate_pct": 0.143348623853211,
+          "successes_among_flagged_pct": 2.9239766081871346
+        },
+        "blocked_run_anywhere_candidate": {
+          "failed_count": 251,
+          "failed_rate_pct": 35.252808988764045,
+          "succeeded_count": 54,
+          "succeeded_rate_pct": 1.548165137614679,
+          "successes_among_flagged_pct": 17.704918032786885
+        },
+        "low_gain_closed_loop_candidate": {
+          "failed_count": 447,
+          "failed_rate_pct": 62.78089887640449,
+          "succeeded_count": 278,
+          "succeeded_rate_pct": 7.970183486238532,
+          "successes_among_flagged_pct": 38.3448275862069
+        },
+        "stationary_turn_tail_candidate": {
+          "failed_count": 28,
+          "failed_rate_pct": 3.932584269662921,
+          "succeeded_count": 0,
+          "succeeded_rate_pct": 0.0,
+          "successes_among_flagged_pct": 0.0
+        }
+      }
+    }
+  },
+  "distinct_tasks_failed_any": 1061,
+  "distinct_tasks_failed_all": 257,
+  "model_episode_failures": 1865,
+  "human_causal_labels": 0,
+  "ai_case_notes": 17
+}

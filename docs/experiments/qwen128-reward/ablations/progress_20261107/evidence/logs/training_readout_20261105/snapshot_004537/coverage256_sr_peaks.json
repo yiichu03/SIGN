@@ -1,0 +1,219 @@
+{
+  "recorded_at": "2026-11-05T01:06:00+08:00",
+  "reference": {
+    "step": 140716032,
+    "last1m_sr_pct": 89.18657700220743,
+    "date": "2026-11-03T22:06:48+08:00"
+  },
+  "phases": {
+    "original": {
+      "first_step": 2048,
+      "last_step": 115169280,
+      "native_peak": {
+        "end_step": 70006784,
+        "lower_exclusive": null,
+        "event_at": "2026-10-29T14:36:49+08:00",
+        "sr_pct": 94.8051929473877,
+        "spl_pct": 56.34664297103882,
+        "points": 1
+      },
+      "rolling_1m_peak": {
+        "end_step": 105910272,
+        "lower_exclusive": 104910272,
+        "event_at": "2026-10-30T18:01:04+08:00",
+        "sr_pct": 91.85349758417328,
+        "spl_pct": 53.559374504537914,
+        "points": 489
+      }
+    },
+    "continuation": {
+      "first_step": 125954048,
+      "last_step": 159807488,
+      "native_peak": {
+        "end_step": 125956096,
+        "lower_exclusive": null,
+        "event_at": "2026-11-03T01:46:28+08:00",
+        "sr_pct": 100.0,
+        "spl_pct": 53.71135473251343,
+        "points": 1
+      },
+      "rolling_1m_peak": {
+        "end_step": 143620096,
+        "lower_exclusive": 142620096,
+        "event_at": "2026-11-04T02:11:43+08:00",
+        "sr_pct": 91.17408185161209,
+        "spl_pct": 54.22202050076428,
+        "points": 489
+      },
+      "native_peak_after_reference": {
+        "end_step": 146759680,
+        "lower_exclusive": null,
+        "event_at": "2026-11-04T06:36:38+08:00",
+        "sr_pct": 94.8387086391449,
+        "spl_pct": 57.1794331073761,
+        "points": 1
+      },
+      "rolling_1m_peak_fully_after_reference": {
+        "end_step": 143620096,
+        "lower_exclusive": 142620096,
+        "event_at": "2026-11-04T02:11:43+08:00",
+        "sr_pct": 91.17408185161209,
+        "spl_pct": 54.22202050076428,
+        "points": 489
+      },
+      "successive_1m_bins_from_reference": [
+        {
+          "lower_exclusive": 140716032,
+          "upper_inclusive": 141716032,
+          "sr_pct": 90.55063055186974,
+          "spl_pct": 51.88639052822942,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 141716032,
+          "upper_inclusive": 142716032,
+          "sr_pct": 87.54773762871008,
+          "spl_pct": 50.04263945901003,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 142716032,
+          "upper_inclusive": 143716032,
+          "sr_pct": 91.06615377498454,
+          "spl_pct": 54.1227121700029,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 143716032,
+          "upper_inclusive": 144716032,
+          "sr_pct": 88.36689874194639,
+          "spl_pct": 51.52629206151319,
+          "points": 489
+        },
+        {
+          "lower_exclusive": 144716032,
+          "upper_inclusive": 145716032,
+          "sr_pct": 88.83460911571002,
+          "spl_pct": 50.757217675936026,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 145716032,
+          "upper_inclusive": 146716032,
+          "sr_pct": 89.54488092758616,
+          "spl_pct": 54.026180072153196,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 146716032,
+          "upper_inclusive": 147716032,
+          "sr_pct": 89.2743675313035,
+          "spl_pct": 52.286846593755186,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 147716032,
+          "upper_inclusive": 148716032,
+          "sr_pct": 89.67812728052978,
+          "spl_pct": 52.73370138219041,
+          "points": 489
+        },
+        {
+          "lower_exclusive": 148716032,
+          "upper_inclusive": 149716032,
+          "sr_pct": 88.00699202740778,
+          "spl_pct": 52.58203744277602,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 149716032,
+          "upper_inclusive": 150716032,
+          "sr_pct": 90.52370564370858,
+          "spl_pct": 53.429307984035525,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 150716032,
+          "upper_inclusive": 151716032,
+          "sr_pct": 88.70109684140648,
+          "spl_pct": 50.70511681658115,
+          "points": 489
+        },
+        {
+          "lower_exclusive": 151716032,
+          "upper_inclusive": 152716032,
+          "sr_pct": 88.18339490499653,
+          "spl_pct": 52.576780453568595,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 152716032,
+          "upper_inclusive": 153716032,
+          "sr_pct": 87.91894419271438,
+          "spl_pct": 52.15513371541852,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 153716032,
+          "upper_inclusive": 154716032,
+          "sr_pct": 88.74513111153587,
+          "spl_pct": 52.411437333851566,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 154716032,
+          "upper_inclusive": 155716032,
+          "sr_pct": 88.31866598080515,
+          "spl_pct": 51.43312201178147,
+          "points": 489
+        },
+        {
+          "lower_exclusive": 155716032,
+          "upper_inclusive": 156716032,
+          "sr_pct": 89.0317719002239,
+          "spl_pct": 51.62865099970435,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 156716032,
+          "upper_inclusive": 157716032,
+          "sr_pct": 88.47719512757708,
+          "spl_pct": 51.79065714483379,
+          "points": 488
+        },
+        {
+          "lower_exclusive": 157716032,
+          "upper_inclusive": 158716032,
+          "sr_pct": 88.22700544612783,
+          "spl_pct": 51.22373104095459,
+          "points": 489
+        },
+        {
+          "lower_exclusive": 158716032,
+          "upper_inclusive": 159716032,
+          "sr_pct": 87.96273708099224,
+          "spl_pct": 49.83667976177129,
+          "points": 488
+        }
+      ],
+      "best_nonoverlapping_1m_bin": {
+        "lower_exclusive": 142716032,
+        "upper_inclusive": 143716032,
+        "sr_pct": 91.06615377498454,
+        "spl_pct": 54.1227121700029,
+        "points": 488
+      }
+    }
+  },
+  "inputs": {
+    "original": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage256/selected_scalars.csv",
+      "sha256": "a40e4812d1a8c05a20a8a4c88ba17a563fd4a9ed4a619a93b9259cec782b9bb8"
+    },
+    "continuation": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_004537/coverage256/selected_scalars.csv",
+      "sha256": "2f8cdc1f27a7ac19b9b66a212e12004b602dd5a17f2199471d6f7ff2173c2811"
+    }
+  },
+  "scope_note": "Main finding covers the entire continuation after140716032 through159807488. Original-history CSV is only a previously published prefix through115169280, not a claim about the full original-run maximum. Continuation-start native100% is a warmup window and is not used as the post-reference peak."
+}

@@ -1,0 +1,13 @@
+{
+  "A": {
+    "cumulative_step": 8208384,
+    "scalar_series": 67,
+    "all_finite": true,
+    "worker_dtype": "torch.float32"
+  },
+  "C": {
+    "cumulative_step": 22552576,
+    "scalar_series": 56,
+    "all_finite": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "reviewed_at": "2026-11-05T14:06:33+08:00",
+  "job_id": "1520910.stdct-mgmt-02",
+  "job_state": "F",
+  "exit_status": 0,
+  "started": "Thu Nov  5 01:19:04 2026",
+  "finished": "Thu Nov  5 02:14:08 2026",
+  "walltime": "00:55:02",
+  "independent_recompute_4200_per_case": true,
+  "source_guard_passed": true,
+  "paired_tasks_goals_and_starts_passed": true,
+  "successes": {
+    "coverage256_peak": 3627.0,
+    "coverage256_previous": 3678.0,
+    "baseline": 3569.0
+  },
+  "paired_success_transitions": {
+    "coverage256_previous": {
+      "both_success": 3419,
+      "new_only_success": 208,
+      "reference_only_success": 259,
+      "both_fail": 314
+    },
+    "baseline": {
+      "both_success": 3360,
+      "new_only_success": 267,
+      "reference_only_success": 209,
+      "both_fail": 364
+    }
+  },
+  "delta_vs_previous_coverage256_pp": {
+    "success_rate": -1.2142857142857122,
+    "spl": 2.9358588846238542
+  },
+  "delta_vs_baseline_pp": {
+    "success_rate": 1.3809523809523827,
+    "spl": 1.841877706294348
+  },
+  "source_results": {
+    "coverage256_peak": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/coverage256/result.json",
+      "result_sha256": "bd46260ef47c35a2542a3dd846a243ec82da85c2e96079b8eddcec2084fc831c"
+    },
+    "coverage256_previous": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256/result.json",
+      "result_sha256": "fbaa820e205a998a04bc7ff44e919e993868ea1c1c829f761f06502e4e4d6334"
+    },
+    "baseline": {
+      "result_path": "/scratch/e1538633/liuyi/logs/gibson_baseline_final_eval_20261103/baseline/result.json",
+      "result_sha256": "5fe69bacf7f6db4bad3f8fd480042f7a62b5e50246e1df95b79a002b4f472314"
+    }
+  },
+  "note": "Different training steps; peak-adjacent saved checkpoint, not exact peak weights. No new GPU work or packaging."
+}

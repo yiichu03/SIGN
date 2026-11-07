@@ -1,0 +1,131 @@
+{
+  "reviewed_at": "2026-11-03T09:36:59+08:00",
+  "cases": {
+    "coverage256": {
+      "recomputed": {
+        "success_rate": 0.8757142857142857,
+        "spl": 0.5329960106555678,
+        "mean_collisions": 36.67857142857143,
+        "mean_episode_steps": 113.55928571428572,
+        "mean_new_area_m2": 11.699185714285713,
+        "new_m2_per_step_global": 0.10302271312027071,
+        "mean_episode_new_m2_per_step": 0.2090794808718626
+      },
+      "successes": 3678,
+      "rows": 4200,
+      "scenes": 14,
+      "episode_input_sha256": {
+        "logs/gibson_coverage_latest_eval_20261103/coverage256/episodes/worker_49623.jsonl": "f98df9d0e6d55c88f3c3587fed254d185be0c5a313b75e3c5bfd346c49d7ec59",
+        "logs/gibson_coverage_latest_eval_20261103/coverage256/episodes/worker_49624.jsonl": "e9909c47c36dc8a1bf0b2d14709e120b36917d5d71c4d3b8261468d19b2cbac7",
+        "logs/gibson_coverage_latest_eval_20261103/coverage256/episodes/worker_49625.jsonl": "303a5aebe8a56f202c524069f3fa592d9c7f913734237464e75f27714d1ce3bb",
+        "logs/gibson_coverage_latest_eval_20261103/coverage256/episodes/worker_49626.jsonl": "8d018e43c04c0ce96ae0329361f6d39dda5111debc42ba145637c8b0c5a6dd83",
+        "logs/gibson_coverage_latest_eval_20261103/coverage256/episodes/worker_49627.jsonl": "0ea47e3e270dcdfef727fc5c4381c64380543de36d5ed7cce9b09fa43960c8cd",
+        "logs/gibson_coverage_latest_eval_20261103/coverage256/episodes/worker_49628.jsonl": "742a7b6f244b0537ba8bab017b9752a2d9b61d42d29d10749b11380253441e91"
+      },
+      "result_sha256": "fbaa820e205a998a04bc7ff44e919e993868ea1c1c829f761f06502e4e4d6334"
+    },
+    "coverage32": {
+      "recomputed": {
+        "success_rate": 0.8304761904761905,
+        "spl": 0.5190412636450003,
+        "mean_collisions": 43.444761904761904,
+        "mean_episode_steps": 134.72380952380954,
+        "mean_new_area_m2": 11.561921428571422,
+        "new_m2_per_step_global": 0.08581943658984867,
+        "mean_episode_new_m2_per_step": 0.19746112648383088
+      },
+      "successes": 3488,
+      "rows": 4200,
+      "scenes": 14,
+      "episode_input_sha256": {
+        "logs/gibson_coverage_latest_eval_20261103/coverage32/episodes/worker_129427.jsonl": "4174ff87eee732d034b229c1adcdfcd7a67316ceae8a0fc8379b34ddb0efa850",
+        "logs/gibson_coverage_latest_eval_20261103/coverage32/episodes/worker_129428.jsonl": "c26a57c81fab73c1cb857fd78817dd08a9fc6dda7e1558941d056af5ceb9558c",
+        "logs/gibson_coverage_latest_eval_20261103/coverage32/episodes/worker_129429.jsonl": "79eb5d503a9d0d5848e899ac3348b8a410c672acb65148dc00bea86c7c93010a",
+        "logs/gibson_coverage_latest_eval_20261103/coverage32/episodes/worker_129430.jsonl": "54bd7d83145b7472524d1b0d7f346d16a7110ff0d20d22c62cca5e14d9a38b43",
+        "logs/gibson_coverage_latest_eval_20261103/coverage32/episodes/worker_129431.jsonl": "3f5c49ad9151a792ff324d3f444edf80003c5f183d1249a6f0b977c02c57fcd2",
+        "logs/gibson_coverage_latest_eval_20261103/coverage32/episodes/worker_129432.jsonl": "9eaaca121b3a12b85b516a6c9f13db6f1aed4d0c2bf05047397b41fe17760c09"
+      },
+      "result_sha256": "b12b98cb706f810b4bf1d1ccc689b3fb00782048af8019dc401161203b4252dc"
+    }
+  },
+  "previous_18944000_self_differences": {
+    "coverage256": {
+      "sr_change_pp": 8.476190476190471,
+      "spl_change_pp": 1.31766559391151,
+      "global_efficiency_relative_change": 0.3447331216393048
+    },
+    "coverage32": {
+      "sr_change_pp": 1.0238095238095268,
+      "spl_change_pp": 0.15075625046764296,
+      "global_efficiency_relative_change": 0.03751741818929366
+    }
+  },
+  "jobs": {
+    "1511395.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "Hold_Types": "n",
+      "comment": "Job run at Tue Nov 03 at 02:28 on (GN-A40-097[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "stime": "Tue Nov  3 02:28:21 2026",
+      "mtime": "Tue Nov  3 03:23:43 2026",
+      "walltime_used": "00:55:21"
+    },
+    "1511396.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "Hold_Types": "n",
+      "comment": "Job run at Tue Nov 03 at 03:23 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "stime": "Tue Nov  3 03:23:44 2026",
+      "mtime": "Tue Nov  3 03:51:13 2026",
+      "walltime_used": "00:27:27"
+    },
+    "1511409.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "Hold_Types": "n",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (CN-016[0]:ncpus=1:mem=6gb) and finished",
+      "stime": "Tue Nov  3 03:51:15 2026",
+      "mtime": "Tue Nov  3 03:51:31 2026",
+      "walltime_used": "00:00:08"
+    },
+    "1511410.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "Hold_Types": "n",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "stime": "Tue Nov  3 03:51:14 2026",
+      "mtime": "Tue Nov  3 09:36:45 2026",
+      "walltime_used": "05:45:28"
+    },
+    "1511411.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "Hold_Types": "n",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (CN-016[0]:ncpus=1:mem=6gb) and finished",
+      "stime": "Tue Nov  3 03:51:22 2026",
+      "mtime": "Tue Nov  3 03:51:32 2026",
+      "walltime_used": "00:00:10"
+    },
+    "1511147.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "Hold_Types": "n",
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "stime": null,
+      "mtime": "Tue Nov  3 03:51:30 2026",
+      "walltime_used": null
+    },
+    "1511148.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "Hold_Types": "n",
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "stime": null,
+      "mtime": "Tue Nov  3 03:51:30 2026",
+      "walltime_used": null
+    }
+  },
+  "paired_inputs_verified": true,
+  "all_recomputed_metrics_match": true,
+  "training_budgets_differ": true
+}

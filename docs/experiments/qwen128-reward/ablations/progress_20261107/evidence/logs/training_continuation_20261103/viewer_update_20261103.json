@@ -1,0 +1,32 @@
+{
+  "runs": [
+    [
+      "coverage256",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/tb"
+    ],
+    [
+      "coverage32",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/tb"
+    ],
+    [
+      "qwen128_beta01",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/tb"
+    ],
+    [
+      "A_qwen128_beta003",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/tb"
+    ],
+    [
+      "B_qwen256_beta003",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/tb"
+    ],
+    [
+      "C_geometry128",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/tb"
+    ]
+  ],
+  "recommended_remote_port": 6009,
+  "local_port": 16009,
+  "syntax_and_active_paths_passed": true,
+  "service_started_by_this_update": false
+}

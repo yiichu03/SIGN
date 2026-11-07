@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "case": "coverage32",
+  "start_step": 48128000,
+  "end_step": 48132096,
+  "added_steps": 4096,
+  "encoder_unchanged_items": 42,
+  "all_model_and_scalars_finite": true,
+  "initial_model_exactly_restored": true,
+  "original_hyperparameters_preserved": true,
+  "optimizer_state_saved": true,
+  "qc_optimizer_state_entries": 10,
+  "global_300m_cap_preserved": true,
+  "config_differences": {
+    "training_continuation.stop_after_steps": [
+      null,
+      4096
+    ],
+    "habitat_baselines.cmd_trailing_opts": [
+      [
+        "habitat_baselines.num_environments",
+        "8",
+        "habitat_baselines.rl.ppo.num_steps",
+        "256",
+        "habitat_baselines.rl.ddppo.pretrained_encoder",
+        "True",
+        "habitat_baselines.rl.ddppo.pretrained_weights",
+        "ckpt/nav_model.pth",
+        "habitat_baselines.rl.ddppo.train_encoder",
+        "False",
+        "habitat_baselines.num_checkpoints",
+        "-1",
+        "habitat_baselines.checkpoint_interval",
+        "250",
+        "habitat_baselines.log_interval",
+        "10",
+        "habitat.task.observed_coverage.settlement_interval",
+        "32"
+      ],
+      [
+        "habitat_baselines.num_environments",
+        "8",
+        "habitat_baselines.rl.ppo.num_steps",
+        "256",
+        "habitat_baselines.rl.ddppo.pretrained_encoder",
+        "True",
+        "habitat_baselines.rl.ddppo.pretrained_weights",
+        "ckpt/nav_model.pth",
+        "habitat_baselines.rl.ddppo.train_encoder",
+        "False",
+        "habitat_baselines.num_checkpoints",
+        "-1",
+        "habitat_baselines.checkpoint_interval",
+        "2",
+        "habitat_baselines.log_interval",
+        "1",
+        "training_continuation.checkpoint",
+        "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts/ckpt.93.pth",
+        "training_continuation.sha256",
+        "1ae1ad338a6f40d0bc0325f64e1dfa9bc12ae2de6da47778b440bcc55593471e",
+        "training_continuation.stop_after_steps",
+        "4096",
+        "habitat.task.observed_coverage.settlement_interval",
+        "32"
+      ]
+    ],
+    "habitat_baselines.log_interval": [
+      10,
+      1
+    ],
+    "habitat_baselines.eval_ckpt_path_dir": [
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/short/ckpts"
+    ],
+    "training_continuation.allow_legacy_weights": [
+      null,
+      true
+    ],
+    "training_continuation.checkpoint": [
+      null,
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts/ckpt.93.pth"
+    ],
+    "habitat_baselines.checkpoint_folder": [
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/short/ckpts"
+    ],
+    "habitat_baselines.video_dir": [
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/video",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/short/video"
+    ],
+    "habitat_baselines.log_file": [
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/train_run0_/log.txt",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/short/train_run0_/log.txt"
+    ],
+    "habitat_baselines.tensorboard_dir": [
+      "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/tb",
+      "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/short/tb"
+    ],
+    "habitat_baselines.checkpoint_interval": [
+      250,
+      2
+    ],
+    "training_continuation.sha256": [
+      null,
+      "1ae1ad338a6f40d0bc0325f64e1dfa9bc12ae2de6da47778b440bcc55593471e"
+    ]
+  },
+  "reward_audit": {
+    "coverage_bonus_conservation": true
+  },
+  "latest": {
+    "metrics/success": 0.875,
+    "metrics/spl": 0.39716196060180664,
+    "learner/value_loss": 0.44565287232398987
+  }
+}

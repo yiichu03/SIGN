@@ -1,0 +1,895 @@
+{
+  "captured_at": "2026-11-07T13:58:35+08:00",
+  "jobs": {
+    "1511143.stdct-mgmt-02": {
+      "Job_Name": "cont-A",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": null,
+      "resources_used": {
+        "cpupercent": 205,
+        "cput": "154:27:33",
+        "gpu_usage": "GN-A40-045(cuda.0.energyConsumed=15810J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25920.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=31%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=37006.203s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=390169s, cuda.0.usagePerc=46.997%, cuda.0.memUsagePerc=32.135%)",
+        "mem": "11989944kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "105925772kb",
+        "walltime": "108:23:09"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459274, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:34"
+      },
+      "stime": "Tue Nov  3 01:34:41 2026",
+      "obittime": null
+    },
+    "1511145.stdct-mgmt-02": {
+      "Job_Name": "cont-qwen01",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": null,
+      "resources_used": {
+        "cpupercent": 227,
+        "cput": "166:12:11",
+        "gpu_usage": "GN-A40-030(cuda.0.energyConsumed=11878J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25920.547MB, cuda.0.memoryClock_min=0MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=21%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=21731.505s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=389814s, cuda.0.usagePerc=30.995%, cuda.0.memUsagePerc=32.135%)",
+        "mem": "12003748kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "106315048kb",
+        "walltime": "108:17:47"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 451801, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "125:30:01"
+      },
+      "stime": "Tue Nov  3 01:40:35 2026",
+      "obittime": null
+    },
+    "1511146.stdct-mgmt-02": {
+      "Job_Name": "cont-cov256",
+      "job_state": "F",
+      "Exit_status": "-29",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-099[0]:ncpus=36:mem=240gb:ngpus=1) and exceeded resource walltime",
+      "depend": null,
+      "resources_used": {
+        "cpupercent": 282,
+        "cput": "167:18:13",
+        "gpu_usage": "GN-A40-099(cuda.0.energyConsumed=8156J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15278.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=5%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=244906s, cuda.0.usagePerc=11.992%, cuda.0.memUsagePerc=9.034%)",
+        "mem": "9346760kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "80800996kb",
+        "walltime": "68:04:22"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 245002, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "68:03:22"
+      },
+      "stime": "Tue Nov  3 01:40:47 2026",
+      "obittime": "Thu Nov  5 21:45:20 2026"
+    },
+    "1511147.stdct-mgmt-02": {
+      "Job_Name": "cont-cov32",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-035[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": null,
+      "resources_used": {
+        "cpupercent": 300,
+        "cput": "218:57:27",
+        "gpu_usage": "GN-A40-035(cuda.1.energyConsumed=10110J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=15352.547MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=94%, cuda.1.memoryUtilization_avg=12%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=310410s, cuda.1.usagePerc=30.996%, cuda.1.memUsagePerc=9.195%)",
+        "mem": "9387664kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81208772kb",
+        "walltime": "86:14:04"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 358094, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "99:28:14"
+      },
+      "stime": "Tue Nov  3 23:43:25 2026",
+      "obittime": null
+    },
+    "1511148.stdct-mgmt-02": {
+      "Job_Name": "cont-B",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-020[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": null,
+      "resources_used": {
+        "cpupercent": 202,
+        "cput": "127:28:06",
+        "gpu_usage": "GN-A40-020(cuda.0.energyConsumed=14531J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25618.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=23%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=30030.033s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=310439s, cuda.0.usagePerc=39.998%, cuda.0.memUsagePerc=31.480%)",
+        "mem": "11797372kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "105430344kb",
+        "walltime": "86:14:16"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459272, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:32"
+      },
+      "stime": "Tue Nov  3 23:43:36 2026",
+      "obittime": null
+    },
+    "1511410.stdct-mgmt-02": {
+      "Job_Name": "cont-C-posteval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": null,
+      "resources_used": {
+        "cpupercent": 225,
+        "cput": "209:38:06",
+        "gpu_usage": "GN-A40-021(cuda.0.energyConsumed=8272J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=6%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=381998s, cuda.0.usagePerc=13.999%, cuda.0.memUsagePerc=9.195%)",
+        "mem": "9673960kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81549688kb",
+        "walltime": "106:06:52"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 456073, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "126:41:13"
+      },
+      "stime": "Tue Nov  3 03:51:14 2026",
+      "obittime": null
+    },
+    "1528937.stdct-mgmt-02": {
+      "Job_Name": "qwenA-bestval",
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-034[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": {
+        "cpupercent": 225,
+        "cput": "00:55:37",
+        "gpu_usage": "GN-A40-034(cuda.1.energyConsumed=8317J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=5%, cuda.1.memoryUtilization_avg=1%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=1560s, cuda.1.usagePerc=14.364%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "6762876kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "59823784kb",
+        "walltime": "00:28:56"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:31 2026",
+      "obittime": "Sat Nov  7 13:49:30 2026"
+    },
+    "1528938.stdct-mgmt-02": {
+      "Job_Name": "qwen01-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-037[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": {
+        "cpupercent": 239,
+        "cput": "01:22:46",
+        "gpu_usage": "GN-A40-037(cuda.1.energyConsumed=7781J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7175.602MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=5%, cuda.1.memoryUtilization_avg=1%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=2137s, cuda.1.usagePerc=9.794%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "6006408kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "58637192kb",
+        "walltime": "00:36:20"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:36 2026",
+      "obittime": null
+    },
+    "1528939.stdct-mgmt-02": {
+      "Job_Name": "qwenB-bestval",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:20 on (GN-A40-039[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": "beforeok:1528940.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": {
+        "cpupercent": 234,
+        "cput": "01:22:11",
+        "gpu_usage": "GN-A40-039(cuda.1.energyConsumed=7959J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7175.602MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=3%, cuda.1.memoryUtilization_avg=1%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=2145s, cuda.1.usagePerc=10.864%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "5210584kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "58379416kb",
+        "walltime": "00:36:11"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:20:36 2026",
+      "obittime": null
+    },
+    "1528940.stdct-mgmt-02": {
+      "Job_Name": "qwen-val-summary",
+      "job_state": "H",
+      "Exit_status": null,
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "depend": "afterok:1528938.stdct-mgmt-02@stdct-mgmt-02:1528939.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": null,
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": null,
+      "obittime": null
+    },
+    "1528994.stdct-mgmt-02": {
+      "Job_Name": "cov32-125952",
+      "job_state": "R",
+      "Exit_status": null,
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "comment": "Job run at Sat Nov 07 at 13:49 on (GN-A40-029[1]:ncpus=36:mem=240gb:ngpus=1)",
+      "depend": "beforeok:1528997.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": {
+        "cpupercent": 173,
+        "cput": "00:16:49",
+        "gpu_usage": "GN-A40-029(cuda.1.energyConsumed=8446J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7042.613MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=5%, cuda.1.memoryUtilization_avg=3%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=473s, cuda.1.usagePerc=19.403%, cuda.1.memUsagePerc=1.680%)",
+        "mem": "5139580kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "58423264kb",
+        "walltime": "00:08:30"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Sat Nov  7 13:49:31 2026",
+      "obittime": null
+    },
+    "1528995.stdct-mgmt-02": {
+      "Job_Name": "cov32-76288",
+      "job_state": "Q",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Not Running: User has reached queue batch_gpu running job limit.",
+      "depend": "beforeok:1528997.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": null,
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null,
+      "obittime": null
+    },
+    "1528996.stdct-mgmt-02": {
+      "Job_Name": "cov32-151040",
+      "job_state": "Q",
+      "Exit_status": null,
+      "queue": "batch_gpu",
+      "project": "CFP04-SF-109",
+      "comment": "Not Running: User has reached queue batch_gpu running job limit.",
+      "depend": "beforeok:1528997.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": null,
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": null,
+      "obittime": null
+    },
+    "1528997.stdct-mgmt-02": {
+      "Job_Name": "cov32-val-summary",
+      "job_state": "H",
+      "Exit_status": null,
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "comment": null,
+      "depend": "afterok:1528994.stdct-mgmt-02@stdct-mgmt-02:1528995.stdct-mgmt-02@stdct-mgmt-02:1528996.stdct-mgmt-02@stdct-mgmt-02",
+      "resources_used": null,
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": null,
+      "obittime": null
+    }
+  },
+  "families": {
+    "qwen_three_checkpoint_eval_20261107": {
+      "cases": {
+        "qwen01": {
+          "step": 20480000,
+          "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.22.pth",
+          "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/qwen01_20480000.pth",
+          "sha256": "538465a99a055367be899c441c46eeed7eb61be99a236d891881056323329c37",
+          "bytes": 10696837,
+          "selection_reason": "High-state neighborhood around the earlier20M recovery; pre/post250k SR90.17/88.10. The highest trailing1M point20.992M has already fallen to nativeSR81.51 and is not selected.",
+          "training_last1m": {
+            "lower_exclusive": 19480000,
+            "upper_inclusive": 20480000,
+            "points": 489,
+            "sr": 87.23571557696368,
+            "spl": 48.92360768557082
+          },
+          "training_last3m": {
+            "lower_exclusive": 17480000,
+            "upper_inclusive": 20480000,
+            "points": 1465,
+            "sr": 85.86504768186055,
+            "spl": 48.53787944381961
+          },
+          "training_native_at_checkpoint": {
+            "step": 20480000,
+            "sr": 89.79430198669434,
+            "spl": 50.456178188323975
+          },
+          "training_pre250k": {
+            "lower_exclusive": 20230000,
+            "upper_inclusive": 20480000,
+            "points": 123,
+            "sr": 90.16604268453955,
+            "spl": 50.93258716226593
+          },
+          "training_post250k": {
+            "lower_exclusive": 20480000,
+            "upper_inclusive": 20730000,
+            "points": 122,
+            "sr": 88.10013664550469,
+            "spl": 52.082823729905925
+          },
+          "selection_uses_training_only": true
+        },
+        "A": {
+          "step": 36352000,
+          "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/ckpts/ckpt.54.pth",
+          "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/A_36352000.pth",
+          "sha256": "ac4981a91b2f29b2b64bb7e4729b88bc5b2507bcdba15d6326af5dd130a9641f",
+          "bytes": 10696837,
+          "selection_reason": "Latest saved high state during the recent recovery, highest trailing1M SPL among this run candidates; SR88.26/SPL52.66 and pre250k91.24/55.44. Full post250k unavailable, explicitly not claimed.",
+          "training_last1m": {
+            "lower_exclusive": 35352000,
+            "upper_inclusive": 36352000,
+            "points": 489,
+            "sr": 88.25882929234416,
+            "spl": 52.656195433105665
+          },
+          "training_last3m": {
+            "lower_exclusive": 33352000,
+            "upper_inclusive": 36352000,
+            "points": 1465,
+            "sr": 86.4567854908953,
+            "spl": 50.749099539408505
+          },
+          "training_native_at_checkpoint": {
+            "step": 36352000,
+            "sr": 89.75988626480103,
+            "spl": 53.40679883956909
+          },
+          "training_pre250k": {
+            "lower_exclusive": 36102000,
+            "upper_inclusive": 36352000,
+            "points": 123,
+            "sr": 91.23627078242419,
+            "spl": 55.43845557584996
+          },
+          "training_post250k": null,
+          "selection_uses_training_only": true
+        },
+        "B": {
+          "step": 29696000,
+          "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/ckpts/ckpt.40.pth",
+          "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/B_29696000.pth",
+          "sha256": "fd441190fc2a917a130b08bc96e3addf6b20ef34067dd25316431b76b495f814",
+          "bytes": 10696837,
+          "selection_reason": "Balanced SR/SPL plateau with strongest trailing3M SR among saved candidates, pre/post250k SR89.33/88.02 and SPL52.30/52.59; avoids the later declining state.",
+          "training_last1m": {
+            "lower_exclusive": 28696000,
+            "upper_inclusive": 29696000,
+            "points": 489,
+            "sr": 88.42622446380022,
+            "spl": 51.47397551677953
+          },
+          "training_last3m": {
+            "lower_exclusive": 26696000,
+            "upper_inclusive": 29696000,
+            "points": 1465,
+            "sr": 88.32468939722602,
+            "spl": 49.939601317607504
+          },
+          "training_native_at_checkpoint": {
+            "step": 29696000,
+            "sr": 87.43961453437805,
+            "spl": 51.48068070411682
+          },
+          "training_pre250k": {
+            "lower_exclusive": 29446000,
+            "upper_inclusive": 29696000,
+            "points": 123,
+            "sr": 89.32584611380973,
+            "spl": 52.295096812209465
+          },
+          "training_post250k": {
+            "lower_exclusive": 29696000,
+            "upper_inclusive": 29946000,
+            "points": 122,
+            "sr": 88.02340568089095,
+            "spl": 52.591800591984736
+          },
+          "selection_uses_training_only": true
+        }
+      },
+      "gpu_jobs": [
+        {
+          "case": "A",
+          "step": 36352000,
+          "queue_requested": "autox",
+          "submitted_at": "2026-11-07T13:20:30+08:00",
+          "command": [
+            "qsub",
+            "-q",
+            "autox",
+            "-N",
+            "qwenA-bestval",
+            "-v",
+            "EVAL_CASE=A",
+            "-o",
+            "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/A/evaluate.pbs.log",
+            "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/evaluate.pbs"
+          ],
+          "returncode": 0,
+          "stdout": "1528937.stdct-mgmt-02\n",
+          "stderr": "",
+          "job_id": "1528937.stdct-mgmt-02",
+          "complete": true,
+          "state": "F",
+          "result": {
+            "case": "A",
+            "training_step": 36352000,
+            "episodes": 4200,
+            "scenes": 14,
+            "success_rate": 0.8238095238095238,
+            "spl": 0.5297486452114254,
+            "mean_collisions": 51.806666666666665,
+            "mean_episode_steps": 134.6157142857143,
+            "mean_new_area_m2": 11.592950000000004,
+            "new_m2_per_step_global": 0.08611884623956029,
+            "mean_episode_new_m2_per_step": 0.20098596691635515,
+            "native_metrics": {
+              "eval_reward/average_reward": 6.197476387023926,
+              "eval_metrics/distance_to_goal": 1.2753629684448242,
+              "eval_metrics/success": 0.8238095045089722,
+              "eval_metrics/spl": 0.5297486186027527,
+              "eval_metrics/soft_spl": 0.48830658197402954,
+              "eval_metrics/distance_to_view": 1.92031729221344,
+              "eval_metrics/view_match": 0.8111904859542847,
+              "eval_metrics/view_angle": 37.25338363647461,
+              "eval_metrics/collisions.count": 51.80666732788086,
+              "eval_metrics/observed_coverage.delta_m2": 0.0011238094884902239,
+              "eval_metrics/observed_coverage.new_area_m2": 11.592949867248535,
+              "eval_metrics/coverage_eval.steps": 134.61570739746094,
+              "eval_metrics/coverage_eval.new_area_m2": 11.592949867248535,
+              "eval_metrics/coverage_eval.new_m2_per_step": 0.20098596811294556
+            },
+            "seconds": 1555.6154084205627,
+            "qwen_enabled": false,
+            "qwen_trajectory_collection": false,
+            "protocol": "Original deterministic 4200 Gibson val /6 env/max500/seed100/hash0; passive 0.1m/3m/90deg coverage, weight0"
+          }
+        },
+        {
+          "case": "qwen01",
+          "step": 20480000,
+          "queue_requested": "auto",
+          "submitted_at": "2026-11-07T13:20:31+08:00",
+          "command": [
+            "qsub",
+            "-q",
+            "auto",
+            "-N",
+            "qwen01-bestval",
+            "-v",
+            "EVAL_CASE=qwen01",
+            "-o",
+            "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/qwen01/evaluate.pbs.log",
+            "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/evaluate.pbs"
+          ],
+          "returncode": 0,
+          "stdout": "1528938.stdct-mgmt-02\n",
+          "stderr": "",
+          "job_id": "1528938.stdct-mgmt-02",
+          "complete": false,
+          "state": "R"
+        },
+        {
+          "case": "B",
+          "step": 29696000,
+          "queue_requested": "auto",
+          "submitted_at": "2026-11-07T13:20:31+08:00",
+          "command": [
+            "qsub",
+            "-q",
+            "auto",
+            "-N",
+            "qwenB-bestval",
+            "-v",
+            "EVAL_CASE=B",
+            "-o",
+            "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/B/evaluate.pbs.log",
+            "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/evaluate.pbs"
+          ],
+          "returncode": 0,
+          "stdout": "1528939.stdct-mgmt-02\n",
+          "stderr": "",
+          "job_id": "1528939.stdct-mgmt-02",
+          "complete": false,
+          "state": "R"
+        }
+      ],
+      "summary_job": {
+        "submitted_at": "2026-11-07T13:20:31+08:00",
+        "command": [
+          "qsub",
+          "-W",
+          "depend=afterok:1528937.stdct-mgmt-02:1528938.stdct-mgmt-02:1528939.stdct-mgmt-02",
+          "-o",
+          "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/summarize.pbs.log",
+          "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/summarize.pbs"
+        ],
+        "returncode": 0,
+        "stdout": "1528940.stdct-mgmt-02\n",
+        "stderr": "",
+        "job_id": "1528940.stdct-mgmt-02"
+      },
+      "summary_complete": false
+    },
+    "gibson_coverage32_selected_eval_20261107": {
+      "cases": {
+        "coverage32_76288000": {
+          "step": 76288000,
+          "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/ckpts/ckpt.54.pth",
+          "path": "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/checkpoints/coverage32_76288000.pth",
+          "sha256": "e6a36564d1ee5bbbc690131a0463482f94776be533c57c29bbca82e17bb78035",
+          "bytes": 10696837,
+          "checkpoint_index": 54,
+          "selection_reason": "Earlier high SR/SPL interval with native90.15/53.23, pre/post250k SR90.92/89.31 and SPL55.30/51.70; distinct from125M and151M.",
+          "training_last1m": {
+            "lower_exclusive": 75288000,
+            "upper_inclusive": 76288000,
+            "points": 489,
+            "sr": 88.948122660319,
+            "spl": 52.65956792241469
+          },
+          "training_last3m": {
+            "lower_exclusive": 73288000,
+            "upper_inclusive": 76288000,
+            "points": 1465,
+            "sr": 88.04992055323343,
+            "spl": 50.93915927939041
+          },
+          "training_native_at_checkpoint": {
+            "step": 76288000,
+            "sr": 90.15302658081055,
+            "spl": 53.22558283805847
+          },
+          "training_pre250k": {
+            "lower_exclusive": 76038000,
+            "upper_inclusive": 76288000,
+            "points": 123,
+            "sr": 90.91600102137744,
+            "spl": 55.30254874772172
+          },
+          "training_post250k": {
+            "lower_exclusive": 76288000,
+            "upper_inclusive": 76538000,
+            "points": 122,
+            "sr": 89.3057323381549,
+            "spl": 51.69523646597003
+          }
+        },
+        "coverage32_125952000": {
+          "step": 125952000,
+          "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/ckpts/ckpt.151.pth",
+          "path": "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/checkpoints/coverage32_125952000.pth",
+          "sha256": "df6fa637117a45b5822c3dd6394735175705f647df82d975fd291e3a692ccbfa",
+          "bytes": 10697509,
+          "checkpoint_index": 151,
+          "selection_reason": "Fixed same-step reference against the already evaluated coverage256125.952M, not selected as a training peak. Last3M SR89.02/SPL51.82. Different continuation reset histories remain a confound.",
+          "training_last1m": {
+            "lower_exclusive": 124952000,
+            "upper_inclusive": 125952000,
+            "points": 489,
+            "sr": 88.13685532240292,
+            "spl": 51.89082172141241
+          },
+          "training_last3m": {
+            "lower_exclusive": 122952000,
+            "upper_inclusive": 125952000,
+            "points": 1465,
+            "sr": 89.02403352610487,
+            "spl": 51.821547059068905
+          },
+          "training_native_at_checkpoint": {
+            "step": 125952000,
+            "sr": 85.35469174385071,
+            "spl": 47.37437963485718
+          },
+          "training_pre250k": {
+            "lower_exclusive": 125702000,
+            "upper_inclusive": 125952000,
+            "points": 123,
+            "sr": 86.05391184488931,
+            "spl": 50.297744996179404
+          },
+          "training_post250k": {
+            "lower_exclusive": 125952000,
+            "upper_inclusive": 126202000,
+            "points": 122,
+            "sr": 86.35424551416617,
+            "spl": 48.42518731707432
+          }
+        },
+        "coverage32_151040000": {
+          "step": 151040000,
+          "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/ckpts/ckpt.200.pth",
+          "path": "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/checkpoints/coverage32_151040000.pth",
+          "sha256": "326a632eabd4dc42a85046027f1437bb75657e8f57219d1fa84b127a44fc6946",
+          "bytes": 10697509,
+          "checkpoint_index": 200,
+          "selection_reason": "Mature high SR/SPL interval: last1M90.13/53.71, native91.19/53.63, pre/post250k89.77/90.02 and SPL54.23/53.37; latest158.720M has already dropped locally and is not selected.",
+          "training_last1m": {
+            "lower_exclusive": 150040000,
+            "upper_inclusive": 151040000,
+            "points": 489,
+            "sr": 90.12531803917055,
+            "spl": 53.71481247231029
+          },
+          "training_last3m": {
+            "lower_exclusive": 148040000,
+            "upper_inclusive": 151040000,
+            "points": 1465,
+            "sr": 89.17771487919543,
+            "spl": 52.33124602166459
+          },
+          "training_native_at_checkpoint": {
+            "step": 151040000,
+            "sr": 91.18599891662598,
+            "spl": 53.63030433654785
+          },
+          "training_pre250k": {
+            "lower_exclusive": 150790000,
+            "upper_inclusive": 151040000,
+            "points": 123,
+            "sr": 89.7652216558534,
+            "spl": 54.2294244940688
+          },
+          "training_post250k": {
+            "lower_exclusive": 151040000,
+            "upper_inclusive": 151290000,
+            "points": 122,
+            "sr": 90.01780294004034,
+            "spl": 53.367395918877406
+          }
+        }
+      },
+      "gpu_jobs": [
+        {
+          "case": "coverage32_125952000",
+          "step": 125952000,
+          "requested_queue": "autox",
+          "submitted_at": "2026-11-07T13:42:09+08:00",
+          "command": [
+            "qsub",
+            "-q",
+            "autox",
+            "-N",
+            "cov32-125952",
+            "-v",
+            "EVAL_CASE=coverage32_125952000",
+            "-o",
+            "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/coverage32_125952000/evaluate.pbs.log",
+            "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/evaluate.pbs"
+          ],
+          "returncode": 0,
+          "stdout": "1528994.stdct-mgmt-02\n",
+          "stderr": "",
+          "job_id": "1528994.stdct-mgmt-02",
+          "complete": false,
+          "state": "R"
+        },
+        {
+          "case": "coverage32_76288000",
+          "step": 76288000,
+          "requested_queue": "auto",
+          "submitted_at": "2026-11-07T13:42:09+08:00",
+          "command": [
+            "qsub",
+            "-q",
+            "auto",
+            "-N",
+            "cov32-76288",
+            "-v",
+            "EVAL_CASE=coverage32_76288000",
+            "-o",
+            "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/coverage32_76288000/evaluate.pbs.log",
+            "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/evaluate.pbs"
+          ],
+          "returncode": 0,
+          "stdout": "1528995.stdct-mgmt-02\n",
+          "stderr": "",
+          "job_id": "1528995.stdct-mgmt-02",
+          "complete": false,
+          "state": "Q"
+        },
+        {
+          "case": "coverage32_151040000",
+          "step": 151040000,
+          "requested_queue": "auto",
+          "submitted_at": "2026-11-07T13:42:09+08:00",
+          "command": [
+            "qsub",
+            "-q",
+            "auto",
+            "-N",
+            "cov32-151040",
+            "-v",
+            "EVAL_CASE=coverage32_151040000",
+            "-o",
+            "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/coverage32_151040000/evaluate.pbs.log",
+            "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/evaluate.pbs"
+          ],
+          "returncode": 0,
+          "stdout": "1528996.stdct-mgmt-02\n",
+          "stderr": "",
+          "job_id": "1528996.stdct-mgmt-02",
+          "complete": false,
+          "state": "Q"
+        }
+      ],
+      "summary_job": {
+        "submitted_at": "2026-11-07T13:42:09+08:00",
+        "command": [
+          "qsub",
+          "-W",
+          "depend=afterok:1528994.stdct-mgmt-02:1528995.stdct-mgmt-02:1528996.stdct-mgmt-02",
+          "-o",
+          "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/summarize.pbs.log",
+          "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/summarize.pbs"
+        ],
+        "returncode": 0,
+        "stdout": "1528997.stdct-mgmt-02\n",
+        "stderr": "",
+        "job_id": "1528997.stdct-mgmt-02"
+      },
+      "summary_complete": false
+    }
+  },
+  "code_branches_verified_on_origin": {
+    "phase2/continue-coverage256-20261103": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+    "phase2/continue-coverage32-20261103": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+    "phase2/continue-qwen-ablation-20261103": "1256ca70497592d2df178e6f77d10c14380689d8",
+    "phase2/continue-qwen128-beta01-20261103": "bb59545f0c5663163e17cfe1dea37c441f09ccd2"
+  },
+  "runtime_source_guard_passed": true,
+  "publication_base": "333b2aeb0903515c97a5b8a416bb3025a34518c3",
+  "publication_branch": "phase2/qwen-beta003-geometry128"
+}

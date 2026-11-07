@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-04T13:08:20+08:00",
+  "job_id": "1518125.stdct-mgmt-02",
+  "state": {
+    "job_state": "R",
+    "Exit_status": null,
+    "comment": "Job run at Wed Nov 04 at 13:07 on (GN-A40-025[0]:ncpus=36:mem=240gb:ngpus=1)",
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1800, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+      "mem": "240gb",
+      "ncpus": 36,
+      "ngpus": 1,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+      "walltime": "00:30:00"
+    },
+    "resources_used": {
+      "cpupercent": 19,
+      "cput": "00:00:30",
+      "gpu_usage": "GN-A40-025(cuda.0.energyConsumed=316J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=6623.113MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=3828MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=4%, cuda.0.memoryUtilization_avg=2%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=2558.100s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=12s, cuda.0.usagePerc=15.645%, cuda.0.memUsagePerc=0.786%)",
+      "mem": "2740036kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "54107036kb",
+      "walltime": "00:00:39"
+    },
+    "stime": "Wed Nov  4 13:07:17 2026"
+  }
+}

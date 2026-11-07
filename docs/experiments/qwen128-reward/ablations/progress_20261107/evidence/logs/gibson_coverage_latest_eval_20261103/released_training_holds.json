@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-03T03:51:30+08:00",
+  "jobs": {
+    "1511147.stdct-mgmt-02": {
+      "temporary_user_hold_released": true
+    },
+    "1511148.stdct-mgmt-02": {
+      "temporary_user_hold_released": true
+    }
+  }
+}

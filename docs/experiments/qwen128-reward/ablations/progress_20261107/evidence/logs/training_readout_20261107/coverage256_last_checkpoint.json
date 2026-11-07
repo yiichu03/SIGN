@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-07T13:06:17+08:00",
+  "file": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.90.pth",
+  "extra_state": {
+    "step": 172544000,
+    "wall_time": 599965.0428168774
+  },
+  "sha256": "70d32dbb047e0cde99afda53f3b287e0fdaf4c6531f10ed3457590495eeae041",
+  "all_saved_parameters_finite": true,
+  "keys": [
+    "state_dict",
+    "extra_state",
+    "learner_state"
+  ]
+}

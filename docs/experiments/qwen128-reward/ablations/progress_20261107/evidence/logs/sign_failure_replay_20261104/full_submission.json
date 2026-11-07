@@ -1,0 +1,87 @@
+{
+  "submitted_at": "2026-11-04T13:14:03+08:00",
+  "smoke_job": "1518125.stdct-mgmt-02",
+  "project": "CFP04-SF-109",
+  "route": "auto",
+  "resource_per_case": "1A40/12CPU64GB/4h",
+  "cases": {
+    "baseline": {
+      "command": [
+        "qsub",
+        "-N",
+        "sign-diag-base",
+        "-q",
+        "auto",
+        "-P",
+        "CFP04-SF-109",
+        "-l",
+        "walltime=04:00:00",
+        "-l",
+        "select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full_baseline.pbs.log",
+        "-v",
+        "DIAG_CASE=baseline",
+        "-W",
+        "depend=afterok:1518125.stdct-mgmt-02",
+        "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1518132.stdct-mgmt-02",
+      "stderr": "",
+      "job_id": "1518132.stdct-mgmt-02"
+    },
+    "coverage256": {
+      "command": [
+        "qsub",
+        "-N",
+        "sign-diag-256",
+        "-q",
+        "auto",
+        "-P",
+        "CFP04-SF-109",
+        "-l",
+        "walltime=04:00:00",
+        "-l",
+        "select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full_coverage256.pbs.log",
+        "-v",
+        "DIAG_CASE=coverage256",
+        "-W",
+        "depend=afterok:1518125.stdct-mgmt-02",
+        "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1518133.stdct-mgmt-02",
+      "stderr": "",
+      "job_id": "1518133.stdct-mgmt-02"
+    },
+    "coverage32": {
+      "command": [
+        "qsub",
+        "-N",
+        "sign-diag-32",
+        "-q",
+        "auto",
+        "-P",
+        "CFP04-SF-109",
+        "-l",
+        "walltime=04:00:00",
+        "-l",
+        "select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+        "-o",
+        "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full_coverage32.pbs.log",
+        "-v",
+        "DIAG_CASE=coverage32",
+        "-W",
+        "depend=afterany:1518132.stdct-mgmt-02",
+        "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full.pbs"
+      ],
+      "returncode": 0,
+      "stdout": "1518134.stdct-mgmt-02",
+      "stderr": "",
+      "job_id": "1518134.stdct-mgmt-02"
+    }
+  }
+}

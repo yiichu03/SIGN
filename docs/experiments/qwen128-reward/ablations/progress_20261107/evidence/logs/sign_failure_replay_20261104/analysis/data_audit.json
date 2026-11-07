@@ -1,0 +1,8 @@
+{
+  "checked_traces": 12600,
+  "checked_video_files": 1991,
+  "decoded_video_frames": 829982,
+  "command_mapping_stop_flags_and_coverage_verified": true,
+  "trace_pose_hash_reconstruction_verified": true,
+  "saved_goal_png_matches_original_goal_sha": true
+}

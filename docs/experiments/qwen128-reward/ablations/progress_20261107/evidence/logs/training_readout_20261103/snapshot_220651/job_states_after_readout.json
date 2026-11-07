@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-03T22:13:54+08:00",
+  "jobs": {
+    "1511143.stdct-mgmt-02": {
+      "job_state": "R",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "Exit_status": null
+    },
+    "1511145.stdct-mgmt-02": {
+      "job_state": "R",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "Exit_status": null
+    },
+    "1511146.stdct-mgmt-02": {
+      "job_state": "R",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-099[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "Exit_status": null
+    },
+    "1511147.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "Hold_Types": "n",
+      "Exit_status": null
+    },
+    "1511148.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue batch_gpux running job limit.",
+      "Hold_Types": "n",
+      "Exit_status": null
+    },
+    "1511410.stdct-mgmt-02": {
+      "job_state": "R",
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "Exit_status": null
+    },
+    "1515117.stdct-mgmt-02": {
+      "job_state": "R",
+      "comment": "Job run at Tue Nov 03 at 22:11 on (GN-A40-039[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "Hold_Types": "n",
+      "Exit_status": null
+    }
+  }
+}

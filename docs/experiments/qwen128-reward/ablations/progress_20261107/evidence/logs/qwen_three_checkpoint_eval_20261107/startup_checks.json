@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-07T13:22:28+08:00",
+  "checks": {
+    "qwen01": {
+      "log_exists": true,
+      "native_output_exists": true,
+      "traceback_seen": false,
+      "last_progress": 0,
+      "log_bytes": 7088
+    },
+    "A": {
+      "log_exists": true,
+      "native_output_exists": false,
+      "traceback_seen": false,
+      "last_progress": null,
+      "log_bytes": 473
+    },
+    "B": {
+      "log_exists": true,
+      "native_output_exists": true,
+      "traceback_seen": false,
+      "last_progress": 84,
+      "log_bytes": 11205
+    }
+  }
+}

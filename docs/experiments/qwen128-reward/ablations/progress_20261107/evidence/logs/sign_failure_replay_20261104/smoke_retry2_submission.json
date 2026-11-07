@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-04T13:07:13+08:00",
+  "command": [
+    "qsub",
+    "-N",
+    "sign-diag-pass3",
+    "-l",
+    "walltime=00:30:00",
+    "-l",
+    "select=1:ncpus=12:mem=64gb:ngpus=1:gpu_model=A40",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/smoke_retry2.pbs.log",
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/smoke.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1518125.stdct-mgmt-02",
+  "stderr": "",
+  "previous_job": "1518122.stdct-mgmt-02",
+  "source_manifest_sha256": "e01c705771e4f36b884c032dfe06110030e912854f5533984a2746b9779d92bc",
+  "correction": "Normalize reset-only None collision locally; CPU reset/first-action/missing-post-action contract passed; control28 exactly matches original reference.",
+  "job_id": "1518125.stdct-mgmt-02"
+}

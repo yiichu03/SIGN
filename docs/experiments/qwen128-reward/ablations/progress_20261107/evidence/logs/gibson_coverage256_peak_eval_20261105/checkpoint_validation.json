@@ -1,0 +1,285 @@
+{
+  "checked_at": "2026-11-05T01:19:50+08:00",
+  "step": 146944000,
+  "keys": [
+    "state_dict",
+    "extra_state",
+    "learner_state"
+  ],
+  "state_dict_keys": 103,
+  "identical_architecture_with_previous_checkpoint": true,
+  "all_parameters_finite": true,
+  "frozen_encoder_unchanged_items": 42,
+  "all_saved_checkpoint_steps": [
+    {
+      "file": "ckpt.0.pth",
+      "step": 126464000
+    },
+    {
+      "file": "ckpt.1.pth",
+      "step": 126976000
+    },
+    {
+      "file": "ckpt.2.pth",
+      "step": 127488000
+    },
+    {
+      "file": "ckpt.3.pth",
+      "step": 128000000
+    },
+    {
+      "file": "ckpt.4.pth",
+      "step": 128512000
+    },
+    {
+      "file": "ckpt.5.pth",
+      "step": 129024000
+    },
+    {
+      "file": "ckpt.6.pth",
+      "step": 129536000
+    },
+    {
+      "file": "ckpt.7.pth",
+      "step": 130048000
+    },
+    {
+      "file": "ckpt.8.pth",
+      "step": 130560000
+    },
+    {
+      "file": "ckpt.9.pth",
+      "step": 131072000
+    },
+    {
+      "file": "ckpt.10.pth",
+      "step": 131584000
+    },
+    {
+      "file": "ckpt.11.pth",
+      "step": 132096000
+    },
+    {
+      "file": "ckpt.12.pth",
+      "step": 132608000
+    },
+    {
+      "file": "ckpt.13.pth",
+      "step": 133120000
+    },
+    {
+      "file": "ckpt.14.pth",
+      "step": 133632000
+    },
+    {
+      "file": "ckpt.15.pth",
+      "step": 134144000
+    },
+    {
+      "file": "ckpt.16.pth",
+      "step": 134656000
+    },
+    {
+      "file": "ckpt.17.pth",
+      "step": 135168000
+    },
+    {
+      "file": "ckpt.18.pth",
+      "step": 135680000
+    },
+    {
+      "file": "ckpt.19.pth",
+      "step": 136192000
+    },
+    {
+      "file": "ckpt.20.pth",
+      "step": 136704000
+    },
+    {
+      "file": "ckpt.21.pth",
+      "step": 137216000
+    },
+    {
+      "file": "ckpt.22.pth",
+      "step": 137728000
+    },
+    {
+      "file": "ckpt.23.pth",
+      "step": 138240000
+    },
+    {
+      "file": "ckpt.24.pth",
+      "step": 138752000
+    },
+    {
+      "file": "ckpt.25.pth",
+      "step": 139264000
+    },
+    {
+      "file": "ckpt.26.pth",
+      "step": 139776000
+    },
+    {
+      "file": "ckpt.27.pth",
+      "step": 140288000
+    },
+    {
+      "file": "ckpt.28.pth",
+      "step": 140800000
+    },
+    {
+      "file": "ckpt.29.pth",
+      "step": 141312000
+    },
+    {
+      "file": "ckpt.30.pth",
+      "step": 141824000
+    },
+    {
+      "file": "ckpt.31.pth",
+      "step": 142336000
+    },
+    {
+      "file": "ckpt.32.pth",
+      "step": 142848000
+    },
+    {
+      "file": "ckpt.33.pth",
+      "step": 143360000
+    },
+    {
+      "file": "ckpt.34.pth",
+      "step": 143872000
+    },
+    {
+      "file": "ckpt.35.pth",
+      "step": 144384000
+    },
+    {
+      "file": "ckpt.36.pth",
+      "step": 144896000
+    },
+    {
+      "file": "ckpt.37.pth",
+      "step": 145408000
+    },
+    {
+      "file": "ckpt.38.pth",
+      "step": 145920000
+    },
+    {
+      "file": "ckpt.39.pth",
+      "step": 146432000
+    },
+    {
+      "file": "ckpt.40.pth",
+      "step": 146944000
+    },
+    {
+      "file": "ckpt.41.pth",
+      "step": 147456000
+    },
+    {
+      "file": "ckpt.42.pth",
+      "step": 147968000
+    },
+    {
+      "file": "ckpt.43.pth",
+      "step": 148480000
+    },
+    {
+      "file": "ckpt.44.pth",
+      "step": 148992000
+    },
+    {
+      "file": "ckpt.45.pth",
+      "step": 149504000
+    },
+    {
+      "file": "ckpt.46.pth",
+      "step": 150016000
+    },
+    {
+      "file": "ckpt.47.pth",
+      "step": 150528000
+    },
+    {
+      "file": "ckpt.48.pth",
+      "step": 151040000
+    },
+    {
+      "file": "ckpt.49.pth",
+      "step": 151552000
+    },
+    {
+      "file": "ckpt.50.pth",
+      "step": 152064000
+    },
+    {
+      "file": "ckpt.51.pth",
+      "step": 152576000
+    },
+    {
+      "file": "ckpt.52.pth",
+      "step": 153088000
+    },
+    {
+      "file": "ckpt.53.pth",
+      "step": 153600000
+    },
+    {
+      "file": "ckpt.54.pth",
+      "step": 154112000
+    },
+    {
+      "file": "ckpt.55.pth",
+      "step": 154624000
+    },
+    {
+      "file": "ckpt.56.pth",
+      "step": 155136000
+    },
+    {
+      "file": "ckpt.57.pth",
+      "step": 155648000
+    },
+    {
+      "file": "ckpt.58.pth",
+      "step": 156160000
+    },
+    {
+      "file": "ckpt.59.pth",
+      "step": 156672000
+    },
+    {
+      "file": "ckpt.60.pth",
+      "step": 157184000
+    },
+    {
+      "file": "ckpt.61.pth",
+      "step": 157696000
+    },
+    {
+      "file": "ckpt.62.pth",
+      "step": 158208000
+    },
+    {
+      "file": "ckpt.63.pth",
+      "step": 158720000
+    },
+    {
+      "file": "ckpt.64.pth",
+      "step": 159232000
+    },
+    {
+      "file": "ckpt.65.pth",
+      "step": 159744000
+    }
+  ],
+  "nearest_saved_checkpoint": {
+    "file": "ckpt.40.pth",
+    "step": 146944000
+  },
+  "requested_peak_step": 146759680,
+  "exact_peak_checkpoint_exists": false
+}

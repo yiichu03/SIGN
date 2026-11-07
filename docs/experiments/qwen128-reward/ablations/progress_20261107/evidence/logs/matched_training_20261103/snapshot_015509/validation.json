@@ -1,0 +1,6 @@
+{
+  "matched_SR_SPL_step_arrays_identical": true,
+  "input_hashes_verified": true,
+  "legacy_coverage32_and_qwen_A_final1m_independently_match_previous_stop_report": true,
+  "new_training_or_evaluation": false
+}

@@ -1,0 +1,42 @@
+{
+  "step": 76288000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/ckpts/ckpt.54.pth",
+  "path": "/scratch/e1538633/liuyi/logs/gibson_coverage32_selected_eval_20261107/checkpoints/coverage32_76288000.pth",
+  "sha256": "e6a36564d1ee5bbbc690131a0463482f94776be533c57c29bbca82e17bb78035",
+  "bytes": 10696837,
+  "checkpoint_index": 54,
+  "selection_reason": "Earlier high SR/SPL interval with native90.15/53.23, pre/post250k SR90.92/89.31 and SPL55.30/51.70; distinct from125M and151M.",
+  "training_last1m": {
+    "lower_exclusive": 75288000,
+    "upper_inclusive": 76288000,
+    "points": 489,
+    "sr": 88.948122660319,
+    "spl": 52.65956792241469
+  },
+  "training_last3m": {
+    "lower_exclusive": 73288000,
+    "upper_inclusive": 76288000,
+    "points": 1465,
+    "sr": 88.04992055323343,
+    "spl": 50.93915927939041
+  },
+  "training_native_at_checkpoint": {
+    "step": 76288000,
+    "sr": 90.15302658081055,
+    "spl": 53.22558283805847
+  },
+  "training_pre250k": {
+    "lower_exclusive": 76038000,
+    "upper_inclusive": 76288000,
+    "points": 123,
+    "sr": 90.91600102137744,
+    "spl": 55.30254874772172
+  },
+  "training_post250k": {
+    "lower_exclusive": 76288000,
+    "upper_inclusive": 76538000,
+    "points": 122,
+    "sr": 89.3057323381549,
+    "spl": 51.69523646597003
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "commit": "1f7cfbdd3debc825f1f2fd4b9e1a8d6d4bc9bfc7",
+  "files": {
+    "habitat-lab/habitat/core/env.py": "c946d45167ef76a4fd90084b713e3d02694420e2cb54f170c6edc31a92f0038e",
+    "habitat-lab/habitat/tasks/nav/nav.py": "ee13d250e2d74c56cd956c33c6839f1e7975ab2ab7db402057c971fc83de949e",
+    "habitat-lab/habitat/utils/visualizations/maps.py": "6608171296574a23f0fbbea3eee1b772e98a2f4ea1e8b5e1a4a20ce846723ca0",
+    "habitat-lab/habitat/utils/visualizations/fog_of_war.py": "99a2093e0690dbc501ad6b385dfba1dfbff1487f3b48b740e0bb7cd042a1e60a"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-11-05T01:16:32+08:00",
+  "syntax_passed": true,
+  "protected_trees": 11,
+  "source_input_and_checkpoint_sha_guard_passed": true,
+  "reused_evaluate_and_recording_byte_identical": true,
+  "checkpoint_selection": {
+    "target_is_training_log_not_saved_checkpoint": true,
+    "nearest_saved_candidates": [
+      {
+        "file": "ckpt.39.pth",
+        "step": 146432000,
+        "distance": 327680
+      },
+      {
+        "file": "ckpt.40.pth",
+        "step": 146944000,
+        "distance": 184320
+      }
+    ],
+    "selection_rule": "Nearest saved cumulative step, independently read extra_state.step on CPU; the exact peak weight is unavailable."
+  },
+  "full_eval_not_started_yet": true
+}

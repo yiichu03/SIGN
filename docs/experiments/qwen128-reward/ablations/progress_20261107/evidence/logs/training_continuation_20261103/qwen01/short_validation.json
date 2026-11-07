@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "case": "qwen01",
+  "start_step": 8704000,
+  "end_step": 8708096,
+  "added_steps": 4096,
+  "encoder_unchanged_items": 42,
+  "all_model_and_scalars_finite": true,
+  "initial_model_exactly_restored": true,
+  "original_hyperparameters_preserved": true,
+  "optimizer_state_saved": true,
+  "qc_optimizer_state_entries": 10,
+  "global_300m_cap_preserved": true,
+  "config_differences": {
+    "training_continuation.stop_after_steps": [
+      null,
+      4096
+    ],
+    "habitat_baselines.cmd_trailing_opts": [
+      [
+        "habitat_baselines.num_environments",
+        "8",
+        "habitat_baselines.rl.ppo.num_steps",
+        "256",
+        "habitat_baselines.rl.ddppo.pretrained_encoder",
+        "True",
+        "habitat_baselines.rl.ddppo.pretrained_weights",
+        "ckpt/nav_model.pth",
+        "habitat_baselines.rl.ddppo.train_encoder",
+        "False",
+        "habitat_baselines.num_checkpoints",
+        "-1",
+        "habitat_baselines.checkpoint_interval",
+        "250",
+        "habitat_baselines.log_interval",
+        "10",
+        "qwen_reward.beta",
+        "0.1"
+      ],
+      [
+        "habitat_baselines.num_environments",
+        "8",
+        "habitat_baselines.rl.ppo.num_steps",
+        "256",
+        "habitat_baselines.rl.ddppo.pretrained_encoder",
+        "True",
+        "habitat_baselines.rl.ddppo.pretrained_weights",
+        "ckpt/nav_model.pth",
+        "habitat_baselines.rl.ddppo.train_encoder",
+        "False",
+        "habitat_baselines.num_checkpoints",
+        "-1",
+        "habitat_baselines.checkpoint_interval",
+        "2",
+        "habitat_baselines.log_interval",
+        "1",
+        "training_continuation.checkpoint",
+        "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/ckpts/ckpt.16.pth",
+        "training_continuation.sha256",
+        "e046970e7e9bb2990a9ad499cf1e66a288f7f21aa90eae71c5d10e77caaf8317",
+        "training_continuation.stop_after_steps",
+        "4096",
+        "qwen_reward.verify_first_batch",
+        "True"
+      ]
+    ],
+    "habitat_baselines.log_interval": [
+      10,
+      1
+    ],
+    "habitat_baselines.eval_ckpt_path_dir": [
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/ckpts",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/short/ckpts"
+    ],
+    "training_continuation.allow_legacy_weights": [
+      null,
+      true
+    ],
+    "qwen_reward.verify_first_batch": [
+      false,
+      true
+    ],
+    "training_continuation.checkpoint": [
+      null,
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/ckpts/ckpt.16.pth"
+    ],
+    "habitat_baselines.checkpoint_folder": [
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/ckpts",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/short/ckpts"
+    ],
+    "habitat_baselines.video_dir": [
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/video",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/short/video"
+    ],
+    "habitat_baselines.log_file": [
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/train_run0_/log.txt",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/short/train_run0_/log.txt"
+    ],
+    "habitat_baselines.tensorboard_dir": [
+      "/scratch/e1538633/liuyi/SIGN-qwen128-reward/results/qwen128_reward_20261029/train_personal_8env/tb",
+      "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/short/tb"
+    ],
+    "habitat_baselines.checkpoint_interval": [
+      250,
+      2
+    ],
+    "training_continuation.sha256": [
+      null,
+      "e046970e7e9bb2990a9ad499cf1e66a288f7f21aa90eae71c5d10e77caaf8317"
+    ]
+  },
+  "reward_audit": {
+    "nav_rewards_and_masks_unchanged": true,
+    "local_rollouts": [
+      0,
+      1
+    ],
+    "cumulative_rollout_offset": 4250
+  },
+  "latest": {
+    "metrics/success": 0.9599999785423279,
+    "metrics/spl": 0.4956894814968109,
+    "learner/value_loss": 0.6864240169525146
+  }
+}

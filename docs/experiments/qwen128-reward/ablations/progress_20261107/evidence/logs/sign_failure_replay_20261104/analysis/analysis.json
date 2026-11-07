@@ -1,0 +1,1659 @@
+{
+  "recorded_at": "2026-11-04T14:49:40+08:00",
+  "rules_sha256": "a71553a5dde53d995a765323f35c28e9a706ea166510e10552fa7acc8e159f0c",
+  "observed_stage_is_not_a_causal_label": true,
+  "cases": {
+    "baseline": {
+      "episodes": 4200,
+      "failures": 631,
+      "success_rate": 0.8497619047619047,
+      "spl": 0.5439358224388628,
+      "reference_pose_matches": 4200,
+      "reference_step_matches": 4200,
+      "reference_outcome_matches": 4200,
+      "observed_stages": {
+        "stop_without_ever_entering_goal_region": 82,
+        "time_limit_never_entered_goal_region": 484,
+        "time_limit_after_leaving_goal_region": 35,
+        "stop_after_leaving_goal_region": 18,
+        "time_limit_in_goal_region_without_stop": 12
+      },
+      "sensitivity": {
+        "strict": {
+          "failed": {
+            "strong_blocked_tail_candidate": 103,
+            "blocked_run_anywhere_candidate": 178,
+            "low_gain_closed_loop_candidate": 338,
+            "stationary_turn_tail_candidate": 46
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 0,
+            "blocked_run_anywhere_candidate": 36,
+            "low_gain_closed_loop_candidate": 149,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "base": {
+          "failed": {
+            "strong_blocked_tail_candidate": 116,
+            "blocked_run_anywhere_candidate": 213,
+            "low_gain_closed_loop_candidate": 420,
+            "stationary_turn_tail_candidate": 46
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 63,
+            "low_gain_closed_loop_candidate": 315,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "loose": {
+          "failed": {
+            "strong_blocked_tail_candidate": 148,
+            "blocked_run_anywhere_candidate": 283,
+            "low_gain_closed_loop_candidate": 504,
+            "stationary_turn_tail_candidate": 46
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 23,
+            "blocked_run_anywhere_candidate": 121,
+            "low_gain_closed_loop_candidate": 521,
+            "stationary_turn_tail_candidate": 1
+          }
+        }
+      },
+      "by_scene": {
+        "Cantwell": {
+          "episodes": 300,
+          "failures": 61,
+          "stages": {
+            "time_limit_never_entered_goal_region": 45,
+            "stop_without_ever_entering_goal_region": 11,
+            "time_limit_after_leaving_goal_region": 4,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 12,
+            "low_gain_closed_loop_candidate": 47,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Denmark": {
+          "episodes": 300,
+          "failures": 10,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 3,
+            "time_limit_after_leaving_goal_region": 3,
+            "time_limit_in_goal_region_without_stop": 1,
+            "time_limit_never_entered_goal_region": 2,
+            "stop_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 3,
+            "low_gain_closed_loop_candidate": 4,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Eastville": {
+          "episodes": 300,
+          "failures": 29,
+          "stages": {
+            "time_limit_never_entered_goal_region": 23,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 2,
+            "time_limit_in_goal_region_without_stop": 3
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 5,
+            "blocked_run_anywhere_candidate": 11,
+            "low_gain_closed_loop_candidate": 23,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Edgemere": {
+          "episodes": 300,
+          "failures": 10,
+          "stages": {
+            "stop_after_leaving_goal_region": 5,
+            "time_limit_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 1,
+            "time_limit_never_entered_goal_region": 3
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 0,
+            "blocked_run_anywhere_candidate": 0,
+            "low_gain_closed_loop_candidate": 5,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Elmira": {
+          "episodes": 300,
+          "failures": 47,
+          "stages": {
+            "time_limit_never_entered_goal_region": 42,
+            "stop_without_ever_entering_goal_region": 4,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 13,
+            "blocked_run_anywhere_candidate": 29,
+            "low_gain_closed_loop_candidate": 21,
+            "stationary_turn_tail_candidate": 5
+          }
+        },
+        "Eudora": {
+          "episodes": 300,
+          "failures": 41,
+          "stages": {
+            "time_limit_never_entered_goal_region": 33,
+            "time_limit_after_leaving_goal_region": 3,
+            "stop_without_ever_entering_goal_region": 3,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 8,
+            "low_gain_closed_loop_candidate": 39,
+            "stationary_turn_tail_candidate": 3
+          }
+        },
+        "Greigsville": {
+          "episodes": 300,
+          "failures": 25,
+          "stages": {
+            "time_limit_never_entered_goal_region": 15,
+            "stop_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 5,
+            "time_limit_after_leaving_goal_region": 4
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 6,
+            "low_gain_closed_loop_candidate": 13,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Mosquito": {
+          "episodes": 300,
+          "failures": 91,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 12,
+            "time_limit_never_entered_goal_region": 72,
+            "time_limit_after_leaving_goal_region": 6,
+            "stop_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 23,
+            "blocked_run_anywhere_candidate": 46,
+            "low_gain_closed_loop_candidate": 57,
+            "stationary_turn_tail_candidate": 7
+          }
+        },
+        "Pablo": {
+          "episodes": 300,
+          "failures": 30,
+          "stages": {
+            "time_limit_never_entered_goal_region": 26,
+            "stop_without_ever_entering_goal_region": 2,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 5,
+            "low_gain_closed_loop_candidate": 19,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Ribera": {
+          "episodes": 300,
+          "failures": 22,
+          "stages": {
+            "time_limit_never_entered_goal_region": 14,
+            "time_limit_after_leaving_goal_region": 2,
+            "stop_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 4,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 2,
+            "blocked_run_anywhere_candidate": 3,
+            "low_gain_closed_loop_candidate": 17,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Sands": {
+          "episodes": 300,
+          "failures": 61,
+          "stages": {
+            "time_limit_never_entered_goal_region": 51,
+            "stop_without_ever_entering_goal_region": 7,
+            "time_limit_in_goal_region_without_stop": 1,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 8,
+            "low_gain_closed_loop_candidate": 55,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Scioto": {
+          "episodes": 300,
+          "failures": 92,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 15,
+            "time_limit_never_entered_goal_region": 69,
+            "time_limit_after_leaving_goal_region": 4,
+            "stop_after_leaving_goal_region": 3,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 10,
+            "blocked_run_anywhere_candidate": 27,
+            "low_gain_closed_loop_candidate": 60,
+            "stationary_turn_tail_candidate": 7
+          }
+        },
+        "Sisters": {
+          "episodes": 300,
+          "failures": 33,
+          "stages": {
+            "time_limit_never_entered_goal_region": 23,
+            "stop_without_ever_entering_goal_region": 5,
+            "time_limit_after_leaving_goal_region": 3,
+            "stop_after_leaving_goal_region": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 2,
+            "blocked_run_anywhere_candidate": 4,
+            "low_gain_closed_loop_candidate": 27,
+            "stationary_turn_tail_candidate": 4
+          }
+        },
+        "Swormville": {
+          "episodes": 300,
+          "failures": 79,
+          "stages": {
+            "time_limit_never_entered_goal_region": 66,
+            "stop_without_ever_entering_goal_region": 9,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 39,
+            "blocked_run_anywhere_candidate": 51,
+            "low_gain_closed_loop_candidate": 33,
+            "stationary_turn_tail_candidate": 12
+          }
+        }
+      },
+      "failure_behavior_overlap": {
+        "none_of_the_predeclared_flags": 93,
+        "low_gain_closed_loop_candidate": 304,
+        "blocked_run_anywhere_candidate": 19,
+        "blocked_run_anywhere_candidate|low_gain_closed_loop_candidate": 76,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|low_gain_closed_loop_candidate": 27,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate": 66,
+        "low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 9,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 4,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|stationary_turn_tail_candidate": 19,
+        "stationary_turn_tail_candidate": 12,
+        "blocked_run_anywhere_candidate|stationary_turn_tail_candidate": 2
+      },
+      "failures_ever_near": 65,
+      "failures_near_and_view_aligned": 22,
+      "stop_and_step_limit_both": 0,
+      "oracle_stop_sr_increment_pp": 1.5476190476190477,
+      "failed_stop_distance_bins": {
+        "1_to_1.5m": 40,
+        "1.5_to_2m": 5,
+        "2_to_5m": 28,
+        "at_least_5m": 27
+      },
+      "failed_minimum_distance_bins": {
+        "1_to_1.5m": 58,
+        "at_least_2m": 452,
+        "below_1m": 65,
+        "1.5_to_2m": 56
+      },
+      "behavior_by_stage": {
+        "stop_after_leaving_goal_region": {
+          "n": 18,
+          "strong_blocked_tail_candidate": 0,
+          "blocked_run_anywhere_candidate": 0,
+          "low_gain_closed_loop_candidate": 4,
+          "stationary_turn_tail_candidate": 0
+        },
+        "stop_without_ever_entering_goal_region": {
+          "n": 82,
+          "strong_blocked_tail_candidate": 2,
+          "blocked_run_anywhere_candidate": 5,
+          "low_gain_closed_loop_candidate": 27,
+          "stationary_turn_tail_candidate": 4
+        },
+        "time_limit_after_leaving_goal_region": {
+          "n": 35,
+          "strong_blocked_tail_candidate": 5,
+          "blocked_run_anywhere_candidate": 9,
+          "low_gain_closed_loop_candidate": 33,
+          "stationary_turn_tail_candidate": 2
+        },
+        "time_limit_in_goal_region_without_stop": {
+          "n": 12,
+          "strong_blocked_tail_candidate": 2,
+          "blocked_run_anywhere_candidate": 2,
+          "low_gain_closed_loop_candidate": 9,
+          "stationary_turn_tail_candidate": 0
+        },
+        "time_limit_never_entered_goal_region": {
+          "n": 484,
+          "strong_blocked_tail_candidate": 107,
+          "blocked_run_anywhere_candidate": 197,
+          "low_gain_closed_loop_candidate": 347,
+          "stationary_turn_tail_candidate": 40
+        }
+      },
+      "descriptive_by_outcome": {
+        "failed": {
+          "steps": {
+            "n": 631,
+            "mean": 446.08557844690966,
+            "p10": 158.0,
+            "median": 500.0,
+            "p90": 500.0
+          },
+          "initial_distance": {
+            "n": 631,
+            "mean": 5.682694701876391,
+            "p10": 2.789036989212036,
+            "median": 5.5267438888549805,
+            "p90": 8.871927261352539
+          },
+          "minimum_distance": {
+            "n": 631,
+            "mean": 3.4991701996712554,
+            "p10": 0.9884828329086304,
+            "median": 3.1580071449279785,
+            "p90": 6.887226581573486
+          },
+          "final_distance": {
+            "n": 631,
+            "mean": 5.694634101068728,
+            "p10": 1.4634215831756592,
+            "median": 5.4595208168029785,
+            "p90": 10.280023574829102
+          },
+          "path_length_m": {
+            "n": 631,
+            "mean": 39.3351951537228,
+            "p10": 4.426723403867245,
+            "median": 40.278588474273725,
+            "p90": 76.0868358284293
+          },
+          "height_range_m": {
+            "n": 631,
+            "mean": 0.2083104513762681,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.8072607517242432
+          },
+          "new_area_m2": {
+            "n": 631,
+            "mean": 14.130285261489703,
+            "p10": 2.1800000000000006,
+            "median": 12.600000000000003,
+            "p90": 28.260000000000005
+          },
+          "collision_count_divided_by_steps": {
+            "n": 631,
+            "mean": 0.378403453768839,
+            "p10": 0.056,
+            "median": 0.25,
+            "p90": 0.958
+          },
+          "blocked_fraction_of_forward_attempts": {
+            "n": 631,
+            "mean": 0.21226893180352924,
+            "p10": 0.0,
+            "median": 0.04220779220779221,
+            "p90": 0.858
+          },
+          "tail_new_area_m2": {
+            "n": 631,
+            "mean": 1.1672266244057055,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 3.900000000000002
+          }
+        },
+        "succeeded": {
+          "steps": {
+            "n": 3569,
+            "mean": 69.50518352479686,
+            "p10": 19.80000000000001,
+            "median": 44.0,
+            "p90": 149.0
+          },
+          "initial_distance": {
+            "n": 3569,
+            "mean": 4.048934133021429,
+            "p10": 1.8932639598846435,
+            "median": 3.7273178100585938,
+            "p90": 6.668047046661377
+          },
+          "minimum_distance": {
+            "n": 3569,
+            "mean": 0.2805024250124107,
+            "p10": 0.061989794671535495,
+            "median": 0.23334090411663055,
+            "p90": 0.5787106633186341
+          },
+          "final_distance": {
+            "n": 3569,
+            "mean": 0.3394188518764054,
+            "p10": 0.09053268879652024,
+            "median": 0.302574098110199,
+            "p90": 0.6475098967552188
+          },
+          "path_length_m": {
+            "n": 3569,
+            "mean": 8.89552237149418,
+            "p10": 2.7305280321570993,
+            "median": 5.887593145994916,
+            "p90": 17.892208604466582
+          },
+          "height_range_m": {
+            "n": 3569,
+            "mean": 0.035550967622918886,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.0
+          },
+          "new_area_m2": {
+            "n": 3569,
+            "mean": 11.420120481927714,
+            "p10": 4.160000000000001,
+            "median": 10.680000000000001,
+            "p90": 19.474000000000007
+          },
+          "collision_count_divided_by_steps": {
+            "n": 3569,
+            "mean": 0.11989067335259199,
+            "p10": 0.0,
+            "median": 0.08108108108108109,
+            "p90": 0.2927450675780644
+          },
+          "blocked_fraction_of_forward_attempts": {
+            "n": 3569,
+            "mean": 0.013562006551131918,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.036726591284461964
+          },
+          "tail_new_area_m2": {
+            "n": 3569,
+            "mean": 8.896660128887646,
+            "p10": 2.6100000000000008,
+            "median": 8.570000000000002,
+            "p90": 15.392000000000005
+          }
+        }
+      },
+      "failed_goal_region_dwell_steps": {
+        "n": 65,
+        "mean": 36.58461538461538,
+        "p10": 3.0,
+        "median": 11.0,
+        "p90": 83.40000000000003
+      },
+      "failed_longest_goal_region_run": {
+        "n": 65,
+        "mean": 25.092307692307692,
+        "p10": 3.0,
+        "median": 9.0,
+        "p90": 29.400000000000006
+      },
+      "failed_steps_after_last_near": {
+        "n": 65,
+        "mean": 137.73846153846154,
+        "p10": 0.0,
+        "median": 39.0,
+        "p90": 460.40000000000003
+      },
+      "failed_multiheight_gt03m": 88,
+      "coverage_raster_projection_audit": {
+        "purpose": "2D raster caveat, not simulator navigation validity or a causal label",
+        "audit_states": {
+          "intermediate_height_maps_unknown": 144,
+          "single_saved_grid_assessable": 487
+        },
+        "assessable_failed_with_any_nonvalid_projection": 439,
+        "low_gain_loop_candidates_with_any_nonvalid_projection": 299,
+        "low_gain_loop_candidates_with_all_projected_states_valid": 9,
+        "low_gain_loop_candidates_with_unknown_height_maps": 112,
+        "assessable_failed_projection_fraction": {
+          "n": 487,
+          "mean": 0.3303300406815866,
+          "p10": 0.001996007984031936,
+          "median": 0.1935483870967742,
+          "p90": 0.9600798403193613
+        }
+      }
+    },
+    "coverage256": {
+      "episodes": 4200,
+      "failures": 522,
+      "success_rate": 0.8757142857142857,
+      "spl": 0.5329960106555677,
+      "reference_pose_matches": 4200,
+      "reference_step_matches": 4200,
+      "reference_outcome_matches": 4200,
+      "observed_stages": {
+        "stop_without_ever_entering_goal_region": 88,
+        "time_limit_never_entered_goal_region": 377,
+        "time_limit_after_leaving_goal_region": 24,
+        "time_limit_in_goal_region_without_stop": 10,
+        "stop_after_leaving_goal_region": 23
+      },
+      "sensitivity": {
+        "strict": {
+          "failed": {
+            "strong_blocked_tail_candidate": 72,
+            "blocked_run_anywhere_candidate": 146,
+            "low_gain_closed_loop_candidate": 283,
+            "stationary_turn_tail_candidate": 34
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 66,
+            "low_gain_closed_loop_candidate": 145,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "base": {
+          "failed": {
+            "strong_blocked_tail_candidate": 76,
+            "blocked_run_anywhere_candidate": 196,
+            "low_gain_closed_loop_candidate": 350,
+            "stationary_turn_tail_candidate": 34
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 6,
+            "blocked_run_anywhere_candidate": 107,
+            "low_gain_closed_loop_candidate": 308,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "loose": {
+          "failed": {
+            "strong_blocked_tail_candidate": 111,
+            "blocked_run_anywhere_candidate": 255,
+            "low_gain_closed_loop_candidate": 413,
+            "stationary_turn_tail_candidate": 34
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 26,
+            "blocked_run_anywhere_candidate": 201,
+            "low_gain_closed_loop_candidate": 557,
+            "stationary_turn_tail_candidate": 0
+          }
+        }
+      },
+      "by_scene": {
+        "Cantwell": {
+          "episodes": 300,
+          "failures": 51,
+          "stages": {
+            "time_limit_never_entered_goal_region": 37,
+            "time_limit_after_leaving_goal_region": 5,
+            "stop_without_ever_entering_goal_region": 6,
+            "stop_after_leaving_goal_region": 2,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 22,
+            "low_gain_closed_loop_candidate": 40,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Denmark": {
+          "episodes": 300,
+          "failures": 5,
+          "stages": {
+            "time_limit_in_goal_region_without_stop": 1,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 2,
+            "time_limit_never_entered_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 2,
+            "blocked_run_anywhere_candidate": 2,
+            "low_gain_closed_loop_candidate": 2,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Eastville": {
+          "episodes": 300,
+          "failures": 26,
+          "stages": {
+            "time_limit_never_entered_goal_region": 23,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 11,
+            "low_gain_closed_loop_candidate": 23,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "Edgemere": {
+          "episodes": 300,
+          "failures": 9,
+          "stages": {
+            "stop_after_leaving_goal_region": 6,
+            "time_limit_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 1,
+            "time_limit_never_entered_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 0,
+            "blocked_run_anywhere_candidate": 0,
+            "low_gain_closed_loop_candidate": 3,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Elmira": {
+          "episodes": 300,
+          "failures": 22,
+          "stages": {
+            "time_limit_never_entered_goal_region": 17,
+            "stop_after_leaving_goal_region": 2,
+            "stop_without_ever_entering_goal_region": 2,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 11,
+            "low_gain_closed_loop_candidate": 13,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "Eudora": {
+          "episodes": 300,
+          "failures": 28,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 7,
+            "time_limit_never_entered_goal_region": 19,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 1,
+            "blocked_run_anywhere_candidate": 8,
+            "low_gain_closed_loop_candidate": 20,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Greigsville": {
+          "episodes": 300,
+          "failures": 14,
+          "stages": {
+            "stop_after_leaving_goal_region": 2,
+            "time_limit_never_entered_goal_region": 9,
+            "stop_without_ever_entering_goal_region": 2,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 1,
+            "blocked_run_anywhere_candidate": 1,
+            "low_gain_closed_loop_candidate": 9,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "Mosquito": {
+          "episodes": 300,
+          "failures": 76,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 9,
+            "time_limit_never_entered_goal_region": 64,
+            "time_limit_after_leaving_goal_region": 2,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 10,
+            "blocked_run_anywhere_candidate": 41,
+            "low_gain_closed_loop_candidate": 54,
+            "stationary_turn_tail_candidate": 6
+          }
+        },
+        "Pablo": {
+          "episodes": 300,
+          "failures": 12,
+          "stages": {
+            "time_limit_never_entered_goal_region": 9,
+            "time_limit_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 6,
+            "low_gain_closed_loop_candidate": 9,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Ribera": {
+          "episodes": 300,
+          "failures": 28,
+          "stages": {
+            "time_limit_never_entered_goal_region": 16,
+            "stop_without_ever_entering_goal_region": 7,
+            "time_limit_in_goal_region_without_stop": 1,
+            "stop_after_leaving_goal_region": 2,
+            "time_limit_after_leaving_goal_region": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 2,
+            "blocked_run_anywhere_candidate": 7,
+            "low_gain_closed_loop_candidate": 17,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Sands": {
+          "episodes": 300,
+          "failures": 62,
+          "stages": {
+            "time_limit_never_entered_goal_region": 56,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 4,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 10,
+            "blocked_run_anywhere_candidate": 17,
+            "low_gain_closed_loop_candidate": 51,
+            "stationary_turn_tail_candidate": 7
+          }
+        },
+        "Scioto": {
+          "episodes": 300,
+          "failures": 88,
+          "stages": {
+            "time_limit_never_entered_goal_region": 58,
+            "stop_without_ever_entering_goal_region": 23,
+            "stop_after_leaving_goal_region": 4,
+            "time_limit_after_leaving_goal_region": 3
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 7,
+            "blocked_run_anywhere_candidate": 20,
+            "low_gain_closed_loop_candidate": 60,
+            "stationary_turn_tail_candidate": 4
+          }
+        },
+        "Sisters": {
+          "episodes": 300,
+          "failures": 30,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 15,
+            "time_limit_in_goal_region_without_stop": 1,
+            "time_limit_never_entered_goal_region": 10,
+            "stop_after_leaving_goal_region": 3,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 0,
+            "blocked_run_anywhere_candidate": 5,
+            "low_gain_closed_loop_candidate": 18,
+            "stationary_turn_tail_candidate": 5
+          }
+        },
+        "Swormville": {
+          "episodes": 300,
+          "failures": 71,
+          "stages": {
+            "time_limit_never_entered_goal_region": 57,
+            "stop_without_ever_entering_goal_region": 10,
+            "time_limit_after_leaving_goal_region": 3,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 30,
+            "blocked_run_anywhere_candidate": 45,
+            "low_gain_closed_loop_candidate": 31,
+            "stationary_turn_tail_candidate": 9
+          }
+        }
+      },
+      "failure_behavior_overlap": {
+        "none_of_the_predeclared_flags": 85,
+        "low_gain_closed_loop_candidate": 232,
+        "blocked_run_anywhere_candidate|low_gain_closed_loop_candidate": 96,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|stationary_turn_tail_candidate": 19,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|low_gain_closed_loop_candidate": 13,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate": 40,
+        "low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 4,
+        "blocked_run_anywhere_candidate": 22,
+        "stationary_turn_tail_candidate": 5,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 4,
+        "blocked_run_anywhere_candidate|low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 1,
+        "blocked_run_anywhere_candidate|stationary_turn_tail_candidate": 1
+      },
+      "failures_ever_near": 57,
+      "failures_near_and_view_aligned": 16,
+      "stop_and_step_limit_both": 0,
+      "oracle_stop_sr_increment_pp": 1.3571428571428572,
+      "failed_stop_distance_bins": {
+        "1_to_1.5m": 41,
+        "at_least_5m": 23,
+        "1.5_to_2m": 16,
+        "2_to_5m": 31
+      },
+      "failed_minimum_distance_bins": {
+        "1_to_1.5m": 57,
+        "at_least_2m": 364,
+        "1.5_to_2m": 44,
+        "below_1m": 57
+      },
+      "behavior_by_stage": {
+        "stop_after_leaving_goal_region": {
+          "n": 23,
+          "strong_blocked_tail_candidate": 0,
+          "blocked_run_anywhere_candidate": 1,
+          "low_gain_closed_loop_candidate": 4,
+          "stationary_turn_tail_candidate": 0
+        },
+        "stop_without_ever_entering_goal_region": {
+          "n": 88,
+          "strong_blocked_tail_candidate": 0,
+          "blocked_run_anywhere_candidate": 7,
+          "low_gain_closed_loop_candidate": 20,
+          "stationary_turn_tail_candidate": 4
+        },
+        "time_limit_after_leaving_goal_region": {
+          "n": 24,
+          "strong_blocked_tail_candidate": 4,
+          "blocked_run_anywhere_candidate": 13,
+          "low_gain_closed_loop_candidate": 20,
+          "stationary_turn_tail_candidate": 0
+        },
+        "time_limit_in_goal_region_without_stop": {
+          "n": 10,
+          "strong_blocked_tail_candidate": 1,
+          "blocked_run_anywhere_candidate": 5,
+          "low_gain_closed_loop_candidate": 8,
+          "stationary_turn_tail_candidate": 0
+        },
+        "time_limit_never_entered_goal_region": {
+          "n": 377,
+          "strong_blocked_tail_candidate": 71,
+          "blocked_run_anywhere_candidate": 170,
+          "low_gain_closed_loop_candidate": 298,
+          "stationary_turn_tail_candidate": 30
+        }
+      },
+      "descriptive_by_outcome": {
+        "failed": {
+          "steps": {
+            "n": 522,
+            "mean": 423.08429118773944,
+            "p10": 74.30000000000001,
+            "median": 500.0,
+            "p90": 500.0
+          },
+          "initial_distance": {
+            "n": 522,
+            "mean": 5.740328262592184,
+            "p10": 2.5680450677871702,
+            "median": 5.665179491043091,
+            "p90": 9.109610462188721
+          },
+          "minimum_distance": {
+            "n": 522,
+            "mean": 3.503120104928583,
+            "p10": 0.9120467960834503,
+            "median": 3.162260055541992,
+            "p90": 6.836254787445069
+          },
+          "final_distance": {
+            "n": 522,
+            "mean": 5.847499937133086,
+            "p10": 1.4037735342979432,
+            "median": 5.613219261169434,
+            "p90": 10.782719993591309
+          },
+          "path_length_m": {
+            "n": 522,
+            "mean": 40.96248517377977,
+            "p10": 4.260682846238053,
+            "median": 43.19400930072857,
+            "p90": 78.07678662476472
+          },
+          "height_range_m": {
+            "n": 522,
+            "mean": 0.23170080532630286,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.9246534019708654
+          },
+          "new_area_m2": {
+            "n": 522,
+            "mean": 14.829329501915712,
+            "p10": 2.1450000000000005,
+            "median": 13.370000000000003,
+            "p90": 30.56800000000001
+          },
+          "collision_count_divided_by_steps": {
+            "n": 522,
+            "mean": 0.40817297778880496,
+            "p10": 0.094,
+            "median": 0.32229032258064516,
+            "p90": 0.9578
+          },
+          "blocked_fraction_of_forward_attempts": {
+            "n": 522,
+            "mean": 0.19923558288494375,
+            "p10": 0.0,
+            "median": 0.054704148719111306,
+            "p90": 0.7927308343452787
+          },
+          "tail_new_area_m2": {
+            "n": 522,
+            "mean": 1.5591187739463603,
+            "p10": 0.0,
+            "median": 0.00999999999999801,
+            "p90": 6.333000000000004
+          }
+        },
+        "succeeded": {
+          "steps": {
+            "n": 3678,
+            "mean": 69.62996193583469,
+            "p10": 20.0,
+            "median": 45.0,
+            "p90": 147.0
+          },
+          "initial_distance": {
+            "n": 3678,
+            "mean": 4.089172083894606,
+            "p10": 1.9108264207839967,
+            "median": 3.7884868383407593,
+            "p90": 6.68781261444092
+          },
+          "minimum_distance": {
+            "n": 3678,
+            "mean": 0.27837348156265534,
+            "p10": 0.06295029670000077,
+            "median": 0.22890834510326385,
+            "p90": 0.5679535508155823
+          },
+          "final_distance": {
+            "n": 3678,
+            "mean": 0.33126690330206915,
+            "p10": 0.09369094073772431,
+            "median": 0.2979806214570999,
+            "p90": 0.6250261843204499
+          },
+          "path_length_m": {
+            "n": 3678,
+            "mean": 9.244007784812148,
+            "p10": 2.9079050356466754,
+            "median": 6.409700244987509,
+            "p90": 17.9872336257192
+          },
+          "height_range_m": {
+            "n": 3678,
+            "mean": 0.037974730302144676,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.0
+          },
+          "new_area_m2": {
+            "n": 3678,
+            "mean": 11.25494018488309,
+            "p10": 4.197000000000001,
+            "median": 10.530000000000003,
+            "p90": 19.24200000000001
+          },
+          "collision_count_divided_by_steps": {
+            "n": 3678,
+            "mean": 0.1564880014460119,
+            "p10": 0.0,
+            "median": 0.12,
+            "p90": 0.35727272727272735
+          },
+          "blocked_fraction_of_forward_attempts": {
+            "n": 3678,
+            "mean": 0.02092652995528915,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.05610626903286781
+          },
+          "tail_new_area_m2": {
+            "n": 3678,
+            "mean": 8.870089722675369,
+            "p10": 2.790000000000001,
+            "median": 8.43,
+            "p90": 14.880000000000003
+          }
+        }
+      },
+      "failed_goal_region_dwell_steps": {
+        "n": 57,
+        "mean": 26.719298245614034,
+        "p10": 3.6000000000000005,
+        "median": 8.0,
+        "p90": 32.59999999999997
+      },
+      "failed_longest_goal_region_run": {
+        "n": 57,
+        "mean": 18.05263157894737,
+        "p10": 3.6000000000000005,
+        "median": 8.0,
+        "p90": 19.0
+      },
+      "failed_steps_after_last_near": {
+        "n": 57,
+        "mean": 118.85964912280701,
+        "p10": 0.0,
+        "median": 21.0,
+        "p90": 413.0
+      },
+      "failed_multiheight_gt03m": 72,
+      "coverage_raster_projection_audit": {
+        "purpose": "2D raster caveat, not simulator navigation validity or a causal label",
+        "audit_states": {
+          "intermediate_height_maps_unknown": 135,
+          "single_saved_grid_assessable": 387
+        },
+        "assessable_failed_with_any_nonvalid_projection": 358,
+        "low_gain_loop_candidates_with_any_nonvalid_projection": 239,
+        "low_gain_loop_candidates_with_all_projected_states_valid": 2,
+        "low_gain_loop_candidates_with_unknown_height_maps": 109,
+        "assessable_failed_projection_fraction": {
+          "n": 387,
+          "mean": 0.32857850150541873,
+          "p10": 0.013082925058972971,
+          "median": 0.21428571428571427,
+          "p90": 0.9421157684630739
+        }
+      }
+    },
+    "coverage32": {
+      "episodes": 4200,
+      "failures": 712,
+      "success_rate": 0.8304761904761905,
+      "spl": 0.5190412636450003,
+      "reference_pose_matches": 4200,
+      "reference_step_matches": 4200,
+      "reference_outcome_matches": 4200,
+      "observed_stages": {
+        "time_limit_never_entered_goal_region": 581,
+        "stop_without_ever_entering_goal_region": 79,
+        "time_limit_after_leaving_goal_region": 28,
+        "stop_after_leaving_goal_region": 18,
+        "time_limit_in_goal_region_without_stop": 6
+      },
+      "sensitivity": {
+        "strict": {
+          "failed": {
+            "strong_blocked_tail_candidate": 143,
+            "blocked_run_anywhere_candidate": 200,
+            "low_gain_closed_loop_candidate": 344,
+            "stationary_turn_tail_candidate": 28
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 29,
+            "low_gain_closed_loop_candidate": 158,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "base": {
+          "failed": {
+            "strong_blocked_tail_candidate": 166,
+            "blocked_run_anywhere_candidate": 251,
+            "low_gain_closed_loop_candidate": 447,
+            "stationary_turn_tail_candidate": 28
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 5,
+            "blocked_run_anywhere_candidate": 54,
+            "low_gain_closed_loop_candidate": 278,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "loose": {
+          "failed": {
+            "strong_blocked_tail_candidate": 201,
+            "blocked_run_anywhere_candidate": 330,
+            "low_gain_closed_loop_candidate": 541,
+            "stationary_turn_tail_candidate": 28
+          },
+          "succeeded": {
+            "strong_blocked_tail_candidate": 21,
+            "blocked_run_anywhere_candidate": 123,
+            "low_gain_closed_loop_candidate": 459,
+            "stationary_turn_tail_candidate": 0
+          }
+        }
+      },
+      "by_scene": {
+        "Cantwell": {
+          "episodes": 300,
+          "failures": 82,
+          "stages": {
+            "time_limit_never_entered_goal_region": 66,
+            "stop_without_ever_entering_goal_region": 10,
+            "time_limit_after_leaving_goal_region": 6
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 10,
+            "blocked_run_anywhere_candidate": 23,
+            "low_gain_closed_loop_candidate": 62,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Denmark": {
+          "episodes": 300,
+          "failures": 11,
+          "stages": {
+            "time_limit_never_entered_goal_region": 7,
+            "stop_without_ever_entering_goal_region": 3,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 5,
+            "blocked_run_anywhere_candidate": 6,
+            "low_gain_closed_loop_candidate": 3,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "Eastville": {
+          "episodes": 300,
+          "failures": 40,
+          "stages": {
+            "time_limit_never_entered_goal_region": 36,
+            "time_limit_after_leaving_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 1,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 8,
+            "blocked_run_anywhere_candidate": 11,
+            "low_gain_closed_loop_candidate": 29,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Edgemere": {
+          "episodes": 300,
+          "failures": 10,
+          "stages": {
+            "stop_after_leaving_goal_region": 4,
+            "time_limit_never_entered_goal_region": 1,
+            "stop_without_ever_entering_goal_region": 2,
+            "time_limit_after_leaving_goal_region": 3
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 0,
+            "blocked_run_anywhere_candidate": 0,
+            "low_gain_closed_loop_candidate": 4,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Elmira": {
+          "episodes": 300,
+          "failures": 48,
+          "stages": {
+            "time_limit_never_entered_goal_region": 44,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_after_leaving_goal_region": 2,
+            "stop_without_ever_entering_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 25,
+            "blocked_run_anywhere_candidate": 33,
+            "low_gain_closed_loop_candidate": 15,
+            "stationary_turn_tail_candidate": 4
+          }
+        },
+        "Eudora": {
+          "episodes": 300,
+          "failures": 57,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 3,
+            "time_limit_never_entered_goal_region": 49,
+            "time_limit_after_leaving_goal_region": 2,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 4,
+            "blocked_run_anywhere_candidate": 8,
+            "low_gain_closed_loop_candidate": 45,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Greigsville": {
+          "episodes": 300,
+          "failures": 22,
+          "stages": {
+            "stop_without_ever_entering_goal_region": 3,
+            "time_limit_never_entered_goal_region": 17,
+            "stop_after_leaving_goal_region": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 5,
+            "blocked_run_anywhere_candidate": 8,
+            "low_gain_closed_loop_candidate": 12,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "Mosquito": {
+          "episodes": 300,
+          "failures": 92,
+          "stages": {
+            "time_limit_never_entered_goal_region": 81,
+            "stop_without_ever_entering_goal_region": 10,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 31,
+            "blocked_run_anywhere_candidate": 46,
+            "low_gain_closed_loop_candidate": 52,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Pablo": {
+          "episodes": 300,
+          "failures": 22,
+          "stages": {
+            "time_limit_never_entered_goal_region": 17,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_after_leaving_goal_region": 2,
+            "time_limit_in_goal_region_without_stop": 2
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 5,
+            "low_gain_closed_loop_candidate": 15,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Ribera": {
+          "episodes": 300,
+          "failures": 38,
+          "stages": {
+            "time_limit_never_entered_goal_region": 31,
+            "stop_without_ever_entering_goal_region": 6,
+            "time_limit_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 5,
+            "blocked_run_anywhere_candidate": 10,
+            "low_gain_closed_loop_candidate": 25,
+            "stationary_turn_tail_candidate": 0
+          }
+        },
+        "Sands": {
+          "episodes": 300,
+          "failures": 71,
+          "stages": {
+            "time_limit_never_entered_goal_region": 63,
+            "stop_without_ever_entering_goal_region": 5,
+            "stop_after_leaving_goal_region": 1,
+            "time_limit_after_leaving_goal_region": 1,
+            "time_limit_in_goal_region_without_stop": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 5,
+            "blocked_run_anywhere_candidate": 6,
+            "low_gain_closed_loop_candidate": 62,
+            "stationary_turn_tail_candidate": 2
+          }
+        },
+        "Scioto": {
+          "episodes": 300,
+          "failures": 94,
+          "stages": {
+            "time_limit_never_entered_goal_region": 70,
+            "stop_after_leaving_goal_region": 5,
+            "stop_without_ever_entering_goal_region": 15,
+            "time_limit_after_leaving_goal_region": 4
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 12,
+            "blocked_run_anywhere_candidate": 29,
+            "low_gain_closed_loop_candidate": 60,
+            "stationary_turn_tail_candidate": 4
+          }
+        },
+        "Sisters": {
+          "episodes": 300,
+          "failures": 43,
+          "stages": {
+            "time_limit_never_entered_goal_region": 29,
+            "time_limit_after_leaving_goal_region": 2,
+            "stop_without_ever_entering_goal_region": 11,
+            "stop_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 3,
+            "blocked_run_anywhere_candidate": 13,
+            "low_gain_closed_loop_candidate": 34,
+            "stationary_turn_tail_candidate": 1
+          }
+        },
+        "Swormville": {
+          "episodes": 300,
+          "failures": 82,
+          "stages": {
+            "time_limit_never_entered_goal_region": 70,
+            "stop_without_ever_entering_goal_region": 9,
+            "time_limit_after_leaving_goal_region": 2,
+            "stop_after_leaving_goal_region": 1
+          },
+          "behaviors": {
+            "strong_blocked_tail_candidate": 50,
+            "blocked_run_anywhere_candidate": 53,
+            "low_gain_closed_loop_candidate": 29,
+            "stationary_turn_tail_candidate": 11
+          }
+        }
+      },
+      "failure_behavior_overlap": {
+        "low_gain_closed_loop_candidate": 347,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|low_gain_closed_loop_candidate": 31,
+        "blocked_run_anywhere_candidate": 20,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate": 111,
+        "blocked_run_anywhere_candidate|low_gain_closed_loop_candidate": 65,
+        "none_of_the_predeclared_flags": 110,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|stationary_turn_tail_candidate": 22,
+        "strong_blocked_tail_candidate|blocked_run_anywhere_candidate|low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 2,
+        "stationary_turn_tail_candidate": 2,
+        "low_gain_closed_loop_candidate|stationary_turn_tail_candidate": 2
+      },
+      "failures_ever_near": 52,
+      "failures_near_and_view_aligned": 22,
+      "stop_and_step_limit_both": 0,
+      "oracle_stop_sr_increment_pp": 1.2380952380952381,
+      "failed_stop_distance_bins": {
+        "1_to_1.5m": 37,
+        "at_least_5m": 30,
+        "2_to_5m": 23,
+        "1.5_to_2m": 7
+      },
+      "failed_minimum_distance_bins": {
+        "at_least_2m": 540,
+        "1_to_1.5m": 55,
+        "1.5_to_2m": 65,
+        "below_1m": 52
+      },
+      "behavior_by_stage": {
+        "stop_after_leaving_goal_region": {
+          "n": 18,
+          "strong_blocked_tail_candidate": 0,
+          "blocked_run_anywhere_candidate": 1,
+          "low_gain_closed_loop_candidate": 3,
+          "stationary_turn_tail_candidate": 0
+        },
+        "stop_without_ever_entering_goal_region": {
+          "n": 79,
+          "strong_blocked_tail_candidate": 2,
+          "blocked_run_anywhere_candidate": 2,
+          "low_gain_closed_loop_candidate": 19,
+          "stationary_turn_tail_candidate": 3
+        },
+        "time_limit_after_leaving_goal_region": {
+          "n": 28,
+          "strong_blocked_tail_candidate": 1,
+          "blocked_run_anywhere_candidate": 3,
+          "low_gain_closed_loop_candidate": 24,
+          "stationary_turn_tail_candidate": 0
+        },
+        "time_limit_in_goal_region_without_stop": {
+          "n": 6,
+          "strong_blocked_tail_candidate": 1,
+          "blocked_run_anywhere_candidate": 2,
+          "low_gain_closed_loop_candidate": 2,
+          "stationary_turn_tail_candidate": 0
+        },
+        "time_limit_never_entered_goal_region": {
+          "n": 581,
+          "strong_blocked_tail_candidate": 162,
+          "blocked_run_anywhere_candidate": 243,
+          "low_gain_closed_loop_candidate": 399,
+          "stationary_turn_tail_candidate": 25
+        }
+      },
+      "descriptive_by_outcome": {
+        "failed": {
+          "steps": {
+            "n": 712,
+            "mean": 448.07443820224717,
+            "p10": 139.2000000000001,
+            "median": 500.0,
+            "p90": 500.0
+          },
+          "initial_distance": {
+            "n": 712,
+            "mean": 5.628948599100113,
+            "p10": 2.568779993057251,
+            "median": 5.507742404937744,
+            "p90": 8.90463638305664
+          },
+          "minimum_distance": {
+            "n": 712,
+            "mean": 3.6943189343542198,
+            "p10": 1.142543625831604,
+            "median": 3.3508377075195312,
+            "p90": 6.996599197387695
+          },
+          "final_distance": {
+            "n": 712,
+            "mean": 5.788531721475419,
+            "p10": 1.7043310999870303,
+            "median": 5.298511028289795,
+            "p90": 10.245758056640625
+          },
+          "path_length_m": {
+            "n": 712,
+            "mean": 33.39266075856913,
+            "p10": 3.111800050008768,
+            "median": 32.45084327879654,
+            "p90": 65.80878019380832
+          },
+          "height_range_m": {
+            "n": 712,
+            "mean": 0.14746139531306338,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.24619226604700076
+          },
+          "new_area_m2": {
+            "n": 712,
+            "mean": 12.759817415730339,
+            "p10": 1.2530000000000006,
+            "median": 10.830000000000002,
+            "p90": 26.308000000000007
+          },
+          "collision_count_divided_by_steps": {
+            "n": 712,
+            "mean": 0.41673649214453995,
+            "p10": 0.064,
+            "median": 0.2906953642384106,
+            "p90": 0.972
+          },
+          "blocked_fraction_of_forward_attempts": {
+            "n": 712,
+            "mean": 0.2563416811119086,
+            "p10": 0.0,
+            "median": 0.062258486415789786,
+            "p90": 0.9413784183296378
+          },
+          "tail_new_area_m2": {
+            "n": 712,
+            "mean": 0.9934269662921351,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 3.345
+          }
+        },
+        "succeeded": {
+          "steps": {
+            "n": 3488,
+            "mean": 70.76003440366972,
+            "p10": 21.0,
+            "median": 45.5,
+            "p90": 145.30000000000018
+          },
+          "initial_distance": {
+            "n": 3488,
+            "mean": 4.021965273818291,
+            "p10": 1.8865712881088257,
+            "median": 3.7180882692337036,
+            "p90": 6.58514165878296
+          },
+          "minimum_distance": {
+            "n": 3488,
+            "mean": 0.26962544229105884,
+            "p10": 0.0642928846180439,
+            "median": 0.21695626527071,
+            "p90": 0.5618237853050233
+          },
+          "final_distance": {
+            "n": 3488,
+            "mean": 0.3297784347399544,
+            "p10": 0.09486177861690522,
+            "median": 0.29051758348941803,
+            "p90": 0.6301536917686463
+          },
+          "path_length_m": {
+            "n": 3488,
+            "mean": 8.645231330798694,
+            "p10": 2.9340849758936653,
+            "median": 6.121744388915836,
+            "p90": 16.225843664192567
+          },
+          "height_range_m": {
+            "n": 3488,
+            "mean": 0.032902729321578776,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.0
+          },
+          "new_area_m2": {
+            "n": 3488,
+            "mean": 11.317396788990827,
+            "p10": 4.137000000000001,
+            "median": 10.580000000000002,
+            "p90": 19.026000000000007
+          },
+          "collision_count_divided_by_steps": {
+            "n": 3488,
+            "mean": 0.12744371745393487,
+            "p10": 0.0,
+            "median": 0.09259259259259259,
+            "p90": 0.30450689289501603
+          },
+          "blocked_fraction_of_forward_attempts": {
+            "n": 3488,
+            "mean": 0.015191116384868945,
+            "p10": 0.0,
+            "median": 0.0,
+            "p90": 0.042677859042553265
+          },
+          "tail_new_area_m2": {
+            "n": 3488,
+            "mean": 8.82149655963303,
+            "p10": 2.577000000000002,
+            "median": 8.515,
+            "p90": 14.913000000000006
+          }
+        }
+      },
+      "failed_goal_region_dwell_steps": {
+        "n": 52,
+        "mean": 37.30769230769231,
+        "p10": 4.0,
+        "median": 13.5,
+        "p90": 61.0
+      },
+      "failed_longest_goal_region_run": {
+        "n": 52,
+        "mean": 22.384615384615383,
+        "p10": 4.0,
+        "median": 9.0,
+        "p90": 29.9
+      },
+      "failed_steps_after_last_near": {
+        "n": 52,
+        "mean": 116.07692307692308,
+        "p10": 0.10000000000000053,
+        "median": 15.0,
+        "p90": 455.6
+      },
+      "failed_multiheight_gt03m": 68,
+      "coverage_raster_projection_audit": {
+        "purpose": "2D raster caveat, not simulator navigation validity or a causal label",
+        "audit_states": {
+          "single_saved_grid_assessable": 580,
+          "intermediate_height_maps_unknown": 132
+        },
+        "assessable_failed_with_any_nonvalid_projection": 520,
+        "low_gain_loop_candidates_with_any_nonvalid_projection": 327,
+        "low_gain_loop_candidates_with_all_projected_states_valid": 12,
+        "low_gain_loop_candidates_with_unknown_height_maps": 108,
+        "assessable_failed_projection_fraction": {
+          "n": 580,
+          "mean": 0.3478862632758499,
+          "p10": 0.0,
+          "median": 0.187624750499002,
+          "p90": 0.9680638722554891
+        }
+      }
+    }
+  },
+  "paired": {
+    "success_failure_patterns_baseline_256_32": {
+      "SSS": 3139,
+      "FFS": 72,
+      "FSF": 140,
+      "FSS": 162,
+      "FFF": 257,
+      "SFF": 78,
+      "SFS": 115,
+      "SSF": 237
+    },
+    "models_differ_in_training_budget": true,
+    "descriptive_pairs": {
+      "baseline__coverage256": {
+        "SS": 3376,
+        "FF": 329,
+        "FS": 302,
+        "SF": 193
+      },
+      "baseline__coverage32": {
+        "SS": 3254,
+        "FS": 234,
+        "FF": 397,
+        "SF": 315
+      },
+      "coverage256__coverage32": {
+        "SS": 3301,
+        "FS": 187,
+        "SF": 377,
+        "FF": 335
+      }
+    }
+  }
+}

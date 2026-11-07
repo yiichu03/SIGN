@@ -1,0 +1,9 @@
+{
+  "step": 146944000,
+  "requested_training_peak_step": 146759680,
+  "offset_from_peak_steps": 184320,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.40.pth",
+  "path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/checkpoints/coverage256_146944000.pth",
+  "sha256": "db29c1f71b8616e26d50bf24971e1b808dd56e6d84c60a7a4258eb52f132db6b",
+  "bytes": 9657189
+}

@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "case": "B",
+  "start_step": 8704000,
+  "end_step": 8708096,
+  "added_steps": 4096,
+  "encoder_unchanged_items": 42,
+  "all_model_and_scalars_finite": true,
+  "initial_model_exactly_restored": true,
+  "original_hyperparameters_preserved": true,
+  "optimizer_state_saved": true,
+  "qc_optimizer_state_entries": 10,
+  "global_300m_cap_preserved": true,
+  "config_differences": {
+    "training_continuation.stop_after_steps": [
+      null,
+      4096
+    ],
+    "habitat_baselines.cmd_trailing_opts": [
+      [
+        "habitat_baselines.num_environments",
+        "8",
+        "habitat_baselines.rl.ppo.num_steps",
+        "256",
+        "habitat_baselines.rl.ddppo.pretrained_encoder",
+        "True",
+        "habitat_baselines.rl.ddppo.pretrained_weights",
+        "ckpt/nav_model.pth",
+        "habitat_baselines.rl.ddppo.train_encoder",
+        "False",
+        "habitat_baselines.num_checkpoints",
+        "-1",
+        "habitat_baselines.checkpoint_interval",
+        "250",
+        "habitat_baselines.log_interval",
+        "10"
+      ],
+      [
+        "habitat_baselines.num_environments",
+        "8",
+        "habitat_baselines.rl.ppo.num_steps",
+        "256",
+        "habitat_baselines.rl.ddppo.pretrained_encoder",
+        "True",
+        "habitat_baselines.rl.ddppo.pretrained_weights",
+        "ckpt/nav_model.pth",
+        "habitat_baselines.rl.ddppo.train_encoder",
+        "False",
+        "habitat_baselines.num_checkpoints",
+        "-1",
+        "habitat_baselines.checkpoint_interval",
+        "2",
+        "habitat_baselines.log_interval",
+        "1",
+        "training_continuation.checkpoint",
+        "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/ckpts/ckpt.16.pth",
+        "training_continuation.sha256",
+        "67e1e6aa1bd1ec9ce819ffd3ac348bc4acff62923255dba582d14ef79e2b2214",
+        "training_continuation.stop_after_steps",
+        "4096",
+        "qwen_reward.verify_first_batch",
+        "True"
+      ]
+    ],
+    "habitat_baselines.log_interval": [
+      10,
+      1
+    ],
+    "habitat_baselines.eval_ckpt_path_dir": [
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/ckpts",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/short/ckpts"
+    ],
+    "training_continuation.allow_legacy_weights": [
+      null,
+      true
+    ],
+    "qwen_reward.verify_first_batch": [
+      false,
+      true
+    ],
+    "training_continuation.checkpoint": [
+      null,
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/ckpts/ckpt.16.pth"
+    ],
+    "habitat_baselines.checkpoint_folder": [
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/ckpts",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/short/ckpts"
+    ],
+    "habitat_baselines.video_dir": [
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/video",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/short/video"
+    ],
+    "habitat_baselines.log_file": [
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/train_run0_/log.txt",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/short/train_run0_/log.txt"
+    ],
+    "habitat_baselines.tensorboard_dir": [
+      "/scratch/e1538633/liuyi/SIGN-qwen-ablation/results/qwen_ablation_20261029/B/train/tb",
+      "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/short/tb"
+    ],
+    "habitat_baselines.checkpoint_interval": [
+      250,
+      2
+    ],
+    "training_continuation.sha256": [
+      null,
+      "67e1e6aa1bd1ec9ce819ffd3ac348bc4acff62923255dba582d14ef79e2b2214"
+    ]
+  },
+  "reward_audit": {
+    "nav_rewards_and_masks_unchanged": true,
+    "local_rollouts": [
+      0,
+      1
+    ],
+    "cumulative_rollout_offset": 4250
+  },
+  "latest": {
+    "metrics/success": 0.9130434989929199,
+    "metrics/spl": 0.42824873328208923,
+    "learner/value_loss": 0.6409194469451904
+  }
+}

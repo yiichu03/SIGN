@@ -1,0 +1,5 @@
+{
+  "temporary_holds_targeted_correctly": true,
+  "completed_jobs_not_modified": true,
+  "checks_use_mocked_scheduler_no_real_holds_released": true
+}

@@ -1,0 +1,6 @@
+{
+  "none_at_reset_records_zero_without_mutating_info": true,
+  "first_action_real_collision_retained": true,
+  "missing_post_action_metric_rejected": true,
+  "no_simulator_or_gpu_started": true
+}

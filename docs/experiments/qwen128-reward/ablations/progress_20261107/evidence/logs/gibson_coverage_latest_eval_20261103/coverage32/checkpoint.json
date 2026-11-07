@@ -1,0 +1,7 @@
+{
+  "step": 48128000,
+  "path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage32.pth",
+  "source": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32/results/gibson_coverage_settle32_20261028/train_personal_8env/ckpts/ckpt.93.pth",
+  "sha256": "1ae1ad338a6f40d0bc0325f64e1dfa9bc12ae2de6da47778b440bcc55593471e",
+  "bytes": 7395909
+}

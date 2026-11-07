@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-07T13:19:39+08:00",
+  "protected_trees": 11,
+  "guard_passed": true,
+  "syntax_and_shell_passed": true,
+  "native_evaluation_only_case_names_changed": true,
+  "native_model_shapes_103_keys_and_public_encoder42_items_verified": true,
+  "unchanged_policy_sensor_eval_config_hashes_verified": true,
+  "qwen_runtime_absent_from_native_evaluator": true,
+  "measurement_and_goal_protocol_byte_identical": true,
+  "weight_step_and_sha_cpu_evidence": "checkpoint_validation.json"
+}

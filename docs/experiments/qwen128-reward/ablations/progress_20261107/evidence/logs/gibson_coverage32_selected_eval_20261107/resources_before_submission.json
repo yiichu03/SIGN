@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-07T13:41:35+08:00",
+  "checks": [
+    {
+      "command": [
+        "qstat",
+        "-u",
+        "e1538633"
+      ],
+      "returncode": 0,
+      "stdout": "\nstdct-mgmt-02: \n                                                            Req'd  Req'd   Elap\nJob ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time\n--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----\n1511143.stdct-* e1538633 batch_g* cont-A      81249   1  36  240gb 127:3 R 108:0\n1511145.stdct-* e1538633 batch_g* cont-qwen* 129645   1  36  240gb 125:3 R 107:5\n1511410.stdct-* e1538633 batch_g* cont-C-po* 130649   1  36  240gb 126:4 R 105:4\n1511147.stdct-* e1538633 batch_g* cont-cov32 119872   1  36  240gb 99:28 R 85:58\n1511148.stdct-* e1538633 batch_g* cont-B     13996*   1  36  240gb 127:3 R 85:57\n1528937.stdct-* e1538633 batch_g* qwenA-bes* 18051*   1  36  240gb 02:00 R 00:20\n1528938.stdct-* e1538633 batch_g* qwen01-be* 20816*   1  36  240gb 02:00 R 00:20\n1528939.stdct-* e1538633 batch_g* qwenB-bes* 36762*   1  36  240gb 02:00 R 00:20\n1528940.stdct-* e1538633 batch_c* qwen-val-*    --    1   1    6gb 00:10 H   -- \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "qstat",
+        "-Qf",
+        "batch_gpu",
+        "batch_gpux"
+      ],
+      "returncode": 0,
+      "stdout": "Queue: batch_gpu\n    queue_type = Execution\n    Priority = 100\n    total_jobs = 937\n    state_count = Transit:0 Queued:39 Held:810 Waiting:24 Running:57 Exiting:0 \n\tBegun:7 \n    from_route_only = True\n    resources_max.ncpus = 720\n    resources_max.ngpus = 2\n    resources_max.nodect = 2\n    resources_max.walltime = 168:00:00\n    resources_min.ngpus = 1\n    resources_min.nodect = 1\n    resources_default.queue_charge_rate = 1\n    resources_default.walltime = 24:00:00\n    default_chunk.node_pool = gpu_node\n    resources_assigned.mem = 15360gb\n    resources_assigned.mpiprocs = 14\n    resources_assigned.ncpus = 2304\n    resources_assigned.nodect = 57\n    max_run = [u:PBS_GENERIC=4]\n    enabled = True\n    started = True\n\nQueue: batch_gpux\n    queue_type = Execution\n    Priority = 200\n    total_jobs = 10\n    state_count = Transit:0 Queued:0 Held:0 Waiting:0 Running:10 Exiting:0 Begu\n\tn:0 \n    from_route_only = True\n    resources_max.ncpus = 720\n    resources_max.ngpus = 2\n    resources_max.nodect = 2\n    resources_max.walltime = 168:00:00\n    resources_min.ngpus = 1\n    resources_min.nodect = 1\n    resources_default.queue_charge_rate = 1\n    resources_default.walltime = 24:00:00\n    default_chunk.node_pool = gpu_node\n    resources_assigned.mem = 2400gb\n    resources_assigned.mpiprocs = 1\n    resources_assigned.ncpus = 360\n    resources_assigned.nodect = 10\n    max_run = [u:PBS_GENERIC=4]\n    enabled = True\n    started = True\n\n",
+      "stderr": ""
+    }
+  ],
+  "precise_project_credit_balance": "not claimed; amgr login needed"
+}

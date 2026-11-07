@@ -1,0 +1,142 @@
+{
+  "captured_at": "2026-11-05T00:50:26+08:00",
+  "common_end": 15837184,
+  "inputs": {
+    "A": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_004537/A/selected_scalars.csv",
+      "sha256": "81c53896e885e3b43a28a8f29599ef151136d4bba2bc82b7925d0993f10d9b6c"
+    },
+    "B": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_004537/B/selected_scalars.csv",
+      "sha256": "70bf05c47fca8095fb89b314ef8c5a822d1639742b8c2315c09a55ae1de99dfc"
+    },
+    "qwen01": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261105/snapshot_004537/qwen01/selected_scalars.csv",
+      "sha256": "6627e16aac5ba68b6cadebcbab6ef37aa33bc6eb735d57ac3d7c342f403695a6"
+    },
+    "baseline": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+      "sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091"
+    },
+    "coverage256": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage256/selected_scalars.csv",
+      "sha256": "a40e4812d1a8c05a20a8a4c88ba17a563fd4a9ed4a619a93b9259cec782b9bb8"
+    },
+    "coverage32": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage32/selected_scalars.csv",
+      "sha256": "c6ba980f43d3ac35177f470587b6a174efd630a9bd57945ba547a92e6eee1f4f"
+    },
+    "C": {
+      "path": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/C_geometry128/selected_scalars.csv",
+      "sha256": "6b2d62b984be90e89eca6b426c7260fcc1d4523a636d7b4032a19049ad841591"
+    }
+  },
+  "windows": {
+    "1000000": {
+      "lower_exclusive": 14837184,
+      "upper_inclusive": 15837184,
+      "points_per_series": 489,
+      "runs": {
+        "A": {
+          "metrics/spl": 0.4723354618242182,
+          "metrics/success": 0.8631533377009667
+        },
+        "B": {
+          "metrics/spl": 0.49454361614761666,
+          "metrics/success": 0.8622695735383376
+        },
+        "qwen01": {
+          "metrics/spl": 0.48921956344372414,
+          "metrics/success": 0.8661168608928751
+        },
+        "baseline": {
+          "metrics/spl": 0.506360093447816,
+          "metrics/success": 0.8680785583572154
+        },
+        "coverage256": {
+          "metrics/spl": 0.4917561440501964,
+          "metrics/success": 0.8652471065033677
+        },
+        "coverage32": {
+          "metrics/spl": 0.4910292237814219,
+          "metrics/success": 0.8753464072028552
+        },
+        "C": {
+          "metrics/spl": 0.5009099368181209,
+          "metrics/success": 0.8669589058265608
+        }
+      }
+    },
+    "2000000": {
+      "lower_exclusive": 13837184,
+      "upper_inclusive": 15837184,
+      "points_per_series": 977,
+      "runs": {
+        "A": {
+          "metrics/spl": 0.46894469076315726,
+          "metrics/success": 0.8527985582454177
+        },
+        "B": {
+          "metrics/spl": 0.48101239810824514,
+          "metrics/success": 0.8480438724266958
+        },
+        "qwen01": {
+          "metrics/spl": 0.48160698530983903,
+          "metrics/success": 0.8502089559360805
+        },
+        "baseline": {
+          "metrics/spl": 0.49396509389672333,
+          "metrics/success": 0.8621453409795263
+        },
+        "coverage256": {
+          "metrics/spl": 0.4845482163443902,
+          "metrics/success": 0.8626663220575425
+        },
+        "coverage32": {
+          "metrics/spl": 0.48347201510241966,
+          "metrics/success": 0.8642977283335269
+        },
+        "C": {
+          "metrics/spl": 0.49747935736679616,
+          "metrics/success": 0.8614645325173619
+        }
+      }
+    },
+    "3000000": {
+      "lower_exclusive": 12837184,
+      "upper_inclusive": 15837184,
+      "points_per_series": 1465,
+      "runs": {
+        "A": {
+          "metrics/spl": 0.4655220282566018,
+          "metrics/success": 0.8491090449456876
+        },
+        "B": {
+          "metrics/spl": 0.48458615352269324,
+          "metrics/success": 0.8518871551487633
+        },
+        "qwen01": {
+          "metrics/spl": 0.4848697481301864,
+          "metrics/success": 0.8545452184237717
+        },
+        "baseline": {
+          "metrics/spl": 0.49068651321398116,
+          "metrics/success": 0.8641695497385877
+        },
+        "coverage256": {
+          "metrics/spl": 0.48705045641892597,
+          "metrics/success": 0.8614875756432986
+        },
+        "coverage32": {
+          "metrics/spl": 0.4864638456508975,
+          "metrics/success": 0.8621655962572976
+        },
+        "C": {
+          "metrics/spl": 0.4947615102899766,
+          "metrics/success": 0.8585011388254654
+        }
+      }
+    }
+  },
+  "warning": "Training means of overlapping native50-update windows; Qwen continuation reset vs original reference phases, different MRQ and coverage protocols; no causal or validation claim."
+}

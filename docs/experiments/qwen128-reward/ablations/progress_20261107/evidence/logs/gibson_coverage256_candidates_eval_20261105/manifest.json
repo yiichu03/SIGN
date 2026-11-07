@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-11-05T14:20:04+08:00",
+  "cases": {
+    "coverage143360000": {
+      "step": 143360000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.33.pth",
+      "path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/checkpoints/coverage256_143360000.pth",
+      "sha256": "1f5f312fe66212c7cf47fb3f6bb705d09aa90849ed22bf79b2f74ebf1ea344f3",
+      "bytes": 9657189,
+      "selection_priority": 1,
+      "cpu_metadata_evidence": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/recommendations.json",
+      "extra_state_step_cpu_verified": true,
+      "parameters_finite_cpu_verified": true
+    },
+    "coverage150528000": {
+      "step": 150528000,
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/ckpts/ckpt.47.pth",
+      "path": "/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/checkpoints/coverage256_150528000.pth",
+      "sha256": "9a43d3e8b870a9594f1a7558fb073298c13cddb1c2c3bb1abe5f6ee8a3532579",
+      "bytes": 9657189,
+      "selection_priority": 2,
+      "cpu_metadata_evidence": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/recommendations.json",
+      "extra_state_step_cpu_verified": true,
+      "parameters_finite_cpu_verified": true
+    }
+  },
+  "episodes": 4200,
+  "scenes": 14,
+  "environments": 6,
+  "max_episode_steps": 500,
+  "seed": 100,
+  "hash_seed": 0,
+  "deterministic_eval": true,
+  "coverage_mpp": 0.1,
+  "coverage_radius": 3.0,
+  "coverage_fov": 90.0,
+  "coverage_reward_weight": 0.0,
+  "qwen_enabled": false,
+  "selection_evidence": "/scratch/e1538633/liuyi/logs/training_readout_20261105/coverage256_candidates_20261105T141223/recommendations.json",
+  "selection_sha256": "9bb461f0b7ea6a79f7caa09dd0d91232d5631f8c32354a2054f836f172d40919",
+  "project": "CFP04-SF-109",
+  "submit_queue": "auto",
+  "gpu_walltime_per_case": "02:00:00",
+  "requested_resources_per_case": "1 A40 / 36 CPU / 240GB",
+  "run_independently_no_gpu_job_dependency": true,
+  "training_jobs_to_preserve": [
+    "1511143",
+    "1511145",
+    "1511146",
+    "1511147",
+    "1511148",
+    "1511410"
+  ],
+  "evaluator_reuse": {
+    "source": "/scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/evaluate.py",
+    "source_sha256": "d1fc318ccb74b34693725d3b581dbf687c6f6ba94486da83c9e6a93f0f3defaa",
+    "only_change": "Allowed EVAL_CASE values; native evaluator and config options unchanged."
+  },
+  "comparisons": [
+    "frozen_baseline_74240000",
+    "coverage256_125952000",
+    "coverage256_146944000",
+    "coverage256_143360000",
+    "coverage256_150528000"
+  ],
+  "exact_gpu_hour_balance": "unavailable without amgr login; no claimed remaining balance",
+  "ordinary_gpu_before_submission": "2 running user jobs out of max4; GPUx4/4"
+}

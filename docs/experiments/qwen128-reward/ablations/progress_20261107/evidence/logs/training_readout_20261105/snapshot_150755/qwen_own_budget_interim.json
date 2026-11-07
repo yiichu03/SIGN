@@ -1,0 +1,231 @@
+{
+  "captured_at": "2026-11-05T15:21:15+08:00",
+  "cases": {
+    "qwen01": {
+      "end": 20791296,
+      "windows": {
+        "1000000": {
+          "lower_exclusive": 19791296,
+          "upper_inclusive": 20791296,
+          "metrics_percent": {
+            "qwen01": {
+              "metrics/success": 88.1516935635198,
+              "metrics/spl": 50.367295467780416
+            },
+            "baseline": {
+              "metrics/success": 86.67051024232174,
+              "metrics/spl": 51.58943306570891
+            },
+            "coverage256": {
+              "metrics/success": 85.24768615792865,
+              "metrics/spl": 49.36102056430161
+            },
+            "coverage32": {
+              "metrics/success": 87.35109782170176,
+              "metrics/spl": 49.51011306912865
+            }
+          },
+          "delta_vs_references_pp": {
+            "baseline": {
+              "metrics/success": 1.4811833211980598,
+              "metrics/spl": -1.2221375979284943
+            },
+            "coverage256": {
+              "metrics/success": 2.9040074055911447,
+              "metrics/spl": 1.006274903478804
+            },
+            "coverage32": {
+              "metrics/success": 0.8005957418180429,
+              "metrics/spl": 0.8571823986517657
+            }
+          }
+        },
+        "2000000": {
+          "lower_exclusive": 18791296,
+          "upper_inclusive": 20791296,
+          "metrics_percent": {
+            "qwen01": {
+              "metrics/success": 87.5969088980461,
+              "metrics/spl": 49.396883614719705
+            },
+            "baseline": {
+              "metrics/success": 85.90031178361195,
+              "metrics/spl": 50.285323752717574
+            },
+            "coverage256": {
+              "metrics/success": 85.72241300326165,
+              "metrics/spl": 49.03808620166388
+            },
+            "coverage32": {
+              "metrics/success": 87.3167466177789,
+              "metrics/spl": 49.26858645012581
+            }
+          },
+          "delta_vs_references_pp": {
+            "baseline": {
+              "metrics/success": 1.696597114434141,
+              "metrics/spl": -0.8884401379978684
+            },
+            "coverage256": {
+              "metrics/success": 1.8744958947844452,
+              "metrics/spl": 0.35879741305582513
+            },
+            "coverage32": {
+              "metrics/success": 0.2801622802671915,
+              "metrics/spl": 0.12829716459389573
+            }
+          }
+        },
+        "3000000": {
+          "lower_exclusive": 17791296,
+          "upper_inclusive": 20791296,
+          "metrics_percent": {
+            "qwen01": {
+              "metrics/success": 86.49488230207267,
+              "metrics/spl": 49.051689778171706
+            },
+            "baseline": {
+              "metrics/success": 86.3297125259764,
+              "metrics/spl": 49.88977440591558
+            },
+            "coverage256": {
+              "metrics/success": 85.54112684604658,
+              "metrics/spl": 48.38029407193636
+            },
+            "coverage32": {
+              "metrics/success": 86.65394654046146,
+              "metrics/spl": 48.83202854480353
+            }
+          },
+          "delta_vs_references_pp": {
+            "baseline": {
+              "metrics/success": 0.16516977609626338,
+              "metrics/spl": -0.8380846277438749
+            },
+            "coverage256": {
+              "metrics/success": 0.9537554560260872,
+              "metrics/spl": 0.6713957062353444
+            },
+            "coverage32": {
+              "metrics/success": -0.1590642383887939,
+              "metrics/spl": 0.21966123336817844
+            }
+          }
+        }
+      }
+    },
+    "A": {
+      "end": 24580096,
+      "windows": {
+        "1000000": {
+          "lower_exclusive": 23580096,
+          "upper_inclusive": 24580096,
+          "metrics_percent": {
+            "A": {
+              "metrics/success": 84.66340738571495,
+              "metrics/spl": 48.521622162167525
+            },
+            "baseline": {
+              "metrics/success": 89.39170546083119,
+              "metrics/spl": 54.014995298015066
+            },
+            "coverage256": {
+              "metrics/success": 87.66336333776057,
+              "metrics/spl": 50.40176536407939
+            },
+            "coverage32": {
+              "metrics/success": 88.17025465711737,
+              "metrics/spl": 50.55969963897713
+            }
+          },
+          "delta_vs_references_pp": {
+            "baseline": {
+              "metrics/success": -4.728298075116243,
+              "metrics/spl": -5.493373135847541
+            },
+            "coverage256": {
+              "metrics/success": -2.9999559520456245,
+              "metrics/spl": -1.8801432019118636
+            },
+            "coverage32": {
+              "metrics/success": -3.506847271402421,
+              "metrics/spl": -2.0380774768096046
+            }
+          }
+        },
+        "2000000": {
+          "lower_exclusive": 22580096,
+          "upper_inclusive": 24580096,
+          "metrics_percent": {
+            "A": {
+              "metrics/success": 86.21952819848622,
+              "metrics/spl": 48.35468821052153
+            },
+            "baseline": {
+              "metrics/success": 87.32677848214625,
+              "metrics/spl": 52.61519417975064
+            },
+            "coverage256": {
+              "metrics/success": 86.11885204285902,
+              "metrics/spl": 48.74175715287852
+            },
+            "coverage32": {
+              "metrics/success": 85.85336255929609,
+              "metrics/spl": 49.1807208792092
+            }
+          },
+          "delta_vs_references_pp": {
+            "baseline": {
+              "metrics/success": -1.1072502836600364,
+              "metrics/spl": -4.260505969229108
+            },
+            "coverage256": {
+              "metrics/success": 0.10067615562719823,
+              "metrics/spl": -0.38706894235698996
+            },
+            "coverage32": {
+              "metrics/success": 0.3661656391901289,
+              "metrics/spl": -0.8260326686876667
+            }
+          }
+        },
+        "3000000": {
+          "lower_exclusive": 21580096,
+          "upper_inclusive": 24580096,
+          "metrics_percent": {
+            "A": {
+              "metrics/success": 86.38538187274347,
+              "metrics/spl": 48.93006008639678
+            },
+            "baseline": {
+              "metrics/success": 87.9064443819352,
+              "metrics/spl": 52.2826864939094
+            },
+            "coverage256": {
+              "metrics/success": 86.1222919425053,
+              "metrics/spl": 48.3863094927101
+            },
+            "coverage32": {
+              "metrics/success": 85.80801539860488,
+              "metrics/spl": 48.72685610230872
+            }
+          },
+          "delta_vs_references_pp": {
+            "baseline": {
+              "metrics/success": -1.5210625091917365,
+              "metrics/spl": -3.3526264075126235
+            },
+            "coverage256": {
+              "metrics/success": 0.2630899302381664,
+              "metrics/spl": 0.5437505936866813
+            },
+            "coverage32": {
+              "metrics/success": 0.5773664741385858,
+              "metrics/spl": 0.20320398408805573
+            }
+          }
+        }
+      }
+    }
+  }
+}

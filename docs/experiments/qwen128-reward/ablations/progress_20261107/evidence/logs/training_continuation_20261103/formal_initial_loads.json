@@ -1,0 +1,14 @@
+{
+  "A": {
+    "start_step": 8192000,
+    "all_model_states_restored": 103,
+    "encoder_unchanged": 42,
+    "mode": "legacy_weights_optimizer_reset"
+  },
+  "C": {
+    "start_step": 22528000,
+    "all_model_states_restored": 103,
+    "encoder_unchanged": 42,
+    "mode": "legacy_weights_optimizer_reset"
+  }
+}

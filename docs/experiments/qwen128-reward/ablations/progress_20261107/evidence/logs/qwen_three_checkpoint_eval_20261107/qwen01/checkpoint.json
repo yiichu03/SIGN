@@ -1,0 +1,42 @@
+{
+  "step": 20480000,
+  "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/ckpts/ckpt.22.pth",
+  "path": "/scratch/e1538633/liuyi/logs/qwen_three_checkpoint_eval_20261107/checkpoints/qwen01_20480000.pth",
+  "sha256": "538465a99a055367be899c441c46eeed7eb61be99a236d891881056323329c37",
+  "bytes": 10696837,
+  "selection_reason": "High-state neighborhood around the earlier20M recovery; pre/post250k SR90.17/88.10. The highest trailing1M point20.992M has already fallen to nativeSR81.51 and is not selected.",
+  "training_last1m": {
+    "lower_exclusive": 19480000,
+    "upper_inclusive": 20480000,
+    "points": 489,
+    "sr": 87.23571557696368,
+    "spl": 48.92360768557082
+  },
+  "training_last3m": {
+    "lower_exclusive": 17480000,
+    "upper_inclusive": 20480000,
+    "points": 1465,
+    "sr": 85.86504768186055,
+    "spl": 48.53787944381961
+  },
+  "training_native_at_checkpoint": {
+    "step": 20480000,
+    "sr": 89.79430198669434,
+    "spl": 50.456178188323975
+  },
+  "training_pre250k": {
+    "lower_exclusive": 20230000,
+    "upper_inclusive": 20480000,
+    "points": 123,
+    "sr": 90.16604268453955,
+    "spl": 50.93258716226593
+  },
+  "training_post250k": {
+    "lower_exclusive": 20480000,
+    "upper_inclusive": 20730000,
+    "points": 122,
+    "sr": 88.10013664550469,
+    "spl": 52.082823729905925
+  },
+  "selection_uses_training_only": true
+}
