@@ -14,15 +14,20 @@ sys.path.insert(0, str(TREE/'scripts'))
 from evaluate_recovery import read_rows, guard
 
 
-def run_case(batch, stage, split, mode):
-    out = batch/stage/(split+'_'+mode)
+def run_case(batch, stage, split, mode, native=False):
+    out = batch/stage/(split+'_'+('native' if native else mode))
     out.parent.mkdir(parents=True, exist_ok=True)
     log = out.with_suffix('.log')
     command = [sys.executable, str(TREE/'scripts/evaluate_recovery.py'), '--batch', str(batch),
         '--run', str(out), '--split', split, '--mode', mode]
     print('RUN', json.dumps(command), flush=True)
+    env = dict(os.environ)
+    if native:
+        env['RECOVERY_NATIVE_REFERENCE'] = '1'
+    else:
+        env.pop('RECOVERY_NATIVE_REFERENCE', None)
     with log.open('x') as f:
-        subprocess.run(command, cwd=TREE, stdout=f, stderr=subprocess.STDOUT, check=True)
+        subprocess.run(command, cwd=TREE, stdout=f, stderr=subprocess.STDOUT, env=env, check=True)
     return out
 
 
@@ -101,9 +106,11 @@ def main():
             run_case(batch, a.stage, 'full', mode)
         compare(batch, a.stage, 'full')
     else:
+        native = run_case(batch, a.stage, 'smoke', 'off', native=True)
         off = run_case(batch, a.stage, 'smoke', 'off')
         disabled = run_case(batch, a.stage, 'smoke', 'disabled')
         original, zero = read_rows(off/'episodes'), read_rows(disabled/'episodes')
+        assert read_rows(native/'episodes') == original, 'New off-mode eval differs from native code on identical subset'
         assert original == zero, 'Zero-intervention eval is not exactly native-equivalent'
         probe_worker(batch, a.stage, off)
         for mode in ['rule','qwen']:

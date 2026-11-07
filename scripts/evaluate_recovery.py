@@ -13,7 +13,8 @@ import sys
 import time
 TREE = Path(__file__).resolve().parents[1]
 ROOT = TREE.parent
-sys.path.insert(0, str(TREE))
+EVAL_TREE = ROOT/'SIGN-coverage-eval' if os.environ.get('RECOVERY_NATIVE_REFERENCE') == '1' else TREE
+sys.path.insert(0, str(EVAL_TREE))
 sys.path.insert(0, str(TREE/'scripts'))
 # Forkserver children re-import this module without calling main(). Register
 # simulator, dataset, actions and the telemetry environment in every process.
@@ -58,7 +59,7 @@ def main():
     out.mkdir(parents=True)
     tasks = json.loads((batch/'tasks.json').read_text())
     selected, checkpoint = tasks['splits'][args.split], tasks['checkpoint']
-    os.chdir(TREE)
+    os.chdir(EVAL_TREE)
     import torch
     from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
     assert torch.cuda.is_available()
@@ -75,7 +76,7 @@ def main():
     if args.mode == 'disabled':
         opts += ['inference_recovery.max_interventions','0']
     started = time.perf_counter()
-    run_sim.run_exp(exp_config='exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,rollout_coverage,inference_recovery',
+    run_sim.run_exp(exp_config='exp_config/ppo_imagenav_gibson.yaml,policy,reward,sensors,eval,rollout_coverage,'+str(TREE/'src/config/inference_recovery.yaml'),
         run_type='eval', opts=opts, model_dir=str(out/'native'), overwrite=False, note='', debug=False)
     rows = read_rows(out/'episodes')
     assert set(rows) == {tuple(k) for k in selected['episode_keys']}
@@ -89,7 +90,8 @@ def main():
         assert row['goal_sha256'] == reference['goal_sha256']
         assert max(abs(a-b) for a,b in zip(row['start_position'],reference['start_position'])) < 1e-6
         pose_matches += row['pose_trace_sha256'] == reference['pose_trace_sha256']
-        if args.mode == 'off':
+        # Filtered datasets require a native reference on the SAME subset.
+        if args.mode == 'off' and args.split == 'full':
             for name in ['success','spl','view_match','navigation_reward','collisions','steps']:
                 assert abs(row[name]-reference[name]) < 1e-5, (key,name,row[name],reference[name])
     ea = EventAccumulator(str(out/'native/tb'), size_guidance={'scalars':0});ea.Reload()
@@ -102,6 +104,8 @@ def main():
         new_m2_per_step_global=sum(r['new_area_m2'] for r in rows.values())/sum(r['steps'] for r in rows.values()),
         native_metrics=native, seconds=time.perf_counter()-started, original_pose_sha_matches=pose_matches,
         matched_goals_and_starts=True, controller_inputs=['rgb','target_rgb','executed_action_history'],
+        native_reference=os.environ.get('RECOVERY_NATIVE_REFERENCE') == '1',
+        subset_full_reference_outputs_not_assumed_equal=args.split!='full',
         max_episode_steps=500, seed=100, hash_seed=0, source_commit=json.loads((batch/'source_manifest.json').read_text())['commit'])
     assert abs(native['eval_metrics/success']-result['success_rate']) < 1e-5
     assert abs(native['eval_metrics/spl']-result['spl']) < 1e-5
