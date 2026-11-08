@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-11-08T05:16:10+08:00",
+  "before_any_added37_model_or_navigation_outputs": true,
+  "previous_tasks_sha256": "2d419a1631b8b0406c0385b17fc5a1aeabc719a1ad0c7968d43c94b7233995cf",
+  "reason": "round06 net+1 rescue Mosquito3386 had no VLM disagreement, so it cannot satisfy causal gain. Use one environment for paired diagnostics to remove cross-environment batch-size coupling.",
+  "diagnostic_num_envs": 1,
+  "formal_full": "unchanged default6 environments; diagnostic override explicitly ignored for split=full",
+  "controller_profile": "inference_semantic_long90.yaml unchanged relative to round06; no training/network/sensors/masks modification",
+  "original_preparation": "preparation_audit.json preserved; original61 selection and holdout partitions unchanged",
+  "amended_tasks_sha256": "26d47cacdc0c28ebabbea1ace9372bfd6d4b48c288a437a4468192b873111d24"
+}

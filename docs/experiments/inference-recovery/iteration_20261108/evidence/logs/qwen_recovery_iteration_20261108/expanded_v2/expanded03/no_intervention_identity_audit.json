@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-11-08T07:41:24+08:00",
+  "episodes": 61,
+  "actual_vlm_changed_episodes": 2,
+  "no_vlm_change_episodes": 59,
+  "no_vlm_change_all_raw_episode_rows_equal": true,
+  "no_vlm_change_all_action_pose_hashes_equal": true,
+  "changed_cases": [
+    {
+      "scene_id": "data/scene_datasets/gibson/Ribera.glb",
+      "episode_id": "1167",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.6835688659914957,
+      "qwen_spl": 0.5468247702801934
+    },
+    {
+      "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+      "episode_id": "3040",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.219304681800278
+    }
+  ],
+  "scope": "Completed development only; no holdout output consulted. Not human ground truth or statistical significance."
+}

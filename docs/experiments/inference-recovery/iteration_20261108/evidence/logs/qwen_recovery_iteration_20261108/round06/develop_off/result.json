@@ -1,0 +1,51 @@
+{
+  "mode": "off",
+  "split": "develop",
+  "training_step": 125952000,
+  "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+  "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+  "reference": {
+    "case": "coverage256_125952000",
+    "training_step": 125952000,
+    "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+  },
+  "episodes": 24,
+  "scenes": 11,
+  "success_rate": 0.125,
+  "spl": 0.03838626635495762,
+  "view_match": 0.125,
+  "mean_collisions": 369.8333333333333,
+  "mean_episode_steps": 462.2916666666667,
+  "new_m2_per_step_global": 0.02037854889589906,
+  "native_metrics": {
+    "eval_reward/average_reward": -3.414374589920044,
+    "eval_metrics/distance_to_goal": 5.0380449295043945,
+    "eval_metrics/success": 0.125,
+    "eval_metrics/spl": 0.0383862666785717,
+    "eval_metrics/soft_spl": 0.11363114416599274,
+    "eval_metrics/distance_to_view": 7.79508113861084,
+    "eval_metrics/view_match": 0.125,
+    "eval_metrics/view_angle": 157.966552734375,
+    "eval_metrics/collisions.count": 369.8333435058594,
+    "eval_metrics/observed_coverage.delta_m2": 0.0062500000931322575,
+    "eval_metrics/observed_coverage.new_area_m2": 9.420833587646484,
+    "eval_metrics/coverage_eval.steps": 462.2916564941406,
+    "eval_metrics/coverage_eval.new_area_m2": 9.420833587646484,
+    "eval_metrics/coverage_eval.new_m2_per_step": 0.022002778947353363
+  },
+  "seconds": 44.72570397896925,
+  "original_pose_sha_matches": 9,
+  "matched_goals_and_starts": true,
+  "controller_inputs": [
+    "rgb",
+    "target_rgb",
+    "executed_action_history"
+  ],
+  "native_reference": false,
+  "subset_full_reference_outputs_not_assumed_equal": true,
+  "max_episode_steps": 500,
+  "seed": 100,
+  "hash_seed": 0,
+  "source_commit": "6d72ca761565586660b16450ae644a650555fae8"
+}

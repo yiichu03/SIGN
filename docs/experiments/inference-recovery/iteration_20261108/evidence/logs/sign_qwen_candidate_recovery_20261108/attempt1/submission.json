@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-11-08T02:37:13+08:00",
+  "command": [
+    "qsub",
+    "-q",
+    "autox",
+    "-P",
+    "CFP04-SF-109",
+    "-v",
+    "CANDIDATE_RECOVERY_BATCH=/scratch/e1538633/liuyi/logs/sign_qwen_candidate_recovery_20261108/attempt1",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/sign_qwen_candidate_recovery_20261108/attempt1/evaluate.pbs.log",
+    "/scratch/e1538633/liuyi/SIGN-qwen-candidate-recovery/scripts/candidate_recovery.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1531403.stdct-mgmt-02\n",
+  "stderr": "",
+  "commit": "e9e5c0f276ad575df67b0ede9464870528eb1acb",
+  "checkpoint": {
+    "step": 125952000,
+    "path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+    "source": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.245.pth",
+    "sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "bytes": 7396455
+  },
+  "resource": "1A40/36CPU/240GB/02:00:00",
+  "scope": "real development candidate diagnostics,34 native/off/zero equivalence,three matched arms x280; no navigation training or automatic full4200",
+  "source_files": 73,
+  "asset_files": 52,
+  "job_id": "1531403.stdct-mgmt-02"
+}

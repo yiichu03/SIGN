@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-11-08T07:27:14+08:00",
+  "previous_behavior_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+  "current_behavior_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "cases": {
+    "off": {
+      "episodes": 61,
+      "all_episode_rows_identical": true,
+      "all_pose_and_action_hashes_identical": true
+    },
+    "rule": {
+      "episodes": 61,
+      "all_episode_rows_identical": true,
+      "all_pose_and_action_hashes_identical": true
+    }
+  },
+  "note": "Control equality only. New Qwen navigation result not assumed."
+}

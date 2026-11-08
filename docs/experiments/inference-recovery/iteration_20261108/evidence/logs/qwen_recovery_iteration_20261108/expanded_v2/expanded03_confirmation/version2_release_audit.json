@@ -1,0 +1,96 @@
+{
+  "recorded_at": "2026-11-08T08:49:43+08:00",
+  "release_allowed": true,
+  "protocol_sha256": "faec250bd4ca4ca9718b137a1f6eac993a86c12024593274484de81ae14cb673",
+  "protocol_registered_at": "2026-11-08T06:40:32+08:00",
+  "behavior_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "audits": {
+    "expanded03": {
+      "job_id": "1531657.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "splits": {
+        "develop": {
+          "episodes": 61,
+          "net_successes": 1,
+          "supported_rescues": 1,
+          "rescues": 1,
+          "harms": 0,
+          "sr_delta_pp": 1.6393442622950838,
+          "spl_delta_pp": 0.13534522309668062
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "rescues": 0,
+          "harms": 0,
+          "sr_delta_pp": 0.0,
+          "spl_delta_pp": 0.0
+        }
+      },
+      "legacy_passes_fixed_gain_gate": true
+    },
+    "expanded03_repeat": {
+      "job_id": "1531732.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "splits": {
+        "develop": {
+          "episodes": 61,
+          "net_successes": 1,
+          "supported_rescues": 1,
+          "rescues": 1,
+          "harms": 0,
+          "sr_delta_pp": 1.6393442622950838,
+          "spl_delta_pp": 0.13534522309668062
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "rescues": 0,
+          "harms": 0,
+          "sr_delta_pp": 0.0,
+          "spl_delta_pp": 0.0
+        }
+      },
+      "legacy_passes_fixed_gain_gate": true
+    },
+    "expanded03_confirmation": {
+      "job_id": "1531757.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "splits": {
+        "confirm": {
+          "episodes": 24,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "rescues": 0,
+          "harms": 0,
+          "sr_delta_pp": 0.0,
+          "spl_delta_pp": -1.284465620231892
+        },
+        "general": {
+          "episodes": 112,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "rescues": 0,
+          "harms": 0,
+          "sr_delta_pp": 0.0,
+          "spl_delta_pp": 0.0
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "rescues": 0,
+          "harms": 0,
+          "sr_delta_pp": 0.0,
+          "spl_delta_pp": 0.0
+        }
+      },
+      "legacy_passes_fixed_gain_gate": false
+    }
+  },
+  "old_results_and_dispatch_unchanged": true,
+  "confirmation_positive_causal_signal": false,
+  "interpretation": "A neutral confirmation is inconclusive. This audit authorizes only the preplanned formal experiment; it does not establish whole-val benefit. Development is reused and selection-biased."
+}

@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#PBS -N vlm-iter-check
+#PBS -q auto
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=1:mem=6GB
+#PBS -l walltime=00:15:00
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+: "${ITERATION_CONTROL_DIR:?explicit immutable control directory}"
+python "$ITERATION_CONTROL_DIR/dispatch_iteration.py" \
+ --round "$ITERATION_ROUND" --phase "$ITERATION_PHASE" --job "$ITERATION_JOB"

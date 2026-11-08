@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-11-08T08:50:12+08:00",
+  "basis": "Pre-registered protocol2 neutral-confirmation release; original legacy False and receipt preserved.",
+  "release_audit": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_confirmation/version2_release_audit.json",
+  "release_audit_sha256": "e0a8ccfae36b69adf1849256eebedf778b2c6805b94cad913c204bc5ea3e73ef",
+  "protocol_sha256": "faec250bd4ca4ca9718b137a1f6eac993a86c12024593274484de81ae14cb673",
+  "original_confirmation_dispatch_sha256": "0aaa8fc2d84f18220a07fe6ec82ab1891734d15b58242c77e6db1bb4e2a5d359",
+  "full_job_id": "1532001.stdct-mgmt-02",
+  "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "cpu_dispatch_command": [
+    "qsub",
+    "-q",
+    "auto",
+    "-P",
+    "CFP04-SF-109",
+    "-W",
+    "depend=afterany:1532001.stdct-mgmt-02",
+    "-v",
+    "ITERATION_ROUND=expanded03,ITERATION_PHASE=full,ITERATION_JOB=1532001.stdct-mgmt-02,ITERATION_CONTROL_DIR=/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/dispatch.pbs.log",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/dispatch_iteration.pbs"
+  ],
+  "cpu_dispatch_returncode": 0,
+  "cpu_dispatch_stdout": "1532002.stdct-mgmt-02\n",
+  "cpu_dispatch_stderr": "",
+  "no_new_navigation_training": true,
+  "no_existing_jobs_stopped": true
+}

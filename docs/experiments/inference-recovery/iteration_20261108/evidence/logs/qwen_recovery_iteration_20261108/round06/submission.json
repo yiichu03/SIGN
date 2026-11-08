@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-11-08T05:04:29+08:00",
+  "command": [
+    "qsub",
+    "-q",
+    "autox",
+    "-P",
+    "CFP04-SF-109",
+    "-N",
+    "qwen-round06-dev",
+    "-l",
+    "walltime=02:00:00",
+    "-v",
+    "ITERATION_TREE=/scratch/e1538633/liuyi/SIGN-qwen-iter-round06,ITERATION_BATCH=/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/round06,ITERATION_STAGE=development",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/round06/evaluate.pbs.log",
+    "/scratch/e1538633/liuyi/SIGN-qwen-iter-round06/scripts/recovery_iteration.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1531624.stdct-mgmt-02\n",
+  "stderr": "",
+  "commit": "6d72ca761565586660b16450ae644a650555fae8",
+  "tree": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round06",
+  "stage": "development",
+  "profile": "src/config/inference_semantic_long90.yaml",
+  "checkpoint": {
+    "step": 125952000,
+    "path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+    "source": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.245.pth",
+    "sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "bytes": 7396455
+  },
+  "source_files": 86,
+  "asset_files": 53,
+  "walltime": "02:00:00",
+  "resource": "1A40/36CPU/240GB",
+  "development_directory_may_advance": true,
+  "runtime_snapshot_immutable": true,
+  "job_id": "1531624.stdct-mgmt-02"
+}

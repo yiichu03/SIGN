@@ -1,0 +1,212 @@
+{
+  "note": "Native one-env versus six-env smoke, same checkpoint/starts/goals. Passive comparison supports shape-related numerical differences; it does not prove a particular CUDA cause.",
+  "episodes": 34,
+  "max_initial_action_delta": 0.001505337655544281,
+  "complete_pose_matches": 4,
+  "rows": [
+    {
+      "episode": "Cantwell_1504",
+      "initial_action_max_abs_delta": 0.000469207763671875,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Cantwell_1578",
+      "initial_action_max_abs_delta": 0.0001971125602722168,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Cantwell_1762",
+      "initial_action_max_abs_delta": 0.0002903938293457031,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Denmark_3700",
+      "initial_action_max_abs_delta": 0.001505337655544281,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Denmark_3819",
+      "initial_action_max_abs_delta": 0.00019073486328125,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Eastville_3943",
+      "initial_action_max_abs_delta": 2.4139881134033203e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Eastville_4067",
+      "initial_action_max_abs_delta": 2.7447938919067383e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Edgemere_224",
+      "initial_action_max_abs_delta": 5.1021575927734375e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Edgemere_243",
+      "initial_action_max_abs_delta": 0.0004143714904785156,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Elmira_2849",
+      "initial_action_max_abs_delta": 0.0010939370840787888,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Elmira_2858",
+      "initial_action_max_abs_delta": 0.00038748979568481445,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Elmira_2907",
+      "initial_action_max_abs_delta": 0.0002605915069580078,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Eudora_1949",
+      "initial_action_max_abs_delta": 0.00022912025451660156,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Eudora_2099",
+      "initial_action_max_abs_delta": 0.00019556283950805664,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Greigsville_2449",
+      "initial_action_max_abs_delta": 6.973743438720703e-06,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Greigsville_2661",
+      "initial_action_max_abs_delta": 0.0006712675094604492,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Mosquito_3370",
+      "initial_action_max_abs_delta": 3.069639205932617e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Mosquito_3492",
+      "initial_action_max_abs_delta": 0.0002630650997161865,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Pablo_658",
+      "initial_action_max_abs_delta": 0.0005015134811401367,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Pablo_765",
+      "initial_action_max_abs_delta": 0.0003153681755065918,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Pablo_811",
+      "initial_action_max_abs_delta": 6.55055046081543e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Ribera_1170",
+      "initial_action_max_abs_delta": 0.00022411346435546875,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Ribera_953",
+      "initial_action_max_abs_delta": 0.00020462274551391602,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Sands_302",
+      "initial_action_max_abs_delta": 5.9664249420166016e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Sands_358",
+      "initial_action_max_abs_delta": 0.00017628073692321777,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Scioto_2174",
+      "initial_action_max_abs_delta": 0.0,
+      "first_delta_above_1e6": null,
+      "complete_pose_match": true
+    },
+    {
+      "episode": "Scioto_2314",
+      "initial_action_max_abs_delta": 0.0,
+      "first_delta_above_1e6": null,
+      "complete_pose_match": true
+    },
+    {
+      "episode": "Sisters_1265",
+      "initial_action_max_abs_delta": 9.202957153320312e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Sisters_1300",
+      "initial_action_max_abs_delta": 5.620718002319336e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Swormville_3038",
+      "initial_action_max_abs_delta": 5.638599395751953e-05,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Swormville_3057",
+      "initial_action_max_abs_delta": 0.0,
+      "first_delta_above_1e6": null,
+      "complete_pose_match": true
+    },
+    {
+      "episode": "Swormville_3221",
+      "initial_action_max_abs_delta": 0.00048413872718811035,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    },
+    {
+      "episode": "Swormville_3268",
+      "initial_action_max_abs_delta": 0.0,
+      "first_delta_above_1e6": null,
+      "complete_pose_match": true
+    },
+    {
+      "episode": "Swormville_3293",
+      "initial_action_max_abs_delta": 0.000633731484413147,
+      "first_delta_above_1e6": 0,
+      "complete_pose_match": false
+    }
+  ]
+}

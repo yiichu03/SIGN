@@ -1,0 +1,40 @@
+{
+  "status": "confirm_submitted",
+  "job": "1531732.stdct-mgmt-02",
+  "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "comparisons": {
+    "develop": {
+      "net": 1,
+      "prefix_supported": 1,
+      "sr_delta": 1.6393442622950838,
+      "spl_delta": 0.13534522309668062
+    },
+    "safety": {
+      "net": 0,
+      "prefix_supported": 0,
+      "sr_delta": 0.0,
+      "spl_delta": 0.0
+    }
+  },
+  "followup_job": "1531757.stdct-mgmt-02",
+  "followup_stage": "confirmation",
+  "followup_batch": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_confirmation",
+  "cpu_dispatch_command": [
+    "qsub",
+    "-q",
+    "auto",
+    "-P",
+    "CFP04-SF-109",
+    "-W",
+    "depend=afterany:1531757.stdct-mgmt-02",
+    "-v",
+    "ITERATION_ROUND=expanded03,ITERATION_PHASE=confirm,ITERATION_JOB=1531757.stdct-mgmt-02,ITERATION_CONTROL_DIR=/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_confirmation/dispatch.pbs.log",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/dispatch_iteration.pbs"
+  ],
+  "cpu_dispatch_returncode": 0,
+  "cpu_dispatch_stdout": "1531758.stdct-mgmt-02\n",
+  "cpu_dispatch_stderr": "",
+  "recorded_at": "2026-11-08T08:17:52+08:00"
+}

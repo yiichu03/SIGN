@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-11-08T04:10:53+08:00",
+  "passed": true,
+  "episodes": 4200,
+  "off_sr": 0.8757142857142857,
+  "rule_sr": 0.8828571428571429,
+  "off_spl": 0.5329960106555678,
+  "rule_spl": 0.5367659767570522,
+  "delta_sr_pp": 0.7142857142857229,
+  "delta_spl_pp": 0.376996610148439,
+  "outcome_counts": {
+    "failure_to_success": 33,
+    "success_to_failure": 3,
+    "unchanged": 4164
+  },
+  "unmodified_changed": 5,
+  "unmodified_change_types": {
+    "failure_to_success": 3,
+    "success_to_failure": 2
+  },
+  "actual_actions_and_goal_start_checked": true,
+  "source_comparison_sha256": "471c92834da22829a6087fff2a3dd2eed527703038a78e351aa5b0ce28c3b68d",
+  "note": "Same coverage256125.952M checkpoint, native full control strictly reproduced. Unmodified episode differences are observational and not attributed to local recovery."
+}

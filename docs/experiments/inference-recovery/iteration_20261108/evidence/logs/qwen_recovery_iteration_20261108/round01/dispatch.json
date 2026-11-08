@@ -1,0 +1,22 @@
+{
+  "status": "requires_revision",
+  "phase": "develop",
+  "job": "1531565.stdct-mgmt-02",
+  "commit": "f6b28a680f4124655e18288a0f6a8843ef70fd5d",
+  "comparisons": {
+    "develop": {
+      "net": 0,
+      "prefix_supported": 0,
+      "sr_delta": 0.0,
+      "spl_delta": 0.0
+    },
+    "safety": {
+      "net": 0,
+      "prefix_supported": 0,
+      "sr_delta": 0.0,
+      "spl_delta": 0.0
+    }
+  },
+  "reason": "Frozen gain/safety/prefix gate not met; no GPU follow-up submitted.",
+  "recorded_at": "2026-11-08T04:20:46+08:00"
+}

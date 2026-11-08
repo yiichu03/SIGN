@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-11-08T08:50:20+08:00",
+  "jobs": {
+    "1532001.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_gpux",
+      "project": "CFP04-SF-109",
+      "stime": null,
+      "exec_host": null,
+      "comment": "Not Running: Insufficient amount of resource: node_pool ",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      }
+    },
+    "1532002.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "project": "CFP04-SF-109",
+      "stime": null,
+      "exec_host": null,
+      "comment": null,
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:15:00"
+      }
+    }
+  }
+}

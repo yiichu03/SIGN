@@ -1,0 +1,577 @@
+{
+  "passed": true,
+  "events": 38,
+  "checks": [
+    {
+      "round": "round01",
+      "arm": "rule",
+      "id": "event_0000000",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999130498486,
+        -89.99999159850555,
+        1.2987063314540137e-05
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "rule",
+      "id": "event_0000001",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00001000245965,
+        -90.00001720200545,
+        -1.1182434150214249e-05
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "rule",
+      "id": "event_0000002",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999292764312,
+        -90.00001532117786,
+        0.0
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "rule",
+      "id": "event_0000003",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000881482532,
+        -90.00003193914445,
+        -1.5572711106415227e-05
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "rule",
+      "id": "event_0000004",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999336948622,
+        -90.0000148905019,
+        -9.657234215865174e-06
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "qwen",
+      "id": "event_0000000",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999130498486,
+        -89.99999159850555,
+        1.2987063314540137e-05
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "qwen",
+      "id": "event_0000001",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00001000245965,
+        -90.00001720200545,
+        -1.1182434150214249e-05
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "qwen",
+      "id": "event_0000002",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999292764312,
+        -90.00001532117786,
+        0.0
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "qwen",
+      "id": "event_0000003",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000881482532,
+        -90.00003193914445,
+        -1.5572711106415227e-05
+      ]
+    },
+    {
+      "round": "round01",
+      "arm": "qwen",
+      "id": "event_0000004",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999336948622,
+        -90.0000148905019,
+        -9.657234215865174e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000000",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000015478162,
+        -89.99999077926934,
+        8.036500162234006e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000001",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4197"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000819606078,
+        -90.00000752118154,
+        8.942895306063292e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000002",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000068281349,
+        -89.99998742632496,
+        2.7668824429838423e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000003",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999508597944,
+        -90.00002943456465,
+        -1.7899813542499032e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000004",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1922"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999958968482,
+        -90.00001224383259,
+        -1.9190624584553007e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000005",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999431377523,
+        -90.0000073579355,
+        -6.012874109728727e-08
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000006",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00001411294033,
+        -89.99999587859901,
+        1.881981538076616e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000007",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000912974866,
+        -90.00001274385603,
+        -1.1474402214162183e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000008",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2854"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999830957074,
+        -90.00002586333255,
+        -1.0248676289847936e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000009",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.0000061118568,
+        -90.0000006565672,
+        6.0700944573000015e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000010",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999931194844,
+        -89.99999607365118,
+        1.0121412913122185e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000011",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3386"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00001245841298,
+        -89.99998330709457,
+        1.3246968052271768e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000012",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3386"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999569332442,
+        -90.00000109375077,
+        -6.202871986715763e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "rule",
+      "id": "event_0000013",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3461"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.0000076642134,
+        -90.00001494645322,
+        3.7583120331419195e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000000",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000015478162,
+        -89.99999077926934,
+        8.036500162234006e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000001",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4197"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000819606078,
+        -90.00000752118154,
+        8.942895306063292e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000002",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000068281349,
+        -89.99998742632496,
+        2.7668824429838423e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000003",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999508597944,
+        -90.00002943456465,
+        -1.7899813542499032e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000004",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1922"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999958968482,
+        -90.00001224383259,
+        -1.9190624584553007e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000005",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999431377523,
+        -90.0000073579355,
+        -6.012874109728727e-08
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000006",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00001411294033,
+        -89.99999587859901,
+        1.881981538076616e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000007",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.00000912974866,
+        -90.00001274385603,
+        -1.1474402214162183e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000008",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2854"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999830957074,
+        -90.00002586333255,
+        -1.0248676289847936e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000009",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2854"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999749707445,
+        -90.00001942827149,
+        -6.0759600728488294e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000010",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.0000061118568,
+        -90.0000006565672,
+        6.0700944573000015e-06
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000011",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999135290568,
+        -90.00003558739488,
+        -2.023191458988549e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000012",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3386"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        89.99999655062243,
+        -90.00001033097499,
+        -1.3653159328441689e-05
+      ]
+    },
+    {
+      "round": "round02",
+      "arm": "qwen",
+      "id": "event_0000013",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3461"
+      ],
+      "position_drift": 0.0,
+      "yaws": [
+        90.0000076642134,
+        -90.00001494645322,
+        3.7583120331419195e-06
+      ]
+    }
+  ],
+  "note": "Passive geometry/PNG SHA QA only, never Agent input."
+}

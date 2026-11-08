@@ -1,0 +1,9 @@
+{
+  "status": "requires_revision",
+  "phase": "develop",
+  "job": "1531597.stdct-mgmt-02",
+  "reason": "Upstream job did not finish Exit0",
+  "pbs_state": "F",
+  "exit": 1,
+  "recorded_at": "2026-11-08T04:40:18+08:00"
+}

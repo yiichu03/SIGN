@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-11-08T06:16:53+08:00",
+  "reason": "Prevent asynchronous commit / symbolic HEAD submission race; assert profile exists in committed tree before any setup/qsub.",
+  "cancelled_job": "1531654.stdct-mgmt-02",
+  "cancelled_batch": "expanded02",
+  "snapshot_wrong_commit": "78da633fa968cd93d5103e72d16c62f14deedcb6",
+  "intended_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "old_archive": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/control_history_v2",
+  "manifest": {
+    "submit_iteration.py": "5bd197f319fc1c0e9dc1b208004f4060db159f05e2c36299221dc6b26cff31e7",
+    "dispatch_iteration.py": "deb83910a23dbd73b3e36afa5ef09b9631bab84448d5fd75a2d36c90cffbe4bf",
+    "dispatch_iteration.pbs": "1394595ad4076c07ae71a9f131414f6adacb3e102c04a21443b0a3a512e79931"
+  },
+  "preflight": [
+    {
+      "name": "reject_symbolic",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: submit_iteration.py [-h] --round ROUND --stage\n                           {development,confirmation,full} --commit COMMIT\n                           --profile PROFILE\nsubmit_iteration.py: error: Pass the complete immutable commit SHA after awaiting commit completion\n",
+      "no_batch_created": true
+    },
+    {
+      "name": "reject_missing_profile",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "fatal: path 'src/config/inference_semantic_consensus_veto90.yaml' exists on disk, but not in '78da633fa968cd93d5103e72d16c62f14deedcb6'\nTraceback (most recent call last):\n  File \"/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/submit_iteration.py\", line 65, in <module>\n    if __name__=='__main__':main()\n  File \"/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/submit_iteration.py\", line 24, in main\n    command(['git','-C',str(DEV),'cat-file','-e',commit+':'+a.profile])\n  File \"/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/submit_iteration.py\", line 14, in command\n    return subprocess.check_output(args,text=True).strip()\n  File \"/usr/lib64/python3.9/subprocess.py\", line 424, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/usr/lib64/python3.9/subprocess.py\", line 528, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', '-C', '/scratch/e1538633/liuyi/SIGN-qwen-candidate-recovery', 'cat-file', '-e', '78da633fa968cd93d5103e72d16c62f14deedcb6:src/config/inference_semantic_consensus_veto90.yaml']' returned non-zero exit status 128.\n",
+      "no_batch_created": true
+    }
+  ]
+}

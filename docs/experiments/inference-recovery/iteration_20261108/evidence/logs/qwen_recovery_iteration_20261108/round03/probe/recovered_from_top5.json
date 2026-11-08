@@ -1,0 +1,204 @@
+{
+  "recorded_at": "2026-11-08T04:44:31+08:00",
+  "note": "Original worker audit unmodified. Recover candidate probabilities only where all3 candidate IDs occur in stored real top5. Full vocabulary mass and original response object not recoverable.",
+  "rows": [
+    {
+      "id": "event_0000000",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.394311904907227,
+        23.57449722290039,
+        20.809404373168945
+      ],
+      "candidate_probabilities": [
+        0.6810817554414117,
+        0.30002555938594017,
+        0.018892685172648083
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "event_0000001",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.612001419067383,
+        23.762706756591797,
+        20.640117645263672
+      ],
+      "candidate_probabilities": [
+        0.6912978757104679,
+        0.29567951482695587,
+        0.013022609462576188
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "event_0000002",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.317079544067383,
+        23.400482177734375,
+        20.51546287536621
+      ],
+      "candidate_probabilities": [
+        0.703130053763312,
+        0.2811657931648751,
+        0.015704153071813016
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "event_0000003",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.247791290283203,
+        23.514339447021484,
+        20.413433074951172
+      ],
+      "candidate_probabilities": [
+        0.665839432264506,
+        0.3197683110260268,
+        0.014392256709467147
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "event_0000004",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.329307556152344,
+        23.525047302246094,
+        20.344505310058594
+      ],
+      "candidate_probabilities": [
+        0.6821213063506012,
+        0.30519388301688305,
+        0.012684810632515739
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "event_0000005",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.508094787597656,
+        23.686399459838867,
+        20.254812240600586
+      ],
+      "candidate_probabilities": [
+        0.6878037476340829,
+        0.30241741107405773,
+        0.00977884129185941
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "event_0000006",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000000_batch_0.json",
+      "source_sha256": "86d289f461c9fb285df5af8e4055a11b06755bc6fb9af6d43cdebaf68da98075",
+      "candidate_logits": [
+        24.47795867919922,
+        23.85791778564453,
+        20.939172744750977
+      ],
+      "candidate_probabilities": [
+        0.6381738987216354,
+        0.3432880604792949,
+        0.01853804079906968
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "blank:left",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000001_batch_0.json",
+      "source_sha256": "434bd75da06d38bea305fa74638884869c93419415256d76300d9344d535fed2",
+      "candidate_logits": [
+        23.85763168334961,
+        23.261810302734375,
+        21.92743492126465
+      ],
+      "candidate_probabilities": [
+        0.5895429174022425,
+        0.32490282569824586,
+        0.08555425689951168
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    },
+    {
+      "id": "blank:right",
+      "source_audit": "logs/qwen_recovery_iteration_20261108/round03/probe/worker/request_000001_batch_0.json",
+      "source_sha256": "434bd75da06d38bea305fa74638884869c93419415256d76300d9344d535fed2",
+      "candidate_logits": [
+        23.85763168334961,
+        23.261810302734375,
+        21.92743492126465
+      ],
+      "candidate_probabilities": [
+        0.5895429174022425,
+        0.32490282569824586,
+        0.08555425689951168
+      ],
+      "labels": [
+        "left",
+        "right",
+        "Unknown"
+      ],
+      "complete_three_candidate_logits": true,
+      "full_vocabulary_candidate_mass": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "mode": "off",
+  "split": "general",
+  "training_step": 125952000,
+  "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+  "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+  "reference": {
+    "case": "coverage256_125952000",
+    "training_step": 125952000,
+    "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+  },
+  "episodes": 112,
+  "scenes": 14,
+  "success_rate": 0.9017857142857143,
+  "spl": 0.548519140448607,
+  "view_match": 0.9017857142857143,
+  "mean_collisions": 34.651785714285715,
+  "mean_episode_steps": 109.55357142857143,
+  "new_m2_per_step_global": 0.11156642216788919,
+  "native_metrics": {
+    "eval_reward/average_reward": 7.328254699707031,
+    "eval_metrics/distance_to_goal": 0.9437704086303711,
+    "eval_metrics/success": 0.9017857313156128,
+    "eval_metrics/spl": 0.5485191345214844,
+    "eval_metrics/soft_spl": 0.5080392360687256,
+    "eval_metrics/distance_to_view": 1.3238810300827026,
+    "eval_metrics/view_match": 0.9017857313156128,
+    "eval_metrics/view_angle": 21.778732299804688,
+    "eval_metrics/collisions.count": 34.65178680419922,
+    "eval_metrics/observed_coverage.delta_m2": 0.0,
+    "eval_metrics/observed_coverage.new_area_m2": 12.22249984741211,
+    "eval_metrics/coverage_eval.steps": 109.55357360839844,
+    "eval_metrics/coverage_eval.new_area_m2": 12.22249984741211,
+    "eval_metrics/coverage_eval.new_m2_per_step": 0.2103155255317688
+  },
+  "seconds": 149.74436417897232,
+  "original_pose_sha_matches": 3,
+  "matched_goals_and_starts": true,
+  "controller_inputs": [
+    "rgb",
+    "target_rgb",
+    "executed_action_history"
+  ],
+  "native_reference": false,
+  "subset_full_reference_outputs_not_assumed_equal": true,
+  "max_episode_steps": 500,
+  "seed": 100,
+  "hash_seed": 0,
+  "source_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "diagnostic_num_envs": 1,
+  "full_evaluation_parallelism_unchanged": true
+}

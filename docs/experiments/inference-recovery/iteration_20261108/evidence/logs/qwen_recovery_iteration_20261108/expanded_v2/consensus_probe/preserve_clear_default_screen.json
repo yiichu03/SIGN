@@ -1,0 +1,452 @@
+{
+  "note": "Pure selector change; exact original positive/negative prompt SHA and images, real scores reused. Not navigation outcomes.",
+  "positive_prompt_sha256": "2e42b4870921e4f0d71b8bc2e2f05598331f1bb7e1d120974230dd43e352962a",
+  "negative_prompt_sha256": "82d1dea9c8d77fb4c66a32e55141b5ebe0d1decbb67ac04cab41e1b92a21901e",
+  "scores_sha256": "b2bbfb92f7e4769eba4afa6bf594394096fb911850bebbb90000af1b8b7c635c",
+  "rows": [
+    {
+      "id": "event_0000000",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3386"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000001",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3364"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000002",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3531"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000003",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3501"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000004",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3461"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000005",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3586"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000006",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3586"
+      ],
+      "attempt": 2,
+      "choice": "B",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000007",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3503"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000008",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3503"
+      ],
+      "attempt": 2,
+      "choice": "B",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000009",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3248"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000010",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3234"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000011",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3211"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000012",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3040"
+      ],
+      "attempt": 1,
+      "choice": "B",
+      "differs": true,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000013",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000014",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "attempt": 2,
+      "choice": "B",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000015",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3101"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000016",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3242"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000017",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3242"
+      ],
+      "attempt": 2,
+      "choice": "A",
+      "differs": true,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000018",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3100"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000019",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3240"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000020",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3284"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000021",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3118"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000022",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3146"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000023",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3159"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000024",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3256"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000025",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000026",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3232"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000027",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3232"
+      ],
+      "attempt": 2,
+      "choice": "A",
+      "differs": true,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000028",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000029",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2854"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000030",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": true
+    },
+    {
+      "id": "event_0000031",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1718"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000032",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "attempt": 1,
+      "choice": "B",
+      "differs": true,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000033",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000034",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "rule_fallback",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000035",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": false
+    },
+    {
+      "id": "event_0000036",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1922"
+      ],
+      "attempt": 1,
+      "choice": "A",
+      "differs": false,
+      "source": "vlm",
+      "default_predicted_clear_both": true
+    }
+  ]
+}

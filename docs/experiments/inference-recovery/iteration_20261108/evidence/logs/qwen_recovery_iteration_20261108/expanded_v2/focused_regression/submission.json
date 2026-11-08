@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-11-08T07:03:26+08:00",
+  "command": [
+    "qsub",
+    "-q",
+    "autox",
+    "-P",
+    "CFP04-SF-109",
+    "-N",
+    "qwen-known-regression",
+    "-l",
+    "walltime=00:30:00",
+    "-v",
+    "FOCUSED_TREE=/scratch/e1538633/liuyi/SIGN-qwen-iter-focused-regression,FOCUSED_BATCH=/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/focused_regression",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/focused_regression/evaluate.pbs.log",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/focused_regression/evaluate.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1531692.stdct-mgmt-02\n",
+  "stderr": "",
+  "job_id": "1531692.stdct-mgmt-02",
+  "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "tree": "/scratch/e1538633/liuyi/SIGN-qwen-iter-focused-regression",
+  "episodes": 5,
+  "purpose": "Known1 rescue and4 harms selected after prior outcomes; integration regression only, not independent validation or an override of the61-case gain gate.",
+  "main61_job": "1531657.stdct-mgmt-02",
+  "main_gate_unchanged": true,
+  "source_files": 89,
+  "asset_files": 58
+}

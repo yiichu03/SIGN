@@ -1,0 +1,53 @@
+{
+  "mode": "off",
+  "split": "confirm",
+  "training_step": 125952000,
+  "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+  "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+  "reference": {
+    "case": "coverage256_125952000",
+    "training_step": 125952000,
+    "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+  },
+  "episodes": 24,
+  "scenes": 8,
+  "success_rate": 0.125,
+  "spl": 0.04791727223662451,
+  "view_match": 0.125,
+  "mean_collisions": 340.125,
+  "mean_episode_steps": 457.5833333333333,
+  "new_m2_per_step_global": 0.02262247313786196,
+  "native_metrics": {
+    "eval_reward/average_reward": -3.005141258239746,
+    "eval_metrics/distance_to_goal": 4.9218597412109375,
+    "eval_metrics/success": 0.125,
+    "eval_metrics/spl": 0.04791727289557457,
+    "eval_metrics/soft_spl": 0.13558222353458405,
+    "eval_metrics/distance_to_view": 7.684248924255371,
+    "eval_metrics/view_match": 0.125,
+    "eval_metrics/view_angle": 158.2732696533203,
+    "eval_metrics/collisions.count": 340.125,
+    "eval_metrics/observed_coverage.delta_m2": 0.02083333395421505,
+    "eval_metrics/observed_coverage.new_area_m2": 10.351666450500488,
+    "eval_metrics/coverage_eval.steps": 457.5833435058594,
+    "eval_metrics/coverage_eval.new_area_m2": 10.351666450500488,
+    "eval_metrics/coverage_eval.new_m2_per_step": 0.028458936139941216
+  },
+  "seconds": 115.66624251200119,
+  "original_pose_sha_matches": 1,
+  "matched_goals_and_starts": true,
+  "controller_inputs": [
+    "rgb",
+    "target_rgb",
+    "executed_action_history"
+  ],
+  "native_reference": false,
+  "subset_full_reference_outputs_not_assumed_equal": true,
+  "max_episode_steps": 500,
+  "seed": 100,
+  "hash_seed": 0,
+  "source_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "diagnostic_num_envs": 1,
+  "full_evaluation_parallelism_unchanged": true
+}

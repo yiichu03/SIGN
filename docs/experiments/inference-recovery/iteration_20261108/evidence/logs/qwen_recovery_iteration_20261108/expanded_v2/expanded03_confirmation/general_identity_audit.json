@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-11-08T08:45:33+08:00",
+  "episodes": 112,
+  "rule_qwen_all_episode_rows_equal": true,
+  "rule_qwen_all_action_pose_hashes_equal": true,
+  "vlm_rule_disagreements": 0,
+  "note": "Ordinary regression is neutral; its two rescues over off are shared-rule effects."
+}

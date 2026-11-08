@@ -1,0 +1,558 @@
+{
+  "recorded_at": "2026-11-08T08:56:28+08:00",
+  "behavior_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "checkpoint_steps": 125952000,
+  "rounds": [
+    {
+      "round": "round01",
+      "job_id": "1531565.stdct-mgmt-02",
+      "commit": "f6b28a680f4124655e18288a0f6a8843ef70fd5d",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 24,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 3,
+              "success_rate": 0.125,
+              "spl": 0.03838626635495762
+            },
+            "rule": {
+              "successes": 6,
+              "success_rate": 0.25,
+              "spl": 0.115487298009505
+            },
+            "qwen": {
+              "successes": 6,
+              "success_rate": 0.25,
+              "spl": 0.115487298009505
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "rule": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "qwen": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "round02",
+      "job_id": "1531580.stdct-mgmt-02",
+      "commit": "f2e266ab052d1f1ffba84485f3c3fb804a310cc8",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 24,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 3,
+              "success_rate": 0.125,
+              "spl": 0.03838626635495762
+            },
+            "rule": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.16767606839264992
+            },
+            "qwen": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.16167274830549522
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "rule": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "qwen": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "round03",
+      "job_id": "1531597.stdct-mgmt-02",
+      "commit": "bf52ae74d772512681b9a96396d469a8bfc5d001",
+      "stage": "development",
+      "completed": false,
+      "comparisons": {}
+    },
+    {
+      "round": "round04",
+      "job_id": "1531605.stdct-mgmt-02",
+      "commit": "da9de3a57b9052971fae139bc5907915511a03c0",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 24,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 3,
+              "success_rate": 0.125,
+              "spl": 0.03838626635495762
+            },
+            "rule": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.16767606839264992
+            },
+            "qwen": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.16167274830549522
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "rule": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "qwen": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "round05",
+      "job_id": "1531613.stdct-mgmt-02",
+      "commit": "efae2776c0743271dcc4805093a012f923e72f88",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 24,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 1,
+          "cases": {
+            "off": {
+              "successes": 3,
+              "success_rate": 0.125,
+              "spl": 0.03838626635495762
+            },
+            "rule": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.16896290845446602
+            },
+            "qwen": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.1507329604591427
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "rule": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.49434990134284623
+            },
+            "qwen": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.49434990134284623
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "round06",
+      "job_id": "1531624.stdct-mgmt-02",
+      "commit": "6d72ca761565586660b16450ae644a650555fae8",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 24,
+          "net_successes": 1,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 3,
+              "success_rate": 0.125,
+              "spl": 0.03838626635495762
+            },
+            "rule": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.1497927801170743
+            },
+            "qwen": {
+              "successes": 10,
+              "success_rate": 0.4166666666666667,
+              "spl": 0.16785120298236006
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "rule": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            },
+            "qwen": {
+              "successes": 25,
+              "success_rate": 0.8928571428571429,
+              "spl": 0.4985036425270714
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "expanded01",
+      "job_id": "1531631.stdct-mgmt-02",
+      "commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 61,
+          "net_successes": -3,
+          "supported_rescues": 1,
+          "harms": 4,
+          "cases": {
+            "off": {
+              "successes": 13,
+              "success_rate": 0.21311475409836064,
+              "spl": 0.06639800636659048
+            },
+            "rule": {
+              "successes": 30,
+              "success_rate": 0.4918032786885246,
+              "spl": 0.19304210332417335
+            },
+            "qwen": {
+              "successes": 27,
+              "success_rate": 0.4426229508196721,
+              "spl": 0.16313331908414705
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "rule": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "qwen": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "expanded03",
+      "job_id": "1531657.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 61,
+          "net_successes": 1,
+          "supported_rescues": 1,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 13,
+              "success_rate": 0.21311475409836064,
+              "spl": 0.06639800636659048
+            },
+            "rule": {
+              "successes": 30,
+              "success_rate": 0.4918032786885246,
+              "spl": 0.19304210332417335
+            },
+            "qwen": {
+              "successes": 31,
+              "success_rate": 0.5081967213114754,
+              "spl": 0.19439555555514015
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "rule": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "qwen": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "expanded03_repeat",
+      "job_id": "1531732.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "stage": "development",
+      "completed": true,
+      "comparisons": {
+        "develop": {
+          "episodes": 61,
+          "net_successes": 1,
+          "supported_rescues": 1,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 13,
+              "success_rate": 0.21311475409836064,
+              "spl": 0.06639800636659048
+            },
+            "rule": {
+              "successes": 30,
+              "success_rate": 0.4918032786885246,
+              "spl": 0.19304210332417335
+            },
+            "qwen": {
+              "successes": 31,
+              "success_rate": 0.5081967213114754,
+              "spl": 0.19439555555514015
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "rule": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "qwen": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "expanded03_confirmation",
+      "job_id": "1531757.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "stage": "confirmation",
+      "completed": true,
+      "comparisons": {
+        "confirm": {
+          "episodes": 24,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 3,
+              "success_rate": 0.125,
+              "spl": 0.04791727223662451
+            },
+            "rule": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.16261103930638576
+            },
+            "qwen": {
+              "successes": 9,
+              "success_rate": 0.375,
+              "spl": 0.14976638310406684
+            }
+          }
+        },
+        "general": {
+          "episodes": 112,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 101,
+              "success_rate": 0.9017857142857143,
+              "spl": 0.548519140448607
+            },
+            "rule": {
+              "successes": 103,
+              "success_rate": 0.9196428571428571,
+              "spl": 0.5565753030532662
+            },
+            "qwen": {
+              "successes": 103,
+              "success_rate": 0.9196428571428571,
+              "spl": 0.5565753030532662
+            }
+          }
+        },
+        "safety": {
+          "episodes": 28,
+          "net_successes": 0,
+          "supported_rescues": 0,
+          "harms": 0,
+          "cases": {
+            "off": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "rule": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            },
+            "qwen": {
+              "successes": 27,
+              "success_rate": 0.9642857142857143,
+              "spl": 0.49167096329920806
+            }
+          }
+        }
+      }
+    },
+    {
+      "round": "expanded03_full",
+      "job_id": "1532001.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "stage": "full",
+      "completed": false,
+      "comparisons": {}
+    },
+    {
+      "round": "focused_regression",
+      "job_id": "1531692.stdct-mgmt-02",
+      "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+      "stage": "known_case_regression",
+      "completed": true,
+      "comparisons": {}
+    },
+    {
+      "round": "consensus_probe",
+      "job_id": "1531646.stdct-mgmt-02",
+      "commit": "78da633fa968cd93d5103e72d16c62f14deedcb6",
+      "stage": "offline_probe_only",
+      "completed": true,
+      "comparisons": {}
+    }
+  ],
+  "restrictions": "Development reused for tuning; selected cases are not independent. Formal pending unless completed explicitly. Raw large trajectories and weights remain on server."
+}

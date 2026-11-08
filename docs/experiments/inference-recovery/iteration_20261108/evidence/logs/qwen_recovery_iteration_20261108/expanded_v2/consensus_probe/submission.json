@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-11-08T05:55:44+08:00",
+  "command": [
+    "qsub",
+    "-q",
+    "autox",
+    "-P",
+    "CFP04-SF-109",
+    "-N",
+    "qwen-consensus-probe",
+    "-l",
+    "walltime=00:30:00",
+    "-v",
+    "ITERATION_TREE=/scratch/e1538633/liuyi/SIGN-qwen-iter-consensus-probe,ITERATION_BATCH=/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/consensus_probe,ITERATION_STAGE=probe",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/consensus_probe/evaluate.pbs.log",
+    "/scratch/e1538633/liuyi/SIGN-qwen-iter-consensus-probe/scripts/recovery_iteration.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1531646.stdct-mgmt-02\n",
+  "stderr": "",
+  "job_id": "1531646.stdct-mgmt-02",
+  "commit": "78da633fa968cd93d5103e72d16c62f14deedcb6",
+  "tree": "/scratch/e1538633/liuyi/SIGN-qwen-iter-consensus-probe",
+  "stage": "offline_probe_only",
+  "events": 37,
+  "images": 74,
+  "navigation_submitted": false,
+  "model": "Qwen3.5-2B FP32",
+  "source_files": 88,
+  "asset_files": 207
+}

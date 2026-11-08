@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-11-08T08:13:43+08:00",
+  "behavior_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "scope": "Completed61 development comparisons only; repeat safety still running.",
+  "cases": {
+    "off": {
+      "episodes": 61,
+      "all_raw_episode_rows_equal": true,
+      "all_action_pose_hashes_equal": true
+    },
+    "rule": {
+      "episodes": 61,
+      "all_raw_episode_rows_equal": true,
+      "all_action_pose_hashes_equal": true
+    },
+    "qwen": {
+      "episodes": 61,
+      "all_raw_episode_rows_equal": true,
+      "all_action_pose_hashes_equal": true
+    }
+  }
+}

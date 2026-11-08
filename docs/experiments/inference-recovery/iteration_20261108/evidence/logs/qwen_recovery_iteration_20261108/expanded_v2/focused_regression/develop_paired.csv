@@ -1,0 +1,6 @@
+scene_id,episode_id,rule_success,qwen_success,rule_spl,qwen_spl,vlm_disagreements,first_action_difference,prefix_until_vlm_decision_matches,human_cause,human_notes
+data/scene_datasets/gibson/Swormville.glb,3205,1.0,1.0,0.21471832021054835,0.21471832021054835,0,,False,,
+data/scene_datasets/gibson/Swormville.glb,3248,1.0,1.0,0.2512654132640307,0.2512654132640307,0,,False,,
+data/scene_datasets/gibson/Swormville.glb,3242,1.0,1.0,0.8096766219626259,0.8096766219626259,0,,False,,
+data/scene_datasets/gibson/Swormville.glb,3040,0.0,1.0,0.0,0.219304681800278,1,90,True,,
+data/scene_datasets/gibson/Mosquito.glb,3364,1.0,1.0,0.24293849220881378,0.24293849220881378,0,,False,,

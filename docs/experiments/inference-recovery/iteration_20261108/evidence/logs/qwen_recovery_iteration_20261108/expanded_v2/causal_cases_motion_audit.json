@@ -1,0 +1,170 @@
+{
+  "note": "All1 rescue and4 harms retained. Passive QA only, not model inputs or human labels. Truncated plans remain censored; do not assume all8 forward steps execute.",
+  "rows": [
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3040"
+      ],
+      "old_outcome_category": "rescues",
+      "decision_step": 90,
+      "prefix_verified": true,
+      "arms": {
+        "rule": {
+          "trace_sha256": "b646edb0ade8804d2d86c17489530da7a205a94155ece69e877c2024b830c10d",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 1.2343847751617432,
+          "actual_advance_net_m": 1.1895848512649536,
+          "total_episode_path_m": 16.001358032226562,
+          "episode_steps": 500
+        },
+        "qwen": {
+          "trace_sha256": "8bce26060e1336cd38f8fbaf38e743bcd5887405ec57bdd41cb82fae88b8252d",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 1.1805756092071533,
+          "actual_advance_net_m": 1.1582618951797485,
+          "total_episode_path_m": 8.139416694641113,
+          "episode_steps": 123
+        }
+      }
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3364"
+      ],
+      "old_outcome_category": "harms",
+      "decision_step": 104,
+      "prefix_verified": true,
+      "arms": {
+        "rule": {
+          "trace_sha256": "a78e37169752624d266fe2c264a1b2fb0b7117dde7462e7b7bbedbc9b4c89127",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 1.5661439895629883,
+          "actual_advance_net_m": 1.5407978296279907,
+          "total_episode_path_m": 10.618279457092285,
+          "episode_steps": 156
+        },
+        "qwen": {
+          "trace_sha256": "cf3ca42a02be2db84a5441dc2523b9514509b999e6d5c87fa3d5941050207d31",
+          "planned_actions": 14,
+          "matched_plan_prefix": 4,
+          "completed_forward_commands": 0,
+          "plan_truncated": true,
+          "actual_advance_path_m": null,
+          "actual_advance_net_m": null,
+          "total_episode_path_m": 6.406219959259033,
+          "episode_steps": 109
+        }
+      }
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3248"
+      ],
+      "old_outcome_category": "harms",
+      "decision_step": 58,
+      "prefix_verified": true,
+      "arms": {
+        "rule": {
+          "trace_sha256": "f95f4ea6c4bd8cf695191064868d6da6ade89a8d2f8e69b91d9bcc9c923f975d",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 0.7970361113548279,
+          "actual_advance_net_m": 0.6897017955780029,
+          "total_episode_path_m": 38.919281005859375,
+          "episode_steps": 382
+        },
+        "qwen": {
+          "trace_sha256": "bea81a5872dd56fa83c9ef19ae96e1b4f7950ae132da06a9bb15318edfafd87a",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 1.2042713165283203,
+          "actual_advance_net_m": 1.154189944267273,
+          "total_episode_path_m": 4.165912628173828,
+          "episode_steps": 500
+        }
+      }
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3242"
+      ],
+      "old_outcome_category": "harms",
+      "decision_step": 67,
+      "prefix_verified": true,
+      "arms": {
+        "rule": {
+          "trace_sha256": "8794128e9a38e5aa5dbd8bd64825f14e54fa7da9a87594001f2e56f7f410d774",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 0.8581529259681702,
+          "actual_advance_net_m": 0.7378139495849609,
+          "total_episode_path_m": 9.163411140441895,
+          "episode_steps": 115
+        },
+        "qwen": {
+          "trace_sha256": "a2d8832516c6479dabbcc8f4c9bb3aa274bf2860a0e2364b35ee4c1fd19f7a87",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 1.2224195003509521,
+          "actual_advance_net_m": 1.151456356048584,
+          "total_episode_path_m": 11.696407318115234,
+          "episode_steps": 242
+        }
+      }
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "old_outcome_category": "harms",
+      "decision_step": 62,
+      "prefix_verified": true,
+      "arms": {
+        "rule": {
+          "trace_sha256": "f5ae1e5c289cce8524b23237d341cf7a0cb8b322a5b8410d780d20b9affe0cee",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 0.7574604749679565,
+          "actual_advance_net_m": 0.6655763387680054,
+          "total_episode_path_m": 39.18738555908203,
+          "episode_steps": 396
+        },
+        "qwen": {
+          "trace_sha256": "d9e7e221b99b6e6cfa1530023689cfed83e9f2af955e5a49374eb65ed369bebe",
+          "planned_actions": 14,
+          "matched_plan_prefix": 14,
+          "completed_forward_commands": 8,
+          "plan_truncated": false,
+          "actual_advance_path_m": 1.1926136016845703,
+          "actual_advance_net_m": 1.157544732093811,
+          "total_episode_path_m": 10.861090660095215,
+          "episode_steps": 500
+        }
+      }
+    }
+  ]
+}

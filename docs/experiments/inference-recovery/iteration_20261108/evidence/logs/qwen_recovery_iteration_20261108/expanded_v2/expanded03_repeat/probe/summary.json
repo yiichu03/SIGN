@@ -1,0 +1,15 @@
+{
+  "technical_passed": true,
+  "token_ids": {
+    "No": 2665,
+    "Unknown": 13394,
+    "Yes": 9175
+  },
+  "events": 7,
+  "source_events": "/scratch/e1538633/liuyi/logs/sign_inference_coverage256_20261108/qwen_active/dev_scan/native/recovery/events.jsonl",
+  "supported": 0,
+  "differs_from_rule": 0,
+  "min_candidate_mass": 0.996658205986023,
+  "blank_fallback": true,
+  "note": "Development-view readout only; offline direction agreement is not navigation gain or human ground truth."
+}

@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-11-08T06:35:19+08:00",
+  "command": [
+    "qalter",
+    "-l",
+    "walltime=01:00:00",
+    "1531657.stdct-mgmt-02"
+  ],
+  "returncode": 0,
+  "reason": "Previous full61 diagnostic31m53s; reduce unused scheduler reservation to60m for possible backfill, preserving ample runtime margin. No GPU/CPU/memory/steps/source changes.",
+  "effective_resources": {
+    "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0}",
+    "mem": "240gb",
+    "ncpus": 36,
+    "ngpus": 1,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 1,
+    "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+    "walltime": "01:00:00"
+  },
+  "state": "Q",
+  "original_submission": "submission.json preserved"
+}

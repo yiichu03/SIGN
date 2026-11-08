@@ -1,0 +1,559 @@
+{
+  "technical_passed": true,
+  "stage": "development",
+  "comparisons": {
+    "develop": {
+      "split": "develop",
+      "cases": {
+        "off": {
+          "mode": "off",
+          "split": "develop",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+          "reference": {
+            "case": "coverage256_125952000",
+            "training_step": 125952000,
+            "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+            "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+          },
+          "episodes": 61,
+          "scenes": 11,
+          "success_rate": 0.21311475409836064,
+          "spl": 0.06639800636659048,
+          "view_match": 0.21311475409836064,
+          "mean_collisions": 334.327868852459,
+          "mean_episode_steps": 441.5081967213115,
+          "new_m2_per_step_global": 0.023425664636863214,
+          "native_metrics": {
+            "eval_reward/average_reward": -2.103607416152954,
+            "eval_metrics/distance_to_goal": 5.0505475997924805,
+            "eval_metrics/success": 0.21311475336551666,
+            "eval_metrics/spl": 0.0663980096578598,
+            "eval_metrics/soft_spl": 0.1338551640510559,
+            "eval_metrics/distance_to_view": 7.54220724105835,
+            "eval_metrics/view_match": 0.21311475336551666,
+            "eval_metrics/view_angle": 142.76158142089844,
+            "eval_metrics/collisions.count": 334.327880859375,
+            "eval_metrics/observed_coverage.delta_m2": 0.0034426229540258646,
+            "eval_metrics/observed_coverage.new_area_m2": 10.342622756958008,
+            "eval_metrics/coverage_eval.steps": 441.5082092285156,
+            "eval_metrics/coverage_eval.new_area_m2": 10.342622756958008,
+            "eval_metrics/coverage_eval.new_m2_per_step": 0.03169456124305725
+          },
+          "seconds": 305.51838368800236,
+          "original_pose_sha_matches": 1,
+          "matched_goals_and_starts": true,
+          "controller_inputs": [
+            "rgb",
+            "target_rgb",
+            "executed_action_history"
+          ],
+          "native_reference": false,
+          "subset_full_reference_outputs_not_assumed_equal": true,
+          "max_episode_steps": 500,
+          "seed": 100,
+          "hash_seed": 0,
+          "source_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "diagnostic_num_envs": 1,
+          "full_evaluation_parallelism_unchanged": true
+        },
+        "rule": {
+          "mode": "rule",
+          "split": "develop",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+          "reference": {
+            "case": "coverage256_125952000",
+            "training_step": 125952000,
+            "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+            "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+          },
+          "episodes": 61,
+          "scenes": 11,
+          "success_rate": 0.4918032786885246,
+          "spl": 0.19304210332417335,
+          "view_match": 0.4918032786885246,
+          "mean_collisions": 200.0,
+          "mean_episode_steps": 346.60655737704917,
+          "new_m2_per_step_global": 0.03678758927304546,
+          "native_metrics": {
+            "eval_reward/average_reward": 1.693696141242981,
+            "eval_metrics/distance_to_goal": 3.7607431411743164,
+            "eval_metrics/success": 0.49180328845977783,
+            "eval_metrics/spl": 0.1930420994758606,
+            "eval_metrics/soft_spl": 0.2115592211484909,
+            "eval_metrics/distance_to_view": 5.3906450271606445,
+            "eval_metrics/view_match": 0.49180328845977783,
+            "eval_metrics/view_angle": 93.38648986816406,
+            "eval_metrics/collisions.count": 200.0,
+            "eval_metrics/observed_coverage.delta_m2": 0.0026229508221149445,
+            "eval_metrics/observed_coverage.new_area_m2": 12.750819206237793,
+            "eval_metrics/coverage_eval.steps": 346.6065673828125,
+            "eval_metrics/coverage_eval.new_area_m2": 12.750819206237793,
+            "eval_metrics/coverage_eval.new_m2_per_step": 0.05199633911252022
+          },
+          "seconds": 412.06427254900336,
+          "original_pose_sha_matches": 0,
+          "matched_goals_and_starts": true,
+          "controller_inputs": [
+            "rgb",
+            "target_rgb",
+            "executed_action_history"
+          ],
+          "native_reference": false,
+          "subset_full_reference_outputs_not_assumed_equal": true,
+          "max_episode_steps": 500,
+          "seed": 100,
+          "hash_seed": 0,
+          "source_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "diagnostic_num_envs": 1,
+          "full_evaluation_parallelism_unchanged": true,
+          "harness": {
+            "attempts": 35,
+            "overrides": 1330,
+            "rejected": 0,
+            "survey_steps": 840,
+            "recovery_steps": 490,
+            "completed_surveys": 35,
+            "selections": {
+              "A": 32,
+              "B": 3,
+              "C": 0
+            },
+            "events": 35,
+            "worker_started": false,
+            "worker_seconds": 0.0,
+            "render_seconds": 14.727882957900874,
+            "total_controller_seconds": 123.53363994712709,
+            "mode": "rule",
+            "active_survey": true,
+            "max_override_steps": 76,
+            "candidate_affordance": true,
+            "vlm_selections": 0,
+            "fallback_selections": 0,
+            "vlm_rule_disagreements": 0
+          }
+        },
+        "qwen": {
+          "mode": "qwen",
+          "split": "develop",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+          "reference": {
+            "case": "coverage256_125952000",
+            "training_step": 125952000,
+            "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+            "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+          },
+          "episodes": 61,
+          "scenes": 11,
+          "success_rate": 0.4426229508196721,
+          "spl": 0.16313331908414705,
+          "view_match": 0.4426229508196721,
+          "mean_collisions": 212.1639344262295,
+          "mean_episode_steps": 351.95081967213116,
+          "new_m2_per_step_global": 0.03468442871116494,
+          "native_metrics": {
+            "eval_reward/average_reward": 1.032335877418518,
+            "eval_metrics/distance_to_goal": 4.089963912963867,
+            "eval_metrics/success": 0.44262295961380005,
+            "eval_metrics/spl": 0.16313332319259644,
+            "eval_metrics/soft_spl": 0.1946556121110916,
+            "eval_metrics/distance_to_view": 5.875611305236816,
+            "eval_metrics/view_match": 0.44262295961380005,
+            "eval_metrics/view_angle": 102.31006622314453,
+            "eval_metrics/collisions.count": 212.1639404296875,
+            "eval_metrics/observed_coverage.delta_m2": 0.0026229508221149445,
+            "eval_metrics/observed_coverage.new_area_m2": 12.207213401794434,
+            "eval_metrics/coverage_eval.steps": 351.9508056640625,
+            "eval_metrics/coverage_eval.new_area_m2": 12.207213401794434,
+            "eval_metrics/coverage_eval.new_m2_per_step": 0.05032942444086075
+          },
+          "seconds": 540.8618621170172,
+          "original_pose_sha_matches": 0,
+          "matched_goals_and_starts": true,
+          "controller_inputs": [
+            "rgb",
+            "target_rgb",
+            "executed_action_history"
+          ],
+          "native_reference": false,
+          "subset_full_reference_outputs_not_assumed_equal": true,
+          "max_episode_steps": 500,
+          "seed": 100,
+          "hash_seed": 0,
+          "source_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "diagnostic_num_envs": 1,
+          "full_evaluation_parallelism_unchanged": true,
+          "harness": {
+            "attempts": 37,
+            "overrides": 1396,
+            "rejected": 0,
+            "survey_steps": 888,
+            "recovery_steps": 508,
+            "completed_surveys": 37,
+            "selections": {
+              "A": 21,
+              "B": 16,
+              "C": 0
+            },
+            "events": 37,
+            "worker_started": true,
+            "worker_seconds": 14.508566456963308,
+            "render_seconds": 20.67561525577912,
+            "total_controller_seconds": 183.5908323736512,
+            "mode": "qwen",
+            "active_survey": true,
+            "max_override_steps": 76,
+            "candidate_affordance": true,
+            "vlm_selections": 31,
+            "fallback_selections": 6,
+            "vlm_rule_disagreements": 15
+          }
+        }
+      },
+      "episodes": 61,
+      "rescues": [
+        {
+          "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+          "episode_id": "3040",
+          "rule_success": 0.0,
+          "qwen_success": 1.0,
+          "rule_spl": 0.0,
+          "qwen_spl": 0.219304681800278,
+          "vlm_disagreements": 1,
+          "first_action_difference": 90,
+          "prefix_until_vlm_decision_matches": true,
+          "human_cause": "",
+          "human_notes": ""
+        }
+      ],
+      "harms": [
+        {
+          "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+          "episode_id": "3364",
+          "rule_success": 1.0,
+          "qwen_success": 0.0,
+          "rule_spl": 0.24293849220881378,
+          "qwen_spl": 0.0,
+          "vlm_disagreements": 1,
+          "first_action_difference": 104,
+          "prefix_until_vlm_decision_matches": true,
+          "human_cause": "",
+          "human_notes": ""
+        },
+        {
+          "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+          "episode_id": "3248",
+          "rule_success": 1.0,
+          "qwen_success": 0.0,
+          "rule_spl": 0.2512654132640307,
+          "qwen_spl": 0.0,
+          "vlm_disagreements": 1,
+          "first_action_difference": 58,
+          "prefix_until_vlm_decision_matches": true,
+          "human_cause": "",
+          "human_notes": ""
+        },
+        {
+          "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+          "episode_id": "3242",
+          "rule_success": 1.0,
+          "qwen_success": 0.0,
+          "rule_spl": 0.8096766219626259,
+          "qwen_spl": 0.0,
+          "vlm_disagreements": 2,
+          "first_action_difference": 67,
+          "prefix_until_vlm_decision_matches": true,
+          "human_cause": "",
+          "human_notes": ""
+        },
+        {
+          "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+          "episode_id": "3205",
+          "rule_success": 1.0,
+          "qwen_success": 0.0,
+          "rule_spl": 0.21471832021054835,
+          "qwen_spl": 0.0,
+          "vlm_disagreements": 1,
+          "first_action_difference": 62,
+          "prefix_until_vlm_decision_matches": true,
+          "human_cause": "",
+          "human_notes": ""
+        }
+      ],
+      "net_successes": -3,
+      "supported_rescues": 1,
+      "sr_delta_pp": -4.918032786885246,
+      "spl_delta_pp": -2.99087842400263,
+      "note": "Purpose-selected or separately reserved subset. Prefix audits use simulator telemetry after execution, never as Agent input. Human causes remain blank.",
+      "strata": {
+        "original24": {
+          "episodes": 24,
+          "cases": {
+            "off": {
+              "success_rate": 0.20833333333333334,
+              "spl": 0.06228725834406382
+            },
+            "rule": {
+              "success_rate": 0.4166666666666667,
+              "spl": 0.17012402404779572
+            },
+            "qwen": {
+              "success_rate": 0.4166666666666667,
+              "spl": 0.16456929412549282
+            }
+          },
+          "net_successes": 0,
+          "supported_rescues": 0
+        },
+        "added37": {
+          "episodes": 37,
+          "cases": {
+            "off": {
+              "success_rate": 0.21621621621621623,
+              "spl": 0.0690644375163375
+            },
+            "rule": {
+              "success_rate": 0.5405405405405406,
+              "spl": 0.20790788447641828
+            },
+            "qwen": {
+              "success_rate": 0.4594594594594595,
+              "spl": 0.16220187581408493
+            }
+          },
+          "net_successes": -3,
+          "supported_rescues": 1
+        }
+      }
+    },
+    "safety": {
+      "split": "safety",
+      "cases": {
+        "off": {
+          "mode": "off",
+          "split": "safety",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+          "reference": {
+            "case": "coverage256_125952000",
+            "training_step": 125952000,
+            "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+            "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+          },
+          "episodes": 28,
+          "scenes": 14,
+          "success_rate": 0.9642857142857143,
+          "spl": 0.49167096329920806,
+          "view_match": 0.9642857142857143,
+          "mean_collisions": 29.607142857142858,
+          "mean_episode_steps": 125.17857142857143,
+          "new_m2_per_step_global": 0.1033808844507846,
+          "native_metrics": {
+            "eval_reward/average_reward": 7.6660075187683105,
+            "eval_metrics/distance_to_goal": 0.6499971747398376,
+            "eval_metrics/success": 0.9642857313156128,
+            "eval_metrics/spl": 0.49167096614837646,
+            "eval_metrics/soft_spl": 0.4403601884841919,
+            "eval_metrics/distance_to_view": 0.8410360813140869,
+            "eval_metrics/view_match": 0.9642857313156128,
+            "eval_metrics/view_angle": 10.945722579956055,
+            "eval_metrics/collisions.count": 29.60714340209961,
+            "eval_metrics/observed_coverage.delta_m2": 0.0,
+            "eval_metrics/observed_coverage.new_area_m2": 12.941071510314941,
+            "eval_metrics/coverage_eval.steps": 125.17857360839844,
+            "eval_metrics/coverage_eval.new_area_m2": 12.941071510314941,
+            "eval_metrics/coverage_eval.new_m2_per_step": 0.19601662456989288
+          },
+          "seconds": 53.79770275903866,
+          "original_pose_sha_matches": 1,
+          "matched_goals_and_starts": true,
+          "controller_inputs": [
+            "rgb",
+            "target_rgb",
+            "executed_action_history"
+          ],
+          "native_reference": false,
+          "subset_full_reference_outputs_not_assumed_equal": true,
+          "max_episode_steps": 500,
+          "seed": 100,
+          "hash_seed": 0,
+          "source_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "diagnostic_num_envs": 1,
+          "full_evaluation_parallelism_unchanged": true
+        },
+        "rule": {
+          "mode": "rule",
+          "split": "safety",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+          "reference": {
+            "case": "coverage256_125952000",
+            "training_step": 125952000,
+            "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+            "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+          },
+          "episodes": 28,
+          "scenes": 14,
+          "success_rate": 0.9642857142857143,
+          "spl": 0.49167096329920806,
+          "view_match": 0.9642857142857143,
+          "mean_collisions": 29.607142857142858,
+          "mean_episode_steps": 125.17857142857143,
+          "new_m2_per_step_global": 0.1033808844507846,
+          "native_metrics": {
+            "eval_reward/average_reward": 7.6660075187683105,
+            "eval_metrics/distance_to_goal": 0.6499971747398376,
+            "eval_metrics/success": 0.9642857313156128,
+            "eval_metrics/spl": 0.49167096614837646,
+            "eval_metrics/soft_spl": 0.4403601884841919,
+            "eval_metrics/distance_to_view": 0.8410360813140869,
+            "eval_metrics/view_match": 0.9642857313156128,
+            "eval_metrics/view_angle": 10.945722579956055,
+            "eval_metrics/collisions.count": 29.60714340209961,
+            "eval_metrics/observed_coverage.delta_m2": 0.0,
+            "eval_metrics/observed_coverage.new_area_m2": 12.941071510314941,
+            "eval_metrics/coverage_eval.steps": 125.17857360839844,
+            "eval_metrics/coverage_eval.new_area_m2": 12.941071510314941,
+            "eval_metrics/coverage_eval.new_m2_per_step": 0.19601662456989288
+          },
+          "seconds": 97.08805116498843,
+          "original_pose_sha_matches": 1,
+          "matched_goals_and_starts": true,
+          "controller_inputs": [
+            "rgb",
+            "target_rgb",
+            "executed_action_history"
+          ],
+          "native_reference": false,
+          "subset_full_reference_outputs_not_assumed_equal": true,
+          "max_episode_steps": 500,
+          "seed": 100,
+          "hash_seed": 0,
+          "source_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "diagnostic_num_envs": 1,
+          "full_evaluation_parallelism_unchanged": true,
+          "harness": {
+            "attempts": 0,
+            "overrides": 0,
+            "rejected": 0,
+            "survey_steps": 0,
+            "recovery_steps": 0,
+            "completed_surveys": 0,
+            "selections": {
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "events": 0,
+            "worker_started": false,
+            "worker_seconds": 0.0,
+            "render_seconds": 0.0,
+            "total_controller_seconds": 15.597111872863024,
+            "mode": "rule",
+            "active_survey": true,
+            "max_override_steps": 76,
+            "candidate_affordance": true,
+            "vlm_selections": 0,
+            "fallback_selections": 0,
+            "vlm_rule_disagreements": 0
+          }
+        },
+        "qwen": {
+          "mode": "qwen",
+          "split": "safety",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+          "reference": {
+            "case": "coverage256_125952000",
+            "training_step": 125952000,
+            "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+            "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+          },
+          "episodes": 28,
+          "scenes": 14,
+          "success_rate": 0.9642857142857143,
+          "spl": 0.49167096329920806,
+          "view_match": 0.9642857142857143,
+          "mean_collisions": 29.607142857142858,
+          "mean_episode_steps": 125.17857142857143,
+          "new_m2_per_step_global": 0.1033808844507846,
+          "native_metrics": {
+            "eval_reward/average_reward": 7.6660075187683105,
+            "eval_metrics/distance_to_goal": 0.6499971747398376,
+            "eval_metrics/success": 0.9642857313156128,
+            "eval_metrics/spl": 0.49167096614837646,
+            "eval_metrics/soft_spl": 0.4403601884841919,
+            "eval_metrics/distance_to_view": 0.8410360813140869,
+            "eval_metrics/view_match": 0.9642857313156128,
+            "eval_metrics/view_angle": 10.945722579956055,
+            "eval_metrics/collisions.count": 29.60714340209961,
+            "eval_metrics/observed_coverage.delta_m2": 0.0,
+            "eval_metrics/observed_coverage.new_area_m2": 12.941071510314941,
+            "eval_metrics/coverage_eval.steps": 125.17857360839844,
+            "eval_metrics/coverage_eval.new_area_m2": 12.941071510314941,
+            "eval_metrics/coverage_eval.new_m2_per_step": 0.19601662456989288
+          },
+          "seconds": 98.61197956802789,
+          "original_pose_sha_matches": 1,
+          "matched_goals_and_starts": true,
+          "controller_inputs": [
+            "rgb",
+            "target_rgb",
+            "executed_action_history"
+          ],
+          "native_reference": false,
+          "subset_full_reference_outputs_not_assumed_equal": true,
+          "max_episode_steps": 500,
+          "seed": 100,
+          "hash_seed": 0,
+          "source_commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "diagnostic_num_envs": 1,
+          "full_evaluation_parallelism_unchanged": true,
+          "harness": {
+            "attempts": 0,
+            "overrides": 0,
+            "rejected": 0,
+            "survey_steps": 0,
+            "recovery_steps": 0,
+            "completed_surveys": 0,
+            "selections": {
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "events": 0,
+            "worker_started": false,
+            "worker_seconds": 0.0,
+            "render_seconds": 0.0,
+            "total_controller_seconds": 15.492804592649918,
+            "mode": "qwen",
+            "active_survey": true,
+            "max_override_steps": 76,
+            "candidate_affordance": true,
+            "vlm_selections": 0,
+            "fallback_selections": 0,
+            "vlm_rule_disagreements": 0
+          }
+        }
+      },
+      "episodes": 28,
+      "rescues": [],
+      "harms": [],
+      "net_successes": 0,
+      "supported_rescues": 0,
+      "sr_delta_pp": 0.0,
+      "spl_delta_pp": 0.0,
+      "note": "Purpose-selected or separately reserved subset. Prefix audits use simulator telemetry after execution, never as Agent input. Human causes remain blank."
+    }
+  },
+  "passes_fixed_gain_gate": false,
+  "note": "Passing development is exploratory; confirmation must use a frozen commit and untouched cases. No automatic full submission or performance claim from development alone."
+}

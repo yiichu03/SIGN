@@ -130,3 +130,7 @@ habitat_baselines.eval.split test_easy
 ## Qwen history with solid paths
 
 [Results, controls and validation](docs/experiments/qwen-history-solid/VALIDATION.md) · [128/256 report](docs/experiments/qwen-history-solid/REPORT.md) · [Blank human review table](docs/experiments/qwen-history-solid/human_review.csv)
+
+## Qwen2B inference recovery
+
+[Iteration evidence and frozen Gibson validation](docs/experiments/inference-recovery/iteration_20261108/README.md) · [Protocol and development history](docs/experiments/inference-recovery/ITERATION_PLAN.md)

@@ -1,0 +1,106 @@
+{
+  "recorded_at": "2026-11-08T03:03:45+08:00",
+  "metrics_and_actions_passed": true,
+  "checkpoint_step": 125952000,
+  "cases": {
+    "confirm_off": {
+      "episodes": 280,
+      "sr": 0.8964285714285715,
+      "spl": 0.55801118205067,
+      "mean_collisions": 30.085714285714285,
+      "mean_steps": 111.175,
+      "seconds": 260.1528532279772,
+      "harness": null
+    },
+    "confirm_rule": {
+      "episodes": 280,
+      "sr": 0.8964285714285715,
+      "spl": 0.5581736813526633,
+      "mean_collisions": 28.542857142857144,
+      "mean_steps": 109.78571428571429,
+      "seconds": 301.00738935597474,
+      "harness": {
+        "attempts": 4,
+        "overrides": 68,
+        "rejected": 0,
+        "survey_steps": 48,
+        "recovery_steps": 20,
+        "completed_surveys": 4,
+        "selections": {
+          "A": 4,
+          "B": 0,
+          "C": 0
+        },
+        "events": 4,
+        "worker_started": false,
+        "worker_seconds": 0.0,
+        "render_seconds": 1.7399428579374216,
+        "total_controller_seconds": 26.666286689287517,
+        "mode": "rule",
+        "active_survey": true,
+        "max_override_steps": 34,
+        "candidate_affordance": true,
+        "vlm_selections": 0,
+        "fallback_selections": 0,
+        "vlm_rule_disagreements": 0
+      }
+    },
+    "confirm_qwen": {
+      "episodes": 280,
+      "sr": 0.8964285714285715,
+      "spl": 0.5581736813526633,
+      "mean_collisions": 28.542857142857144,
+      "mean_steps": 109.78571428571429,
+      "seconds": 483.76645964797353,
+      "harness": {
+        "attempts": 4,
+        "overrides": 68,
+        "rejected": 0,
+        "survey_steps": 48,
+        "recovery_steps": 20,
+        "completed_surveys": 4,
+        "selections": {
+          "A": 4,
+          "B": 0,
+          "C": 0
+        },
+        "events": 4,
+        "worker_started": true,
+        "worker_seconds": 7.074267899035476,
+        "render_seconds": 16.492083984951023,
+        "total_controller_seconds": 68.36328191607026,
+        "mode": "qwen",
+        "active_survey": true,
+        "max_override_steps": 34,
+        "candidate_affordance": true,
+        "vlm_selections": 0,
+        "fallback_selections": 4,
+        "vlm_rule_disagreements": 0
+      }
+    }
+  },
+  "actual_action_hash_matches": 280,
+  "exact_episode_record_matches": 280,
+  "online_events": 4,
+  "vlm_selections": 0,
+  "rule_fallbacks": 4,
+  "disagreements_with_rule": 0,
+  "qwen_vs_matched_rule_sr_delta_pp": 0.0,
+  "qwen_vs_matched_rule_spl_delta_pp": 0.0,
+  "interpretation": "All280 actual action digests and raw episode records match the scan-rule control. This version contributes no additional navigation behavior or SR/SPL benefit on this confirmation subset. Development classifier label-order instability is a separate observed diagnostic, not human accuracy truth.",
+  "pbs": {
+    "1531403": {
+      "returncode": 0,
+      "stdout": "Job Id: 1531403.stdct-mgmt-02\n    Job_Name = qwen-candidate\n    Job_Owner = e1538633@vanda.nus.edu.sg\n    resources_used.cpupercent = 176\n    resources_used.cput = 00:33:04\n    resources_used.gpu_usage = GN-A40-037(cuda.0.energyConsumed=6704J,\n\t cuda.0.lowUtilizationTime=0.000s,\n\t cuda.0.maxGpuMemoryUsed=16216.094MB, cuda.0.memoryClock_min=405MHz,\n\t cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz,\n\t cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=59%,\n\t cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20,\n\t cuda.0.powerViolationTime=0.000s,\n\t cuda.0.reliabilityViolationTime=0.000s,\n\t cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=1266s,\n\t cuda.0.usagePerc=4.866%, cuda.0.memUsagePerc=21.577%)\n    resources_used.mem = 7909568kb\n    resources_used.ncpus = 36\n    resources_used.ngpus = 0\n    resources_used.vmem = 85065280kb\n    resources_used.walltime = 00:24:16\n    job_state = F\n    queue = batch_gpux\n    server = stdct-mgmt-02\n    Checkpoint = u\n    ctime = Sun Nov  8 02:37:13 2026\n    Error_Path = vanda.nus.edu.sg:/scratch/e1538633/liuyi/qwen-candidate.e15314\n\t03\n    exec_host = GN-A40-037/0*36\n    exec_vnode = (GN-A40-037[0]:ncpus=36:mem=240gb:ngpus=1)\n    Hold_Types = n\n    Join_Path = oe\n    Keep_Files = oed\n    Mail_Points = a\n    mtime = Sun Nov  8 03:03:23 2026\n    Output_Path = stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/sign_qw\n\ten_candidate_recovery_20261108/attempt1/evaluate.pbs.log\n    Priority = 0\n    qtime = Sun Nov  8 02:37:13 2026\n    Rerunable = True\n    Resource_List.am_job_cache = {\"job.queue_charge_rate\": 1.0,\n\t \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0,\n\t \"am_cloud_enabled\": false}\n    Resource_List.mem = 240gb\n    Resource_List.ncpus = 36\n    Resource_List.ngpus = 1\n    Resource_List.nodect = 1\n    Resource_List.place = free\n    Resource_List.queue_charge_rate = 1\n    Resource_List.select = 1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40\n    Resource_List.walltime = 02:00:00\n    stime = Sun Nov  8 02:39:04 2026\n    obittime = Sun Nov  8 03:03:23 2026\n    session_id = 2130261\n    jobdir = /home/svu/e1538633\n    substate = 92\n    Variable_List = PBS_O_HOME=/home/svu/e1538633,PBS_O_LANG=C.UTF-8,\n\tPBS_O_LOGNAME=e1538633,\n\tPBS_O_PATH=/nfs/home/svu/e1538633/.codex/packages/app-server-daemon/re\n\tleases/0.167.0-x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633/\n\t.codex/tmp/arg0-linux/codex-arg0rqlLN1:/home/svu/e1538633/.codex/tmp/ar\n\tg0-linux/codex-arg07831cR:/nfs/home/svu/e1538633/.codex/packages/app-se\n\trver-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home\n\t/svu/e1538633/.codex/tmp/arg0-linux/codex-arg0DOuIGn:/nfs/home/svu/e153\n\t8633/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-l\n\tinux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633\n\t/.local/bin:/home/svu/e1538633/.local/bin:/app1/ebapps/arches/flat-avx5\n\t12/software/nodejs/22.16.0-GCCcore-14.2.0/bin:/app1/ebapps/arches/flat-\n\tavx512/software/OpenSSL/3/bin:/app1/ebapps/arches/flat-avx2/software/IC\n\tU/76.1-GCCcore-14.2.0/sbin:/app1/ebapps/arches/flat-avx2/software/ICU/7\n\t6.1-GCCcore-14.2.0/bin:/app1/ebapps/arches/flat-avx512/software/GCCcore\n\t/14.2.0/bin:/home/svu/e1538633/.local/bin:/home/svu/e1538633/bin:/cm/sh\n\tared/apps/apptainer/1.4.1/bin:/cm/local/apps/environment-modules/4.5.3/\n\t/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/am/python/b\n\tin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin:/opt/pb\n\ts/bin:/opt/am/python/bin:/opt/pbs/bin,\n\tPBS_O_MAIL=/var/spool/mail/e1538633,PBS_O_SHELL=/bin/bash,\n\tPBS_O_INTERACTIVE_AUTH_METHOD=resvport,\n\tPBS_O_HOST=stdct-login-01.stdct.loc,\n\tPBS_O_WORKDIR=/scratch/e1538633/liuyi,PBS_O_SYSTEM=Linux,\n\tCANDIDATE_RECOVERY_BATCH=/scratch/e1538633/liuyi/logs/sign_qwen_candid\n\tate_recovery_20261108/attempt1,PBS_O_QUEUE=autox\n    comment = Job run at Sun Nov 08 at 02:39 on (GN-A40-037[0]:ncpus=36:mem=240\n\tgb:ngpus=1) and finished\n    etime = Sun Nov  8 02:37:13 2026\n    run_count = 1\n    Stageout_status = 1\n    Exit_status = 0\n    Submit_arguments = -q autox -P CFP04-SF-109 -v CANDIDATE_RECOVERY_BATCH=/sc\n\tratch/e1538633/liuyi/logs/sign_qwen_candidate_recovery_20261108/attempt\n\t1 -o /scratch/e1538633/liuyi/logs/sign_qwen_candidate_recovery_20261108\n\t/attempt1/evaluate.pbs.log /scratch/e1538633/liuyi/SIGN-qwen-candidate-\n\trecovery/scripts/candidate_recovery.pbs\n    history_timestamp = 1794078203\n    project = CFP04-SF-109\n    Submit_Host = vanda.nus.edu.sg\n\n",
+      "stderr": ""
+    },
+    "1531082": {
+      "returncode": 0,
+      "stdout": "Job Id: 1531082.stdct-mgmt-02\n    Job_Name = cov256-rule\n    Job_Owner = e1538633@vanda.nus.edu.sg\n    resources_used.cpupercent = 225\n    resources_used.cput = 02:13:58\n    resources_used.gpu_usage = GN-A40-094(cuda.0.energyConsumed=7542J,\n\t cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=8276.926MB,\n\t cuda.0.memoryClock_min=0MHz, cuda.0.memoryClock_max=7251MHz,\n\t cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%,\n\t cuda.0.memoryUtilization_max=5%, cuda.0.memoryUtilization_avg=0%,\n\t cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s,\n\t cuda.0.reliabilityViolationTime=0.000s,\n\t cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=4292s,\n\t cuda.0.usagePerc=6.875%, cuda.0.memUsagePerc=1.958%)\n    resources_used.mem = 6497204kb\n    resources_used.ncpus = 36\n    resources_used.ngpus = 0\n    resources_used.vmem = 62725704kb\n    resources_used.walltime = 01:12:28\n    job_state = R\n    queue = batch_gpux\n    server = stdct-mgmt-02\n    Checkpoint = u\n    ctime = Sun Nov  8 01:32:08 2026\n    Error_Path = vanda.nus.edu.sg:/scratch/e1538633/liuyi/cov256-rule.e1531082\n    exec_host = GN-A40-094/0*36\n    exec_vnode = (GN-A40-094[0]:ncpus=36:mem=240gb:ngpus=1)\n    Hold_Types = n\n    Join_Path = oe\n    Keep_Files = oed\n    Mail_Points = a\n    mtime = Sun Nov  8 03:02:21 2026\n    Output_Path = stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/sign_in\n\tference_coverage256_20261108/rule_full/evaluate.pbs.log\n    Priority = 0\n    qtime = Sun Nov  8 01:32:08 2026\n    Rerunable = True\n    Resource_List.am_job_cache = {\"job.queue_charge_rate\": 1.0,\n\t \"job.walltime\": 10800, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0,\n\t \"am_cloud_enabled\": false}\n    Resource_List.mem = 240gb\n    Resource_List.ncpus = 36\n    Resource_List.ngpus = 1\n    Resource_List.nodect = 1\n    Resource_List.place = free\n    Resource_List.queue_charge_rate = 1\n    Resource_List.select = 1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40\n    Resource_List.walltime = 03:00:00\n    stime = Sun Nov  8 01:49:49 2026\n    session_id = 1562025\n    jobdir = /home/svu/e1538633\n    substate = 42\n    Variable_List = PBS_O_HOME=/home/svu/e1538633,PBS_O_LANG=C.UTF-8,\n\tPBS_O_LOGNAME=e1538633,\n\tPBS_O_PATH=/nfs/home/svu/e1538633/.codex/packages/app-server-daemon/re\n\tleases/0.167.0-x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633/\n\t.codex/tmp/arg0-linux/codex-arg0rqlLN1:/home/svu/e1538633/.codex/tmp/ar\n\tg0-linux/codex-arg07831cR:/nfs/home/svu/e1538633/.codex/packages/app-se\n\trver-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home\n\t/svu/e1538633/.codex/tmp/arg0-linux/codex-arg0DOuIGn:/nfs/home/svu/e153\n\t8633/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-l\n\tinux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/svu/e1538633\n\t/.local/bin:/home/svu/e1538633/.local/bin:/app1/ebapps/arches/flat-avx5\n\t12/software/nodejs/22.16.0-GCCcore-14.2.0/bin:/app1/ebapps/arches/flat-\n\tavx512/software/OpenSSL/3/bin:/app1/ebapps/arches/flat-avx2/software/IC\n\tU/76.1-GCCcore-14.2.0/sbin:/app1/ebapps/arches/flat-avx2/software/ICU/7\n\t6.1-GCCcore-14.2.0/bin:/app1/ebapps/arches/flat-avx512/software/GCCcore\n\t/14.2.0/bin:/home/svu/e1538633/.local/bin:/home/svu/e1538633/bin:/cm/sh\n\tared/apps/apptainer/1.4.1/bin:/cm/local/apps/environment-modules/4.5.3/\n\t/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/am/python/b\n\tin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin:/opt/pb\n\ts/bin:/opt/am/python/bin:/opt/pbs/bin,\n\tPBS_O_MAIL=/var/spool/mail/e1538633,PBS_O_SHELL=/bin/bash,\n\tPBS_O_INTERACTIVE_AUTH_METHOD=resvport,\n\tPBS_O_HOST=stdct-login-01.stdct.loc,\n\tPBS_O_WORKDIR=/scratch/e1538633/liuyi,PBS_O_SYSTEM=Linux,\n\tRECOVERY_CHECKPOINT_BATCH=/scratch/e1538633/liuyi/logs/sign_inference_\n\tcoverage256_20261108/rule_full,RECOVERY_SUITE=rule,PBS_O_QUEUE=autox\n    comment = Job run at Sun Nov 08 at 01:49 on (GN-A40-094[0]:ncpus=36:mem=240\n\tgb:ngpus=1)\n    etime = Sun Nov  8 01:32:08 2026\n    run_count = 1\n    Submit_arguments = -q autox -P CFP04-SF-109 -N cov256-rule -l walltime=03:0\n\t0:00 -v RECOVERY_CHECKPOINT_BATCH=/scratch/e1538633/liuyi/logs/sign_inf\n\terence_coverage256_20261108/rule_full,\n\tRECOVERY_SUITE=rule -o /scratch/e1538633/liuyi/logs/sign_inference_cov\n\terage256_20261108/rule_full/evaluate.pbs.log /scratch/e1538633/liuyi/SI\n\tGN-inference-coverage256/scripts/coverage_recovery.pbs\n    project = CFP04-SF-109\n    Submit_Host = vanda.nus.edu.sg\n\n",
+      "stderr": ""
+    }
+  },
+  "final_reviewed_at": "2026-11-08T03:05:39+08:00",
+  "producer_comparison_passed": true,
+  "comparison_sha256": "c4198ed2fdca1585d9ec0e35916b213b8e0128cea0efe71f7eb6cacb4bf1243c"
+}

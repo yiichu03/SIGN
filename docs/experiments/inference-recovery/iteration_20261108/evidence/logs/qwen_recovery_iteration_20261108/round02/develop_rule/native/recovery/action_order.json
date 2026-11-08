@@ -1,0 +1,14 @@
+{
+  "flattened": [
+    "angular_velocity",
+    "linear_velocity"
+  ],
+  "canonical": [
+    "linear_velocity",
+    "angular_velocity"
+  ],
+  "canonical_indices": [
+    1,
+    0
+  ]
+}
