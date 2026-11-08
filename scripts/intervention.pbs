@@ -1,0 +1,24 @@
+#!/bin/bash -l
+#PBS -N qwen-gate
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=06:00:00
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+: "${GATE_TREE:?}" "${GATE_BATCH:?}" "${GATE_ARM:?}"
+cd "$GATE_TREE"
+if [[ "$GATE_ARM" == check || "$GATE_ARM" == P3 || "$GATE_ARM" == P4 ]]; then
+    python /scratch/e1538633/liuyi/logs/qwen_memory_formal_20261108/launch_retry/prewarm.py --tree "$GATE_TREE" --output "$GATE_BATCH/prewarm_$GATE_ARM"
+fi
+if [[ "$GATE_ARM" == check ]]; then
+    python scripts/smoke_intervention.py --batch "$GATE_BATCH"
+else
+    python -c 'import json,os; from pathlib import Path; b=Path(os.environ["GATE_BATCH"]); c=json.loads((b/"checks/check_summary.json").read_text()); m=json.loads((b/"source_manifest.json").read_text()); assert c["passed"] and c["source_commit"]==m["commit"]'
+    python scripts/evaluate_recovery.py --batch "$GATE_BATCH" --run "$GATE_BATCH/full_$GATE_ARM" --split full --mode off --arm "$GATE_ARM"
+fi

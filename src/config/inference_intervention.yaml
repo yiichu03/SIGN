@@ -1,0 +1,5 @@
+inference_recovery:
+  fixed_recovery_choice: alternate
+  intervention_gate: disabled
+  gate_prompt: scripts/prompts/recovery_intervention.txt
+  gate_shadow: True

@@ -138,6 +138,9 @@ class State:
     memory_changed: int = 0
     feedback_calls: int = 0
     feedback_returns: int = 0
+    gate_calls: int = 0
+    gate_vetoes: int = 0
+    gate_history_changes: int = 0
 
     def observe(self, rgb):
         if self.last_action is not None:
@@ -212,6 +215,12 @@ class RecoveryHarness(AgentSupport):
         self.arm = getattr(cfg,'agent_variant','legacy')
         if self.arm not in ('legacy','A','B','C','D'):raise ValueError('Unknown agent variant')
         self.agent = self.arm != 'legacy' and cfg.mode=='qwen'
+        self.gate_mode = getattr(cfg, 'intervention_gate', 'disabled')
+        self.fixed_choice = getattr(cfg, 'fixed_recovery_choice', 'alternate')
+        if self.gate_mode not in ('disabled', 'current', 'history') or self.fixed_choice not in ('alternate', 'left'):
+            raise ValueError('Unknown gate or fixed recovery choice')
+        if self.gate_mode != 'disabled' and (cfg.mode != 'rule' or self.agent or not getattr(cfg, 'active_survey', False)):
+            raise ValueError('Pre-scan gates require the common matched-rule controller')
         self.technical_errors=0
         self.option_index=0
         if len(action_names) != 2 or set(action_names) != {'linear_velocity', 'angular_velocity'}:
@@ -256,6 +265,58 @@ class RecoveryHarness(AgentSupport):
         self.episode_serial = 0
         self.max_override_steps = cfg.max_interventions * (cfg.turn_steps+cfg.forward_steps+(4*self.survey_k if self.active_survey else 0))
 
+    def _start_survey(self, index, row, result):
+        state = self.states[index]
+        state.attempts += 1
+        state.survey = dict(row=row, start_step=state.step, views={}, view_steps={}, commanded_yaw=15*self.survey_k)
+        state.actions = deque(survey_actions(self.survey_k))
+        state.cooldown_until = state.step+4*self.survey_k+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
+        result[index] = state.actions.popleft()
+        state.issued_kind = 'scan'
+        state.overrides += 1
+        state.survey_overrides += 1
+        self._append('surveys.jsonl', dict(id=row['id'], episode=list(state.key), step=state.step,
+            phase='started', planned_command_steps=4*self.survey_k))
+
+    def _gate_pending(self, pending, result):
+        from src.recovery_gate import gate_request, current_shadow, select_gate
+        requests = []
+        for index, row in pending:
+            state = self.states[index]
+            started = time.perf_counter()
+            request = gate_request(state, row['id'], self.gate_mode, self.output/'inputs')
+            row['gate_request'] = request
+            selected = [state.images[-1]] if self.gate_mode == 'current' else [state.images[i] for i in (0, state.window//3, (2*state.window+2)//3, state.window)]
+            row['visual_input_valid'] = all(float(np.asarray(x).std()) >= 1. for x in selected)
+            self.render_seconds += time.perf_counter()-started
+            if row['visual_input_valid']:
+                requests.append(request)
+                if self.gate_mode == 'history' and getattr(self.cfg, 'gate_shadow', True):
+                    row['shadow_request'] = current_shadow(request)
+                    requests.append(row['shadow_request'])
+        values = {r['id']: r for r in self._agent_score(requests)}
+        for index, row in pending:
+            state = self.states[index]
+            value = values.get(row['gate_request']['id'], dict(valid=False))
+            word, reason = select_gate(value)
+            shadow = values.get(row.get('shadow_request', {}).get('id'))
+            shadow_word, shadow_reason = select_gate(shadow) if shadow is not None else (None, None)
+            changed = shadow_reason == reason == 'model_argmax' and word != shadow_word
+            changed_action = changed and ((word == 'progress') != (shadow_word == 'progress'))
+            state.gate_calls += 1
+            state.gate_history_changes += bool(changed_action)
+            row.update(gate_mode=self.gate_mode, gate_choice=word, gate_reason=reason, gate_model=value,
+                shadow_model=shadow, shadow_choice=shadow_word, shadow_reason=shadow_reason,
+                history_changed_choice=changed, history_changed_intervention=changed_action,
+                start_scan=word != 'progress', rule_direction='LEFT' if row['attempt'] % 2 else 'RIGHT')
+            if word == 'progress':
+                state.attempts += 1
+                state.gate_vetoes += 1
+                state.cooldown_until = state.step+self.cfg.cooldown
+            else:
+                self._start_survey(index, row, result)
+            self._append('gate_events.jsonl', row)
+
     def _append(self, name, row):
         with (self.output/name).open('a') as f:
             f.write(json.dumps(row, allow_nan=False)+'\n')
@@ -271,6 +332,7 @@ class RecoveryHarness(AgentSupport):
             raise ValueError('Expected one real binary mask per environment')
         result = before.copy()
         pending = []
+        gate_pending = []
         for i, (frame, action, key) in enumerate(zip(rgb, before, keys)):
             physical(action)
             key = tuple(key)
@@ -284,6 +346,7 @@ class RecoveryHarness(AgentSupport):
             elif state.key != key or state.finished:
                 raise RuntimeError('Episode changed without a real reset')
             if self.agent:self._agent_observe(state,frame)
+            if self.gate_mode != 'disabled':state.issued_kind = 'sign'
             state.observe(frame)
             if state.active_event is not None and state.step >= state.active_event['end_step']:
                 event = state.active_event
@@ -360,17 +423,10 @@ class RecoveryHarness(AgentSupport):
                     self.events += 1
                     row = dict(id=event_id, env_index=i, episode=list(key), step=state.step,
                         evidence=evidence, attempt=state.attempts+1)
-                    if self.active_survey:
-                        state.attempts += 1
-                        state.survey = dict(row=row, start_step=state.step, views={}, view_steps={}, commanded_yaw=15*self.survey_k)
-                        state.actions = deque(survey_actions(self.survey_k))
-                        state.cooldown_until = state.step+4*self.survey_k+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
-                        result[i] = state.actions.popleft()
-                        state.issued_kind="scan"
-                        state.overrides += 1
-                        state.survey_overrides += 1
-                        self._append('surveys.jsonl', dict(id=event_id, episode=list(key), step=state.step,
-                            phase='started', planned_command_steps=4*self.survey_k))
+                    if self.gate_mode != 'disabled':
+                        gate_pending.append((i, row))
+                    elif self.active_survey:
+                        self._start_survey(i, row, result)
                     else:
                         image = self.output/'inputs'/(event_id+'.png')
                         render_started = time.perf_counter()
@@ -378,6 +434,8 @@ class RecoveryHarness(AgentSupport):
                         self.render_seconds += time.perf_counter()-render_started
                         row.update(image=str(image), image_sha256=hashlib.sha256(image.read_bytes()).hexdigest())
                         pending.append((i, row))
+        if gate_pending:
+            self._gate_pending(gate_pending, result)
         choices = []
         if self.agent:
             pending,choices=self._agent_pending(pending,result)
@@ -416,7 +474,7 @@ class RecoveryHarness(AgentSupport):
                     label = choose(item['probabilities'], self.cfg.min_probability, self.cfg.min_margin)
                     choices.append((label, item))
         else:
-            choices = [('C' if self.cfg.mode == 'scan' else 'A' if row['attempt'] % 2 == 1 else 'B', {}) for i, row in pending]
+            choices = [('C' if self.cfg.mode == 'scan' else 'A' if self.fixed_choice == 'left' or row['attempt'] % 2 == 1 else 'B', {}) for i, row in pending]
         for (i, row), (label, detail) in zip(pending, choices):
             state = self.states[i]
             if not row.get('active_survey', False):
@@ -475,6 +533,7 @@ class RecoveryHarness(AgentSupport):
                 step=state.step, phase='ended_with_real_episode'))
         row.update(agent_variant=self.arm,memory_hits=state.memory_hits,memory_prompt_entries=state.memory_prompt_entries,
             memory_changed_decisions=state.memory_changed,feedback_calls=state.feedback_calls,feedback_returns=state.feedback_returns)
+        row.update(gate_calls=state.gate_calls, gate_vetoes=state.gate_vetoes, gate_history_changes=state.gate_history_changes)
         if state.memory is not None:
             row["memory_stats"]=dict(state.memory.stats)
             state.memory.clear("real_episode_finish")
@@ -494,4 +553,5 @@ class RecoveryHarness(AgentSupport):
             worker_seconds=self.worker_seconds, render_seconds=self.render_seconds,
             total_controller_seconds=self.total_seconds, mode=self.cfg.mode, active_survey=self.active_survey,
             max_override_steps=self.max_override_steps, candidate_affordance=self.candidate_affordance,
-            agent_variant=self.arm, technical_errors=self.technical_errors), indent=2)+'\n')
+            agent_variant=self.arm, technical_errors=self.technical_errors,
+            intervention_gate=self.gate_mode, fixed_recovery_choice=self.fixed_choice), indent=2)+'\n')

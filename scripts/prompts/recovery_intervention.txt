@@ -1,0 +1,12 @@
+You assess whether a robot should keep using its current navigation policy or begin a bounded local recovery.
+The camera images and actually executed velocity commands are the only evidence. No measured displacement, collision labels, map, target distance or task outcome is available.
+
+Images are identified by role and observation step. CURRENT is the latest image. HISTORY_STEP images, if present, are earlier observations from this same short episode window, shown in chronological order. Each RGB at step t is observed before action t. The listed velocity commands were executed between observations; a forward command does not prove that the robot moved.
+
+Classify the available evidence:
+progress: Clear visual evidence of useful forward passage or continuing movement through the scene supports letting the current policy continue. Turning that merely exposes a new view is not evidence of forward progress. An open-looking current image alone does not establish that movement occurred.
+blocked: The evidence supports sustained obstruction or repeated ineffective movement despite attempted forward motion. Repeated scene structure alone does not establish an unnecessary revisit; legitimate return paths are possible.
+unknown: There is insufficient or conflicting evidence. In particular, a single current image may show a visible obstruction but usually cannot establish temporal progress or persistent blockage. Do not invent unseen history or infer a global route.
+
+Judge this local observation window only. Use the real action sequence to distinguish turning from attempted translation. Do not use generic room preferences, image order or answer-word preferences as evidence.
+Return exactly one lowercase word: progress, blocked, or unknown.

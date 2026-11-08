@@ -10,9 +10,11 @@ import sys
 import time
 import traceback
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'src'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from qwen_single_image import SingleImageJudge
 from recovery_affordance import reversed_prompt
 from recovery_options import action_probabilities
+from src.recovery_gate import GATE_LABELS, validate_gate_request
 
 
 def emit(row):
@@ -23,14 +25,17 @@ def agent_score(judge, rows, prompts, output, request, verified, verify):
     """One resident model; real role-bound multi-image requests, never collages."""
     results = {}
     protocols=[('arbitration',('left','right','keep')),('balanced_arbitration',('A','B','C')),
-        ('no_goal_arbitration',('left','right','keep')),('feedback',('continue','return'))]
+        ('no_goal_arbitration',('left','right','keep')),('feedback',('continue','return')),
+        ('intervention_gate',GATE_LABELS)]
     for task, labels in protocols:
         selected=[r for r in rows if r['task']==task]
         if not selected:continue
         judge.prompt=prompts[task]
         for row in selected:
             roles=[x['role'] for x in row['images']]
+            if task == 'intervention_gate':validate_gate_request(row)
             expected=(['BEFORE_FORWARD','AFTER_FORWARD'] if task=='feedback' else
+                roles if task=='intervention_gate' else
                 ['CURRENT','LEFT','RIGHT'] if task=='no_goal_arbitration' else ['GOAL','CURRENT','LEFT','RIGHT'])
             if roles[:len(expected)]!=expected or len(roles)>8:raise RuntimeError('Multi-image role/order mismatch')
             if task=='no_goal_arbitration' and len(roles)!=3:raise RuntimeError('No-goal protocol must contain exactly three views')
@@ -74,6 +79,7 @@ def main():
     parser.add_argument('--feedback-prompt')
     parser.add_argument('--mapped-prompt',default=str(Path(__file__).resolve().parent/'prompts/recovery_agent_options.txt'))
     parser.add_argument('--no-goal-prompt',default=str(Path(__file__).resolve().parent/'prompts/recovery_agent_no_goal.txt'))
+    parser.add_argument('--gate-prompt',default=str(Path(__file__).resolve().parent/'prompts/recovery_intervention.txt'))
     parser.add_argument('--inverse-prompt')
     args = parser.parse_args()
     output = Path(args.output)
@@ -91,10 +97,12 @@ def main():
     agent_prompts=None
     if args.task=='agent':
         agent_prompts=dict(arbitration=prompt,feedback=Path(args.feedback_prompt).read_text(),
-            balanced_arbitration=Path(args.mapped_prompt).read_text(),no_goal_arbitration=Path(args.no_goal_prompt).read_text())
+            balanced_arbitration=Path(args.mapped_prompt).read_text(),no_goal_arbitration=Path(args.no_goal_prompt).read_text(),
+            intervention_gate=Path(args.gate_prompt).read_text())
         (output/'feedback_prompt.txt').write_text(agent_prompts['feedback'])
         (output/'mapped_prompt.txt').write_text(agent_prompts['balanced_arbitration'])
         (output/'no_goal_prompt.txt').write_text(agent_prompts['no_goal_arbitration'])
+        (output/'gate_prompt.txt').write_text(agent_prompts['intervention_gate'])
     version = hashlib.sha256(prompt.encode()).hexdigest()
     (output/'prompt.txt').write_text(prompt)
     if inverse is not None:

@@ -107,6 +107,7 @@ def main():
     if args.arm:
         exp_config += ','+str(TREE/'src/config/inference_memory_four_arm.yaml')
         exp_config += ','+str(TREE/'src/config/inference_six_ablation.yaml')
+        exp_config += ','+str(TREE/'src/config/inference_intervention.yaml')
         # Off stays native. Rule uses the unchanged matched-scan direction logic.
         opts += arm_opts
         opts += ['habitat_baselines.num_environments','6','habitat.seed','100','habitat.environment.max_episode_steps','500']
@@ -165,7 +166,7 @@ def main():
             rejected=sum(r['rejected'] for r in records), survey_steps=sum(r['survey_steps'] for r in records),
             recovery_steps=sum(r['recovery_steps'] for r in records), completed_surveys=sum(r['completed_surveys'] for r in records),
             selections={label:sum(r['selections'][label] for r in records) for label in 'ABC'}, **summary)
-        for name in ['vlm_selections', 'fallback_selections', 'vlm_rule_disagreements','memory_hits','memory_prompt_entries','memory_changed_decisions','feedback_calls','feedback_returns']:
+        for name in ['vlm_selections', 'fallback_selections', 'vlm_rule_disagreements','memory_hits','memory_prompt_entries','memory_changed_decisions','feedback_calls','feedback_returns','gate_calls','gate_vetoes','gate_history_changes']:
             result['harness'][name] = sum(r.get(name, 0) for r in records)
         if args.mode == 'disabled':
             assert not result['harness']['worker_started'] and result['harness']['overrides'] == 0

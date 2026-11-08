@@ -34,6 +34,7 @@ class QwenClient:
                 command += ['--feedback-prompt',str((tree/cfg.feedback_prompt).resolve())]
                 if getattr(cfg,'mapped_prompt',None):command += ['--mapped-prompt',str((tree/cfg.mapped_prompt).resolve())]
                 if getattr(cfg,'no_goal_prompt',None):command += ['--no-goal-prompt',str((tree/cfg.no_goal_prompt).resolve())]
+                if getattr(cfg,'gate_prompt',None):command += ['--gate-prompt',str((tree/cfg.gate_prompt).resolve())]
             if protocol=='semantic_balanced':
                 command += ['--inverse-prompt',str((tree/cfg.inverse_prompt).resolve())]
         self.process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,

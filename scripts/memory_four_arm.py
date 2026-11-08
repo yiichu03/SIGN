@@ -16,6 +16,10 @@ ARMS={
     'E4':('qwen',{'agent_variant':'A','forward_steps':4}),
     'E5':('qwen',{'agent_variant':'A','survey_turn_steps':4,'turn_steps':4,'prompt':'scripts/prompts/recovery_agent_60.txt'}),
     'E6':('qwen',{'agent_variant':'A','window':12}),
+    'P1':('rule',{'agent_variant':'legacy','fixed_recovery_choice':'left'}),
+    'P2':('scan',{'agent_variant':'legacy'}),
+    'P3':('rule',{'agent_variant':'legacy','intervention_gate':'current'}),
+    'P4':('rule',{'agent_variant':'legacy','intervention_gate':'history'}),
     'disabled':('disabled',{'agent_variant':'D'}),
 }
 

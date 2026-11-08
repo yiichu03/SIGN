@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#PBS -N gate-report
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=1:mem=6gb
+#PBS -l walltime=00:40:00
+#PBS -j oe
+set -euo pipefail
+export PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+: "${GATE_TREE:?}" "${GATE_BATCH:?}"
+cd "$GATE_TREE"
+/scratch/e1538633/liuyi/envs/sign-baseline/bin/python scripts/report_intervention.py --batch "$GATE_BATCH" --output "$GATE_BATCH/formal_review"
