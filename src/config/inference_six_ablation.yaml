@@ -1,0 +1,7 @@
+inference_recovery:
+  option_mapping: words
+  option_seed: 100
+  include_goal: True
+  agent_confidence_gate: False
+  mapped_prompt: scripts/prompts/recovery_agent_options.txt
+  no_goal_prompt: scripts/prompts/recovery_agent_no_goal.txt

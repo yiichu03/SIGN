@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#PBS -N qwen-six
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=36:mem=240gb:ngpus=1:gpu_model=A40
+#PBS -l walltime=06:00:00
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONNOUSERSITE=1
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 HABITAT_SIM_LOG=quiet MAGNUM_LOG=quiet
+: "${SIX_TREE:?}" "${SIX_BATCH:?}" "${SIX_ARM:?}"
+cd "$SIX_TREE"
+python /scratch/e1538633/liuyi/logs/qwen_memory_formal_20261108/launch_retry/prewarm.py --tree "$SIX_TREE" --output "$SIX_BATCH/prewarm_$SIX_ARM"
+if [[ "$SIX_ARM" == check ]]; then
+    python scripts/rescore_six_ablation.py --batch "$SIX_BATCH"
+    python scripts/smoke_six_ablation.py --batch "$SIX_BATCH"
+else
+    python -c 'import json,os; from pathlib import Path; b=Path(os.environ["SIX_BATCH"]); assert json.loads((b/"checks/check_summary.json").read_text())["passed"]'
+    python scripts/evaluate_recovery.py --batch "$SIX_BATCH" --run "$SIX_BATCH/full_$SIX_ARM" --split full --mode off --arm "$SIX_ARM"
+fi

@@ -213,6 +213,7 @@ class RecoveryHarness(AgentSupport):
         if self.arm not in ('legacy','A','B','C','D'):raise ValueError('Unknown agent variant')
         self.agent = self.arm != 'legacy' and cfg.mode=='qwen'
         self.technical_errors=0
+        self.option_index=0
         if len(action_names) != 2 or set(action_names) != {'linear_velocity', 'angular_velocity'}:
             raise ValueError('Unexpected flattened action names')
         self.action_indices = [action_names.index(n) for n in ('linear_velocity', 'angular_velocity')]
@@ -224,8 +225,10 @@ class RecoveryHarness(AgentSupport):
         self.candidate_gap = float(getattr(cfg, 'candidate_support_gap', 0.05))
         if self.candidate_affordance and (not self.active_survey or not np.isfinite(self.candidate_gap) or not 0 < self.candidate_gap <= 1):
             raise ValueError('Candidate affordances require active views and a positive support gap')
-        if self.agent and (not self.active_survey or self.candidate_protocol!='agent' or cfg.turn_steps!=6 or cfg.forward_steps!=8 or cfg.survey_turn_steps!=6):
-            raise ValueError('Four-arm agents require the frozen 24-scan / 6-turn / 8-forward protocol')
+        if self.agent and (not self.active_survey or self.candidate_protocol!='agent' or (cfg.survey_turn_steps,cfg.turn_steps) not in ((6,6),(4,4)) or cfg.forward_steps not in (4,8)):
+            raise ValueError('Agents require aligned bounded scan/recovery angles and durations')
+        if self.agent and self.arm=='B' and (cfg.turn_steps!=6 or cfg.survey_turn_steps!=6 or cfg.forward_steps!=8):
+            raise ValueError('Original closed-loop B requires its frozen 6-turn / 8-forward protocol')
         self.survey_k = getattr(cfg, 'survey_turn_steps', 3)
         if self.active_survey and (type(self.survey_k) is not int or self.survey_k < 1):
             raise ValueError('Invalid survey duration')

@@ -106,6 +106,7 @@ def main():
         exp_config += ','+str(TREE/'src/config/inference_candidate.yaml')
     if args.arm:
         exp_config += ','+str(TREE/'src/config/inference_memory_four_arm.yaml')
+        exp_config += ','+str(TREE/'src/config/inference_six_ablation.yaml')
         # Off stays native. Rule uses the unchanged matched-scan direction logic.
         opts += arm_opts
         opts += ['habitat_baselines.num_environments','6','habitat.seed','100','habitat.environment.max_episode_steps','500']

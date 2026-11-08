@@ -4,20 +4,22 @@ import json
 from collections import deque
 from pathlib import Path
 import numpy as np
+from src.recovery_options import balanced_option_map
 from src.recovery_memory import EpisodeMemory, forward_observation, physical_commands, rule_memory_keep
 
 
-def select_agent(value, feedback=False):
+def select_agent(value, feedback=False, minimum=0., margin=0.):
     labels=('continue','return') if feedback else ('left','right','keep')
     safe='return' if feedback else 'keep'
     try:
-        p=np.asarray(value['probabilities'],dtype=float)
+        p=np.asarray(value.get('action_probabilities',value['probabilities']),dtype=float)
         mass=float(value['candidate_mass'])
         if value.get('valid',True) is False or p.shape!=(len(labels),) or not np.isfinite(p).all() or (p<0).any() or not np.isclose(p.sum(),1,atol=1e-6):
             raise ValueError('invalid probabilities')
         if not np.isfinite(mass) or mass<.1:return safe,'insufficient_candidate_token_mass'
         rank=np.argsort(p)
         if p[rank[-1]]-p[rank[-2]]<=1e-6:return safe,'tied_choice'
+        if p[rank[-1]]+1e-12<minimum or p[rank[-1]]-p[rank[-2]]+1e-12<margin:return safe,'confidence_keep'
         return labels[int(rank[-1])],'model_argmax'
     except (KeyError,TypeError,ValueError):return safe,'invalid_model_evidence'
 
@@ -58,8 +60,12 @@ class AgentSupport:
         files=row['view_files']
         images=[image_item(role,files[name]['path']) for role,name in
             [('GOAL','goal'),('CURRENT','forward'),('LEFT','left'),('RIGHT','right')]]
-        context=dict(candidate_angles_command_deg={'LEFT':90,'RIGHT':-90},current_step=state.step)
-        base=dict(id=row['id'],task='arbitration',images=images,context=json.dumps(context))
+        angle=row['commanded_view_yaw']
+        context=dict(candidate_angles_command_deg={'LEFT':angle,'RIGHT':-angle},current_step=state.step)
+        if not getattr(self.cfg,'include_goal',True):
+            images=images[1:]
+        task='arbitration' if getattr(self.cfg,'include_goal',True) else 'no_goal_arbitration'
+        base=dict(id=row['id'],task=task,images=images,context=json.dumps(context))
         retrieved=[]
         if state.memory is not None:
             from PIL import Image
@@ -120,6 +126,11 @@ class AgentSupport:
             valid=all(float(np.asarray(Image.open(x['image'])).std())>=1. for x in request['images'][:4])
             row['visual_input_valid']=valid
             if valid:
+                if getattr(self.cfg,'option_mapping','words')=='balanced':
+                    mapping=balanced_option_map(self.option_index,int(getattr(self.cfg,'option_seed',100)))
+                    request.update(task='balanced_arbitration',option_map=mapping,mapping_index=self.option_index)
+                    context=json.loads(request['context']);context['option_to_action']=mapping;request['context']=json.dumps(context)
+                    row['mapping_index']=self.option_index;self.option_index+=1
                 requests.append(request)
                 if 'shadow_request' in row:requests.append(row['shadow_request'])
         feedback=[]
@@ -139,7 +150,8 @@ class AgentSupport:
         choices=[]
         for i,row in arbitration:
             state=self.states[i];value=values.get(row['id'],dict(valid=False))
-            word,reason=select_agent(value)
+            gated=bool(getattr(self.cfg,'agent_confidence_gate',False))
+            word,reason=select_agent(value,minimum=self.cfg.min_probability if gated else 0.,margin=self.cfg.min_margin if gated else 0.)
             label={'left':'A','right':'B','keep':'C'}[word]
             shadow=values.get(row['id']+':without_memory')
             shadow_word=select_agent(shadow)[0] if shadow is not None else None
@@ -153,6 +165,8 @@ class AgentSupport:
             detail=dict(source=source,reason=reason,raw=value,
                 semantic_choice=word,default_rule=default,differs_from_rule=label!=default,
                 shadow_without_memory=shadow,shadow_choice=shadow_word,memory_changed_decision=memory_changed,rule_memory=rule_memory)
+            if gated:detail['confidence_gate']=dict(min_probability=self.cfg.min_probability,min_margin=self.cfg.min_margin)
+            if 'option_map' in row['request']:detail['option_map']=row['request']['option_map']
             choices.append((label,detail))
         for i,row in feedback:
             state=self.states[i]
