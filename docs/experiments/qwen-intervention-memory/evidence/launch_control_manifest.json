@@ -1,0 +1,6 @@
+{
+  "source_commit": "8a94adf8bfb0c893ff850c6daf0c321cd73a4fcb",
+  "control_script": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/launch_once.py",
+  "sha256": "5ecb289cd6f31b5b58b48a2e8dadb89fba53ecf347f87c6a9f25d42bcb83d70a",
+  "purpose": "One authorized GPU check then P1-P4; retry only scheduler unavailability with no receipt; never modify existing jobs"
+}

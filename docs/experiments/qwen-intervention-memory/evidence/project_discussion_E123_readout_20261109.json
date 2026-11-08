@@ -1,0 +1,86 @@
+{
+  "time": "2026-11-09T01:05:35.545717+08:00",
+  "scope": "Read-only raw metrics/episode pair counts, not complete action-prefix audit",
+  "arms": {
+    "E1": {
+      "episodes": 4200,
+      "success_rate": 0.8835714285714286,
+      "spl": 0.5366452455114373,
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+      "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+      "success_count": 3711.0,
+      "comparisons": {
+        "A": {
+          "rescues": 13,
+          "harms": 16
+        },
+        "rule": {
+          "rescues": 8,
+          "harms": 18
+        }
+      },
+      "choices": {
+        "left": 51,
+        "keep": 53,
+        "right": 51
+      },
+      "reasons": {
+        "model_argmax": 155
+      },
+      "technical_errors": 0
+    },
+    "E2": {
+      "episodes": 4200,
+      "success_rate": 0.8861904761904762,
+      "spl": 0.5378106915828464,
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+      "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+      "success_count": 3722.0,
+      "comparisons": {
+        "A": {
+          "rescues": 8,
+          "harms": 0
+        },
+        "rule": {
+          "rescues": 4,
+          "harms": 3
+        }
+      },
+      "choices": {
+        "left": 147,
+        "right": 2
+      },
+      "reasons": {
+        "model_argmax": 149
+      },
+      "technical_errors": 0
+    },
+    "E3": {
+      "episodes": 4200,
+      "success_rate": 0.8792857142857143,
+      "spl": 0.5347692246843495,
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+      "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+      "success_count": 3693.0,
+      "comparisons": {
+        "A": {
+          "rescues": 7,
+          "harms": 28
+        },
+        "rule": {
+          "rescues": 6,
+          "harms": 34
+        }
+      },
+      "choices": {
+        "keep": 157,
+        "left": 11
+      },
+      "reasons": {
+        "confidence_keep": 157,
+        "model_argmax": 11
+      },
+      "technical_errors": 0
+    }
+  }
+}

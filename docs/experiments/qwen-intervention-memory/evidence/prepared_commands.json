@@ -1,0 +1,78 @@
+{
+  "commit": "8a94adf8bfb0c893ff850c6daf0c321cd73a4fcb",
+  "submitted": false,
+  "commands": {
+    "check": [
+      "qsub",
+      "-l",
+      "walltime=02:00:00",
+      "-q",
+      "autox",
+      "-P",
+      "CFP04-SF-109",
+      "-N",
+      "gate-check",
+      "-v",
+      "GATE_TREE=/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf,GATE_BATCH=/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf,GATE_ARM=check",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/pbs_check.log",
+      "/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf/scripts/intervention.pbs"
+    ],
+    "P1": [
+      "qsub",
+      "-q",
+      "autox",
+      "-P",
+      "CFP04-SF-109",
+      "-N",
+      "gate-P1",
+      "-v",
+      "GATE_TREE=/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf,GATE_BATCH=/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf,GATE_ARM=P1",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/pbs_P1.log",
+      "/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf/scripts/intervention.pbs"
+    ],
+    "P2": [
+      "qsub",
+      "-q",
+      "autox",
+      "-P",
+      "CFP04-SF-109",
+      "-N",
+      "gate-P2",
+      "-v",
+      "GATE_TREE=/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf,GATE_BATCH=/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf,GATE_ARM=P2",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/pbs_P2.log",
+      "/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf/scripts/intervention.pbs"
+    ],
+    "P3": [
+      "qsub",
+      "-q",
+      "autox",
+      "-P",
+      "CFP04-SF-109",
+      "-N",
+      "gate-P3",
+      "-v",
+      "GATE_TREE=/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf,GATE_BATCH=/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf,GATE_ARM=P3",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/pbs_P3.log",
+      "/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf/scripts/intervention.pbs"
+    ],
+    "P4": [
+      "qsub",
+      "-q",
+      "autox",
+      "-P",
+      "CFP04-SF-109",
+      "-N",
+      "gate-P4",
+      "-v",
+      "GATE_TREE=/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf,GATE_BATCH=/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf,GATE_ARM=P4",
+      "-o",
+      "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/pbs_P4.log",
+      "/scratch/e1538633/liuyi/SIGN-qwen-intervention-runtime-8a94adf/scripts/intervention.pbs"
+    ]
+  }
+}

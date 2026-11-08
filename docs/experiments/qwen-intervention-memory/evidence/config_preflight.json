@@ -1,0 +1,65 @@
+{
+  "off": {
+    "mode": "off",
+    "gate": "disabled",
+    "fixed_choice": "alternate",
+    "agent": "A",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  },
+  "rule": {
+    "mode": "rule",
+    "gate": "disabled",
+    "fixed_choice": "alternate",
+    "agent": "legacy",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  },
+  "A": {
+    "mode": "qwen",
+    "gate": "disabled",
+    "fixed_choice": "alternate",
+    "agent": "A",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  },
+  "P1": {
+    "mode": "rule",
+    "gate": "disabled",
+    "fixed_choice": "left",
+    "agent": "legacy",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  },
+  "P2": {
+    "mode": "scan",
+    "gate": "disabled",
+    "fixed_choice": "alternate",
+    "agent": "legacy",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  },
+  "P3": {
+    "mode": "rule",
+    "gate": "current",
+    "fixed_choice": "alternate",
+    "agent": "legacy",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  },
+  "P4": {
+    "mode": "rule",
+    "gate": "history",
+    "fixed_choice": "alternate",
+    "agent": "legacy",
+    "num_envs": 6,
+    "seed": 100,
+    "max_steps": 500
+  }
+}

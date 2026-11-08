@@ -1,0 +1,8 @@
+{
+  "off": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_off",
+  "rule": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule",
+  "A": "/scratch/e1538633/liuyi/logs/qwen_memory_formal_20261108/formal_retry/full_A",
+  "E2": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2",
+  "smoke_A": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/checks/smoke_A",
+  "smoke_rule": "/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_057740b/smoke_rule"
+}

@@ -1,0 +1,74 @@
+# liuyi 工作区约定
+
+## 启动与文档职责
+
+- 用户统一从 `/scratch/e1538633/liuyi` 启动 Codex，以这里为 SIGN / SIGN-SRU 工作区根目录。项目命令仍使用各自仓库要求的工作目录。
+- 每个新窗口先读本文件和 [STATUS.md](STATUS.md)，再按需查 [RUNBOOK.md](RUNBOOK.md) 及 [WORKLOG.md](WORKLOG.md) 的相关时间段；不要默认通读全部历史补录。
+- 长期主动维护四份根文档：本文件保存稳定规则；STATUS 保存当前目标、进度和下一步；RUNBOOK 保存操作与复现方法；WORKLOG 保存带时间戳的操作、错误、debug、实验结论和决策沿革。
+- Gibson对照基线停止步数、最后可评估权重及公开完整checkpoint验证分数，固定入口为 [STATUS快速索引](STATUS.md#gibson-reference)；原始证据和复核方法见 [RUNBOOK索引](RUNBOOK.md#gibson-checkpoints)。训练末步、控制台末步与checkpoint步数分开记录。
+- 项目 README 保留项目介绍与导航；已发布研究报告、证据和代码快照留在原位。不要另建重复的 CONTEXT、MEMORY、HANDOFF、研究进度或会话总结文件，用户明确要求除外。
+- ZIP分发包按需生成；用户未要求下载或打包时，保留原始文件和报告即可，不自动打包。
+- 当前用户指令优先；旧日志、指导文件和待验证方案本身不触发新实验、训练或发布。
+
+## 操作日志：只追加
+
+- 每个有实质操作的批次、失败尝试或 debug 阶段结束后，向 WORKLOG 末尾追加记录，使用真实的新加坡时间 `YYYY-MM-DDTHH:MM:SS+08:00`，附可引用的条目编号。
+- 记录目标、工作目录、关键命令／修改、实际结果、必要的原始错误、排查假设、尝试及验证结果、剩余问题和证据位置。普通读目录可合并描述；会影响复现、判断或后续工作的失败应保留。
+- 命令注明已执行还是仅供参考；区分事实、假设与未验证结论，不把部分结果写成完成。
+- 已写条目不删除、不改写、不重新排序。纠错通过新条目引用原条目并说明原因。历史补录使用补录时的真实时间戳，注明已知的原事件日期，不捏造旧操作时间。
+- 更新 STATUS 的当前摘要；长期有效的操作方法归入 RUNBOOK，稳定规则归入本文件。研究判断与改变方向的原因记入 WORKLOG，STATUS 仅保留目前有效的结论及条目索引。
+- 不在持久文档中写入 token、密码或凭据。长终端输出留在原日志，WORKLOG 保存关键片段与位置。
+
+## 仓库边界
+
+- `SIGN-qwen-intervention-memory/`：2026-11-09用户批准设计、实现和提交P1固定LEFT、P2扫描后KEEP、P3当前RGB介入判断、P4短时RGB历史介入判断四组；分支phase2/qwen-intervention-memory，从3f7d445建立。共享原恢复控制器，Coverage256125.952M/6env/seed100/hash0/max500；测试通过后并行正式4200。原E/A/B/训练与结果不动，运行用独立detached快照；P4当前图影子评分不执行。用户要求先完成实验提交，汇报措辞另行讨论。
+
+- `SIGN-qwen-six-ablation/`：2026-11-08用户授权基于ffc177c开发phase2/qwen-arbitration-six-ablation，E1–E6共用原A控制器；先原155输入审计/重评分和GPU短测，技术通过后可提交独立4200。运行树SIGN-qwen-six-runtime-e9396ac与manifest固定，不向运行树pull资料。旧A/B/C/D与训练/结果不动，不调小集SR追正；GPUx最多4R。 用户于2026-11-08另要求将仍Q的E5/1533631、E6/1533632用qmove转auto→batch_gpu，ID/输出/资源/依赖不变；E1–E4已R不动，不自动移回GPUx。
+- `SIGN-qwen-memory-four-arm/`：2026-11-08用户已审核ffc177c并授权A/B优先正式4200，C/D先固定30–50历史真实触发任务作在线记忆有效性检查；仅存在自然可靠命中、真实进入模型和有效使用且无技术错误后才提交相应正式4200，不为追正调参。全部正式统一ffc177c源码manifest/125.952M权重/6env/seed100/hash0/max500，使用独立输出，原训练及旧结果不动。运行固定在SIGN-qwen-memory-formal-ffc177c detached树，不向运行树pull资料提交。新授权取代上一轮“仅准备不提交”，无需再次确认A/B提交。
+- `SIGN/`：当前Gibson冻结视觉实验入口，检出 `phase2/frozen-visual-encoder`；原版阶段二基线保留在 `phase2/exploration-reward-try`，阶段一评估、采集和Qwen诊断保存在 `phase1/imagenav-qwen-diagnostics`。`SIGN-SRU/` 保留学长主分支基线。
+- `SIGN-frozen-rollout-coverage/`：独立worktree，分支 `phase2/frozen-rollout-coverage`，从yiichu03/SIGN的dac8609建立；用于固定rollout、按episode片段末步结算覆盖奖励。原SIGN目录不得为该实验切换／修改；1496716已于2026-10-28按用户新授权停止为Qwen腾资源，原权重和日志保留，不自动重启；数据以软链接复用，独立日志与输出。
+- `SIGN-frozen-coverage-settle32/`：独立worktree，分支 `phase2/frozen-coverage-settle32`；通过 `habitat.task.observed_coverage.settlement_interval=32` 在完整256步rollout内增加子片段末结算，默认0保持原覆盖方案。沿用weight0.1与冻结初始化，正式作业1502352、独立输出；不得修改或停止前两组训练。
+- `SIGN-qwen-topdown-judge/`：独立worktree，分支 `phase2/qwen-topdown-judge`，基于a7cc9e0；当前推进单图独立评分，8环境对应8个独立请求，可在batch维并行；无需同任务分组。Qwen使用envs/qwen35；旧八图同会话接口留作历史，当前未接入PPO奖励或改训练采样。
+- `SIGN-qwen-history-window/`：独立worktree与分支`phase2/qwen-history-window`，从b1c24dc建立；仅复用已发布pilot_2b/diverse_2b的32原始轨迹进行128/256窗口历史图离线2B对照。无重新采样、无导航训练或9B；测评作业期间保持对应运行代码固定，输入/窗口/图/概率/prompt/空白人审与来源均须保留。无前置历史的256步不作历史能力验证，不能用平均q判断方案优劣。
+- `SIGN-qwen128-reward/`：用户于2026-10-29另行授权从453179c建立独立`phase2/qwen128-reward-beta01`，接入2B训练奖励并在验证后提交正式训练；原离线工作树及现有作业不动。Qwen128/beta0.1使用原始q、不居中，几何bonus0；MRQ只预测nav_rewards，GAE/PPO/critic使用混合奖励。运行期间保持代码提交固定，资料通过独立发布树更新。
+- `SIGN-qwen-ablation/`：用户于2026-10-29授权从33e30d2新建独立phase2/qwen-beta003-geometry128，以同一不可变源码/独立输出运行A Qwen128 beta.03、B Qwen256 beta.03、C几何128（alpha从已完成短测冻结校准）；MRQ三组显式nav_rewards目标。保留1507268、两原coverage训练和既有评估依赖。验证后经CFP/autox提交，168h/300M cap，资源不足优先A/C、B排队。 运行提交d2352f0固定；SIGN-qwen-ablation-publication为独立detached资料发布树，普通push到yiichu03同名分支，勿将资料提交pull进运行目录。
+- `SIGN-continue-coverage256/`、`SIGN-continue-coverage32/`、`SIGN-continue-qwen128/`、`SIGN-continue-ablation/`：2026-11-03用户授权恢复10月31日意外终止的六训练，分别基于原6983c91/a7cc9e0/81fedec/d2352f0建立独立continue-*分支；原目录/证据不动。旧checkpoint缺优化器/环境状态，首次只能明确标注weights continuation，保留累计步数与原300M cap、重置优化器和episode；后续checkpoint额外保存PPO/Qc优化器但仍不声称轨迹无缝恢复。优先CFP/autox，正式预算从各组原168h扣除旧已用及恢复验证耗时，不能给每组重新计一整轮168h。
+- 2026-11-03用户另授权覆盖256/32完整val优先，并明确接受立即停止C1511144、回退22,528,000步。两评估1511395/1511396已Exit0完成，1511409已解除1511147/1511148临时用户挂起；C1511410已在独立输出续跑并扣减原预算。证据见[STATUS](STATUS.md#coverage-latest-eval-20261103)及`logs/gibson_coverage_latest_eval_20261103/results_review.json`；后续Q须看实际资源限制，不要重复提交恢复作业。 用户于11月3日23:03另要求将仍排队的1511147/1511148用qmove移至auto→batch_gpu，原ID/输出/预算不变；不因默认autox偏好自动移回。
+- `logs/sign_failure_replay_20261104/`：2026-11-04用户明确授权Goal模式做三组4200val全量失败诊断；必要重放/side-channel记录允许，原SIGN-coverage-eval与六运行训练不动，不实现推理Agent。已完成三组各4200原轨迹匹配重放与报告/原始证据，详见STATUS失败全量诊断索引；分发ZIP按需生成，本批不自动重提。代码/输入运行期间按source_manifest固定；观测阶段和行为证据不当人工因果真值，未实施Agent。
+- `SIGN-inference-harness/`：2026-11-07用户授权从已验证453179c新建phase2/inference-recovery-harness，先写大纲后实施纯推理恢复与对照验证。固定74.240M冻结基线，无导航训练；RGB/实际动作历史触发，规则与Qwen2B恢复对照，同500步与原GRU/masks，不用GT状态作Agent输入。原失败诊断与现有训练作业不动；先smoke/pilot，按方案质量门决定完整4200，不因旧“未实施”记录阻止本次新授权。 当前5e3b0d0固定，1530286/1530290已Exit0；旧Qwen全C使自动门停止后续。用户于11月7日另明确授权规则单独full4200，1530887已于11月8日Exit0完成4200补充验证（1A40/2h），不绕过或重写旧自动门记录。旧树源码供该作业使用，不改原五训练，不pull资料提交，外部调度脚本SHA同样须保持。
+- Qwen恢复迭代（2026-11-08）：phase2/qwen-candidate-recovery开发树可前进，运行用SIGN-qwen-iter-* detached固定快照。f0e093c/正式1532001与CPU1532002已F0完成各4200：匹配扫描规则SR88.5952/SPL53.7751%，Qwen88.6429/53.7772%；描述性净+2但前缀支持仅2救回/3误伤，另3救回无本episode模型改向，不称稳定VLM收益。原负结果、legacy False/producer True和原放行审计全部保留；不因旧计划自动重提。full6env/4200，N1仅配对诊断；所有动作计500，不训练/9B/GT agent输入/改masks。Q/R期间三控制脚本及manifest revision3不可变，CPU必须ITERATION_CONTROL_DIR；详情与已完成证据见STATUS。
+- `SIGN-qwen-candidate-recovery/`：当前phase2/qwen-candidate-recovery用于框架开发和资料发布；已测行为f0e093c留在独立detached树。初始e9e5c0f/1531403的280全规则回退结果保留；最新采用No/Unknown/Yes双自然问句、仅左右RGB局部通行判断，有规则回退且无Qwen不介入选项。完整4200及贡献限制见STATUS；当前先讨论下一版，不热更新旧快照，不自动实验。资料生成复制根四文档与原证据，发布到yiichu03同名分支。
+- `SIGN-inference-coverage256/`：2026-11-08用户纠正恢复框架底座应为覆盖256125.952M（原完整val87.57/53.30%），独立phase2/inference-coverage256-recovery从1ec9a17建立，96f7783运行源固定。1531082完整off/规则已Exit0（87.57→88.29% SR，53.30→53.68% SPL），1531083主动视图Qwen2B诊断也已结束，均使用该源，不改旧两树/原训练；模型与cached参考step/SHA必须匹配。旧74.240M结果仅补充，错底座Qwen1530921在Q时取消。用户随后明确停几何128，C1511410已停止于81.920M最新保存点（末控制台约82.186M、末TB82.196480M），保留权重/TB，不自动恢复或重计预算；释放GPUx供框架验证。
+- `SIGN-inference-active-view/`：2026-11-07用户在规则full4200提交后授权排查修复Qwen，独立phase2/inference-recovery-active-view从5e3b0d0建立。原SIGN-inference-harness固定供规则1530887使用，不为Qwen修复编辑；新方向通过RGB受控转头补左右视野，保留C和同预算scan-only/scan-rule对照，不以强迫动作或干预率宣称收益。新开发/确认任务与旧pilot分开，仍为复用val，不训练导航。 当前1ec9a17源保留；1530921因错底座在Q时取消，当前正确底座任务在SIGN-inference-coverage256，后续资料使用独立发布树。
+- `SIGN-coverage-eval/`：独立detached工作树a7cc9e0，只读复用原native evaluator，用于三组同训练步数的覆盖评估；外部录数wrapper与脚本保存在各批次`logs/gibson_threeway_coverage_eval*/`，具体步数/作业见STATUS，不在此训练。旧批次证据、训练源码与目录原样保留。
+- `SIGN-coverage-publication/`：独立detached发布工作树，用于将coverage结果和根四文档生成副本发布到yiichu03/SIGN的覆盖奖励分支；不在此提交训练。训练工作树保持各自运行时代码提交，不为资料同步切换／合并。
+- `SIGN-habitat-gs/`：SIGN 的独立工作树，分支 `experiment/habitat-gs-imagenav`，用于 Habitat-GS ImageNav 接入。原 SIGN 路径有已提交的 Gibson 作业，不通过切换它的分支开发新仿真；新工作树以软链接复用数据，环境放 `envs/sign-habitat-gs`，第三方仿真源码放 `habitat-gs/`。 GS评估作业提交后保持此工作树的运行时代码与分支；后续需要改算法时另用独立工作树，不能把Gibson冻结／coverage分支替代原版公开权重评估。
+- `SIGN-SRU-reward-review/`：SIGN-SRU 的另一工作树，当前检出同名 phase1；其根目录 `src/` 仍是 SRU 实现，`docs/research/.../code/` 是 SIGN 发布快照，不能互相覆盖。原 docs 研究分支保留。
+- 两个 main 保留作者基线；研究改动放阶段分支。SIGN phase2 按用户要求从 origin/main 建立，第一阶段工具不自动继承；后续复用按当前任务选择。
+- `habitat-lab/` 是独立依赖仓库；`envs/`、`models/`、`downloads/`、`logs/`、`manifests/` 是配套资源。
+- 根目录当前不是 Git 仓库。不要为统一入口移动仓库、合并历史或自动初始化根仓库。四份根文档的发布副本由既有资料发布流程生成，不手工双份维护。
+- 操作前核对相应仓库的实际分支与修改，保留用户已有工作。不得用强制推送、reset、clean 或未授权删除来修复同步冲突。
+
+## 研究与证据
+
+- 2026-11-08用户要求先讨论Qwen框架再定下一轮；本轮只更新文档/分支盘点并发布。沟通明确方案后可并行多组对照，仍需核实实际项目余额/队列/原预算；不得沿旧迭代计划自动启动新实验。具体方案获授权后不重复索要相同确认。
+- 用户当前更重视Qwen主导推理恢复，在同观测/动作/步数预算下达到规则水平也有价值；须区分模型自主决策与规则回退混合成绩。这是研究偏好，不自行触发新训练或验证。
+- Gibson ImageNav 原版复现保留学长源码及奖励，先评估checkpoint、再从零训练；原从零任务1495073已按用户批准停止并仅留最后落盘权重和日志。用户于2026-10-26另行批准冻结视觉实验：只从公开checkpoint加载并冻结actor_critic.net.visual_encoder，visual_fc及其余模块保留原初始化，仅在独立研究分支修改trainer的两处加载／冻结逻辑，奖励保持原版。运行时不使用monkeypatch、不自动移入phase1修补；新任务使用自身source_manifest校验，不能用原版源哈希守卫拒绝已批准变更。Habitat-GS在独立分支做必要接口适配，明确记录与官方GS基准的动作、目标图、步数及指标差异。
+- 历史 HM3D 实验使用 v0.2 验证场景；任务目录 `hm3d/v1` 不代表场景版本。当前任务不因阅读旧 Qwen 方案而转为奖励集成。最终合并配置、运行路径和集群约定见 RUNBOOK。
+- 只计重复搜索。纯卡住、碰撞、受阻摆动、脱困单列；没有独立搜索证据时排除。普通分支返回和共同通路不自动算冗余，“成功优先”排序未被采用。
+- 区分单条分级、独立请求的推理 batch、直接成对比较和整组排序。八个并行环境不自动构成同任务八次执行。
+- 保留并列与未知；不得强制八个不同名次、把未知当零分／并列，或用构造上均值为零的相对分声称训练进步。
+- 保留实际输入、原始输出、冻结人工参考与人工复核原文。AI 初审不等同人工真值；修订与重标另行版本化。严格 JSON 结果与可读字段辅助提取分开报告。
+- 检查真实请求与原始回答后再归因。重复使用的开发数据不是独立测试；目的性配对不能估计总体发生率；离线评分和固定 checkpoint 评估不证明 PPO 收益。
+- 优先有区分度的小规模诊断；大规模 prompt 搜索、PPO 接入和训练结论需相应任务范围与证据支持。
+
+## 集群与发布
+
+- GPU 推理和采集使用 PBS 计算节点；用户要求长任务使用 `auto` / `autox` 路由。环境、项目和复现命令见 RUNBOOK。 用户于2026-10-29明确偏好可运行但资源排队的GPU任务优先走autox→batch_gpux；须遵守项目许可及原预算，个人项目仍仅auto。真实checkpoint依赖等待不绕过，已运行任务不为换队列停训重提。
+- 默认推送目标为用户的 `yiichu03` GitHub：SIGN 使用 origin（yiichu03/SIGN），SIGN-SRU 及其研究工作树使用 origin（yiichu03/SIGN-SRU）。用户说“push”“同步 GitHub”时均按此处理；执行前核对有效 push URL 与目标分支。
+- 只有用户明确指定向学长的 GitHub 仓库推送时，才考虑 SIGN 的 upstream（Zichen-Yan/SIGN）。不能因为分支跟踪 upstream/main，就把它当作默认推送目标；fetch／pull 与 push 的目标分别核对。
+- Habitat 是第三方依赖，保留官方 origin，常规项目发布不包含它；其无目标默认推送已关闭。不要自动创建或猜测 yiichu03 的依赖 fork。
+- SIGN 与 SIGN-SRU 的 remote 和历史分开维护，不能将 SIGN 历史推到 SRU main，也不能用 SIGN trainer 覆盖 SRU trainer。
+- 既有项目记录中，向 yiichu03 的研究分支发布已获用户授权；按当前任务范围使用既有发布流程与普通 push，不因阅读本文件自行发布。
+- 发布前核对哈希、相对链接、实际完成状态和 WORKLOG 的追加关系。排除权重、场景、凭据、环境与大体积相机数据；已有证据变化、缺失或 Git 历史冲突时保留现场，单独处理。
+- 发布副本中的 WORKLOG 同样只允许追加；当前四份根文档是服务器维护源，发布材料是生成副本。具体检查命令与已知发布阻塞见 RUNBOOK 和 STATUS。

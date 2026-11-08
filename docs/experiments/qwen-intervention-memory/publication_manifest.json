@@ -1,0 +1,58 @@
+{
+  "evidence/unit_tests.txt": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/unit_tests.txt",
+    "sha256": "dfebb62875a6c5da212eb50c2b9e9d16146c2d99e7ba2612a9f4f849e44583e3"
+  },
+  "evidence/checkpoint_tests.txt": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/checkpoint_tests.txt",
+    "sha256": "0f4b618c4377a017d9b3cd530e9f2cdc1f8e276837fa3c88cb92e9bec8fffbff"
+  },
+  "evidence/config_preflight.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/config_preflight.json",
+    "sha256": "1f7797c1115cc49f7b2c9f5a937b25bc89e8717deccb6337bcc946aa24e24550"
+  },
+  "evidence/launch_once.py": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/launch_once.py",
+    "sha256": "5ecb289cd6f31b5b58b48a2e8dadb89fba53ecf347f87c6a9f25d42bcb83d70a"
+  },
+  "evidence/tasks.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/tasks.json",
+    "sha256": "89eafe6bd4f70b022ff9850eb04ef576fa441f9560831848a912f4cab02948c3"
+  },
+  "evidence/source_manifest.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/source_manifest.json",
+    "sha256": "585f04e38b8f7c32073e2c0d320ea586c52f3bea3708ac42df74aa1c1535a570"
+  },
+  "evidence/references.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/references.json",
+    "sha256": "4a6cfd1b3f94c8b685897f0317bfdbb43ec2a9d9ec1e6b2fe2f461fa7653b46c"
+  },
+  "evidence/prepared_commands.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/prepared_commands.json",
+    "sha256": "ed781b7a067f595e66768c33ee781ea2e0aac23c8866b6e1474a9d4d987a9eda"
+  },
+  "evidence/check_submission_attempts.jsonl": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/check_submission_attempts.jsonl",
+    "sha256": "e34aa4bed531e0711ca37853ee4876cc57fd778ddfee0411fcab84e0c4f64234"
+  },
+  "evidence/launch_control_manifest.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/launch_control_manifest.json",
+    "sha256": "928394a9458b114ffebaad9c629f728b63c6f19e9ffa9dce5c50bbc3f62b4590"
+  },
+  "workspace/AGENTS.md": {
+    "source": "/scratch/e1538633/liuyi/AGENTS.md",
+    "sha256": "1277fe6f176d1632c745db70fd70a447877933d0a63445d8e05c4e6ca6d6b008"
+  },
+  "workspace/STATUS.md": {
+    "source": "/scratch/e1538633/liuyi/STATUS.md",
+    "sha256": "490b73b743781250bc2bb2c50e72dc2878012ca2cfcb63a0c55f43fa391cdbbf"
+  },
+  "workspace/RUNBOOK.md": {
+    "source": "/scratch/e1538633/liuyi/RUNBOOK.md",
+    "sha256": "7e6f3074add35d784ed69ea31905f15a04d189bf30eac7ba919fa55a1bc4e1c7"
+  },
+  "workspace/WORKLOG.md": {
+    "source": "/scratch/e1538633/liuyi/WORKLOG.md",
+    "sha256": "dac4ca796e57a406606a379e237e784c75ad389df30854f1028b5163778f8bcf"
+  }
+}
