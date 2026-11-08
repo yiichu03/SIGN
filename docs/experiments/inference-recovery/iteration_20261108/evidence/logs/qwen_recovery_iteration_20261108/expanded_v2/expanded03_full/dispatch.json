@@ -1,0 +1,14 @@
+{
+  "status": "full_completed",
+  "job": "1532001.stdct-mgmt-02",
+  "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "comparisons": {
+    "full": {
+      "net": 2,
+      "prefix_supported": 2,
+      "sr_delta": 0.04761904761905189,
+      "spl_delta": 0.0021499496528631923
+    }
+  },
+  "recorded_at": "2026-11-08T11:10:29+08:00"
+}

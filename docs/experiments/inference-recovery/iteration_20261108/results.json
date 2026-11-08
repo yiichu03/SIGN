@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-11-08T08:56:28+08:00",
+  "recorded_at": "2026-11-08T14:16:24+08:00",
   "behavior_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
   "checkpoint_steps": 125952000,
   "rounds": [
@@ -534,8 +534,32 @@
       "job_id": "1532001.stdct-mgmt-02",
       "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
       "stage": "full",
-      "completed": false,
-      "comparisons": {}
+      "completed": true,
+      "comparisons": {
+        "full": {
+          "episodes": 4200,
+          "net_successes": 2,
+          "supported_rescues": 2,
+          "harms": 3,
+          "cases": {
+            "off": {
+              "successes": 3678,
+              "success_rate": 0.8757142857142857,
+              "spl": 0.5329960106555678
+            },
+            "rule": {
+              "successes": 3721,
+              "success_rate": 0.8859523809523809,
+              "spl": 0.537750922805995
+            },
+            "qwen": {
+              "successes": 3723,
+              "success_rate": 0.8864285714285715,
+              "spl": 0.5377724223025236
+            }
+          }
+        }
+      }
     },
     {
       "round": "focused_regression",

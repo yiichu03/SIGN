@@ -930,6 +930,8 @@ cat /scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/round01/dispat
 <a id="qwen-recovery-frozen-full-20261108"></a>
 ## 固定Qwen恢复版本与正式4200：2026-11-08
 
+12:52后完成复核：1532001/1532002均F0，三组各4200已结束；当前证据入口为expanded03_full/completed_review_20261108.json。SR/SPL原生87.5714/53.2996%、匹配扫描规则88.5952/53.7751%、Qwen88.6429/53.7772%。Qwen描述性5救回/3误伤净+2，但只有2救回/3误伤有真实模型决定前一致前缀；3救回无本episode模型改向，不能归给模型。旧汇总门True/回执保持，不用其True代替贡献审计。以下提交命令/当时状态为复现记录，不再等待或重提；未来读取原始JSONL及audit_traces复算，人工标签仍空。
+
 行为f0e093c，SIGN-qwen-iter-expanded03运行源/资产保持；开发树phase2/qwen-candidate-recovery只前进资料。profile=src/config/inference_semantic_consensus_veto90.yaml，正反prompt= scripts/prompts/recovery_semantic_forward.txt / recovery_semantic_obstacle.txt；FP32真实No2665/Unknown13394/Yes9175，条件softmax/T1，不是校准成功概率。双问相对支持同向且差≥.05、候选词质量≥.1才选；两问都判默认open argmax则保持默认。实际24扫描+6转向+8前进，最多2次、76覆盖步仍计原500。
 
 本次已执行：主1531657与同版重复1531732 F0，61条规则30/Qwen31、同1前缀救回且三组原始行逐条精确复现；冻结确认1531757 F0，24条9/9但SPL下降、普通112条103/103且逐条相同、安全28条27/27且0触发。原CPU1531758保留requires_revision/旧False。06:40预登记版本2允许成功数中性但不声称独立收益，audit_release_v2.py已重算全部raw/F0/goal/start/前缀，08:49写expanded03_confirmation/version2_release_audit.json后另行提交full；不得用新审计改写旧flag。
@@ -937,3 +939,19 @@ cat /scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/round01/dispat
 **已提交，勿重复执行**：1532001.stdct-mgmt-02，CFP04-SF-109/autox→batch_gpux，单A40/36CPU240GB/6h；CPU1532002 afterany/auto/无GPU。原生/匹配扫描规则/Qwen各4200、原6env/500/seed100/hash0，同coverage256125.952M权重SHA988c9ecc…；full忽略tasks内N1，仅off会严格核验旧4200位姿SHA。正式源、提交命令、输出和放行依据在logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/{source_manifest,submission,release_authorization}.json；full_{off,rule,qwen}/result.json及full_comparison.json完成后才可作全量判断。
 
 只读状态参考：`qstat -fx 1532001 1532002`；CPU旧门与当前版本2依据分别是expanded03_confirmation/dispatch.json和version2_release_audit.json。任何失败保留原输出，不修改Q/R源或重新使用同batch提交。发布生成器logs/qwen_recovery_iteration_20261108/publish_iteration.py仅复制已完成轻证据、源SHA和根四文档生成副本到docs/experiments/inference-recovery/iteration_20261108；WORKLOG前缀保留，--check-only --tree <clone>可离线核验，不加载模型/提交作业。运行源码与资料提交区分；不上传权重/环境/完整相机序列、不自动ZIP。
+
+
+<a id="training-readout-20261108"></a>
+## 11月8日训练读取
+
+入口logs/training_readout_20261108/readout.py是11月7日readout.py原字节副本，仅通过脚本所在目录将新输出隔离到新日期；已执行snapshot_130216。保持原PREVIOUS=11月5日冻结前缀，复核SHA后读完整TFRecord新增尾段和ledger；没有改运行目录/原始事件/队列/环境，不使用GPU。可在liuyi用PYTHONDONTWRITEBYTECODE=1、PYTHONNOUSERSITE=1和OMP/MKL/OPENBLAS_NUM_THREADS=1调用envs/sign-baseline/bin/python；每次新建snapshot_实际时间，不覆盖旧批次。
+
+summary/validation.json补充独立CSV窗口与冻结基线末1M复算；readout.json保存共同32.829440M和各自预算1/2/3M，比较前逐点核对SR/SPL步数组。B最新38.180864M近3M优于两覆盖，但最新1M回落和对基线SPL不足一起报告；训练滑窗不当val或严格因果。末日志步数、PBS退出、checkpoint步数分开，原六预算不自动恢复或重计。
+
+
+<a id="discussion-publication-20261108"></a>
+## 文档讨论与分支盘点发布：11月8日
+
+用户本轮明确只更新文档并push，下一批实验先沟通后再实施，可讨论多组并行；不执行qsub/停止作业/新训练。目标分支phase2/qwen-candidate-recovery，源基点294f651；运行源f0e和其他33工作树HEAD/源码保留。元数据与守卫在logs/github_discussion_update_20261108/{branch_inventory,branch_relationship_audit,protected_trees,training_sources}.json；prepare.py --check-guards只读核验全部34工作树，唯一允许资料分支HEAD前进，SRC仍相同。分支盘点含SIGN19/SRU3本地及origin远端，不将16 detached SIGN快照当命名分支。
+
+复用logs/qwen_recovery_iteration_20261108/publish_iteration.py生成同一既有研究包，新增BRANCHES/CASES导航、完整3x4200原始episode结果/贡献审计、8条成败变化的16份仅commands/poses NPZ、5条前缀支持成败变化的候选RGB及人审目标图；目标图不曾喂给Qwen，其他完整相机序列不上传。同步13:56最新训练与13:02旧截面，近期/匹配参考CSV仅提取CORE原数值并注明来源SHA。--check-only --tree <clone>可离线重算全量指标和训练窗口，无模型/GPU/外网。根WORKLOG发布副本保持旧原字节前缀，只追加；新README/docs严格检查，原CSV等格式以逐文件原SHA例外保留，不全局忽略。普通push前核对origin=yiichu03/SIGN及分支，禁止force或更改原训练树。

@@ -133,4 +133,4 @@ habitat_baselines.eval.split test_easy
 
 ## Qwen2B inference recovery
 
-[Iteration evidence and frozen Gibson validation](docs/experiments/inference-recovery/iteration_20261108/README.md) · [Protocol and development history](docs/experiments/inference-recovery/ITERATION_PLAN.md)
+[Current results, limitations and discussion](docs/experiments/inference-recovery/iteration_20261108/README.md) · [Branches and worktrees](docs/experiments/inference-recovery/iteration_20261108/BRANCHES.md) · [Protocol and development history](docs/experiments/inference-recovery/ITERATION_PLAN.md)

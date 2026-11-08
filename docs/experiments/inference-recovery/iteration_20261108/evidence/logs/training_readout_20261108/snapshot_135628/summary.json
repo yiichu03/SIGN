@@ -1,0 +1,88 @@
+{
+  "coverage256": {
+    "step": 172599296,
+    "event_at": "2026-11-05T21:45:14+08:00",
+    "sr": 87.79712430294794,
+    "spl": 50.60186690226167,
+    "sr_3m": 86.81032160850108,
+    "spl_3m": 49.29551630500234,
+    "sr_delta_previous1m": 1.2815198670389494,
+    "state": "F",
+    "exit_status": "-29",
+    "end_at": "Thu Nov  5 21:45:20 2026",
+    "remaining_hours": null
+  },
+  "coverage32": {
+    "step": 175867904,
+    "event_at": "2026-11-08T03:12:49+08:00",
+    "sr": 88.76230897103838,
+    "spl": 51.37247680886391,
+    "sr_3m": 88.23930524721895,
+    "spl_3m": 51.50413139281419,
+    "sr_delta_previous1m": -0.27663207326094064,
+    "state": "F",
+    "exit_status": "-29",
+    "end_at": "Sun Nov  8 03:12:55 2026",
+    "remaining_hours": null
+  },
+  "qwen01": {
+    "step": 32829440,
+    "event_at": "2026-11-08T07:11:40+08:00",
+    "sr": 87.25340150616651,
+    "spl": 49.20946421798753,
+    "sr_3m": 87.23548476199649,
+    "spl_3m": 49.547010804605975,
+    "sr_delta_previous1m": 0.14482881155614136,
+    "state": "F",
+    "exit_status": "-29",
+    "end_at": "Sun Nov  8 07:11:58 2026",
+    "remaining_hours": null
+  },
+  "A": {
+    "step": 41551872,
+    "event_at": "2026-11-08T09:10:23+08:00",
+    "sr": 85.03059726551267,
+    "spl": 48.14209760088619,
+    "sr_3m": 85.97188058159864,
+    "spl_3m": 49.0191758818187,
+    "sr_delta_previous1m": -1.2807713909389173,
+    "state": "F",
+    "exit_status": "-29",
+    "end_at": "Sun Nov  8 09:10:39 2026",
+    "remaining_hours": null
+  },
+  "B": {
+    "step": 38438912,
+    "event_at": "2026-11-08T13:56:29+08:00",
+    "sr": 87.94137975677147,
+    "spl": 49.205864103537635,
+    "sr_3m": 87.92562919265174,
+    "spl_3m": 50.59661326554855,
+    "sr_delta_previous1m": -0.41667101123262773,
+    "state": "R",
+    "exit_status": null,
+    "end_at": null,
+    "remaining_hours": 17.355
+  },
+  "C": {
+    "step": 82196480,
+    "event_at": "2026-11-08T01:24:08+08:00",
+    "sr": 88.63681974098971,
+    "spl": 51.40749501913847,
+    "sr_3m": 87.46930606129226,
+    "spl_3m": 50.7828484358641,
+    "sr_delta_previous1m": 4.3571000008373435,
+    "state": "F",
+    "exit_status": 143,
+    "end_at": "Sun Nov  8 01:24:25 2026",
+    "remaining_hours": null
+  },
+  "baseline": {
+    "step": 74653696,
+    "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+    "source_sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091",
+    "state": "stopped_by_user",
+    "sr": 87.86893228567939,
+    "spl": 54.82166207153617
+  }
+}

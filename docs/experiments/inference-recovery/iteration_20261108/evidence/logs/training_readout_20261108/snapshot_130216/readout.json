@@ -1,0 +1,1352 @@
+{
+  "captured_at": "2026-11-08T13:02:16+08:00",
+  "runs": {
+    "coverage256": {
+      "job_id": "1511146",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train",
+      "latest_step": 172599296,
+      "last_event_at": "2026-11-05T21:45:14+08:00",
+      "readout_at": "2026-11-08T13:02:19+08:00",
+      "all_scalars_finite": true,
+      "last1m": {
+        "metrics/success": {
+          "mean": 0.8779712430294794,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5060186690226167,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.50903358830021,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 14.708375568038846,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6890377117690377,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.019454432392805875,
+          "points": 488
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 367.17143427739376,
+          "points": 488
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.14342634140162683,
+          "points": 488
+        }
+      },
+      "previous1m": {
+        "metrics/success": {
+          "mean": 0.8651560443590899,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.4918855583814324,
+          "points": 488
+        },
+        "reward": {
+          "mean": 7.431110677171926,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 13.51916302032158,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6881061896803926,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.023037927307295383,
+          "points": 488
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 401.86749958601155,
+          "points": 488
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.15697949230060226,
+          "points": 488
+        }
+      },
+      "last3m": {
+        "metrics/success": {
+          "mean": 0.8681032160850108,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.49295516305002335,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.439777924339112,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 14.969868366384668,
+          "points": 1465
+        },
+        "learner/value_loss": {
+          "mean": 0.6969199836457549,
+          "points": 1465
+        },
+        "learner/action_loss": {
+          "mean": 0.02195471146770898,
+          "points": 1464
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 364.516830569408,
+          "points": 1464
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.14238938685669436,
+          "points": 1464
+        }
+      },
+      "median_seconds_per_2048_recent3h": 10.728068709373474,
+      "recent_bonus_conservation_max_error": 1.7881393449270533e-08
+    },
+    "coverage32": {
+      "job_id": "1511147",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train",
+      "latest_step": 175867904,
+      "last_event_at": "2026-11-08T03:12:49+08:00",
+      "readout_at": "2026-11-08T13:02:35+08:00",
+      "all_scalars_finite": true,
+      "last1m": {
+        "metrics/success": {
+          "mean": 0.8876230897103838,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5137247680886391,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.703746266160275,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 13.917754812962194,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6844641475467838,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.022009600030547787,
+          "points": 489
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 381.29597104936533,
+          "points": 489
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.14894373876429287,
+          "points": 489
+        }
+      },
+      "previous1m": {
+        "metrics/success": {
+          "mean": 0.8903894104429932,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.5273002975421851,
+          "points": 488
+        },
+        "reward": {
+          "mean": 7.615365310770566,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 12.909381780468049,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6394747522522192,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.028896915689148924,
+          "points": 488
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 382.2267834084933,
+          "points": 488
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.14930733696359103,
+          "points": 488
+        }
+      },
+      "last3m": {
+        "metrics/success": {
+          "mean": 0.8823930524721895,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.5150413139281419,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.6258546184761125,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 13.500343980235858,
+          "points": 1465
+        },
+        "learner/value_loss": {
+          "mean": 0.6673374824759903,
+          "points": 1465
+        },
+        "learner/action_loss": {
+          "mean": 0.026023215330571395,
+          "points": 1465
+        },
+        "learner/coverage_new_area_m2": {
+          "mean": 378.6643891109948,
+          "points": 1465
+        },
+        "learner/coverage_bonus_sum": {
+          "mean": 0.147915776831705,
+          "points": 1465
+        }
+      },
+      "median_seconds_per_2048_recent3h": 5.453054189682007,
+      "recent_bonus_conservation_max_error": 2.384185787684956e-08
+    },
+    "qwen01": {
+      "job_id": "1511145",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train",
+      "latest_step": 32829440,
+      "last_event_at": "2026-11-08T07:11:40+08:00",
+      "readout_at": "2026-11-08T13:02:39+08:00",
+      "all_scalars_finite": true,
+      "last1m": {
+        "metrics/success": {
+          "mean": 0.8725340150616652,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4920946421798753,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.470623823762671,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 16.98988805470535,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6615673061041256,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.03850790508546636,
+          "points": 489
+        }
+      },
+      "previous1m": {
+        "metrics/success": {
+          "mean": 0.8710857269461038,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.49834799345155234,
+          "points": 488
+        },
+        "reward": {
+          "mean": 7.423862252079073,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 15.950517044692743,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6972070355884364,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.038158545648434856,
+          "points": 488
+        }
+      },
+      "last3m": {
+        "metrics/success": {
+          "mean": 0.8723548476199648,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.49547010804605973,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.469688952904919,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 16.342396825979186,
+          "points": 1465
+        },
+        "learner/value_loss": {
+          "mean": 0.6831667653733146,
+          "points": 1465
+        },
+        "learner/action_loss": {
+          "mean": 0.03850630503497484,
+          "points": 1465
+        }
+      },
+      "median_seconds_per_2048_recent3h": 38.41578698158264,
+      "ledger": {
+        "valid_fraction": 0.9540677488974383,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 928,
+          "fog_origin_farther_than_5cm_from_navmesh": 51
+        },
+        "new_area_per_valid_action": 0.1784946109365653,
+        "bonus_per_rollout": 0.47735640424887527,
+        "q_mean_per_rollout": 0.632843063108345,
+        "timing_means": {
+          "geometry_seconds": 9.695436073325842,
+          "render_seconds": 7.880640477447243,
+          "worker_seconds": 10.10591397483527,
+          "total_seconds": 18.002671037214963
+        }
+      },
+      "audited_rollouts": 11780,
+      "nav_rewards_and_masks_unchanged": true,
+      "mixed_reward_conservation_max_error": 5.6530395147635915e-05,
+      "qwen_worker_present": true
+    },
+    "A": {
+      "job_id": "1511143",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train",
+      "latest_step": 41551872,
+      "last_event_at": "2026-11-08T09:10:23+08:00",
+      "readout_at": "2026-11-08T13:02:47+08:00",
+      "all_scalars_finite": true,
+      "last1m": {
+        "metrics/success": {
+          "mean": 0.8503059726551266,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.48142097600886186,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.317220605955534,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 16.744175321972932,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6865036390066634,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.036006867546580563,
+          "points": 489
+        }
+      },
+      "previous1m": {
+        "metrics/success": {
+          "mean": 0.8631136865645158,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.49509388324422915,
+          "points": 488
+        },
+        "reward": {
+          "mean": 7.449818484118728,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 17.085844432721373,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6896241312754936,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.03581622597922716,
+          "points": 488
+        }
+      },
+      "last3m": {
+        "metrics/success": {
+          "mean": 0.8597188058159864,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.490191758818187,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.386958249193003,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 17.087691312926623,
+          "points": 1465
+        },
+        "learner/value_loss": {
+          "mean": 0.6812649701439073,
+          "points": 1465
+        },
+        "learner/action_loss": {
+          "mean": 0.03742232406631099,
+          "points": 1465
+        }
+      },
+      "median_seconds_per_2048_recent3h": 27.602603912353516,
+      "ledger": {
+        "valid_fraction": 0.9468757424566405,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 1045,
+          "fog_origin_farther_than_5cm_from_navmesh": 73
+        },
+        "new_area_per_valid_action": 0.1723333887713807,
+        "bonus_per_rollout": 0.14343413779055608,
+        "q_mean_per_rollout": 0.638072873336132,
+        "timing_means": {
+          "geometry_seconds": 5.6542182771254765,
+          "render_seconds": 5.153915337964431,
+          "worker_seconds": 9.71863416555242,
+          "total_seconds": 14.881324377467172
+        }
+      },
+      "audited_rollouts": 16289,
+      "nav_rewards_and_masks_unchanged": true,
+      "mixed_reward_conservation_max_error": 6.227350516058161e-05,
+      "qwen_worker_present": true
+    },
+    "B": {
+      "job_id": "1511148",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train",
+      "latest_step": 38180864,
+      "last_event_at": "2026-11-08T13:02:46+08:00",
+      "readout_at": "2026-11-08T13:02:55+08:00",
+      "all_scalars_finite": true,
+      "last1m": {
+        "metrics/success": {
+          "mean": 0.8647256486254967,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.4825267314545216,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.408654966724918,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 18.35040422061226,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.7113815201694005,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.03877790518065034,
+          "points": 489
+        }
+      },
+      "previous1m": {
+        "metrics/success": {
+          "mean": 0.8941934499584261,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.5291618544180863,
+          "points": 488
+        },
+        "reward": {
+          "mean": 7.716077000391288,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 14.480001752493811,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.6306084388958626,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.04098942007804595,
+          "points": 488
+        }
+      },
+      "last3m": {
+        "metrics/success": {
+          "mean": 0.8769768808075186,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.5042862155128258,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.519750358789854,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 16.04149935530314,
+          "points": 1465
+        },
+        "learner/value_loss": {
+          "mean": 0.6634180662981886,
+          "points": 1465
+        },
+        "learner/action_loss": {
+          "mean": 0.03779565080501292,
+          "points": 1465
+        }
+      },
+      "median_seconds_per_2048_recent3h": 25.420631408691406,
+      "ledger": {
+        "valid_fraction": 0.9174300414104656,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 1252,
+          "fog_origin_farther_than_5cm_from_navmesh": 64
+        },
+        "new_area_per_valid_action": 0.16941415888581257,
+        "bonus_per_rollout": 0.1359350996584125,
+        "q_mean_per_rollout": 0.6583510435047367,
+        "timing_means": {
+          "geometry_seconds": 6.130469023663092,
+          "render_seconds": 4.220986473201945,
+          "worker_seconds": 7.324434573360022,
+          "total_seconds": 11.554049652453335
+        }
+      },
+      "audited_rollouts": 14393,
+      "nav_rewards_and_masks_unchanged": true,
+      "mixed_reward_conservation_max_error": 6.522598027450255e-05,
+      "qwen_worker_present": true
+    },
+    "C": {
+      "job_id": "1511410",
+      "directory": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval",
+      "latest_step": 82196480,
+      "last_event_at": "2026-11-08T01:24:08+08:00",
+      "readout_at": "2026-11-08T13:03:05+08:00",
+      "all_scalars_finite": true,
+      "last1m": {
+        "metrics/success": {
+          "mean": 0.886368197409897,
+          "points": 489
+        },
+        "metrics/spl": {
+          "mean": 0.5140749501913847,
+          "points": 489
+        },
+        "reward": {
+          "mean": 7.7192100074393615,
+          "points": 489
+        },
+        "metrics/collisions.count": {
+          "mean": 13.736422554359358,
+          "points": 489
+        },
+        "learner/value_loss": {
+          "mean": 0.6802701155344645,
+          "points": 489
+        },
+        "learner/action_loss": {
+          "mean": 0.027210142718416645,
+          "points": 489
+        }
+      },
+      "previous1m": {
+        "metrics/success": {
+          "mean": 0.8427971974015236,
+          "points": 488
+        },
+        "metrics/spl": {
+          "mean": 0.4803752982225574,
+          "points": 488
+        },
+        "reward": {
+          "mean": 7.26421421375431,
+          "points": 488
+        },
+        "metrics/collisions.count": {
+          "mean": 14.779534259780508,
+          "points": 488
+        },
+        "learner/value_loss": {
+          "mean": 0.7150669908303706,
+          "points": 488
+        },
+        "learner/action_loss": {
+          "mean": 0.029413689655961743,
+          "points": 488
+        }
+      },
+      "last3m": {
+        "metrics/success": {
+          "mean": 0.8746930606129226,
+          "points": 1465
+        },
+        "metrics/spl": {
+          "mean": 0.507828484358641,
+          "points": 1465
+        },
+        "reward": {
+          "mean": 7.564623591517425,
+          "points": 1465
+        },
+        "metrics/collisions.count": {
+          "mean": 13.966561887695521,
+          "points": 1465
+        },
+        "learner/value_loss": {
+          "mean": 0.6826622143540366,
+          "points": 1465
+        },
+        "learner/action_loss": {
+          "mean": 0.028648682357663918,
+          "points": 1465
+        }
+      },
+      "median_seconds_per_2048_recent3h": 14.179741382598877,
+      "ledger": {
+        "valid_fraction": 0.9334049409237379,
+        "invalid_reasons": {
+          "episode_height_range_exceeds_fixed_floor": 1430,
+          "fog_origin_farther_than_5cm_from_navmesh": 58
+        },
+        "new_area_per_valid_action": 0.19644939235724165,
+        "bonus_per_rollout": 0.4122467072666964,
+        "q_mean_per_rollout": null,
+        "timing_means": {
+          "geometry_seconds": 6.289843152506669,
+          "render_seconds": 0.0,
+          "worker_seconds": 0.0,
+          "total_seconds": 0.0019792130639289026
+        }
+      },
+      "audited_rollouts": 29135,
+      "nav_rewards_and_masks_unchanged": true,
+      "mixed_reward_conservation_max_error": 6.538319911952861e-05,
+      "qwen_worker_present": false
+    }
+  },
+  "inputs": [
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/tb/events.out.tfevents.1793641444.GN-A40-099.462128.0",
+      "previous_prefix_bytes": 39827584,
+      "previous_prefix_sha256": "92474c9f7ad07654b9bc1f17f1c97ca8d75a7b90689c2ff0540002453d2ba9d4",
+      "previous_prefix_verified": true,
+      "tail_offset": 39827584,
+      "tail_complete_bytes": 3721417,
+      "tail_sha256": "6e81f9ecdc5625b4d28abdb6ab8554a10555913225b82c488a34d63b4d617eca",
+      "captured_source_bytes": 43549001,
+      "ignored_incomplete_final_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-coverage32/results/continuation_20261103/coverage32/train/tb/events.out.tfevents.1793720670.GN-A40-035.120065.0",
+      "previous_prefix_bytes": 47864249,
+      "previous_prefix_sha256": "880e489dd6a0965844ad99d45651360d8a337fd914df9a651048b238f158e93e",
+      "previous_prefix_verified": true,
+      "tail_offset": 47864249,
+      "tail_complete_bytes": 71555001,
+      "tail_sha256": "f608a3927f3dd2f77e52a3ced77d12ef6c5d8afea6ec8db47fe660c10eca301f",
+      "captured_source_bytes": 119419250,
+      "ignored_incomplete_final_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/tb/events.out.tfevents.1793641473.GN-A40-030.129769.0",
+      "previous_prefix_bytes": 19868151,
+      "previous_prefix_sha256": "ef0fbc5521ebe6577e10f4365814925732110c5c7953d91e614b68c70105a5dc",
+      "previous_prefix_verified": true,
+      "tail_offset": 19868151,
+      "tail_complete_bytes": 19774054,
+      "tail_sha256": "9ddb96a0f49f7769780cd44f58ba815ad2f5b3a6dd3ec059a8049ca513e4d21b",
+      "captured_source_bytes": 39642205,
+      "ignored_incomplete_final_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-qwen128/results/continuation_20261103/qwen01/train/qwen/rollouts.jsonl",
+      "complete_prefix_bytes": 12672643,
+      "sha256": "30703317c08fb2c8c0afe9d2970e6561dc06204515afb4be4b8a9d666021ce3a",
+      "ignored_partial_tail_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/tb/events.out.tfevents.1793640942.GN-A40-045.81377.0",
+      "previous_prefix_bytes": 34203835,
+      "previous_prefix_sha256": "a1708c278da10bd08976720f1079ce381cbf449ed1e23b6708c887aacff3ec4b",
+      "previous_prefix_verified": true,
+      "tail_offset": 34203835,
+      "tail_complete_bytes": 35411315,
+      "tail_sha256": "f725b2871f9489d7d4e349adfc11a4bb4ba1a69af09110c5d1993aec4ddb08fa",
+      "captured_source_bytes": 69615150,
+      "ignored_incomplete_final_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/A/train/qwen/rollouts.jsonl",
+      "complete_prefix_bytes": 26552640,
+      "sha256": "e093e39f5b8544d9f0a7c9d698e52c54e3b8106debfce0e4f40ce92e04f24714",
+      "ignored_partial_tail_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/tb/events.out.tfevents.1793720710.GN-A40-020.1399801.0",
+      "previous_prefix_bytes": 22491566,
+      "previous_prefix_sha256": "818f1f8e6e1b3a4413faac6814c932f33069ff0620e484074b76f1dcf591040f",
+      "previous_prefix_verified": true,
+      "tail_offset": 22491566,
+      "tail_complete_bytes": 39019744,
+      "tail_sha256": "1a6a762a2bfe04d14885035a92da27ef42991cbac8cc9e6f78adfa005ce60076",
+      "captured_source_bytes": 61511310,
+      "ignored_incomplete_final_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/B/train/qwen/rollouts.jsonl",
+      "complete_prefix_bytes": 23341774,
+      "sha256": "707ff80c2bd88072662dbb914e9593867494cda4ef9b89927f6054a7e431d177",
+      "ignored_partial_tail_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/tb/events.out.tfevents.1793649102.GN-A40-021.130773.0",
+      "previous_prefix_bytes": 57021524,
+      "previous_prefix_sha256": "afb7d212064a0d46241191b9bdacb439e885ac0a43084e8bce9fe74b76aaac55",
+      "previous_prefix_verified": true,
+      "tail_offset": 57021524,
+      "tail_complete_bytes": 48994711,
+      "tail_sha256": "c7f669a5a42aa339f9b496380f88a66a565ab213ed5fda97eb31fb10e5970131",
+      "captured_source_bytes": 106016235,
+      "ignored_incomplete_final_bytes": 0
+    },
+    {
+      "source": "/scratch/e1538633/liuyi/SIGN-continue-ablation/results/continuation_20261103/C/train_after_latest_eval/qwen/rollouts.jsonl",
+      "complete_prefix_bytes": 38116933,
+      "sha256": "385ac3c302e7883421af2abf7061a9bf7b14fe5ab155c00636ae132a3d9addcb",
+      "ignored_partial_tail_bytes": 0
+    },
+    {
+      "fixed_reference": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+      "sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091"
+    },
+    {
+      "fixed_reference": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage256/selected_scalars.csv",
+      "sha256": "a40e4812d1a8c05a20a8a4c88ba17a563fd4a9ed4a619a93b9259cec782b9bb8"
+    },
+    {
+      "fixed_reference": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage32/selected_scalars.csv",
+      "sha256": "c6ba980f43d3ac35177f470587b6a174efd630a9bd57945ba547a92e6eee1f4f"
+    }
+  ],
+  "semantics": "Training means of overlapping native50-update windows; not fresh validation. Incremental TFRecord byte ranges and old-prefix SHA are verified. Raw source files are not copied again; selected CSV and recent ledger rows are frozen.",
+  "jobs": {
+    "1511146.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": "-29",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-099[0]:ncpus=36:mem=240gb:ngpus=1) and exceeded resource walltime",
+      "queue": "batch_gpux",
+      "resources_used": {
+        "cpupercent": 282,
+        "cput": "167:18:13",
+        "gpu_usage": "GN-A40-099(cuda.0.energyConsumed=8156J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15278.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=5%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=244906s, cuda.0.usagePerc=11.992%, cuda.0.memUsagePerc=9.034%)",
+        "mem": "9346760kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "80800996kb",
+        "walltime": "68:04:22"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 245002, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "68:03:22"
+      },
+      "stime": "Tue Nov  3 01:40:47 2026",
+      "obittime": "Thu Nov  5 21:45:20 2026"
+    },
+    "1511147.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": "-29",
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-035[1]:ncpus=36:mem=240gb:ngpus=1) and exceeded resource walltime",
+      "queue": "batch_gpu",
+      "resources_used": {
+        "cpupercent": 300,
+        "cput": "251:47:30",
+        "gpu_usage": "GN-A40-035(cuda.1.energyConsumed=9577J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=15352.547MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=94%, cuda.1.memoryUtilization_avg=7%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=358133s, cuda.1.usagePerc=20.998%, cuda.1.memUsagePerc=9.195%)",
+        "mem": "9400036kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81208772kb",
+        "walltime": "99:29:27"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 358094, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "99:28:14"
+      },
+      "stime": "Tue Nov  3 23:43:25 2026",
+      "obittime": "Sun Nov  8 03:12:55 2026"
+    },
+    "1511145.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": "-29",
+      "comment": "Job run at Tue Nov 03 at 01:40 on (GN-A40-030[0]:ncpus=36:mem=240gb:ngpus=1) and exceeded resource walltime",
+      "queue": "batch_gpux",
+      "resources_used": {
+        "cpupercent": 225,
+        "cput": "192:00:01",
+        "gpu_usage": "GN-A40-030(cuda.0.energyConsumed=14251J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25920.547MB, cuda.0.memoryClock_min=0MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=92%, cuda.0.memoryUtilization_avg=28%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=31669.798s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=451825s, cuda.0.usagePerc=43.994%, cuda.0.memUsagePerc=32.135%)",
+        "mem": "12003748kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "106315048kb",
+        "walltime": "125:31:18"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 451801, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "125:30:01"
+      },
+      "stime": "Tue Nov  3 01:40:35 2026",
+      "obittime": "Sun Nov  8 07:11:58 2026"
+    },
+    "1511143.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": "-29",
+      "comment": "Job run at Tue Nov 03 at 01:34 on (GN-A40-045[0]:ncpus=36:mem=240gb:ngpus=1) and exceeded resource walltime",
+      "queue": "batch_gpux",
+      "resources_used": {
+        "cpupercent": 204,
+        "cput": "181:15:31",
+        "gpu_usage": "GN-A40-045(cuda.0.energyConsumed=15351J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25920.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=27%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=33165.211s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=459334s, cuda.0.usagePerc=46.998%, cuda.0.memUsagePerc=32.135%)",
+        "mem": "11989944kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "105925772kb",
+        "walltime": "127:35:54"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459274, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:34"
+      },
+      "stime": "Tue Nov  3 01:34:41 2026",
+      "obittime": "Sun Nov  8 09:10:39 2026"
+    },
+    "1511148.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "comment": "Job run at Tue Nov 03 at 23:43 on (GN-A40-020[0]:ncpus=36:mem=240gb:ngpus=1)",
+      "queue": "batch_gpu",
+      "resources_used": {
+        "cpupercent": 202,
+        "cput": "161:27:38",
+        "gpu_usage": "GN-A40-020(cuda.0.energyConsumed=14253J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=25618.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=20%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=28947.528s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=393522s, cuda.0.usagePerc=34.998%, cuda.0.memUsagePerc=31.480%)",
+        "mem": "11898180kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "105472688kb",
+        "walltime": "109:18:59"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 459272, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "127:34:32"
+      },
+      "stime": "Tue Nov  3 23:43:36 2026",
+      "obittime": null
+    },
+    "1511410.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 143,
+      "comment": "Job run at Tue Nov 03 at 03:51 on (GN-A40-021[0]:ncpus=36:mem=240gb:ngpus=1) and terminated by e1538633@vanda.nus.edu.sg",
+      "queue": "batch_gpux",
+      "resources_used": {
+        "cpupercent": 239,
+        "cput": "232:14:33",
+        "gpu_usage": "GN-A40-021(cuda.0.energyConsumed=8261J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=15352.547MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=93%, cuda.0.memoryUtilization_avg=6%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=423166s, cuda.0.usagePerc=5.000%, cuda.0.memUsagePerc=9.195%)",
+        "mem": "9673960kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "81549688kb",
+        "walltime": "117:33:02"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 456073, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "126:41:13"
+      },
+      "stime": "Tue Nov  3 03:51:14 2026",
+      "obittime": "Sun Nov  8 01:24:25 2026"
+    },
+    "1523189.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Thu Nov 05 at 14:29 on (GN-A40-033[1]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "queue": "batch_gpu",
+      "resources_used": {
+        "cpupercent": 197,
+        "cput": "01:39:02",
+        "gpu_usage": "GN-A40-033(cuda.1.energyConsumed=7910J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=7178.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=3%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=4395s, cuda.1.usagePerc=4.947%, cuda.1.memUsagePerc=1.958%)",
+        "mem": "6811264kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "59871000kb",
+        "walltime": "01:14:10"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Thu Nov  5 14:29:59 2026",
+      "obittime": "Thu Nov  5 15:44:13 2026"
+    },
+    "1523190.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Thu Nov 05 at 14:30 on (GN-A40-025[0]:ncpus=36:mem=240gb:ngpus=1) and finished",
+      "queue": "batch_gpu",
+      "resources_used": {
+        "cpupercent": 170,
+        "cput": "00:49:46",
+        "gpu_usage": "GN-A40-025(cuda.0.energyConsumed=7735J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=7178.094MB, cuda.0.memoryClock_min=7251MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=5%, cuda.0.memoryUtilization_avg=1%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=2037s, cuda.0.usagePerc=10.886%, cuda.0.memUsagePerc=1.958%)",
+        "mem": "5260272kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "58502596kb",
+        "walltime": "00:34:22"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 7200, \"job.ncpus\": 36.0, \"job.ngpus\": 1.0, \"am_cloud_enabled\": false}",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "02:00:00"
+      },
+      "stime": "Thu Nov  5 14:30:09 2026",
+      "obittime": "Thu Nov  5 15:09:42 2026"
+    },
+    "1523191.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Thu Nov 05 at 15:44 on (CN-016[0]:ncpus=1:mem=6gb) and finished",
+      "queue": "batch_cpu",
+      "resources_used": {
+        "cpupercent": 12,
+        "cput": "00:00:03",
+        "mem": "35720kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "238740kb",
+        "walltime": "00:00:36"
+      },
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 600, \"job.ncpus\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mem=6GB",
+        "walltime": "00:10:00"
+      },
+      "stime": "Thu Nov  5 15:44:23 2026",
+      "obittime": "Thu Nov  5 15:45:04 2026"
+    }
+  },
+  "common_budget": {
+    "1000000": {
+      "lower_exclusive": 31829440,
+      "upper_inclusive": 32829440,
+      "runs": {
+        "baseline": {
+          "metrics/success": 85.90575658958139,
+          "metrics/spl": 51.18707647596644
+        },
+        "coverage256": {
+          "metrics/success": 84.7445406918633,
+          "metrics/spl": 47.56566701125514
+        },
+        "coverage32": {
+          "metrics/success": 83.38008598559718,
+          "metrics/spl": 46.4938469033056
+        },
+        "qwen01": {
+          "metrics/success": 87.25340150616651,
+          "metrics/spl": 49.20946421798753
+        },
+        "A": {
+          "metrics/success": 87.0498038874082,
+          "metrics/spl": 50.53404383742248
+        },
+        "B": {
+          "metrics/success": 88.49573574183177,
+          "metrics/spl": 51.46727447373248
+        },
+        "C_continuation": {
+          "metrics/success": 87.43530051108517,
+          "metrics/spl": 51.27810975403386
+        }
+      },
+      "points": 489
+    },
+    "2000000": {
+      "lower_exclusive": 30829440,
+      "upper_inclusive": 32829440,
+      "runs": {
+        "baseline": {
+          "metrics/success": 87.67482510242638,
+          "metrics/spl": 52.585935879388146
+        },
+        "coverage256": {
+          "metrics/success": 85.52068684215799,
+          "metrics/spl": 49.178052637935785
+        },
+        "coverage32": {
+          "metrics/success": 85.65489664414521,
+          "metrics/spl": 49.114285072382295
+        },
+        "qwen01": {
+          "metrics/success": 87.18106121953458,
+          "metrics/spl": 49.52181175335891
+        },
+        "A": {
+          "metrics/success": 85.84658399819108,
+          "metrics/spl": 49.32942128718326
+        },
+        "B": {
+          "metrics/success": 87.95649704572,
+          "metrics/spl": 50.495014415182624
+        },
+        "C_continuation": {
+          "metrics/success": 86.08992826975233,
+          "metrics/spl": 49.95878239371027
+        }
+      },
+      "points": 977
+    },
+    "3000000": {
+      "lower_exclusive": 29829440,
+      "upper_inclusive": 32829440,
+      "runs": {
+        "baseline": {
+          "metrics/success": 87.71373674324347,
+          "metrics/spl": 52.79424455385566
+        },
+        "coverage256": {
+          "metrics/success": 85.93424321848377,
+          "metrics/spl": 49.37818783338566
+        },
+        "coverage32": {
+          "metrics/success": 86.03334956608535,
+          "metrics/spl": 49.62000943898341
+        },
+        "qwen01": {
+          "metrics/success": 87.23548476199649,
+          "metrics/spl": 49.547010804605975
+        },
+        "A": {
+          "metrics/success": 86.06573879108494,
+          "metrics/spl": 48.83789363574656
+        },
+        "B": {
+          "metrics/success": 87.92847144725786,
+          "metrics/spl": 50.323295743799044
+        },
+        "C_continuation": {
+          "metrics/success": 86.85540819737692,
+          "metrics/spl": 50.150932254644786
+        }
+      },
+      "points": 1465
+    }
+  },
+  "own_budget": {
+    "qwen01": {
+      "1000000": {
+        "lower_exclusive": 31829440,
+        "upper_inclusive": 32829440,
+        "runs": {
+          "baseline": {
+            "metrics/success": 85.90575658958139,
+            "metrics/spl": 51.18707647596644
+          },
+          "coverage256": {
+            "metrics/success": 84.7445406918633,
+            "metrics/spl": 47.56566701125514
+          },
+          "coverage32": {
+            "metrics/success": 83.38008598559718,
+            "metrics/spl": 46.4938469033056
+          },
+          "qwen01": {
+            "metrics/success": 87.25340150616651,
+            "metrics/spl": 49.20946421798753
+          }
+        },
+        "points": 489
+      },
+      "2000000": {
+        "lower_exclusive": 30829440,
+        "upper_inclusive": 32829440,
+        "runs": {
+          "baseline": {
+            "metrics/success": 87.67482510242638,
+            "metrics/spl": 52.585935879388146
+          },
+          "coverage256": {
+            "metrics/success": 85.52068684215799,
+            "metrics/spl": 49.178052637935785
+          },
+          "coverage32": {
+            "metrics/success": 85.65489664414521,
+            "metrics/spl": 49.114285072382295
+          },
+          "qwen01": {
+            "metrics/success": 87.18106121953458,
+            "metrics/spl": 49.52181175335891
+          }
+        },
+        "points": 977
+      },
+      "3000000": {
+        "lower_exclusive": 29829440,
+        "upper_inclusive": 32829440,
+        "runs": {
+          "baseline": {
+            "metrics/success": 87.71373674324347,
+            "metrics/spl": 52.79424455385566
+          },
+          "coverage256": {
+            "metrics/success": 85.93424321848377,
+            "metrics/spl": 49.37818783338566
+          },
+          "coverage32": {
+            "metrics/success": 86.03334956608535,
+            "metrics/spl": 49.62000943898341
+          },
+          "qwen01": {
+            "metrics/success": 87.23548476199649,
+            "metrics/spl": 49.547010804605975
+          }
+        },
+        "points": 1465
+      }
+    },
+    "A": {
+      "1000000": {
+        "lower_exclusive": 40551872,
+        "upper_inclusive": 41551872,
+        "runs": {
+          "baseline": {
+            "metrics/success": 85.5872233221136,
+            "metrics/spl": 50.12714980448194
+          },
+          "coverage256": {
+            "metrics/success": 86.13388724853655,
+            "metrics/spl": 46.64858117669151
+          },
+          "coverage32": {
+            "metrics/success": 83.99297780298261,
+            "metrics/spl": 46.52123761445223
+          },
+          "A": {
+            "metrics/success": 85.03059726551267,
+            "metrics/spl": 48.14209760088619
+          }
+        },
+        "points": 489
+      },
+      "2000000": {
+        "lower_exclusive": 39551872,
+        "upper_inclusive": 41551872,
+        "runs": {
+          "baseline": {
+            "metrics/success": 85.63520232999093,
+            "metrics/spl": 50.56342333402702
+          },
+          "coverage256": {
+            "metrics/success": 85.13055826282793,
+            "metrics/spl": 46.762043347500246
+          },
+          "coverage32": {
+            "metrics/success": 84.19256111494472,
+            "metrics/spl": 46.59887061758442
+          },
+          "A": {
+            "metrics/success": 85.67032749967663,
+            "metrics/spl": 48.82504322328734
+          }
+        },
+        "points": 977
+      },
+      "3000000": {
+        "lower_exclusive": 38551872,
+        "upper_inclusive": 41551872,
+        "runs": {
+          "baseline": {
+            "metrics/success": 86.65744202942571,
+            "metrics/spl": 51.51769975143081
+          },
+          "coverage256": {
+            "metrics/success": 86.26131021528927,
+            "metrics/spl": 47.697622700762835
+          },
+          "coverage32": {
+            "metrics/success": 85.02116172386924,
+            "metrics/spl": 47.64370376339544
+          },
+          "A": {
+            "metrics/success": 85.97188058159864,
+            "metrics/spl": 49.0191758818187
+          }
+        },
+        "points": 1465
+      }
+    },
+    "B": {
+      "1000000": {
+        "lower_exclusive": 37180864,
+        "upper_inclusive": 38180864,
+        "runs": {
+          "baseline": {
+            "metrics/success": 82.58846183983583,
+            "metrics/spl": 49.10005127481644
+          },
+          "coverage256": {
+            "metrics/success": 82.12439192340906,
+            "metrics/spl": 44.33442776554201
+          },
+          "coverage32": {
+            "metrics/success": 80.3696689308299,
+            "metrics/spl": 43.20750486387553
+          },
+          "B": {
+            "metrics/success": 86.47256486254967,
+            "metrics/spl": 48.25267314545216
+          }
+        },
+        "points": 489
+      },
+      "2000000": {
+        "lower_exclusive": 36180864,
+        "upper_inclusive": 38180864,
+        "runs": {
+          "baseline": {
+            "metrics/success": 85.73886929051294,
+            "metrics/spl": 50.73534406134391
+          },
+          "coverage256": {
+            "metrics/success": 84.5064767490512,
+            "metrics/spl": 46.61495772208504
+          },
+          "coverage32": {
+            "metrics/success": 83.77157868235969,
+            "metrics/spl": 45.40960561777699
+          },
+          "B": {
+            "metrics/success": 87.94444685338586,
+            "metrics/spl": 50.58204264455344
+          }
+        },
+        "points": 977
+      },
+      "3000000": {
+        "lower_exclusive": 35180864,
+        "upper_inclusive": 38180864,
+        "runs": {
+          "baseline": {
+            "metrics/success": 86.37330643959827,
+            "metrics/spl": 51.21331726324843
+          },
+          "coverage256": {
+            "metrics/success": 84.76414563305956,
+            "metrics/spl": 47.65979599423783
+          },
+          "coverage32": {
+            "metrics/success": 85.14858811788592,
+            "metrics/spl": 47.02857293163144
+          },
+          "B": {
+            "metrics/success": 87.69768808075186,
+            "metrics/spl": 50.42862155128258
+          }
+        },
+        "points": 1465
+      }
+    }
+  },
+  "caveats": [
+    "Means of overlapping training windows; not independent samples or validation.",
+    "Original baseline/coverage histories and weights continuations have different reset histories.",
+    "C continuation is explicitly labeled, with no silent stitching across its reset.",
+    "Different geometry resolution/action validity definitions do not support direct old/new area rankings."
+  ]
+}

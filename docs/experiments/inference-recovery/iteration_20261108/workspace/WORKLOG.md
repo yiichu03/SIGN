@@ -2474,3 +2474,49 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 
 - 新资料快照已生成557项哈希/558实际文件，源数据17,124,687 bytes；全部SHA/大小核验及README+根三文档38条本地Markdown链接通过，WORKLOG原字节前缀保留，未复制模型/环境/大相机序列或ZIP。DEV相对f0的src/scripts/tests/exp_config/run_sim.py工作树差异为空；origin有效push URL为git@github.com:yiichu03/SIGN.git，远端当前e9a2f40，与资料提交基点一致。
 - 状态抽查发现consensus_probe已F0且technical_passed=True，但生成器只识别stage=probe，实际旧阶段名offline_probe_only，导致机器结果completed误标False；这是资料生成器分类错误，不是重跑失败或真实结果变化。已将识别扩展到含probe的阶段名，需重建/重验后才提交。旧source/原摘要/概率不改，正式GPU1532001与CPU1532002继续固定，不改运行代码。
+
+
+## 2026-11-08T09:05:44+08:00 [QWEN-ITERATION-PUBLISHED-FULL4200-RUNNING]
+
+- 修正资料probe阶段别名后重建：557项SHA/大小、13阶段状态、39本地链接全部通过；21个原字节CSV/历史文本格式例外均逐文件SHA与原源相等，生成文档/代码没有新增空白错误。559个暂存文件（README+558包文件）通过git cat-file逐字节对照工作文件，避免CSV换行被索引转换；未包含权重/环境/全相机序列。validation/whitespace原输出留logs/qwen_recovery_iteration_20261108/publication_validation.json及publication_whitespace_check.txt。
+- 真实git commit完成后才push，资料提交**294f651f6ed4cf9e3a7724d2d813da371b697039**，普通push origin/phase2/qwen-candidate-recovery成功；ls-remote复核同SHA，origin push URL为git@github.com:yiichu03/SIGN.git。相对f0运行src/scripts/tests/exp_config/run_sim.py差异仍为空；Git status仅保留原data软链未跟踪，没有改旧运行树或原训练。
+- 正式GPU**1532001**当前R，真实08:52:23起GN-A40-029[1]；09:04截面原生约2336/4200，规则/Qwen最终结果未产生，不作全量收益判断。实际full_off/native/eval_run0_/config_of_eval.yaml已核验num_environments6、habitat.environment.max_episode_steps500、seed100、off，SHA及路径存formal_live_config_check.json；不要把另一个无关默认项max_episode_steps1000当本环境上限。CPU1532002仅afterany/H，无GPU。
+- 已完成多轮开发、同版精确重复、冻结确认与原始记录审计后固定f0并提交正式3×4200；可复现局部1救回/0误伤不等于普遍优势，确认SR持平且SPL下降和普通无额外作用已随资料发布。新发布包固定8:56附近快照，推送后根STATUS/本条与publication_push_result.json另记实际成功，不为把回执写入自身循环commit。无9B、新训练、原作业启停或ZIP。
+
+
+## 2026-11-08T11:10:29+08:00 [QWEN-ITERATION-AUTOMATIC-RECEIPT]
+
+- {"status": "full_completed", "job": "1532001.stdct-mgmt-02", "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa", "comparisons": {"full": {"net": 2, "prefix_supported": 2, "sr_delta": 0.04761904761905189, "spl_delta": 0.0021499496528631923}}, "recorded_at": "2026-11-08T11:10:29+08:00"}
+
+
+## 2026-11-08T12:56:08+08:00 [QWEN-FULL4200-COMPLETE-ATTRIBUTION-REVIEW-20261108]
+
+- 用户询问当前情况。先读根AGENTS/STATUS，实际qstat核对正式1532001与CPU1532002均F/Exit0，11:10前后结束；GPU用时2:17:44。只读当前PBS还剩旧B1511148训练R，未启停或提交任何作业。
+- 已执行CPU raw复核（envs/sign-baseline/bin/python）：三组各4200唯一任务/14场景、目标/起点匹配、step1..500、有限值、SR/SPL/碰撞/动作/面积÷动作重算与结果一致、native TB交叉一致；实际三组config为6env/500/seed100。同125.952M/SHA988c9ecc…/f0e，off4200位姿SHA全部匹配旧原参考。独立completed_review_20261108.json保留结果SHA、PBS、config SHA及23模型改向episode的NPZ前缀复核。
+- 完整SR/SPL：原生3678/4200=87.571429/53.299601%；匹配扫描规则3721=88.595238/53.775092%；Qwen3723=88.642857/53.777242%。Qwen相对规则仅+0.047619pp SR、+0.002150pp SPL；时间分别23.05/54.54/59.34min，包含每组环境/模型初始化，非纯模型耗时。旧无扫描规则3708=88.285714/53.676598%，动作库不同单列。
+- Qwen151完成事件/53模型采纳/23真实偏离（23episode）；汇总5救回3误伤净+2，但重新检查实际动作/位姿前缀，只有Scioto2230与Swormville3040两救回受支持，Elmira2824/Scioto2314/Swormville3290三误伤也均前缀受支持；Mosquito3479/Scioto2174/Swormville3026三救回无本episode模型改向，实际动作已发生分歧但不能直接归给VLM判断。并行组批影响只是机制假设，没有为本查询提交重放去证明。
+- 原producer passes_fixed_gain_gate=True及CPU full_completed回执不改；其汇总门按净2+至少1前缀救回放真，未要求扣除无改向救回，不能据True称可靠模型优势。当前结论是恢复框架整体表现更高，而Qwen额外收益仍不足；不把AI/前缀QA当人工原因真值，人工列保持空。根STATUS/AGENTS/RUNBOOK已更新完成入口，原published294f651仍提交时快照、未包括此全量结果，本状态查询不自动push/新迭代/打包。
+
+
+## 2026-11-08T13:07:55+08:00 [QWEN-LOGIC-AND-LATEST-TRAINING-20261108]
+
+- 用户希望理解当前推理恢复逻辑，并明确Qwen比规则研究点更重要，同预算达到规则水平亦有价值。已阅读固定f0e的inference_recovery/recovery_affordance/profile/两prompt：SIGN常规动作；16动作窗口75%前进且旋转补偿后RGB低变化触发；24真实扫描得左右90度RGB；匹配规则第一次左、第二次右；Qwen每侧问通行/障碍，双问相对差>=.05一致才允许改向，两问默认open最高则保持，证据不足仍回退规则，当前语义selector没有C/不介入选项。选向后6转向+8前进/计划1.6m再回SIGN，cooldown64，最多2次/76覆盖动作均计500，原STOP/masks/GRU保持。实际模型仅左右RGB，目标图只在SIGN及人审拼图使用、没有喂给此Qwen；也没有完整轨迹/GT信息。
+- 151完成评分中98次规则回退、53次模型采纳但仅23真正改向，因此当前88.64%为混合框架成绩。已将用户偏好记根AGENTS/STATUS；建议保留公共触发/扫描/执行预算，后续独立比较Qwen自主方向/不介入决策与规则，不把回退作用记作模型；这仅说明/目标整理，本轮未改算法、没有新qsub或push。
+- 实际原字节复用11月7日只读readout.py到logs/training_readout_20261108并在CPU运行，snapshot_130216生成6组最新/末事件、ledger与共同/各自1/2/3M；旧TFRecord前缀SHA、完整尾记录、连续ledger/nav_rewards/masks均检查，所有标量有限。独立从导出CSV复算各组1M/3M，另从冻结原CSV重算基线74.653696M末1M87.868932/54.821662%。来源脚本原字节相等与CSV SHA证据见validation.json。
+- 训练近1M SR/SPL：覆盖256172.599296M 87.7971/50.6019%；覆盖32175.867904M 88.7623/51.3725%；β.1 32.829440M 87.2534/49.2095%；A41.551872M 85.0306/48.1421%；B38.180864M 86.4726/48.2527%；C82.196480M 88.6368/51.4075%。日志末步不作ckpt步数。qstat确认覆盖32/β.1/A分别03:12/07:11/09:10到原PBS时限，覆盖256早于11月5日到限；C01:24按用户旧授权停，只有B1511148仍R/余约18.26h。未人为停止新任务或重计任何预算。
+- B同38.180864M近3M87.6977/50.4286%，同时高于两覆盖（25684.7641/47.6598；3285.1486/47.0286），相对基线86.3733/51.2133%为SR+1.3244pp、SPL-0.7847pp；最新1M SR对前1M-2.9468pp，不能只报有利3M。A最新SR对前1M-1.2808pp，β.1+0.1448pp。共同32.829440M全部正负结果也保留，不将训练/重叠窗口/不同reset历史当val或严格奖励因果。根STATUS新增当前训练入口并更新快速索引；无GPU评估、代码运行树修改、9B、ZIP或GitHub发布。
+
+
+## 2026-11-08T14:09:55+08:00 [DOCS-DISCUSSION-BRANCH-PUBLICATION-PREPARED-20261108]
+
+- 用户明确本轮先更新项目文档、列分支并push yiichu03，下一轮Qwen框架先沟通，之后可多组并行。已把边界与研究目标写入根AGENTS/STATUS，不把讨论题当已授权实验，不qsub/启停作业/改算法。
+- 原生git worktree/for-each-ref及origin ls-remote双仓库实查：SIGN本地19/origin19同名分支、32工作树其中16detached；SRU本地3/origin3、2工作树。四个SIGN远端HEAD不同分支逐文件都只差README/docs（GS25文件、覆盖25657、Qwen消融674、Qwen128 beta.1 61），运行SRC不同分支不pull资料；作者main不动，默认push yiichu03。原始branch_inventory/relationship_audit/protected_trees及prepare.py保留。只读盘点一次root目录git ls-tree因根非Git失败，后续均用git -C正确仓库；未初始化根仓库/修改Git历史。
+- 再次执行已有CPU只读readout.py，得到snapshot_135628，六组末步除B不变，B38,438,912步，近1M SR87.94138/SPL49.205864%，近3M87.925629/50.596613%，前1M SR差-0.416671pp；原PBS预算余约17.355h。同预算基线86.249774/51.208004%，覆盖25684.837153/47.528392%，覆盖3285.155716/46.853907%。13:02旧截面保留；不把短期恢复当稳健val收益。
+- 导出46,880行近期及参考CORE原数值CSV，1M/3M重新与readout均值/点数/step数组对照通过，源SHA/过滤口径在training_sources与latest validation.json。计划复用同一资料生成器加入完整full结果、分支导航、案例及待讨论问题；先py_compile通过，最后完整build/check/源码守卫/索引检查与实际push待完成再追加。
+- 抽查全8条成败变化的16份原NPZ，键严格仅commands/poses，无相机序列，单份3-12KB；仅5个前缀支持真实模型改向案例摘录候选输入/人审目标图，正2/负3都保留。原模型输入仍只有左右RGB；目标图仅供人审，GT/完整历史不被伪称已用。完整Producer True/旧False/审计原文全保留。所有新内容为资料/证据生成，不动原训练源码，不新增9B或ZIP。
+
+
+## 2026-11-08T14:16:15+08:00 [DISCUSSION-PUBLICATION-FORMAT-CHECK-FIX]
+
+- 新研究包生成644哈希/645物理文件约31.64MB；离线check-only复算三组4200原始指标/任务和训练窗口通过，67本地Markdown链接及16仅commands/poses NPZ通过，34工作树运行源码/其余HEAD守卫通过，旧294f651发布WORKLOG原字节前缀完整。
+- 暂存后严格git diff --cached --check发现唯一生成文档错误：CASES.md:102 new blank line at EOF；原字节CSV格式告警按旧SHA单列，不将该新文档错误加入例外。提交/推送未执行。已修改源生成器只去掉案例页末尾多余空行、保留一个LF，需重新生成/核验/暂存；没有手工改写发布WORKLOG或放宽全局格式规则，算法/运行树和PBS不变。原检查完整输出在logs/github_discussion_update_20261108/whitespace_check.txt。

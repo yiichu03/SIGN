@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checks": {
+    "coverage256": {
+      "selected_csv_sha256": "08a7553eaa5bc53229e14ec0d73b96d6aad5a96118e546dcbe4826114a578ea6",
+      "core_steps_aligned": true,
+      "windows_independently_recomputed": true,
+      "all_scalars_finite": true,
+      "nav_rewards_masks_unchanged": null
+    },
+    "coverage32": {
+      "selected_csv_sha256": "ad13f737b2a71f4ff9cdcee470f2cad7b4b3757072a97be9f204e92ddd86fd02",
+      "core_steps_aligned": true,
+      "windows_independently_recomputed": true,
+      "all_scalars_finite": true,
+      "nav_rewards_masks_unchanged": null
+    },
+    "qwen01": {
+      "selected_csv_sha256": "98246db05cd94d78e2b8ec29a89cca1e5ea68d62874cf425f3f390bf21579f30",
+      "core_steps_aligned": true,
+      "windows_independently_recomputed": true,
+      "all_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true
+    },
+    "A": {
+      "selected_csv_sha256": "f110644f773b6049281eb445cdf81d0f3cf5d27c4636825b46844344c6c18b64",
+      "core_steps_aligned": true,
+      "windows_independently_recomputed": true,
+      "all_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true
+    },
+    "B": {
+      "selected_csv_sha256": "ba08dea5e85366cf25911ad1b1ce9102443eb0bb99d0890ef81a53d00f84506b",
+      "core_steps_aligned": true,
+      "windows_independently_recomputed": true,
+      "all_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true
+    },
+    "C": {
+      "selected_csv_sha256": "e1d8e8417b2b3399e2e922570d22efcedae7127b6a5bd4ad788df69e71d9bcda",
+      "core_steps_aligned": true,
+      "windows_independently_recomputed": true,
+      "all_scalars_finite": true,
+      "nav_rewards_masks_unchanged": true
+    }
+  },
+  "source_script_identical_to_20261107": true
+}

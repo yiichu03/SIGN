@@ -1,0 +1,76 @@
+{
+  "latest_snapshot": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628",
+  "previous_snapshot": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_130216",
+  "provenance": {
+    "recent_training/coverage256.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628/coverage256_selected_scalars.csv",
+      "source_sha256": "08a7553eaa5bc53229e14ec0d73b96d6aad5a96118e546dcbe4826114a578ea6",
+      "published_sha256": "4fa75d756789b2adb871b61c8a4812b2ffeb9399f5ebb025e4124ea9227432a4",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "recent_training/coverage32.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628/coverage32_selected_scalars.csv",
+      "source_sha256": "ad13f737b2a71f4ff9cdcee470f2cad7b4b3757072a97be9f204e92ddd86fd02",
+      "published_sha256": "7923fc33c71111c24d93e413ac5dc72321bbb1e1ec5a8f0f59f1d12936112c9d",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "recent_training/qwen01.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628/qwen01_selected_scalars.csv",
+      "source_sha256": "98246db05cd94d78e2b8ec29a89cca1e5ea68d62874cf425f3f390bf21579f30",
+      "published_sha256": "d7394be8e48d91ab9713dbd155eec723fd912912a3ca85f1bfa60dd5a9958254",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "recent_training/A.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628/A_selected_scalars.csv",
+      "source_sha256": "f110644f773b6049281eb445cdf81d0f3cf5d27c4636825b46844344c6c18b64",
+      "published_sha256": "651c7433cb36dadb679198f4f4c1fe246ac68947991edab4f244a3cfabdc9889",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "recent_training/B.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628/B_selected_scalars.csv",
+      "source_sha256": "bd124ea38803497f39ff4e9579631315c867e47fe479f7fbdd9f6f49f2351564",
+      "published_sha256": "4a42f328d93b3a45df834d1a4fef9d8e2c5efcfc067d5dc6c7d9d7b5dbd03c3e",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "recent_training/C.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261108/snapshot_135628/C_selected_scalars.csv",
+      "source_sha256": "e1d8e8417b2b3399e2e922570d22efcedae7127b6a5bd4ad788df69e71d9bcda",
+      "published_sha256": "2e68f5921afdae56e174235d7ac4b7ed273fee5d4389f052774cf6697627fb87",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "recent_training/baseline.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+      "source_sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091",
+      "published_sha256": "b6dbf07f0165d2d35f407f43f3584e31a6f1deb861037cbe05d1cb04aeadd9fc",
+      "rows": 2930,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "reference_scalars/baseline.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/baseline/selected_scalars.csv",
+      "source_sha256": "f8e8d4463acbac031904ff596da7f865feed873a481da37c5ed1c75561162091",
+      "published_sha256": "2cc197dd2b47d3097791b7b8d9decb003dd684b58712d1b2ccac25178fa86d20",
+      "rows": 8790,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "reference_scalars/coverage256.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage256/selected_scalars.csv",
+      "source_sha256": "a40e4812d1a8c05a20a8a4c88ba17a563fd4a9ed4a619a93b9259cec782b9bb8",
+      "published_sha256": "d651680183b275949b89a70abd1d8d2d3d9b5704872fed652d1d3a463fd688b3",
+      "rows": 8790,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    },
+    "reference_scalars/coverage32.csv": {
+      "source": "/scratch/e1538633/liuyi/logs/training_readout_20261031/snapshot_005043/coverage32/selected_scalars.csv",
+      "source_sha256": "c6ba980f43d3ac35177f470587b6a174efd630a9bd57945ba547a92e6eee1f4f",
+      "published_sha256": "7e44da744c4898995732445a9c8c8b783112b561cb40c5b6137ba98891f7ffbb",
+      "rows": 8790,
+      "filter": "CORE SR/SPL only; retain original values/order, write LF CSV"
+    }
+  }
+}

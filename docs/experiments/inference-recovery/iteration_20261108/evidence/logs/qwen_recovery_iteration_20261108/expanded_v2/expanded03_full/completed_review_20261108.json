@@ -1,0 +1,569 @@
+{
+  "recorded_at": "2026-11-08T12:54:39+08:00",
+  "passed": true,
+  "job_states": {
+    "1532001.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "stime": "Sun Nov  8 08:52:23 2026",
+      "mtime": "Sun Nov  8 11:10:10 2026",
+      "resources_used": {
+        "cpupercent": 221,
+        "cput": "03:26:16",
+        "gpu_usage": "GN-A40-029(cuda.1.energyConsumed=8012J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=16180.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=60%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=919.274s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=8216s, cuda.1.usagePerc=9.697%, cuda.1.memUsagePerc=21.499%)",
+        "mem": "8357736kb",
+        "ncpus": 36,
+        "ngpus": 0,
+        "vmem": "86056292kb",
+        "walltime": "02:17:44"
+      }
+    },
+    "1532002.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "stime": "Sun Nov  8 11:10:21 2026",
+      "mtime": "Sun Nov  8 11:10:38 2026",
+      "resources_used": {
+        "cpupercent": 0,
+        "cput": "00:00:00",
+        "mem": "34156kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "53876kb",
+        "walltime": "00:00:05"
+      }
+    }
+  },
+  "results": {
+    "off": {
+      "success_rate": 0.8757142857142857,
+      "spl": 0.5329960106555678,
+      "mean_collisions": 36.67857142857143,
+      "mean_episode_steps": 113.55928571428572,
+      "new_m2_per_step_global": 0.10302271312027042,
+      "successes": 3678,
+      "episodes": 4200,
+      "result_sha256": "aba7e1ab614c4b22e5904c7d93324ea40f76b537b05f39d807140d0558e591da",
+      "seconds": 1383.1601603790186
+    },
+    "rule": {
+      "success_rate": 0.8859523809523809,
+      "spl": 0.537750922805995,
+      "mean_collisions": 30.798333333333332,
+      "mean_episode_steps": 109.45119047619048,
+      "new_m2_per_step_global": 0.1077311913333839,
+      "successes": 3721,
+      "episodes": 4200,
+      "result_sha256": "919b5b9b9942ae4ebdd61e48c93c1f5b0bb401d2d917285419253b0b2581da3d",
+      "seconds": 3272.540195220965
+    },
+    "qwen": {
+      "success_rate": 0.8864285714285715,
+      "spl": 0.5377724223025236,
+      "mean_collisions": 30.704285714285714,
+      "mean_episode_steps": 109.27880952380953,
+      "new_m2_per_step_global": 0.10786762126583148,
+      "successes": 3723,
+      "episodes": 4200,
+      "result_sha256": "35f029e23d9c9d398ba75f56c8e0b56551788f8ba577e195dd6b2a0c67d77d38",
+      "seconds": 3560.517644251988
+    }
+  },
+  "configs": {
+    "off": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_off/native/eval_run0_/config_of_eval.yaml",
+      "sha256": "60502aaf7363b88bec60d00154f2395461891c0cb74e948e226f7cad4207dafa",
+      "num_environments": 6,
+      "max_episode_steps": 500,
+      "seed": 100
+    },
+    "rule": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/eval_run0_/config_of_eval.yaml",
+      "sha256": "fb88bee57a821f5f1f0868109a82ab6a032f3fd88cbb73a15dfb8414d8f5bb51",
+      "num_environments": 6,
+      "max_episode_steps": 500,
+      "seed": 100
+    },
+    "qwen": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/eval_run0_/config_of_eval.yaml",
+      "sha256": "32bec0a2e0c0c0d43ec4baf3d119a20406d13ae61cc57fb16b6f2089608826a1",
+      "num_environments": 6,
+      "max_episode_steps": 500,
+      "seed": 100
+    }
+  },
+  "all_tasks_goals_starts_match": true,
+  "off_matches_original4200_pose_hashes": true,
+  "actual_vlm_direction_changes": 23,
+  "episodes_with_vlm_direction_change": 23,
+  "changed_episode_prefix_audits": [
+    {
+      "scene": "Cantwell",
+      "episode_id": "1735",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.3286899367373035,
+      "qwen_spl": 0.5618929049990722,
+      "vlm_decisions": [
+        75
+      ],
+      "first_action_difference": 75,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Denmark",
+      "episode_id": "3630",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.13538298417284017,
+      "qwen_spl": 0.17521132511256826,
+      "vlm_decisions": [
+        90
+      ],
+      "first_action_difference": 90,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Elmira",
+      "episode_id": "2824",
+      "rule_success": 1.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.17688091198944775,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        121
+      ],
+      "first_action_difference": 121,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Elmira",
+      "episode_id": "2904",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.2758292483106027,
+      "qwen_spl": 0.7049341093430739,
+      "vlm_decisions": [
+        61
+      ],
+      "first_action_difference": 61,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Elmira",
+      "episode_id": "2923",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.13306031671348112,
+      "qwen_spl": 0.14190797389024054,
+      "vlm_decisions": [
+        326
+      ],
+      "first_action_difference": 326,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Eudora",
+      "episode_id": "2063",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        251
+      ],
+      "first_action_difference": 251,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Mosquito",
+      "episode_id": "3529",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        113
+      ],
+      "first_action_difference": 113,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Mosquito",
+      "episode_id": "3541",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        273
+      ],
+      "first_action_difference": 273,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Mosquito",
+      "episode_id": "3563",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        487
+      ],
+      "first_action_difference": 487,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Pablo",
+      "episode_id": "682",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.13162038220344235,
+      "qwen_spl": 0.09309968314524769,
+      "vlm_decisions": [
+        162
+      ],
+      "first_action_difference": 162,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Ribera",
+      "episode_id": "1128",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        451
+      ],
+      "first_action_difference": 451,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Ribera",
+      "episode_id": "1185",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.7511750737980607,
+      "qwen_spl": 0.596103916591589,
+      "vlm_decisions": [
+        49
+      ],
+      "first_action_difference": 49,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Sands",
+      "episode_id": "480",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        71
+      ],
+      "first_action_difference": 71,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Sands",
+      "episode_id": "568",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        496
+      ],
+      "first_action_difference": 496,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2159",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        77
+      ],
+      "first_action_difference": 77,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2230",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.2252757955605231,
+      "vlm_decisions": [
+        122
+      ],
+      "first_action_difference": 122,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2314",
+      "rule_success": 1.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.698446350180071,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        120
+      ],
+      "first_action_difference": 120,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2324",
+      "rule_success": 0.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        122
+      ],
+      "first_action_difference": 122,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Sisters",
+      "episode_id": "1451",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.6295538773247368,
+      "qwen_spl": 0.6032283621947682,
+      "vlm_decisions": [
+        76
+      ],
+      "first_action_difference": 76,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Sisters",
+      "episode_id": "1464",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.8199230826142654,
+      "qwen_spl": 0.4118259046230881,
+      "vlm_decisions": [
+        48
+      ],
+      "first_action_difference": 48,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Swormville",
+      "episode_id": "3040",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.22339606347005297,
+      "vlm_decisions": [
+        143
+      ],
+      "first_action_difference": 143,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Swormville",
+      "episode_id": "3111",
+      "rule_success": 1.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.4901427585364657,
+      "qwen_spl": 0.6357575835063443,
+      "vlm_decisions": [
+        54
+      ],
+      "first_action_difference": 54,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Swormville",
+      "episode_id": "3290",
+      "rule_success": 1.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.15887153597768353,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        58
+      ],
+      "first_action_difference": 58,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    }
+  ],
+  "success_changes": [
+    {
+      "scene": "Elmira",
+      "episode_id": "2824",
+      "rule_success": 1.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.17688091198944775,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        121
+      ],
+      "first_action_difference": 121,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Mosquito",
+      "episode_id": "3479",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.08015074482248434,
+      "vlm_decisions": [],
+      "first_action_difference": 0,
+      "prefix_until_decision_matches": false,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2174",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.13978831923290716,
+      "vlm_decisions": [],
+      "first_action_difference": 36,
+      "prefix_until_decision_matches": false,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2230",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.2252757955605231,
+      "vlm_decisions": [
+        122
+      ],
+      "first_action_difference": 122,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Scioto",
+      "episode_id": "2314",
+      "rule_success": 1.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.698446350180071,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        120
+      ],
+      "first_action_difference": 120,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Swormville",
+      "episode_id": "3026",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.07114882150635338,
+      "vlm_decisions": [],
+      "first_action_difference": 0,
+      "prefix_until_decision_matches": false,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Swormville",
+      "episode_id": "3040",
+      "rule_success": 0.0,
+      "qwen_success": 1.0,
+      "rule_spl": 0.0,
+      "qwen_spl": 0.22339606347005297,
+      "vlm_decisions": [
+        143
+      ],
+      "first_action_difference": 143,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    },
+    {
+      "scene": "Swormville",
+      "episode_id": "3290",
+      "rule_success": 1.0,
+      "qwen_success": 0.0,
+      "rule_spl": 0.15887153597768353,
+      "qwen_spl": 0.0,
+      "vlm_decisions": [
+        58
+      ],
+      "first_action_difference": 58,
+      "prefix_until_decision_matches": true,
+      "human_cause": "",
+      "human_notes": ""
+    }
+  ],
+  "raw_rescues": 5,
+  "raw_harms": 3,
+  "prefix_supported_rescues": 2,
+  "prefix_supported_harms": 3,
+  "success_changes_without_vlm_direction_change": 3,
+  "full_comparison_sha256": "cc2f91198b5380406b33799fa64dc5b3745172b59d17f628cc7a7cdbf693792e",
+  "interpretation": "Raw net+2 is descriptive. Only2 rescues and3 harms have matching prefixes at actual VLM direction changes;3 rescues have no model direction change in that episode. Parallel batch effects are a hypothesis, not proven mechanism. No stable independent VLM SR advantage established; human causes remain blank."
+}

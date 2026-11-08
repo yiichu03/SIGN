@@ -1,0 +1,462 @@
+{
+  "captured_at": "2026-11-08T13:59:49+08:00",
+  "repositories": {
+    "SIGN": {
+      "repository": "yiichu03/SIGN",
+      "tree": "/scratch/e1538633/liuyi/SIGN-qwen-candidate-recovery",
+      "fetch_url": "https://github.com/yiichu03/SIGN.git",
+      "push_url": "git@github.com:yiichu03/SIGN.git",
+      "branches": [
+        {
+          "name": "experiment/habitat-gs-imagenav",
+          "local_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+          "origin_commit": "d1f5aa52df7de9004014cc3e91cef6ac1c84c1be",
+          "tracking": "origin/experiment/habitat-gs-imagenav",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-habitat-gs"
+          ],
+          "ahead_behind": [
+            "0",
+            "1"
+          ],
+          "runtime_diff_files": [],
+          "relationship": "different_commit_same_runtime"
+        },
+        {
+          "name": "main",
+          "local_commit": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+          "origin_commit": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+          "tracking": "upstream/main",
+          "worktrees": [],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase1/imagenav-qwen-diagnostics",
+          "local_commit": "f2b4bb4b18422ff0da9ada159a0456dc0c84a1e0",
+          "origin_commit": "f2b4bb4b18422ff0da9ada159a0456dc0c84a1e0",
+          "tracking": "origin/phase1/imagenav-qwen-diagnostics",
+          "worktrees": [],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/continue-coverage256-20261103",
+          "local_commit": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+          "origin_commit": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-continue-coverage256"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/continue-coverage32-20261103",
+          "local_commit": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+          "origin_commit": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-continue-coverage32"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/continue-qwen-ablation-20261103",
+          "local_commit": "1256ca70497592d2df178e6f77d10c14380689d8",
+          "origin_commit": "1256ca70497592d2df178e6f77d10c14380689d8",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-continue-ablation"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/continue-qwen128-beta01-20261103",
+          "local_commit": "bb59545f0c5663163e17cfe1dea37c441f09ccd2",
+          "origin_commit": "bb59545f0c5663163e17cfe1dea37c441f09ccd2",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-continue-qwen128"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/exploration-reward-try",
+          "local_commit": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+          "origin_commit": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+          "tracking": "origin/phase2/exploration-reward-try",
+          "worktrees": [],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/frozen-coverage-settle32",
+          "local_commit": "a7cc9e09fe3c0a9abfa054307cfb80474217d1a2",
+          "origin_commit": "a7cc9e09fe3c0a9abfa054307cfb80474217d1a2",
+          "tracking": "origin/phase2/frozen-coverage-settle32",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/frozen-rollout-coverage",
+          "local_commit": "6983c91e20493ff25ff32c24df02b968cc34f701",
+          "origin_commit": "b39e3626aae31125f018a81b047a593da71e468b",
+          "tracking": "origin/phase2/frozen-rollout-coverage",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage"
+          ],
+          "ahead_behind": [
+            "0",
+            "1"
+          ],
+          "runtime_diff_files": [],
+          "relationship": "different_commit_same_runtime"
+        },
+        {
+          "name": "phase2/frozen-visual-encoder",
+          "local_commit": "dac8609ee1dc3e71ad317998a2f5086a1935e84b",
+          "origin_commit": "dac8609ee1dc3e71ad317998a2f5086a1935e84b",
+          "tracking": "origin/phase2/frozen-visual-encoder",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/inference-coverage256-recovery",
+          "local_commit": "96f7783a28ff1beaea86370516f6c1987d9aabac",
+          "origin_commit": "96f7783a28ff1beaea86370516f6c1987d9aabac",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-inference-coverage256"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/inference-recovery-active-view",
+          "local_commit": "1ec9a17d73deef954b5c2c8d9ad0d4b1fc03c873",
+          "origin_commit": "1ec9a17d73deef954b5c2c8d9ad0d4b1fc03c873",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-inference-active-view"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/inference-recovery-harness",
+          "local_commit": "5e3b0d0799645affbbd32db81e0b0912f2cee1cb",
+          "origin_commit": "5e3b0d0799645affbbd32db81e0b0912f2cee1cb",
+          "tracking": "origin/phase2/inference-recovery-harness",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-inference-harness"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/qwen-beta003-geometry128",
+          "local_commit": "d2352f06bc56386d098c8b94d2754e9e21bf2cb3",
+          "origin_commit": "f00c15cb22a3fdcd6a2a5187f1e47e537fbac1b8",
+          "tracking": "origin/phase2/qwen-beta003-geometry128",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-qwen-ablation"
+          ],
+          "ahead_behind": [
+            "0",
+            "3"
+          ],
+          "runtime_diff_files": [],
+          "relationship": "different_commit_same_runtime"
+        },
+        {
+          "name": "phase2/qwen-candidate-recovery",
+          "local_commit": "294f651f6ed4cf9e3a7724d2d813da371b697039",
+          "origin_commit": "294f651f6ed4cf9e3a7724d2d813da371b697039",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-qwen-candidate-recovery"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/qwen-history-window",
+          "local_commit": "453179cd67c348576d974aa7bf38203044a7eef6",
+          "origin_commit": "453179cd67c348576d974aa7bf38203044a7eef6",
+          "tracking": "origin/phase2/qwen-history-window",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-qwen-history-window"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/qwen-topdown-judge",
+          "local_commit": "b1c24dc16038b10df919a1965d35880f4f143ee1",
+          "origin_commit": "b1c24dc16038b10df919a1965d35880f4f143ee1",
+          "tracking": "origin/phase2/qwen-topdown-judge",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-qwen-topdown-judge"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase2/qwen128-reward-beta01",
+          "local_commit": "81fedec56b37921c350ce8064106c32788bb3e04",
+          "origin_commit": "33e30d28eecdcce557b0f453004a35de0bdebcbf",
+          "tracking": null,
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-qwen128-reward"
+          ],
+          "ahead_behind": [
+            "0",
+            "2"
+          ],
+          "runtime_diff_files": [],
+          "relationship": "different_commit_same_runtime"
+        }
+      ],
+      "origin_heads": {
+        "experiment/habitat-gs-imagenav": "d1f5aa52df7de9004014cc3e91cef6ac1c84c1be",
+        "main": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+        "phase1/imagenav-qwen-diagnostics": "f2b4bb4b18422ff0da9ada159a0456dc0c84a1e0",
+        "phase2/continue-coverage256-20261103": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+        "phase2/continue-coverage32-20261103": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+        "phase2/continue-qwen-ablation-20261103": "1256ca70497592d2df178e6f77d10c14380689d8",
+        "phase2/continue-qwen128-beta01-20261103": "bb59545f0c5663163e17cfe1dea37c441f09ccd2",
+        "phase2/exploration-reward-try": "dad87fe225a4dc1073787d8d2cc83f67e61c0a9d",
+        "phase2/frozen-coverage-settle32": "a7cc9e09fe3c0a9abfa054307cfb80474217d1a2",
+        "phase2/frozen-rollout-coverage": "b39e3626aae31125f018a81b047a593da71e468b",
+        "phase2/frozen-visual-encoder": "dac8609ee1dc3e71ad317998a2f5086a1935e84b",
+        "phase2/inference-coverage256-recovery": "96f7783a28ff1beaea86370516f6c1987d9aabac",
+        "phase2/inference-recovery-active-view": "1ec9a17d73deef954b5c2c8d9ad0d4b1fc03c873",
+        "phase2/inference-recovery-harness": "5e3b0d0799645affbbd32db81e0b0912f2cee1cb",
+        "phase2/qwen-beta003-geometry128": "f00c15cb22a3fdcd6a2a5187f1e47e537fbac1b8",
+        "phase2/qwen-candidate-recovery": "294f651f6ed4cf9e3a7724d2d813da371b697039",
+        "phase2/qwen-history-window": "453179cd67c348576d974aa7bf38203044a7eef6",
+        "phase2/qwen-topdown-judge": "b1c24dc16038b10df919a1965d35880f4f143ee1",
+        "phase2/qwen128-reward-beta01": "33e30d28eecdcce557b0f453004a35de0bdebcbf"
+      },
+      "remote_only_names": [],
+      "worktrees": [
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN",
+          "commit": "dac8609ee1dc3e71ad317998a2f5086a1935e84b",
+          "branch": "phase2/frozen-visual-encoder"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-continue-ablation",
+          "commit": "1256ca70497592d2df178e6f77d10c14380689d8",
+          "branch": "phase2/continue-qwen-ablation-20261103"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-continue-coverage256",
+          "commit": "5a86720fdcaf69a842ce40a660e2598f3fc052a0",
+          "branch": "phase2/continue-coverage256-20261103"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-continue-coverage32",
+          "commit": "2e5efbaf6caa4962e458e898d6c107e06a59138b",
+          "branch": "phase2/continue-coverage32-20261103"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-continue-qwen128",
+          "commit": "bb59545f0c5663163e17cfe1dea37c441f09ccd2",
+          "branch": "phase2/continue-qwen128-beta01-20261103"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-coverage-eval",
+          "commit": "a7cc9e09fe3c0a9abfa054307cfb80474217d1a2",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-coverage-publication",
+          "commit": "b39e3626aae31125f018a81b047a593da71e468b",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-frozen-coverage-settle32",
+          "commit": "a7cc9e09fe3c0a9abfa054307cfb80474217d1a2",
+          "branch": "phase2/frozen-coverage-settle32"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage",
+          "commit": "6983c91e20493ff25ff32c24df02b968cc34f701",
+          "branch": "phase2/frozen-rollout-coverage"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-habitat-gs",
+          "commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+          "branch": "experiment/habitat-gs-imagenav"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-inference-active-view",
+          "commit": "1ec9a17d73deef954b5c2c8d9ad0d4b1fc03c873",
+          "branch": "phase2/inference-recovery-active-view"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-inference-coverage256",
+          "commit": "96f7783a28ff1beaea86370516f6c1987d9aabac",
+          "branch": "phase2/inference-coverage256-recovery"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-inference-harness",
+          "commit": "5e3b0d0799645affbbd32db81e0b0912f2cee1cb",
+          "branch": "phase2/inference-recovery-harness"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-ablation",
+          "commit": "d2352f06bc56386d098c8b94d2754e9e21bf2cb3",
+          "branch": "phase2/qwen-beta003-geometry128"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-ablation-publication",
+          "commit": "f00c15cb22a3fdcd6a2a5187f1e47e537fbac1b8",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-candidate-recovery",
+          "commit": "294f651f6ed4cf9e3a7724d2d813da371b697039",
+          "branch": "phase2/qwen-candidate-recovery"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-history-window",
+          "commit": "453179cd67c348576d974aa7bf38203044a7eef6",
+          "branch": "phase2/qwen-history-window"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-consensus-probe",
+          "commit": "78da633fa968cd93d5103e72d16c62f14deedcb6",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-expanded01",
+          "commit": "8c52f61c29b31803be6335088d7bcb8d4cc83da9",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-expanded02",
+          "commit": "78da633fa968cd93d5103e72d16c62f14deedcb6",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-expanded03",
+          "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-expanded03_repeat",
+          "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-focused-regression",
+          "commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round01",
+          "commit": "f6b28a680f4124655e18288a0f6a8843ef70fd5d",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round02",
+          "commit": "f2e266ab052d1f1ffba84485f3c3fb804a310cc8",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round03",
+          "commit": "bf52ae74d772512681b9a96396d469a8bfc5d001",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round04",
+          "commit": "da9de3a57b9052971fae139bc5907915511a03c0",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round05",
+          "commit": "efae2776c0743271dcc4805093a012f923e72f88",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-iter-round06",
+          "commit": "6d72ca761565586660b16450ae644a650555fae8",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen-topdown-judge",
+          "commit": "b1c24dc16038b10df919a1965d35880f4f143ee1",
+          "branch": "phase2/qwen-topdown-judge"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen128-publication",
+          "commit": "33e30d28eecdcce557b0f453004a35de0bdebcbf",
+          "branch": null
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-qwen128-reward",
+          "commit": "81fedec56b37921c350ce8064106c32788bb3e04",
+          "branch": "phase2/qwen128-reward-beta01"
+        }
+      ],
+      "named_branch_count": 19,
+      "origin_branch_count": 19,
+      "detached_worktree_count": 16
+    },
+    "SIGN-SRU": {
+      "repository": "yiichu03/SIGN-SRU",
+      "tree": "/scratch/e1538633/liuyi/SIGN-SRU",
+      "fetch_url": "git@github.com:yiichu03/SIGN-SRU.git",
+      "push_url": "git@github.com:yiichu03/SIGN-SRU.git",
+      "branches": [
+        {
+          "name": "docs/qwen-reward-review-20261013",
+          "local_commit": "663b0f98dfae45a3b7249ea460e839f3a4160f86",
+          "origin_commit": "663b0f98dfae45a3b7249ea460e839f3a4160f86",
+          "tracking": "origin/docs/qwen-reward-review-20261013",
+          "worktrees": [],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "main",
+          "local_commit": "ba3bb4aa171478dc58254d016d46e6fb72614ee7",
+          "origin_commit": "ba3bb4aa171478dc58254d016d46e6fb72614ee7",
+          "tracking": "origin/main",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-SRU"
+          ],
+          "relationship": "same_commit"
+        },
+        {
+          "name": "phase1/imagenav-qwen-diagnostics",
+          "local_commit": "dbf6d3cc437cd5c673648ceac6fa2ddad2ee1656",
+          "origin_commit": "dbf6d3cc437cd5c673648ceac6fa2ddad2ee1656",
+          "tracking": "origin/phase1/imagenav-qwen-diagnostics",
+          "worktrees": [
+            "/scratch/e1538633/liuyi/SIGN-SRU-reward-review"
+          ],
+          "relationship": "same_commit"
+        }
+      ],
+      "origin_heads": {
+        "docs/qwen-reward-review-20261013": "663b0f98dfae45a3b7249ea460e839f3a4160f86",
+        "main": "ba3bb4aa171478dc58254d016d46e6fb72614ee7",
+        "phase1/imagenav-qwen-diagnostics": "dbf6d3cc437cd5c673648ceac6fa2ddad2ee1656"
+      },
+      "remote_only_names": [],
+      "worktrees": [
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-SRU",
+          "commit": "ba3bb4aa171478dc58254d016d46e6fb72614ee7",
+          "branch": "main"
+        },
+        {
+          "path": "/scratch/e1538633/liuyi/SIGN-SRU-reward-review",
+          "commit": "dbf6d3cc437cd5c673648ceac6fa2ddad2ee1656",
+          "branch": "phase1/imagenav-qwen-diagnostics"
+        }
+      ],
+      "named_branch_count": 3,
+      "origin_branch_count": 3,
+      "detached_worktree_count": 0
+    }
+  },
+  "scope": "Local and origin named branches; publication branch HEAD is recorded before this docs commit. Detached worktrees are not named branches."
+}

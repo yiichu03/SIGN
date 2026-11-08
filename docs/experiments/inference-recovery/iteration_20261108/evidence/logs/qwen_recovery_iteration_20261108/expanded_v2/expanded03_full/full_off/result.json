@@ -1,0 +1,53 @@
+{
+  "mode": "off",
+  "split": "full",
+  "training_step": 125952000,
+  "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+  "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+  "reference": {
+    "case": "coverage256_125952000",
+    "training_step": 125952000,
+    "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+  },
+  "episodes": 4200,
+  "scenes": 14,
+  "success_rate": 0.8757142857142857,
+  "spl": 0.5329960106555678,
+  "view_match": 0.8676190476190476,
+  "mean_collisions": 36.67857142857143,
+  "mean_episode_steps": 113.55928571428572,
+  "new_m2_per_step_global": 0.10302271312027071,
+  "native_metrics": {
+    "eval_reward/average_reward": 6.9846601486206055,
+    "eval_metrics/distance_to_goal": 1.0168558359146118,
+    "eval_metrics/success": 0.8757143020629883,
+    "eval_metrics/spl": 0.5329959988594055,
+    "eval_metrics/soft_spl": 0.48975512385368347,
+    "eval_metrics/distance_to_view": 1.4847701787948608,
+    "eval_metrics/view_match": 0.8676190376281738,
+    "eval_metrics/view_angle": 27.0756778717041,
+    "eval_metrics/collisions.count": 36.67856979370117,
+    "eval_metrics/observed_coverage.delta_m2": 0.0013357142452150583,
+    "eval_metrics/observed_coverage.new_area_m2": 11.699185371398926,
+    "eval_metrics/coverage_eval.steps": 113.55928802490234,
+    "eval_metrics/coverage_eval.new_area_m2": 11.699185371398926,
+    "eval_metrics/coverage_eval.new_m2_per_step": 0.20907947421073914
+  },
+  "seconds": 1383.1601603790186,
+  "original_pose_sha_matches": 4200,
+  "matched_goals_and_starts": true,
+  "controller_inputs": [
+    "rgb",
+    "target_rgb",
+    "executed_action_history"
+  ],
+  "native_reference": false,
+  "subset_full_reference_outputs_not_assumed_equal": false,
+  "max_episode_steps": 500,
+  "seed": 100,
+  "hash_seed": 0,
+  "source_commit": "f0e093c4d52c595c71f109d69cbf67ae7fbe3daa",
+  "diagnostic_num_envs": null,
+  "full_evaluation_parallelism_unchanged": true
+}

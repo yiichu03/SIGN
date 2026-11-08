@@ -6,28 +6,38 @@
 
 - TensorBoard续训显示排查（2026-11-03T23:30:50+08:00）：16200→6200正常，配置14阶段；首次先读取原训练，API后续已出现coverage256/continue_latest，其余运行续训文件也在更新；coverage32/B仍Q且无续训事件。脚本已改下次启动优先续训，路径/命名不变、兼容现有服务复用，当前会话未重启。证据logs/training_continuation_20261103/full_history_load_diagnosis_20261103.json。
 
+<a id="discussion-and-branches-20261108"></a>
+## 当前阶段：先讨论下一版Qwen框架，本轮仅更新文档并发布
+
+2026-11-08T14:09:55+08:00 用户明确要求先沟通，再决定下一轮实验；本次只更新资料并push yiichu03，不改算法、不qsub、不启停现有作业。后续可在方案明确后并行多组，具体项目GPU-hour余额及队列约束提交前再核实，当前占用少不等于余额已确认。
+
+分支盘点：SIGN本地19/origin19个同名分支，32工作树中16个detached快照；SIGN-SRU本地3/origin3，2个命名工作树。4个SIGN分支（GS、覆盖256、Qwen128 beta.1、Qwen消融）的本地HEAD与origin不同，但逐文件差异只在README/docs，运行目录保留代码版本。[完整分支及目录盘点](../BRANCHES.md)。本次发布目标仍phase2/qwen-candidate-recovery，运行行为版本f0e不变，作者main和其他训练分支不动。
+
+讨论重点：现框架Qwen仅左右RGB通行判断，没有目标图/完整历史，不可选择不介入；恢复视觉反馈只记录，不影响后续。98/151回退规则、53采纳中仅23改向，现88.64%不证明独立VLM达到规则效果。当前优先Qwen承担恢复决策，同预算达到规则效果也有价值；目标信息、决策空间、规则回退消融和恢复反馈闭环均待沟通，尚未实现。[报告与讨论](../README.md)、[完整验证案例/输入](../CASES.md)。
+
 <a id="qwen-iteration-campaign-20261108"></a>
-## Qwen推理恢复：局部救回复现，固定版本已提交完整4200
+## Qwen推理恢复：三组完整4200已完成，VLM额外收益仍不明确
 
-更新：2026-11-08T08:51:52+08:00。**正式GPU1532001.stdct-mgmt-02已提交CFP/autox→batch_gpux**；08:50截面Q/node_pool不足，CPU1532002仅afterany/H、无GPU。固定独立快照SIGN-qwen-iter-expanded03 @`f0e093c4d52c595c71f109d69cbf67ae7fbe3daa`，开发分支phase2/qwen-candidate-recovery可继续资料发布，运行源/输入不热更新。原训练与既有结果未为本批启停或修改；不新增导航训练、9B或ZIP。
+用户于本轮明确研究优先级：重视Qwen承担恢复决策，在同观测/动作/步数预算下达到规则效果也有价值；现有88.64%是有规则回退的混合成绩，不能当独立VLM替代规则的证明。当前只做逻辑说明和训练读取，未改变配置/提交新对照；后续应将模型自主选择与规则回退分别检验。
 
-正式三对照各**4200任务/14场景/6环境/max500/seed100/hash0**，同coverage256 **125,952,000步**完整导航权重（SHA988c9ecc…），几何训练bonus0；1A40/36CPU240GB/6h上限。full忽略仅诊断使用的N1，off须严格复现旧4200；原STOP/masks/GRU与真实动作反馈保持，所有扫描/恢复都计500。输出expanded03_full（服务器：`/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full`），[实际qsub命令](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/submission.json)、[版本2放行与CPU回执](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/release_authorization.json)。**完整结果尚未产生，不声称全量提升。**
+2026-11-08T12:56:08+08:00 独立复核完成：正式GPU **1532001** 与CPU **1532002** 均F/Exit0，11:10前后结束，GPU用时2:17:44。固定`f0e093c`，同coverage256 **125,952,000步**完整导航权重；三组各4200/14场景/6env/max500/seed100/hash0。原生组4200条位姿SHA严格复现原参考，任务/目标/起点、所有指标与native TB逐条复算通过。[独立完整复核](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/completed_review_20261108.json)。
 
-|已完成数据|N|原生成功|匹配规则成功 / SPL|Qwen成功 / SPL|Qwen相对规则|
-|---|---:|---:|---:|---:|---|
-|开发|61|13|30 / 19.3042%|31 / 19.4396%|净+1，救回1/误伤0|
-|同版重复（同数据）|61|13|30 / 19.3042%|31 / 19.4396%|净+1，救回1/误伤0|
-|未用于调整的确认|24|3|9 / 16.2611%|9 / 14.9766%|净+0，救回0/误伤0|
-|普通回归|112|101|103 / 55.6575%|103 / 55.6575%|净+0，救回0/误伤0|
-|安全回归（复用）|28|27|27 / 49.1671%|27 / 49.1671%|净+0，救回0/误伤0|
+|完整4200方法|成功条数|SR|SPL|碰撞/episode|平均步数|
+|---|---:|---:|---:|---:|---:|
+|覆盖256原策略|3678|87.5714%|53.2996%|36.679|113.559|
+|旧无扫描规则（前批）|3708|88.2857%|53.6766%|32.969|110.464|
+|本轮匹配扫描规则|3721|88.5952%|53.7751%|30.798|109.451|
+|本轮Qwen2B恢复|3723|88.6429%|53.7772%|30.704|109.279|
 
-开发61中35事件、9次模型采纳但只有2次真正偏离规则；Swormville3040在90步模型决定前动作/位姿一致，规则500步失败→Qwen123步成功。Ribera1167仍成功但SPL下降；其余59条所有原始行/动作/位姿SHA与规则精确相等。重复的三组各61条与首次逐条全等，这是工程复现，不是新独立样本/统计显著性。原24净0、新增37净+1，全部已用开发，不作独立确认。
+Qwen相对本轮匹配规则，描述性SR仅**+0.047619pp（净2/4200）**，SPL仅**+0.002150pp**，不能用两位小数相同的SPL声称明显提升。原生→本轮规则SR+1.02381pp、SPL+0.475491pp，主要可见改善来自恢复框架整体；新扫描规则与旧无扫描规则动作预算不同，不混作同一对照。
 
-确认24无救回/误伤，3次模型改向，其中Ribera920成功但SPL60.05→29.22%，导致整组SPL−1.2845pp，**没有独立成功率优势**。普通112的规则/Qwen全部原始行/动作/位姿全等、0模型偏离，其相对off的2条救回属于共享规则。安全28均0触发，不能当接管安全性证明。旧round01..06不满足因果门；expanded01曾30→27（1救回4误伤），原负结果全部保留。
+**模型贡献核对：**151次完成评分，53次采纳模型但仅23条episode真正偏离规则；Qwen相对规则有5条失败→成功、3条成功→失败。真实模型改向且决定前动作/位姿一致的成败变化中，只有**2救回、3误伤**；另3条救回在该episode没有模型改向，不能直接归功于模型判断。并行batch/episode结束影响是待验证机制假设，不当已证实原因。原producer passes_fixed_gain_gate=True与full_completed回执保留，但其汇总门没有排除这3条无改向救回，不能据True认定VLM有稳定增益。
 
-旧确认正向门为False、CPU1531758原requires_revision回执原样保留。按**06:40在本轮开发及任何确认结果前登记、06:52已发布**的[协议v2](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/release_protocol_revision2.json)，开发与同版重复均净正且有前缀支持、确认/普通/安全成功数不降时，中性确认可进入预定4200继续检验；该条件不保证SPL不降。08:49重新核算PBS F0/全部任务指标/真实前缀后[独立版本2审计](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_confirmation/version2_release_audit.json)通过，才另行提交1532001，未覆写旧False或在见结果后改门。完整val本身复用了开发来源benchmark，不声称完全未接触测试。
+前缀支持救回：Scioto2230、Swormville3040；前缀支持误伤：Elmira2824、Scioto2314、Swormville3290。无本episode模型改向的成功变化：Mosquito3479、Scioto2174、Swormville3026。全部人工原因/备注留空，不把本自动审计当人工根因真值。该full复用了开发来源benchmark，单次种子也不能作普遍/统计显著性结论。
 
-固定方法：双自然问句（可通行/有障碍）独立单图读No/Unknown/Yes真实logits，FP32/T1、两问同向差≥.05才改向；两问都认为默认可通行时保持默认。24扫描+6转向+8前进，每次计划38真实动作、最多两次76步；不把词概率当成功概率。74恢复+14旧Qwen测试及真实token/答案位置/批单/空白检查通过。各轮SHA/原始概率/候选图/逐任务/空白人审/错误及控制修订见[资料包](../README.md)与[操作入口](RUNBOOK.md#qwen-recovery-frozen-full-20261108)。WORKLOG：QWEN-FROZEN-FULL4200-SUBMITTED-20261108。
+前序局部结果仍保留：开发61与同版重复规则30→Qwen31（1前缀救回/0误伤、逐条全等复现）；冻结确认24两组9成功，但Qwen SPL16.2611→14.9766%；普通112两组103且逐条相同，安全28两组27且0触发。旧负结果及确认旧False不改；正式提交依据为留出前登记协议v2与独立raw审计，见[原放行记录](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/release_authorization.json)。
+
+结果：[完整对照](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_comparison.json)、[4200条配对CSV](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_paired.csv)、[复核与23条真实改向](../evidence/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/completed_review_20261108.json)、[复现入口](RUNBOOK.md#qwen-recovery-frozen-full-20261108)。此前GitHub294f651为提交时证据快照；本轮已获用户明确授权，把完整结果、训练读取、问题及分支盘点一并更新发布，实际新SHA待push成功后记录。无新增训练、9B、启停原作业或ZIP。WORKLOG：QWEN-FULL4200-COMPLETE-ATTRIBUTION-REVIEW-20261108。
 
 <a id="coverage256-rule-completed-20261108"></a>
 ## 覆盖256125.952M＋规则恢复：完整4200已完成，SR88.29%
@@ -144,6 +154,34 @@ Qwen资源核查：A1511143、β.1 1511145、B1511148均R，分别GN-A40-045[0]/
 - 资料的作业状态固定在 **2026-11-07T13:58:35+08:00**，包含A36.352M完整val SR82.38/SPL52.97%；当时其余新验证仍R/Q，不伪称全完成。模型/场景/环境/完整相机视频未上传，不生成ZIP。11运行树HEAD和源文件守卫通过，作业未启停/移动。
 - 发布树SIGN-qwen-ablation-publication现detached @f00c15c且干净；各运行树不pull资料提交。SSH agent无响应已通过仅本命令使用现有本机密钥恢复，未改全局配置。实际回执push_result.json（服务器：`/scratch/e1538633/liuyi/logs/github_publication_20261107/push_result.json`），推送后根日志另追加，不为包含回执循环发布。WORKLOG：GITHUB-PUBLICATION-20261107-PUSHED。
 
+<a id="training-readout-20261108"></a>
+## 11月8日训练：最新13:56截面，只有B仍运行
+
+各自当前/最终日志步数，近1M环境步内原生50-update训练滑窗日志均值；日志末步不是checkpoint，训练均值不是val。此前13:02的读取留在原snapshot_130216，不改写。
+
+|方法|日志百万步|近1M SR|近1M SPL|状态|
+|---|---:|---:|---:|---|
+|冻结视觉基线|74.654|87.87%|54.82%|按用户要求停止|
+|覆盖256|172.599|87.80%|50.60%|原PBS时限结束|
+|覆盖32|175.868|88.76%|51.37%|原PBS时限结束|
+|Qwen128 beta0.1|32.829|87.25%|49.21%|原PBS时限结束|
+|A Qwen128 beta0.03|41.552|85.03%|48.14%|原PBS时限结束|
+|B Qwen256 beta0.03|38.439|87.94%|49.21%|运行|
+|C几何128|82.196|88.64%|51.41%|按用户要求暂停|
+
+B1511148原预算约余17.36h，最新末步38,438,912；近1M SR对前1M-0.42pp，较13:02读取有所恢复，短窗仍波动。其他组保持原末步；覆盖32/β.1/A在今日03:12/07:11/09:10耗尽原预算，覆盖256在11月5日到限，C按用户要求于01:24暂停，未新计预算或重启。
+
+B同预算近3M：
+
+|方法|SR|SPL|
+|---|---:|---:|
+|冻结基线|86.2498%|51.2080%|
+|覆盖256|84.8372%|47.5284%|
+|覆盖32|85.1557%|46.8539%|
+|Qwen256 beta.03|87.9256%|50.5966%|
+
+B两项均高于同期两覆盖；对基线SR更高、SPL仍低。共同32.829440M及各自预算1/2/3M全部保留，训练/续跑reset历史有混杂，不称严格因果或val优势。近期SR/SPL与匹配参考CSV保持原数值导出，独立重算1M/3M、SR/SPL步数组相同；完整TB不复制。[最新简表](../evidence/logs/training_readout_20261108/snapshot_135628/summary.json)、[全部窗口/来源](../evidence/logs/training_readout_20261108/snapshot_135628/readout.json)、[验证与导出来源](../evidence/logs/training_readout_20261108/snapshot_135628/validation.json)。WORKLOG：DOCS-DISCUSSION-BRANCH-PUBLICATION-PREPARED-20261108。
+
 <a id="gibson-reference"></a>
 ## Gibson基线与公开权重结果：快速索引
 
@@ -162,7 +200,7 @@ Qwen资源核查：A1511143、β.1 1511145、B1511148均R，分别GN-A40-045[0]/
 | 覆盖256两个曲线候选完整val（已完成） | **143.360M SR86.52/SPL52.15%；150.528M SR86.33/SPL51.77%**，各4200条；1523189/1523190/汇总1523191均Exit0，均未超旧125.952M | [结果与完整对照](#coverage256-candidates-eval-20261105) · 独立复核（服务器：`/scratch/e1538633/liuyi/logs/gibson_coverage256_candidates_eval_20261105/results_review_20261107.json`） |
 | 覆盖256125.952M保存时训练指标 | **原生50-update窗SR82.71/SPL45.82%；近1M均值86.31/49.18%；近3M88.23/50.71%**；对应完整val87.57/53.30%，训练窗口不混同验证 | 保存点训练证据（服务器：`/scratch/e1538633/liuyi/logs/training_readout_20261107/coverage256_125952000_training_reference.json`） |
 | 覆盖256训练峰值附近完整val（已完成） | **146,944,000步／ckpt.40**，1520910 Exit0，4200条：SR **86.36%**、SPL **56.24%**；相对125.952M SR−1.21pp／SPL+2.94pp。146.760M无精确保存 | [结果与协议](#coverage256-peak-eval-20261105) · 完整对照（服务器：`/scratch/e1538633/liuyi/logs/gibson_coverage256_peak_eval_20261105/comparison.json`） |
-| 最新训练（11月7日13:06） | **五组R，覆盖256因walltime结束**；A/B有局部改善，β.1前期优势未延续，三Qwen共同29.428M近3M均未超基线SR/SPL | [最新训练及同预算](#training-readout-20261107) · 完整快照（服务器：`/scratch/e1538633/liuyi/logs/training_readout_20261107/snapshot_130555/readout.json`） |
+| 最新训练（11月8日13:56） | **仅B仍R**，B38.439M近1M87.94/49.21%；同预算近3M两项高于两覆盖、SPL仍低基线；其余到限/用户暂停 | [最新训练](#training-readout-20261108) · [完整快照](../evidence/logs/training_readout_20261108/snapshot_135628/readout.json) |
 | 覆盖256训练停止与最后可用权重 | **1511146于11月5日21:45:20到时限结束（Exit−29）**；TB末步172,599,296，最后保存ckpt.90为172,544,000，参数有限，未自动续跑 | [训练停止证据](#training-readout-20261107) · checkpoint实读（服务器：`/scratch/e1538633/liuyi/logs/training_readout_20261107/coverage256_last_checkpoint.json`） |
 | 续跑历史快照（11月3日22:06–22:08） | 4R/2Q；256已140.716M，Qwenβ.1 12.911M、A13.922M、C32.455M；原Gibson上限3亿环境步 | [训练进展及共同步数](#training-readout-20261103-evening) · 完整快照（服务器：`/scratch/e1538633/liuyi/logs/training_readout_20261103/snapshot_220651/readout.json`） |
 | 11月3日两覆盖权重完整val（已完成） | 256为125,952,000步、32为48,128,000步，训练预算不同；SR87.57/83.05%、SPL53.30/51.90%，各4200条、Exit0 | [最新评估与训练恢复](#coverage-latest-eval-20261103) · 完整结果（服务器：`/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/summary.json`） |
