@@ -1,0 +1,20 @@
+test_baseline_still_has_four_views_and_original_prompt (test_six_ablation.SixTests) ... ok
+test_confidence_gate_keeps_uncertain_argmax (test_six_ablation.SixTests) ... ok
+test_confidence_gate_threshold_boundary (test_six_ablation.SixTests) ... ok
+test_e4_forward_four_steps_and_budget68 (test_six_ablation.SixTests) ... ok
+test_e5_scan_recovery_angles_and_budget56 (test_six_ablation.SixTests) ... ok
+test_e6_triggers_at12_not16 (test_six_ablation.SixTests) ... ok
+test_invalid_map_and_index (test_six_ablation.SixTests) ... ok
+test_mapping_counter_survives_real_episode_reset (test_six_ablation.SixTests) ... ok
+test_mismatched_scan_and_recovery_angle_fails (test_six_ablation.SixTests) ... ok
+test_no_goal_request_three_views_even_when_goal_blank (test_six_ablation.SixTests) ... ok
+test_raw_option_a_can_mean_right_or_keep (test_six_ablation.SixTests) ... ok
+test_single_factor_profile_keys (test_six_ablation.SixTests) ... ok
+test_six_permutations_balance_and_determinism_without_global_rng (test_six_ablation.SixTests) ... ok
+test_stop_priority_for_all_six (test_six_ablation.SixTests) ... ok
+test_worker_mapping_preserves_raw_logits (test_six_ablation.SixTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.659s
+
+OK

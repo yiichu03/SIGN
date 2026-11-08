@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-11-08T21:41:05+08:00",
+  "project": "CFP04-SF-109",
+  "budget": {
+    "cpu_hrs": 29873.432,
+    "gpu_hrs": 273534.963
+  },
+  "gpu_hours_using_hpc_divide30": 9117.8321,
+  "gpux_running_limit_per_user": 4,
+  "existing_training_not_stopped": true
+}
