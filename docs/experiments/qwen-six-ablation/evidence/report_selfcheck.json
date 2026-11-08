@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "fixture": "temporary alias to original A; no E1 result produced",
+  "comparisons": {
+    "A": {
+      "rescues": 0,
+      "harms": 0,
+      "sr_delta_pp": 0.0,
+      "spl_delta_pp": 0.0,
+      "actual_action_changed_episodes": 0,
+      "matched_view_choice_changes": 0,
+      "model_choice_prefix_supported_rescues": 0,
+      "model_choice_prefix_supported_harms": 0,
+      "treatment_prefix_supported_rescues": 0,
+      "treatment_prefix_supported_harms": 0
+    },
+    "rule": {
+      "rescues": 2,
+      "harms": 9,
+      "sr_delta_pp": -0.16666666666666666,
+      "spl_delta_pp": -0.0594792372682142,
+      "actual_action_changed_episodes": 68,
+      "matched_view_choice_changes": 32,
+      "model_choice_prefix_supported_rescues": 1,
+      "model_choice_prefix_supported_harms": 8,
+      "treatment_prefix_supported_rescues": 1,
+      "treatment_prefix_supported_harms": 8
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-08T22:26:39+08:00",
+  "project": "CFP04-SF-109",
+  "cpu_balance_hours": 29873.432,
+  "gpu_raw_balance": 273294.963,
+  "gpu_balance_hours_using_official_divide30": 9109.8321,
+  "gpux_max_running_per_user": 4,
+  "existing_training_1511148_untouched": true
+}

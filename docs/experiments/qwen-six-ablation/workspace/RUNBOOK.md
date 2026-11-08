@@ -992,3 +992,17 @@ C/D40统计最终C5可靠命中/5真实输入/0选择改变，D1/1/0，故正式
 “匹配扫描规则”中的匹配指与A对齐扫描协议/观察及动作预算；扫描24步后规则第1次LEFT、第2次RIGHT，不用候选RGB额外选向。SIGN基础策略本身仍用目标图/RGB并在扫描时照常更新GRU。A额外真实调用Qwen3.5-2B FP32，将GOAL/CURRENT/LEFT/RIGHT四图交给模型，取left/right/keep真实token条件概率argmax直接决定恢复；交替规则仅作日志默认方向，不否决有效模型输出。A155条仲裁全部model_argmax、无规则回退，与规则不同39次/32episode；“目标条件”说明目标图进入输入，不自动证明模型有效利用目标。
 
 真实KEEP例Cantwell1782第174步：LEFT38.19%、RIGHT21.06%、KEEP40.75%，选择KEEP并交回SIGN；规则第1次会LEFT，首次实际动作差异及位姿前缀已对齐。原始请求/角色/概率/logits见logs/qwen_memory_formal_20261108/formal_retry/full_A/native/recovery/worker/request_000005_arbitration_0.json；两组该例均失败，仅用作调用生效证明。源码src/recovery_agent.py的_agent_requests/_agent_score/select_agent与src/inference_recovery.py的rule分支，均在固定ffc177c树内。
+
+
+<a id="qwen-six-ablation"></a>
+## E1–E6固定策略推理消融复现（2026-11-08）
+
+开发/资料：SIGN-qwen-six-ablation、phase2/qwen-arbitration-six-ablation；固定运行树SIGN-qwen-six-runtime-e9396ac，源码e9396ac。manifest批次logs/qwen_six_ablation_20261108/runtime_e9396ac；所有运行读取同Coverage256125.952M/SHA988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c及全4200/6env/seed100/hash0/max500。原A/旧训练/旧结果不动。
+
+已执行：prepare_six_ablation.py生成tasks/source_manifest/155原图输入与参考清单；prepare不提交作业。1533600为工程检查（autox/1A40/36CPU240GB，原6h已qalter2h）。该作业导航前预热worker，原A155复算、E1六映射930、E2三图155及E3纯CPU重算；再native/off/A/E1–E6各12真实任务。只有checks/check_summary.json passed才运行对应prepared_commands.json里的正式E1–E6命令，每组6h；GPUx调度器最多4R，剩余Q，不停止现有训练。
+
+仅供复现：在固定树运行`python scripts/prepare_six_ablation.py --output /absolute/new_batch`，按其prepared_commands.json提交check；完成后核查source_commit/manifest/技术错误，再提交正式六组。运行目录和输出必须全新，不重复执行已有输出的命令。正式完成后用`python scripts/report_six_ablation.py --batch /absolute/new_batch --output /absolute/new_report`生成与原A/规则的配对报告；未完成组明确pending。
+
+E1完整6调用块平衡每种标签/方向，各2次；最后不足6的尾块应报告实际频数，随机排序不保证每个短前缀最均匀（最初PLAN“最小偏差”表述过强）。映射算法本身未调整：SHA(seed100,block,permutation)排序，避免看到结果后改映射。正式只用一次预定映射，不用离线六次平均或挑最高。原始ABC logits和语义概率分开。E3 softmax阈值不是经过校准的正确率。
+
+本批工程检查1533600已Exit0；正式E1–E6为1533627–1533632，运行源码e9396ac，初次提交状态见initial_job_states.json、命令和路径见formal_submissions.json。CPU1533635 afterany等待六组，H为正常依赖；完成后自动生成formal_review/summary.json、paired.csv和pbs_status.json。不手动解除依赖，不覆盖旧结果或重复提交。prepared_commands/tasks中的submitted=False是不可变准备快照，不等于未提交；receipt记录实际状态。正式原A160触发/155仲裁需分开，E1离线表面方向均衡但926/930选token A，不能视为语义收益。

@@ -1,0 +1,3265 @@
+{
+  "events": 155,
+  "executed_first_command_matches_planned_for_all": true,
+  "executed_vs_rule_counterfactual_different": 39,
+  "matched_rule_view_decisions": 148,
+  "matched_view_and_action_prefix_disagreements": 32,
+  "prefix_rule_real_disagreements": 32,
+  "rows": [
+    {
+      "event": "event_0000000",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4004"
+      ],
+      "step": 459,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000001",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3536"
+      ],
+      "step": 294,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000002",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2071"
+      ],
+      "step": 122,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000003",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1785"
+      ],
+      "step": 114,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000004",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1537"
+      ],
+      "step": 53,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000005",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1782"
+      ],
+      "step": 174,
+      "choice": "keep",
+      "actual_command": [
+        0.8300902843475342,
+        0.9948855042457581
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000006",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1782"
+      ],
+      "step": 267,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000007",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3461"
+      ],
+      "step": 143,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000008",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4197"
+      ],
+      "step": 110,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000010",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "step": 120,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000011",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1922"
+      ],
+      "step": 321,
+      "choice": "keep",
+      "actual_command": [
+        0.983117938041687,
+        0.9832572340965271
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000012",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1927"
+      ],
+      "step": 239,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000013",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "step": 78,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000014",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "step": 206,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000015",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2386"
+      ],
+      "step": 302,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000016",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2230"
+      ],
+      "step": 122,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000017",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2230"
+      ],
+      "step": 278,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000018",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2373"
+      ],
+      "step": 337,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000019",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1805"
+      ],
+      "step": 256,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000020",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1670"
+      ],
+      "step": 92,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000021",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3414"
+      ],
+      "step": 55,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000022",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "step": 127,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000023",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "step": 229,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000024",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1690"
+      ],
+      "step": 88,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000025",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "step": 77,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000026",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1686"
+      ],
+      "step": 85,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000027",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "step": 70,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000028",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3503"
+      ],
+      "step": 355,
+      "choice": "keep",
+      "actual_command": [
+        -0.7470541000366211,
+        0.9927378296852112
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000029",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3501"
+      ],
+      "step": 144,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000030",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1688"
+      ],
+      "step": 253,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000031",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "step": 45,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000032",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4171"
+      ],
+      "step": 251,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000033",
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "step": 251,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000034",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4147"
+      ],
+      "step": 53,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000035",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "801"
+      ],
+      "step": 76,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000036",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3586"
+      ],
+      "step": 248,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000037",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3541"
+      ],
+      "step": 273,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000038",
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4104"
+      ],
+      "step": 110,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000039",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3365"
+      ],
+      "step": 69,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000040",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2210"
+      ],
+      "step": 443,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000041",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1664"
+      ],
+      "step": 319,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000042",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3497"
+      ],
+      "step": 74,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000043",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2181"
+      ],
+      "step": 75,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000044",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "633"
+      ],
+      "step": 122,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000046",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "step": 137,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000047",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "step": 296,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000048",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2350"
+      ],
+      "step": 199,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000049",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3529"
+      ],
+      "step": 113,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000050",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "682"
+      ],
+      "step": 162,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000051",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2234"
+      ],
+      "step": 122,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000052",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "step": 66,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000053",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3401"
+      ],
+      "step": 57,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000054",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "step": 82,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000055",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "step": 259,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000056",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "step": 336,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000057",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "step": 469,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000058",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "step": 168,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000059",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "step": 270,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000060",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3531"
+      ],
+      "step": 380,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000061",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1762"
+      ],
+      "step": 274,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000062",
+      "episode": [
+        "data/scene_datasets/gibson/Denmark.glb",
+        "3630"
+      ],
+      "step": 90,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000063",
+      "episode": [
+        "data/scene_datasets/gibson/Denmark.glb",
+        "3630"
+      ],
+      "step": 192,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000064",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2221"
+      ],
+      "step": 65,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000065",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "step": 142,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000066",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "step": 487,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000067",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1629"
+      ],
+      "step": 313,
+      "choice": "keep",
+      "actual_command": [
+        -0.7877833247184753,
+        0.980743944644928
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000068",
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1735"
+      ],
+      "step": 75,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000069",
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "642"
+      ],
+      "step": 43,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000070",
+      "episode": [
+        "data/scene_datasets/gibson/Denmark.glb",
+        "3727"
+      ],
+      "step": 50,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000071",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2286"
+      ],
+      "step": 133,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000072",
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1321"
+      ],
+      "step": 72,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000073",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3589"
+      ],
+      "step": 217,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000074",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "step": 122,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000075",
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "step": 285,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000076",
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3364"
+      ],
+      "step": 112,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000078",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1010"
+      ],
+      "step": 279,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000079",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "step": 65,
+      "choice": "keep",
+      "actual_command": [
+        0.9837326407432556,
+        0.4527970552444458
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000080",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "step": 189,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000081",
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "step": 48,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000082",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "step": 326,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000083",
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1461"
+      ],
+      "step": 115,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000084",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3160"
+      ],
+      "step": 57,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000085",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "step": 66,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000086",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3292"
+      ],
+      "step": 88,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000087",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "step": 99,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000088",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "step": 355,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000089",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "920"
+      ],
+      "step": 48,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000090",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3248"
+      ],
+      "step": 83,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000091",
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1417"
+      ],
+      "step": 47,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000092",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3036"
+      ],
+      "step": 90,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000093",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3284"
+      ],
+      "step": 147,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000094",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2934"
+      ],
+      "step": 70,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000095",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "step": 52,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000096",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1102"
+      ],
+      "step": 78,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000097",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "step": 184,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000098",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "step": 464,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000099",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1128"
+      ],
+      "step": 451,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000100",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3084"
+      ],
+      "step": 241,
+      "choice": "keep",
+      "actual_command": [
+        0.9878959059715271,
+        0.8763025999069214
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000101",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3084"
+      ],
+      "step": 329,
+      "choice": "keep",
+      "actual_command": [
+        0.9926814436912537,
+        0.7261389493942261
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000102",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "step": 53,
+      "choice": "keep",
+      "actual_command": [
+        0.9940544366836548,
+        0.9564194083213806
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000103",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "step": 252,
+      "choice": "keep",
+      "actual_command": [
+        0.9774495363235474,
+        0.8308536410331726
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000104",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2824"
+      ],
+      "step": 121,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000105",
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1451"
+      ],
+      "step": 76,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000106",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3101"
+      ],
+      "step": 84,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000107",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2904"
+      ],
+      "step": 61,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000108",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "step": 109,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000109",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "step": 283,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000110",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3170"
+      ],
+      "step": 97,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000111",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "963"
+      ],
+      "step": 79,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000112",
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1367"
+      ],
+      "step": 55,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000114",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1049"
+      ],
+      "step": 65,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000115",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1023"
+      ],
+      "step": 56,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000116",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2854"
+      ],
+      "step": 59,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000117",
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2958"
+      ],
+      "step": 91,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000118",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "992"
+      ],
+      "step": 57,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000119",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1185"
+      ],
+      "step": 49,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000120",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3159"
+      ],
+      "step": 359,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000121",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3040"
+      ],
+      "step": 143,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000122",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1083"
+      ],
+      "step": 55,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000123",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3241"
+      ],
+      "step": 57,
+      "choice": "keep",
+      "actual_command": [
+        0.8648204803466797,
+        0.9922909140586853
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000124",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3241"
+      ],
+      "step": 145,
+      "choice": "keep",
+      "actual_command": [
+        0.5362259745597839,
+        0.9785405993461609
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000125",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3234"
+      ],
+      "step": 297,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000126",
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1127"
+      ],
+      "step": 498,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000127",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3256"
+      ],
+      "step": 77,
+      "choice": "keep",
+      "actual_command": [
+        0.9945517778396606,
+        0.850270688533783
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000128",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3256"
+      ],
+      "step": 165,
+      "choice": "keep",
+      "actual_command": [
+        0.9949588179588318,
+        0.94775390625
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000129",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "410"
+      ],
+      "step": 47,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000130",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3204"
+      ],
+      "step": 95,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000131",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3111"
+      ],
+      "step": 54,
+      "choice": "keep",
+      "actual_command": [
+        0.8608866930007935,
+        0.9986016154289246
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000132",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3118"
+      ],
+      "step": 115,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000133",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3031"
+      ],
+      "step": 127,
+      "choice": "keep",
+      "actual_command": [
+        0.9688888192176819,
+        0.9650070667266846
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000134",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3031"
+      ],
+      "step": 263,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000135",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3290"
+      ],
+      "step": 58,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000136",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3232"
+      ],
+      "step": 69,
+      "choice": "keep",
+      "actual_command": [
+        0.9932575821876526,
+        0.8667181730270386
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000137",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3285"
+      ],
+      "step": 144,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000138",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3242"
+      ],
+      "step": 67,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000139",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3237"
+      ],
+      "step": 93,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000140",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3221"
+      ],
+      "step": 54,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000141",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3240"
+      ],
+      "step": 69,
+      "choice": "keep",
+      "actual_command": [
+        0.5028762817382812,
+        0.9555920958518982
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000143",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3214"
+      ],
+      "step": 60,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000144",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3053"
+      ],
+      "step": 52,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000145",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "step": 265,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000146",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "step": 368,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000147",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "561"
+      ],
+      "step": 99,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000148",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "step": 73,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000149",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "step": 177,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000150",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "568"
+      ],
+      "step": 496,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000151",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3272"
+      ],
+      "step": 148,
+      "choice": "keep",
+      "actual_command": [
+        0.966517448425293,
+        0.9731280207633972
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000152",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3272"
+      ],
+      "step": 240,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": false,
+      "same_executed_prefix": false,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000153",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "step": 155,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000154",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "step": 257,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        -1.0
+      ],
+      "actual_vs_rule_direction_first_command": true,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": true
+    },
+    {
+      "event": "event_0000155",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3038"
+      ],
+      "step": 60,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000156",
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3100"
+      ],
+      "step": 53,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000157",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "480"
+      ],
+      "step": 71,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000158",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "577"
+      ],
+      "step": 92,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    },
+    {
+      "event": "event_0000159",
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "step": 80,
+      "choice": "left",
+      "actual_command": [
+        -1.0,
+        1.0
+      ],
+      "rule_counterfactual_first_command": [
+        -1.0,
+        1.0
+      ],
+      "actual_vs_rule_direction_first_command": false,
+      "matched_rule_view": true,
+      "same_executed_prefix": true,
+      "actual_diff_at_decision": false
+    }
+  ]
+}

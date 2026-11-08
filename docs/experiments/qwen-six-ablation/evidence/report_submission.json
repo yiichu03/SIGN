@@ -1,0 +1,19 @@
+{
+  "job_id": "1533635.stdct-mgmt-02",
+  "command": [
+    "qsub",
+    "-q",
+    "autox",
+    "-P",
+    "CFP04-SF-109",
+    "-W",
+    "depend=afterany:1533627.stdct-mgmt-02:1533628.stdct-mgmt-02:1533629.stdct-mgmt-02:1533630.stdct-mgmt-02:1533631.stdct-mgmt-02:1533632.stdct-mgmt-02",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_report.log",
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/report.pbs"
+  ],
+  "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+  "script_sha256": "c64d4f67a33072f5e8c83b5806bda323a0ae04e44eb8634528c1afb6a38e26a2",
+  "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review",
+  "note": "afterany: missing/failed formal result stays unverified; no automatic rerun"
+}

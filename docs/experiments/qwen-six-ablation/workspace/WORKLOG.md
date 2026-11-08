@@ -2653,3 +2653,26 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 - 原155真实图/角色/SHA/真实概率审计在original_A_audit：155有效argmax、0安全回退，137LEFT/18KEEP/0RIGHT，全部RIGHT概率低于LEFT；均值LEFT.427395/RIGHT.244934/KEEP.327671。39次与交替规则不同（32episode），相对rule2救回9误伤，前缀支持1/8。阈值.5/.1及六排列在新重评分前已固定，不据结果搜索。
 - 已执行qsub检查1533598，Q时取消以保留安全KEEP负结果；没有使用GPU，没有修改该manifest。重新生成独立e9396ac批次并提交1533600（autox→batch_gpux，1A40/36CPU/240GB/6h），先导航前预热、155原A复算+930排列+155无目标+155CPU门槛，再native/off/A/E1–E6各12条真实烟测。正式作业尚未提交，需检查通过；不要求小集正SR。旧1511148训练继续运行。
 - 证据：logs/qwen_six_ablation_20261108/{original_A_audit,legacy_tests.txt,four_arm_tests.txt,six_tests.txt,single_image_tests.txt,effective_settings_cpu.json,runtime_e9396ac/source_manifest.json,runtime_e9396ac/submitted_check.json}。不生成ZIP，不从离线选向变化推SR。
+
+
+## 2026-11-08T22:00:43+08:00 [QWEN-SIX-QUEUE-RESOURCE-CHECK]
+
+- 代码/现状资料fe760c4已普通push到yiichu03/SIGN:phase2/qwen-arbitration-six-ablation；运行树仍e9396ac，未热更新。报告自检在临时目录把原A与自身及rule比较，复核0/0及2/9，临时alias不作E1结果，已清除临时目录。
+- PBS1533600目前Q，comment为Insufficient amount of resource: node_pool；pbsnodes显示gpu_node在线A40已分配，另一些节点offline，非个人max4上限。未修改其他用户/旧训练。尝试读取其他用户GPU占用的预估剩余时，PBS返回Unauthorized Request（数组任务详情），停止此类读取，不绕过访问限制；因此不承诺排队时间。
+- 参考旧9组烟测单组26–52秒及155×8离线推理，保守将仅工程检查1533600的walltime由6h调低至2h帮助backfill（已执行qalter）；正式六组仍每组6h。原预算充足但无空闲GPU时不能在登录节点代跑。原1511148继续R。
+
+
+## 2026-11-08T22:04:54+08:00 [QWEN-SIX-EXECUTED-DISAGREEMENT-AUDIT]
+
+- 1533600已于22:00:38在GPUx进入R，导航前预热通过，真实FP32原图重评分进行中。没有停旧训练。
+- 补充原A实际动作核验executed_commands.json：155个仲裁步均有真实执行动作，非KEEP的137条首动作与计划完全一致；相对同状态交替规则反事实的39个不同选向均对应实际首命令不同。148个原A仲裁与原规则具有相同GOAL/CURRENT/左右图，32处同时具有相同动作/位姿前缀及当步真实命令分歧；其余不直接归因模型。初次探查KEEP行缺planned_actions字段（KeyError），改为对KEEP预期空计划，不把交还SIGN当恢复动作。
+- 说明性纠正：[QWEN-SIX-ABLATIONS-STARTED-PREREGISTERED]的E1算法一直是六排列SHA排序；完整6调用块严格平衡，但原PLAN“尾块最小偏差”不保证。当前补充明确报告实际尾块频数，不更改算法、不根据新评分调顺序；RUNBOOK及发布README说明，原固定PLAN/manifest保留。
+
+
+## 2026-11-08T22:26:39+08:00 [QWEN-SIX-GPU-PASSED-FORMAL-4200-SUBMITTED]
+
+- GPU工程1533600已F/Exit0，wall18:47，native/off/A/E1–E6共9×12任务检查通过；导航阶段782.5秒、离线306.3秒。原A155次选择全复现，概率maxabs6.813e-6；三协议token/batch/solo/生成边界验证通过（ABC32/33/34；left2282/right1246/keep12718），最大batch/solo4.1e-6。新旧A12条动作/位姿/指标精确一致，native/off精确一致，实际回填与mask断言通过。E5左右/恢复实测59.99999–60.00001度且扫描返回原朝向；所有组worker错误0，E4/E5预算68/56。短测仅工程目的，不按其SR筛组。
+- 完整离线1395行：155原A重放+930 E1六映射+155 E2+155 E3CPU。E1预定映射51LEFT/51RIGHT/53KEEP，但raw token A926/930、C4/930，155组中六排列方向一致0，不能把表面均衡当语义判断改善；无技术故障，仍按原定诊断组提交，不改prompt追正。E2为154LEFT/1RIGHT，较原19次选择变更；E3为145confidence_KEEP/10LEFT，较原127变更。均是重用原155仲裁，不推断SR。概率/logits/实际输入/prompt及原事件绑定保留。
+- 已再次amgr核查CFP余额rawGPU273294.963/30=9109.8321GPUh、CPU29873.432h，GPUx max4R、普通GPU队列亦每用户max4（分队列），未发现server额外max字段；原1511148继续R不动。正式全部通过冻结gate/source/assets检查后执行submit_formal.py一次，E1 1533627.stdct-mgmt-02、E2 1533628.stdct-mgmt-02、E3 1533629.stdct-mgmt-02、E4 1533630.stdct-mgmt-02、E5 1533631.stdct-mgmt-02、E6 1533632.stdct-mgmt-02；独立full_E1…full_E6，统一e9396ac0c989ea515edcbd7f8d0085be38f818e7/原125.952M checkpoint/6env/seed100/hash0/max500，CFP/autox→batch_gpux，1A40/36CPU240GB/6h每组；不承诺排队/运行精确耗时（原A实测1:47:28）。
+- 已提交CPU 1533635.stdct-mgmt-02（autox→batch_cpux，1CPU6GB30min），afterany等待六组，H为依赖等待；脚本/report源码SHA留存，自动写formal_review相对原A和matched-scan rule的SR/SPL、触发/仲裁/选择、救回/误伤与首次动作/位姿前缀审计，技术失败或未完成明确未验证，不重提。当前正式SR/SPL均未出；原A160触发含155仲裁、5次扫描未完，valid155/回退0，不混同计数。
+- 原A和旧训练/结果原样保留；初始e9396ac检查manifest/prepared_commands中的submitted=False是准备时状态，真实提交以formal_submissions.json为准，不能为改布尔破坏冻结assets。证据：runtime_e9396ac/{offline,checks/check_summary.json,formal_submissions.json,report_submission.json,initial_job_states.json}及budget_before_formal.txt。发布结果副本不含权重/数据/环境或大相机流，不打ZIP。

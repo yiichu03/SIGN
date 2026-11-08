@@ -1,0 +1,910 @@
+{
+  "passed": true,
+  "engineering_only": true,
+  "seconds": 782.5255302969599,
+  "native_off_exact": true,
+  "original_A_exact": true,
+  "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+  "arms": {
+    "A": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.75,
+        "spl": 0.3348509064520289,
+        "view_match": 0.75,
+        "mean_collisions": 67.58333333333333,
+        "mean_episode_steps": 232.75,
+        "new_m2_per_step_global": 0.06034013605442178,
+        "native_metrics": {
+          "eval_reward/average_reward": 5.214588165283203,
+          "eval_metrics/distance_to_goal": 1.3226914405822754,
+          "eval_metrics/success": 0.75,
+          "eval_metrics/spl": 0.33485090732574463,
+          "eval_metrics/soft_spl": 0.3183631896972656,
+          "eval_metrics/distance_to_view": 2.182819128036499,
+          "eval_metrics/view_match": 0.75,
+          "eval_metrics/view_angle": 49.281681060791016,
+          "eval_metrics/collisions.count": 67.58333587646484,
+          "eval_metrics/observed_coverage.delta_m2": 0.0,
+          "eval_metrics/observed_coverage.new_area_m2": 14.044166564941406,
+          "eval_metrics/coverage_eval.steps": 232.75,
+          "eval_metrics/coverage_eval.new_area_m2": 14.044166564941406,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.09410110861063004
+        },
+        "seconds": 78.70733751996886,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "A",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 5,
+          "overrides": 176,
+          "rejected": 1,
+          "survey_steps": 120,
+          "recovery_steps": 56,
+          "completed_surveys": 5,
+          "selections": {
+            "A": 4,
+            "B": 0,
+            "C": 1
+          },
+          "events": 5,
+          "worker_started": true,
+          "worker_seconds": 2.937012252979912,
+          "render_seconds": 1.2372484712395817,
+          "total_controller_seconds": 34.98826314113103,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 76,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 5,
+          "fallback_selections": 0,
+          "vlm_rule_disagreements": 1,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 5,
+      "choices": {
+        "left": 4,
+        "keep": 1
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 89.99999976712053,
+          "right_yaw_abs": 89.99999995884167,
+          "returned_yaw_abs": 7.636383641665691e-06,
+          "recovery_yaw_abs": 90.00000672604021
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 89.99999483716375,
+          "right_yaw_abs": 90.00000341862625,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": 89.99999483716375
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 90.00000140185449,
+          "right_yaw_abs": 90.00001313525964,
+          "returned_yaw_abs": 8.706816964856282e-06,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000003",
+          "left_yaw_abs": 90.00000164908523,
+          "right_yaw_abs": 89.9999918002731,
+          "returned_yaw_abs": 1.5462498375200164e-05,
+          "recovery_yaw_abs": 90.00000115620594
+        },
+        {
+          "event": "event_0000004",
+          "left_yaw_abs": 90.0000001704594,
+          "right_yaw_abs": 90.00001366926807,
+          "returned_yaw_abs": 9.352621701108683e-06,
+          "recovery_yaw_abs": 90.00000519092306
+        }
+      ]
+    },
+    "E1": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.6666666666666666,
+        "spl": 0.3178517018864135,
+        "view_match": 0.6666666666666666,
+        "mean_collisions": 104.91666666666667,
+        "mean_episode_steps": 249.58333333333334,
+        "new_m2_per_step_global": 0.0521602671118531,
+        "native_metrics": {
+          "eval_reward/average_reward": 4.321998596191406,
+          "eval_metrics/distance_to_goal": 1.5739432573318481,
+          "eval_metrics/success": 0.6666666865348816,
+          "eval_metrics/spl": 0.3178516924381256,
+          "eval_metrics/soft_spl": 0.3092186152935028,
+          "eval_metrics/distance_to_view": 2.698739767074585,
+          "eval_metrics/view_match": 0.6666666865348816,
+          "eval_metrics/view_angle": 64.44609069824219,
+          "eval_metrics/collisions.count": 104.91666412353516,
+          "eval_metrics/observed_coverage.delta_m2": 0.0016666667070239782,
+          "eval_metrics/observed_coverage.new_area_m2": 13.018333435058594,
+          "eval_metrics/coverage_eval.steps": 249.5833282470703,
+          "eval_metrics/coverage_eval.new_area_m2": 13.018333435058594,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.08968833833932877
+        },
+        "seconds": 86.06604325491935,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "E1",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 7,
+          "overrides": 224,
+          "rejected": 3,
+          "survey_steps": 168,
+          "recovery_steps": 56,
+          "completed_surveys": 7,
+          "selections": {
+            "A": 2,
+            "B": 2,
+            "C": 3
+          },
+          "events": 7,
+          "worker_started": true,
+          "worker_seconds": 3.465233455062844,
+          "render_seconds": 1.6548015959560871,
+          "total_controller_seconds": 36.753233045106754,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 76,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 7,
+          "fallback_selections": 0,
+          "vlm_rule_disagreements": 6,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 7,
+      "choices": {
+        "left": 2,
+        "keep": 3,
+        "right": 2
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 89.99999976712053,
+          "right_yaw_abs": 89.99999995884167,
+          "returned_yaw_abs": 7.636383641665691e-06,
+          "recovery_yaw_abs": 90.00000672604021
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 89.99999483716375,
+          "right_yaw_abs": 90.00000341862625,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 89.99998290377971,
+          "right_yaw_abs": 90.00001778201606,
+          "returned_yaw_abs": 2.146353664868225e-05,
+          "recovery_yaw_abs": 89.99999627033844
+        },
+        {
+          "event": "event_0000003",
+          "left_yaw_abs": 90.00000535091337,
+          "right_yaw_abs": 89.99999279215557,
+          "returned_yaw_abs": 6.389056940260397e-06,
+          "recovery_yaw_abs": 89.999999107267
+        },
+        {
+          "event": "event_0000004",
+          "left_yaw_abs": 90.00000247398445,
+          "right_yaw_abs": 90.00000397402377,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000005",
+          "left_yaw_abs": 90.00000262767034,
+          "right_yaw_abs": 90.00000356445462,
+          "returned_yaw_abs": 4.517745487845101e-06,
+          "recovery_yaw_abs": 90.00000420217624
+        },
+        {
+          "event": "event_0000006",
+          "left_yaw_abs": 90.0000009783501,
+          "right_yaw_abs": 90.00000973782213,
+          "returned_yaw_abs": 2.4148365394514667e-06,
+          "recovery_yaw_abs": null
+        }
+      ]
+    },
+    "E2": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.75,
+        "spl": 0.3348509064520289,
+        "view_match": 0.75,
+        "mean_collisions": 68.16666666666667,
+        "mean_episode_steps": 232.75,
+        "new_m2_per_step_global": 0.06027568922305765,
+        "native_metrics": {
+          "eval_reward/average_reward": 5.275554180145264,
+          "eval_metrics/distance_to_goal": 1.261725664138794,
+          "eval_metrics/success": 0.75,
+          "eval_metrics/spl": 0.33485090732574463,
+          "eval_metrics/soft_spl": 0.31866830587387085,
+          "eval_metrics/distance_to_view": 2.1218533515930176,
+          "eval_metrics/view_match": 0.75,
+          "eval_metrics/view_angle": 49.281681060791016,
+          "eval_metrics/collisions.count": 68.16666412353516,
+          "eval_metrics/observed_coverage.delta_m2": 0.0,
+          "eval_metrics/observed_coverage.new_area_m2": 14.029166221618652,
+          "eval_metrics/coverage_eval.steps": 232.75,
+          "eval_metrics/coverage_eval.new_area_m2": 14.029166221618652,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.09407110512256622
+        },
+        "seconds": 84.43311460595578,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "E2",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 5,
+          "overrides": 190,
+          "rejected": 0,
+          "survey_steps": 120,
+          "recovery_steps": 70,
+          "completed_surveys": 5,
+          "selections": {
+            "A": 5,
+            "B": 0,
+            "C": 0
+          },
+          "events": 5,
+          "worker_started": true,
+          "worker_seconds": 2.3016009101411328,
+          "render_seconds": 1.2235364679945633,
+          "total_controller_seconds": 35.7732429553289,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 76,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 5,
+          "fallback_selections": 0,
+          "vlm_rule_disagreements": 0,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 5,
+      "choices": {
+        "left": 5
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 89.99999976712053,
+          "right_yaw_abs": 89.99999995884167,
+          "returned_yaw_abs": 7.636383641665691e-06,
+          "recovery_yaw_abs": 90.00000672604021
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 89.99999483716375,
+          "right_yaw_abs": 90.00000341862625,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": 89.99999483716375
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 90.00000140185449,
+          "right_yaw_abs": 90.00001313525964,
+          "returned_yaw_abs": 8.706816964856282e-06,
+          "recovery_yaw_abs": 90.00000998303719
+        },
+        {
+          "event": "event_0000003",
+          "left_yaw_abs": 90.00000164908523,
+          "right_yaw_abs": 89.9999918002731,
+          "returned_yaw_abs": 1.5462498375200164e-05,
+          "recovery_yaw_abs": 90.00000115620594
+        },
+        {
+          "event": "event_0000004",
+          "left_yaw_abs": 90.0000001704594,
+          "right_yaw_abs": 90.00001366926807,
+          "returned_yaw_abs": 9.352621701108683e-06,
+          "recovery_yaw_abs": 90.00000519092306
+        }
+      ]
+    },
+    "E3": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.6666666666666666,
+        "spl": 0.3106978296099682,
+        "view_match": 0.6666666666666666,
+        "mean_collisions": 108.41666666666667,
+        "mean_episode_steps": 258.8333333333333,
+        "new_m2_per_step_global": 0.052549903412749524,
+        "native_metrics": {
+          "eval_reward/average_reward": 3.957430124282837,
+          "eval_metrics/distance_to_goal": 1.842758059501648,
+          "eval_metrics/success": 0.6666666865348816,
+          "eval_metrics/spl": 0.3106978237628937,
+          "eval_metrics/soft_spl": 0.29590511322021484,
+          "eval_metrics/distance_to_view": 2.9708051681518555,
+          "eval_metrics/view_match": 0.6666666865348816,
+          "eval_metrics/view_angle": 64.63233947753906,
+          "eval_metrics/collisions.count": 108.41666412353516,
+          "eval_metrics/observed_coverage.delta_m2": 0.0,
+          "eval_metrics/observed_coverage.new_area_m2": 13.601666450500488,
+          "eval_metrics/coverage_eval.steps": 258.8333435058594,
+          "eval_metrics/coverage_eval.new_area_m2": 13.601666450500488,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.08557731658220291
+        },
+        "seconds": 83.84937061090022,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "E3",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 6,
+          "overrides": 144,
+          "rejected": 6,
+          "survey_steps": 144,
+          "recovery_steps": 0,
+          "completed_surveys": 6,
+          "selections": {
+            "A": 0,
+            "B": 0,
+            "C": 6
+          },
+          "events": 6,
+          "worker_started": true,
+          "worker_seconds": 2.911696393042803,
+          "render_seconds": 1.4465987728908658,
+          "total_controller_seconds": 36.69107188680209,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 76,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 0,
+          "fallback_selections": 6,
+          "vlm_rule_disagreements": 0,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 6,
+      "choices": {
+        "keep": 6
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 89.99999976712053,
+          "right_yaw_abs": 89.99999995884167,
+          "returned_yaw_abs": 7.636383641665691e-06,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 89.99999483716375,
+          "right_yaw_abs": 90.00000341862625,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 90.00000221658607,
+          "right_yaw_abs": 90.00000222842723,
+          "returned_yaw_abs": 6.830189170012753e-06,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000003",
+          "left_yaw_abs": 89.9999944558363,
+          "right_yaw_abs": 90.00002140939932,
+          "returned_yaw_abs": 1.8390847172211968e-05,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000004",
+          "left_yaw_abs": 89.99999771367429,
+          "right_yaw_abs": 90.00000332140455,
+          "returned_yaw_abs": 1.079947731352767e-05,
+          "recovery_yaw_abs": null
+        },
+        {
+          "event": "event_0000005",
+          "left_yaw_abs": 90.0000039372853,
+          "right_yaw_abs": 90.00000440247275,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": null
+        }
+      ]
+    },
+    "E4": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.75,
+        "spl": 0.3610818221375086,
+        "view_match": 0.75,
+        "mean_collisions": 73.33333333333333,
+        "mean_episode_steps": 210.83333333333334,
+        "new_m2_per_step_global": 0.05800790513833994,
+        "native_metrics": {
+          "eval_reward/average_reward": 5.555178165435791,
+          "eval_metrics/distance_to_goal": 1.1677615642547607,
+          "eval_metrics/success": 0.75,
+          "eval_metrics/spl": 0.3610818088054657,
+          "eval_metrics/soft_spl": 0.34602367877960205,
+          "eval_metrics/distance_to_view": 2.061399459838867,
+          "eval_metrics/view_match": 0.75,
+          "eval_metrics/view_angle": 51.20167922973633,
+          "eval_metrics/collisions.count": 73.33333587646484,
+          "eval_metrics/observed_coverage.delta_m2": 0.0,
+          "eval_metrics/observed_coverage.new_area_m2": 12.229999542236328,
+          "eval_metrics/coverage_eval.steps": 210.8333282470703,
+          "eval_metrics/coverage_eval.new_area_m2": 12.229999542236328,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.09171117097139359
+        },
+        "seconds": 78.44791203993373,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "E4",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 3,
+          "overrides": 102,
+          "rejected": 0,
+          "survey_steps": 72,
+          "recovery_steps": 30,
+          "completed_surveys": 3,
+          "selections": {
+            "A": 3,
+            "B": 0,
+            "C": 0
+          },
+          "events": 3,
+          "worker_started": true,
+          "worker_seconds": 2.218191194930114,
+          "render_seconds": 0.6622183960862458,
+          "total_controller_seconds": 33.87105930282269,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 68,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 3,
+          "fallback_selections": 0,
+          "vlm_rule_disagreements": 0,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 3,
+      "choices": {
+        "left": 3
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 89.99999976712053,
+          "right_yaw_abs": 89.99999995884167,
+          "returned_yaw_abs": 7.636383641665691e-06,
+          "recovery_yaw_abs": 90.00000672604021
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 89.99999483716375,
+          "right_yaw_abs": 90.00000341862625,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": 89.99999483716375
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 90.0000009783501,
+          "right_yaw_abs": 90.00000973782213,
+          "returned_yaw_abs": 2.4148365394514667e-06,
+          "recovery_yaw_abs": 90.00000240008546
+        }
+      ]
+    },
+    "E5": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.75,
+        "spl": 0.3219297327636758,
+        "view_match": 0.75,
+        "mean_collisions": 65.83333333333333,
+        "mean_episode_steps": 224.08333333333334,
+        "new_m2_per_step_global": 0.05815916697657123,
+        "native_metrics": {
+          "eval_reward/average_reward": 5.297215938568115,
+          "eval_metrics/distance_to_goal": 1.3352868556976318,
+          "eval_metrics/success": 0.75,
+          "eval_metrics/spl": 0.3219297230243683,
+          "eval_metrics/soft_spl": 0.31053563952445984,
+          "eval_metrics/distance_to_view": 2.1868598461151123,
+          "eval_metrics/view_match": 0.75,
+          "eval_metrics/view_angle": 48.79153823852539,
+          "eval_metrics/collisions.count": 65.83333587646484,
+          "eval_metrics/observed_coverage.delta_m2": 0.0,
+          "eval_metrics/observed_coverage.new_area_m2": 13.032500267028809,
+          "eval_metrics/coverage_eval.steps": 224.0833282470703,
+          "eval_metrics/coverage_eval.new_area_m2": 13.032500267028809,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.08996562659740448
+        },
+        "seconds": 76.03065277799033,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "E5",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 4,
+          "overrides": 112,
+          "rejected": 0,
+          "survey_steps": 64,
+          "recovery_steps": 48,
+          "completed_surveys": 4,
+          "selections": {
+            "A": 4,
+            "B": 0,
+            "C": 0
+          },
+          "events": 4,
+          "worker_started": true,
+          "worker_seconds": 2.5230329730547965,
+          "render_seconds": 0.9087824010057375,
+          "total_controller_seconds": 34.18089373328257,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 56,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 4,
+          "fallback_selections": 0,
+          "vlm_rule_disagreements": 0,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 4,
+      "choices": {
+        "left": 4
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 59.99999269908219,
+          "right_yaw_abs": 60.00000400975209,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": 60.00000136186065
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 60.00000013440101,
+          "right_yaw_abs": 59.999995263293414,
+          "returned_yaw_abs": 6.613302226726412e-06,
+          "recovery_yaw_abs": 60.000006697677144
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 60.00000379032675,
+          "right_yaw_abs": 60.00000216658929,
+          "returned_yaw_abs": 3.4150945850063755e-06,
+          "recovery_yaw_abs": 60.00000490425587
+        },
+        {
+          "event": "event_0000003",
+          "left_yaw_abs": 60.00000077618591,
+          "right_yaw_abs": 60.00000223588696,
+          "returned_yaw_abs": 1.7075472925031877e-06,
+          "recovery_yaw_abs": 60.00000851459741
+        }
+      ]
+    },
+    "E6": {
+      "metrics": {
+        "mode": "qwen",
+        "split": "smoke",
+        "training_step": 125952000,
+        "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+        "checkpoint_path": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth",
+        "reference": {
+          "case": "coverage256_125952000",
+          "training_step": 125952000,
+          "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+          "directory": "/scratch/e1538633/liuyi/logs/gibson_coverage_latest_eval_20261103/coverage256"
+        },
+        "episodes": 12,
+        "scenes": 9,
+        "success_rate": 0.75,
+        "spl": 0.33483681896792095,
+        "view_match": 0.75,
+        "mean_collisions": 59.166666666666664,
+        "mean_episode_steps": 231.83333333333334,
+        "new_m2_per_step_global": 0.05991732566498924,
+        "native_metrics": {
+          "eval_reward/average_reward": 4.9576096534729,
+          "eval_metrics/distance_to_goal": 1.5907407999038696,
+          "eval_metrics/success": 0.75,
+          "eval_metrics/spl": 0.33483681082725525,
+          "eval_metrics/soft_spl": 0.3154878616333008,
+          "eval_metrics/distance_to_view": 2.448962688446045,
+          "eval_metrics/view_match": 0.75,
+          "eval_metrics/view_angle": 49.1724967956543,
+          "eval_metrics/collisions.count": 59.16666793823242,
+          "eval_metrics/observed_coverage.delta_m2": 0.0,
+          "eval_metrics/observed_coverage.new_area_m2": 13.890832901000977,
+          "eval_metrics/coverage_eval.steps": 231.8333282470703,
+          "eval_metrics/coverage_eval.new_area_m2": 13.890832901000977,
+          "eval_metrics/coverage_eval.new_m2_per_step": 0.0941263884305954
+        },
+        "seconds": 78.35425546392798,
+        "original_pose_sha_matches": 1,
+        "matched_goals_and_starts": true,
+        "controller_inputs": [
+          "rgb",
+          "target_rgb",
+          "executed_action_history"
+        ],
+        "native_reference": false,
+        "subset_full_reference_outputs_not_assumed_equal": true,
+        "max_episode_steps": 500,
+        "seed": 100,
+        "hash_seed": 0,
+        "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+        "arm": "E6",
+        "diagnostic_num_envs": null,
+        "full_evaluation_parallelism_unchanged": true,
+        "harness": {
+          "attempts": 4,
+          "overrides": 152,
+          "rejected": 0,
+          "survey_steps": 96,
+          "recovery_steps": 56,
+          "completed_surveys": 4,
+          "selections": {
+            "A": 4,
+            "B": 0,
+            "C": 0
+          },
+          "events": 4,
+          "worker_started": true,
+          "worker_seconds": 2.418226701905951,
+          "render_seconds": 0.9012992781354114,
+          "total_controller_seconds": 31.11050811444875,
+          "mode": "qwen",
+          "active_survey": true,
+          "max_override_steps": 76,
+          "candidate_affordance": true,
+          "agent_variant": "A",
+          "technical_errors": 0,
+          "vlm_selections": 4,
+          "fallback_selections": 0,
+          "vlm_rule_disagreements": 0,
+          "memory_hits": 0,
+          "memory_prompt_entries": 0,
+          "memory_changed_decisions": 0,
+          "feedback_calls": 0,
+          "feedback_returns": 0
+        }
+      },
+      "events": 4,
+      "choices": {
+        "left": 4
+      },
+      "scan_and_recovery_pose_checks": [
+        {
+          "event": "event_0000000",
+          "left_yaw_abs": 90.0000061872895,
+          "right_yaw_abs": 90.00000346319145,
+          "returned_yaw_abs": 6.389056940260397e-06,
+          "recovery_yaw_abs": 89.99999978986423
+        },
+        {
+          "event": "event_0000001",
+          "left_yaw_abs": 89.99999483716375,
+          "right_yaw_abs": 90.00000341862625,
+          "returned_yaw_abs": 0.0,
+          "recovery_yaw_abs": 89.99999483716375
+        },
+        {
+          "event": "event_0000002",
+          "left_yaw_abs": 90.00000556027238,
+          "right_yaw_abs": 90.00001388718456,
+          "returned_yaw_abs": 2.4388653555527325e-05,
+          "recovery_yaw_abs": 90.00000190930714
+        },
+        {
+          "event": "event_0000003",
+          "left_yaw_abs": 89.99999294797658,
+          "right_yaw_abs": 90.00002199239306,
+          "returned_yaw_abs": 1.7745352001653195e-05,
+          "recovery_yaw_abs": 89.99998723169186
+        }
+      ]
+    }
+  },
+  "gate": "Technical only; no small-subset positive SR requirement. Existing checkpoint and training untouched."
+}

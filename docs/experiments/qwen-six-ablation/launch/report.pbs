@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#PBS -N six-report
+#PBS -q autox
+#PBS -P CFP04-SF-109
+#PBS -l select=1:ncpus=1:mem=6gb
+#PBS -l walltime=00:30:00
+#PBS -j oe
+set -euo pipefail
+module load Miniconda3/24.7.1-0 git/2.40.0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate /scratch/e1538633/liuyi/envs/sign-baseline
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1
+cd /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac
+python scripts/report_six_ablation.py --batch /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac --output /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review
+python - <<'PYREPORT'
+import json,subprocess
+from pathlib import Path
+b=Path('/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac')
+r=json.loads((b/'formal_submissions.json').read_text());jobs=r['jobs'];ids=[v['job_id'] for v in jobs.values()]
+p=subprocess.run(['qstat','-xf','-F','json',*ids],text=True,capture_output=True)
+if p.returncode==0:
+    states=json.loads(p.stdout)['Jobs'];result={arm:{k:states[v['job_id']].get(k) for k in ['job_state','Exit_status','resources_used','stime','obittime','Output_Path']} for arm,v in jobs.items()}
+else:result={'pbs_query_error':p.stderr}
+(b/'formal_review/pbs_status.json').write_text(json.dumps(result,indent=2)+'\n')
+PYREPORT

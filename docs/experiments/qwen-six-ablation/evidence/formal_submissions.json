@@ -1,0 +1,44 @@
+{
+  "submitted_at": "2026-11-08T22:21:27+08:00",
+  "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+  "gate_sha256": "68c6a58f094de18ea88b3f6c9f59abf4cccb7a20fa1697da1b6647b020c529dc",
+  "jobs": {
+    "E1": {
+      "job_id": "1533627.stdct-mgmt-02",
+      "command": "qsub -q autox -P CFP04-SF-109 -N six-E1 -v SIX_TREE=/scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac,SIX_BATCH=/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac,SIX_ARM=E1 -o /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E1.log /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac/scripts/six_ablation.pbs",
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E1",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E2": {
+      "job_id": "1533628.stdct-mgmt-02",
+      "command": "qsub -q autox -P CFP04-SF-109 -N six-E2 -v SIX_TREE=/scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac,SIX_BATCH=/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac,SIX_ARM=E2 -o /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E2.log /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac/scripts/six_ablation.pbs",
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E3": {
+      "job_id": "1533629.stdct-mgmt-02",
+      "command": "qsub -q autox -P CFP04-SF-109 -N six-E3 -v SIX_TREE=/scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac,SIX_BATCH=/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac,SIX_ARM=E3 -o /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E3.log /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac/scripts/six_ablation.pbs",
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E3",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E4": {
+      "job_id": "1533630.stdct-mgmt-02",
+      "command": "qsub -q autox -P CFP04-SF-109 -N six-E4 -v SIX_TREE=/scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac,SIX_BATCH=/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac,SIX_ARM=E4 -o /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E4.log /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac/scripts/six_ablation.pbs",
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E4",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E5": {
+      "job_id": "1533631.stdct-mgmt-02",
+      "command": "qsub -q autox -P CFP04-SF-109 -N six-E5 -v SIX_TREE=/scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac,SIX_BATCH=/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac,SIX_ARM=E5 -o /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E5.log /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac/scripts/six_ablation.pbs",
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E5",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E6": {
+      "job_id": "1533632.stdct-mgmt-02",
+      "command": "qsub -q autox -P CFP04-SF-109 -N six-E6 -v SIX_TREE=/scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac,SIX_BATCH=/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac,SIX_ARM=E6 -o /scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E6.log /scratch/e1538633/liuyi/SIGN-qwen-six-runtime-e9396ac/scripts/six_ablation.pbs",
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E6",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    }
+  },
+  "all_six_submitted": true
+}

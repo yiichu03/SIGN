@@ -1,0 +1,118 @@
+{
+  "recorded_at": "2026-11-08T22:22:26+08:00",
+  "jobs": {
+    "E1": {
+      "job_id": "1533627.stdct-mgmt-02",
+      "state": "Q",
+      "queue": "batch_gpux",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      },
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E1",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E2": {
+      "job_id": "1533628.stdct-mgmt-02",
+      "state": "Q",
+      "queue": "batch_gpux",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      },
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E3": {
+      "job_id": "1533629.stdct-mgmt-02",
+      "state": "Q",
+      "queue": "batch_gpux",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      },
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E3",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E4": {
+      "job_id": "1533630.stdct-mgmt-02",
+      "state": "Q",
+      "queue": "batch_gpux",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      },
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E4",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E5": {
+      "job_id": "1533631.stdct-mgmt-02",
+      "state": "Q",
+      "queue": "batch_gpux",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      },
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E5",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "E6": {
+      "job_id": "1533632.stdct-mgmt-02",
+      "state": "Q",
+      "queue": "batch_gpux",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "240gb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=36:mem=240GB:ngpus=1:gpu_model=A40",
+        "walltime": "06:00:00"
+      },
+      "output": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E6",
+      "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7"
+    },
+    "report": {
+      "job_id": "1533635.stdct-mgmt-02",
+      "state": "H",
+      "queue": "batch_cpux"
+    }
+  }
+}

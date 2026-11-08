@@ -1,0 +1,68 @@
+{
+  "A_replay": {
+    "scored": 155,
+    "online_schedule_rows": 155,
+    "choices": {
+      "left": 137,
+      "keep": 18
+    },
+    "reasons": {
+      "model_argmax": 155
+    },
+    "changed_from_original": 0
+  },
+  "E1": {
+    "scored": 930,
+    "online_schedule_rows": 155,
+    "choices": {
+      "left": 51,
+      "keep": 53,
+      "right": 51
+    },
+    "reasons": {
+      "model_argmax": 155
+    },
+    "changed_from_original": 104,
+    "all_six_mapping_consistent_events": 0,
+    "raw_token_argmax_all_permutations": {
+      "A": 926,
+      "C": 4
+    },
+    "semantic_choices_all_permutations": {
+      "left": 306,
+      "right": 310,
+      "keep": 314
+    }
+  },
+  "E2": {
+    "scored": 155,
+    "online_schedule_rows": 155,
+    "choices": {
+      "left": 154,
+      "right": 1
+    },
+    "reasons": {
+      "model_argmax": 155
+    },
+    "changed_from_original": 19
+  },
+  "E3": {
+    "scored": 155,
+    "online_schedule_rows": 155,
+    "choices": {
+      "keep": 145,
+      "left": 10
+    },
+    "reasons": {
+      "confidence_keep": 145,
+      "model_argmax": 10
+    },
+    "changed_from_original": 127
+  },
+  "passed": true,
+  "original_A_probability_max_abs_error": 6.813034701180776e-06,
+  "seconds": 306.2510978200007,
+  "worker_seconds": 294.0750065455213,
+  "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+  "interpretation": "Reused155 original arbitration inputs, not independent performance data; no SR inference; thresholds/mappings not tuned."
+}
