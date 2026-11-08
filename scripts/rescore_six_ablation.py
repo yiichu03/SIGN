@@ -46,7 +46,10 @@ def main():
             for request,value in zip(selected,response['results']):
                 meta=metadata[request['id']];old=original[meta['original_index']]
                 choice,reason=select_agent(value)
-                if reason!='model_argmax':raise RuntimeError('Offline scoring invalid evidence: '+str((meta,reason)))
+                # Low candidate mass or ties are legitimate safe KEEP decisions,
+                # not a reason to discard a potentially negative ablation result.
+                if not value.get('valid') or reason=='invalid_model_evidence':
+                    raise RuntimeError('Offline scoring invalid evidence: '+str((meta,reason)))
                 error=float(np.max(np.abs(np.asarray(value['probabilities'])-old['value']['probabilities']))) if meta['arm']=='A_replay' else None
                 if error is not None:max_error=max(max_error,error)
                 record=dict(meta,id=request['id'],choice=choice,reason=reason,original_choice=old['selected'],changed=choice!=old['selected'],
