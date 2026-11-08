@@ -33,7 +33,9 @@ def agent_score(judge, rows, prompts, output, request, verified, verify):
                 if hashlib.sha256(Path(image['image']).read_bytes()).hexdigest()!=image['image_sha256']:
                     raise RuntimeError('Agent image SHA mismatch')
         if verify and task not in verified:
-            check=judge.verify_choices(selected[:2],labels)
+            longest=max(selected,key=lambda r:len(r['images']))
+            samples=[selected[0],longest] if longest['id']!=selected[0]['id'] else selected[:2]
+            check=judge.verify_choices(samples,labels)
             (output/('verification_'+task+'.json')).write_text(json.dumps(check,indent=2)+'\n')
             if not check['passed']:raise RuntimeError('Multi-image batch/solo/readout verification failed')
             verified.add(task)

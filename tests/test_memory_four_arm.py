@@ -65,6 +65,17 @@ class FourArmTests(unittest.TestCase):
         ctx=json.loads(rows[0]['context']);self.assertEqual(len(ctx['actual_commands']),4)
         self.assertEqual(ctx['observation']['summed_yaw_command_deg'],0)
         self.assertEqual(s.overrides,34);np.testing.assert_allclose(s.last_action,[.8,0]);self.assertIsNone(s.probe)
+    def test_feedback_images_are_after_turn_and_after_exact_four_forward_actions(self):
+        from PIL import Image
+        h=self.harness('B')
+        frames={}
+        for t in range(39):
+            frame=self.frame if t<5 else np.roll(self.frame,t,axis=1)
+            frames[t]=frame.copy();self.step(h,frame=frame)
+        request=[r for r in Client.rows if r['task']=='feedback'][0]
+        before=np.asarray(Image.open(request['images'][0]['image']));after=np.asarray(Image.open(request['images'][1]['image']))
+        np.testing.assert_equal(before,frames[34]);np.testing.assert_equal(after,frames[38])
+        self.assertFalse(np.array_equal(before,frames[28]))
     def test_b_continue_total_budget_and_no_second_feedback(self):
         Client.feedback='continue';h=self.harness('B');s=self.decision(h)
         for _ in range(15):self.step(h)
@@ -115,6 +126,33 @@ class FourArmTests(unittest.TestCase):
         self.assertFalse(forward_observation(self.frame,self.frame,[[-1,1]])['forward_only'])
         self.assertIsNone(forward_observation(self.frame,self.frame,[[-1,1]])['visual_mae'])
         mem.clear('test');self.assertEqual(len(mem.transitions),0);self.assertEqual(len(mem.entries),0)
+    def test_c_retrieval_real_pairs_and_shadow_are_separate_requests(self):
+        h=self.harness('C',window=16,memory_min_age=0)
+        for _ in range(41):self.step(h)
+        normal=[r for r in Client.rows if not r['id'].endswith(':without_memory')]
+        shadow=[r for r in Client.rows if r['id'].endswith(':without_memory')]
+        self.assertEqual(len(normal),1);self.assertEqual(len(shadow),1)
+        self.assertGreater(len(normal[0]['images']),4);self.assertLessEqual(len(normal[0]['images']),8)
+        self.assertEqual(len(shadow[0]['images']),4)
+        context=json.loads(normal[0]['context']);self.assertIn('actual_normalized_commands',context['memories'][0])
+        self.assertNotIn('collision',json.dumps(context));self.assertNotIn('success',context)
+    def test_memory_fifo_capacity_and_private_rng(self):
+        cfg=SimpleNamespace(memory_capacity=2,memory_stride=1,memory_min_age=0)
+        mem=EpisodeMemory(cfg,'visual',('s','x'))
+        np.random.seed(123);expected=np.random.get_state()
+        for i in range(3):
+            frame=np.roll(self.frame,i*13,axis=1)
+            mem.observe(frame,[.6,0],frame,40*i+1,'sign')
+        self.assertEqual(len(mem.entries),2);self.assertEqual(mem.stats['evictions'],1)
+        mem.retrieve({'LEFT':self.frame},200,'random')
+        after=np.random.get_state();np.testing.assert_equal(expected[1],after[1]);self.assertEqual(expected[2:],after[2:])
+    def test_worker_error_safe_keep_is_not_accepted_as_normal_model_output(self):
+        h=self.harness()
+        class Broken(Client):
+            def score(self,request,rows):raise RuntimeError('worker timeout')
+        h.client_factory=Broken;self.decision(h)
+        self.assertEqual(h.technical_errors,1);self.assertEqual(h.states[0].selections['C'],1)
+        self.assertEqual(h.states[0].vlm_selections,0)
     def test_d_no_match_is_exact_a_and_memory_has_no_privileged_fields(self):
         h=self.harness('D');s=self.decision(h)
         self.assertEqual(s.memory_hits,0);self.assertEqual(len(Client.rows[0]['images']),4)

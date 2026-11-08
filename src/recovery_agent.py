@@ -149,7 +149,8 @@ class AgentSupport:
             rule_memory=None
             if getattr(self.cfg,'memory_decision','vlm')=='rule':label,rule_memory=rule_memory_keep(label,retrieved)
             default='A' if row['attempt']%2 else 'B'
-            detail=dict(source='vlm' if reason=='model_argmax' else 'safe_keep',reason=reason,raw=value,
+            source='rule_memory' if rule_memory and rule_memory['changed'] else 'vlm' if reason=='model_argmax' else 'safe_keep'
+            detail=dict(source=source,reason=reason,raw=value,
                 semantic_choice=word,default_rule=default,differs_from_rule=label!=default,
                 shadow_without_memory=shadow,shadow_choice=shadow_word,memory_changed_decision=memory_changed,rule_memory=rule_memory)
             choices.append((label,detail))
@@ -166,7 +167,11 @@ class AgentSupport:
                 if state.active_event is not None:state.active_event['end_step']=state.step+4
                 state.cooldown_until=state.step+4+self.cfg.cooldown
             else:
-                if state.active_event is not None:state.active_event['end_step']=state.step
+                if state.active_event is not None:
+                    self._append('outcomes.jsonl',dict(id=state.active_event['id'],episode=list(state.key),step=state.step,
+                        phase='closed_loop_return',after_rgb_sha256=hashlib.sha256(np.ascontiguousarray(state.probe['after']).tobytes()).hexdigest(),
+                        note='Handed back after four aligned forward commands, no task outcome label.'))
+                    state.active_event=None
                 state.cooldown_until=state.step+self.cfg.cooldown
             self._append('feedback.jsonl',dict(**row,choice=word,reason=reason,model=value,episode=list(state.key),step=state.step))
             state.probe=None

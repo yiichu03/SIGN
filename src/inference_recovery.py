@@ -290,6 +290,10 @@ class RecoveryHarness(AgentSupport):
                 state.active_event = None
             if is_stop(action):
                 state.actions.clear()
+                if self.agent and state.active_event is not None:
+                    self._append('outcomes.jsonl',dict(id=state.active_event['id'],episode=list(key),step=state.step,
+                        phase='policy_stop',after_rgb_sha256=hashlib.sha256(np.ascontiguousarray(frame).tobytes()).hexdigest()))
+                    state.active_event=None
                 if self.agent and state.probe is not None:
                     self._append("feedback.jsonl",dict(id=state.probe["id"],episode=list(key),step=state.step,phase="cancelled_by_policy_stop"))
                     state.probe=None
@@ -419,7 +423,7 @@ class RecoveryHarness(AgentSupport):
             if self.candidate_affordance and self.cfg.mode == 'qwen':
                 state.vlm_selections += detail['source'] == 'vlm'
                 state.fallback_selections += detail['source'] in ('rule_fallback','safe_keep')
-                state.vlm_rule_disagreements += detail['differs_from_rule']
+                state.vlm_rule_disagreements += detail['differs_from_rule'] and detail['source']=='vlm'
             state.earlier_choices.append(label)
             state.cooldown_until = state.step+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
             if label != 'C':

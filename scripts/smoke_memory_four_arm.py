@@ -26,7 +26,7 @@ def main():
     probes=json.loads((b/'probe_inputs.json').read_text());rows=[]
     for j,p in enumerate(probes):
         images=[image_item(role,p['view_files'][side]['path']) for role,side in [('GOAL','goal'),('CURRENT','forward'),('LEFT','left'),('RIGHT','right')]]
-        rows.append(dict(id='probe'+str(j),task='arbitration',images=images,context='Technical input binding probe; no memory.'))
+        rows.append(dict(id='probe'+str(j),task='arbitration',images=images,context='Technical input binding probe; no memory.'+(' Additional independent row context for nonzero padding.'*j)))
     swapped=dict(rows[0],id='swapped',images=[dict(x) for x in rows[0]['images']])
     swapped['images'][2]=dict(rows[0]['images'][3],role='LEFT');swapped['images'][3]=dict(rows[0]['images'][2],role='RIGHT')
     blank=save_rgb('GOAL',np.zeros((256,256,3),np.uint8),b/'blank.png')

@@ -28,11 +28,20 @@ def main():
     for e in ranked:
         if e['scene_id'] not in scenes:selected.append(e);scenes.add(e['scene_id'])
         if len(selected)==6:break
+    # Add previously observed trigger episodes only to exercise integration,
+    # never to tune parameters or claim SR. Formal tasks remain the full 4200.
+    trigger_rows=[json.loads(l) for l in (parent/'full_qwen/native/recovery/events.jsonl').read_text().splitlines()]
+    known={tuple(r['episode']) for r in trigger_rows}
+    selected_keys={(e['scene_id'],str(e['episode_id'])) for e in selected}
+    for e in ranked:
+        key=(e['scene_id'],str(e['episode_id']))
+        if key in known and key not in selected_keys:selected.append(e);selected_keys.add(key)
+        if len(selected)==12:break
     dataset=out/'datasets';dataset.mkdir()
     path=dataset/'smoke.json.gz';path.write_bytes(gzip.compress(json.dumps(dict(data,episodes=selected)).encode(),mtime=0))
-    tasks['splits']=dict(full=full,smoke=dict(path=str(path),sha256=sha(path),episodes=6,
+    tasks['splits']=dict(full=full,smoke=dict(path=str(path),sha256=sha(path),episodes=len(selected),
         episode_keys=[[e['scene_id'],str(e['episode_id'])] for e in selected]))
-    tasks.update(save_audit_traces=True,smoke_selection='six distinct scenes by stable SHA ordering; no outcome selection',
+    tasks.update(save_audit_traces=True,smoke_selection='six distinct scenes by stable SHA ordering plus six previous trigger episodes for engineering coverage; not a performance subset',
         frozen_settings='PLAN.md; no old61 tuning',formal_jobs_submitted=False)
     write(out/'tasks.json',tasks)
     probes=[]
