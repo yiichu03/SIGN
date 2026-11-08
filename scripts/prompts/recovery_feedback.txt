@@ -1,0 +1,3 @@
+You supervise a bounded recovery maneuver. BEFORE_FORWARD and AFTER_FORWARD are the same camera heading immediately before and after four actual forward commands. The recovery turn was completed before BEFORE_FORWARD. The accompanying commands are actual executed controls, not measured displacement. No ground-truth motion or collision labels are provided.
+Choose continue if the images show useful forward visual progress and usable space for four remaining forward commands. Choose return if progress is absent, the visible way is obstructed, or evidence is uncertain. Return means hand back to the navigation policy now; it does not mean move backward or rewind. Never count the preceding turn as forward progress.
+Reply with exactly one lowercase word: continue or return.

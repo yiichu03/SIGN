@@ -59,7 +59,12 @@ def main():
     parser.add_argument('--mode', choices=['off','disabled','rule','qwen','scan'], required=True)
     parser.add_argument('--active', action='store_true')
     parser.add_argument('--candidate', action='store_true')
+    from memory_four_arm import ARMS,arm_options
+    parser.add_argument("--arm",choices=list(ARMS))
     args = parser.parse_args()
+    arm_opts=[]
+    if args.arm:
+        args.mode,arm_opts=arm_options(args.arm)
     batch, out = args.batch.resolve(), args.run.resolve()
     guard(batch)
     assert os.environ.get('PBS_JOBID') and os.environ.get('PYTHONHASHSEED') == '0'
@@ -99,6 +104,11 @@ def main():
     if args.candidate:
         assert args.active
         exp_config += ','+str(TREE/'src/config/inference_candidate.yaml')
+    if args.arm:
+        exp_config += ','+str(TREE/'src/config/inference_memory_four_arm.yaml')
+        # Off stays native. Rule uses the unchanged matched-scan direction logic.
+        opts += arm_opts
+        opts += ['habitat_baselines.num_environments','6','habitat.seed','100','habitat.environment.max_episode_steps','500']
     if tasks.get('recovery_profile'):
         exp_config += ','+str(TREE/tasks['recovery_profile'])
     run_sim.run_exp(exp_config=exp_config,
@@ -134,6 +144,7 @@ def main():
         native_reference=os.environ.get('RECOVERY_NATIVE_REFERENCE') == '1',
         subset_full_reference_outputs_not_assumed_equal=args.split!='full',
         max_episode_steps=500, seed=100, hash_seed=0, source_commit=json.loads((batch/'source_manifest.json').read_text())['commit'])
+    result['arm']=args.arm
     result['diagnostic_num_envs']=diagnostic_envs
     result['full_evaluation_parallelism_unchanged']=True
     assert abs(native['eval_metrics/success']-result['success_rate']) < 1e-5
@@ -153,13 +164,14 @@ def main():
             rejected=sum(r['rejected'] for r in records), survey_steps=sum(r['survey_steps'] for r in records),
             recovery_steps=sum(r['recovery_steps'] for r in records), completed_surveys=sum(r['completed_surveys'] for r in records),
             selections={label:sum(r['selections'][label] for r in records) for label in 'ABC'}, **summary)
-        for name in ['vlm_selections', 'fallback_selections', 'vlm_rule_disagreements']:
+        for name in ['vlm_selections', 'fallback_selections', 'vlm_rule_disagreements','memory_hits','memory_prompt_entries','memory_changed_decisions','feedback_calls','feedback_returns']:
             result['harness'][name] = sum(r.get(name, 0) for r in records)
         if args.mode == 'disabled':
             assert not result['harness']['worker_started'] and result['harness']['overrides'] == 0
     elif recovery.exists():
         raise RuntimeError('Disabled supervisor created output')
     guard(batch)
+    if result.get("harness",{}).get("technical_errors",0):raise RuntimeError("Worker errors: run not accepted as healthy; inspect audit logs")
     (out/'result.json').write_text(json.dumps(result, indent=2)+'\n')
     print(json.dumps(result, indent=2))
 

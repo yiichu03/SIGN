@@ -1,0 +1,25 @@
+inference_recovery:
+  mode: qwen
+  agent_variant: A
+  active_survey: True
+  survey_turn_steps: 6
+  turn_steps: 6
+  forward_steps: 8
+  window: 16
+  yaw_compensated: True
+  yaw_partial_windows: False
+  min_forward_fraction: 0.75
+  median_change_threshold: 0.01
+  endpoint_change_threshold: 0.025
+  cooldown: 64
+  max_interventions: 2
+  candidate_affordance: True
+  candidate_protocol: agent
+  prompt: scripts/prompts/recovery_agent.txt
+  feedback_prompt: scripts/prompts/recovery_feedback.txt
+  feedback_source: vlm
+  memory_capacity: 24
+  memory_stride: 8
+  memory_min_age: 16
+  memory_retrieval: verified
+  memory_decision: vlm

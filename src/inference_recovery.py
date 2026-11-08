@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import time
 import numpy as np
+from src.recovery_agent import AgentSupport
 
 
 def physical(action):
@@ -128,6 +129,16 @@ class State:
     fallback_selections: int = 0
     vlm_rule_disagreements: int = 0
 
+    memory: object = None
+    probe: object = None
+    last_kind: str = "sign"
+    issued_kind: str = "sign"
+    memory_hits: int = 0
+    memory_prompt_entries: int = 0
+    memory_changed: int = 0
+    feedback_calls: int = 0
+    feedback_returns: int = 0
+
     def observe(self, rgb):
         if self.last_action is not None:
             self.commands.append(self.last_action.copy())
@@ -194,21 +205,27 @@ def active_collage(survey, goal, destination):
     return files
 
 
-class RecoveryHarness:
+class RecoveryHarness(AgentSupport):
     def __init__(self, cfg, num_envs, output, client_factory=None,
                  action_names=('linear_velocity', 'angular_velocity')):
         self.cfg = cfg
+        self.arm = getattr(cfg,'agent_variant','legacy')
+        if self.arm not in ('legacy','A','B','C','D'):raise ValueError('Unknown agent variant')
+        self.agent = self.arm != 'legacy' and cfg.mode=='qwen'
+        self.technical_errors=0
         if len(action_names) != 2 or set(action_names) != {'linear_velocity', 'angular_velocity'}:
             raise ValueError('Unexpected flattened action names')
         self.action_indices = [action_names.index(n) for n in ('linear_velocity', 'angular_velocity')]
         self.active_survey = bool(getattr(cfg, 'active_survey', False))
         self.candidate_affordance = bool(getattr(cfg, 'candidate_affordance', False))
         self.candidate_protocol = getattr(cfg, 'candidate_protocol', 'abc')
-        if self.candidate_protocol not in ('abc','semantic','semantic_balanced','directional'):
+        if self.candidate_protocol not in ('abc','semantic','semantic_balanced','directional','agent'):
             raise ValueError('Unknown candidate protocol')
         self.candidate_gap = float(getattr(cfg, 'candidate_support_gap', 0.05))
         if self.candidate_affordance and (not self.active_survey or not np.isfinite(self.candidate_gap) or not 0 < self.candidate_gap <= 1):
             raise ValueError('Candidate affordances require active views and a positive support gap')
+        if self.agent and (not self.active_survey or self.candidate_protocol!='agent' or cfg.turn_steps!=6 or cfg.forward_steps!=8 or cfg.survey_turn_steps!=6):
+            raise ValueError('Four-arm agents require the frozen 24-scan / 6-turn / 8-forward protocol')
         self.survey_k = getattr(cfg, 'survey_turn_steps', 3)
         if self.active_survey and (type(self.survey_k) is not int or self.survey_k < 1):
             raise ValueError('Invalid survey duration')
@@ -256,11 +273,14 @@ class RecoveryHarness:
             key = tuple(key)
             state = self.states[i]
             if not bool(np.asarray(masks)[i]) or state is None:
+                if state is not None and state.memory is not None:state.memory.clear('real_reset')
                 state = State(key, self.cfg.window)
+                self._agent_reset(state)
                 self.states[i] = state
                 self.episode_serial += 1
             elif state.key != key or state.finished:
                 raise RuntimeError('Episode changed without a real reset')
+            if self.agent:self._agent_observe(state,frame)
             state.observe(frame)
             if state.active_event is not None and state.step >= state.active_event['end_step']:
                 event = state.active_event
@@ -270,10 +290,15 @@ class RecoveryHarness:
                 state.active_event = None
             if is_stop(action):
                 state.actions.clear()
+                if self.agent and state.probe is not None:
+                    self._append("feedback.jsonl",dict(id=state.probe["id"],episode=list(key),step=state.step,phase="cancelled_by_policy_stop"))
+                    state.probe=None
                 if state.survey is not None:
                     self._append('surveys.jsonl', dict(id=state.survey['row']['id'], episode=list(key),
                         step=state.step, phase='cancelled_by_policy_stop'))
                 state.survey = None
+            elif self.agent and state.probe is not None and state.probe.get("ready"):
+                pending.append((i,dict(id=state.probe["id"]+":feedback",task="feedback")))
             elif state.survey is not None:
                 survey = state.survey
                 elapsed = state.step-survey['start_step']
@@ -291,7 +316,7 @@ class RecoveryHarness:
                     image = self.output/'inputs'/(row['id']+'.png')
                     render_started = time.perf_counter()
                     view_files = active_collage(survey, goal[i], image)
-                    if self.candidate_affordance:
+                    if self.candidate_affordance and not self.agent:
                         from src.recovery_affordance import candidate_image, raw_candidate_image
                         row['candidates'] = []
                         for side in ['left', 'right']:
@@ -313,9 +338,11 @@ class RecoveryHarness:
                     if not state.actions:
                         raise RuntimeError('Survey action/frame boundary mismatch')
                     result[i] = state.actions.popleft()
+                    state.issued_kind="scan"
                     state.overrides += 1
                     state.survey_overrides += 1
             elif state.actions:
+                state.issued_kind="probe" if state.probe is not None else "recovery"
                 result[i] = state.actions.popleft()
                 state.overrides += 1
                 state.recovery_overrides += 1
@@ -332,6 +359,7 @@ class RecoveryHarness:
                         state.actions = deque(survey_actions(self.survey_k))
                         state.cooldown_until = state.step+4*self.survey_k+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
                         result[i] = state.actions.popleft()
+                        state.issued_kind="scan"
                         state.overrides += 1
                         state.survey_overrides += 1
                         self._append('surveys.jsonl', dict(id=event_id, episode=list(key), step=state.step,
@@ -344,7 +372,9 @@ class RecoveryHarness:
                         row.update(image=str(image), image_sha256=hashlib.sha256(image.read_bytes()).hexdigest())
                         pending.append((i, row))
         choices = []
-        if pending and self.cfg.mode == 'qwen':
+        if self.agent:
+            pending,choices=self._agent_pending(pending,result)
+        elif pending and self.cfg.mode == 'qwen':
             if self.client is None:
                 if self.client_factory is None:
                     from src.qwen_client import QwenClient
@@ -388,12 +418,15 @@ class RecoveryHarness:
             state.selections[label] += 1
             if self.candidate_affordance and self.cfg.mode == 'qwen':
                 state.vlm_selections += detail['source'] == 'vlm'
-                state.fallback_selections += detail['source'] == 'rule_fallback'
+                state.fallback_selections += detail['source'] in ('rule_fallback','safe_keep')
                 state.vlm_rule_disagreements += detail['differs_from_rule']
             state.earlier_choices.append(label)
             state.cooldown_until = state.step+self.cfg.turn_steps+self.cfg.forward_steps+self.cfg.cooldown
             if label != 'C':
-                state.actions = deque(recovery_actions(label, self.cfg.turn_steps, self.cfg.forward_steps))
+                forward_steps=4 if self.agent and self.arm=="B" else self.cfg.forward_steps
+                state.actions = deque(recovery_actions(label, self.cfg.turn_steps, forward_steps))
+                state.issued_kind="recovery"
+                if self.agent and self.arm=="B":state.probe=dict(id=row["id"],start=state.step,commands=[])
                 row['planned_actions'] = [a.tolist() for a in state.actions]
                 state.active_event = dict(id=row['id'], before=state.frames[-1].copy(),
                     end_step=state.step+self.cfg.turn_steps+self.cfg.forward_steps)
@@ -402,12 +435,14 @@ class RecoveryHarness:
                 state.recovery_overrides += 1
             else:
                 state.rejected += 1
+                if self.agent:state.cooldown_until=state.step+self.cfg.cooldown
             row.update(mode=self.cfg.mode, choice=label, model=detail, attempt=state.attempts)
             self._append('events.jsonl', row)
         for i, action in enumerate(result):
             state = self.states[i]
             actual = np.clip(action, -1, 1).astype(np.float32)
             state.last_action = actual
+            state.last_kind=state.issued_kind
             state.action_digest.update(actual.tobytes())
             state.step += 1
         assert np.array_equal(np.asarray(masks), original_masks)
@@ -431,6 +466,12 @@ class RecoveryHarness:
         if state.survey is not None:
             self._append('surveys.jsonl', dict(id=state.survey['row']['id'], episode=list(key),
                 step=state.step, phase='ended_with_real_episode'))
+        row.update(agent_variant=self.arm,memory_hits=state.memory_hits,memory_prompt_entries=state.memory_prompt_entries,
+            memory_changed_decisions=state.memory_changed,feedback_calls=state.feedback_calls,feedback_returns=state.feedback_returns)
+        if state.memory is not None:
+            row["memory_stats"]=dict(state.memory.stats)
+            state.memory.clear("real_episode_finish")
+        state.probe=None
         self._append('episodes.jsonl', row)
         state.finished = True
         return row

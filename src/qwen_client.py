@@ -29,7 +29,9 @@ class QwenClient:
                    '--output',str(self.output), '--verify',str(int(cfg.verify_first_batch))]
         if getattr(cfg, 'candidate_affordance', False):
             protocol = getattr(cfg,'candidate_protocol','abc')
-            command += ['--task', protocol if protocol in ('semantic','semantic_balanced','directional') else 'candidate']
+            command += ['--task', protocol if protocol in ('semantic','semantic_balanced','directional','agent') else 'candidate']
+            if protocol=='agent':
+                command += ['--feedback-prompt',str((tree/cfg.feedback_prompt).resolve())]
             if protocol=='semantic_balanced':
                 command += ['--inverse-prompt',str((tree/cfg.inverse_prompt).resolve())]
         self.process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,

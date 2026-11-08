@@ -18,12 +18,45 @@ def emit(row):
     print(json.dumps(row, allow_nan=False), flush=True)
 
 
+def agent_score(judge, rows, prompts, output, request, verified, verify):
+    """One resident model; real role-bound multi-image requests, never collages."""
+    results = {}
+    for task, labels in [('arbitration',('left','right','keep')),('feedback',('continue','return'))]:
+        selected=[r for r in rows if r['task']==task]
+        if not selected:continue
+        judge.prompt=prompts[task]
+        for row in selected:
+            roles=[x['role'] for x in row['images']]
+            expected=['GOAL','CURRENT','LEFT','RIGHT'] if task=='arbitration' else ['BEFORE_FORWARD','AFTER_FORWARD']
+            if roles[:len(expected)]!=expected or len(roles)>8:raise RuntimeError('Multi-image role/order mismatch')
+            for image in row['images']:
+                if hashlib.sha256(Path(image['image']).read_bytes()).hexdigest()!=image['image_sha256']:
+                    raise RuntimeError('Agent image SHA mismatch')
+        if verify and task not in verified:
+            check=judge.verify_choices(selected[:2],labels)
+            (output/('verification_'+task+'.json')).write_text(json.dumps(check,indent=2)+'\n')
+            if not check['passed']:raise RuntimeError('Multi-image batch/solo/readout verification failed')
+            verified.add(task)
+        for start in range(0,len(selected),2):
+            batch=selected[start:start+2]
+            values,audit=judge.choice_probabilities(batch,labels=labels)
+            records=[]
+            for row,value in zip(batch,values):
+                value.update(id=row['id'],prompt_version=hashlib.sha256(judge.prompt.encode()).hexdigest())
+                results[row['id']]=value;records.append(value)
+            (output/('request_%06d_%s_%d.json'%(request,task,start//2))).write_text(
+                json.dumps(dict(inputs=batch,audit=audit,results=records),indent=2,allow_nan=False)+'\n')
+    if set(results)!={r['id'] for r in rows}:raise RuntimeError('Unknown/missing agent task ID')
+    return [results[r['id']] for r in rows]
+
+
 def main():
     parser = argparse.ArgumentParser()
     for name in ('model-dir', 'prompt', 'output'):
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--verify', type=int, default=1)
-    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic', 'semantic_balanced', 'directional'], default='actions')
+    parser.add_argument('--task', choices=['actions', 'candidate', 'semantic', 'semantic_balanced', 'directional','agent'], default='actions')
+    parser.add_argument('--feedback-prompt')
     parser.add_argument('--inverse-prompt')
     args = parser.parse_args()
     output = Path(args.output)
@@ -37,7 +70,11 @@ def main():
     if Path(args.model_dir).name != 'Qwen3.5-2B':
         raise ValueError('This experiment uses only Qwen3.5-2B')
     with contextlib.redirect_stdout(sys.stderr):
-        judge = SingleImageJudge(args.model_dir, prompt, dtype='float32')
+        judge = SingleImageJudge(args.model_dir, prompt, dtype='float32',max_image_pixels=65536 if args.task=='agent' else 262144)
+    agent_prompts=None
+    if args.task=='agent':
+        agent_prompts=dict(arbitration=prompt,feedback=Path(args.feedback_prompt).read_text())
+        (output/'feedback_prompt.txt').write_text(agent_prompts['feedback'])
     version = hashlib.sha256(prompt.encode()).hexdigest()
     (output/'prompt.txt').write_text(prompt)
     if inverse is not None:
@@ -45,6 +82,7 @@ def main():
     emit(dict(ok=True, kind='ready', pid=os.getpid(), prompt_version=version, environment=judge.environment))
     last = -1
     verified = False
+    agent_verified=set()
     for line in sys.stdin:
         message = json.loads(line)
         if message['kind'] == 'close':
@@ -54,6 +92,14 @@ def main():
             raise RuntimeError('Invalid/duplicate recovery request')
         if len({r['id'] for r in rows}) != len(rows):
             raise RuntimeError('Duplicate recovery event IDs')
+        if args.task=='agent':
+            started=time.perf_counter()
+            with contextlib.redirect_stdout(sys.stderr):
+                results=agent_score(judge,rows,agent_prompts,output,request,agent_verified,args.verify)
+            emit(dict(ok=True,request_id=request,results=results,seconds=time.perf_counter()-started,
+                peak_gpu_gib=judge.torch.cuda.max_memory_allocated()/1024**3))
+            last=request
+            continue
         for row in rows:
             if hashlib.sha256(Path(row['image']).read_bytes()).hexdigest() != row['image_sha256']:
                 raise RuntimeError('Recovery input image SHA mismatch')

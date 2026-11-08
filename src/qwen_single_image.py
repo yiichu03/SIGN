@@ -2,6 +2,7 @@
 import json
 import math
 import os
+import re
 import time
 from pathlib import Path
 from numbers import Real
@@ -65,6 +66,15 @@ def probabilities_from_logits(logits):
     return dict(p_low=p[0], p_medium=p[1], p_high=p[2], q=0.5 * p[1] + p[2])
 
 
+def choice_softmax(logits):
+    """Actual candidate-token probabilities, also supporting binary decisions."""
+    if len(logits) < 2 or any(isinstance(x, bool) or not isinstance(x, Real)
+            or not math.isfinite(x) for x in logits):
+        raise ValueError('Expected at least two finite candidate logits')
+    weights=[math.exp(float(x)-max(logits)) for x in logits]
+    return [v/sum(weights) for v in weights]
+
+
 def response_positions(masks):
     """Last prompt token predicts the first answer token. Require left padding."""
     positions = []
@@ -94,6 +104,31 @@ def conversations(images, prompt, metadata=None):
             content.append({'type':'text','text':'Current image statistics (m² and m²/action): '+json.dumps(stats)})
         rows.append([{'role':'user','content':content}])
     return rows
+
+
+def multi_image_conversations(requests, prompt):
+    """One labelled multi-image episode per row, never a joint batch dialogue."""
+    if not 1 <= len(requests) <= 8 or not prompt.strip():
+        raise ValueError('Expected 1-8 independent requests and a prompt')
+    messages=[]
+    for request in requests:
+        images=request.get('images',[])
+        if not 1 <= len(images) <= 8:
+            raise ValueError('Expected 1-8 images in each independent request')
+        roles=[x.get('role','') for x in images]
+        if len(set(roles))!=len(roles) or any(not re.fullmatch(r'[A-Z][A-Z0-9_]*',x) for x in roles):
+            raise ValueError('Image roles must be unique explicit labels')
+        context=request.get('context','')
+        if not isinstance(context,str) or len(context)>16000:
+            raise ValueError('Invalid request context')
+        content=[dict(type='text',text=prompt)]
+        for item in images:
+            content.extend([dict(type='text',text='IMAGE ROLE: '+item['role']),
+                dict(type='image',image=str(Path(item['image']).resolve()))])
+        if context:
+            content.append(dict(type='text',text=context))
+        messages.append([dict(role='user',content=content)])
+    return messages
 
 
 def parse_score(raw, truncated=False):
@@ -128,12 +163,20 @@ class SingleImageJudge:
            'dtype':str(self.model.dtype)}
 
     def _prepare(self, images, metadata=None):
-        messages=conversations(images,self.prompt,metadata)
+        grouped=bool(images and isinstance(images[0],dict))
+        if grouped:
+            if metadata is not None:
+                raise ValueError('Multi-image context belongs to its independent request')
+            messages=multi_image_conversations(images,self.prompt)
+            counts=[len(r['images']) for r in images]
+        else:
+            messages=conversations(images,self.prompt,metadata)
+            counts=[1]*len(images)
         inputs=self.processor.apply_chat_template(messages,tokenize=True,add_generation_prompt=True,enable_thinking=False,
             return_dict=True,return_tensors='pt',processor_kwargs={'text_kwargs':{'padding':True},
             'images_kwargs':{'size':{'shortest_edge':65536,'longest_edge':self.max_pixels}}}).to(self.model.device)
-        if inputs['image_grid_thw'].shape[0]!=len(images) or inputs['input_ids'].shape[0]!=len(images):
-            raise RuntimeError('Expected one image in each independent batch row')
+        if inputs['image_grid_thw'].shape[0]!=sum(counts) or inputs['input_ids'].shape[0]!=len(images):
+            raise RuntimeError('Multi-image count/batch row mismatch')
         return inputs, messages
 
     def class_probabilities(self, images, metadata, labels=('A','B','C')):
@@ -141,6 +184,19 @@ class SingleImageJudge:
         labels = tuple(labels)
         if len(labels) != 3 or len(set(labels)) != 3 or any(not isinstance(x,str) or not x for x in labels):
             raise ValueError('Expected three distinct nonempty candidate labels')
+        results,audit=self.choice_probabilities(images,metadata,labels)
+        for result in results:
+            if result['valid']:
+                result.update(probabilities_from_logits(result['logits']))
+            else:
+                result.update(p_low=None,p_medium=None,p_high=None,q=None)
+        return results,audit
+
+    def choice_probabilities(self, images, metadata=None, labels=('left','right','keep')):
+        """Same loader/processor/readout for real two- or three-word choices."""
+        labels=tuple(labels)
+        if len(labels) not in (2,3) or len(set(labels))!=len(labels) or any(not isinstance(x,str) or not x for x in labels):
+            raise ValueError('Expected two or three distinct candidate labels')
         torch = self.torch
         start = time.perf_counter()
         inputs, messages = self._prepare(images, metadata)
@@ -148,7 +204,7 @@ class SingleImageJudge:
         positions = response_positions(masks)
         tokenizer = self.processor.tokenizer
         token_ids = [tokenizer.encode(c, add_special_tokens=False) for c in labels]
-        if any(len(ids) != 1 for ids in token_ids) or len({ids[0] for ids in token_ids}) != 3:
+        if any(len(ids) != 1 for ids in token_ids) or len({ids[0] for ids in token_ids}) != len(labels):
             raise ValueError('Candidate labels must be distinct single tokens')
         token_ids = [ids[0] for ids in token_ids]
         if tokenizer.batch_decode([[i] for i in token_ids]) != list(labels):
@@ -170,9 +226,9 @@ class SingleImageJudge:
         results = []
         for values, candidate_mass in zip(selected, mass):
             try:
-                result = dict(probabilities_from_logits(values), valid=True, error=None)
+                result = dict(probabilities=choice_softmax(values),labels=list(labels),valid=True,error=None)
             except ValueError as exc:
-                result = dict(p_low=None,p_medium=None,p_high=None,q=None,valid=False,error=str(exc))
+                result = dict(probabilities=None,labels=list(labels),valid=False,error=str(exc))
             result['logits'] = [v if math.isfinite(v) else str(v) for v in values]
             result['candidate_mass'] = candidate_mass if math.isfinite(candidate_mass) else None
             results.append(result)
@@ -180,10 +236,40 @@ class SingleImageJudge:
             'response_positions':positions, 'padding_side':tokenizer.padding_side,
             'input_token_ids':inputs['input_ids'].cpu().tolist(), 'attention_mask':masks,
             'image_grid_thw':inputs['image_grid_thw'].cpu().tolist(), 'rendered_chats':rendered,
+            'images_per_row':[len(x['images']) if isinstance(x,dict) else 1 for x in images],
             'top_token_ids':top_ids.cpu().tolist(),
             'top_logits':[[v if math.isfinite(v) else str(v) for v in row] for row in top_values.cpu().tolist()],
             'temperature':1.0, 'seconds':time.perf_counter()-start}
         return results, audit
+
+    def verify_choices(self, requests, labels, tolerance=1e-4):
+        """Multi-image order, variable-length padding, row isolation and logits."""
+        results,audit=self.choice_probabilities(requests,labels=labels)
+        offset=0;batch_delta=0.0
+        for i,row in enumerate(requests):
+            singles,other=self.choice_probabilities([row],labels=labels)
+            active=[t for t,m in zip(audit['input_token_ids'][i],audit['attention_mask'][i]) if m]
+            assert active==other['input_token_ids'][0],'Multi-image batch/solo token mismatch'
+            count=audit['images_per_row'][i]
+            assert audit['image_grid_thw'][offset:offset+count]==other['image_grid_thw'],'Image order/grid mismatch'
+            offset+=count
+            assert results[i]['valid'] and singles[0]['valid']
+            batch_delta=max(batch_delta,max(abs(a-b) for a,b in zip(results[i]['probabilities'],singles[0]['probabilities'])))
+        swapped,_=self.choice_probabilities(requests[::-1],labels=labels)
+        permutation=max(abs(a-b) for original,other in zip(results,swapped[::-1]) for a,b in zip(original['probabilities'],other['probabilities']))
+        inputs,_=self._prepare(requests)
+        with self.torch.inference_mode():
+            generated=self.model.generate(**inputs,max_new_tokens=1,do_sample=False,return_dict_in_generate=True,
+                output_logits=True,pad_token_id=self.processor.tokenizer.pad_token_id)
+        ids=list(audit['token_ids'].values())
+        raw=generated.logits[0][:,ids].float().cpu().tolist()
+        generation=max(abs(a-b) for result,values in zip(results,raw) for a,b in zip(result['probabilities'],choice_softmax(values)))
+        return dict(passed=max(batch_delta,permutation,generation)<=tolerance,token_ids=audit['token_ids'],
+            images_per_row=audit['images_per_row'],padding_counts=[len(m)-sum(m) for m in audit['attention_mask']],
+            response_positions=audit['response_positions'],single_batch_max_delta=batch_delta,
+            batch_permutation_max_delta=permutation,forward_generation_max_delta=generation,tolerance=tolerance,
+            first_generated_tokens=self.processor.tokenizer.batch_decode(generated.sequences[:,inputs['input_ids'].shape[-1]:].cpu()),
+            input_audit=audit)
 
     def verify_readout(self, images, metadata, tolerance=1e-4, labels=('A','B','C')):
         """Small GPU check: batch vs singles, then raw first-generation logits."""
