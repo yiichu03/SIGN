@@ -1,0 +1,21 @@
+{
+  "command": [
+    "qsub",
+    "-q",
+    "autox",
+    "-P",
+    "CFP04-SF-109",
+    "-v",
+    "MEMORY_TREE=/scratch/e1538633/liuyi/SIGN-qwen-memory-smoke-5799fc9,MEMORY_BATCH=/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_5799fc9",
+    "-o",
+    "/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_5799fc9/engineering.pbs.log",
+    "/scratch/e1538633/liuyi/SIGN-qwen-memory-smoke-5799fc9/scripts/memory_four_arm_smoke.pbs"
+  ],
+  "returncode": 0,
+  "stdout": "1532788.stdct-mgmt-02\n",
+  "stderr": "",
+  "engineering_only": true,
+  "formal4200": false,
+  "recorded_at": "2026-11-08T15:58:25+08:00",
+  "job_id": "1532788.stdct-mgmt-02"
+}

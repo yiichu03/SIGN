@@ -1,0 +1,403 @@
+{
+  "inputs": [
+    {
+      "id": "probe0",
+      "task": "arbitration",
+      "images": [
+        {
+          "role": "GOAL",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.goal.png",
+          "image_sha256": "8480432a36b981f0396954e381aaa0fa6a0edf40c5b2d61db62840957ad48969"
+        },
+        {
+          "role": "CURRENT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+          "image_sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+        },
+        {
+          "role": "LEFT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.left.png",
+          "image_sha256": "461ae7813c2e3c05483b80753c862a62b59c719597c0d3dd435bdf9faf2814c1"
+        },
+        {
+          "role": "RIGHT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.right.png",
+          "image_sha256": "d536db6d1d7a0172900eba637942be1b886b3f7146c3eb60bb6cfa19a8cb597e"
+        }
+      ],
+      "context": "Technical input binding probe; no memory."
+    },
+    {
+      "id": "probe1",
+      "task": "arbitration",
+      "images": [
+        {
+          "role": "GOAL",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.goal.png",
+          "image_sha256": "46ed0679ff9ed2ac67298d96a6564f02b90ab921b1dd4e9a67a840d22bf8e004"
+        },
+        {
+          "role": "CURRENT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.forward.png",
+          "image_sha256": "1e7fd98df5c9dc908ecb23ffaf4c615dfd194839c8adc9587667dabfcc8984f0"
+        },
+        {
+          "role": "LEFT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.left.png",
+          "image_sha256": "8b1a40fce31b367fd60cbf348677686290aeff4276a779c719bd6fd1c6a53474"
+        },
+        {
+          "role": "RIGHT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.right.png",
+          "image_sha256": "7195af876e52060dc4f7d5feb0da7a07a53de85d5905d7d1a4c54de0d8363298"
+        }
+      ],
+      "context": "Technical input binding probe; no memory. Additional independent row context for nonzero padding."
+    },
+    {
+      "id": "swapped",
+      "task": "arbitration",
+      "images": [
+        {
+          "role": "GOAL",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.goal.png",
+          "image_sha256": "8480432a36b981f0396954e381aaa0fa6a0edf40c5b2d61db62840957ad48969"
+        },
+        {
+          "role": "CURRENT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+          "image_sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+        },
+        {
+          "role": "LEFT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.right.png",
+          "image_sha256": "d536db6d1d7a0172900eba637942be1b886b3f7146c3eb60bb6cfa19a8cb597e"
+        },
+        {
+          "role": "RIGHT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.left.png",
+          "image_sha256": "461ae7813c2e3c05483b80753c862a62b59c719597c0d3dd435bdf9faf2814c1"
+        }
+      ],
+      "context": "Technical input binding probe; no memory."
+    },
+    {
+      "id": "blank",
+      "task": "arbitration",
+      "images": [
+        {
+          "role": "GOAL",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_057740b/blank.png",
+          "image_sha256": "3b93f26267630963185ee67d8020972faee108a7bca80db725817e4680c9955c"
+        },
+        {
+          "role": "CURRENT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_057740b/blank.png",
+          "image_sha256": "3b93f26267630963185ee67d8020972faee108a7bca80db725817e4680c9955c"
+        },
+        {
+          "role": "LEFT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_057740b/blank.png",
+          "image_sha256": "3b93f26267630963185ee67d8020972faee108a7bca80db725817e4680c9955c"
+        },
+        {
+          "role": "RIGHT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_memory_four_arm_20261108/smoke_057740b/blank.png",
+          "image_sha256": "3b93f26267630963185ee67d8020972faee108a7bca80db725817e4680c9955c"
+        }
+      ],
+      "context": "No usable visual evidence."
+    },
+    {
+      "id": "eight_images",
+      "task": "arbitration",
+      "images": [
+        {
+          "role": "GOAL",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.goal.png",
+          "image_sha256": "8480432a36b981f0396954e381aaa0fa6a0edf40c5b2d61db62840957ad48969"
+        },
+        {
+          "role": "CURRENT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+          "image_sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+        },
+        {
+          "role": "LEFT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.left.png",
+          "image_sha256": "461ae7813c2e3c05483b80753c862a62b59c719597c0d3dd435bdf9faf2814c1"
+        },
+        {
+          "role": "RIGHT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.right.png",
+          "image_sha256": "d536db6d1d7a0172900eba637942be1b886b3f7146c3eb60bb6cfa19a8cb597e"
+        },
+        {
+          "role": "MEMORY_0_BEFORE",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.left.png",
+          "image_sha256": "8b1a40fce31b367fd60cbf348677686290aeff4276a779c719bd6fd1c6a53474"
+        },
+        {
+          "role": "MEMORY_0_AFTER",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.right.png",
+          "image_sha256": "7195af876e52060dc4f7d5feb0da7a07a53de85d5905d7d1a4c54de0d8363298"
+        },
+        {
+          "role": "MEMORY_1_BEFORE",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.left.png",
+          "image_sha256": "8b1a40fce31b367fd60cbf348677686290aeff4276a779c719bd6fd1c6a53474"
+        },
+        {
+          "role": "MEMORY_1_AFTER",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.right.png",
+          "image_sha256": "7195af876e52060dc4f7d5feb0da7a07a53de85d5905d7d1a4c54de0d8363298"
+        }
+      ],
+      "context": "Technical image-count fixture only: historical before/after views, no verified correspondence or task outcome. Ignore if irrelevant."
+    },
+    {
+      "id": "six_images",
+      "task": "arbitration",
+      "images": [
+        {
+          "role": "GOAL",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.goal.png",
+          "image_sha256": "8480432a36b981f0396954e381aaa0fa6a0edf40c5b2d61db62840957ad48969"
+        },
+        {
+          "role": "CURRENT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+          "image_sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+        },
+        {
+          "role": "LEFT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.left.png",
+          "image_sha256": "461ae7813c2e3c05483b80753c862a62b59c719597c0d3dd435bdf9faf2814c1"
+        },
+        {
+          "role": "RIGHT",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.right.png",
+          "image_sha256": "d536db6d1d7a0172900eba637942be1b886b3f7146c3eb60bb6cfa19a8cb597e"
+        },
+        {
+          "role": "MEMORY_0_BEFORE",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.left.png",
+          "image_sha256": "8b1a40fce31b367fd60cbf348677686290aeff4276a779c719bd6fd1c6a53474"
+        },
+        {
+          "role": "MEMORY_1_BEFORE",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.right.png",
+          "image_sha256": "7195af876e52060dc4f7d5feb0da7a07a53de85d5905d7d1a4c54de0d8363298"
+        }
+      ],
+      "context": "Technical historical-keyframe fixture; correspondence unknown."
+    },
+    {
+      "id": "feedback",
+      "task": "feedback",
+      "images": [
+        {
+          "role": "BEFORE_FORWARD",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+          "image_sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+        },
+        {
+          "role": "AFTER_FORWARD",
+          "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+          "image_sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+        }
+      ],
+      "context": "{\"actual_commands\": [[0.6, 0], [0.6, 0], [0.6, 0], [0.6, 0]], \"note\": \"Identical before/after technical control, not a newly collected outcome.\"}"
+    }
+  ],
+  "response": {
+    "ok": true,
+    "request_id": 0,
+    "results": [
+      {
+        "probabilities": [
+          0.34972956215536516,
+          0.4237632261964252,
+          0.22650721164820953
+        ],
+        "labels": [
+          "left",
+          "right",
+          "keep"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          23.5225830078125,
+          23.714597702026367,
+          23.088199615478516
+        ],
+        "candidate_mass": 0.9925169348716736,
+        "id": "probe0",
+        "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac"
+      },
+      {
+        "probabilities": [
+          0.43097371882099944,
+          0.24546027554300906,
+          0.3235660056359915
+        ],
+        "labels": [
+          "left",
+          "right",
+          "keep"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          23.804561614990234,
+          23.241649627685547,
+          23.51791763305664
+        ],
+        "candidate_mass": 0.9915727972984314,
+        "id": "probe1",
+        "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac"
+      },
+      {
+        "probabilities": [
+          0.43418098375750286,
+          0.2372721255501877,
+          0.3285468906923094
+        ],
+        "labels": [
+          "left",
+          "right",
+          "keep"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          23.67874526977539,
+          23.074491500854492,
+          23.39996337890625
+        ],
+        "candidate_mass": 0.9904292821884155,
+        "id": "swapped",
+        "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac"
+      },
+      {
+        "probabilities": [
+          0.05888446397791555,
+          0.023670350269401525,
+          0.917445185752683
+        ],
+        "labels": [
+          "left",
+          "right",
+          "keep"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          22.437150955200195,
+          21.52579689025879,
+          25.18316650390625
+        ],
+        "candidate_mass": 0.9944535493850708,
+        "id": "blank",
+        "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac"
+      },
+      {
+        "probabilities": [
+          0.36852012762424213,
+          0.3829263123889993,
+          0.2485535599867586
+        ],
+        "labels": [
+          "left",
+          "right",
+          "keep"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          22.934429168701172,
+          22.972776412963867,
+          22.540592193603516
+        ],
+        "candidate_mass": 0.9885306358337402,
+        "id": "eight_images",
+        "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac"
+      },
+      {
+        "probabilities": [
+          0.38544123296686467,
+          0.3490350254196217,
+          0.2655237416135136
+        ],
+        "labels": [
+          "left",
+          "right",
+          "keep"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          23.133960723876953,
+          23.034744262695312,
+          22.761276245117188
+        ],
+        "candidate_mass": 0.9902951717376709,
+        "id": "six_images",
+        "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac"
+      },
+      {
+        "probabilities": [
+          0.28082357126920193,
+          0.7191764287307981
+        ],
+        "labels": [
+          "continue",
+          "return"
+        ],
+        "valid": true,
+        "error": null,
+        "logits": [
+          23.209728240966797,
+          24.150108337402344
+        ],
+        "candidate_mass": 0.9921611547470093,
+        "id": "feedback",
+        "prompt_version": "9248e99d33e7440daa22786271e84fedd990f6da569ef27ed1cd6d27f2bd28b1"
+      }
+    ],
+    "seconds": 4.694152284995653,
+    "peak_gpu_gib": 8.638371467590332
+  },
+  "decisions": {
+    "probe0": [
+      "right",
+      "model_argmax"
+    ],
+    "probe1": [
+      "left",
+      "model_argmax"
+    ],
+    "swapped": [
+      "left",
+      "model_argmax"
+    ],
+    "blank": [
+      "keep",
+      "model_argmax"
+    ],
+    "eight_images": [
+      "right",
+      "model_argmax"
+    ],
+    "six_images": [
+      "left",
+      "model_argmax"
+    ],
+    "feedback": [
+      "return",
+      "model_argmax"
+    ]
+  },
+  "note": "Swap/blank output is a bias diagnostic, not a performance label or tuning target."
+}

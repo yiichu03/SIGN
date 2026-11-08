@@ -490,4 +490,5 @@ class RecoveryHarness(AgentSupport):
         (self.output/'summary.json').write_text(json.dumps(dict(events=self.events, worker_started=self.client is not None,
             worker_seconds=self.worker_seconds, render_seconds=self.render_seconds,
             total_controller_seconds=self.total_seconds, mode=self.cfg.mode, active_survey=self.active_survey,
-            max_override_steps=self.max_override_steps, candidate_affordance=self.candidate_affordance), indent=2)+'\n')
+            max_override_steps=self.max_override_steps, candidate_affordance=self.candidate_affordance,
+            agent_variant=self.arm, technical_errors=self.technical_errors), indent=2)+'\n')

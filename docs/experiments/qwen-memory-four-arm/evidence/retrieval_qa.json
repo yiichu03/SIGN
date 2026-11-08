@@ -1,0 +1,6845 @@
+{
+  "events": 151,
+  "pairs": 331,
+  "true_positive": 35,
+  "false_positive": 0,
+  "false_negative": 7,
+  "precision": 1.0,
+  "recall": 0.8333333333333334,
+  "accepted_unknown": 0,
+  "no_threshold_tuning": true,
+  "scope": "Saved scan RGBs from existing full run; not representative normal-navigation keyframes, not a human location truth.",
+  "limitation": "Insufficient positives or zero accepted matches does not validate reliable memory recall. New runtime uses no GT.",
+  "rows": [
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4004"
+      ],
+      "query_event": "event_0000000",
+      "query_side": "forward",
+      "query_step": 459,
+      "stored_event": "event_0000000",
+      "stored_side": "left",
+      "stored_step": 441,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3536"
+      ],
+      "query_event": "event_0000001",
+      "query_side": "forward",
+      "query_step": 294,
+      "stored_event": "event_0000001",
+      "stored_side": "left",
+      "stored_step": 276,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2071"
+      ],
+      "query_event": "event_0000002",
+      "query_side": "forward",
+      "query_step": 122,
+      "stored_event": "event_0000002",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1785"
+      ],
+      "query_event": "event_0000003",
+      "query_side": "forward",
+      "query_step": 114,
+      "stored_event": "event_0000003",
+      "stored_side": "left",
+      "stored_step": 96,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1537"
+      ],
+      "query_event": "event_0000004",
+      "query_side": "forward",
+      "query_step": 53,
+      "stored_event": "event_0000004",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1782"
+      ],
+      "query_event": "event_0000005",
+      "query_side": "forward",
+      "query_step": 174,
+      "stored_event": "event_0000005",
+      "stored_side": "left",
+      "stored_step": 156,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3461"
+      ],
+      "query_event": "event_0000006",
+      "query_side": "forward",
+      "query_step": 143,
+      "stored_event": "event_0000006",
+      "stored_side": "left",
+      "stored_step": 125,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4197"
+      ],
+      "query_event": "event_0000007",
+      "query_side": "forward",
+      "query_step": 110,
+      "stored_event": "event_0000007",
+      "stored_side": "left",
+      "stored_step": 92,
+      "match": {
+        "valid": false,
+        "reason": "invalid_homography",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000009",
+      "query_side": "forward",
+      "query_step": 120,
+      "stored_event": "event_0000009",
+      "stored_side": "left",
+      "stored_step": 102,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "left",
+      "query_step": 224,
+      "stored_event": "event_0000009",
+      "stored_side": "left",
+      "stored_step": 102,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.6968368794266329,
+        "matches": 85,
+        "inliers": 60,
+        "inlier_ratio": 0.7058823529411765,
+        "spatial_coverage": 0.1854076837993986,
+        "overlap": 0.9558984375,
+        "photometric_mae": 0.01281442081227022
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.328985433464265,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "left",
+      "query_step": 224,
+      "stored_event": "event_0000009",
+      "stored_side": "forward",
+      "stored_step": 120,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.32862141996648,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "left",
+      "query_step": 224,
+      "stored_event": "event_0000009",
+      "stored_side": "right",
+      "stored_step": 114,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.67137702296907,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "forward",
+      "query_step": 242,
+      "stored_event": "event_0000009",
+      "stored_side": "left",
+      "stored_step": 102,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.67138536183309,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "forward",
+      "query_step": 242,
+      "stored_event": "event_0000009",
+      "stored_side": "forward",
+      "stored_step": 120,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8746699957754098,
+        "matches": 125,
+        "inliers": 110,
+        "inlier_ratio": 0.88,
+        "spatial_coverage": 0.2761022501959485,
+        "overlap": 0.9460546875,
+        "photometric_mae": 0.006056822982488894
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.328649324711555,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "forward",
+      "query_step": 242,
+      "stored_event": "event_0000009",
+      "stored_side": "right",
+      "stored_step": 114,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.32862141996648,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "forward",
+      "query_step": 242,
+      "stored_event": "event_0000010",
+      "stored_side": "left",
+      "stored_step": 224,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "right",
+      "query_step": 236,
+      "stored_event": "event_0000009",
+      "stored_side": "left",
+      "stored_step": 102,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.671397517768,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "right",
+      "query_step": 236,
+      "stored_event": "event_0000009",
+      "stored_side": "forward",
+      "stored_step": 120,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.67139522360209,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2314"
+      ],
+      "query_event": "event_0000010",
+      "query_side": "right",
+      "query_step": 236,
+      "stored_event": "event_0000009",
+      "stored_side": "right",
+      "stored_step": 114,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8352890164677267,
+        "matches": 108,
+        "inliers": 91,
+        "inlier_ratio": 0.8425925925925926,
+        "spatial_coverage": 0.38369884301940005,
+        "overlap": 0.9496875,
+        "photometric_mae": 0.008667980455884747
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.328649324711555,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1922"
+      ],
+      "query_event": "event_0000011",
+      "query_side": "forward",
+      "query_step": 321,
+      "stored_event": "event_0000011",
+      "stored_side": "left",
+      "stored_step": 303,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1927"
+      ],
+      "query_event": "event_0000012",
+      "query_side": "forward",
+      "query_step": 239,
+      "stored_event": "event_0000012",
+      "stored_side": "left",
+      "stored_step": 221,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000013",
+      "query_side": "forward",
+      "query_step": 78,
+      "stored_event": "event_0000013",
+      "stored_side": "left",
+      "stored_step": 60,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "left",
+      "query_step": 188,
+      "stored_event": "event_0000013",
+      "stored_side": "left",
+      "stored_step": 60,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9524284901338465,
+        "matches": 150,
+        "inliers": 144,
+        "inlier_ratio": 0.96,
+        "spatial_coverage": 0.2662700959979179,
+        "overlap": 0.9804296875,
+        "photometric_mae": 0.007886989443909889
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 0.9993540885268377,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "left",
+      "query_step": 188,
+      "stored_event": "event_0000013",
+      "stored_side": "forward",
+      "stored_step": 78,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.00040779345592,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "left",
+      "query_step": 188,
+      "stored_event": "event_0000013",
+      "stored_side": "right",
+      "stored_step": 72,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 179.00041645923204,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "forward",
+      "query_step": 206,
+      "stored_event": "event_0000013",
+      "stored_side": "left",
+      "stored_step": 60,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.99958940830082,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "forward",
+      "query_step": 206,
+      "stored_event": "event_0000013",
+      "stored_side": "forward",
+      "stored_step": 78,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.7386299015867944,
+        "matches": 125,
+        "inliers": 95,
+        "inlier_ratio": 0.76,
+        "spatial_coverage": 0.25157924171745594,
+        "overlap": 0.95,
+        "photometric_mae": 0.028118550543691598
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 0.9993540885268377,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "forward",
+      "query_step": 206,
+      "stored_event": "event_0000013",
+      "stored_side": "right",
+      "stored_step": 72,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.00039804873563,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "forward",
+      "query_step": 206,
+      "stored_event": "event_0000014",
+      "stored_side": "left",
+      "stored_step": 188,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "right",
+      "query_step": 200,
+      "stored_event": "event_0000013",
+      "stored_side": "left",
+      "stored_step": 60,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 179.00040279833397,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "right",
+      "query_step": 200,
+      "stored_event": "event_0000013",
+      "stored_side": "forward",
+      "stored_step": 78,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.99959898447838,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2308"
+      ],
+      "query_event": "event_0000014",
+      "query_side": "right",
+      "query_step": 200,
+      "stored_event": "event_0000013",
+      "stored_side": "right",
+      "stored_step": 72,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9553900612725152,
+        "matches": 123,
+        "inliers": 119,
+        "inlier_ratio": 0.967479674796748,
+        "spatial_coverage": 0.38415399172712084,
+        "overlap": 0.981328125,
+        "photometric_mae": 0.012495987088072534
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 0.9993540885268377,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2386"
+      ],
+      "query_event": "event_0000015",
+      "query_side": "forward",
+      "query_step": 302,
+      "stored_event": "event_0000015",
+      "stored_side": "left",
+      "stored_step": 284,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00002127984133,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2230"
+      ],
+      "query_event": "event_0000016",
+      "query_side": "forward",
+      "query_step": 122,
+      "stored_event": "event_0000016",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2373"
+      ],
+      "query_event": "event_0000017",
+      "query_side": "forward",
+      "query_step": 337,
+      "stored_event": "event_0000017",
+      "stored_side": "left",
+      "stored_step": 319,
+      "match": {
+        "valid": false,
+        "reason": "invalid_homography",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "1805"
+      ],
+      "query_event": "event_0000018",
+      "query_side": "forward",
+      "query_step": 256,
+      "stored_event": "event_0000018",
+      "stored_side": "left",
+      "stored_step": 238,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1670"
+      ],
+      "query_event": "event_0000019",
+      "query_side": "forward",
+      "query_step": 92,
+      "stored_event": "event_0000019",
+      "stored_side": "left",
+      "stored_step": 74,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3414"
+      ],
+      "query_event": "event_0000020",
+      "query_side": "forward",
+      "query_step": 55,
+      "stored_event": "event_0000020",
+      "stored_side": "left",
+      "stored_step": 37,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000021",
+      "query_side": "forward",
+      "query_step": 127,
+      "stored_event": "event_0000021",
+      "stored_side": "left",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "left",
+      "query_step": 211,
+      "stored_event": "event_0000021",
+      "stored_side": "left",
+      "stored_step": 109,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8803374902835531,
+        "matches": 119,
+        "inliers": 106,
+        "inlier_ratio": 0.8907563025210085,
+        "spatial_coverage": 0.2942011614534863,
+        "overlap": 0.9535546875,
+        "photometric_mae": 0.011696591096765855
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.1025489530681427,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "left",
+      "query_step": 211,
+      "stored_event": "event_0000021",
+      "stored_side": "forward",
+      "stored_step": 127,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.10329502197303,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "left",
+      "query_step": 211,
+      "stored_event": "event_0000021",
+      "stored_side": "right",
+      "stored_step": 121,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.8966959018676,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "forward",
+      "query_step": 229,
+      "stored_event": "event_0000021",
+      "stored_side": "left",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.89669348556698,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "forward",
+      "query_step": 229,
+      "stored_event": "event_0000021",
+      "stored_side": "forward",
+      "stored_step": 127,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9302037188089362,
+        "matches": 128,
+        "inliers": 121,
+        "inlier_ratio": 0.9453125,
+        "spatial_coverage": 0.23622014199886165,
+        "overlap": 0.9598828125,
+        "photometric_mae": 0.015982842912860944
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.1029211948975823,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "forward",
+      "query_step": 229,
+      "stored_event": "event_0000021",
+      "stored_side": "right",
+      "stored_step": 121,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.10327604831957,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "forward",
+      "query_step": 229,
+      "stored_event": "event_0000022",
+      "stored_side": "left",
+      "stored_step": 211,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "right",
+      "query_step": 223,
+      "stored_event": "event_0000021",
+      "stored_side": "left",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.8967061488774,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "right",
+      "query_step": 223,
+      "stored_event": "event_0000021",
+      "stored_side": "forward",
+      "stored_step": 127,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.89670332720169,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3361"
+      ],
+      "query_event": "event_0000022",
+      "query_side": "right",
+      "query_step": 223,
+      "stored_event": "event_0000021",
+      "stored_side": "right",
+      "stored_step": 121,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.1025489530681427,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1690"
+      ],
+      "query_event": "event_0000023",
+      "query_side": "forward",
+      "query_step": 88,
+      "stored_event": "event_0000023",
+      "stored_side": "left",
+      "stored_step": 70,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000024",
+      "query_side": "forward",
+      "query_step": 77,
+      "stored_event": "event_0000024",
+      "stored_side": "left",
+      "stored_step": 59,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "left",
+      "query_step": 204,
+      "stored_event": "event_0000024",
+      "stored_side": "left",
+      "stored_step": 59,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 26.187074333928592,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "left",
+      "query_step": 204,
+      "stored_event": "event_0000024",
+      "stored_side": "forward",
+      "stored_step": 77,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 63.8129031441337,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "left",
+      "query_step": 204,
+      "stored_event": "event_0000024",
+      "stored_side": "right",
+      "stored_step": 71,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 153.81291328500288,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "forward",
+      "query_step": 222,
+      "stored_event": "event_0000024",
+      "stored_side": "left",
+      "stored_step": 59,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 116.18709564562859,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "forward",
+      "query_step": 222,
+      "stored_event": "event_0000024",
+      "stored_side": "forward",
+      "stored_step": 77,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 26.187104483755462,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "forward",
+      "query_step": 222,
+      "stored_event": "event_0000024",
+      "stored_side": "right",
+      "stored_step": 71,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 63.81291606702892,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "forward",
+      "query_step": 222,
+      "stored_event": "event_0000025",
+      "stored_side": "left",
+      "stored_step": 204,
+      "match": {
+        "valid": false,
+        "reason": "invalid_homography",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "right",
+      "query_step": 216,
+      "stored_event": "event_0000024",
+      "stored_side": "left",
+      "stored_step": 59,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 153.81289575374325,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "right",
+      "query_step": 216,
+      "stored_event": "event_0000024",
+      "stored_side": "forward",
+      "stored_step": 77,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 116.18709564562859,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2159"
+      ],
+      "query_event": "event_0000025",
+      "query_side": "right",
+      "query_step": 216,
+      "stored_event": "event_0000024",
+      "stored_side": "right",
+      "stored_step": 71,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 26.18704418406762,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1686"
+      ],
+      "query_event": "event_0000026",
+      "query_side": "forward",
+      "query_step": 85,
+      "stored_event": "event_0000026",
+      "stored_side": "left",
+      "stored_step": 67,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "798"
+      ],
+      "query_event": "event_0000027",
+      "query_side": "forward",
+      "query_step": 70,
+      "stored_event": "event_0000027",
+      "stored_side": "left",
+      "stored_step": 52,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3503"
+      ],
+      "query_event": "event_0000028",
+      "query_side": "forward",
+      "query_step": 355,
+      "stored_event": "event_0000028",
+      "stored_side": "left",
+      "stored_step": 337,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3501"
+      ],
+      "query_event": "event_0000029",
+      "query_side": "forward",
+      "query_step": 144,
+      "stored_event": "event_0000029",
+      "stored_side": "left",
+      "stored_step": 126,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1688"
+      ],
+      "query_event": "event_0000030",
+      "query_side": "forward",
+      "query_step": 253,
+      "stored_event": "event_0000030",
+      "stored_side": "left",
+      "stored_step": 235,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000031",
+      "query_side": "forward",
+      "query_step": 45,
+      "stored_event": "event_0000031",
+      "stored_side": "left",
+      "stored_step": 27,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4171"
+      ],
+      "query_event": "event_0000032",
+      "query_side": "forward",
+      "query_step": 251,
+      "stored_event": "event_0000032",
+      "stored_side": "left",
+      "stored_step": 233,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "left",
+      "query_step": 233,
+      "stored_event": "event_0000031",
+      "stored_side": "left",
+      "stored_step": 27,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9226613650602453,
+        "matches": 85,
+        "inliers": 79,
+        "inlier_ratio": 0.9294117647058824,
+        "spatial_coverage": 0.5937393071690562,
+        "overlap": 0.933125,
+        "photometric_mae": 0.007263088226318359
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 3.3934730741992345,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "left",
+      "query_step": 233,
+      "stored_event": "event_0000031",
+      "stored_side": "forward",
+      "stored_step": 45,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 86.60590318437754,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "left",
+      "query_step": 233,
+      "stored_event": "event_0000031",
+      "stored_side": "right",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 176.60592085741843,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "forward",
+      "query_step": 251,
+      "stored_event": "event_0000031",
+      "stored_side": "left",
+      "stored_step": 27,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 93.39405577061531,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "forward",
+      "query_step": 251,
+      "stored_event": "event_0000031",
+      "stored_side": "forward",
+      "stored_step": 45,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 3.3939343969966753,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "forward",
+      "query_step": 251,
+      "stored_event": "event_0000031",
+      "stored_side": "right",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 86.60591314301378,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "forward",
+      "query_step": 251,
+      "stored_event": "event_0000033",
+      "stored_side": "left",
+      "stored_step": 233,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "right",
+      "query_step": 245,
+      "stored_event": "event_0000031",
+      "stored_side": "left",
+      "stored_step": 27,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 176.6059311071978,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "right",
+      "query_step": 245,
+      "stored_event": "event_0000031",
+      "stored_side": "forward",
+      "stored_step": 45,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 93.39408392716093,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eudora.glb",
+        "2063"
+      ],
+      "query_event": "event_0000033",
+      "query_side": "right",
+      "query_step": 245,
+      "stored_event": "event_0000031",
+      "stored_side": "right",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 3.3939343969966753,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4147"
+      ],
+      "query_event": "event_0000034",
+      "query_side": "forward",
+      "query_step": 53,
+      "stored_event": "event_0000034",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3586"
+      ],
+      "query_event": "event_0000035",
+      "query_side": "forward",
+      "query_step": 248,
+      "stored_event": "event_0000035",
+      "stored_side": "left",
+      "stored_step": 230,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "801"
+      ],
+      "query_event": "event_0000036",
+      "query_side": "forward",
+      "query_step": 76,
+      "stored_event": "event_0000036",
+      "stored_side": "left",
+      "stored_step": 58,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3541"
+      ],
+      "query_event": "event_0000037",
+      "query_side": "forward",
+      "query_step": 273,
+      "stored_event": "event_0000037",
+      "stored_side": "left",
+      "stored_step": 255,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Eastville.glb",
+        "4104"
+      ],
+      "query_event": "event_0000038",
+      "query_side": "forward",
+      "query_step": 110,
+      "stored_event": "event_0000038",
+      "stored_side": "left",
+      "stored_step": 92,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3365"
+      ],
+      "query_event": "event_0000039",
+      "query_side": "forward",
+      "query_step": 69,
+      "stored_event": "event_0000039",
+      "stored_side": "left",
+      "stored_step": 51,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2210"
+      ],
+      "query_event": "event_0000040",
+      "query_side": "forward",
+      "query_step": 443,
+      "stored_event": "event_0000040",
+      "stored_side": "left",
+      "stored_step": 425,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1664"
+      ],
+      "query_event": "event_0000041",
+      "query_side": "forward",
+      "query_step": 319,
+      "stored_event": "event_0000041",
+      "stored_side": "left",
+      "stored_step": 301,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3497"
+      ],
+      "query_event": "event_0000042",
+      "query_side": "forward",
+      "query_step": 74,
+      "stored_event": "event_0000042",
+      "stored_side": "left",
+      "stored_step": 56,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2181"
+      ],
+      "query_event": "event_0000043",
+      "query_side": "forward",
+      "query_step": 75,
+      "stored_event": "event_0000043",
+      "stored_side": "left",
+      "stored_step": 57,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "633"
+      ],
+      "query_event": "event_0000044",
+      "query_side": "forward",
+      "query_step": 122,
+      "stored_event": "event_0000044",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000046",
+      "query_side": "forward",
+      "query_step": 137,
+      "stored_event": "event_0000046",
+      "stored_side": "left",
+      "stored_step": 119,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "left",
+      "query_step": 278,
+      "stored_event": "event_0000046",
+      "stored_side": "left",
+      "stored_step": 119,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9522833774610875,
+        "matches": 137,
+        "inliers": 132,
+        "inlier_ratio": 0.9635036496350365,
+        "spatial_coverage": 0.2348294677284332,
+        "overlap": 0.979140625,
+        "photometric_mae": 0.011645282483568378
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 0.8987391115867797,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "left",
+      "query_step": 278,
+      "stored_event": "event_0000046",
+      "stored_side": "forward",
+      "stored_step": 137,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.10128868331739,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "left",
+      "query_step": 278,
+      "stored_event": "event_0000046",
+      "stored_side": "right",
+      "stored_step": 131,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 179.10130181713387,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "forward",
+      "query_step": 296,
+      "stored_event": "event_0000046",
+      "stored_side": "left",
+      "stored_step": 119,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.89873735769437,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "forward",
+      "query_step": 296,
+      "stored_event": "event_0000046",
+      "stored_side": "forward",
+      "stored_step": 137,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9668447007953272,
+        "matches": 153,
+        "inliers": 150,
+        "inlier_ratio": 0.9803921568627451,
+        "spatial_coverage": 0.20291760133940615,
+        "overlap": 0.976015625,
+        "photometric_mae": 0.01381840518876618
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 0.8987391115867797,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "forward",
+      "query_step": 296,
+      "stored_event": "event_0000046",
+      "stored_side": "right",
+      "stored_step": 131,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.1012789473153,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "forward",
+      "query_step": 296,
+      "stored_event": "event_0000047",
+      "stored_side": "left",
+      "stored_step": 278,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00002127984133,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "right",
+      "query_step": 290,
+      "stored_event": "event_0000046",
+      "stored_side": "left",
+      "stored_step": 119,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 179.10126424993808,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "right",
+      "query_step": 290,
+      "stored_event": "event_0000046",
+      "stored_side": "forward",
+      "stored_step": 137,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.89873735769437,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3415"
+      ],
+      "query_event": "event_0000047",
+      "query_side": "right",
+      "query_step": 290,
+      "stored_event": "event_0000046",
+      "stored_side": "right",
+      "stored_step": 131,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8479318836067297,
+        "matches": 158,
+        "inliers": 136,
+        "inlier_ratio": 0.8607594936708861,
+        "spatial_coverage": 0.15823361127340094,
+        "overlap": 0.9580859375,
+        "photometric_mae": 0.014902664633358226
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 0.8987391115867797,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2350"
+      ],
+      "query_event": "event_0000048",
+      "query_side": "forward",
+      "query_step": 199,
+      "stored_event": "event_0000048",
+      "stored_side": "left",
+      "stored_step": 181,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3529"
+      ],
+      "query_event": "event_0000049",
+      "query_side": "forward",
+      "query_step": 113,
+      "stored_event": "event_0000049",
+      "stored_side": "left",
+      "stored_step": 95,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "682"
+      ],
+      "query_event": "event_0000050",
+      "query_side": "forward",
+      "query_step": 162,
+      "stored_event": "event_0000050",
+      "stored_side": "left",
+      "stored_step": 144,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2234"
+      ],
+      "query_event": "event_0000051",
+      "query_side": "forward",
+      "query_step": 122,
+      "stored_event": "event_0000051",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "747"
+      ],
+      "query_event": "event_0000052",
+      "query_side": "forward",
+      "query_step": 66,
+      "stored_event": "event_0000052",
+      "stored_side": "left",
+      "stored_step": 48,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3401"
+      ],
+      "query_event": "event_0000053",
+      "query_side": "forward",
+      "query_step": 57,
+      "stored_event": "event_0000053",
+      "stored_side": "left",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000054",
+      "query_side": "forward",
+      "query_step": 82,
+      "stored_event": "event_0000054",
+      "stored_side": "left",
+      "stored_step": 64,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "left",
+      "query_step": 241,
+      "stored_event": "event_0000054",
+      "stored_side": "left",
+      "stored_step": 64,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8926838954328389,
+        "matches": 121,
+        "inliers": 109,
+        "inlier_ratio": 0.9008264462809917,
+        "spatial_coverage": 0.2931328631598235,
+        "overlap": 0.9176171875,
+        "photometric_mae": 0.009038978464463178
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 4.163742168566409,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "left",
+      "query_step": 241,
+      "stored_event": "event_0000054",
+      "stored_side": "forward",
+      "stored_step": 82,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 94.16386492663945,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "left",
+      "query_step": 241,
+      "stored_event": "event_0000054",
+      "stored_side": "right",
+      "stored_step": 76,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 175.83614153129835,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "forward",
+      "query_step": 259,
+      "stored_event": "event_0000054",
+      "stored_side": "left",
+      "stored_step": 64,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 85.83613990504449,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "forward",
+      "query_step": 259,
+      "stored_event": "event_0000054",
+      "stored_side": "forward",
+      "stored_step": 82,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.7773052295902704,
+        "matches": 115,
+        "inliers": 91,
+        "inlier_ratio": 0.7913043478260869,
+        "spatial_coverage": 0.19940558504356887,
+        "overlap": 0.9226953125,
+        "photometric_mae": 0.01769119337493298
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 4.163742168566409,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "forward",
+      "query_step": 259,
+      "stored_event": "event_0000054",
+      "stored_side": "right",
+      "stored_step": 76,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 94.16383694660304,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "forward",
+      "query_step": 259,
+      "stored_event": "event_0000055",
+      "stored_side": "left",
+      "stored_step": 241,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "right",
+      "query_step": 253,
+      "stored_event": "event_0000054",
+      "stored_side": "left",
+      "stored_step": 64,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 175.83615520069984,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "right",
+      "query_step": 253,
+      "stored_event": "event_0000054",
+      "stored_side": "forward",
+      "stored_step": 82,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 85.83614993539936,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3544"
+      ],
+      "query_event": "event_0000055",
+      "query_side": "right",
+      "query_step": 253,
+      "stored_event": "event_0000054",
+      "stored_side": "right",
+      "stored_step": 76,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8017518812534856,
+        "matches": 112,
+        "inliers": 91,
+        "inlier_ratio": 0.8125,
+        "spatial_coverage": 0.3495591688058984,
+        "overlap": 0.912578125,
+        "photometric_mae": 0.013228453841863894
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 4.1635541473312765,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000056",
+      "query_side": "forward",
+      "query_step": 336,
+      "stored_event": "event_0000056",
+      "stored_side": "left",
+      "stored_step": 318,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "left",
+      "query_step": 451,
+      "stored_event": "event_0000056",
+      "stored_side": "left",
+      "stored_step": 318,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 7.269930676393198,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "left",
+      "query_step": 451,
+      "stored_event": "event_0000056",
+      "stored_side": "forward",
+      "stored_step": 336,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 97.26996665923357,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "left",
+      "query_step": 451,
+      "stored_event": "event_0000056",
+      "stored_side": "right",
+      "stored_step": 330,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 172.7300346061314,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "forward",
+      "query_step": 469,
+      "stored_event": "event_0000056",
+      "stored_side": "left",
+      "stored_step": 318,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 82.73003744965132,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "forward",
+      "query_step": 469,
+      "stored_event": "event_0000056",
+      "stored_side": "forward",
+      "stored_step": 336,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 7.270038408027522,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "forward",
+      "query_step": 469,
+      "stored_event": "event_0000056",
+      "stored_side": "right",
+      "stored_step": 330,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 97.26998486057889,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "forward",
+      "query_step": 469,
+      "stored_event": "event_0000057",
+      "stored_side": "left",
+      "stored_step": 451,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "right",
+      "query_step": 463,
+      "stored_event": "event_0000056",
+      "stored_side": "left",
+      "stored_step": 318,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 172.73004316107864,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "right",
+      "query_step": 463,
+      "stored_event": "event_0000056",
+      "stored_side": "forward",
+      "stored_step": 336,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 82.73003744965132,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2396"
+      ],
+      "query_event": "event_0000057",
+      "query_side": "right",
+      "query_step": 463,
+      "stored_event": "event_0000056",
+      "stored_side": "right",
+      "stored_step": 330,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.6999998092651367,
+      "offline_only_angle_deg": 7.269930676393198,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000058",
+      "query_side": "forward",
+      "query_step": 168,
+      "stored_event": "event_0000058",
+      "stored_side": "left",
+      "stored_step": 150,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "left",
+      "query_step": 252,
+      "stored_event": "event_0000058",
+      "stored_side": "left",
+      "stored_step": 150,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 55.971222938441606,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "left",
+      "query_step": 252,
+      "stored_event": "event_0000058",
+      "stored_side": "forward",
+      "stored_step": 168,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 34.028779900164444,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "left",
+      "query_step": 252,
+      "stored_event": "event_0000058",
+      "stored_side": "right",
+      "stored_step": 162,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 124.0287733300788,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "forward",
+      "query_step": 270,
+      "stored_event": "event_0000058",
+      "stored_side": "left",
+      "stored_step": 150,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 145.9712029821309,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "forward",
+      "query_step": 270,
+      "stored_event": "event_0000058",
+      "stored_side": "forward",
+      "stored_step": 168,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 55.971193827334595,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "forward",
+      "query_step": 270,
+      "stored_event": "event_0000058",
+      "stored_side": "right",
+      "stored_step": 162,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 34.02875655801033,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "forward",
+      "query_step": 270,
+      "stored_event": "event_0000059",
+      "stored_side": "left",
+      "stored_step": 252,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "right",
+      "query_step": 264,
+      "stored_event": "event_0000058",
+      "stored_side": "left",
+      "stored_step": 150,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 124.02877719739644,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "right",
+      "query_step": 264,
+      "stored_event": "event_0000058",
+      "stored_side": "forward",
+      "stored_step": 168,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 145.97122441059486,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2326"
+      ],
+      "query_event": "event_0000059",
+      "query_side": "right",
+      "query_step": 264,
+      "stored_event": "event_0000058",
+      "stored_side": "right",
+      "stored_step": 162,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 1.9006574153900146,
+      "offline_only_angle_deg": 55.971222938441606,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3531"
+      ],
+      "query_event": "event_0000060",
+      "query_side": "forward",
+      "query_step": 380,
+      "stored_event": "event_0000060",
+      "stored_side": "left",
+      "stored_step": 362,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1762"
+      ],
+      "query_event": "event_0000061",
+      "query_side": "forward",
+      "query_step": 274,
+      "stored_event": "event_0000061",
+      "stored_side": "left",
+      "stored_step": 256,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Denmark.glb",
+        "3630"
+      ],
+      "query_event": "event_0000062",
+      "query_side": "forward",
+      "query_step": 90,
+      "stored_event": "event_0000062",
+      "stored_side": "left",
+      "stored_step": 72,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2221"
+      ],
+      "query_event": "event_0000063",
+      "query_side": "forward",
+      "query_step": 65,
+      "stored_event": "event_0000063",
+      "stored_side": "left",
+      "stored_step": 47,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000064",
+      "query_side": "forward",
+      "query_step": 142,
+      "stored_event": "event_0000064",
+      "stored_side": "left",
+      "stored_step": 124,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "left",
+      "query_step": 469,
+      "stored_event": "event_0000064",
+      "stored_side": "left",
+      "stored_step": 124,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 25.471660255905217,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "left",
+      "query_step": 469,
+      "stored_event": "event_0000064",
+      "stored_side": "forward",
+      "stored_step": 142,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 64.52827373155546,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "left",
+      "query_step": 469,
+      "stored_event": "event_0000064",
+      "stored_side": "right",
+      "stored_step": 136,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 154.52829454609022,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "forward",
+      "query_step": 487,
+      "stored_event": "event_0000064",
+      "stored_side": "left",
+      "stored_step": 124,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 115.4716990660536,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "forward",
+      "query_step": 487,
+      "stored_event": "event_0000064",
+      "stored_side": "forward",
+      "stored_step": 142,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 25.471691237953376,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "forward",
+      "query_step": 487,
+      "stored_event": "event_0000064",
+      "stored_side": "right",
+      "stored_step": 136,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 64.52828652640765,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "forward",
+      "query_step": 487,
+      "stored_event": "event_0000065",
+      "stored_side": "left",
+      "stored_step": 469,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "right",
+      "query_step": 481,
+      "stored_event": "event_0000064",
+      "stored_side": "left",
+      "stored_step": 124,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 154.52828404238136,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "right",
+      "query_step": 481,
+      "stored_event": "event_0000064",
+      "stored_side": "forward",
+      "stored_step": 142,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 115.47171522078658,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3563"
+      ],
+      "query_event": "event_0000065",
+      "query_side": "right",
+      "query_step": 481,
+      "stored_event": "event_0000064",
+      "stored_side": "right",
+      "stored_step": 136,
+      "match": {
+        "valid": false,
+        "reason": "invalid_homography",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.5873671174049377,
+      "offline_only_angle_deg": 25.471691237953376,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1629"
+      ],
+      "query_event": "event_0000066",
+      "query_side": "forward",
+      "query_step": 313,
+      "stored_event": "event_0000066",
+      "stored_side": "left",
+      "stored_step": 295,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Cantwell.glb",
+        "1735"
+      ],
+      "query_event": "event_0000067",
+      "query_side": "forward",
+      "query_step": 75,
+      "stored_event": "event_0000067",
+      "stored_side": "left",
+      "stored_step": 57,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Pablo.glb",
+        "642"
+      ],
+      "query_event": "event_0000068",
+      "query_side": "forward",
+      "query_step": 43,
+      "stored_event": "event_0000068",
+      "stored_side": "left",
+      "stored_step": 25,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Denmark.glb",
+        "3727"
+      ],
+      "query_event": "event_0000069",
+      "query_side": "forward",
+      "query_step": 50,
+      "stored_event": "event_0000069",
+      "stored_side": "left",
+      "stored_step": 32,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3589"
+      ],
+      "query_event": "event_0000070",
+      "query_side": "forward",
+      "query_step": 217,
+      "stored_event": "event_0000070",
+      "stored_side": "left",
+      "stored_step": 199,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1321"
+      ],
+      "query_event": "event_0000071",
+      "query_side": "forward",
+      "query_step": 72,
+      "stored_event": "event_0000071",
+      "stored_side": "left",
+      "stored_step": 54,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2286"
+      ],
+      "query_event": "event_0000072",
+      "query_side": "forward",
+      "query_step": 133,
+      "stored_event": "event_0000072",
+      "stored_side": "left",
+      "stored_step": 115,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000073",
+      "query_side": "forward",
+      "query_step": 122,
+      "stored_event": "event_0000073",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "left",
+      "query_step": 254,
+      "stored_event": "event_0000073",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.4841309845641875,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "left",
+      "query_step": 254,
+      "stored_event": "event_0000073",
+      "stored_side": "forward",
+      "stored_step": 122,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.51542924173502,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "left",
+      "query_step": 254,
+      "stored_event": "event_0000073",
+      "stored_side": "right",
+      "stored_step": 116,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.51544014040067,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "forward",
+      "query_step": 272,
+      "stored_event": "event_0000073",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.4845480837531,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "forward",
+      "query_step": 272,
+      "stored_event": "event_0000073",
+      "stored_side": "forward",
+      "stored_step": 122,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8936712711140955,
+        "matches": 137,
+        "inliers": 123,
+        "inlier_ratio": 0.8978102189781022,
+        "spatial_coverage": 0.2508907271022028,
+        "overlap": 0.9653515625,
+        "photometric_mae": 0.004610047620885512
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.4838158671336528,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "forward",
+      "query_step": 272,
+      "stored_event": "event_0000073",
+      "stored_side": "right",
+      "stored_step": 116,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.51542924173502,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "forward",
+      "query_step": 272,
+      "stored_event": "event_0000074",
+      "stored_side": "left",
+      "stored_step": 254,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "right",
+      "query_step": 266,
+      "stored_event": "event_0000073",
+      "stored_side": "left",
+      "stored_step": 104,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.51542647681077,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "right",
+      "query_step": 266,
+      "stored_event": "event_0000073",
+      "stored_side": "forward",
+      "stored_step": 122,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.48455754030283,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Scioto.glb",
+        "2324"
+      ],
+      "query_event": "event_0000074",
+      "query_side": "right",
+      "query_step": 266,
+      "stored_event": "event_0000073",
+      "stored_side": "right",
+      "stored_step": 116,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9332985995866808,
+        "matches": 135,
+        "inliers": 128,
+        "inlier_ratio": 0.9481481481481482,
+        "spatial_coverage": 0.2600972695018268,
+        "overlap": 0.9511328125,
+        "photometric_mae": 0.01566163324842266
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.4844460620327196,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Mosquito.glb",
+        "3364"
+      ],
+      "query_event": "event_0000075",
+      "query_side": "forward",
+      "query_step": 112,
+      "stored_event": "event_0000075",
+      "stored_side": "left",
+      "stored_step": 94,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1010"
+      ],
+      "query_event": "event_0000077",
+      "query_side": "forward",
+      "query_step": 279,
+      "stored_event": "event_0000077",
+      "stored_side": "left",
+      "stored_step": 261,
+      "match": {
+        "valid": false,
+        "reason": "invalid_homography",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2978"
+      ],
+      "query_event": "event_0000078",
+      "query_side": "forward",
+      "query_step": 65,
+      "stored_event": "event_0000078",
+      "stored_side": "left",
+      "stored_step": 47,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000079",
+      "query_side": "forward",
+      "query_step": 189,
+      "stored_event": "event_0000079",
+      "stored_side": "left",
+      "stored_step": 171,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "left",
+      "query_step": 308,
+      "stored_event": "event_0000079",
+      "stored_side": "left",
+      "stored_step": 171,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9238132520362785,
+        "matches": 82,
+        "inliers": 77,
+        "inlier_ratio": 0.9390243902439024,
+        "spatial_coverage": 0.22036094700348827,
+        "overlap": 0.99375,
+        "photometric_mae": 0.01619887445487228
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 1.4380101001108787,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "left",
+      "query_step": 308,
+      "stored_event": "event_0000079",
+      "stored_side": "forward",
+      "stored_step": 189,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 91.43889369394206,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "left",
+      "query_step": 308,
+      "stored_event": "event_0000079",
+      "stored_side": "right",
+      "stored_step": 183,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 178.56109564716343,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "forward",
+      "query_step": 326,
+      "stored_event": "event_0000079",
+      "stored_side": "left",
+      "stored_step": 171,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 88.56111543793871,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "forward",
+      "query_step": 326,
+      "stored_event": "event_0000079",
+      "stored_side": "forward",
+      "stored_step": 189,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.930700293890213,
+        "matches": 124,
+        "inliers": 117,
+        "inlier_ratio": 0.9435483870967742,
+        "spatial_coverage": 0.19849661677845262,
+        "overlap": 0.98265625,
+        "photometric_mae": 0.01361678254370596
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 1.439098279602977,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "forward",
+      "query_step": 326,
+      "stored_event": "event_0000079",
+      "stored_side": "right",
+      "stored_step": 183,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 91.43888415363519,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "forward",
+      "query_step": 326,
+      "stored_event": "event_0000080",
+      "stored_side": "left",
+      "stored_step": 308,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "right",
+      "query_step": 320,
+      "stored_event": "event_0000079",
+      "stored_side": "left",
+      "stored_step": 171,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 178.5611247844861,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "right",
+      "query_step": 320,
+      "stored_event": "event_0000079",
+      "stored_side": "forward",
+      "stored_step": 189,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 88.56111543793871,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2923"
+      ],
+      "query_event": "event_0000080",
+      "query_side": "right",
+      "query_step": 320,
+      "stored_event": "event_0000079",
+      "stored_side": "right",
+      "stored_step": 183,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8858523936455647,
+        "matches": 124,
+        "inliers": 112,
+        "inlier_ratio": 0.9032258064516129,
+        "spatial_coverage": 0.1911386915931206,
+        "overlap": 0.9528125,
+        "photometric_mae": 0.019234849892410578
+      },
+      "offline_only_position_distance_m": 0.07471942901611328,
+      "offline_only_angle_deg": 1.4385542927442894,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000081",
+      "query_side": "forward",
+      "query_step": 48,
+      "stored_event": "event_0000081",
+      "stored_side": "left",
+      "stored_step": 30,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "left",
+      "query_step": 132,
+      "stored_event": "event_0000081",
+      "stored_side": "left",
+      "stored_step": 30,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.6610192559243687,
+        "matches": 65,
+        "inliers": 44,
+        "inlier_ratio": 0.676923076923077,
+        "spatial_coverage": 0.2433590814706605,
+        "overlap": 1.0,
+        "photometric_mae": 0.023494281020818974
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 0.5637105136053174,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "left",
+      "query_step": 132,
+      "stored_event": "event_0000081",
+      "stored_side": "forward",
+      "stored_step": 48,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 90.56894730197067,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "left",
+      "query_step": 132,
+      "stored_event": "event_0000081",
+      "stored_side": "right",
+      "stored_step": 42,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 179.43102348088715,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "forward",
+      "query_step": 150,
+      "stored_event": "event_0000081",
+      "stored_side": "left",
+      "stored_step": 30,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 89.43101349830803,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "forward",
+      "query_step": 150,
+      "stored_event": "event_0000081",
+      "stored_side": "forward",
+      "stored_step": 48,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 0.5664806121485338,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "forward",
+      "query_step": 150,
+      "stored_event": "event_0000081",
+      "stored_side": "right",
+      "stored_step": 42,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 90.56896652545409,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "forward",
+      "query_step": 150,
+      "stored_event": "event_0000082",
+      "stored_side": "left",
+      "stored_step": 132,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "right",
+      "query_step": 144,
+      "stored_event": "event_0000081",
+      "stored_side": "left",
+      "stored_step": 30,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 179.4310420506929,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "right",
+      "query_step": 144,
+      "stored_event": "event_0000081",
+      "stored_side": "forward",
+      "stored_step": 48,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 89.43103291364145,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1464"
+      ],
+      "query_event": "event_0000082",
+      "query_side": "right",
+      "query_step": 144,
+      "stored_event": "event_0000081",
+      "stored_side": "right",
+      "stored_step": 42,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.6443029480282537,
+        "matches": 104,
+        "inliers": 69,
+        "inlier_ratio": 0.6634615384615384,
+        "spatial_coverage": 0.15725147078870522,
+        "overlap": 0.7529296875,
+        "photometric_mae": 0.028876716015385648
+      },
+      "offline_only_position_distance_m": 0.1964341700077057,
+      "offline_only_angle_deg": 0.5650972602385571,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1461"
+      ],
+      "query_event": "event_0000083",
+      "query_side": "forward",
+      "query_step": 115,
+      "stored_event": "event_0000083",
+      "stored_side": "left",
+      "stored_step": 97,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3160"
+      ],
+      "query_event": "event_0000084",
+      "query_side": "forward",
+      "query_step": 57,
+      "stored_event": "event_0000084",
+      "stored_side": "left",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1167"
+      ],
+      "query_event": "event_0000085",
+      "query_side": "forward",
+      "query_step": 66,
+      "stored_event": "event_0000085",
+      "stored_side": "left",
+      "stored_step": 48,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00002127984133,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3292"
+      ],
+      "query_event": "event_0000086",
+      "query_side": "forward",
+      "query_step": 88,
+      "stored_event": "event_0000086",
+      "stored_side": "left",
+      "stored_step": 70,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000087",
+      "query_side": "forward",
+      "query_step": 99,
+      "stored_event": "event_0000087",
+      "stored_side": "left",
+      "stored_step": 81,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "left",
+      "query_step": 337,
+      "stored_event": "event_0000087",
+      "stored_side": "left",
+      "stored_step": 81,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.7233712813433479,
+        "matches": 64,
+        "inliers": 48,
+        "inlier_ratio": 0.75,
+        "spatial_coverage": 0.17047944637873172,
+        "overlap": 0.7534375,
+        "photometric_mae": 0.03550495820886949
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 9.832271599626594,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "left",
+      "query_step": 337,
+      "stored_event": "event_0000087",
+      "stored_side": "forward",
+      "stored_step": 99,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 80.16757398791772,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "left",
+      "query_step": 337,
+      "stored_event": "event_0000087",
+      "stored_side": "right",
+      "stored_step": 93,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 170.16759946275957,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "forward",
+      "query_step": 355,
+      "stored_event": "event_0000087",
+      "stored_side": "left",
+      "stored_step": 81,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 99.83240284689307,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "forward",
+      "query_step": 355,
+      "stored_event": "event_0000087",
+      "stored_side": "forward",
+      "stored_step": 99,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.7744464367796472,
+        "matches": 59,
+        "inliers": 47,
+        "inlier_ratio": 0.7966101694915254,
+        "spatial_coverage": 0.18262380818783072,
+        "overlap": 0.945859375,
+        "photometric_mae": 0.027822558085123697
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 9.832431000609777,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "forward",
+      "query_step": 355,
+      "stored_event": "event_0000087",
+      "stored_side": "right",
+      "stored_step": 93,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 80.16760581015173,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "forward",
+      "query_step": 355,
+      "stored_event": "event_0000088",
+      "stored_side": "left",
+      "stored_step": 337,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "right",
+      "query_step": 349,
+      "stored_event": "event_0000087",
+      "stored_side": "left",
+      "stored_step": 81,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 170.1675857519405,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "right",
+      "query_step": 349,
+      "stored_event": "event_0000087",
+      "stored_side": "forward",
+      "stored_step": 99,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 99.83240284689307,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3205"
+      ],
+      "query_event": "event_0000088",
+      "query_side": "right",
+      "query_step": 349,
+      "stored_event": "event_0000087",
+      "stored_side": "right",
+      "stored_step": 93,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.203920379281044,
+      "offline_only_angle_deg": 9.832271599626594,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "920"
+      ],
+      "query_event": "event_0000089",
+      "query_side": "forward",
+      "query_step": 48,
+      "stored_event": "event_0000089",
+      "stored_side": "left",
+      "stored_step": 30,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3248"
+      ],
+      "query_event": "event_0000090",
+      "query_side": "forward",
+      "query_step": 83,
+      "stored_event": "event_0000090",
+      "stored_side": "left",
+      "stored_step": 65,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1417"
+      ],
+      "query_event": "event_0000091",
+      "query_side": "forward",
+      "query_step": 47,
+      "stored_event": "event_0000091",
+      "stored_side": "left",
+      "stored_step": 29,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2934"
+      ],
+      "query_event": "event_0000092",
+      "query_side": "forward",
+      "query_step": 70,
+      "stored_event": "event_0000092",
+      "stored_side": "left",
+      "stored_step": 52,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1004"
+      ],
+      "query_event": "event_0000093",
+      "query_side": "forward",
+      "query_step": 52,
+      "stored_event": "event_0000093",
+      "stored_side": "left",
+      "stored_step": 34,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3036"
+      ],
+      "query_event": "event_0000094",
+      "query_side": "forward",
+      "query_step": 90,
+      "stored_event": "event_0000094",
+      "stored_side": "left",
+      "stored_step": 72,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3284"
+      ],
+      "query_event": "event_0000095",
+      "query_side": "forward",
+      "query_step": 147,
+      "stored_event": "event_0000095",
+      "stored_side": "left",
+      "stored_step": 129,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1102"
+      ],
+      "query_event": "event_0000096",
+      "query_side": "forward",
+      "query_step": 78,
+      "stored_event": "event_0000096",
+      "stored_side": "left",
+      "stored_step": 60,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00002127984133,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1128"
+      ],
+      "query_event": "event_0000097",
+      "query_side": "forward",
+      "query_step": 451,
+      "stored_event": "event_0000097",
+      "stored_side": "left",
+      "stored_step": 433,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000098",
+      "query_side": "forward",
+      "query_step": 184,
+      "stored_event": "event_0000098",
+      "stored_side": "left",
+      "stored_step": 166,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "left",
+      "query_step": 446,
+      "stored_event": "event_0000098",
+      "stored_side": "left",
+      "stored_step": 166,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9745073574869072,
+        "matches": 192,
+        "inliers": 189,
+        "inlier_ratio": 0.984375,
+        "spatial_coverage": 0.24829145299618177,
+        "overlap": 0.993203125,
+        "photometric_mae": 0.010024271759332395
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 0.0,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "left",
+      "query_step": 446,
+      "stored_event": "event_0000098",
+      "stored_side": "forward",
+      "stored_step": 184,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 90.03073387952361,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "left",
+      "query_step": 446,
+      "stored_event": "event_0000098",
+      "stored_side": "right",
+      "stored_step": 178,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 179.96927780874523,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "forward",
+      "query_step": 464,
+      "stored_event": "event_0000098",
+      "stored_side": "left",
+      "stored_step": 166,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 89.96927146061688,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "forward",
+      "query_step": 464,
+      "stored_event": "event_0000098",
+      "stored_side": "forward",
+      "stored_step": 184,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9394047503704791,
+        "matches": 143,
+        "inliers": 136,
+        "inlier_ratio": 0.951048951048951,
+        "spatial_coverage": 0.3006482528134737,
+        "overlap": 0.991640625,
+        "photometric_mae": 0.012243534536922679
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 0.03956468205889273,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "forward",
+      "query_step": 464,
+      "stored_event": "event_0000098",
+      "stored_side": "right",
+      "stored_step": 178,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 90.03073387952361,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "forward",
+      "query_step": 464,
+      "stored_event": "event_0000099",
+      "stored_side": "left",
+      "stored_step": 446,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "right",
+      "query_step": 458,
+      "stored_event": "event_0000098",
+      "stored_side": "left",
+      "stored_step": 166,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 179.96927439365055,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "right",
+      "query_step": 458,
+      "stored_event": "event_0000098",
+      "stored_side": "forward",
+      "stored_step": 184,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 89.9692811225539,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3250"
+      ],
+      "query_event": "event_0000099",
+      "query_side": "right",
+      "query_step": 458,
+      "stored_event": "event_0000098",
+      "stored_side": "right",
+      "stored_step": 178,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9700889490048751,
+        "matches": 177,
+        "inliers": 173,
+        "inlier_ratio": 0.9774011299435028,
+        "spatial_coverage": 0.3615311672557894,
+        "overlap": 0.9978515625,
+        "photometric_mae": 0.007481248705994849
+      },
+      "offline_only_position_distance_m": 0.012148675508797169,
+      "offline_only_angle_deg": 0.0,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3084"
+      ],
+      "query_event": "event_0000100",
+      "query_side": "forward",
+      "query_step": 241,
+      "stored_event": "event_0000100",
+      "stored_side": "left",
+      "stored_step": 223,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000101",
+      "query_side": "forward",
+      "query_step": 53,
+      "stored_event": "event_0000101",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2824"
+      ],
+      "query_event": "event_0000102",
+      "query_side": "forward",
+      "query_step": 121,
+      "stored_event": "event_0000102",
+      "stored_side": "left",
+      "stored_step": 103,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "left",
+      "query_step": 400,
+      "stored_event": "event_0000101",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 52.94721191830744,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "left",
+      "query_step": 400,
+      "stored_event": "event_0000101",
+      "stored_side": "forward",
+      "stored_step": 53,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 37.05276184316866,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "left",
+      "query_step": 400,
+      "stored_event": "event_0000101",
+      "stored_side": "right",
+      "stored_step": 47,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 127.05278936818614,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "forward",
+      "query_step": 418,
+      "stored_event": "event_0000101",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 142.9472295417617,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "forward",
+      "query_step": 418,
+      "stored_event": "event_0000101",
+      "stored_side": "forward",
+      "stored_step": 53,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 52.94721191830744,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "forward",
+      "query_step": 418,
+      "stored_event": "event_0000101",
+      "stored_side": "right",
+      "stored_step": 47,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 37.052783339234956,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "forward",
+      "query_step": 418,
+      "stored_event": "event_0000103",
+      "stored_side": "left",
+      "stored_step": 400,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "right",
+      "query_step": 412,
+      "stored_event": "event_0000101",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 127.05274740150891,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "right",
+      "query_step": 412,
+      "stored_event": "event_0000101",
+      "stored_side": "forward",
+      "stored_step": 53,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 142.9472295417617,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3216"
+      ],
+      "query_event": "event_0000103",
+      "query_side": "right",
+      "query_step": 412,
+      "stored_event": "event_0000101",
+      "stored_side": "right",
+      "stored_step": 47,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 4.765115261077881,
+      "offline_only_angle_deg": 52.947242561687695,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1451"
+      ],
+      "query_event": "event_0000104",
+      "query_side": "forward",
+      "query_step": 76,
+      "stored_event": "event_0000104",
+      "stored_side": "left",
+      "stored_step": 58,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3101"
+      ],
+      "query_event": "event_0000105",
+      "query_side": "forward",
+      "query_step": 84,
+      "stored_event": "event_0000105",
+      "stored_side": "left",
+      "stored_step": 66,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2904"
+      ],
+      "query_event": "event_0000106",
+      "query_side": "forward",
+      "query_step": 61,
+      "stored_event": "event_0000106",
+      "stored_side": "left",
+      "stored_step": 43,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000107",
+      "query_side": "forward",
+      "query_step": 109,
+      "stored_event": "event_0000107",
+      "stored_side": "left",
+      "stored_step": 91,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "left",
+      "query_step": 265,
+      "stored_event": "event_0000107",
+      "stored_side": "left",
+      "stored_step": 91,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8534902211731555,
+        "matches": 75,
+        "inliers": 65,
+        "inlier_ratio": 0.8666666666666667,
+        "spatial_coverage": 0.33206451462373765,
+        "overlap": 0.8181640625,
+        "photometric_mae": 0.015203590954051297
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 10.404495584404758,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "left",
+      "query_step": 265,
+      "stored_event": "event_0000107",
+      "stored_side": "forward",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 79.59550367432854,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "left",
+      "query_step": 265,
+      "stored_event": "event_0000107",
+      "stored_side": "right",
+      "stored_step": 103,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 169.59550344055583,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "forward",
+      "query_step": 283,
+      "stored_event": "event_0000107",
+      "stored_side": "left",
+      "stored_step": 91,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 100.40448673593703,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "forward",
+      "query_step": 283,
+      "stored_event": "event_0000107",
+      "stored_side": "forward",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "localized_feature_cluster",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 10.404344925660105,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "forward",
+      "query_step": 283,
+      "stored_event": "event_0000107",
+      "stored_side": "right",
+      "stored_step": 103,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 79.59549300348377,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "forward",
+      "query_step": 283,
+      "stored_event": "event_0000108",
+      "stored_side": "left",
+      "stored_step": 265,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "right",
+      "query_step": 277,
+      "stored_event": "event_0000107",
+      "stored_side": "left",
+      "stored_step": 91,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 169.59549658211563,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "right",
+      "query_step": 277,
+      "stored_event": "event_0000107",
+      "stored_side": "forward",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 100.40448673593703,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2961"
+      ],
+      "query_event": "event_0000108",
+      "query_side": "right",
+      "query_step": 277,
+      "stored_event": "event_0000107",
+      "stored_side": "right",
+      "stored_step": 103,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.4032432654714273,
+        "matches": 16,
+        "inliers": 14,
+        "inlier_ratio": 0.875,
+        "spatial_coverage": 0.20521258037537338,
+        "overlap": 0.802109375,
+        "photometric_mae": 0.012465472314871993
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 10.404495584404758,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3170"
+      ],
+      "query_event": "event_0000109",
+      "query_side": "forward",
+      "query_step": 97,
+      "stored_event": "event_0000109",
+      "stored_side": "left",
+      "stored_step": 79,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "963"
+      ],
+      "query_event": "event_0000110",
+      "query_side": "forward",
+      "query_step": 79,
+      "stored_event": "event_0000110",
+      "stored_side": "left",
+      "stored_step": 61,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sisters.glb",
+        "1367"
+      ],
+      "query_event": "event_0000111",
+      "query_side": "forward",
+      "query_step": 55,
+      "stored_event": "event_0000111",
+      "stored_side": "left",
+      "stored_step": 37,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2962"
+      ],
+      "query_event": "event_0000112",
+      "query_side": "forward",
+      "query_step": 417,
+      "stored_event": "event_0000112",
+      "stored_side": "left",
+      "stored_step": 399,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1049"
+      ],
+      "query_event": "event_0000113",
+      "query_side": "forward",
+      "query_step": 65,
+      "stored_event": "event_0000113",
+      "stored_side": "left",
+      "stored_step": 47,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1023"
+      ],
+      "query_event": "event_0000114",
+      "query_side": "forward",
+      "query_step": 56,
+      "stored_event": "event_0000114",
+      "stored_side": "left",
+      "stored_step": 38,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2854"
+      ],
+      "query_event": "event_0000115",
+      "query_side": "forward",
+      "query_step": 59,
+      "stored_event": "event_0000115",
+      "stored_side": "left",
+      "stored_step": 41,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Elmira.glb",
+        "2958"
+      ],
+      "query_event": "event_0000116",
+      "query_side": "forward",
+      "query_step": 91,
+      "stored_event": "event_0000116",
+      "stored_side": "left",
+      "stored_step": 73,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "992"
+      ],
+      "query_event": "event_0000117",
+      "query_side": "forward",
+      "query_step": 57,
+      "stored_event": "event_0000117",
+      "stored_side": "left",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1185"
+      ],
+      "query_event": "event_0000118",
+      "query_side": "forward",
+      "query_step": 49,
+      "stored_event": "event_0000118",
+      "stored_side": "left",
+      "stored_step": 31,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1083"
+      ],
+      "query_event": "event_0000119",
+      "query_side": "forward",
+      "query_step": 55,
+      "stored_event": "event_0000119",
+      "stored_side": "left",
+      "stored_step": 37,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3159"
+      ],
+      "query_event": "event_0000120",
+      "query_side": "forward",
+      "query_step": 359,
+      "stored_event": "event_0000120",
+      "stored_side": "left",
+      "stored_step": 341,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3040"
+      ],
+      "query_event": "event_0000121",
+      "query_side": "forward",
+      "query_step": 143,
+      "stored_event": "event_0000121",
+      "stored_side": "left",
+      "stored_step": 125,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3241"
+      ],
+      "query_event": "event_0000122",
+      "query_side": "forward",
+      "query_step": 57,
+      "stored_event": "event_0000122",
+      "stored_side": "left",
+      "stored_step": 39,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3234"
+      ],
+      "query_event": "event_0000123",
+      "query_side": "forward",
+      "query_step": 297,
+      "stored_event": "event_0000123",
+      "stored_side": "left",
+      "stored_step": 279,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00002127984133,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Ribera.glb",
+        "1127"
+      ],
+      "query_event": "event_0000124",
+      "query_side": "forward",
+      "query_step": 498,
+      "stored_event": "event_0000124",
+      "stored_side": "left",
+      "stored_step": 480,
+      "match": {
+        "valid": false,
+        "reason": "insufficient_texture",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3256"
+      ],
+      "query_event": "event_0000125",
+      "query_side": "forward",
+      "query_step": 77,
+      "stored_event": "event_0000125",
+      "stored_side": "left",
+      "stored_step": 59,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "410"
+      ],
+      "query_event": "event_0000126",
+      "query_side": "forward",
+      "query_step": 47,
+      "stored_event": "event_0000126",
+      "stored_side": "left",
+      "stored_step": 29,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.0000309391853,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3204"
+      ],
+      "query_event": "event_0000127",
+      "query_side": "forward",
+      "query_step": 95,
+      "stored_event": "event_0000127",
+      "stored_side": "left",
+      "stored_step": 77,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3111"
+      ],
+      "query_event": "event_0000128",
+      "query_side": "forward",
+      "query_step": 54,
+      "stored_event": "event_0000128",
+      "stored_side": "left",
+      "stored_step": 36,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3118"
+      ],
+      "query_event": "event_0000129",
+      "query_side": "forward",
+      "query_step": 115,
+      "stored_event": "event_0000129",
+      "stored_side": "left",
+      "stored_step": 97,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3031"
+      ],
+      "query_event": "event_0000130",
+      "query_side": "forward",
+      "query_step": 127,
+      "stored_event": "event_0000130",
+      "stored_side": "left",
+      "stored_step": 109,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3290"
+      ],
+      "query_event": "event_0000131",
+      "query_side": "forward",
+      "query_step": 58,
+      "stored_event": "event_0000131",
+      "stored_side": "left",
+      "stored_step": 40,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3232"
+      ],
+      "query_event": "event_0000132",
+      "query_side": "forward",
+      "query_step": 69,
+      "stored_event": "event_0000132",
+      "stored_side": "left",
+      "stored_step": 51,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3285"
+      ],
+      "query_event": "event_0000133",
+      "query_side": "forward",
+      "query_step": 144,
+      "stored_event": "event_0000133",
+      "stored_side": "left",
+      "stored_step": 126,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3242"
+      ],
+      "query_event": "event_0000134",
+      "query_side": "forward",
+      "query_step": 67,
+      "stored_event": "event_0000134",
+      "stored_side": "left",
+      "stored_step": 49,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3237"
+      ],
+      "query_event": "event_0000135",
+      "query_side": "forward",
+      "query_step": 93,
+      "stored_event": "event_0000135",
+      "stored_side": "left",
+      "stored_step": 75,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3221"
+      ],
+      "query_event": "event_0000136",
+      "query_side": "forward",
+      "query_step": 54,
+      "stored_event": "event_0000136",
+      "stored_side": "left",
+      "stored_step": 36,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99997298310934,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3240"
+      ],
+      "query_event": "event_0000137",
+      "query_side": "forward",
+      "query_step": 69,
+      "stored_event": "event_0000137",
+      "stored_side": "left",
+      "stored_step": 51,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3214"
+      ],
+      "query_event": "event_0000138",
+      "query_side": "forward",
+      "query_step": 60,
+      "stored_event": "event_0000138",
+      "stored_side": "left",
+      "stored_step": 42,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00002127984133,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3053"
+      ],
+      "query_event": "event_0000139",
+      "query_side": "forward",
+      "query_step": 52,
+      "stored_event": "event_0000139",
+      "stored_side": "left",
+      "stored_step": 34,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000140",
+      "query_side": "forward",
+      "query_step": 265,
+      "stored_event": "event_0000140",
+      "stored_side": "left",
+      "stored_step": 247,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "left",
+      "query_step": 350,
+      "stored_event": "event_0000140",
+      "stored_side": "left",
+      "stored_step": 247,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8950674647778536,
+        "matches": 113,
+        "inliers": 102,
+        "inlier_ratio": 0.9026548672566371,
+        "spatial_coverage": 0.1926300759407877,
+        "overlap": 0.949140625,
+        "photometric_mae": 0.008405651765711166
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.6817178569542253,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "left",
+      "query_step": 350,
+      "stored_event": "event_0000140",
+      "stored_side": "forward",
+      "stored_step": 265,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.68147012231358,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "left",
+      "query_step": 350,
+      "stored_event": "event_0000140",
+      "stored_side": "right",
+      "stored_step": 259,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.31849963692656,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "forward",
+      "query_step": 368,
+      "stored_event": "event_0000140",
+      "stored_side": "left",
+      "stored_step": 247,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.31850721357053,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "forward",
+      "query_step": 368,
+      "stored_event": "event_0000140",
+      "stored_side": "forward",
+      "stored_step": 265,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.921972605271611,
+        "matches": 126,
+        "inliers": 118,
+        "inlier_ratio": 0.9365079365079365,
+        "spatial_coverage": 0.15397151076205048,
+        "overlap": 0.91234375,
+        "photometric_mae": 0.015520777421839096
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.681425955975337,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "forward",
+      "query_step": 368,
+      "stored_event": "event_0000140",
+      "stored_side": "right",
+      "stored_step": 259,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 92.68149844539627,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "forward",
+      "query_step": 368,
+      "stored_event": "event_0000141",
+      "stored_side": "left",
+      "stored_step": 350,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "right",
+      "query_step": 362,
+      "stored_event": "event_0000140",
+      "stored_side": "left",
+      "stored_step": 247,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 177.31850646898621,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "right",
+      "query_step": 362,
+      "stored_event": "event_0000140",
+      "stored_side": "forward",
+      "stored_step": 265,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 87.31850721357053,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3191"
+      ],
+      "query_event": "event_0000141",
+      "query_side": "right",
+      "query_step": 362,
+      "stored_event": "event_0000140",
+      "stored_side": "right",
+      "stored_step": 259,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8464316262840444,
+        "matches": 120,
+        "inliers": 103,
+        "inlier_ratio": 0.8583333333333333,
+        "spatial_coverage": 0.3369312846377713,
+        "overlap": 0.95421875,
+        "photometric_mae": 0.013866066465190813
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 2.6811340232223455,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000142",
+      "query_side": "forward",
+      "query_step": 73,
+      "stored_event": "event_0000142",
+      "stored_side": "left",
+      "stored_step": 55,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "left",
+      "query_step": 159,
+      "stored_event": "event_0000142",
+      "stored_side": "left",
+      "stored_step": 55,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.8381068381376505,
+        "matches": 151,
+        "inliers": 128,
+        "inlier_ratio": 0.847682119205298,
+        "spatial_coverage": 0.215726362655696,
+        "overlap": 0.9728515625,
+        "photometric_mae": 0.011295839384490369
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 1.0385293511871498,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "left",
+      "query_step": 159,
+      "stored_event": "event_0000142",
+      "stored_side": "forward",
+      "stored_step": 73,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 88.96093475895759,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "left",
+      "query_step": 159,
+      "stored_event": "event_0000142",
+      "stored_side": "right",
+      "stored_step": 67,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 178.96094323416614,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "forward",
+      "query_step": 177,
+      "stored_event": "event_0000142",
+      "stored_side": "left",
+      "stored_step": 55,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 91.03907488171586,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "forward",
+      "query_step": 177,
+      "stored_event": "event_0000142",
+      "stored_side": "forward",
+      "stored_step": 73,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9737356012127858,
+        "matches": 109,
+        "inliers": 107,
+        "inlier_ratio": 0.981651376146789,
+        "spatial_coverage": 0.3221411300535499,
+        "overlap": 0.9721875,
+        "photometric_mae": 0.008063733343984567
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 1.037775422629072,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "forward",
+      "query_step": 177,
+      "stored_event": "event_0000142",
+      "stored_side": "right",
+      "stored_step": 67,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 88.96092501081968,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "forward",
+      "query_step": 177,
+      "stored_event": "event_0000143",
+      "stored_side": "left",
+      "stored_step": 159,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "right",
+      "query_step": 171,
+      "stored_event": "event_0000142",
+      "stored_side": "left",
+      "stored_step": 55,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 178.96092274275622,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "right",
+      "query_step": 171,
+      "stored_event": "event_0000142",
+      "stored_side": "forward",
+      "stored_step": 73,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 91.03905573584038,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3233"
+      ],
+      "query_event": "event_0000143",
+      "query_side": "right",
+      "query_step": 171,
+      "stored_event": "event_0000142",
+      "stored_side": "right",
+      "stored_step": 67,
+      "match": {
+        "valid": true,
+        "reason": "appearance_correspondence_only",
+        "score": 0.9721458949684318,
+        "matches": 144,
+        "inliers": 142,
+        "inlier_ratio": 0.9861111111111112,
+        "spatial_coverage": 0.2076089221808121,
+        "overlap": 0.963515625,
+        "photometric_mae": 0.014161909327787511
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 1.037775422629072,
+      "offline_only_label": "positive"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "561"
+      ],
+      "query_event": "event_0000144",
+      "query_side": "forward",
+      "query_step": 99,
+      "stored_event": "event_0000144",
+      "stored_side": "left",
+      "stored_step": 81,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99998264245737,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3272"
+      ],
+      "query_event": "event_0000145",
+      "query_side": "forward",
+      "query_step": 148,
+      "stored_event": "event_0000145",
+      "stored_side": "left",
+      "stored_step": 130,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "568"
+      ],
+      "query_event": "event_0000146",
+      "query_side": "forward",
+      "query_step": 496,
+      "stored_event": "event_0000146",
+      "stored_side": "left",
+      "stored_step": 478,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000147",
+      "query_side": "forward",
+      "query_step": 155,
+      "stored_event": "event_0000147",
+      "stored_side": "left",
+      "stored_step": 137,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "left",
+      "query_step": 239,
+      "stored_event": "event_0000147",
+      "stored_side": "left",
+      "stored_step": 137,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 61.330441349461296,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "left",
+      "query_step": 239,
+      "stored_event": "event_0000147",
+      "stored_side": "forward",
+      "stored_step": 155,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 28.669497962641273,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "left",
+      "query_step": 239,
+      "stored_event": "event_0000147",
+      "stored_side": "right",
+      "stored_step": 149,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 118.66953877942618,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "forward",
+      "query_step": 257,
+      "stored_event": "event_0000147",
+      "stored_side": "left",
+      "stored_step": 137,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 151.33045883941244,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "forward",
+      "query_step": 257,
+      "stored_event": "event_0000147",
+      "stored_side": "forward",
+      "stored_step": 155,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 61.33045474143943,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "forward",
+      "query_step": 257,
+      "stored_event": "event_0000147",
+      "stored_side": "right",
+      "stored_step": 149,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 28.669525549692832,
+      "offline_only_label": "unknown"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "forward",
+      "query_step": 257,
+      "stored_event": "event_0000148",
+      "stored_side": "left",
+      "stored_step": 239,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "right",
+      "query_step": 251,
+      "stored_event": "event_0000147",
+      "stored_side": "left",
+      "stored_step": 137,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 118.66953083884073,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "right",
+      "query_step": 251,
+      "stored_event": "event_0000147",
+      "stored_side": "forward",
+      "stored_step": 155,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 151.33045707699338,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3050"
+      ],
+      "query_event": "event_0000148",
+      "query_side": "right",
+      "query_step": 251,
+      "stored_event": "event_0000147",
+      "stored_side": "right",
+      "stored_step": 149,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.743303656578064,
+      "offline_only_angle_deg": 61.33042795748052,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3038"
+      ],
+      "query_event": "event_0000149",
+      "query_side": "forward",
+      "query_step": 60,
+      "stored_event": "event_0000149",
+      "stored_side": "left",
+      "stored_step": 42,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Swormville.glb",
+        "3100"
+      ],
+      "query_event": "event_0000150",
+      "query_side": "forward",
+      "query_step": 53,
+      "stored_event": "event_0000150",
+      "stored_side": "left",
+      "stored_step": 35,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 89.99999230180458,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "480"
+      ],
+      "query_event": "event_0000151",
+      "query_side": "forward",
+      "query_step": 71,
+      "stored_event": "event_0000151",
+      "stored_side": "left",
+      "stored_step": 53,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00000196115099,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "577"
+      ],
+      "query_event": "event_0000152",
+      "query_side": "forward",
+      "query_step": 92,
+      "stored_event": "event_0000152",
+      "stored_side": "left",
+      "stored_step": 74,
+      "match": {
+        "valid": false,
+        "reason": "weak_geometric_consensus",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    },
+    {
+      "episode": [
+        "data/scene_datasets/gibson/Sands.glb",
+        "545"
+      ],
+      "query_event": "event_0000153",
+      "query_side": "forward",
+      "query_step": 80,
+      "stored_event": "event_0000153",
+      "stored_side": "left",
+      "stored_step": 62,
+      "match": {
+        "valid": false,
+        "reason": "too_few_descriptor_matches",
+        "score": 0.0
+      },
+      "offline_only_position_distance_m": 0.0,
+      "offline_only_angle_deg": 90.00001162049657,
+      "offline_only_label": "negative"
+    }
+  ]
+}

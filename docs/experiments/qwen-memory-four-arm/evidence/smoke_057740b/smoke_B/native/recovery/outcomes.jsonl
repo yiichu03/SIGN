@@ -1,0 +1,4 @@
+{"id": "event_0000000", "episode": ["data/scene_datasets/gibson/Ribera.glb", "1004"], "step": 67, "rgb_change": 0.1859387904405594, "note": "Visual change only; not task success or measured displacement"}
+{"id": "event_0000001", "episode": ["data/scene_datasets/gibson/Scioto.glb", "2221"], "step": 79, "rgb_change": 0.175956130027771, "note": "Visual change only; not task success or measured displacement"}
+{"id": "event_0000003", "episode": ["data/scene_datasets/gibson/Swormville.glb", "3234"], "step": 369, "rgb_change": 0.18863995373249054, "note": "Visual change only; not task success or measured displacement"}
+{"id": "event_0000004", "episode": ["data/scene_datasets/gibson/Swormville.glb", "3118"], "step": 88, "phase": "closed_loop_return", "after_rgb_sha256": "a07dc16e82b0148e2e9074f288a03fd0a3c64f81f45a433086801178a32389ee", "note": "Handed back after four aligned forward commands, no task outcome label."}

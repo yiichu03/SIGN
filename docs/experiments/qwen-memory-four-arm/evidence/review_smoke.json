@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "job_id": "1532823.stdct-mgmt-02",
+  "walltime": "00:06:31",
+  "runtime_commit": "057740b7ac57ec9342459920fb5263cc18b03084",
+  "exact_native_off_disabled": true,
+  "all_real_action_sha_match": true,
+  "all_real_feedback_four_commands_and_pose_heading_match": true,
+  "arms": {
+    "native": {
+      "episodes": 12,
+      "attempts": 0,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 0,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "off": {
+      "episodes": 12,
+      "attempts": 0,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 0,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "disabled": {
+      "episodes": 12,
+      "attempts": 0,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 0,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "rule": {
+      "episodes": 12,
+      "attempts": 5,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 0,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "A": {
+      "episodes": 12,
+      "attempts": 5,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 0,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "B": {
+      "episodes": 12,
+      "attempts": 5,
+      "verified_same_heading_feedback": 4,
+      "memory_writes": 0,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "C": {
+      "episodes": 12,
+      "attempts": 5,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 329,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    },
+    "D": {
+      "episodes": 12,
+      "attempts": 5,
+      "verified_same_heading_feedback": 0,
+      "memory_writes": 322,
+      "memory_hits": 0,
+      "memory_changed": 0,
+      "technical_error_files": []
+    }
+  },
+  "limitation": "12 purposive engineering episodes; no formal SR evidence. Zero online verified memory hits in C/D. Final change only persists technical_errors/agent_variant in summary, checked by CPU regression."
+}

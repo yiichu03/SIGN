@@ -1,0 +1,123 @@
+{
+  "off": {
+    "mode": "off",
+    "variant": "A",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "rule": {
+    "mode": "rule",
+    "variant": "legacy",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "A": {
+    "mode": "qwen",
+    "variant": "A",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "B": {
+    "mode": "qwen",
+    "variant": "B",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "C": {
+    "mode": "qwen",
+    "variant": "C",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "D": {
+    "mode": "qwen",
+    "variant": "D",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "B_visual": {
+    "mode": "qwen",
+    "variant": "B",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "C_rule": {
+    "mode": "qwen",
+    "variant": "C",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "D_recent": {
+    "mode": "qwen",
+    "variant": "D",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "D_random": {
+    "mode": "qwen",
+    "variant": "D",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  },
+  "disabled": {
+    "mode": "qwen",
+    "variant": "D",
+    "num_envs": 6,
+    "seed": 100,
+    "max_episode_steps": 500,
+    "coverage_weight": 0.0,
+    "turn": 6,
+    "scan": 24,
+    "forward": 8
+  }
+}

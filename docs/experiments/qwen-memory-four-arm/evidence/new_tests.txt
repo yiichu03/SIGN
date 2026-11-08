@@ -1,0 +1,23 @@
+test_b_continue_total_budget_and_no_second_feedback (test_memory_four_arm.FourArmTests) ... ok
+test_b_same_heading_and_actual_four_commands_then_return (test_memory_four_arm.FourArmTests) ... ok
+test_b_visual_feedback_does_not_query_model_for_continuation (test_memory_four_arm.FourArmTests) ... ok
+test_blank_safe_keep_never_queries (test_memory_four_arm.FourArmTests) ... ok
+test_c_retrieval_real_pairs_and_shadow_are_separate_requests (test_memory_four_arm.FourArmTests) ... ok
+test_d_no_match_is_exact_a_and_memory_has_no_privileged_fields (test_memory_four_arm.FourArmTests) ... ok
+test_episode_clear_and_disabled_has_no_memory_or_worker (test_memory_four_arm.FourArmTests) ... ok
+test_feedback_images_are_after_turn_and_after_exact_four_forward_actions (test_memory_four_arm.FourArmTests) ... ok
+test_id_mismatch_is_fatal (test_memory_four_arm.FourArmTests) ... ok
+test_keep_hands_back_current_policy_without_stop_or_gru_reset (test_memory_four_arm.FourArmTests) ... ok
+test_matcher_texture_identity_and_blank_negative (test_memory_four_arm.FourArmTests) ... ok
+test_memory_fifo_capacity_and_private_rng (test_memory_four_arm.FourArmTests) ... ok
+test_multi_image_order_rows_and_context_isolation (test_memory_four_arm.FourArmTests) ... ok
+test_outcome_memory_updates_capacity_real_commands_and_clear (test_memory_four_arm.FourArmTests) ... ok
+test_stop_cancels_pending_feedback_without_call (test_memory_four_arm.FourArmTests) ... ok
+test_ties_invalid_mass_and_binary_formula (test_memory_four_arm.FourArmTests) ... ok
+test_valid_model_not_vetoed_by_rule (test_memory_four_arm.FourArmTests) ... ok
+test_worker_error_safe_keep_is_not_accepted_as_normal_model_output (test_memory_four_arm.FourArmTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.406s
+
+OK

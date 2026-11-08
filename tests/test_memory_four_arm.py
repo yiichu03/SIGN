@@ -80,6 +80,11 @@ class FourArmTests(unittest.TestCase):
         Client.feedback='continue';h=self.harness('B');s=self.decision(h)
         for _ in range(15):self.step(h)
         self.assertEqual(s.overrides,38);self.assertEqual(s.feedback_calls,1)
+    def test_b_visual_feedback_does_not_query_model_for_continuation(self):
+        h=self.harness('B',feedback_source='visual');s=self.decision(h)
+        for _ in range(10):self.step(h)
+        self.assertFalse(any(r['task']=='feedback' for r in Client.rows))
+        self.assertEqual(s.overrides,34);self.assertEqual(s.feedback_calls,0);self.assertEqual(s.feedback_returns,1)
     def test_stop_cancels_pending_feedback_without_call(self):
         h=self.harness('B');s=self.decision(h)
         for _ in range(9):self.step(h)
@@ -153,6 +158,10 @@ class FourArmTests(unittest.TestCase):
         h.client_factory=Broken;self.decision(h)
         self.assertEqual(h.technical_errors,1);self.assertEqual(h.states[0].selections['C'],1)
         self.assertEqual(h.states[0].vlm_selections,0)
+        h.close()
+        summary=json.loads((h.output/'summary.json').read_text())
+        self.assertEqual(summary['technical_errors'],1)
+        self.assertEqual(summary['agent_variant'],'A')
     def test_d_no_match_is_exact_a_and_memory_has_no_privileged_fields(self):
         h=self.harness('D');s=self.decision(h)
         self.assertEqual(s.memory_hits,0);self.assertEqual(len(Client.rows[0]['images']),4)

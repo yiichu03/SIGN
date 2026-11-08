@@ -1,0 +1,11 @@
+{
+  "events": 5,
+  "worker_started": true,
+  "worker_seconds": 3.8608348889974877,
+  "render_seconds": 0.7800555179128423,
+  "total_controller_seconds": 23.383883998030797,
+  "mode": "qwen",
+  "active_survey": true,
+  "max_override_steps": 76,
+  "candidate_affordance": true
+}

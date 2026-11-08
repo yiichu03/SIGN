@@ -1,0 +1,62 @@
+[
+  {
+    "id": "event_0000000",
+    "episode": [
+      "data/scene_datasets/gibson/Eastville.glb",
+      "4004"
+    ],
+    "view_files": {
+      "goal": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.goal.png",
+        "sha256": "8480432a36b981f0396954e381aaa0fa6a0edf40c5b2d61db62840957ad48969"
+      },
+      "left": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.left.png",
+        "sha256": "461ae7813c2e3c05483b80753c862a62b59c719597c0d3dd435bdf9faf2814c1"
+      },
+      "forward": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.forward.png",
+        "sha256": "ed456d29db202bcee3a4955375001624314940c69bbcc75fbbeb19fcfbd5838d"
+      },
+      "right": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000000.right.png",
+        "sha256": "d536db6d1d7a0172900eba637942be1b886b3f7146c3eb60bb6cfa19a8cb597e"
+      }
+    },
+    "view_steps": {
+      "left": 441,
+      "right": 453,
+      "forward": 459
+    }
+  },
+  {
+    "id": "event_0000001",
+    "episode": [
+      "data/scene_datasets/gibson/Mosquito.glb",
+      "3536"
+    ],
+    "view_files": {
+      "goal": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.goal.png",
+        "sha256": "46ed0679ff9ed2ac67298d96a6564f02b90ab921b1dd4e9a67a840d22bf8e004"
+      },
+      "left": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.left.png",
+        "sha256": "8b1a40fce31b367fd60cbf348677686290aeff4276a779c719bd6fd1c6a53474"
+      },
+      "forward": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.forward.png",
+        "sha256": "1e7fd98df5c9dc908ecb23ffaf4c615dfd194839c8adc9587667dabfcc8984f0"
+      },
+      "right": {
+        "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_qwen/native/recovery/inputs/event_0000001.right.png",
+        "sha256": "7195af876e52060dc4f7d5feb0da7a07a53de85d5905d7d1a4c54de0d8363298"
+      }
+    },
+    "view_steps": {
+      "left": 276,
+      "right": 288,
+      "forward": 294
+    }
+  }
+]

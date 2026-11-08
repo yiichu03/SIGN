@@ -1,3 +1,5 @@
+本分支新增[四组Qwen推理恢复实现、测试与待审PBS命令](docs/experiments/qwen-memory-four-arm/README.md)：固定Coverage256 125.952M，不重新训练。四组正式4200验证尚未提交，旧完整结果保留。
+
 ## [Project Website](https://nus-core.github.io/assets/standalone/SIGN/index.html)
 [![arXiv](https://img.shields.io/badge/arXiv-2310.07473-b31b1b.svg)](https://arxiv.org/pdf/2508.12394)
 [![Watch Demo](https://img.shields.io/badge/Watch-Demo-red?logo=youtube&logoColor=white)](https://nus-core.github.io/assets/standalone/SIGN/index.html)

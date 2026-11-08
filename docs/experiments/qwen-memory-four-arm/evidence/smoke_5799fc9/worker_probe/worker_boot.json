@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "kind": "ready",
+  "pid": 1006932,
+  "prompt_version": "a28079e260e87ee27e6b4a60b575aba9697195e80c66bc72bb2c80d1b4d8b2ac",
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "transformers": "5.17.0",
+    "gpu": "NVIDIA A40",
+    "model_dir": "/scratch/e1538633/liuyi/models/Qwen3.5-2B",
+    "model_load_seconds": 72.20404562307522,
+    "dtype": "torch.float32"
+  }
+}
