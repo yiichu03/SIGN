@@ -6,12 +6,19 @@
 
 - TensorBoard续训显示排查（2026-11-03T23:30:50+08:00）：16200→6200正常，配置14阶段；首次先读取原训练，API后续已出现coverage256/continue_latest，其余运行续训文件也在更新；coverage32/B仍Q且无续训事件。脚本已改下次启动优先续训，路径/命名不变、兼容现有服务复用，当前会话未重启。证据logs/training_continuation_20261103/full_history_load_diagnosis_20261103.json。
 
+<a id="local-checkpoints-20261109"></a>
+## 本地运行权重：公开模型已有，新增Coverage256 125.952M
+
+用户2026-11-09明确要求将checkpoint上传yiichu03供本地运行。GitHub远端ckpt已包含公开nav_model.pth（17,289,707bytes/SHA03fa71b5…）和safety_model.pth（16,399bytes/b84d291e…）。本轮新增原字节Coverage256125.952M/ckpt245为`SIGN-qwen-intervention-memory/ckpt/coverage256_125952000.pth`（7,396,455bytes/SHA988c9ecc…），不是公开完整权重；Gibson4200原策略SR87.571429/SPL53.299601%。不自动上传其他训练点，不使用Release/LFS或改写原权重。
+
+ckpt/README.md含本地3episode、1env、seed100/hash0/max500、可选原生disk预览命令及HM3D替换说明；manifest/SHA256SUMS/validation明确身份。CPU实读103keys/step/有限性/42encoder与公开精确一致、原生配置合并通过；无本轮GPU导航运行。需要本地SIGN/Habitat和场景，Qwen/PBS无需；原生disk没有专用terminal RGB，最终STOP成片需auto-reset前录制。当前发布分支phase2/qwen-intervention-memory，最终SHA见推送回执。记录logs/checkpoint_publication_20261109；WORKLOG：CHECKPOINT-PUBLICATION-FOR-LOCAL-INFERENCE。
+
 <a id="public-sign-demo-20261109"></a>
 ## 答辩视频：Public SIGN 成功 ImageNav，CPU导出
 
 2026-11-09已从原1503625录像导出24秒/1280×720/30fps/H.264，2.5倍仿真时间，最终STOP停留4秒；保留0–50步全部51观测，完整720帧解码通过。**公开完整权重、Habitat-GS，不是Gibson或Coverage policy**：interior_0651_841463/episode0，success1、SPL0.61433059，公开nav SHA03fa71b5…；原运行源95eef9b。目标图、4张带步数关键帧及原RGB裁图、metadata/原视频/来源SHA/CPU复现脚本位于SIGN-qwen-intervention-memory/docs/experiments/report-figures-20261109/demo_public_sign，普通push至yiichu03同名分支。源logs/public_sign_demo_20261109/artifacts；本批只CPU，不导航回放、不PBS、不重新导训练曲线，旧作业不动。
 
-初始最短路径4.642218m来自任务info，真实累计路径未保存，metadata设null而不由SPL倒推。STOP由原生Success定义和终态success1确认，原速度向量未保存。Gibson公开权重pilot仅稀疏RGB，若以后明确需要Gibson连续演示可回放Edgemere/200/C01（原35步成功），本轮未启动。WORKLOG：PUBLIC-SIGN-DEMO-CPU-EXPORT-20261109；固定发布SHA待push回执。
+初始最短路径4.642218m来自任务info，真实累计路径未保存，metadata设null而不由SPL倒推。STOP由原生Success定义和终态success1确认，原速度向量未保存。Gibson公开权重pilot仅稀疏RGB，若以后明确需要Gibson连续演示可回放Edgemere/200/C01（原35步成功），本轮未启动。追加素材盘点：MP3D未找到现成录像；HM3D现有俯视轨迹GIF和每25步稀疏RGB，未找到连续第一视角视频，不能直接拼成完整到达录像（盘点见logs/public_sign_demo_20261109/hm3d_mp3d_inventory.json）。WORKLOG：PUBLIC-SIGN-DEMO-CPU-EXPORT-20261109；已普通push并核对远端SHA `940a78feef440c5e934c07a89261d0c9d5ba21a6`（phase2/qwen-intervention-memory）；回执logs/public_sign_demo_20261109/push_receipt.json。
 
 <a id="report-figures-20261109"></a>
 ## 报告/PPT配图第一版：CPU导出，GitHub资料发布

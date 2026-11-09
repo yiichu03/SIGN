@@ -1040,3 +1040,13 @@ E2 commands[k]从pose[k]到pose[k+1]；决策观测418对应第419个实际动�
 源success_03_interior_0651_841463_ep0.mp4在SIGN-habitat-gs/results/habitat_gs_videos_20261028，SHA7af7612f…与原manifest一致。原768×544，RGB矩形(0,64,384,448)，goal(384,64,768,448)；71帧中0–50为真实观测，后20为旧停留。本次0–49每帧重复12次@30fps，50帧停留120输出帧，总720帧24秒；2.5倍是相对1秒仿真时间/动作。goal固定用第0帧裁图，保留H264压缩来源和128原输入说明；不能拿裁图文件SHA冒充原goal原始像素SHA。
 
 metadata含公开nav/safety权重SHA、原95eef9b提交/1503625、Habitat-GS/scene/episode/50动作/success1/SPL.61433、原指标和task.info最短路径4.642218m；actual path为null，最终速度向量未保存。validation完整解码720帧/codec/24秒/终帧4秒、全部来源SHA/帧映射核验。此片不是Gibson也不是完整1900评估的原录像；不把示例成功当总体成绩。用户明确要推送此小型MP4/关键帧，原其他大视频和权重不发布。
+
+
+<a id="local-checkpoints-20261109"></a>
+## 本地下载/运行选定checkpoint（2026-11-09授权）
+
+yiichu03/SIGN的phase2/qwen-intervention-memory下ckpt/README.md是下载和本地命令入口：公开nav_model.pth/safety_model.pth原本已被main及研究分支跟踪；新增coverage256_125952000.pth为原ckpt245/SHA988c9ecc…的字节级副本，7,396,455bytes，无优化器状态。用户本轮明确授权上传这些权重，覆盖常规“资料发布排除权重”的默认约定；只新增此选定模型，其他权重不自动发布。
+
+在本地仓库根目录按README配置环境与数据，再`cd ckpt && sha256sum -c SHA256SUMS`核验。正常python run_sim.py eval，配置gibson,policy,reward,sensors,eval，保留公开safety，选择导航权重路径；1env/test_episode_count3/disk只作本地预览，完整4200原参考需6env/seed100/hash0/max500。无需PBS或Qwen，不添加reward/recovery配置。原生disk未专门保存terminal RGB，不能假称其最后帧就是STOP；要PPT终帧采用独立episode录制器。
+
+本次CPU配置导入最初遇系统libstdc++缺GLIBCXX_3.4.30，使用现有envs/sign-baseline/lib/libstdc++.so.6的进程级LD_PRELOAD后通过，未升级依赖或修改shell全局。preflight.py/json/log与首次错误摘要在logs/checkpoint_publication_20261109；本地不同环境不直接照搬服务器绝对LD_PRELOAD路径。权重/源码下载可离线准备，但场景数据必须另有授权副本。

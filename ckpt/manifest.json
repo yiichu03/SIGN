@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "repository": "yiichu03/SIGN",
+  "branch": "phase2/qwen-intervention-memory",
+  "prepared_from_commit": "940a78feef440c5e934c07a89261d0c9d5ba21a6",
+  "files": {
+    "nav_model.pth": {
+      "label": "Public SIGN navigation checkpoint",
+      "bytes": 17289707,
+      "sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+      "already_in_origin_main": true
+    },
+    "safety_model.pth": {
+      "label": "Public SIGN safety checkpoint",
+      "bytes": 16399,
+      "sha256": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+      "already_in_origin_main": true
+    },
+    "coverage256_125952000.pth": {
+      "label": "Our Coverage256 navigation checkpoint",
+      "bytes": 7396455,
+      "sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+      "training_steps": 125952000,
+      "original_name": "ckpt.245.pth",
+      "source_path": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/ckpts/ckpt.245.pth",
+      "contains": [
+        "state_dict",
+        "extra_state"
+      ],
+      "state_dict_keys": 103,
+      "optimizer_state_included": false,
+      "navigation_only_gibson_val": {
+        "episodes": 4200,
+        "successes": 3678,
+        "success_rate": 0.8757142857142857,
+        "spl": 0.5329960106555678,
+        "seed": 100,
+        "pythonhashseed": 0,
+        "num_environments": 6,
+        "max_episode_steps": 500
+      },
+      "reference_result_sha256": "fbaa820e205a998a04bc7ff44e919e993868ea1c1c829f761f06502e4e4d6334",
+      "inference_recovery": false
+    }
+  },
+  "note": "Original checkpoint bytes. No training, precision conversion or serialization rewrite. Qwen is not needed for native navigation."
+}

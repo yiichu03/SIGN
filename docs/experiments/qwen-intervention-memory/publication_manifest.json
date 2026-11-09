@@ -48,23 +48,23 @@
   },
   "workspace/STATUS.md": {
     "source": "/scratch/e1538633/liuyi/STATUS.md",
-    "source_sha256": "77656bf749710b40b89b5b359359f8e99b71ffdd0dfdfbabb23ca86f5f159c98",
-    "sha256": "f7e1097741f00bf9102ce8b9b23b588cbb04c96659338b80f96cf53293032af0",
-    "bytes": 171053,
+    "source_sha256": "1e33cb5ce7c55e78214b22266b2f1fac8be21eba15ca2a1bf1e6cf719948d3bd",
+    "sha256": "6a4c9296d239f69981ee2a7ff88e4e4ca840fb558384f2673ceb931f740a7ebb",
+    "bytes": 172643,
     "encoding": "portable_links"
   },
   "workspace/RUNBOOK.md": {
     "source": "/scratch/e1538633/liuyi/RUNBOOK.md",
-    "source_sha256": "bf9e81ddc71489b0588ca0ed05ec731144aa1d308f9d8b80dc91dbe277db20f3",
-    "sha256": "e0ebd9cee2483e8395338d30d71a71cc26a820c947e5c6acba54e52e9ef350e0",
-    "bytes": 155660,
+    "source_sha256": "5bb32e0f0eba9d6c0710a7db5d87dcc2df24752e5730580dc9473f58449ef6b1",
+    "sha256": "321e5e53400e7f69b43370bc12cb7f161b72e6655be890bb5720c9825439a7c2",
+    "bytes": 157136,
     "encoding": "portable_links"
   },
   "workspace/WORKLOG.md": {
     "source": "/scratch/e1538633/liuyi/WORKLOG.md",
-    "source_sha256": "659274b77ef3dfd2903d0d6fd5db4323f1a6866c92a06ba75e1d3ad9ed96398b",
-    "sha256": "659274b77ef3dfd2903d0d6fd5db4323f1a6866c92a06ba75e1d3ad9ed96398b",
-    "bytes": 525344,
+    "source_sha256": "2c8f95834556e0d1c983b29f9cdebea9481936087988018a2f8c5e146f8b1d16",
+    "sha256": "2c8f95834556e0d1c983b29f9cdebea9481936087988018a2f8c5e146f8b1d16",
+    "bytes": 529626,
     "encoding": "verbatim"
   },
   "../qwen-six-ablation/evidence/formal_review/pbs_status.json": {

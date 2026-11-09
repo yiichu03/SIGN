@@ -2785,3 +2785,25 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 - 发现边界：Gibson公开pilot Edgemere200/C01原35步成功但仅初末RGB；没有足够连续帧。向用户明确本次选Public SIGN on Habitat-GS，若要求Gibson需回放该episode，本批没启动。Gibson完整4200目录无可用连续视频，未用Coverage素材冒充。最短路径4.642218112945557m来自原任务info；实际累计路径未存，metadata null，不倒推SPL。val.json.gz为内容索引，实际任务由content/interior_0651_841463.json.gz取得并保存来源SHA。
 - 已执行单线程/nice10 envs/sign-baseline/bin/python logs/public_sign_demo_20261109/export_demo.py --source-dir logs/public_sign_demo_20261109/inputs --out logs/public_sign_demo_20261109/artifacts。MP4为1280×720/30fps/H264 High/yuv420p/24秒、1,148,407字节；0–49每帧0.4秒＝2.5倍仿真时间，最终50帧停留4秒。720帧全部解码、51观测全部保留、最后120帧来源核验；最大帧平均压缩误差1.39731/255。人工查看4帧总览通过，goal固定右上角。政策输入原128，裁图来自原384放大且H264有损，未声称原始无损或超分辨率。
 - 产物：goal、4关键帧/对应RGB、总览、metadata、逐步帧映射、原小视频/manifest/任务条目/录制器证据及CPU复现脚本，约3.2MiB。发布目标docs/experiments/report-figures-20261109/demo_public_sign；根STATUS/RUNBOOK增加索引，现有生成根文档副本刷新，WORKLOG保留原字节前缀。原训练配图/失败/恢复案例字节不变。无ZIP。最终GitHub SHA与发布检查另记回执。
+
+
+## 2026-11-09T09:38:39+08:00 [PUBLIC-SIGN-DEMO-PUSH-940A78F-VERIFIED]
+
+- 已普通push至yiichu03/SIGN的phase2/qwen-intervention-memory，ls-remote核对远端与本地SHA均940a78feef440c5e934c07a89261d0c9d5ba21a6。27个变更路径全部docs；跟踪文件干净，只保留原data软链未跟踪。固定目录docs/experiments/report-figures-20261109/demo_public_sign，24秒视频约1.15MB，整目录约3.2MiB。
+- 校验105份报告资料文件SHA、现有研究包资料SHA及58处本地链接通过；原84份报告资产除索引外字节不变，根WORKLOG发布副本严格保持旧前缀并与源相同。20份demo文件逐SHA及视频720帧/4秒终帧检查通过；CPU脚本AST/27路径白名单/含CRLF的diff --check通过。未修改src/trainer/策略/PBS或运行工作树。
+- 回执logs/public_sign_demo_20261109/push_receipt.json，详细发布检查publication_checks.json。此成功回执为push之后本地追加，GitHub根文档副本到上一导出条目，下次同步追加，不为自身SHA递归提交。
+
+
+## 2026-11-09T09:42:47+08:00 [EXISTING-HM3D-MP3D-VIDEO-INVENTORY]
+
+- 用户问是否有MP3D/HM3D渲染视频。本轮只读媒体路径/旧manifest/config/采集器，无GPU/PBS或导出。现有实验目录未找到MP3D或HM3D连续RGB视频；HM3D有早期trajectory.gif（俯视轨迹动画，不是第一视角渲染视频）、goal及稀疏RGB。260当前轨迹库存中graded60无RGB子目录帧，additional120与group8的200条每例2–21张，采集源码每25步保存动作前RGB并补最后观测，video_option为空。旧action-fix归档排除，不把全部264个含归档GIF当正式库存。
+- 实例additional120/val_easy/episode_006对应真实HM3D scene00870-AYpsNQsWncn/episode3，27动作、success1、SPL.71825938，RGB仅step0/25/26，无法从这些帧还原连续到达/STOP视频。目录episode_006是导出序号而非任务ID。现有GIF可CPU转轨迹动画视频；连续第一视角仍需单episode补采，不将轨迹动画称完整RGB。证据logs/public_sign_demo_20261109/hm3d_mp3d_inventory.json。
+
+
+## 2026-11-09T11:05:34+08:00 [CHECKPOINT-PUBLICATION-FOR-LOCAL-INFERENCE]
+
+- 用户问checkpoint是否已在GitHub并明确授权push供本地运行。已通过GitHub连接器GET远端ckpt核实公开nav/safety原已在yiichu03/SIGN，blob d67125c9/2b453ac3，大小17,289,707/16,399bytes；本地HEAD与origin/main同blob，公开nav SHA03fa71b5…、safety b84d291e…。此前默认排除的是自训练checkpoint，不能把公开文件也称未上传。
+- 按当前任务选择新增Coverage256125.952M/原ckpt245，不批量传全部训练点；用户已授权权重发布，无需因旧文档默认排除权重再确认。源logs/gibson_coverage_latest_eval_20261103/checkpoints/coverage256.pth复制为SIGN-qwen-intervention-memory/ckpt/coverage256_125952000.pth，7,396,455bytes/SHA988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c，字节不改，含state_dict/extra_state，无优化器。完整4200原生SR87.571429/SPL53.299601%，不是Public SIGN或加入恢复的成绩。因仅7.4MB普通Git上传，不采用Release/LFS；公开17MB原文件未重复改写。
+- CPU实读103键/训练step125952000/全部有限/42encoder张量与公开逐值相同；三文件sha256sum通过。本地3episode/1env/seed100/max500/disk配置合并通过，inference_recovery缺省关闭，无Qwen配置。未运行新导航、采样、训练或PBS，也没有更改运行目录或等待器。ckpt/README/manifest/SHA256SUMS/validation说明本地命令、数据/环境前提与原生video不保留专用terminal帧的限制。
+- 首次CPU import run_sim失败：/lib64/libstdc++.so.6缺GLIBCXX_3.4.30，llvmlite Could not find/load shared object file。仅给重试进程设LD_PRELOAD=/scratch/e1538633/liuyi/envs/sign-baseline/lib/libstdc++.so.6后通过，未升级或修改全局环境。原始关键错误preflight_first_error.txt、重试preflight.log和机器验证preflight.json均在logs/checkpoint_publication_20261109。将此调试边界保留，不称本地GPU已跑通。
+- 根STATUS/RUNBOOK增加权重索引，WORKLOG仅追加，生成现有发布副本；运行源/模型原件/旧结果不动。普通push及远端二进制下载SHA复核将在成功后写回执。

@@ -1,5 +1,7 @@
 本分支为 `phase2/qwen-intervention-memory`，最新资料更新于2026-11-09。
 
+- [本地可下载的 checkpoint 与运行命令](ckpt/README.md)：公开 SIGN / safety 已在仓库，新增 Coverage256 125.952M（SR87.57%），附 SHA256 与 CPU 校验。
+
 - [报告/PPT配图第一版：训练曲线、两例500步失败与E2恢复](docs/experiments/report-figures-20261109/README.md)，含PNG/PDF与原始CSV。
 - [P1–P4短时视觉历史介入实验](docs/experiments/qwen-intervention-memory/README.md)：实现、配置和138项CPU测试已完成；PBS连接失败，GPU短测和正式验证等待提交。
 - [E1–E6完整4200验证结果](docs/experiments/qwen-six-ablation/README.md)：六组均完成；含SR/SPL、Qwen选择、配对救回/误伤及动作前缀证据。

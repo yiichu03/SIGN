@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "verification": "CPU config/serialized state only, no environment simulation",
+  "state_dict_keys": 103,
+  "coverage_steps": 125952000,
+  "all_parameters_finite": true,
+  "frozen_encoder_keys_equal_public": 42,
+  "native_recovery_config": null,
+  "qwen_config": null,
+  "num_environments": 1,
+  "episodes": 3,
+  "seed": 100,
+  "max_steps": 500,
+  "video_option": [
+    "disk"
+  ],
+  "files": {
+    "nav_model.pth": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+    "safety_model.pth": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+    "coverage256_125952000.pth": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c"
+  }
+}
