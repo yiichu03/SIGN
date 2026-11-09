@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "complete_decode_exit_code": 0,
+  "complete_decode_stderr": "",
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "nb_read_frames": "1065"
+      }
+    ],
+    "format": {
+      "duration": "35.500000",
+      "size": "3401736"
+    }
+  },
+  "source_rgb_frames": 326,
+  "terminal_rgb_equals_archive": true,
+  "terminal_captured_before_reset": true
+}

@@ -1,0 +1,11 @@
+2026-11-09 12:51:00,749 Overwriting CNN input size of depth: (128, 128)
+2026-11-09 12:51:00,749 Overwriting CNN input size of imagegoal_sensor_v2: (128, 128)
+2026-11-09 12:51:00,749 Overwriting CNN input size of rgb: (128, 128)
+2026-11-09 12:51:00,750 Type of observation encoder: <class 'src.models.EarlyFuseCNNEncoder'>
+2026-11-09 12:51:00,750 Create goal encoder : None
+2026-11-09 12:51:00,750 Create visual inputs encoder
+2026-11-09 12:51:00,750 observation_space kyes: odict_keys(['depth', 'imagegoal_sensor_v2', 'rgb'])
+2026-11-09 12:51:00,750 visual_obs_inputs: ['rgb', 'imagegoal_sensor_v2']
+2026-11-09 12:51:00,750 rgb observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-11-09 12:51:00,750 imagegoal_sensor_v2 observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-11-09 12:51:00,757 early fuse encoder(type: fast_resnet9, in: (6, 128, 128), out: (32, 4, 4))

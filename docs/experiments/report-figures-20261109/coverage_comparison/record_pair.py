@@ -39,7 +39,7 @@ def write_json(path, data):
     Path(path).write_text(json.dumps(data, indent=2, allow_nan=False) + '\n')
 
 
-def record(task, method, out):
+def record(task, method, out, frame_callback=None):
     ckpt = 'ckpt/' + ('nav_model.pth' if method == 'public' else 'coverage256_125952000.pth')
     out.mkdir(parents=True, exist_ok=False)
     random.seed(100); np.random.seed(100); torch.manual_seed(100); torch.cuda.manual_seed_all(100)
@@ -132,6 +132,8 @@ def record(task, method, out):
             rows.append(row)
 
         snapshot(0)
+        if frame_callback is not None:
+            frame_callback(0, obs['rgb'].copy(), dict(rows[-1]))
         for step in range(1, 501):
             batch = apply_obs_transforms_batch(batch_obs([obs], device=trainer.device), trainer.obs_transforms)
             batch['cost'] = cost
@@ -146,6 +148,8 @@ def record(task, method, out):
             meter.update_metric(episode)
             valid_union |= meter._grid == 1
             snapshot(step, raw, action)
+            if frame_callback is not None:
+                frame_callback(step, obs['rgb'].copy(), dict(rows[-1]))
             prev.copy_(actions); mask.fill_(not done); cost.fill_(float(info['collisions.is_collision']))
             if step in [100, 200, 300, 400, 500] or done:
                 Image.fromarray(obs['rgb']).save(out / f'rgb_{step:03d}.png')
