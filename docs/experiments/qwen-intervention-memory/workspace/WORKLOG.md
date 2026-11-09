@@ -2770,3 +2770,18 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 - 训练原始TB两文件解析，original61,609点到126.175232M、continuation22,777点到172.599296M；主图原段到125.952M，CSV保留原尾部，原/续分开250日志点平滑。指标仍原50update窗口的完成训练episode滚动统计，非固定训练集再评估；reward为原导航reward、不含覆盖bonus。共84,386行，源SHA保留。
 - 首次Matplotlib因旧3.3不支持layout='constrained'失败；改constrained_layout=True与Figure.text，未升级环境。训练图footnote被画布边界裁掉，改savefig bbox_inches='tight'后重导并目视核验。地图空白边缘过多，按保存栅格占据范围裁显示，保持世界坐标/等比例/面积原值。两失败/E2/训练总图均目视检查。47PNG全部解码、脚本AST、CSV步数、原off配对与模型动作/概率检查通过。第一次误读大reference JSON导致输出截断，后续只读所需字段；无原证据修改。
 - 输出含PNG/PDF/SVG、CSV、metadata、SHA/source manifest与复现脚本，约23MB；未纳入checkpoint/场景/TB二进制/完整视频，无ZIP。仓库首页与根STATUS/RUNBOOK更新，下一步普通push并核对远端SHA。
+
+
+## 2026-11-09T08:59:10+08:00 [REPORT-FIGURES-PUSH-D01459C-VERIFIED]
+
+- 已普通push yiichu03/SIGN的phase2/qwen-intervention-memory，远端ls-remote核对d01459cce7125ac1e9e36602fe012b741d82fff3与本地一致；已跟踪文件干净，仅原data软链未跟踪。入口docs/experiments/report-figures-20261109/README.md，84原导出文件＋发布manifest，47PNG及配套PDF/SVG/CSV/原事件/脚本，约22.77MB。训练至172.599296M，两失败each6RGB/501状态，E2真实恢复；42链接与84文件SHA通过。
+- Matplotlib实际版本3.3.2。生成SVG的path行末空白触发git diff --check；SVG经XML解析并与原导出字节/manifestSHA一致，保持生成器原样，仅将这个精确路径作为格式例外，其余已暂存文档/脚本严格检查（CSV CRLF按cr-at-eol）。没有修改数据值或全局Git配置。推送回执logs/report_figures_20261109/push_receipt.json；本成功后记录为本地追加，下一次资料同步再发布。
+
+
+## 2026-11-09T09:37:01+08:00 [PUBLIC-SIGN-DEMO-CPU-EXPORT-20261109]
+
+- 用户要求公开SIGN checkpoint成功ImageNav的20–30秒720p H264/goal/3–4关键帧/metadata，优先已有素材，CPU处理并push指定report-figures/demo_public_sign。本批只读取/裁取/转码，不模型推理、导航回放、PBS或训练操作，也不重导已有SR/SPL曲线。新素材与原全部结果隔离，SIGN-qwen-intervention-memory仅资料前进，运行树不变。
+- 已核验Habitat-GS原1503625/95eef9bf完整公开nav SHA03fa71b5…与safety b84d291e…的success_03：scene interior_0651_841463/episode0/50steps，success1/SPL0.6143305897712708/final distance0.37106365m。原video SHA7af7612f…与manifest一致，71帧全解码，0–50真实观测＋20旧停留。原Success要求is_stop_called和距离<1m，custom_action低线/角速度触发STOP；终态成功确认STOP，不编造原未保存的速度向量。
+- 发现边界：Gibson公开pilot Edgemere200/C01原35步成功但仅初末RGB；没有足够连续帧。向用户明确本次选Public SIGN on Habitat-GS，若要求Gibson需回放该episode，本批没启动。Gibson完整4200目录无可用连续视频，未用Coverage素材冒充。最短路径4.642218112945557m来自原任务info；实际累计路径未存，metadata null，不倒推SPL。val.json.gz为内容索引，实际任务由content/interior_0651_841463.json.gz取得并保存来源SHA。
+- 已执行单线程/nice10 envs/sign-baseline/bin/python logs/public_sign_demo_20261109/export_demo.py --source-dir logs/public_sign_demo_20261109/inputs --out logs/public_sign_demo_20261109/artifacts。MP4为1280×720/30fps/H264 High/yuv420p/24秒、1,148,407字节；0–49每帧0.4秒＝2.5倍仿真时间，最终50帧停留4秒。720帧全部解码、51观测全部保留、最后120帧来源核验；最大帧平均压缩误差1.39731/255。人工查看4帧总览通过，goal固定右上角。政策输入原128，裁图来自原384放大且H264有损，未声称原始无损或超分辨率。
+- 产物：goal、4关键帧/对应RGB、总览、metadata、逐步帧映射、原小视频/manifest/任务条目/录制器证据及CPU复现脚本，约3.2MiB。发布目标docs/experiments/report-figures-20261109/demo_public_sign；根STATUS/RUNBOOK增加索引，现有生成根文档副本刷新，WORKLOG保留原字节前缀。原训练配图/失败/恢复案例字节不变。无ZIP。最终GitHub SHA与发布检查另记回执。

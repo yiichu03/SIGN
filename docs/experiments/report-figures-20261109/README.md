@@ -4,6 +4,12 @@
 
 优先用 **PNG** 插入 PPT、用 **PDF** 放进报告。训练图另有 SVG；每个案例也拆出了单独的目标图、带 step 标注的 RGB、轨迹图和 CSV，便于重新排版。这里没有对原始 RGB 进行生成式修改。
 
+## Public SIGN 成功演示视频（新增）
+
+[24 秒、720p H.264 MP4](demo_public_sign/public_sign_success_720p.mp4) · [目标图与 4 张关键帧](demo_public_sign/README.md) · [metadata](demo_public_sign/metadata.json)
+
+公开完整 SIGN 权重，**Habitat-GS / interior_0651_841463 / episode 0**，50 步成功，SPL 0.6143；2.5× 仿真时间、末步 STOP 停留 4 秒。来源是已有 2026-10-28 录像，本次仅 CPU 整理；不是 Gibson，也不是 Coverage256 策略。原输入 128×128 放大展示，实际路径长度未保存。详情和来源 SHA 见目录说明。
+
 ## 1. Coverage256 的训练 SR、SPL、reward
 
 ![Coverage256 训练曲线](training/coverage256_training_curves.png)

@@ -48,23 +48,23 @@
   },
   "workspace/STATUS.md": {
     "source": "/scratch/e1538633/liuyi/STATUS.md",
-    "source_sha256": "bacf35525c1799bf3c2eeda940ad0944ea478615abd7107f6ad7c0ddd5215e3e",
-    "sha256": "feb6cc3a827afdd659688c5355b56aafc3365f27bb4375fccd5c8a7e0689ee54",
-    "bytes": 169693,
+    "source_sha256": "77656bf749710b40b89b5b359359f8e99b71ffdd0dfdfbabb23ca86f5f159c98",
+    "sha256": "f7e1097741f00bf9102ce8b9b23b588cbb04c96659338b80f96cf53293032af0",
+    "bytes": 171053,
     "encoding": "portable_links"
   },
   "workspace/RUNBOOK.md": {
     "source": "/scratch/e1538633/liuyi/RUNBOOK.md",
-    "source_sha256": "89f17c5c7182ad129e9cb158ec896598611de7ce076b6fde4566341d4ee844a3",
-    "sha256": "00e04ff54e1b4cdb58b28521e7d8d2b0a301e3b301cbd6ccd5053256c9590816",
-    "bytes": 154080,
+    "source_sha256": "bf9e81ddc71489b0588ca0ed05ec731144aa1d308f9d8b80dc91dbe277db20f3",
+    "sha256": "e0ebd9cee2483e8395338d30d71a71cc26a820c947e5c6acba54e52e9ef350e0",
+    "bytes": 155660,
     "encoding": "portable_links"
   },
   "workspace/WORKLOG.md": {
     "source": "/scratch/e1538633/liuyi/WORKLOG.md",
-    "source_sha256": "0cc7980713dfb3590ee30e268bc2297ee039591194a103a20eee83367ca34aa6",
-    "sha256": "0cc7980713dfb3590ee30e268bc2297ee039591194a103a20eee83367ca34aa6",
-    "bytes": 521889,
+    "source_sha256": "659274b77ef3dfd2903d0d6fd5db4323f1a6866c92a06ba75e1d3ad9ed96398b",
+    "sha256": "659274b77ef3dfd2903d0d6fd5db4323f1a6866c92a06ba75e1d3ad9ed96398b",
+    "bytes": 525344,
     "encoding": "verbatim"
   },
   "../qwen-six-ablation/evidence/formal_review/pbs_status.json": {

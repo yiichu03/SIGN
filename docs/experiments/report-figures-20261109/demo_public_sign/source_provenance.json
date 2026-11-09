@@ -1,0 +1,31 @@
+{
+  "original_recording.mp4": {
+    "server_path": "/scratch/e1538633/liuyi/SIGN-habitat-gs/results/habitat_gs_videos_20261028/success_03_interior_0651_841463_ep0.mp4",
+    "sha256": "7af7612fe26b3758264c2af08aa113af5a3bade20b0c1f3f4d831ab5e2a37e0b",
+    "bytes": 314231
+  },
+  "source_manifest.json": {
+    "server_path": "/scratch/e1538633/liuyi/SIGN-habitat-gs/results/habitat_gs_videos_20261028/manifest.json",
+    "sha256": "1fc5cdf6934209eee4c440fbd55e344e45fb432763fe65409ac5c5d8aeb76bfd",
+    "bytes": 6056
+  },
+  "original_record.py": {
+    "server_path": "/scratch/e1538633/liuyi/logs/habitat_gs_videos_20261028/record.py",
+    "sha256": "7773dff61457dc4a1f5ab48ec2756d069a00e82534daa3b4a44c7e6ce3fd7d4b",
+    "bytes": 12609
+  },
+  "source_episode.json": {
+    "server_container": "/scratch/e1538633/liuyi/SIGN-habitat-gs/data/scene_datasets/gs_scenes/episodes/imagenav/val/content/interior_0651_841463.json.gz",
+    "container_sha256": "6530146bfcb284266433d34b1835dc94a95f653322f839f8a455c2c6ff56daaa",
+    "selection": "episode_id == 0",
+    "sha256": "0abbdcd177be520b1c69ff90048e7efaa3a31f2fc494bb72af7a3d89565a7778"
+  },
+  "original_config.yaml": {
+    "server_path": "/scratch/e1538633/liuyi/logs/habitat_gs_videos_20261028/config.yaml",
+    "sha256": "96fa398e900ab85da55ff4c5b09a8062888c55e8a2bd9a60835716ac9a39a01a"
+  },
+  "original_validation.json": {
+    "server_path": "/scratch/e1538633/liuyi/logs/habitat_gs_videos_20261028/validation.json",
+    "sha256": "6914ddde07e0d02f9d5e82dd41987a511f6c95d6951d990674d7d2f6a2927231"
+  }
+}

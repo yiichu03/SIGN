@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "all_output_frames_decoded": 720,
+  "source_sha_matches_original_manifest": true,
+  "source_frames_decoded": 71,
+  "step_mapping_covers_all_51_observations": true,
+  "final_hold_frames_checked": 120,
+  "max_frame_mean_absolute_codec_error": 1.3973093894675925,
+  "exported_rgb_matches_source_crop": true,
+  "goal_fixed_from_source_frame": 0,
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 31,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 368640,
+        "duration": "24.000000",
+        "bit_rate": "379636",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "720",
+        "extradata_size": 46,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]",
+          "encoder": "Lavc60.3.100 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/scratch/e1538633/liuyi/logs/public_sign_demo_20261109/artifacts/public_sign_success_720p.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "24.000000",
+      "size": "1148407",
+      "bit_rate": "382802",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf60.3.100"
+      }
+    }
+  },
+  "files": {
+    "README.md": {
+      "bytes": 4429,
+      "sha256": "195b2598e333ec6d81d7d8e00580a99c37da46e7d45f00ee3d94c13b04c63652"
+    },
+    "export_demo.py": {
+      "bytes": 11584,
+      "sha256": "dc9898f87333aec8347947128c515438ee34cf7260d445297551683fc4ca83d0"
+    },
+    "frame_mapping.csv": {
+      "bytes": 1533,
+      "sha256": "6ee87db76087efd2c94b48ec928a8ac598c5b859f296a21c20da984a56f33007"
+    },
+    "goal.png": {
+      "bytes": 85171,
+      "sha256": "39e2259fa8fba955f387d5436f1be6abef6c8e61ea349a6032f6596f234f3174"
+    },
+    "keyframe_step_000.png": {
+      "bytes": 281729,
+      "sha256": "b9a9b28e382108d9f26ccf48796f3de1ac9fdc76bfa6cd047f12215f8fb22398"
+    },
+    "keyframe_step_016.png": {
+      "bytes": 233024,
+      "sha256": "369041d4922b5550ea4391b149d8510504542f2dfd893500617bc70e79033eb2"
+    },
+    "keyframe_step_033.png": {
+      "bytes": 221058,
+      "sha256": "cf374860cd4e92c0c26df45475d9e7cea218ed68c352540110cc299d27f57a5b"
+    },
+    "keyframe_step_050.png": {
+      "bytes": 274789,
+      "sha256": "1c73b8e899c5d3d68559d8decdbad80fd23d6ea338b25ea741839de0017e8a85"
+    },
+    "keyframes_overview.png": {
+      "bytes": 442594,
+      "sha256": "0a2990ec1f32b99706e4022737548aeef23ab74183e93fe80fec40d5dced9819"
+    },
+    "metadata.json": {
+      "bytes": 3826,
+      "sha256": "45b91ada26d3efb9b40e9071432c19fc95a3abd0bc208a705a70cfe93d703a41"
+    },
+    "original_record.py": {
+      "bytes": 12609,
+      "sha256": "7773dff61457dc4a1f5ab48ec2756d069a00e82534daa3b4a44c7e6ce3fd7d4b"
+    },
+    "original_recording.mp4": {
+      "bytes": 314231,
+      "sha256": "7af7612fe26b3758264c2af08aa113af5a3bade20b0c1f3f4d831ab5e2a37e0b"
+    },
+    "public_sign_success_720p.mp4": {
+      "bytes": 1148407,
+      "sha256": "d3b96de40219a5ba1a68ff8a879c0d22bdf69335ada1c5cc977e9ca48741e340"
+    },
+    "rgb_step_000.png": {
+      "bytes": 89370,
+      "sha256": "1014e663a7869f2e7cfb71e403801be8e9ec79c3251b73df22d8ee4ea7a7a8f1"
+    },
+    "rgb_step_016.png": {
+      "bytes": 67903,
+      "sha256": "f61e77a3e586f154b29967fd8a9b0ed20a227affe329d3b7d3d916cdb71da87e"
+    },
+    "rgb_step_033.png": {
+      "bytes": 61124,
+      "sha256": "8f785afacb445d8f5bab1d089397c8f05fe88c50bb81d41b7088302bd9f3a618"
+    },
+    "rgb_step_050.png": {
+      "bytes": 83955,
+      "sha256": "4d119f231fd3c2663e21f04791f5adc583c679c08e2f908efbadca9ae1c822b6"
+    },
+    "source_episode.json": {
+      "bytes": 521,
+      "sha256": "0abbdcd177be520b1c69ff90048e7efaa3a31f2fc494bb72af7a3d89565a7778"
+    },
+    "source_manifest.json": {
+      "bytes": 6056,
+      "sha256": "1fc5cdf6934209eee4c440fbd55e344e45fb432763fe65409ac5c5d8aeb76bfd"
+    },
+    "source_provenance.json": {
+      "bytes": 1554,
+      "sha256": "a54661f82e1b44fb604e299edb1302837d83897eb7fbdceee1c4b68a34fe8a54"
+    }
+  }
+}

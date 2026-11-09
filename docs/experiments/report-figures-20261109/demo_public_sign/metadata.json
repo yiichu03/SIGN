@@ -1,0 +1,112 @@
+{
+  "exported_at": "2026-11-09T09:35:03+08:00",
+  "policy": "Public SIGN full released checkpoint; no Coverage reward training or recovery harness",
+  "dataset": "Habitat-GS",
+  "split": "val",
+  "scene": "interior_0651_841463",
+  "scene_id": "gs_scenes/val/interior_0651_841463/interior_0651_841463.gs.ply",
+  "episode_id": "0",
+  "checkpoint": "ckpt/nav_model.pth",
+  "checkpoint_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+  "safety_checkpoint": "ckpt/safety_model.pth",
+  "safety_checkpoint_sha256": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+  "recording_source_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+  "original_job_id": "1503625.stdct-mgmt-02",
+  "recording_created_at": "2026-10-28T20:04:46+08:00",
+  "success": 1.0,
+  "steps": 50,
+  "spl": 0.6143305897712708,
+  "final_metrics": {
+    "distance_to_goal": 0.3710636496543884,
+    "success": 1.0,
+    "spl": 0.6143305897712708,
+    "soft_spl": 0.5652256608009338,
+    "distance_to_view": 0.5042731351903021,
+    "view_match": 1.0,
+    "view_angle": 7.632341312316841,
+    "collisions": {
+      "count": 1,
+      "is_collision": false
+    }
+  },
+  "path_length_m": null,
+  "path_length_note": "Actual travelled length was not saved by the original recorder; not reconstructed from SPL.",
+  "shortest_path_length_m": 4.642218112945557,
+  "shortest_path_source": "Dataset episode.info.geodesic_distance (not actual travelled path).",
+  "stop": {
+    "step": 50,
+    "confirmed_by": "Success=1 with native Success requiring is_stop_called and distance < 1.0 m; task ended at step 50.",
+    "raw_final_action": null,
+    "note": "Action vectors were not stored in the original video manifest."
+  },
+  "seed": 100,
+  "pythonhashseed": 0,
+  "deterministic_policy": true,
+  "max_episode_steps": 500,
+  "original_recording": {
+    "file": "original_recording.mp4",
+    "sha256": "7af7612fe26b3758264c2af08aa113af5a3bade20b0c1f3f4d831ab5e2a37e0b",
+    "fps": 10,
+    "frames": 71,
+    "observation_frames": 51,
+    "trailing_hold_frames": 20
+  },
+  "output_video": {
+    "file": "public_sign_success_720p.mp4",
+    "sha256": "d3b96de40219a5ba1a68ff8a879c0d22bdf69335ada1c5cc977e9ca48741e340",
+    "width": 1280,
+    "height": 720,
+    "codec": "H.264",
+    "pixel_format": "yuv420p",
+    "fps": 30,
+    "frames": 720,
+    "duration_s": 24.0,
+    "action_playback_rate": 2.5,
+    "simulation_time_step_s": 1.0,
+    "simulation_speed_multiplier": 2.5,
+    "final_stop_hold_s": 4,
+    "interpolation": false,
+    "dropped_observation_frames": 0,
+    "audio": false
+  },
+  "images": {
+    "goal": "goal.png",
+    "raw_rgb": [
+      "rgb_step_000.png",
+      "rgb_step_016.png",
+      "rgb_step_033.png",
+      "rgb_step_050.png"
+    ],
+    "labelled_keyframes": [
+      "keyframe_step_000.png",
+      "keyframe_step_016.png",
+      "keyframe_step_033.png",
+      "keyframe_step_050.png"
+    ],
+    "steps": [
+      0,
+      16,
+      33,
+      50
+    ],
+    "origin": "Cropped from the existing lossy H.264 presentation video, whose 128x128 inputs were enlarged to 384x384. Not original lossless sensor frames.",
+    "source_goal_raw_pixel_sha256": "75603885578232e4be2b4cb653544be23a3d2535a3d9d0e94475147670efeff1",
+    "exported_goal_file_sha256": "39e2259fa8fba955f387d5436f1be6abef6c8e61ea349a6032f6596f234f3174",
+    "current_crop_xyxy": [
+      0,
+      64,
+      384,
+      448
+    ],
+    "goal_crop_xyxy": [
+      384,
+      64,
+      768,
+      448
+    ],
+    "overlay_note": "Original collision border, if present, is retained in the RGB crop."
+  },
+  "scope": "Previously recorded deterministic illustration on Habitat-GS, not Gibson or an original full-evaluation recording; not a new aggregate evaluation.",
+  "source_provenance": "source_provenance.json",
+  "frame_mapping": "frame_mapping.csv"
+}

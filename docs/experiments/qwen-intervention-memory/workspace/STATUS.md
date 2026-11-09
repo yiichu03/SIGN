@@ -6,8 +6,17 @@
 
 - TensorBoard续训显示排查（2026-11-03T23:30:50+08:00）：16200→6200正常，配置14阶段；首次先读取原训练，API后续已出现coverage256/continue_latest，其余运行续训文件也在更新；coverage32/B仍Q且无续训事件。脚本已改下次启动优先续训，路径/命名不变、兼容现有服务复用，当前会话未重启。证据logs/training_continuation_20261103/full_history_load_diagnosis_20261103.json。
 
+<a id="public-sign-demo-20261109"></a>
+## 答辩视频：Public SIGN 成功 ImageNav，CPU导出
+
+2026-11-09已从原1503625录像导出24秒/1280×720/30fps/H.264，2.5倍仿真时间，最终STOP停留4秒；保留0–50步全部51观测，完整720帧解码通过。**公开完整权重、Habitat-GS，不是Gibson或Coverage policy**：interior_0651_841463/episode0，success1、SPL0.61433059，公开nav SHA03fa71b5…；原运行源95eef9b。目标图、4张带步数关键帧及原RGB裁图、metadata/原视频/来源SHA/CPU复现脚本位于SIGN-qwen-intervention-memory/docs/experiments/report-figures-20261109/demo_public_sign，普通push至yiichu03同名分支。源logs/public_sign_demo_20261109/artifacts；本批只CPU，不导航回放、不PBS、不重新导训练曲线，旧作业不动。
+
+初始最短路径4.642218m来自任务info，真实累计路径未保存，metadata设null而不由SPL倒推。STOP由原生Success定义和终态success1确认，原速度向量未保存。Gibson公开权重pilot仅稀疏RGB，若以后明确需要Gibson连续演示可回放Edgemere/200/C01（原35步成功），本轮未启动。WORKLOG：PUBLIC-SIGN-DEMO-CPU-EXPORT-20261109；固定发布SHA待push回执。
+
 <a id="report-figures-20261109"></a>
 ## 报告/PPT配图第一版：CPU导出，GitHub资料发布
+
+已推送并核对远端SHA：`d01459cce7125ac1e9e36602fe012b741d82fff3`，`yiichu03/SIGN` 的 `phase2/qwen-intervention-memory`。
 
 2026-11-09已按用户要求从既有记录导出，不运行导航/Qwen，不提交PBS。目录SIGN-qwen-intervention-memory/docs/experiments/report-figures-20261109；本地源logs/report_figures_20261109/artifacts。47张PNG及PDF/SVG/CSV、原始事件和来源哈希，用户要求push yiichu03同名phase2/qwen-intervention-memory分支。
 

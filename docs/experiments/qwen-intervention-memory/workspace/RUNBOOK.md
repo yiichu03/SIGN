@@ -1030,3 +1030,13 @@ E1–E6完整结果现位于logs/qwen_six_ablation_20261108/runtime_e9396ac/form
 训练导出保留原/续训全部84,386日志点，主图原段截至125.952M并独立画续段，不跨重置平滑；原reward标签仅导航奖励。视频frame0=reset，动作t从obs[t-1]到obs[t]，取128×128右侧观测区，PNG保留解码图、单独labelled版加step。地图world X为列、Z为行、origin lower；只裁空白边缘，面积用原coverage_new_area_m2，初始视野不计收益；原0.1m/3m/90°不改统计口径。
 
 E2 commands[k]从pose[k]到pose[k+1]；决策观测418对应第419个实际动作，6转到424、8前进到432。线速度归一化转物理为(a+1)*0.125m/s，角速度a*15deg/s，dt1s。不可把命令位移当实际位移，不把候选softmax称成功率。连续恢复后RGB不存在则记录缺口，保留原候选/概率和轨迹证据，不合成帧。图片/CSV/metadata与源SHA在新资料目录；ZIP按用户要求才生成。
+
+
+<a id="public-sign-demo-20261109"></a>
+## Public SIGN成功演示的CPU导出（2026-11-09）
+
+发布入口SIGN-qwen-intervention-memory/docs/experiments/report-figures-20261109/demo_public_sign。只运行该目录export_demo.py，--source-dir指向该目录、--out指向全新目录；使用envs/sign-baseline/bin/python及OMP_NUM_THREADS=1/OPENBLAS_NUM_THREADS=1/MKL_NUM_THREADS=1、nice -n10。依赖Pillow/imageio/imageio-ffmpeg/numpy、Matplotlib字体和ffprobe，不导入Habitat或Torch、不启动模型/PBS。原original_record.py只作来源快照，不用于此次重跑。
+
+源success_03_interior_0651_841463_ep0.mp4在SIGN-habitat-gs/results/habitat_gs_videos_20261028，SHA7af7612f…与原manifest一致。原768×544，RGB矩形(0,64,384,448)，goal(384,64,768,448)；71帧中0–50为真实观测，后20为旧停留。本次0–49每帧重复12次@30fps，50帧停留120输出帧，总720帧24秒；2.5倍是相对1秒仿真时间/动作。goal固定用第0帧裁图，保留H264压缩来源和128原输入说明；不能拿裁图文件SHA冒充原goal原始像素SHA。
+
+metadata含公开nav/safety权重SHA、原95eef9b提交/1503625、Habitat-GS/scene/episode/50动作/success1/SPL.61433、原指标和task.info最短路径4.642218m；actual path为null，最终速度向量未保存。validation完整解码720帧/codec/24秒/终帧4秒、全部来源SHA/帧映射核验。此片不是Gibson也不是完整1900评估的原录像；不把示例成功当总体成绩。用户明确要推送此小型MP4/关键帧，原其他大视频和权重不发布。

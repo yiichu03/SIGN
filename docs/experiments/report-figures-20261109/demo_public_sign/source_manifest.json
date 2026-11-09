@@ -1,0 +1,188 @@
+{
+  "created_at": "2026-10-28T20:04:46+08:00",
+  "source_commit": "95eef9bf497bc1d010c7a4b35030fdce4123dce7",
+  "checkpoint_sha256": {
+    "ckpt/nav_model.pth": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+    "ckpt/safety_model.pth": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31"
+  },
+  "job_id": "1503625.stdct-mgmt-02",
+  "purpose": "New deterministic example recordings with the full-evaluation protocol; not recovered original videos or a new benchmark.",
+  "policy_input": "128x128 RGB and image goal, enlarged only in the video",
+  "seed": 100,
+  "pythonhashseed": 0,
+  "max_episode_steps": 500,
+  "success_definition": "Original Success metric, including stop and distance threshold",
+  "playback_fps": 10,
+  "simulation_time_step_s": 1.0,
+  "videos": [
+    {
+      "candidate": 3,
+      "scene": "scene59",
+      "episode_id": "0",
+      "steps": 475,
+      "category": "success",
+      "final_metrics": {
+        "distance_to_goal": 0.17862659692764282,
+        "success": 1.0,
+        "spl": 0.08689896017313004,
+        "soft_spl": 0.08533068746328354,
+        "distance_to_view": 0.2418834283428817,
+        "view_match": 1.0,
+        "view_angle": 3.6243494654637463,
+        "collisions": {
+          "count": 42,
+          "is_collision": false
+        }
+      },
+      "first_nonfinite": null,
+      "goal_rgb_sha256": "0ed5294774d78178761d32944f6f20111752a9821e374619f03b9f8c9f755236",
+      "termination": "task_ended",
+      "selected": true,
+      "video": "success_01_scene59_ep0.mp4",
+      "video_frames": 496,
+      "fps": 10,
+      "video_sha256": "e134dcbac1cedebe7a904a89b6220256d535d1f334c537fc15432bf3630394bf"
+    },
+    {
+      "candidate": 8,
+      "scene": "scene64",
+      "episode_id": "0",
+      "steps": 13,
+      "category": "success",
+      "final_metrics": {
+        "distance_to_goal": 0.18077951669692993,
+        "success": 1.0,
+        "spl": 0.9532368779182434,
+        "soft_spl": 0.8719660639762878,
+        "distance_to_view": 0.2080843243651015,
+        "view_match": 1.0,
+        "view_angle": 1.5644502398026767,
+        "collisions": {
+          "count": 0,
+          "is_collision": false
+        }
+      },
+      "first_nonfinite": null,
+      "goal_rgb_sha256": "798da2c04acc15b0d49f62d3293350cf840d12e8aa78f7a706f5f38c60d2b155",
+      "termination": "task_ended",
+      "selected": true,
+      "video": "success_02_scene64_ep0.mp4",
+      "video_frames": 34,
+      "fps": 10,
+      "video_sha256": "ce4066efbde33b05b4de9b13497a68c818a57788a19d4b494b78c14dde3d2e13"
+    },
+    {
+      "candidate": 15,
+      "scene": "interior_0651_841463",
+      "episode_id": "0",
+      "steps": 50,
+      "category": "success",
+      "final_metrics": {
+        "distance_to_goal": 0.3710636496543884,
+        "success": 1.0,
+        "spl": 0.6143305897712708,
+        "soft_spl": 0.5652256608009338,
+        "distance_to_view": 0.5042731351903021,
+        "view_match": 1.0,
+        "view_angle": 7.632341312316841,
+        "collisions": {
+          "count": 1,
+          "is_collision": false
+        }
+      },
+      "first_nonfinite": null,
+      "goal_rgb_sha256": "75603885578232e4be2b4cb653544be23a3d2535a3d9d0e94475147670efeff1",
+      "termination": "task_ended",
+      "selected": true,
+      "video": "success_03_interior_0651_841463_ep0.mp4",
+      "video_frames": 71,
+      "fps": 10,
+      "video_sha256": "7af7612fe26b3758264c2af08aa113af5a3bade20b0c1f3f4d831ab5e2a37e0b"
+    },
+    {
+      "candidate": 0,
+      "scene": "scene56",
+      "episode_id": "0",
+      "steps": 500,
+      "category": "failure",
+      "final_metrics": {
+        "distance_to_goal": 10.708959579467773,
+        "success": 0.0,
+        "spl": 0.0,
+        "soft_spl": 0.0688224658370018,
+        "distance_to_view": 13.850552233057567,
+        "view_match": 0.0,
+        "view_angle": 180.0,
+        "collisions": {
+          "count": 182,
+          "is_collision": false
+        }
+      },
+      "first_nonfinite": null,
+      "goal_rgb_sha256": "b714fcdb1d7379d637c414dd352518b2d24478a772921b1e8f67ec51acd43d50",
+      "termination": "timeout",
+      "selected": true,
+      "video": "failure_01_scene56_ep0.mp4",
+      "video_frames": 521,
+      "fps": 10,
+      "video_sha256": "779437910425fbf109d14bd6dbedec81d3f3bb420275db8ebbf73ba0fb76f61e"
+    },
+    {
+      "candidate": 1,
+      "scene": "scene57",
+      "episode_id": "0",
+      "steps": 147,
+      "category": "failure",
+      "final_metrics": {
+        "distance_to_goal": 17.184310913085938,
+        "success": 0.0,
+        "spl": 0.0,
+        "soft_spl": 0.37468671798706055,
+        "distance_to_view": 20.32590356667573,
+        "view_match": 0.0,
+        "view_angle": 180.0,
+        "collisions": {
+          "count": 8,
+          "is_collision": false
+        }
+      },
+      "first_nonfinite": null,
+      "goal_rgb_sha256": "b0219426a2b260a33c1aa61ac592d7517f30e7b10e625ce244f037a5e6687b9b",
+      "termination": "task_ended",
+      "selected": true,
+      "video": "failure_02_scene57_ep0.mp4",
+      "video_frames": 168,
+      "fps": 10,
+      "video_sha256": "f0cb7b9e7557c838328a5045ae089aa9fb775fd480ca5bfc0e1178ac5faa4a86"
+    },
+    {
+      "candidate": 2,
+      "scene": "scene58",
+      "episode_id": "0",
+      "steps": 500,
+      "category": "failure",
+      "final_metrics": {
+        "distance_to_goal": 28.311769485473633,
+        "success": 0.0,
+        "spl": 0.0,
+        "soft_spl": 0.0,
+        "distance_to_view": 31.453362139063426,
+        "view_match": 0.0,
+        "view_angle": 180.0,
+        "collisions": {
+          "count": 48,
+          "is_collision": false
+        }
+      },
+      "first_nonfinite": null,
+      "goal_rgb_sha256": "6c8d00f40b5f1e69a161607dac155cf3b608892c912236d83fca7f47cdad674c",
+      "termination": "timeout",
+      "selected": true,
+      "video": "failure_03_scene58_ep0.mp4",
+      "video_frames": 521,
+      "fps": 10,
+      "video_sha256": "5f0548f4fd6b6a547948440ee85012ee7e9a1dc4c9598cb0bfdbf65fe66053ba"
+    }
+  ],
+  "candidate_attempts": 16
+}
