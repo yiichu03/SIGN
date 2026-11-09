@@ -78,17 +78,30 @@ CPU: **138 tests passed** (132 controller/worker/readout +6 checkpoint), and
 7 merged configurations checked. Tokenizer IDs progress13954/blocked59276/unknown15615;
 real GPU answer-boundary, padding and batch validation remains pending.
 
-The first GPU check submission at 01:58 on November9 failed with PBS
-`cannot connect to server`; no job ID was issued. The local UID-to-account
-lookup also fails. An authorized one-shot launcher waits for service recovery,
-then submits the check and only submits P1-P4 after its technical gate passes.
-This is a preparation snapshot, not a claim that any formal job has started.
-See [check attempts](evidence/check_submission_attempts.jsonl),
-[launch control SHA](evidence/launch_control_manifest.json),
-[unit results](evidence/unit_tests.txt) and [configuration checks](evidence/config_preflight.json).
+## Current status: 2026-11-09T08:23:49+08:00
 
-For P1 motivation, newly completed E2 has SR88.619048/SPL53.781069%,
-149 choices:147LEFT/2RIGHT. Relative to originalA it rescues8/harms0;
-relative to matched rule4/3. These are verified outcome pairs, with full
-first-action attribution still pending.
-[New result readout](evidence/project_discussion_E123_readout_20261109.json).
+The first GPU check submission at 01:58 on November9 failed with PBS
+`cannot connect to server`; no job ID was issued. Account lookup and GitHub
+connectivity have recovered; PBS still returns `Connection refused / errno15010`.
+The authorized one-shot launcher remains alive and waits for scheduler recovery,
+then submits the GPU check, and submits P1–P4 only after its technical gate passes.
+There is currently no successful check or formal submission receipt, and no
+GPU check result. Do not launch another waiter or duplicate these submissions.
+
+[Latest infrastructure snapshot](evidence/infrastructure_20261109_morning.json),
+[launcher snapshot](evidence/launch_state_20261109_morning.json),
+[initial check attempts](evidence/check_submission_attempts.jsonl),
+[launch control SHA](evidence/launch_control_manifest.json),
+[CPU tests](evidence/unit_tests.txt), [configuration checks](evidence/config_preflight.json).
+
+E1–E6 now all have complete4200 results and paired action-prefix reports:
+[six-arm final results](../qwen-six-ablation/README.md).
+E2 has SR88.619048/SPL53.781069%,149 choices:147LEFT/2RIGHT.
+Relative to A it rescues8/harms0 (model-prefix-supported7/0);
+relative to matched rule4/3 (model-prefix-supported2/2).
+This motivates P1's fixed-direction control; P1–P4 have no navigation results yet.
+
+Server-maintained workspace snapshots: [STATUS](workspace/STATUS.md),
+[RUNBOOK](workspace/RUNBOOK.md), [WORKLOG](workspace/WORKLOG.md),
+[AGENTS](workspace/AGENTS.md). Runtime source stays8a94adf; documentation commits
+on this branch may advance without changing the runtime checkout.

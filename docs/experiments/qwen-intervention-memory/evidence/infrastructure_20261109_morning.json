@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-09T08:23:49+08:00",
+  "account_lookup": "e1538633",
+  "git_remote_read_succeeded": true,
+  "scheduler": {
+    "time": "2026-11-09T08:23:45.124112+08:00",
+    "pid": 1807538,
+    "phase": "waiting_scheduler",
+    "error": "Connection refused\nqstat: cannot connect to server stdct-mgmt-02 (errno=15010)"
+  },
+  "check_submission_exists": false,
+  "formal_submissions_exist": false,
+  "gpu_check_passed": false,
+  "runtime_commit": "8a94adf8bfb0c893ff850c6daf0c321cd73a4fcb"
+}

@@ -2739,3 +2739,17 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 - 完成138单元（132＋6）及7配置验证。初次直接调用Habitat get_config时没有展开policy简写而FileNotFoundError，改用实际src/config/*.yaml路径完成；没有因此修改算法。
 - source提交2aaa3bc，git add原docs路径遇sparse-checkout限制，随后用git add --sparse正常加入实验PLAN/README，新增提交8a94adf8bfb0c893ff850c6daf0c321cd73a4fcb；不改写历史。独立detached运行树SIGN-qwen-intervention-runtime-8a94adf与新batch/runtime_8a94adf建立，prepare原12工程任务与4200正式输入、源文件/资产SHA全部固定。
 - 已执行首次GPUcheck qsub（2h/1A40/36CPU240GB/CFP/autox），01:58:12返回255，stdout空，stderr原文qsub: cannot connect to server (errno=0)。无作业ID，未写check_submission.json；原始命令/失败回执在check_submission_attempts.jsonl。qstat多次同样报错；只读发现本进程UID24393但getent/passwd与pwd.getpwuid均无法解析账户，PBS服务器DNS正常。这不是amgr余额登录错误；未改系统认证配置、未启停旧任务。用户收到异步问题，请其确认本人终端id/qstat是否正常；仍继续独立准备与排查。
+
+
+## 2026-11-09T08:25:00+08:00 [LATEST-PUBLICATION-SIX-COMPLETE-AND-P1234-PENDING]
+
+- 用户要求push最新情况到yiichu03/SIGN，资料树SIGN-qwen-intervention-memory，phase2/qwen-intervention-memory。已执行普通git push，代码/协议/测试资料提交3c8ec30已发布成功，新分支建立；本批最终E1–E6结果资料提交随后追加。源固定8a94adf，原34运行树保护文件检查未变，无启停旧训练。
+- E1–E6各4200完成，formal_review/pbs_status.json记录各F/Exit0，E6于01:22:54结束。本轮逐episode复算SR/SPL、A/rule任务/目标/起点及救回/误伤全部通过：88.357143/53.664525、88.619048/53.781069、87.928571/53.476922、88.333333/53.679747、88.428571/53.678132、88.428571/53.644364%。完整前缀归因报告已生成；E2对A8救回0误伤（模型前缀7/0）、对rule4/3（模型前缀2/2）。50400配对行、六组0worker技术错误；E6另有1次无效视觉安全KEEP。无新采样/调参或原结果覆盖。
+- 补录11月9日02:00后情况：获授权的一次性等待器launch_once.py（PID1807538）等待PBS恢复，仅先提交check，技术passed后才提交P1–P4；不重复启动。02时段旧push因UID解析失败退出；08:18账户解析/GitHub已恢复，但PBS仍Connection refused/errno15010，check_submission/formal_submissions/check_summary均不存在。138项CPU测试通过，不称GPU短测或正式实验已运行。
+- 写入故障与处理：根WORKLOG直接追加两次报Errno28且原515079字节逐字不变；verification.json关闭时也报Errno28，但重读2719字节JSON完整。共享NFS显示678T已用/1.3T可用/100%%，未删旧数据。STATUS/RUNBOOK以同目录临时文件校验后原子替换已成功；本条也以完整旧内容＋新尾部写临时文件并替换，旧条目字节前缀严格校验，不修改历史。发布内容全部重算SHA，Git远端核验另存回执。
+- 实际执行：logs/github_latest_publish_20261109/publish.py从原结果生成轻量JSON/CSV与根文档副本，README导航更新。证据verification.json、原runtime_e9396ac/formal_review；P1–P4 runtime_8a94adf/launch_state.json与失败回执。保留不可变来源SHA/任务/概率与归因记录；不上传权重/环境/场景/凭据/大相机流，不打ZIP。
+
+
+## 2026-11-09T08:27:15+08:00 [LATEST-PUBLICATION-HASH-LINK-VALIDATION]
+
+- 发布前检查：26份原资料副本SHA正确，8a94adf运行树124源文件SHA及commit全匹配，旧34工作树受保护代码不变；WORKLOG发布副本与根源字节相同且保持上一提交前缀。初次仅用本地exists检查链接遇13个缺失路径；查明为继承sparse-checkout省略，git cat-file逐一确认13个均在HEAD，69链接最终通过，无需修改原路径或拉入运行目录。记录logs/github_latest_publish_20261109/publication_checks.json，本轮仅文档/结果发布，无新算法修改或GPU实验结果。

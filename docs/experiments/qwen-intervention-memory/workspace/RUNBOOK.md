@@ -1006,3 +1006,17 @@ C/D40统计最终C5可靠命中/5真实输入/0选择改变，D1/1/0，故正式
 E1完整6调用块平衡每种标签/方向，各2次；最后不足6的尾块应报告实际频数，随机排序不保证每个短前缀最均匀（最初PLAN“最小偏差”表述过强）。映射算法本身未调整：SHA(seed100,block,permutation)排序，避免看到结果后改映射。正式只用一次预定映射，不用离线六次平均或挑最高。原始ABC logits和语义概率分开。E3 softmax阈值不是经过校准的正确率。
 
 本批工程检查1533600已Exit0；正式E1–E6为1533627–1533632，运行源码e9396ac，初次提交状态见initial_job_states.json、命令和路径见formal_submissions.json。CPU1533635 afterany等待六组，H为正常依赖；完成后自动生成formal_review/summary.json、paired.csv和pbs_status.json。不手动解除依赖，不覆盖旧结果或重复提交。prepared_commands/tasks中的submitted=False是不可变准备快照，不等于未提交；receipt记录实际状态。正式原A160触发/155仲裁需分开，E1离线表面方向均衡但926/930选token A，不能视为语义收益。
+
+
+<a id="qwen-intervention-memory"></a>
+## P1–P4短时视觉/动作历史介入实验（2026-11-09）
+
+开发/发布：SIGN-qwen-intervention-memory，phase2/qwen-intervention-memory；固定运行树SIGN-qwen-intervention-runtime-8a94adf，源码8a94adf8bfb0c893ff850c6daf0c321cd73a4fcb。原125.952M权重SHA988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c，Gibson4200/6env/seed100/hash0/max500，检测16、扫描24、90°恢复前进8、cooldown64、最多2次机会/76动作。
+
+P1扫描后固定LEFT，P2扫描后交回SIGN，均不启动Qwen；P3/P4扫描前以相同实际16步动作和相同prompt判断progress/blocked/unknown，P3当前RGB、P4为t-16/-11/-5/t四图。仅progress取消干预，其余执行原交替规则；取消也耗一次机会并冷却64。P4另存不执行的当前图shadow。复用FP32模型与真实token softmax/T1，无GT输入，无新增导航训练。方案、prompt及技术门在正式GPU前冻结。
+
+仅供新批次复现：在独立固定树执行`python scripts/prepare_intervention.py --output /absolute/new_batch`，按prepared_commands.json先提交check；只有checks/check_summary.json passed且源/资产SHA匹配，才运行`python scripts/submit_intervention.py --batch /absolute/new_batch`。check最多2h，四正式各1A40/36CPU240GB/6h/CFP/autox，CPU报告afterany依赖四组，独立输出full_P1–full_P4、formal_review。不重复执行已有目录；运行树不pull资料提交。
+
+现有批次logs/qwen_intervention_memory_20261109/runtime_8a94adf已由外部launch_once.py等待服务恢复。检查launch_state.json、check_submission.json、formal_submissions.json及进程后再操作；不要启动第二个等待器。当前暂无提交成功回执，PBS连接失败并非额度耗尽证据。01:58失败原命令/返回码保存在check_submission_attempts.jsonl。账户解析曾失败、现已恢复；系统/PBS问题不通过改训练源码解决。138项CPU测试通过，真实GPU输入/概率/旧控制器回归仍待check，不能用CPU成功替代。
+
+E1–E6完整结果现位于logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review，六组均F/Exit0；旧RUNBOOK“CPU汇总等待”仅为提交时状态。需要再次独立审计时使用全新报告目录，不覆盖原结果。

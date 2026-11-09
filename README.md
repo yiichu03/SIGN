@@ -1,4 +1,9 @@
-本分支新增[四组Qwen推理恢复实现、测试与待审PBS命令](docs/experiments/qwen-memory-four-arm/README.md)：固定Coverage256 125.952M，不重新训练。四组正式4200验证尚未提交，旧完整结果保留。
+本分支为 `phase2/qwen-intervention-memory`，最新资料更新于2026-11-09。
+
+- [P1–P4短时视觉历史介入实验](docs/experiments/qwen-intervention-memory/README.md)：实现、配置和138项CPU测试已完成；PBS连接失败，GPU短测和正式验证等待提交。
+- [E1–E6完整4200验证结果](docs/experiments/qwen-six-ablation/README.md)：六组均完成；含SR/SPL、Qwen选择、配对救回/误伤及动作前缀证据。
+- [当前工作区状态与索引](docs/experiments/qwen-intervention-memory/workspace/STATUS.md)。
+
 
 ## [Project Website](https://nus-core.github.io/assets/standalone/SIGN/index.html)
 [![arXiv](https://img.shields.io/badge/arXiv-2310.07473-b31b1b.svg)](https://arxiv.org/pdf/2508.12394)

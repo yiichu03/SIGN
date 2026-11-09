@@ -2,22 +2,26 @@
 
 独立分支`phase2/qwen-arbitration-six-ablation`；运行固定`e9396ac0c989ea515edcbd7f8d0085be38f818e7`，资料提交可继续前进，运行树不pull。导航权重固定Coverage256125.952M/原ckpt245，SHA`988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c`；6env/seed100/hash0/max500，不训练PPO，不改旧A、旧结果和既有训练。
 
-## 已提交正式4200，结果尚未出
+## 六组完整4200结果（2026-11-09）
 
-|实验|单一因素|PBS job|正式SR/SPL|触发/仲裁/选择/配对救回误伤|
-|---|---|---|---|---|
-|原A（已完成）|目标条件LEFT/RIGHT/KEEP仲裁|1532958|88.428571% / 53.715613%|160触发/155仲裁；137LEFT、18KEEP、0RIGHT；相对rule2救回/9误伤，前缀支持1/8|
-|matched-scan rule（已完成）|交替方向，24扫描+6转向+8前进|1532001批次|88.595238% / 53.775092%|原A比较参考，非新作业|
-|E1|ABC对方向的六排列平衡映射|1533627|待完整4200，尚未验证|待正式输出|
-|E2|仅Qwen移除GOAL（SIGN仍有目标）|1533628|待完整4200，尚未验证|待正式输出|
-|E3|pmax≥0.5且gap≥0.1，否则KEEP|1533629|待完整4200，尚未验证|待正式输出|
-|E4|forward8→4；派生最大干预68|1533630|待完整4200，尚未验证|待正式输出|
-|E5|scan/recovery90→60°；派生最大干预56|1533631|待完整4200，尚未验证|待正式输出|
-|E6|停滞窗口16→12|1533632|待完整4200，尚未验证|待正式输出|
+E1–E6均已完成；原PBS快照为F/Exit0，job1533627–1533632。原A SR88.428571/SPL53.715613%，matched-scan rule88.595238/53.775092%；均使用相同125.952M checkpoint。
 
-六组CFP/autox→batch_gpux，每组1A40/36CPU/240GB/6h；GPUx最多4R，其余排队，原训练1511148不动。参考原A实测1:47:28，估计每组约1–2小时计算、6h为保守上限，排队时间未知，不保证六组同日出齐。[实际提交命令/输出/源码SHA](evidence/formal_submissions.json)，[提交后PBS状态快照](evidence/initial_job_states.json)，[正式前余额](evidence/resources_before_formal.json)。
+|实验|SR|SPL|触发/完成仲裁|LEFT/RIGHT/KEEP|对A救回/误伤|对规则救回/误伤|
+|---|---:|---:|---:|---:|---:|---:|
+|E1|88.357143%|53.664525%|161/155|51/51/53|13/16|8/18|
+|E2|88.619048%|53.781069%|152/149|147/2/0|8/0|4/3|
+|E3|87.928571%|53.476922%|173/168|11/0/157|7/28|6/34|
+|E4|88.333333%|53.679747%|160/155|136/0/19|7/11|8/19|
+|E5|88.428571%|53.678132%|161/157|129/5/23|13/13|8/15|
+|E6|88.428571%|53.644364%|177/170|140/2/28|13/13|14/21|
 
-CPU1533635（1CPU6GB30min，afterany依赖六组）会自动生成服务器`logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review/{summary.json,paired.csv,pbs_status.json}`。其H是等待依赖，勿解除。失败/缺失组保持未验证，不自动重跑。旧4200只读；单seed/反复使用val，配对胜负不是因果证明，无模型实际改变不能归功Qwen。最终报告同时保留与A及rule的总体配对、同观测选向差异、首次真实动作差异与动作/位姿前缀支持；E4/E5/E6的动作时长/扫描/触发变化不自动称作VLM语义收益。
+E2去掉Qwen目标图后，相对A净多8成功（+0.190476pp），相对匹配扫描规则净多1成功（+0.023810pp）。E2仍147LEFT/2RIGHT；与A的模型决策首次动作前缀支持为7救回/0误伤，与规则为2/2。完整配对结果与模型贡献证据分开呈现。E4/E5/E6的参数变化未超过原A整体SR，E3多数KEEP降低了SR。六组worker技术错误0；E6的170仲裁含169有效模型选择及1无效视觉证据安全KEEP。
+
+[完整汇总与动作前缀归因](evidence/formal_review/summary.json)、[50400行逐任务配对CSV](evidence/formal_review/paired.csv)、[完成时PBS状态](evidence/formal_review/pbs_status.json)、[本次逐episode指标复核](evidence/formal_review/publication_verification.json)。各组原始result.json发布于[evidence/final_results](evidence/final_results)。救回/误伤是同任务结果配对，人工原因标签留空。E4/E5/E6动作时长、扫描角度和触发变化不自动称为VLM语义收益；完整4200为既有验证集，单种子结果。
+
+原提交均CFP/autox、1A40/36CPU240GB/6h；用户随后把E5/E6排队任务移到auto→batch_gpu，ID与源码/预算不变。实际PBS用时依次2:18:35、2:11:31、1:55:46、1:03:20、1:06:13、2:10:51。CPU1533635的正式汇总已生成。旧任务/输出未重跑或覆盖。[原提交命令](evidence/formal_submissions.json)、[初始状态快照](evidence/initial_job_states.json)保留为历史。
+
+下一轮已批准的[P1–P4实现和当前状态](../qwen-intervention-memory/README.md)将区分固定方向、仅扫描及扫描前短时历史介入判断，尚无GPU短测/正式结果。
 
 ## 已完成的审计与GPU检查
 
@@ -55,4 +59,4 @@ python scripts/report_six_ablation.py --batch /absolute/new_batch --output /abso
 
 [固定源码/资产manifest](evidence/source_manifest.json)、[任务与checkpoint](evidence/tasks.json)、[实际提交门检查脚本](launch/submit_formal.py)、[CPU汇总脚本](launch/report.pbs)。tasks/prepared_commands的submitted=False是准备时快照，真实状态以formal_submissions.json为准，不能为改布尔破坏固定assets。原图与完整worker输入token审计保留服务器原路径，Git仅发布轻量结果/manifest，不包含权重/环境/场景/大相机流，不自动ZIP。
 
-根文档为服务器维护源，以下自动生成副本：[STATUS](workspace/STATUS.md)、[RUNBOOK](workspace/RUNBOOK.md)、[WORKLOG](workspace/WORKLOG.md)、[AGENTS](workspace/AGENTS.md)。
+根文档为服务器维护源，本轮最新自动生成副本：[STATUS](../qwen-intervention-memory/workspace/STATUS.md)、[RUNBOOK](../qwen-intervention-memory/workspace/RUNBOOK.md)、[WORKLOG](../qwen-intervention-memory/workspace/WORKLOG.md)、[AGENTS](../qwen-intervention-memory/workspace/AGENTS.md)。

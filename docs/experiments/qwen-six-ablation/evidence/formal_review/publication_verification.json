@@ -1,0 +1,117 @@
+{
+  "read_at": "2026-11-09T08:20:02.907213+08:00",
+  "scope": "Read-only 4200 raw episode metrics, task/goal/start pairing, saved formal prefix report; no re-evaluation",
+  "source_report": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review/summary.json",
+  "source_report_sha256": "894d408e51183874811ba386596481436958811b48d9f3430513135e5406b547",
+  "arms": {
+    "E1": {
+      "episodes": 4200,
+      "successes": 3711,
+      "sr": 0.8835714285714286,
+      "spl": 0.5366452455114374,
+      "matched_tasks_goals_starts": true,
+      "comparisons": {
+        "A": {
+          "rescues": 13,
+          "harms": 16
+        },
+        "rule": {
+          "rescues": 8,
+          "harms": 18
+        }
+      },
+      "technical_errors": 0
+    },
+    "E2": {
+      "episodes": 4200,
+      "successes": 3722,
+      "sr": 0.8861904761904762,
+      "spl": 0.5378106915828464,
+      "matched_tasks_goals_starts": true,
+      "comparisons": {
+        "A": {
+          "rescues": 8,
+          "harms": 0
+        },
+        "rule": {
+          "rescues": 4,
+          "harms": 3
+        }
+      },
+      "technical_errors": 0
+    },
+    "E3": {
+      "episodes": 4200,
+      "successes": 3693,
+      "sr": 0.8792857142857143,
+      "spl": 0.5347692246843498,
+      "matched_tasks_goals_starts": true,
+      "comparisons": {
+        "A": {
+          "rescues": 7,
+          "harms": 28
+        },
+        "rule": {
+          "rescues": 6,
+          "harms": 34
+        }
+      },
+      "technical_errors": 0
+    },
+    "E4": {
+      "episodes": 4200,
+      "successes": 3710,
+      "sr": 0.8833333333333333,
+      "spl": 0.5367974700630508,
+      "matched_tasks_goals_starts": true,
+      "comparisons": {
+        "A": {
+          "rescues": 7,
+          "harms": 11
+        },
+        "rule": {
+          "rescues": 8,
+          "harms": 19
+        }
+      },
+      "technical_errors": 0
+    },
+    "E5": {
+      "episodes": 4200,
+      "successes": 3714,
+      "sr": 0.8842857142857142,
+      "spl": 0.5367813206430042,
+      "matched_tasks_goals_starts": true,
+      "comparisons": {
+        "A": {
+          "rescues": 13,
+          "harms": 13
+        },
+        "rule": {
+          "rescues": 8,
+          "harms": 15
+        }
+      },
+      "technical_errors": 0
+    },
+    "E6": {
+      "episodes": 4200,
+      "successes": 3714,
+      "sr": 0.8842857142857142,
+      "spl": 0.5364436393796751,
+      "matched_tasks_goals_starts": true,
+      "comparisons": {
+        "A": {
+          "rescues": 13,
+          "harms": 13
+        },
+        "rule": {
+          "rescues": 14,
+          "harms": 21
+        }
+      },
+      "technical_errors": 0
+    }
+  },
+  "paired_csv_rows": 50400
+}

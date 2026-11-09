@@ -1,0 +1,104 @@
+{
+  "E1": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "resources_used": {
+      "cpupercent": 149,
+      "cput": "02:44:39",
+      "gpu_usage": "GN-A40-023(cuda.1.energyConsumed=7627J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=16124.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=53%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=7868s, cuda.1.usagePerc=2.834%, cuda.1.memUsagePerc=21.377%)",
+      "mem": "7766524kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "82025752kb",
+      "walltime": "02:18:35"
+    },
+    "stime": "Sun Nov  8 22:30:09 2026",
+    "obittime": "Mon Nov  9 00:48:46 2026",
+    "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E1.log"
+  },
+  "E2": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "resources_used": {
+      "cpupercent": 151,
+      "cput": "02:38:18",
+      "gpu_usage": "GN-A40-023(cuda.0.energyConsumed=7039J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=16080.094MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=55%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=0.000s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=7608s, cuda.0.usagePerc=3.850%, cuda.0.memUsagePerc=21.282%)",
+      "mem": "8028592kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "81711112kb",
+      "walltime": "02:11:31"
+    },
+    "stime": "Sun Nov  8 22:32:55 2026",
+    "obittime": "Mon Nov  9 00:44:30 2026",
+    "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E2.log"
+  },
+  "E3": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "resources_used": {
+      "cpupercent": 150,
+      "cput": "02:36:59",
+      "gpu_usage": "GN-A40-032(cuda.1.energyConsumed=7624J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=16102.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=46%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=6834s, cuda.1.usagePerc=3.938%, cuda.1.memUsagePerc=21.329%)",
+      "mem": "8737036kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "82454320kb",
+      "walltime": "01:55:46"
+    },
+    "stime": "Sun Nov  8 22:36:06 2026",
+    "obittime": "Mon Nov  9 00:31:55 2026",
+    "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E3.log"
+  },
+  "E4": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "resources_used": {
+      "cpupercent": 143,
+      "cput": "01:23:27",
+      "gpu_usage": "GN-A40-036(cuda.1.energyConsumed=9199J, cuda.1.lowUtilizationTime=102170.366s, cuda.1.maxGpuMemoryUsed=16130.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=48%, cuda.1.memoryUtilization_avg=1%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=10831.162s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=3733s, cuda.1.usagePerc=11.762%, cuda.1.memUsagePerc=21.390%)",
+      "mem": "7834024kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "83635804kb",
+      "walltime": "01:03:20"
+    },
+    "stime": "Sun Nov  8 22:38:37 2026",
+    "obittime": "Sun Nov  8 23:42:07 2026",
+    "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E4.log"
+  },
+  "E5": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "resources_used": {
+      "cpupercent": 135,
+      "cput": "01:26:57",
+      "gpu_usage": "GN-A40-009(cuda.0.energyConsumed=7892J, cuda.0.lowUtilizationTime=0.000s, cuda.0.maxGpuMemoryUsed=16102.094MB, cuda.0.memoryClock_min=405MHz, cuda.0.memoryClock_max=7251MHz, cuda.0.memoryClock_avg=7251MHz, cuda.0.memoryUtilization_min=0%, cuda.0.memoryUtilization_max=47%, cuda.0.memoryUtilization_avg=0%, cuda.0.overallHealth=20, cuda.0.powerViolationTime=1059.231s, cuda.0.reliabilityViolationTime=0.000s, cuda.0.thermalViolationTime=0.000s, cuda.0.wallTime=3916s, cuda.0.usagePerc=6.911%, cuda.0.memUsagePerc=21.329%)",
+      "mem": "7190900kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "81075248kb",
+      "walltime": "01:06:13"
+    },
+    "stime": "Sun Nov  8 22:54:53 2026",
+    "obittime": "Mon Nov  9 00:01:12 2026",
+    "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E5.log"
+  },
+  "E6": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "resources_used": {
+      "cpupercent": 143,
+      "cput": "02:11:52",
+      "gpu_usage": "GN-A40-037(cuda.1.energyConsumed=7276J, cuda.1.lowUtilizationTime=0.000s, cuda.1.maxGpuMemoryUsed=16102.094MB, cuda.1.memoryClock_min=405MHz, cuda.1.memoryClock_max=7251MHz, cuda.1.memoryClock_avg=7251MHz, cuda.1.memoryUtilization_min=0%, cuda.1.memoryUtilization_max=48%, cuda.1.memoryUtilization_avg=0%, cuda.1.overallHealth=20, cuda.1.powerViolationTime=0.000s, cuda.1.reliabilityViolationTime=0.000s, cuda.1.thermalViolationTime=0.000s, cuda.1.wallTime=7780s, cuda.1.usagePerc=2.975%, cuda.1.memUsagePerc=21.329%)",
+      "mem": "8311792kb",
+      "ncpus": 36,
+      "ngpus": 0,
+      "vmem": "82410396kb",
+      "walltime": "02:10:51"
+    },
+    "stime": "Sun Nov  8 23:12:00 2026",
+    "obittime": "Mon Nov  9 01:22:54 2026",
+    "Output_Path": "stdct-login-01.stdct.loc:/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/pbs_E6.log"
+  }
+}

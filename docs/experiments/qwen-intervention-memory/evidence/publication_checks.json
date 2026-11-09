@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-09T08:26:48.976101+08:00",
+  "publication_hashes_passed": 26,
+  "immutable_runtime_source_hashes_passed": 124,
+  "older_runtime_worktrees_unchanged": 34,
+  "worklog_prefix_and_root_equal": true,
+  "relative_links_checked": 69,
+  "sparse_checkout_paths_present_in_git": [
+    "docs/experiments/frozen-rollout-coverage/README.md",
+    "docs/experiments/qwen-topdown/README.md",
+    "docs/experiments/qwen-topdown/reports/pilot_9b_2b.md",
+    "docs/experiments/qwen-topdown/reports/diverse_2b.md",
+    "docs/experiments/qwen-history-window/VALIDATION.md",
+    "docs/experiments/qwen-history-window/REPORT.md",
+    "docs/experiments/qwen-history-window/human_review.csv",
+    "docs/experiments/qwen-history-solid/VALIDATION.md",
+    "docs/experiments/qwen-history-solid/REPORT.md",
+    "docs/experiments/qwen-history-solid/human_review.csv",
+    "docs/experiments/inference-recovery/iteration_20261108/README.md",
+    "docs/experiments/inference-recovery/iteration_20261108/BRANCHES.md",
+    "docs/experiments/inference-recovery/ITERATION_PLAN.md"
+  ],
+  "cpu_tests_already_passed": 138,
+  "gpu_check_pending": true,
+  "no_runtime_code_changes_this_publication": true
+}

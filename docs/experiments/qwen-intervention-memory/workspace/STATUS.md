@@ -11,10 +11,26 @@
 
 用户于11月9日批准上一轮建议的四组：P1扫描后固定LEFT、P2扫描后KEEP、P3当前RGB判断是否介入、P4同版加入最近3张历史RGB；先完成实验，汇报措辞稍后讨论。独立分支phase2/qwen-intervention-memory基于3f7d445，原125.952M权重/6env/seed100/hash0/max500。P3/P4在扫描前用同prompt与同16步实际动作，P4图片t-16/-11/-5/t；progress交回SIGN，blocked/unknown执行原matched规则；每次判断消耗两次机会预算之一，veto冷却64，不重复无上限调用。P4保存未执行的当前图shadow，统计是否改变介入。
 
-目前138项单元/回归全部通过（132控制/worker/单图＋6checkpoint），最终7配置合并通过。代码/协议8a94adf固定，运行树SIGN-qwen-intervention-runtime-8a94adf；manifest批次logs/qwen_intervention_memory_20261109/runtime_8a94adf已准备。01:58 GPU短测首次qsub返回255/cannot connect to server，无job ID；qstat同错且本登录节点pwd.getpwuid(24393)失败。当前尚未完成GPU短测或正式提交，等待调度/账户解析恢复，已向用户询问其终端是否同样异常。GPUx当前每用户4R，原两R都在普通GPU。amgr已由用户重新登录，最新共享余额raw272214.963/30=9073.8321GPUh，当前预算足够。代码/原始测试在SIGN-qwen-intervention-memory及logs/qwen_intervention_memory_20261109。以下此前“只讨论/未授权”段落为历史，本次明确授权优先。
+**2026-11-09T08:23:49+08:00 最新状态**：138项单元/回归全部通过（132控制/worker/单图＋6checkpoint），最终7配置合并通过。代码/协议8a94adf固定，运行树SIGN-qwen-intervention-runtime-8a94adf，manifest批次logs/qwen_intervention_memory_20261109/runtime_8a94adf。GPU短测及正式P1–P4均尚未提交成功，无作业ID；01:58首次qsub失败后，一次性等待器PID1807538保持等待，当前PBS仍Connection refused/errno15010。账户UID解析与GitHub连接已恢复。等待器只在服务恢复后提交check，且技术门passed才提交原授权四组；不要重复启动等待器或手动重复qsub。当前余额未重新查询，01:41共享余额约9073.8321 GPUh是历史快照，不当实时余额。旧训练及旧验证保持原样。发布入口SIGN-qwen-intervention-memory/docs/experiments/qwen-intervention-memory/README.md；WORKLOG条目LATEST-PUBLICATION-SIX-COMPLETE-AND-P1234-PENDING。
 
 <a id="qwen-six-ablation-20261108"></a>
 ## 当前任务：原A基线的E1–E6单因素推理消融
+
+**2026-11-09T08:23:49+08:00 最终结果已复核**：六组均完成4200，原PBS汇总记录均F/Exit0；E6已于01:22:54结束。逐episode重算SR/SPL、任务/目标/起点和配对救回/误伤通过。正式完整动作前缀汇总已生成，以下旧时间快照不再代表当前进度。
+
+|实验|SR|SPL|触发/完成仲裁|LEFT/RIGHT/KEEP|对A救回/误伤|对规则救回/误伤|
+|---|---:|---:|---:|---:|---:|---:|
+|E1|88.357143%|53.664525%|161/155|51/51/53|13/16|8/18|
+|E2|88.619048%|53.781069%|152/149|147/2/0|8/0|4/3|
+|E3|87.928571%|53.476922%|173/168|11/0/157|7/28|6/34|
+|E4|88.333333%|53.679747%|160/155|136/0/19|7/11|8/19|
+|E5|88.428571%|53.678132%|161/157|129/5/23|13/13|8/15|
+|E6|88.428571%|53.644364%|177/170|140/2/28|13/13|14/21|
+
+原A为88.428571/53.715613%，匹配扫描规则88.595238/53.775092%。E2本轮最高，相对A净+8成功、相对规则净+1；模型首次动作前缀支持分别7救回/0误伤、2/2。E6相对A13/13、SPL略低。六组worker技术错误0；E6有1次无效视觉证据安全KEEP，169模型有效选择与170完成仲裁分开统计。P1–P4将进一步检验固定方向、扫描本身及短时视觉历史对介入决策的作用，结果尚待GPU验证。
+
+原证据：logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review/{summary.json,paired.csv,pbs_status.json}；本次只读复核logs/github_latest_publish_20261109/verification.json。发布副本在SIGN-qwen-intervention-memory/docs/experiments/qwen-six-ablation/evidence/formal_review/。完整4200为既有验证集，无重新采样/调参或人工因果标注。
+
 
 **11月9日01:05新增完整结果读取**：E1/E2/E3均已输出4200结果；逐episode重算SR/SPL与任务/目标/起点匹配通过。E1为88.357143/53.664525%，E2为88.619048/53.781069%，E3为87.928571/53.476922%。相对A救回/误伤分别13/16、8/0、7/28；相对rule分别8/18、4/3、6/34。E2净多rule1条，147LEFT/2RIGHT；不能归为可靠VLM增益。E3大量KEEP未带来原先期待的总体提升，修正下方00:25潜力假设。完整动作前缀归因仍等依赖汇总，当前仅计结果配对。证据`logs/qwen_six_ablation_20261108/runtime_e9396ac/project_discussion_E123_readout_20261109.json`。
 

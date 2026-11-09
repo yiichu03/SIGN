@@ -41,18 +41,95 @@
   },
   "workspace/AGENTS.md": {
     "source": "/scratch/e1538633/liuyi/AGENTS.md",
-    "sha256": "1277fe6f176d1632c745db70fd70a447877933d0a63445d8e05c4e6ca6d6b008"
+    "source_sha256": "1277fe6f176d1632c745db70fd70a447877933d0a63445d8e05c4e6ca6d6b008",
+    "sha256": "1277fe6f176d1632c745db70fd70a447877933d0a63445d8e05c4e6ca6d6b008",
+    "bytes": 18680,
+    "encoding": "portable_links"
   },
   "workspace/STATUS.md": {
     "source": "/scratch/e1538633/liuyi/STATUS.md",
-    "sha256": "490b73b743781250bc2bb2c50e72dc2878012ca2cfcb63a0c55f43fa391cdbbf"
+    "source_sha256": "c4667f55b9679f98d19f1e7e1829355a152d77d0a7fe037720de42113aefd211",
+    "sha256": "f6d38df83d410b14cbddffdd431fa280d697d1b6ad044ff73b76e0d71c2a2ab4",
+    "bytes": 167939,
+    "encoding": "portable_links"
   },
   "workspace/RUNBOOK.md": {
     "source": "/scratch/e1538633/liuyi/RUNBOOK.md",
-    "sha256": "7e6f3074add35d784ed69ea31905f15a04d189bf30eac7ba919fa55a1bc4e1c7"
+    "source_sha256": "a5d696dc0310f694525979d7997db4723f8bec40ec289e1bcffa56cead08f01f",
+    "sha256": "55ec195fbcf6bf396579b894e7d76be6061300e21470789632b3f19eb11d8636",
+    "bytes": 152568,
+    "encoding": "portable_links"
   },
   "workspace/WORKLOG.md": {
     "source": "/scratch/e1538633/liuyi/WORKLOG.md",
-    "sha256": "dac4ca796e57a406606a379e237e784c75ad389df30854f1028b5163778f8bcf"
+    "source_sha256": "c1e9bcc42833a37c5205d8c16933e2fa4e8f6e3d35c825c3b11a76a5d6ac0ac9",
+    "sha256": "c1e9bcc42833a37c5205d8c16933e2fa4e8f6e3d35c825c3b11a76a5d6ac0ac9",
+    "bytes": 518006,
+    "encoding": "verbatim"
+  },
+  "../qwen-six-ablation/evidence/formal_review/pbs_status.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review/pbs_status.json",
+    "sha256": "114445e423fb6c4e528eb1f3db6adaf64ff348760450209165166845460ad0f8",
+    "bytes": 6106
+  },
+  "../qwen-six-ablation/evidence/formal_review/paired.csv": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review/paired.csv",
+    "sha256": "3ba22719080615bd63b536b822e9c756f8c293f288857d80dae5099d461c0ffe",
+    "bytes": 6155965
+  },
+  "../qwen-six-ablation/evidence/formal_review/summary.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review/summary.json",
+    "sha256": "894d408e51183874811ba386596481436958811b48d9f3430513135e5406b547",
+    "bytes": 28629
+  },
+  "../qwen-six-ablation/evidence/final_results/E1.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E1/result.json",
+    "sha256": "03f387927bdf39582193a0152f94c617b3640c2caf19a3f227dc9f8991e8f4f0",
+    "bytes": 2979
+  },
+  "../qwen-six-ablation/evidence/final_results/E2.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/result.json",
+    "sha256": "d1cf57f7c707082d42f6dc702fb075c52b837dfd14e625d6999c4b4a90574b07",
+    "bytes": 2974
+  },
+  "../qwen-six-ablation/evidence/final_results/E3.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E3/result.json",
+    "sha256": "1a06361438dbee4584828a54caa306895a7e6b98747f33c8d6bf73ae573ea98d",
+    "bytes": 2976
+  },
+  "../qwen-six-ablation/evidence/final_results/E4.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E4/result.json",
+    "sha256": "37e47238a3edae30437ba1afc77b4eb64d5d90c0611f682b6b69a6d62d389475",
+    "bytes": 2978
+  },
+  "../qwen-six-ablation/evidence/final_results/E5.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E5/result.json",
+    "sha256": "ca31ef3bce2671fc0ffe2671ff777a214ffed84736fe24ad1c82ed45f80532c7",
+    "bytes": 2974
+  },
+  "../qwen-six-ablation/evidence/final_results/E6.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E6/result.json",
+    "sha256": "1de7dcb2da1c71e6302175d8e8cef80c137f0180de55413383dd257f23bc4d93",
+    "bytes": 2977
+  },
+  "../qwen-six-ablation/evidence/formal_review/publication_verification.json": {
+    "source": "/scratch/e1538633/liuyi/logs/github_latest_publish_20261109/verification.json",
+    "sha256": "78f9058e09c1ddb1955a6744844100ecac85a61612aa60681b64fc23ec756d12",
+    "bytes": 2719
+  },
+  "evidence/launch_state_20261109_morning.json": {
+    "source": "/scratch/e1538633/liuyi/logs/qwen_intervention_memory_20261109/runtime_8a94adf/launch_state.json",
+    "sha256": "bc28544b125b6d1851649a2ee484ff7dc73046f826db14acb159b346f7d2e63f",
+    "bytes": 193
+  },
+  "evidence/infrastructure_20261109_morning.json": {
+    "source": "/scratch/e1538633/liuyi/logs/github_latest_publish_20261109/infrastructure_snapshot.json",
+    "sha256": "ce2e2a10eac7d8fe1cc19d45201ce882176d9579f543e389e0565816369a6be9",
+    "bytes": 496
+  },
+  "evidence/publication_checks.json": {
+    "source": "/scratch/e1538633/liuyi/logs/github_latest_publish_20261109/publication_checks.json",
+    "sha256": "44393325c6d3a30accb2cb8a988e22fb8298f0ffc84723afd5abf3085a32f2dc",
+    "bytes": 1187
   }
 }
