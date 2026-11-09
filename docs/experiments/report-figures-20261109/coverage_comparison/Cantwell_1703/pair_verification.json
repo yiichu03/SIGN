@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "identical_fields": [
+    "episode",
+    "episode_file_sha256",
+    "goal_pixel_sha256",
+    "initial_rgb_pixel_sha256",
+    "start_pose",
+    "seed",
+    "max_steps",
+    "safety_sha256"
+  ],
+  "records": [
+    {
+      "method": "public",
+      "scene": "Cantwell",
+      "episode_id": "1703",
+      "seed": 100,
+      "pythonhashseed": 0,
+      "max_steps": 500,
+      "recovery": false,
+      "episode": {
+        "episode_id": 1703,
+        "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+        "start_position": [
+          -8.536714553833008,
+          0.15825189650058746,
+          -2.571402072906494
+        ],
+        "start_rotation": [
+          0,
+          0.9977719641370336,
+          0,
+          -0.06671662148315091
+        ],
+        "info": {
+          "geodesic_distance": 5.669604301452637,
+          "difficulty": "hard"
+        },
+        "goals": [
+          {
+            "position": [
+              -13.058156967163086,
+              0.15825189650058746,
+              -0.3876176178455353
+            ],
+            "radius": null
+          }
+        ],
+        "shortest_paths": null,
+        "start_room": null
+      },
+      "episode_file_sha256": "580ea7d3618451f4ffc7a1bec5074ce818f10f557f437cb8644dfd64b362e576",
+      "goal_pixel_sha256": "050d6eef53250025588b3eb235e331bd1fc4fb8728225abbf5b8380f73d16981",
+      "initial_rgb_pixel_sha256": "65f3d738b7210ed3702900b6c829d0479a493ed033ceccfc090a692a37b577c8",
+      "steps": 325,
+      "success": 1.0,
+      "spl": 0.11355314929669005,
+      "path_length_m": 49.9290802286705,
+      "new_area_m2": 25.760000000000005,
+      "start_pose": [
+        -8.536714553833008,
+        0.15825189650058746,
+        -2.571402072906494,
+        0.0,
+        0.9977719783782959,
+        0.0,
+        -0.06671661883592606
+      ],
+      "checkpoint_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+      "safety_sha256": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+      "termination": "stop",
+      "coverage": {
+        "meters_per_pixel": 0.1,
+        "radius_m": 3,
+        "fov_deg": 90,
+        "initial_view_excluded": true
+      }
+    },
+    {
+      "method": "coverage",
+      "scene": "Cantwell",
+      "episode_id": "1703",
+      "seed": 100,
+      "pythonhashseed": 0,
+      "max_steps": 500,
+      "recovery": false,
+      "episode": {
+        "episode_id": 1703,
+        "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+        "start_position": [
+          -8.536714553833008,
+          0.15825189650058746,
+          -2.571402072906494
+        ],
+        "start_rotation": [
+          0,
+          0.9977719641370336,
+          0,
+          -0.06671662148315091
+        ],
+        "info": {
+          "geodesic_distance": 5.669604301452637,
+          "difficulty": "hard"
+        },
+        "goals": [
+          {
+            "position": [
+              -13.058156967163086,
+              0.15825189650058746,
+              -0.3876176178455353
+            ],
+            "radius": null
+          }
+        ],
+        "shortest_paths": null,
+        "start_room": null
+      },
+      "episode_file_sha256": "580ea7d3618451f4ffc7a1bec5074ce818f10f557f437cb8644dfd64b362e576",
+      "goal_pixel_sha256": "050d6eef53250025588b3eb235e331bd1fc4fb8728225abbf5b8380f73d16981",
+      "initial_rgb_pixel_sha256": "65f3d738b7210ed3702900b6c829d0479a493ed033ceccfc090a692a37b577c8",
+      "steps": 82,
+      "success": 1.0,
+      "spl": 0.3996620880114725,
+      "path_length_m": 14.185994797910098,
+      "new_area_m2": 13.850000000000003,
+      "start_pose": [
+        -8.536714553833008,
+        0.15825189650058746,
+        -2.571402072906494,
+        0.0,
+        0.9977719783782959,
+        0.0,
+        -0.06671661883592606
+      ],
+      "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+      "safety_sha256": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+      "termination": "stop",
+      "coverage": {
+        "meters_per_pixel": 0.1,
+        "radius_m": 3,
+        "fov_deg": 90,
+        "initial_view_excluded": true
+      }
+    }
+  ]
+}

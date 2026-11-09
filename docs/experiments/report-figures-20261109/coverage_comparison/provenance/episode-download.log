@@ -1,0 +1,10 @@
+[
+  {
+    "name": "datasets/imagenav/gibson/v1/val/val.json.gz",
+    "compressed_bytes": 347648,
+    "bytes": 347593
+  }
+]
+SELECTED_BYTES 347648
+fgprompt-episodes/val.json.gz 347593 9357815baaf9b9afade99e75ce074ef6f25994a6a428ebde11687f2a08f57aa1
+TRANSFERRED_BYTES 507288

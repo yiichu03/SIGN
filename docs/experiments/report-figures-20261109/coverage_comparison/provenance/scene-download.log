@@ -1,0 +1,28 @@
+[
+  {
+    "name": "gibson/Cantwell.glb",
+    "compressed_bytes": 20457513,
+    "bytes": 25460240
+  },
+  {
+    "name": "gibson/Cantwell.navmesh",
+    "compressed_bytes": 6147,
+    "bytes": 17412
+  },
+  {
+    "name": "gibson/Mosquito.glb",
+    "compressed_bytes": 23262964,
+    "bytes": 26578556
+  },
+  {
+    "name": "gibson/Mosquito.navmesh",
+    "compressed_bytes": 18630,
+    "bytes": 53192
+  }
+]
+SELECTED_BYTES 43745254
+SIGN/data/scene_datasets/gibson/Cantwell.glb 25460240 30c1b56a62cca2161ca88464ec81dfe767d9e7048a9de51c0803dfed5586b43a
+SIGN/data/scene_datasets/gibson/Cantwell.navmesh 17412 159a1e085da7808dfecbb1568a3829d627b5e6fe1e6f88de481e29e7a7a56cf4
+SIGN/data/scene_datasets/gibson/Mosquito.glb 26578556 cea5b4c7b07a7750df278c99f27c9d0ad07bb37793999836d508e0751a7acc90
+SIGN/data/scene_datasets/gibson/Mosquito.navmesh 53192 3520fabfaaf6a28606b9ead5446c264ff56b188f820eedfd48a87291232702dc
+TRANSFERRED_BYTES 43761609

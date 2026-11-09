@@ -1,0 +1,66 @@
+{
+  "method": "public",
+  "scene": "Mosquito",
+  "episode_id": "3564",
+  "seed": 100,
+  "pythonhashseed": 0,
+  "max_steps": 500,
+  "recovery": false,
+  "episode": {
+    "episode_id": 3564,
+    "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+    "start_position": [
+      1.3386048078536987,
+      -2.717944860458374,
+      -8.681450843811035
+    ],
+    "start_rotation": [
+      0,
+      0.7573496486659765,
+      0,
+      0.6530095785404085
+    ],
+    "info": {
+      "geodesic_distance": 8.866971969604492,
+      "difficulty": "hard"
+    },
+    "goals": [
+      {
+        "position": [
+          0.7502249479293823,
+          -2.3179450035095215,
+          -0.6189025640487671
+        ],
+        "radius": null
+      }
+    ],
+    "shortest_paths": null,
+    "start_room": null
+  },
+  "episode_file_sha256": "a2dd133290184b42ce5b93008f071684c92ec165dd675f17fe9ae2b77cce26ec",
+  "goal_pixel_sha256": "45d41b591995b90bb8a6ba4be1c71b2e08bcf5fd1d2b05c94c8c045f4a44d4aa",
+  "initial_rgb_pixel_sha256": "7a6e44aa894e16002bc6d7a8a33c33edbded30c6cfcbffcc6d81dbc5ad9d90f4",
+  "steps": 500,
+  "success": 0.0,
+  "spl": 0.0,
+  "path_length_m": 95.63669751840644,
+  "new_area_m2": 45.74000000000001,
+  "start_pose": [
+    1.3386048078536987,
+    -2.717944860458374,
+    -8.681450843811035,
+    0.0,
+    0.7573496699333191,
+    0.0,
+    0.6530095934867859
+  ],
+  "checkpoint_sha256": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a",
+  "safety_sha256": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+  "termination": "step_limit",
+  "coverage": {
+    "meters_per_pixel": 0.1,
+    "radius_m": 3,
+    "fov_deg": 90,
+    "initial_view_excluded": true
+  }
+}

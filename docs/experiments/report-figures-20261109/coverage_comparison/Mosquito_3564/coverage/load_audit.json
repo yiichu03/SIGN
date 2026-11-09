@@ -1,0 +1,20 @@
+{
+  "missing": [],
+  "unexpected": [],
+  "safety_keys": [
+    "actor_critic.Qc.alpha_i",
+    "actor_critic.Qc.depth_net.0.weight",
+    "actor_critic.Qc.depth_net.0.bias",
+    "actor_critic.Qc.depth_net.2.weight",
+    "actor_critic.Qc.depth_net.2.bias",
+    "actor_critic.Qc.action_net.0.weight",
+    "actor_critic.Qc.action_net.0.bias",
+    "actor_critic.Qc.classifier.0.weight",
+    "actor_critic.Qc.classifier.0.bias",
+    "actor_critic.Qc.classifier.2.weight",
+    "actor_critic.Qc.classifier.2.bias"
+  ],
+  "navigation_checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+  "safety_checkpoint_sha256": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+  "native_act": "deterministic=True, eval=False; no extra USL/recovery correction"
+}

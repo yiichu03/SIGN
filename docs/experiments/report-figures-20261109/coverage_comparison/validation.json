@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "checks": "paired source/start/goal identity, step sequence, 3D path length, cumulative coverage, mask area, SPL, terminal frame",
+  "results": [
+    {
+      "case": "Cantwell_1688",
+      "method": "public",
+      "steps": 500,
+      "success": 0.0,
+      "spl": 0.0,
+      "path_length_m": 52.32847331783705,
+      "new_area_m2": 16.910000000000004
+    },
+    {
+      "case": "Cantwell_1688",
+      "method": "coverage",
+      "steps": 124,
+      "success": 1.0,
+      "spl": 0.19924324540395136,
+      "path_length_m": 19.004874934056716,
+      "new_area_m2": 16.280000000000005
+    },
+    {
+      "case": "Cantwell_1703",
+      "method": "public",
+      "steps": 325,
+      "success": 1.0,
+      "spl": 0.11355314929669005,
+      "path_length_m": 49.9290802286705,
+      "new_area_m2": 25.760000000000005
+    },
+    {
+      "case": "Cantwell_1703",
+      "method": "coverage",
+      "steps": 82,
+      "success": 1.0,
+      "spl": 0.3996620880114725,
+      "path_length_m": 14.185994797910098,
+      "new_area_m2": 13.850000000000003
+    },
+    {
+      "case": "Mosquito_3564",
+      "method": "public",
+      "steps": 500,
+      "success": 0.0,
+      "spl": 0.0,
+      "path_length_m": 95.63669751840644,
+      "new_area_m2": 45.74000000000001
+    },
+    {
+      "case": "Mosquito_3564",
+      "method": "coverage",
+      "steps": 500,
+      "success": 0.0,
+      "spl": 0.0,
+      "path_length_m": 75.99724896442785,
+      "new_area_m2": 45.24000000000001
+    }
+  ]
+}

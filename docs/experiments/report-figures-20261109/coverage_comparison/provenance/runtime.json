@@ -1,0 +1,24 @@
+{
+  "sign_commit": "55a2f9e",
+  "habitat_lab_commit": "1f7cfbdd3debc825f1f2fd4b9e1a8d6d4bc9bfc7",
+  "habitat_sim": "0.2.2",
+  "python": "3.8.20",
+  "torch": "2.0.1+cu117",
+  "torch_cuda": "11.7",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "driver": "580.178.04",
+  "vram_bytes": 8184725504,
+  "encoder_identical_tensors": 42,
+  "safety_required_keys_supplied": 11,
+  "scene_files": {
+    "Cantwell.glb": "30c1b56a62cca2161ca88464ec81dfe767d9e7048a9de51c0803dfed5586b43a",
+    "Cantwell.navmesh": "159a1e085da7808dfecbb1568a3829d627b5e6fe1e6f88de481e29e7a7a56cf4",
+    "Mosquito.glb": "cea5b4c7b07a7750df278c99f27c9d0ad07bb37793999836d508e0751a7acc90",
+    "Mosquito.navmesh": "3520fabfaaf6a28606b9ead5446c264ff56b188f820eedfd48a87291232702dc"
+  },
+  "checkpoint_files": {
+    "coverage256_125952000.pth": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+    "safety_model.pth": "b84d291e84216defb730d07d03cb6f25e3555ae447eb1e69057f3427b3c7ec31",
+    "nav_model.pth": "03fa71b514c8ee2fa272d6276499d51313a43b7d71bb31181c0150cc7c050d1a"
+  }
+}

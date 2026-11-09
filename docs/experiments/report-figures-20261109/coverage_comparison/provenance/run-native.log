@@ -1,0 +1,38 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2026-11-09 11:43:43,932 Initializing dataset ImageNav-v1
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2026-11-09 11:43:46,134 Initializing dataset ImageNav-v1
+2026-11-09 11:43:46,134 NavRLEnvX: Reward Measures=['distance_to_view'], Reward Scales=[1.0], Success Measure=view_match
+2026-11-09 11:43:46,134 initializing sim Sim-Drone
+2026-11-09 11:43:48,637 Initializing task Nav-Drone
+2026-11-09 11:43:48,637 goal sensor bias: [0, 0, 0]
+2026-11-09 11:43:48,644 Overwriting CNN input size of depth: (128, 128)
+2026-11-09 11:43:48,645 Overwriting CNN input size of imagegoal_sensor_v2: (128, 128)
+2026-11-09 11:43:48,645 Overwriting CNN input size of rgb: (128, 128)
+2026-11-09 11:43:48,646 Type of observation encoder: <class 'src.models.EarlyFuseCNNEncoder'>
+2026-11-09 11:43:48,646 Create goal encoder : None
+2026-11-09 11:43:48,646 Create visual inputs encoder
+2026-11-09 11:43:48,646 observation_space kyes: odict_keys(['depth', 'imagegoal_sensor_v2', 'rgb'])
+2026-11-09 11:43:48,646 visual_obs_inputs: ['rgb', 'imagegoal_sensor_v2']
+2026-11-09 11:43:48,646 rgb observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-11-09 11:43:48,646 imagegoal_sensor_v2 observation_space: Box(0, 255, (128, 128, 3), uint8)
+2026-11-09 11:43:48,653 early fuse encoder(type: fast_resnet9, in: (6, 128, 128), out: (32, 4, 4))
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+100%|██████████| 1/1 [00:01<00:00,  1.28s/it]
+100%|██████████| 1/1 [00:01<00:00,  1.28s/it]
+2026-11-09 11:43:50,973 Average episode reward: 7.9606
+2026-11-09 11:43:50,973 Average episode distance_to_goal: 0.1147
+2026-11-09 11:43:50,973 Average episode success: 1.0000
+2026-11-09 11:43:50,973 Average episode spl: 0.1992
+2026-11-09 11:43:50,973 Average episode soft_spl: 0.1932
+2026-11-09 11:43:50,973 Average episode distance_to_view: 0.2276
+2026-11-09 11:43:50,973 Average episode view_match: 1.0000
+2026-11-09 11:43:50,973 Average episode view_angle: 6.4671
+2026-11-09 11:43:50,973 Average episode collisions.count: 27.0000
+/home/liuyi/projects/ceg5002/A_final/.env-sign/lib/python3.8/site-packages/gym/spaces/box.py:78: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
