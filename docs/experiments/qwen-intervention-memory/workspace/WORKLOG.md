@@ -2753,3 +2753,20 @@ RUNBOOK更新入口为三组同页对照，STATUS增加使用说明。用户在R
 ## 2026-11-09T08:27:15+08:00 [LATEST-PUBLICATION-HASH-LINK-VALIDATION]
 
 - 发布前检查：26份原资料副本SHA正确，8a94adf运行树124源文件SHA及commit全匹配，旧34工作树受保护代码不变；WORKLOG发布副本与根源字节相同且保持上一提交前缀。初次仅用本地exists检查链接遇13个缺失路径；查明为继承sparse-checkout省略，git cat-file逐一确认13个均在HEAD，69链接最终通过，无需修改原路径或拉入运行目录。记录logs/github_latest_publish_20261109/publication_checks.json，本轮仅文档/结果发布，无新算法修改或GPU实验结果。
+
+
+## 2026-11-09T08:28:42+08:00 [LATEST-PUBLICATION-PUSH-20F9B50-VERIFIED]
+
+- 已执行普通push至yiichu03/SIGN的phase2/qwen-intervention-memory，远端ls-remote确认20f9b503df0117a9b7bfc828cad205d088326c2c与本地HEAD一致。代码2aaa3bc/冻结协议8a94adf及20f9b50资料均可查阅；提交含六组完整4200结果、50400配对行、P1–P4实现/138测试与当前PBS等待状态、根文档生成副本及首页导航。
+- Git工作树已跟踪文件干净，仅原data软链未跟踪。CSV保留原证据CRLF，普通diff --check将其CR视尾空白；使用单次core.whitespace包含cr-at-eol重新检查通过，未改CSV字节/哈希或仓库全局配置。27份发布文件哈希校验通过。没有改124运行源文件或旧34树保护文件，无训练启停/实验重复提交。
+- 本地回执logs/github_latest_publish_20261109/push_receipt.json。本条为推送成功后的本地追加，GitHub的WORKLOG截至上一验证条目，下一次资料同步追加本条；不为让提交包含自身SHA制造循环提交。PBS仍不可达，等待器保持原授权流程，无新job ID。
+
+
+## 2026-11-09T08:55:54+08:00 [REPORT-FIGURES-CPU-EXPORT-20261109]
+
+- 用户要求在登录节点不用PBS从既有记录导出报告/PPT首版：Coverage256训练SR/SPL/reward，两三个recovery-off500步失败的目标/4–6RGB/轨迹覆盖/累计面积，一例E2真实恢复；随后明确图片push到yiichu03。本批选择两个失败主例，全部CPU、单线程数值库/nice10，不重采样、不模型推理、不qsub、不启停既有训练/等待器。独立输出logs/report_figures_20261109/artifacts，发布树SIGN-qwen-intervention-memory，仅新增docs资料。
+- 两例核验：Mosquito3564、Cantwell1688各500动作/501状态，success0、step_limit=True、STOP=False，原goal/pose/result与recovery-off参考一致。各6帧自完整原H264视频右侧观测区解码，单独goal PNG像素SHA核对。逐步面积单调、初始0、delta累计与final_seen减initial_seen乘mpp²一致。地图保存首末相同；Mosquito高度差0.297m注明XZ代理。后250步分别37.99m/0.12m²、0m/0m²，不把持续受阻当重复搜索。
+- E2选Swormville3216的event_0000101：原CURRENT/LEFT/RIGHT逐文件SHA和roles正确，softmax由logits复算一致，50.9446/20.3526/28.7028%。与规则在decision418之前动作/位姿逐值相同、候选SHA相同，LEFT实际14命令与计划全等；规则RIGHT；E2step482success1/SPL.308381，规则500失败。命令与位姿摘要SHA核验；原恢复后RGB没保存，只用原轨迹/真实动作/标量RGB_change展示后果。已导输入/概率/实际速度图、配对轨迹、before-after位移曲线与CSV/原事件。
+- 训练原始TB两文件解析，original61,609点到126.175232M、continuation22,777点到172.599296M；主图原段到125.952M，CSV保留原尾部，原/续分开250日志点平滑。指标仍原50update窗口的完成训练episode滚动统计，非固定训练集再评估；reward为原导航reward、不含覆盖bonus。共84,386行，源SHA保留。
+- 首次Matplotlib因旧3.3不支持layout='constrained'失败；改constrained_layout=True与Figure.text，未升级环境。训练图footnote被画布边界裁掉，改savefig bbox_inches='tight'后重导并目视核验。地图空白边缘过多，按保存栅格占据范围裁显示，保持世界坐标/等比例/面积原值。两失败/E2/训练总图均目视检查。47PNG全部解码、脚本AST、CSV步数、原off配对与模型动作/概率检查通过。第一次误读大reference JSON导致输出截断，后续只读所需字段；无原证据修改。
+- 输出含PNG/PDF/SVG、CSV、metadata、SHA/source manifest与复现脚本，约23MB；未纳入checkpoint/场景/TB二进制/完整视频，无ZIP。仓库首页与根STATUS/RUNBOOK更新，下一步普通push并核对远端SHA。

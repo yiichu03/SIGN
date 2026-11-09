@@ -1,5 +1,6 @@
 本分支为 `phase2/qwen-intervention-memory`，最新资料更新于2026-11-09。
 
+- [报告/PPT配图第一版：训练曲线、两例500步失败与E2恢复](docs/experiments/report-figures-20261109/README.md)，含PNG/PDF与原始CSV。
 - [P1–P4短时视觉历史介入实验](docs/experiments/qwen-intervention-memory/README.md)：实现、配置和138项CPU测试已完成；PBS连接失败，GPU短测和正式验证等待提交。
 - [E1–E6完整4200验证结果](docs/experiments/qwen-six-ablation/README.md)：六组均完成；含SR/SPL、Qwen选择、配对救回/误伤及动作前缀证据。
 - [当前工作区状态与索引](docs/experiments/qwen-intervention-memory/workspace/STATUS.md)。

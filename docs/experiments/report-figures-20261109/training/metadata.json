@@ -1,0 +1,56 @@
+{
+  "method": "Coverage256",
+  "native_reward_window_updates": 50,
+  "ppo_rollout": 256,
+  "num_envs": 8,
+  "extra_plot_smoothing_logs": 250,
+  "steps_per_update": 2048,
+  "smoothing_environment_steps": 512000,
+  "continuation_step": 125952000,
+  "continuation": "Weights only; optimizer and episodes restarted. Lines do not bridge restart.",
+  "reward": "Original environment navigation reward; excludes coverage bonus.",
+  "raw_csv": "All points and both phases; original post-checkpoint tail retained, but omitted from the continued main plot.",
+  "metric_scope": "Rolling completed training episodes, not validation SR/SPL and not a fixed training-set evaluation.",
+  "sources": [
+    {
+      "path": "/scratch/e1538633/liuyi/SIGN-frozen-rollout-coverage/results/gibson_rollout_coverage_20261027/train_personal_8env/tb/events.out.tfevents.1793052353.GN-A40-029.309225.0",
+      "sha256": "a5f3b3d420178d14817e66507de468c84a96470e4210b3064a91981c65e09b10",
+      "bytes": 122082952,
+      "phase": "original"
+    },
+    {
+      "path": "/scratch/e1538633/liuyi/SIGN-continue-coverage256/results/continuation_20261103/coverage256/train/tb/events.out.tfevents.1793641444.GN-A40-099.462128.0",
+      "sha256": "c03f79971ae7b7a23379e8d83505f1c25a97471bc2c8ddf97f911ae332b9bf10",
+      "bytes": 43549001,
+      "phase": "continuation"
+    }
+  ],
+  "phases": {
+    "original": {
+      "points": 61609,
+      "first_step": 2048,
+      "last_step": 126175232,
+      "last_record": {
+        "phase": "original",
+        "step": 126175232,
+        "wall_time_unix": 1793408493.8671355,
+        "sr": 0.8162983655929565,
+        "spl": 0.47129660844802856,
+        "navigation_reward": 6.9766058921813965
+      }
+    },
+    "continuation": {
+      "points": 22777,
+      "first_step": 125954048,
+      "last_step": 172599296,
+      "last_record": {
+        "phase": "continuation",
+        "step": 172599296,
+        "wall_time_unix": 1793886314.3216858,
+        "sr": 0.8609022498130798,
+        "spl": 0.48892447352409363,
+        "navigation_reward": 7.399106979370117
+      }
+    }
+  }
+}

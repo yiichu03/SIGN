@@ -1,0 +1,165 @@
+{
+  "id": "event_0000101",
+  "env_index": 2,
+  "episode": [
+    "data/scene_datasets/gibson/Swormville.glb",
+    "3216"
+  ],
+  "step": 394,
+  "evidence": {
+    "forward_fraction": 1.0,
+    "median_rgb_change": 0.008870833115296406,
+    "endpoint_rgb_change": 0.014677255811544054,
+    "yaw_compensated": true,
+    "endpoint_used": true,
+    "endpoint_overlap": 1.0
+  },
+  "attempt": 2,
+  "image": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.png",
+  "image_sha256": "7690fabcb95efdcd5697ff2cf5ce29d31887ae51343e5f4dc53fd107cd6dd067",
+  "active_survey": true,
+  "decision_step": 418,
+  "view_steps": {
+    "left": 400,
+    "right": 412,
+    "forward": 418
+  },
+  "survey_command_steps": 24,
+  "view_files": {
+    "goal": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.goal.png",
+      "sha256": "0b18fad69dc0fe994ec705846e9238be64fb45f61cd53dd64f81c759fa281cb2"
+    },
+    "left": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.left.png",
+      "sha256": "be02170e486dbd3e2f22d486db33a371f54a1d39e546e50e5a292bb079a57086"
+    },
+    "forward": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.forward.png",
+      "sha256": "180a622f4ab76c4d70fad457b6e61f6b7fe60131f46b18eef34307dc93fe9b7f"
+    },
+    "right": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.right.png",
+      "sha256": "939d81f86d8385a4c7afdafa50113e9173877e55d7ce1b893d1e305ffc229aa3"
+    }
+  },
+  "commanded_view_yaw": 90,
+  "memory_retrieval": [],
+  "memory_prompt_count": 0,
+  "request": {
+    "id": "event_0000101",
+    "task": "no_goal_arbitration",
+    "images": [
+      {
+        "role": "CURRENT",
+        "image": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.forward.png",
+        "image_sha256": "180a622f4ab76c4d70fad457b6e61f6b7fe60131f46b18eef34307dc93fe9b7f"
+      },
+      {
+        "role": "LEFT",
+        "image": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.left.png",
+        "image_sha256": "be02170e486dbd3e2f22d486db33a371f54a1d39e546e50e5a292bb079a57086"
+      },
+      {
+        "role": "RIGHT",
+        "image": "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.right.png",
+        "image_sha256": "939d81f86d8385a4c7afdafa50113e9173877e55d7ce1b893d1e305ffc229aa3"
+      }
+    ],
+    "context": "{\"candidate_angles_command_deg\": {\"LEFT\": 90, \"RIGHT\": -90}, \"current_step\": 418}"
+  },
+  "visual_input_valid": true,
+  "planned_actions": [
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ]
+  ],
+  "mode": "qwen",
+  "choice": "A",
+  "model": {
+    "source": "vlm",
+    "reason": "model_argmax",
+    "raw": {
+      "probabilities": [
+        0.5094457587968052,
+        0.2035262999991414,
+        0.2870279412040534
+      ],
+      "labels": [
+        "left",
+        "right",
+        "keep"
+      ],
+      "valid": true,
+      "error": null,
+      "logits": [
+        22.334739685058594,
+        21.417211532592773,
+        21.760995864868164
+      ],
+      "candidate_mass": 0.9750460982322693,
+      "id": "event_0000101",
+      "prompt_version": "0192950fbb6ffa4de0a867156d699b474ae13924876eb80a70c16e028da04404"
+    },
+    "semantic_choice": "left",
+    "default_rule": "B",
+    "differs_from_rule": true,
+    "shadow_without_memory": null,
+    "shadow_choice": null,
+    "memory_changed_decision": false,
+    "rule_memory": null
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "event_0000101",
+    "episode": [
+      "data/scene_datasets/gibson/Swormville.glb",
+      "3216"
+    ],
+    "step": 432,
+    "rgb_change": 0.23996758460998535,
+    "note": "Visual change only; not task success or measured displacement"
+  }
+]

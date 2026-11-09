@@ -6,8 +6,19 @@
 
 - TensorBoard续训显示排查（2026-11-03T23:30:50+08:00）：16200→6200正常，配置14阶段；首次先读取原训练，API后续已出现coverage256/continue_latest，其余运行续训文件也在更新；coverage32/B仍Q且无续训事件。脚本已改下次启动优先续训，路径/命名不变、兼容现有服务复用，当前会话未重启。证据logs/training_continuation_20261103/full_history_load_diagnosis_20261103.json。
 
+<a id="report-figures-20261109"></a>
+## 报告/PPT配图第一版：CPU导出，GitHub资料发布
+
+2026-11-09已按用户要求从既有记录导出，不运行导航/Qwen，不提交PBS。目录SIGN-qwen-intervention-memory/docs/experiments/report-figures-20261109；本地源logs/report_figures_20261109/artifacts。47张PNG及PDF/SVG/CSV、原始事件和来源哈希，用户要求push yiichu03同名phase2/qwen-intervention-memory分支。
+
+Coverage256训练SR/SPL/原导航reward曲线覆盖2,048–172,599,296步；原训练61,609点、续训22,777点，125.952M weights-continuation明确分段，50-update原生日志＋250点显示平滑，reward不含coverage bonus。失败案例Mosquito3564与Cantwell1688均同125.952M/recovery-off/500步，目标图＋各6步标记RGB＋轨迹覆盖图＋501行逐步面积数据；与原off目标/位姿/结局一致。Mosquito后250步移动37.99m仅新增0.12m²，Cantwell同期位移/新增都0，受阻与重复探索分开。
+
+E2 Swormville3216第二次事件：394触发/418仲裁，Qwen LEFT50.9446%（RIGHT20.3526/KEEP28.7028），规则RIGHT；到418的位姿/动作和候选图一致，实际6转＋8前进匹配，E2于482成功、规则500失败。只显示真实输入和日志；E2无恢复后连续RGB，后续用记录轨迹/动作/观测变化，未重渲染或借其他方法画面。图内英文，README中文口径；用户之后提供PPT可再按版式调整。WORKLOG：REPORT-FIGURES-CPU-EXPORT-20261109。
+
 <a id="qwen-intervention-memory-20261109"></a>
 ## 当前任务：P1–P4独立实现、短测后并行正式4200
+
+最新GitHub发布：`yiichu03/SIGN` → `phase2/qwen-intervention-memory`，提交`20f9b503df0117a9b7bfc828cad205d088326c2c`（2026-11-09已push并核对远端SHA）；完整E1–E6结果及P1–P4当前状态均在该分支README入口。运行代码仍为8a94adf。
 
 用户于11月9日批准上一轮建议的四组：P1扫描后固定LEFT、P2扫描后KEEP、P3当前RGB判断是否介入、P4同版加入最近3张历史RGB；先完成实验，汇报措辞稍后讨论。独立分支phase2/qwen-intervention-memory基于3f7d445，原125.952M权重/6env/seed100/hash0/max500。P3/P4在扫描前用同prompt与同16步实际动作，P4图片t-16/-11/-5/t；progress交回SIGN，blocked/unknown执行原matched规则；每次判断消耗两次机会预算之一，veto冷却64，不重复无上限调用。P4保存未执行的当前图shadow，统计是否改变介入。
 

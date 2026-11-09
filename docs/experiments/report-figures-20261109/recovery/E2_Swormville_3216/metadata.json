@@ -1,0 +1,90 @@
+{
+  "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+  "episode_id": "3216",
+  "event": "event_0000101",
+  "trigger_observation_step": 394,
+  "decision_observation_step": 418,
+  "recovery_end_step": 432,
+  "model": "Qwen3.5-2B FP32",
+  "model_input_roles": [
+    "CURRENT",
+    "LEFT",
+    "RIGHT"
+  ],
+  "goal_image_used_by_model": false,
+  "goal_image": "goal_for_reader_only.png is navigation target context, NOT part of E2 model request.",
+  "probabilities": {
+    "probabilities": [
+      0.5094457587968052,
+      0.2035262999991414,
+      0.2870279412040534
+    ],
+    "labels": [
+      "left",
+      "right",
+      "keep"
+    ],
+    "valid": true,
+    "error": null,
+    "logits": [
+      22.334739685058594,
+      21.417211532592773,
+      21.760995864868164
+    ],
+    "candidate_mass": 0.9750460982322693,
+    "id": "event_0000101",
+    "prompt_version": "0192950fbb6ffa4de0a867156d699b474ae13924876eb80a70c16e028da04404"
+  },
+  "actual_choice": "LEFT",
+  "matched_rule_choice": "RIGHT",
+  "same_action_pose_prefix": true,
+  "same_candidate_images": true,
+  "results": {
+    "E2": {
+      "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+      "episode_id": "3216",
+      "steps": 482,
+      "success": 1.0,
+      "spl": 0.3083811308630348,
+      "view_match": 1.0,
+      "navigation_reward": 9.179879558291754,
+      "collisions": 213.0,
+      "goal_sha256": "8fef093e5388f7fe7345fc98ae86939173668770fb068d6a79dfe06224daa0ac",
+      "start_position": [
+        5.470954418182373,
+        0.13989654183387756,
+        1.134909749031067
+      ],
+      "pose_trace_sha256": "0a6a1f49da07700b2cdc116cfa92d09a2bb5733c2086760b6bcf5f9b4c1a1052",
+      "actual_actions_sha256": "3b5586efc00414d828b890e7fa4b8485ac6f00226e5dfee2eed90a8dc4f00b90",
+      "new_area_m2": 14.680000000000003,
+      "new_m2_per_step": 0.030456431535269717
+    },
+    "rule": {
+      "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+      "episode_id": "3216",
+      "steps": 500,
+      "success": 0.0,
+      "spl": 0.0,
+      "view_match": 0.0,
+      "navigation_reward": -1.3230938911437877,
+      "collisions": 218.0,
+      "goal_sha256": "8fef093e5388f7fe7345fc98ae86939173668770fb068d6a79dfe06224daa0ac",
+      "start_position": [
+        5.470954418182373,
+        0.13989654183387756,
+        1.134909749031067
+      ],
+      "pose_trace_sha256": "4e7e291e54de6eba7fb272d5a82e75b44daa8da824e5e17fbbcdb154c2972871",
+      "actual_actions_sha256": "98d13819ee38c5998a43a6d51d58e6a20d3279212e5e2c6b41091b7ce7668959",
+      "new_area_m2": 9.840000000000002,
+      "new_m2_per_step": 0.019680000000000003
+    }
+  },
+  "post_recovery_rgb_available": false,
+  "limitation": "No continuous post-recovery RGB was saved for E2; post-action behavior uses original poses/actions and scalar RGB-change outcome. No resimulation or substituted frames.",
+  "conclusion": "One selected paired rescue with a real model action change. It does not establish a population-level advantage or explain the model intent.",
+  "units": "Commands are linear m/s and angular deg/s, time_step=1s; commanded motion is distinct from measured displacement.",
+  "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+  "checkpoint_steps": 125952000
+}

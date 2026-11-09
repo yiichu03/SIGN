@@ -1020,3 +1020,13 @@ P1扫描后固定LEFT，P2扫描后交回SIGN，均不启动Qwen；P3/P4扫描�
 现有批次logs/qwen_intervention_memory_20261109/runtime_8a94adf已由外部launch_once.py等待服务恢复。检查launch_state.json、check_submission.json、formal_submissions.json及进程后再操作；不要启动第二个等待器。当前暂无提交成功回执，PBS连接失败并非额度耗尽证据。01:58失败原命令/返回码保存在check_submission_attempts.jsonl。账户解析曾失败、现已恢复；系统/PBS问题不通过改训练源码解决。138项CPU测试通过，真实GPU输入/概率/旧控制器回归仍待check，不能用CPU成功替代。
 
 E1–E6完整结果现位于logs/qwen_six_ablation_20261108/runtime_e9396ac/formal_review，六组均F/Exit0；旧RUNBOOK“CPU汇总等待”仅为提交时状态。需要再次独立审计时使用全新报告目录，不覆盖原结果。
+
+
+<a id="report-figures-cpu"></a>
+## 已有导航记录导出报告配图（2026-11-09）
+
+入口logs/report_figures_20261109/{export_training.py,export_cases.py}，发布脚本副本SIGN-qwen-intervention-memory/docs/experiments/report-figures-20261109/scripts。执行时设置OMP_NUM_THREADS=1、OPENBLAS_NUM_THREADS=1、MKL_NUM_THREADS=1，以envs/sign-baseline/bin/python运行，加--workspace /scratch/e1538633/liuyi --out /absolute/new_output；只读已存在TensorBoard/NPZ/视频/事件，不调用Habitat、Qwen或PBS。登录节点仅限此类轻量CPU后处理；新采集/模型推理仍用计算节点。
+
+训练导出保留原/续训全部84,386日志点，主图原段截至125.952M并独立画续段，不跨重置平滑；原reward标签仅导航奖励。视频frame0=reset，动作t从obs[t-1]到obs[t]，取128×128右侧观测区，PNG保留解码图、单独labelled版加step。地图world X为列、Z为行、origin lower；只裁空白边缘，面积用原coverage_new_area_m2，初始视野不计收益；原0.1m/3m/90°不改统计口径。
+
+E2 commands[k]从pose[k]到pose[k+1]；决策观测418对应第419个实际动作，6转到424、8前进到432。线速度归一化转物理为(a+1)*0.125m/s，角速度a*15deg/s，dt1s。不可把命令位移当实际位移，不把候选softmax称成功率。连续恢复后RGB不存在则记录缺口，保留原候选/概率和轨迹证据，不合成帧。图片/CSV/metadata与源SHA在新资料目录；ZIP按用户要求才生成。

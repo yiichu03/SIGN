@@ -1,0 +1,31 @@
+{
+  "time": "2026-11-09T08:54:13.830152+08:00",
+  "png_files_decoded": 47,
+  "failure_cases": 2,
+  "rgb_per_failure": 6,
+  "step_rows_per_failure": 501,
+  "original_recovery_off_goal_pose_metrics_match": true,
+  "area_increment_sum_and_seen_mask_checks": true,
+  "E2_input_sha_and_role_order_verified": true,
+  "E2_candidate_softmax_recomputed": true,
+  "E2_actual_commands_match_selected_plan": true,
+  "E2_rule_prefix_pose_and_action_exact": true,
+  "E2_rule_input_images_equal": true,
+  "training_csv_records": 84386,
+  "training_max_step": 172599296,
+  "CPU_only": true,
+  "no_PBS_submission": true,
+  "no_navigation_or_VLM_inference": true,
+  "script_AST_valid": true,
+  "visual_review": [
+    "both case overviews",
+    "E2 recovery overview",
+    "training overview"
+  ],
+  "limitations": [
+    "E2 continuous post-recovery RGB unavailable; original poses/actions used",
+    "Failure-video RGB is a lossy 128x128 observation crop",
+    "Training reward excludes exploration bonus"
+  ],
+  "first_attempt_issue": "Installed Matplotlib 3.3 rejected layout=constrained; changed to constrained_layout=True and reran successfully; no environment upgrade."
+}

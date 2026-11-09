@@ -1,0 +1,122 @@
+{
+  "id": "event_0000102",
+  "env_index": 2,
+  "episode": [
+    "data/scene_datasets/gibson/Swormville.glb",
+    "3216"
+  ],
+  "step": 394,
+  "evidence": {
+    "forward_fraction": 1.0,
+    "median_rgb_change": 0.008870833115296406,
+    "endpoint_rgb_change": 0.014677255811544054,
+    "yaw_compensated": true,
+    "endpoint_used": true,
+    "endpoint_overlap": 1.0
+  },
+  "attempt": 2,
+  "candidates": [
+    {
+      "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.candidate_left.png",
+      "image_sha256": "8a24ffe61d93ec7e7e3f3eb76c1bdb3a0f0a3aebb4d03b77363b886b32e3126c",
+      "id": "event_0000102:left",
+      "side": "left"
+    },
+    {
+      "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.candidate_right.png",
+      "image_sha256": "86d5ae21f8d5a418a3b61863fa47eaf593908665e31baaac54fccf477bac132d",
+      "id": "event_0000102:right",
+      "side": "right"
+    }
+  ],
+  "image": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.png",
+  "image_sha256": "7690fabcb95efdcd5697ff2cf5ce29d31887ae51343e5f4dc53fd107cd6dd067",
+  "active_survey": true,
+  "decision_step": 418,
+  "view_steps": {
+    "left": 400,
+    "right": 412,
+    "forward": 418
+  },
+  "survey_command_steps": 24,
+  "view_files": {
+    "goal": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.goal.png",
+      "sha256": "0b18fad69dc0fe994ec705846e9238be64fb45f61cd53dd64f81c759fa281cb2"
+    },
+    "left": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.left.png",
+      "sha256": "be02170e486dbd3e2f22d486db33a371f54a1d39e546e50e5a292bb079a57086"
+    },
+    "forward": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.forward.png",
+      "sha256": "180a622f4ab76c4d70fad457b6e61f6b7fe60131f46b18eef34307dc93fe9b7f"
+    },
+    "right": {
+      "path": "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/inputs/event_0000102.right.png",
+      "sha256": "939d81f86d8385a4c7afdafa50113e9173877e55d7ce1b893d1e305ffc229aa3"
+    }
+  },
+  "commanded_view_yaw": 90,
+  "planned_actions": [
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ],
+    [
+      0.6000000238418579,
+      0.0
+    ]
+  ],
+  "mode": "rule",
+  "choice": "B",
+  "model": {}
+}

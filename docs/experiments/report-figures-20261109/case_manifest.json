@@ -1,0 +1,241 @@
+{
+  "failures": [
+    {
+      "scene_id": "data/scene_datasets/gibson/Mosquito.glb",
+      "episode_id": "3564",
+      "title": "Repeated revisits with little new coverage",
+      "steps": 500,
+      "success": false,
+      "recovery": "off",
+      "checkpoint_training_steps": 125952000,
+      "screenshot_steps": [
+        0,
+        184,
+        278,
+        371,
+        465,
+        500
+      ],
+      "frame_source": "Original recorded H264 video, cropped right 128x128 panel; lossy recorded RGB, no generative modification.",
+      "pixel_goal_sha256": "45d41b591995b90bb8a6ba4be1c71b2e08bcf5fd1d2b05c94c8c045f4a44d4aa",
+      "reference_pose_hash_equal": true,
+      "initial_map_equals_final_map": true,
+      "height_range_m": 0.296628475189209,
+      "coverage_mpp": 0.1,
+      "coverage_radius_m": 3,
+      "coverage_fov_deg": 90,
+      "coverage": "Saved XZ fog-of-war proxy at original resolution; initial view excluded from curve and shown dark blue.",
+      "initial_area_m2": 3.14,
+      "final_new_area_m2": 45.85000000000001,
+      "path_length_m": 82.68680572509766,
+      "area_after_250_m2": 0.11999999999999744,
+      "path_after_250_m": 37.99024963378906,
+      "final_goal_distance_m": 8.755809783935547,
+      "interpretation": "Purposefully selected behavior evidence, not population prevalence or a causal claim about reward.",
+      "source_trace": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/traces/Mosquito/3564.npz",
+      "source_video": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/videos/Mosquito/3564.mp4"
+    },
+    {
+      "scene_id": "data/scene_datasets/gibson/Cantwell.glb",
+      "episode_id": "1688",
+      "title": "Persistent local stagnation after earlier exploration",
+      "steps": 500,
+      "success": false,
+      "recovery": "off",
+      "checkpoint_training_steps": 125952000,
+      "screenshot_steps": [
+        0,
+        120,
+        198,
+        250,
+        375,
+        500
+      ],
+      "frame_source": "Original recorded H264 video, cropped right 128x128 panel; lossy recorded RGB, no generative modification.",
+      "pixel_goal_sha256": "cd22ddf07caede1cd4a8dddcc7e0f88783588409272b78403cbc2f646c51c3bd",
+      "reference_pose_hash_equal": true,
+      "initial_map_equals_final_map": true,
+      "height_range_m": 0.0,
+      "coverage_mpp": 0.1,
+      "coverage_radius_m": 3,
+      "coverage_fov_deg": 90,
+      "coverage": "Saved XZ fog-of-war proxy at original resolution; initial view excluded from curve and shown dark blue.",
+      "initial_area_m2": 1.6,
+      "final_new_area_m2": 17.620000000000005,
+      "path_length_m": 28.552200317382812,
+      "area_after_250_m2": 0.0,
+      "path_after_250_m": 0.0,
+      "final_goal_distance_m": 6.14034366607666,
+      "interpretation": "Purposefully selected behavior evidence, not population prevalence or a causal claim about reward.",
+      "source_trace": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/traces/Cantwell/1688.npz",
+      "source_video": "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/videos/Cantwell/1688.mp4"
+    }
+  ],
+  "recovery": {
+    "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+    "episode_id": "3216",
+    "event": "event_0000101",
+    "trigger_observation_step": 394,
+    "decision_observation_step": 418,
+    "recovery_end_step": 432,
+    "model": "Qwen3.5-2B FP32",
+    "model_input_roles": [
+      "CURRENT",
+      "LEFT",
+      "RIGHT"
+    ],
+    "goal_image_used_by_model": false,
+    "goal_image": "goal_for_reader_only.png is navigation target context, NOT part of E2 model request.",
+    "probabilities": {
+      "probabilities": [
+        0.5094457587968052,
+        0.2035262999991414,
+        0.2870279412040534
+      ],
+      "labels": [
+        "left",
+        "right",
+        "keep"
+      ],
+      "valid": true,
+      "error": null,
+      "logits": [
+        22.334739685058594,
+        21.417211532592773,
+        21.760995864868164
+      ],
+      "candidate_mass": 0.9750460982322693,
+      "id": "event_0000101",
+      "prompt_version": "0192950fbb6ffa4de0a867156d699b474ae13924876eb80a70c16e028da04404"
+    },
+    "actual_choice": "LEFT",
+    "matched_rule_choice": "RIGHT",
+    "same_action_pose_prefix": true,
+    "same_candidate_images": true,
+    "results": {
+      "E2": {
+        "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+        "episode_id": "3216",
+        "steps": 482,
+        "success": 1.0,
+        "spl": 0.3083811308630348,
+        "view_match": 1.0,
+        "navigation_reward": 9.179879558291754,
+        "collisions": 213.0,
+        "goal_sha256": "8fef093e5388f7fe7345fc98ae86939173668770fb068d6a79dfe06224daa0ac",
+        "start_position": [
+          5.470954418182373,
+          0.13989654183387756,
+          1.134909749031067
+        ],
+        "pose_trace_sha256": "0a6a1f49da07700b2cdc116cfa92d09a2bb5733c2086760b6bcf5f9b4c1a1052",
+        "actual_actions_sha256": "3b5586efc00414d828b890e7fa4b8485ac6f00226e5dfee2eed90a8dc4f00b90",
+        "new_area_m2": 14.680000000000003,
+        "new_m2_per_step": 0.030456431535269717
+      },
+      "rule": {
+        "scene_id": "data/scene_datasets/gibson/Swormville.glb",
+        "episode_id": "3216",
+        "steps": 500,
+        "success": 0.0,
+        "spl": 0.0,
+        "view_match": 0.0,
+        "navigation_reward": -1.3230938911437877,
+        "collisions": 218.0,
+        "goal_sha256": "8fef093e5388f7fe7345fc98ae86939173668770fb068d6a79dfe06224daa0ac",
+        "start_position": [
+          5.470954418182373,
+          0.13989654183387756,
+          1.134909749031067
+        ],
+        "pose_trace_sha256": "4e7e291e54de6eba7fb272d5a82e75b44daa8da824e5e17fbbcdb154c2972871",
+        "actual_actions_sha256": "98d13819ee38c5998a43a6d51d58e6a20d3279212e5e2c6b41091b7ce7668959",
+        "new_area_m2": 9.840000000000002,
+        "new_m2_per_step": 0.019680000000000003
+      }
+    },
+    "post_recovery_rgb_available": false,
+    "limitation": "No continuous post-recovery RGB was saved for E2; post-action behavior uses original poses/actions and scalar RGB-change outcome. No resimulation or substituted frames.",
+    "conclusion": "One selected paired rescue with a real model action change. It does not establish a population-level advantage or explain the model intent.",
+    "units": "Commands are linear m/s and angular deg/s, time_step=1s; commanded motion is distinct from measured displacement.",
+    "source_commit": "e9396ac0c989ea515edcbd7f8d0085be38f818e7",
+    "checkpoint_steps": 125952000
+  },
+  "sources": {
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/traces/Mosquito/3564.npz": {
+      "sha256": "5bae45636614f0e6a339efec798726bcbaab3b6b0c5ea3a1ff5ee54caf97e339",
+      "bytes": 27468
+    },
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/videos/Mosquito/3564.mp4": {
+      "sha256": "9346f5102d96bf629abc9f2bf1231ac194d61281118cf0c5f773284bda597122",
+      "bytes": 928528
+    },
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/videos/Mosquito/3564.goal.png": {
+      "sha256": "539643cee2ad51cac78f9aa024a3f732be04cc7bfdeb54ca522d68aec48982b7",
+      "bytes": 28283
+    },
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/traces/Cantwell/1688.npz": {
+      "sha256": "d274e33fc02bfc89f0b70bdc677c298bdc8b97b50141ddf0fffeedd8a347c922",
+      "bytes": 22763
+    },
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/videos/Cantwell/1688.mp4": {
+      "sha256": "e7a1951980f32d60cfd3f61bd4183fd9bb079808e0495120c235cf7e402875bd",
+      "bytes": 528559
+    },
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/videos/Cantwell/1688.goal.png": {
+      "sha256": "0a01ff57d2063afdaf9168f6aee0e5fc461403466192eba22917732e5bdc3bdb",
+      "bytes": 18525
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/events.jsonl": {
+      "sha256": "af97c8a9e160572da5cad26f7edd283457adf120470f793a71e1d1e293b749b3",
+      "bytes": 532567
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/native/recovery/events.jsonl": {
+      "sha256": "cde08b1663ff43a8910c3151a8ac70cdb3e8c57d7e4b7f71294fe830d2a55e26",
+      "bytes": 402537
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/audit_traces/Swormville_3216.npz": {
+      "sha256": "2181cfe87f510da0350eda98f8524ec0eb56cb241d01cfc869231d3c5a4b2c1d",
+      "bytes": 9819
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/episodes/worker_3566775.jsonl": {
+      "sha256": "e0ffca2545a206522a927d65f943cbe7e6777c2df8fb93189ff547cf5481683d",
+      "bytes": 377857
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/audit_traces/Swormville_3216.npz": {
+      "sha256": "8c182d4fb3d006fb8ae4ff03d5058aa80671870df5d81b5755bc1851c206584b",
+      "bytes": 10257
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_recovery_iteration_20261108/expanded_v2/expanded03_full/full_rule/episodes/worker_1209840.jsonl": {
+      "sha256": "22012453e018c8a5458667e3510d5bad787ef402c6e6e3787c98c734cf542001",
+      "bytes": 377769
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.forward.png": {
+      "sha256": "180a622f4ab76c4d70fad457b6e61f6b7fe60131f46b18eef34307dc93fe9b7f",
+      "bytes": 20734
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.left.png": {
+      "sha256": "be02170e486dbd3e2f22d486db33a371f54a1d39e546e50e5a292bb079a57086",
+      "bytes": 24550
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.right.png": {
+      "sha256": "939d81f86d8385a4c7afdafa50113e9173877e55d7ce1b893d1e305ffc229aa3",
+      "bytes": 21073
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/inputs/event_0000101.goal.png": {
+      "sha256": "0b18fad69dc0fe994ec705846e9238be64fb45f61cd53dd64f81c759fa281cb2",
+      "bytes": 18559
+    },
+    "/scratch/e1538633/liuyi/logs/qwen_six_ablation_20261108/runtime_e9396ac/full_E2/native/recovery/outcomes.jsonl": {
+      "sha256": "f01b8e8c1d967a37dbc3c0051d81827817f0c1059893f6fe9d3466e6bd372197",
+      "bytes": 30334
+    },
+    "/scratch/e1538633/liuyi/logs/sign_failure_replay_20261104/full/coverage256/diagnostic/traces/Swormville/3216.npz": {
+      "sha256": "0ca5f3d06e36b1b72305971c0a9a9e4c16d0ec6bb04a7d648a4e3b1d17912747",
+      "bytes": 18398
+    }
+  },
+  "mode": "CPU-only export of existing observations, no navigation/Qwen inference or PBS submission",
+  "checkpoint_sha256": "988c9ecc5b0c704e9a4780f636739aec17cbd323d613f0fbdde4699296886c2c",
+  "failures_match_original_off_reference": true
+}
